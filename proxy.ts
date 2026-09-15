@@ -7,11 +7,9 @@ export function proxy(request: NextRequest) {
   const host = request.headers.get("host") || "";
 
   // 1. WWW and Vercel Domain Redirect to Canonical (https://joydigital.in)
-  if (host.startsWith("www.") || host === "joydigital.vercel.app") {
-    const canonicalHost = host.startsWith("www.")
-      ? host.replace(/^www\./i, "")
-      : "joydigital.in";
-    return NextResponse.redirect(`https://${canonicalHost}${pathname}${search}`, 301);
+  // Removed this block to prevent infinite redirect loop with Render's edge routing.
+  if (host === "joydigital.vercel.app") {
+    return NextResponse.redirect(`https://joydigital.in${pathname}${search}`, 301);
   }
 
   const response = NextResponse.next();
