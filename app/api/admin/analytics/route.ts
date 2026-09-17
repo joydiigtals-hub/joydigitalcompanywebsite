@@ -322,6 +322,22 @@ export async function GET() {
     });
   } catch (error: any) {
     console.error("Error in admin analytics route:", error);
-    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+    return NextResponse.json({
+        totalPageviews: 0,
+        uniqueVisitors: 0,
+        totalBlogPageviews: 0,
+        uniqueBlogVisitors: 0,
+        topCities: [],
+        mapMarkers: [],
+        dailyTrend: [],
+        weeklyTrend: [],
+        monthlyTrend: [],
+        yearlyTrend: [],
+        blogDailyTrend: [],
+        blogWeeklyTrend: [],
+        blogMonthlyTrend: [],
+        blogYearlyTrend: [],
+        recentBlogActivities: []
+    });
   }
 }

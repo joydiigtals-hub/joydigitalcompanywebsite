@@ -91,36 +91,36 @@ export async function GET(request: Request) {
       }));
       return NextResponse.json(mapped);
     } catch (e: any) {
-      console.error("Error reading from MongoDB Atlas:", e);
-      return NextResponse.json({ error: e.message }, { status: 500 });
+      console.error("Error reading from MongoDB Atlas, falling back to local:", e);
     }
-  } else {
-    const enquiries = readEnquiries();
-    const mapped = enquiries.map((enq: any) => ({
-      id: enq.id,
-      name: enq.name,
-      companyName: enq.companyName,
-      website: enq.website,
-      email: enq.email,
-      mobile: enq.mobile,
-      service: enq.service,
-      message: enq.message,
-      source: enq.source,
-      region: enq.region,
-      status: enq.status,
-      createdAt: enq.createdAt,
-      notes: enq.notes || "",
-      followUpDate: enq.followUpDate || null,
-      pipelineStage: enq.pipelineStage || "new",
-      assignedTo: enq.assignedTo || "",
-      utmParams: enq.utmParams || null,
-      activities: enq.activities || [],
-      proposals: enq.proposals || [],
-      irrelevantReason: enq.irrelevantReason || "",
-      chatSessionId: enq.chatSessionId || ""
-    }));
-    return NextResponse.json(mapped);
   }
+
+  // Fallback if MONGODB_URI is not set or failed
+  const enquiries = readEnquiries();
+  const mapped = enquiries.map((enq: any) => ({
+    id: enq.id,
+    name: enq.name,
+    companyName: enq.companyName,
+    website: enq.website,
+    email: enq.email,
+    mobile: enq.mobile,
+    service: enq.service,
+    message: enq.message,
+    source: enq.source,
+    region: enq.region,
+    status: enq.status,
+    createdAt: enq.createdAt,
+    notes: enq.notes || "",
+    followUpDate: enq.followUpDate || null,
+    pipelineStage: enq.pipelineStage || "new",
+    assignedTo: enq.assignedTo || "",
+    utmParams: enq.utmParams || null,
+    activities: enq.activities || [],
+    proposals: enq.proposals || [],
+    irrelevantReason: enq.irrelevantReason || "",
+    chatSessionId: enq.chatSessionId || ""
+  }));
+  return NextResponse.json(mapped);
 }
 
 export async function PATCH(request: Request) {
@@ -164,14 +164,15 @@ export async function PATCH(request: Request) {
         }
         return NextResponse.json({ success: true });
       } catch (e: any) {
-        console.error("Error updating MongoDB Atlas:", e);
-        return NextResponse.json({ error: e.message }, { status: 500 });
+        console.error("Error updating MongoDB Atlas, falling back to local:", e);
       }
-    } else {
-      let enquiries = readEnquiries();
-      let updated = false;
-      
-      enquiries = enquiries.map((enq: any) => {
+    }
+    
+    // Fallback if MONGODB_URI is not set or failed
+    let enquiries = readEnquiries();
+    let updated = false;
+    
+    enquiries = enquiries.map((enq: any) => {
         if (enq.id === id) {
           updated = true;
           return {
@@ -236,13 +237,14 @@ export async function DELETE(request: Request) {
         }
         return NextResponse.json({ success: true });
       } catch (e: any) {
-        console.error("Error deleting from MongoDB Atlas:", e);
-        return NextResponse.json({ error: e.message }, { status: 500 });
+        console.error("Error deleting from MongoDB Atlas, falling back to local:", e);
       }
-    } else {
-      let enquiries = readEnquiries();
-      const originalLength = enquiries.length;
-      enquiries = enquiries.filter((enq: any) => enq.id !== id);
+    }
+    
+    // Fallback if MONGODB_URI is not set or failed
+    let enquiries = readEnquiries();
+    const originalLength = enquiries.length;
+    enquiries = enquiries.filter((enq: any) => enq.id !== id);
       
       if (enquiries.length < originalLength) {
         writeEnquiries(enquiries);
