@@ -197,7 +197,6 @@ export async function PATCH(request: Request) {
       } else {
         return NextResponse.json({ error: "Enquiry not found" }, { status: 404 });
       }
-    }
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
@@ -252,7 +251,6 @@ export async function DELETE(request: Request) {
       } else {
         return NextResponse.json({ error: "Enquiry not found" }, { status: 404 });
       }
-    }
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
