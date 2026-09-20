@@ -5,7 +5,7 @@ date: '2026-09-06'
 lastUpdatedDate: '2026-09-06'
 category: Web Development
 author: Saravanan L
-image: /assets/images/hero-banner.webp
+image: "/assets/images/blog/travel-direct-booking.png"
 imageAlt: How Safari Operators Can Attract More International Customers Online
 imageCaption: Proven digital marketing & website guide for African safari tour operators and wildlife travel agencies.
 tags:
@@ -57,11 +57,11 @@ faqs:
 ogTitle: How Safari Operators Can Attract More International Customers Online | Joy Digital
 ogDescription: >-
   Discover proven digital growth strategies for safari tour operators in Kenya, Tanzania, Namibia, Botswana, and South Africa to attract global travellers, rank on Google, and drive high-value direct booking enquiries.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/blog/travel-direct-booking.png"
 twitterTitle: How Safari Operators Can Attract More International Customers Online | Joy Digital
 twitterDescription: >-
   Discover proven digital growth strategies for safari tour operators in Kenya, Tanzania, Namibia, Botswana, and South Africa to attract global travellers, rank on Google, and drive high-value direct booking enquiries.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/blog/travel-direct-booking.png"
 status: Published
 seoScore: 98
 ---

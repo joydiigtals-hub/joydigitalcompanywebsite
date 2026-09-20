@@ -6,7 +6,7 @@ date: '2026-08-30'
 lastUpdatedDate: '2026-08-30'
 category: Real Estate
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/hero-banner.webp"
 imageAlt: 'How Dubai Real Estate Brokers Capture HNW Buyers via AI SEO & Next.js'
 imageCaption: ''
 tags:
@@ -49,11 +49,11 @@ faqs:
 ogTitle: 'Dubai Real Estate Web Design & AI SEO Guide 2026 | Joy Digital'
 ogDescription: >-
   Learn how Dubai real estate brokers capture High-Net-Worth (HNW) property buyers using Next.js portals, AI-powered search, and GEO rankings on ChatGPT and Perplexity.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/hero-banner.webp"
 twitterTitle: 'Dubai Real Estate Web Design & AI SEO Guide 2026 | Joy Digital'
 twitterDescription: >-
   Learn how Dubai real estate brokers capture High-Net-Worth (HNW) property buyers using Next.js portals, AI-powered search, and GEO rankings on ChatGPT and Perplexity.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/hero-banner.webp"
 status: Published
 seoScore: 95
 ---

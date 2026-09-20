@@ -7,7 +7,7 @@ date: '2026-06-05'
 lastUpdatedDate: '2026-06-05'
 category: SEO
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/business-card-mockup.webp"
 imageAlt: 'SEO vs Google Ads: Which Has Better ROI for Small Businesses?'
 imageCaption: ''
 tags:
@@ -43,12 +43,12 @@ ogTitle: 'SEO vs Google Ads: Which Has Better ROI for Small Businesses?'
 ogDescription: >-
   Compare organic search engine optimization (SEO) with pay-per-click (PPC)
   advertising to find the best channel for your marketing budget.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/business-card-mockup.webp"
 twitterTitle: 'SEO vs Google Ads: Which Has Better ROI for Small Businesses?'
 twitterDescription: >-
   Compare organic search engine optimization (SEO) with pay-per-click (PPC)
   advertising to find the best channel for your marketing budget.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/business-card-mockup.webp"
 status: Published
 seoScore: 90
 ---

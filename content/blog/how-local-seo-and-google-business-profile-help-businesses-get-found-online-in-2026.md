@@ -6,7 +6,7 @@ date: '2026-09-09'
 lastUpdatedDate: '2026-09-09'
 category: Local SEO
 author: Saravanan L
-image: /assets/images/hero-banner.webp
+image: "/assets/images/gsc-performance-dashboard.webp"
 imageAlt: 'How Local SEO and Google Business Profile Help Businesses Get Found Online in 2026'
 imageCaption: 'Complete guide to Local SEO and Google Business Profile optimization'
 tags:
@@ -71,11 +71,11 @@ faqs:
 ogTitle: 'How Local SEO & Google Business Profile Help Businesses Get Found'
 ogDescription: >-
   Discover how Local SEO and Google Business Profile help businesses rank on Google Maps and search results to generate qualified local enquiries in 2026.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/gsc-performance-dashboard.webp"
 twitterTitle: 'How Local SEO & Google Business Profile Help Businesses Get Found'
 twitterDescription: >-
   Discover how Local SEO and Google Business Profile help businesses rank on Google Maps and search results to generate qualified local enquiries in 2026.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/gsc-performance-dashboard.webp"
 status: Published
 seoScore: 98
 ---

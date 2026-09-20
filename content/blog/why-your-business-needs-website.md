@@ -8,7 +8,7 @@ date: '2026-06-05'
 lastUpdatedDate: '2026-06-05'
 category: Web Development
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/gsc-performance-dashboard.webp"
 imageAlt: 'Why Your Business Needs a Website in 2026: More Than Just Social Media'
 imageCaption: ''
 tags:
@@ -47,13 +47,13 @@ ogDescription: >-
   Discover why relying solely on social media pages is a risky marketing
   strategy, and how a custom business website builds authority and generates
   leads.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/gsc-performance-dashboard.webp"
 twitterTitle: 'Why Your Business Needs a Website in 2026: More Than Just Social Media'
 twitterDescription: >-
   Discover why relying solely on social media pages is a risky marketing
   strategy, and how a custom business website builds authority and generates
   leads.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/gsc-performance-dashboard.webp"
 status: Published
 seoScore: 90
 ---

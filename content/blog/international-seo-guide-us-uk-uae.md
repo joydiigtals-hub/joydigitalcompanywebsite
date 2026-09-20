@@ -6,7 +6,7 @@ date: '2026-08-31'
 lastUpdatedDate: '2026-08-31'
 category: SEO Strategy
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/marketing-poster-mockup.webp"
 imageAlt: 'International SEO Guide for US UK and UAE Audiences'
 imageCaption: ''
 tags:
@@ -51,11 +51,11 @@ faqs:
 ogTitle: 'International SEO Guide: Target US, UK, UAE with Next.js (2026)'
 ogDescription: >-
   Expand your business globally with technical International SEO. Learn hreflang config in Next.js, country subfolders, and multi-currency edge detection.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/marketing-poster-mockup.webp"
 twitterTitle: 'International SEO Guide: Target US, UK, UAE with Next.js (2026)'
 twitterDescription: >-
   Expand your business globally with technical International SEO. Learn hreflang config in Next.js, country subfolders, and multi-currency edge detection.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/marketing-poster-mockup.webp"
 status: Published
 seoScore: 98
 ---

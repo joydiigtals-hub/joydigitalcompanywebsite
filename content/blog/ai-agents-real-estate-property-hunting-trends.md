@@ -10,7 +10,7 @@ date: '2026-08-29'
 lastUpdatedDate: '2026-08-29'
 category: SEO
 author: Joy Digital Team
-image: /assets/images/hero-banner.webp
+image: "/assets/images/gbp-showcase.webp"
 imageAlt: AI Agent Property Hunting and Real Estate Discovery 2026
 imageCaption: Next-generation agentic AI scouting tools transforming real estate workflows.
 tags:
@@ -62,13 +62,13 @@ ogDescription: >-
   Discover how Agentic AI transforms real estate discovery in 2026. Explore
   conversational buyer profiling, automated title checks, and predictive
   valuation.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/gbp-showcase.webp"
 twitterTitle: AI Agent Property Hunting in 2026 | Real Estate Discovery
 twitterDescription: >-
   Discover how Agentic AI transforms real estate discovery in 2026. Explore
   conversational buyer profiling, automated title checks, and predictive
   valuation.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/gbp-showcase.webp"
 status: Published
 seoScore: 96
 ---

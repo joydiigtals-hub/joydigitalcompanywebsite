@@ -5,7 +5,7 @@ date: "2026-09-03"
 lastUpdatedDate: "2026-09-03"
 category: "Web Development"
 author: "Saravanan"
-image: "/assets/images/hero-banner.webp"
+image: "/assets/images/marketing-poster-mockup.webp"
 imageAlt: "What is Website Design and Development Complete Guide 2026"
 imageCaption: ""
 tags:
@@ -48,10 +48,10 @@ faqs:
     answer: "The best AI tools for website development in 2026 include ChatGPT (GPT-4o) for logic and copywriting, Claude 3.5 Sonnet for complex code refactoring, Cursor AI for IDE code completion, and v0.dev for rapid UI component generation."
 ogTitle: "What is Website Design and Development? Best Languages & AI Tools Guide"
 ogDescription: "Learn what is website design and development, why website development is important, which language is best, and which AI is best for website development."
-ogImage: "/assets/images/hero-banner.webp"
+ogImage: "/assets/images/marketing-poster-mockup.webp"
 twitterTitle: "What is Website Design and Development? Best Languages & AI Tools Guide"
 twitterDescription: "Learn what is website design and development, why website development is important, which language is best, and which AI is best for website development."
-twitterImage: "/assets/images/hero-banner.webp"
+twitterImage: "/assets/images/marketing-poster-mockup.webp"
 status: "Published"
 seoScore: 97
 ---

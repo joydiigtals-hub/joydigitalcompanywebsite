@@ -5,7 +5,7 @@ date: '2026-09-07'
 lastUpdatedDate: '2026-09-07'
 category: SEO
 author: Saravanan L
-image: /assets/images/hero-banner.webp
+image: "/assets/images/blog/food-spice-export.png"
 imageAlt: How International Buyers Find Export Suppliers Online in 2026
 imageCaption: Comprehensive guide for exporters, merchant export houses, and B2B manufacturers to attract global buyers and generate international trade leads online.
 tags:
@@ -57,11 +57,11 @@ faqs:
 ogTitle: 'How International Buyers Find Export Suppliers Online in 2026 | Joy Digital'
 ogDescription: >-
   Discover how global buyers research, evaluate, and choose B2B export suppliers online in 2026. Learn how export websites, international SEO, AI search readiness, and trust signals drive buyer enquiries.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/blog/food-spice-export.png"
 twitterTitle: 'How International Buyers Find Export Suppliers Online in 2026 | Joy Digital'
 twitterDescription: >-
   Discover how global buyers research, evaluate, and choose B2B export suppliers online in 2026. Learn how export websites, international SEO, AI search readiness, and trust signals drive buyer enquiries.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/blog/food-spice-export.png"
 status: Published
 seoScore: 99
 ---

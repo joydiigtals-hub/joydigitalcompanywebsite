@@ -6,7 +6,7 @@ date: '2026-09-13'
 lastUpdatedDate: '2026-09-13'
 category: 'Travel & Web Development'
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/blog/travel-direct-booking.png"
 imageAlt: 'Beating the OTA Monopoly: A Tour Operator’s Guide to Organic Growth'
 imageCaption: ''
 tags:
@@ -49,11 +49,11 @@ faqs:
 ogTitle: 'Beating the OTA Monopoly: A Tour Operator’s Guide to Organic Growth'
 ogDescription: >-
   Learn how independent tour operators and DMCs can bypass OTA commissions and capture high-value international travelers organically.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/blog/travel-direct-booking.png"
 twitterTitle: 'Beating the OTA Monopoly: A Tour Operator’s Guide to Organic Growth'
 twitterDescription: >-
   Learn how independent tour operators and DMCs can bypass OTA commissions and capture high-value international travelers organically.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/blog/travel-direct-booking.png"
 status: Published
 ---
 

@@ -6,7 +6,7 @@ date: '2026-09-13'
 lastUpdatedDate: '2026-09-13'
 category: 'Travel & Web Development'
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/blog/travel-direct-booking.png"
 imageAlt: 'The Death of Static Travel Websites: Why Tour Operators Need Dynamic SEO'
 imageCaption: ''
 tags:
@@ -49,11 +49,11 @@ faqs:
 ogTitle: 'The Death of Static Travel Websites: Why Tour Operators Need Dynamic SEO'
 ogDescription: >-
   Discover why static travel websites fail in 2026 and how tour operators and DMCs can use Dynamic SEO to capture global travel bookings and outsmart OTAs.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/blog/travel-direct-booking.png"
 twitterTitle: 'The Death of Static Travel Websites: Why Tour Operators Need Dynamic SEO'
 twitterDescription: >-
   Discover why static travel websites fail in 2026 and how tour operators and DMCs can use Dynamic SEO to capture global travel bookings and outsmart OTAs.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/blog/travel-direct-booking.png"
 status: Published
 ---
 

@@ -7,7 +7,7 @@ date: '2026-06-07'
 lastUpdatedDate: '2026-06-07'
 category: SEO Services
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/marketing-poster-mockup.webp"
 imageAlt: 'How to Rank a Website on Google in 2026: The Definitive SEO Strategy'
 imageCaption: ''
 tags:
@@ -43,12 +43,12 @@ ogTitle: 'How to Rank a Website on Google in 2026: The Definitive SEO Strategy'
 ogDescription: >-
   Discover core Google ranking factors for 2026. Learn how to optimize Core Web
   Vitals, build semantic content clusters, and earn quality links.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/marketing-poster-mockup.webp"
 twitterTitle: 'How to Rank a Website on Google in 2026: The Definitive SEO Strategy'
 twitterDescription: >-
   Discover core Google ranking factors for 2026. Learn how to optimize Core Web
   Vitals, build semantic content clusters, and earn quality links.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/marketing-poster-mockup.webp"
 status: Published
 seoScore: 90
 ---

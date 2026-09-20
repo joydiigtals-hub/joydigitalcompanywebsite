@@ -6,7 +6,7 @@ date: '2026-09-08'
 lastUpdatedDate: '2026-09-08'
 category: SEO
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/gsc-performance-dashboard.webp"
 imageAlt: 'Is Your Business Website Ready for AI Search in 2026?'
 imageCaption: ''
 tags:
@@ -44,11 +44,11 @@ faqs: []
 ogTitle: 'Is Your Business Website Ready for AI Search in 2026?'
 ogDescription: >-
   Learn how AI-powered search experiences like Google AI Overviews, ChatGPT, and Gemini are changing SEO in 2026, and the 7 essential things your business website needs.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/gsc-performance-dashboard.webp"
 twitterTitle: 'Is Your Business Website Ready for AI Search in 2026?'
 twitterDescription: >-
   Learn how AI-powered search experiences like Google AI Overviews, ChatGPT, and Gemini are changing SEO in 2026, and the 7 essential things your business website needs.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/gsc-performance-dashboard.webp"
 status: Published
 seoScore: 92
 ---

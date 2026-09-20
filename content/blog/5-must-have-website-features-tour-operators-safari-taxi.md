@@ -6,7 +6,7 @@ date: '2026-09-04'
 lastUpdatedDate: '2026-09-04'
 category: Web Development
 author: Saravanan L
-image: /assets/images/hero-banner.webp
+image: "/assets/images/blog/travel-website-features-hero.png"
 imageAlt: '5 Must-Have Website Features for Tour Operators, Safari Companies, and Taxi Services'
 imageCaption: 'Essential website features for tour operators, safari businesses, and taxi services'
 tags:
@@ -59,11 +59,11 @@ faqs:
 ogTitle: '5 Must-Have Website Features for Tour Operators, Safari & Taxi Services | Joy Digital'
 ogDescription: >-
   Discover the 5 essential website features tour operators, safari companies, and taxi services need to generate enquiries, build trust, and boost bookings.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/blog/travel-website-features-hero.png"
 twitterTitle: '5 Must-Have Website Features for Tour Operators, Safari & Taxi Services | Joy Digital'
 twitterDescription: >-
   Discover the 5 essential website features tour operators, safari companies, and taxi services need to generate enquiries, build trust, and boost bookings.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/blog/travel-website-features-hero.png"
 status: Published
 seoScore: 95
 ---

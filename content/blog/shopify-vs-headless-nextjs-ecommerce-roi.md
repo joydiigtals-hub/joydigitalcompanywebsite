@@ -6,7 +6,7 @@ date: '2026-08-31'
 lastUpdatedDate: '2026-08-31'
 category: E-Commerce & Tech
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/business-card-mockup.webp"
 imageAlt: 'Shopify vs Headless Nextjs Storefront E-Commerce ROI'
 imageCaption: ''
 tags:
@@ -51,11 +51,11 @@ faqs:
 ogTitle: 'Shopify vs Headless Next.js Storefront: E-Commerce ROI (2026)'
 ogDescription: >-
   Compare Shopify liquid themes vs Headless Next.js storefronts. Learn how sub-second page speed drives e-commerce conversion rates.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/business-card-mockup.webp"
 twitterTitle: 'Shopify vs Headless Next.js Storefront: E-Commerce ROI (2026)'
 twitterDescription: >-
   Compare Shopify liquid themes vs Headless Next.js storefronts. Learn how sub-second page speed drives e-commerce conversion rates.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/business-card-mockup.webp"
 status: Published
 seoScore: 97
 ---

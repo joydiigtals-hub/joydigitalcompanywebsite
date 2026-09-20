@@ -5,7 +5,7 @@ date: '2026-09-07'
 lastUpdatedDate: '2026-09-07'
 category: Web Development
 author: Saravanan L
-image: /assets/images/hero-banner.webp
+image: "/assets/images/blog/china-manufacture.png"
 imageAlt: Why Manufacturers Need a Custom Website to Win More B2B Customers in 2026
 imageCaption: Strategic web design and digital marketing guide for B2B manufacturers and industrial suppliers targeting global buyers.
 tags:
@@ -66,11 +66,11 @@ faqs:
 ogTitle: 'Why Manufacturers Need a Custom Website to Win More B2B Customers in 2026'
 ogDescription: >-
   Discover how a custom manufacturing website can help manufacturers generate B2B leads, reach international buyers, improve SEO, showcase products, and grow their business in 2026.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/blog/china-manufacture.png"
 twitterTitle: 'Why Manufacturers Need a Custom Website to Win More B2B Customers in 2026'
 twitterDescription: >-
   Discover how a custom manufacturing website can help manufacturers generate B2B leads, reach international buyers, improve SEO, showcase products, and grow their business in 2026.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/blog/china-manufacture.png"
 status: Published
 seoScore: 98
 ---

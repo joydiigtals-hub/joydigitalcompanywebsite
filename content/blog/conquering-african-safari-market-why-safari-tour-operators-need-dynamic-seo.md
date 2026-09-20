@@ -6,7 +6,7 @@ date: '2026-09-13'
 lastUpdatedDate: '2026-09-13'
 category: 'Travel & Web Development'
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/blog/travel-website-features-hero.png"
 imageAlt: 'Conquering the African Safari Market: Why Safari Tour Operators Desperately Need Dynamic SEO'
 imageCaption: ''
 tags:
@@ -49,11 +49,11 @@ faqs:
 ogTitle: 'Conquering the African Safari Market: Why Safari Tour Operators Desperately Need Dynamic SEO'
 ogDescription: >-
   Discover how African safari tour operators and DMCs in Tanzania, Kenya, and South Africa can capture high-paying international travelers with Dynamic SEO.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/blog/travel-website-features-hero.png"
 twitterTitle: 'Conquering the African Safari Market: Why Safari Tour Operators Desperately Need Dynamic SEO'
 twitterDescription: >-
   Discover how African safari tour operators and DMCs in Tanzania, Kenya, and South Africa can capture high-paying international travelers with Dynamic SEO.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/blog/travel-website-features-hero.png"
 status: Published
 ---
 

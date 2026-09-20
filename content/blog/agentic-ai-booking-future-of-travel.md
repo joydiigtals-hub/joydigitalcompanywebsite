@@ -8,7 +8,7 @@ date: '2026-08-28'
 lastUpdatedDate: '2026-08-28'
 category: SEO
 author: Joy Digital Team
-image: /assets/images/hero-banner.webp
+image: "/assets/images/blog/travel-ai-trip-planner.png"
 imageAlt: 'Agentic AI Booking: The Future of Travel Booking in 2026'
 imageCaption: ''
 tags:
@@ -48,13 +48,13 @@ ogDescription: >-
   Discover how Agentic AI is transforming travel booking in 2026, from
   personalised trip planning and tour comparisons to automated booking and
   customer support.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/blog/travel-ai-trip-planner.png"
 twitterTitle: 'Agentic AI Booking: The Future of Travel Booking in 2026'
 twitterDescription: >-
   Discover how Agentic AI is transforming travel booking in 2026, from
   personalised trip planning and tour comparisons to automated booking and
   customer support.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/blog/travel-ai-trip-planner.png"
 status: Published
 seoScore: 84
 ---

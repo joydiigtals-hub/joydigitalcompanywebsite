@@ -5,7 +5,7 @@ date: '2026-09-06'
 lastUpdatedDate: '2026-09-06'
 category: Web Development
 author: Saravanan L
-image: /assets/images/hero-banner.webp
+image: "/assets/images/gbp-showcase.webp"
 imageAlt: How Pest Control Companies Can Improve Their Online Presence
 imageCaption: Comprehensive guide for pest control operators, exterminators, and commercial pest management companies to win more local leads online.
 tags:
@@ -57,11 +57,11 @@ faqs:
 ogTitle: 'Pest Control Near Me to New Customers: Online Presence Guide | Joy Digital'
 ogDescription: >-
   Learn how pest control companies in the USA can optimize their online presence, build trust, rank for local searches like pest control near me, and convert website traffic into leads.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/gbp-showcase.webp"
 twitterTitle: 'Pest Control Near Me to New Customers: Online Presence Guide | Joy Digital'
 twitterDescription: >-
   Learn how pest control companies in the USA can optimize their online presence, build trust, rank for local searches like pest control near me, and convert website traffic into leads.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/gbp-showcase.webp"
 status: Published
 seoScore: 98
 ---

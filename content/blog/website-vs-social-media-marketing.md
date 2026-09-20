@@ -7,7 +7,7 @@ date: '2026-06-03'
 lastUpdatedDate: '2026-06-03'
 category: Digital Marketing
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/marketing-poster-mockup.webp"
 imageAlt: 'Website vs Social Media Marketing: Which is Best for Your Business?'
 imageCaption: ''
 tags:
@@ -43,12 +43,12 @@ ogTitle: 'Website vs Social Media Marketing: Which is Best for Your Business?'
 ogDescription: >-
   Compare the pros, cons, and ROI of custom business websites and social media
   marketing. Learn why combining both is the key to digital growth.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/marketing-poster-mockup.webp"
 twitterTitle: 'Website vs Social Media Marketing: Which is Best for Your Business?'
 twitterDescription: >-
   Compare the pros, cons, and ROI of custom business websites and social media
   marketing. Learn why combining both is the key to digital growth.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/marketing-poster-mockup.webp"
 status: Published
 seoScore: 91
 ---

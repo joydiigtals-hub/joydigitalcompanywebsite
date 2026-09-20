@@ -6,7 +6,7 @@ date: '2026-09-13'
 lastUpdatedDate: '2026-09-13'
 category: 'Travel & Web Development'
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/blog/travel-ai-trip-planner.png"
 imageAlt: 'Scaling Your Travel Business Globally: How Dynamic SEO Cuts Your High Ad Costs'
 imageCaption: ''
 tags:
@@ -49,11 +49,11 @@ faqs:
 ogTitle: 'Scaling Your Travel Business Globally: How Dynamic SEO Cuts Your High Ad Costs'
 ogDescription: >-
   Discover how tour operators and DMCs can cut high Google & Meta ad costs using Dynamic SEO to capture global travel bookings organically.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/blog/travel-ai-trip-planner.png"
 twitterTitle: 'Scaling Your Travel Business Globally: How Dynamic SEO Cuts Your High Ad Costs'
 twitterDescription: >-
   Discover how tour operators and DMCs can cut high Google & Meta ad costs using Dynamic SEO to capture global travel bookings organically.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/blog/travel-ai-trip-planner.png"
 status: Published
 ---
 

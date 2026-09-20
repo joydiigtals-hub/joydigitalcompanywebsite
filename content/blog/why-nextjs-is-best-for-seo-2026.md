@@ -7,7 +7,7 @@ date: '2026-06-15'
 lastUpdatedDate: '2026-06-15'
 category: Web Development
 author: Joy Digital Team
-image: /assets/images/hero-banner.webp
+image: "/assets/images/gbp-showcase.webp"
 imageAlt: Why Next.js is the Best Web Framework for SEO in 2026
 imageCaption: ''
 tags:
@@ -45,12 +45,12 @@ ogTitle: Why Next.js is the Best Web Framework for SEO in 2026
 ogDescription: >-
   Discover why modern enterprises are migrating to Next.js for superior Google
   search rankings, Core Web Vitals performance, and organic lead generation.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/gbp-showcase.webp"
 twitterTitle: Why Next.js is the Best Web Framework for SEO in 2026
 twitterDescription: >-
   Discover why modern enterprises are migrating to Next.js for superior Google
   search rankings, Core Web Vitals performance, and organic lead generation.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/gbp-showcase.webp"
 status: Published
 seoScore: 90
 ---

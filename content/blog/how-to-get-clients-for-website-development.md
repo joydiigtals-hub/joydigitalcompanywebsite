@@ -5,7 +5,7 @@ date: "2026-09-03"
 lastUpdatedDate: "2026-09-03"
 category: "Web Development"
 author: "Saravanan"
-image: "/assets/images/hero-banner.webp"
+image: "/assets/images/gsc-performance-dashboard.webp"
 imageAlt: "How to Get Clients for Website Development and Get Foreign Leads in 2026"
 imageCaption: ""
 tags:
@@ -48,10 +48,10 @@ faqs:
     answer: "Focus on niche industries with high customer lifetime value (such as legal firms, real estate developers, medical clinics, and e-commerce brands) that require custom web applications rather than simple static templates."
 ogTitle: "How to Get Clients for Website Development: Foreign Clients & Lead Generation Guide"
 ogDescription: "Learn how to get clients for website development, find foreign clients in US & UK, generate recurring web dev leads, and scale your agency from India."
-ogImage: "/assets/images/hero-banner.webp"
+ogImage: "/assets/images/gsc-performance-dashboard.webp"
 twitterTitle: "How to Get Clients for Website Development: Foreign Clients & Lead Generation Guide"
 twitterDescription: "Learn how to get clients for website development, find foreign clients in US & UK, generate recurring web dev leads, and scale your agency from India."
-twitterImage: "/assets/images/hero-banner.webp"
+twitterImage: "/assets/images/gsc-performance-dashboard.webp"
 status: "Published"
 seoScore: 98
 ---

@@ -6,7 +6,7 @@ date: '2026-09-09'
 lastUpdatedDate: '2026-09-09'
 category: Digital Marketing
 author: Saravanan L
-image: /assets/images/hero-banner.webp
+image: "/assets/images/gsc-performance-dashboard.webp"
 imageAlt: 'How to Choose the Right Digital Marketing Company in India for Your Business'
 imageCaption: 'Guide to selecting the best digital marketing agency in India for business growth'
 tags:
@@ -65,11 +65,11 @@ faqs:
 ogTitle: 'How to Choose the Right Digital Marketing Company in India'
 ogDescription: >-
   Learn how to choose the right digital marketing company in India. Discover key factors, essential services, red flags to avoid, and strategies for lead growth.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/gsc-performance-dashboard.webp"
 twitterTitle: 'How to Choose the Right Digital Marketing Company in India'
 twitterDescription: >-
   Learn how to choose the right digital marketing company in India. Discover key factors, essential services, red flags to avoid, and strategies for lead growth.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/gsc-performance-dashboard.webp"
 status: Published
 seoScore: 98
 ---

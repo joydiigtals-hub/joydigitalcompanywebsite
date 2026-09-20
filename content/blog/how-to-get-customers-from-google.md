@@ -7,7 +7,7 @@ date: '2026-06-02'
 lastUpdatedDate: '2026-06-02'
 category: Digital Marketing
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/gsc-performance-dashboard.webp"
 imageAlt: 'How to Get Customers from Google: 3 Proven Search Strategies'
 imageCaption: ''
 tags:
@@ -43,12 +43,12 @@ ogTitle: 'How to Get Customers from Google: 3 Proven Search Strategies'
 ogDescription: >-
   Discover the three main ways businesses can acquire customers from Google:
   local map listings, organic SEO, and Google Search Ads campaigns.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/gsc-performance-dashboard.webp"
 twitterTitle: 'How to Get Customers from Google: 3 Proven Search Strategies'
 twitterDescription: >-
   Discover the three main ways businesses can acquire customers from Google:
   local map listings, organic SEO, and Google Search Ads campaigns.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/gsc-performance-dashboard.webp"
 status: Published
 seoScore: 90
 ---

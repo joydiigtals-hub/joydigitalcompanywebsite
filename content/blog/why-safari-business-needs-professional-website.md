@@ -6,7 +6,7 @@ date: '2026-09-03'
 lastUpdatedDate: '2026-09-03'
 category: Web Development
 author: Saravanan L
-image: /assets/images/hero-banner.webp
+image: "/assets/images/blog/travel-direct-booking.png"
 imageAlt: Why Does a Safari Business Need a Professional Website
 imageCaption: Essential guide for safari tour operators, wildlife travel agencies, and African safari businesses.
 tags:
@@ -58,11 +58,11 @@ faqs:
 ogTitle: Why Does a Safari Business Need a Professional Website? | Joy Digital
 ogDescription: >-
   Discover why a professional website is critical for safari tour operators and wildlife travel businesses in 2026 to build trust, rank on Google, and convert international travellers into bookings.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/blog/travel-direct-booking.png"
 twitterTitle: Why Does a Safari Business Need a Professional Website? | Joy Digital
 twitterDescription: >-
   Discover why a professional website is critical for safari tour operators and wildlife travel businesses in 2026 to build trust, rank on Google, and convert international travellers into bookings.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/blog/travel-direct-booking.png"
 status: Published
 seoScore: 96
 ---

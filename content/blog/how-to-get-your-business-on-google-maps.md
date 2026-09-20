@@ -9,7 +9,7 @@ date: '2026-08-18'
 lastUpdatedDate: '2026-08-18'
 category: Local SEO
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/gsc-performance-dashboard.webp"
 imageAlt: >-
   How to Get Your Business on Google Maps: Complete Google Business Profile
   Guide
@@ -51,14 +51,14 @@ ogTitle: >-
 ogDescription: >-
   Learn how to add your business to Google Maps, verify your Google Business
   Profile, gather reviews, and boost local map pack rankings.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/gsc-performance-dashboard.webp"
 twitterTitle: >-
   How to Get Your Business on Google Maps: Complete Google Business Profile
   Guide
 twitterDescription: >-
   Learn how to add your business to Google Maps, verify your Google Business
   Profile, gather reviews, and boost local map pack rankings.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/gsc-performance-dashboard.webp"
 status: Published
 seoScore: 90
 ---

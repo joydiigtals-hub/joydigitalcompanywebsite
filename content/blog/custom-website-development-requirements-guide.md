@@ -7,7 +7,7 @@ date: '2026-08-30'
 lastUpdatedDate: '2026-08-30'
 category: Web Development
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/gbp-showcase.webp"
 imageAlt: 'Custom Website Development: Build Around Your Business Requirements'
 imageCaption: ''
 tags:
@@ -43,12 +43,12 @@ ogTitle: 'Custom Website Development: Build Around Your Business Requirements'
 ogDescription: >-
   Discover why custom website development built around your exact business
   requirements beats template sites for UX, lead generation, and scalability.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/gbp-showcase.webp"
 twitterTitle: 'Custom Website Development: Build Around Your Business Requirements'
 twitterDescription: >-
   Discover why custom website development built around your exact business
   requirements beats template sites for UX, lead generation, and scalability.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/gbp-showcase.webp"
 status: Published
 seoScore: 96
 ---

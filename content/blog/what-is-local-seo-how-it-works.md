@@ -7,7 +7,7 @@ date: '2026-06-06'
 lastUpdatedDate: '2026-06-06'
 category: Local SEO
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/business-card-mockup.webp"
 imageAlt: What is Local SEO and How It Works? A Beginner's Guide
 imageCaption: ''
 tags:
@@ -43,12 +43,12 @@ ogTitle: What is Local SEO and How It Works? A Beginner's Guide
 ogDescription: >-
   Learn what Local SEO is, why it is crucial for brick-and-mortar stores, and
   how the Google Maps ranking algorithm evaluates local business listings.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/business-card-mockup.webp"
 twitterTitle: What is Local SEO and How It Works? A Beginner's Guide
 twitterDescription: >-
   Learn what Local SEO is, why it is crucial for brick-and-mortar stores, and
   how the Google Maps ranking algorithm evaluates local business listings.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/business-card-mockup.webp"
 status: Published
 seoScore: 90
 ---

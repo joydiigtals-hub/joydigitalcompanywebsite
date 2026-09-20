@@ -7,7 +7,7 @@ date: '2026-06-15'
 lastUpdatedDate: '2026-06-15'
 category: SEO Services
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/business-card-mockup.webp"
 imageAlt: Why Your Business Needs Both a Website and Local SEO to Succeed in 2026
 imageCaption: ''
 tags:
@@ -45,12 +45,12 @@ ogTitle: Why Your Business Needs Both a Website and Local SEO to Succeed in 2026
 ogDescription: >-
   Discover why combining a professional website with local SEO drives growth in
   2026. Learn to attract visitors and boost online visibility.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/business-card-mockup.webp"
 twitterTitle: Why Your Business Needs Both a Website and Local SEO to Succeed in 2026
 twitterDescription: >-
   Discover why combining a professional website with local SEO drives growth in
   2026. Learn to attract visitors and boost online visibility.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/business-card-mockup.webp"
 status: Published
 seoScore: 90
 ---

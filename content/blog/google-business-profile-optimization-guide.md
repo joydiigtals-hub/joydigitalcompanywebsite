@@ -9,7 +9,7 @@ date: '2026-06-11'
 lastUpdatedDate: '2026-06-11'
 category: Local SEO
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/hero-banner.webp"
 imageAlt: >-
   Google Business Profile Optimization: Complete Guide for Small Businesses in
   2026
@@ -53,14 +53,14 @@ ogTitle: >-
 ogDescription: >-
   Master Google Business Profile Optimization in 2026. Learn how to rank in the
   Local 3-Pack, manage customer reviews, and drive phone calls and walk-ins.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/hero-banner.webp"
 twitterTitle: >-
   Google Business Profile Optimization: Complete Guide for Small Businesses in
   2026
 twitterDescription: >-
   Master Google Business Profile Optimization in 2026. Learn how to rank in the
   Local 3-Pack, manage customer reviews, and drive phone calls and walk-ins.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/hero-banner.webp"
 status: Published
 seoScore: 84
 ---

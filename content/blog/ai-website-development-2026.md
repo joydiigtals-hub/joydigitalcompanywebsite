@@ -6,7 +6,7 @@ date: '2026-08-30'
 lastUpdatedDate: '2026-08-30'
 category: Web Development
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/hero-banner.webp"
 imageAlt: 'AI Website Development in 2026: How AI Is Changing Business Websites'
 imageCaption: ''
 tags:
@@ -64,11 +64,11 @@ faqs:
 ogTitle: 'AI Website Development in 2026: How AI Is Changing Business Websites'
 ogDescription: >-
   Discover how AI website development in 2026 is transforming business websites into intelligent sales assistants, lead qualification systems, and automated customer engines.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/hero-banner.webp"
 twitterTitle: 'AI Website Development in 2026: How AI Is Changing Business Websites'
 twitterDescription: >-
   Discover how AI website development in 2026 is transforming business websites into intelligent sales assistants, lead qualification systems, and automated customer engines.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/hero-banner.webp"
 status: Published
 seoScore: 95
 ---

@@ -9,7 +9,7 @@ date: '2026-08-29'
 lastUpdatedDate: '2026-08-29'
 category: SEO
 author: Joy Digital Team
-image: /assets/images/hero-banner.webp
+image: "/assets/images/blog/travel-ai-trip-planner.png"
 imageAlt: >-
   How Independent Resorts Can Increase Direct Bookings & Cut High OTA
   Commissions
@@ -52,14 +52,14 @@ ogTitle: >-
 ogDescription: >-
   Learn 4 strategic moves for independent resorts to increase direct website
   bookings, cut high OTA commission fees, and capture high-intent travelers.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/blog/travel-ai-trip-planner.png"
 twitterTitle: >-
   How Independent Resorts Can Increase Direct Bookings & Cut High OTA
   Commissions
 twitterDescription: >-
   Learn 4 strategic moves for independent resorts to increase direct website
   bookings, cut high OTA commission fees, and capture high-intent travelers.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/blog/travel-ai-trip-planner.png"
 status: Published
 seoScore: 90
 ---

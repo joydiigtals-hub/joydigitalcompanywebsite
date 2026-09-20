@@ -4,7 +4,7 @@ description: "In today's borderless digital economy, your website serves as your
 date: "2026-09-19"
 category: "Web Speed"
 author: "Saravanan L"
-image: "https://res.cloudinary.com/hkfw0tt7/image/upload/v1/joydigital_blog/global_speed.webp"
+image: "/assets/images/gbp-showcase.webp"
 imageAlt: "Why International Businesses Need a Fast Website: The Key to Global Growth"
 tags: ["Web Speed", "International SEO", "Global Business", "Conversion Optimization"]
 showTableOfContents: true

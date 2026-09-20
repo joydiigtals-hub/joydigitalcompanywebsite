@@ -7,7 +7,7 @@ date: '2026-08-03'
 lastUpdatedDate: '2026-08-03'
 category: Web Speed
 author: Joy Digital Team
-image: /assets/images/hero-banner.webp
+image: "/assets/images/marketing-poster-mockup.webp"
 imageAlt: How fast should a corporate website load to rank on Google?
 imageCaption: ''
 tags:
@@ -43,12 +43,12 @@ ogTitle: How fast should a corporate website load to rank on Google?
 ogDescription: >-
   Learn the impact of load times and Core Web Vitals on search rankings.
   Understand how fast-loading Next.js websites improve bounce rates and leads.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/marketing-poster-mockup.webp"
 twitterTitle: How fast should a corporate website load to rank on Google?
 twitterDescription: >-
   Learn the impact of load times and Core Web Vitals on search rankings.
   Understand how fast-loading Next.js websites improve bounce rates and leads.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/marketing-poster-mockup.webp"
 status: Published
 seoScore: 96
 ---

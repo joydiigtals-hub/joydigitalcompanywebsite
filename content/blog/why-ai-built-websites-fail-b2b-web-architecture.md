@@ -5,7 +5,7 @@ date: "2026-09-02"
 lastUpdatedDate: "2026-09-02"
 category: "Web Development"
 author: "Joy Digital Strategy Team"
-image: "/assets/images/hero-banner.webp"
+image: "/assets/images/blog/china-manufacture.png"
 imageAlt: "Why 90% of AI-Built Websites Fail - Custom Web Architecture Wins B2B Deals"
 imageCaption: "Why AI-generated website templates fail B2B sales pipelines and how custom React/Next.js architecture scales enterprise revenue."
 tags:
@@ -45,10 +45,10 @@ faqs:
     answer: "Custom architecture removes friction in multi-stakeholder B2B buyer journeys by personalizing content, automating lead qualification, securing high-converting speed scores, and demonstrating enterprise technical authority."
 ogTitle: "Why 90% of AI-Built Websites Fail (And Why Custom Architecture Wins B2B Deals)"
 ogDescription: "Discover why generic AI site builders fail B2B enterprises, and how custom web architecture drives real sales pipeline efficiency."
-ogImage: "/assets/images/hero-banner.webp"
+ogImage: "/assets/images/blog/china-manufacture.png"
 twitterTitle: "Why 90% of AI-Built Websites Fail | B2B Web Architecture"
 twitterDescription: "Discover why generic AI site builders fail B2B enterprises and why custom Next.js web architecture wins high-ticket enterprise client deals."
-twitterImage: "/assets/images/hero-banner.webp"
+twitterImage: "/assets/images/blog/china-manufacture.png"
 status: "Published"
 seoScore: 95
 ---

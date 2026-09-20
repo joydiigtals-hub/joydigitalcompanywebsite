@@ -7,7 +7,7 @@ date: '2026-05-30'
 lastUpdatedDate: '2026-05-30'
 category: Web Design
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/gsc-performance-dashboard.webp"
 imageAlt: 'Best Website Design Practices for 2026: Design for Conversions'
 imageCaption: ''
 tags:
@@ -45,12 +45,12 @@ ogTitle: 'Best Website Design Practices for 2026: Design for Conversions'
 ogDescription: >-
   Learn the best website design practices to keep visitors engaged, reduce
   bounce rates, and turn ordinary web traffic into active business leads.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/gsc-performance-dashboard.webp"
 twitterTitle: 'Best Website Design Practices for 2026: Design for Conversions'
 twitterDescription: >-
   Learn the best website design practices to keep visitors engaged, reduce
   bounce rates, and turn ordinary web traffic into active business leads.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/gsc-performance-dashboard.webp"
 status: Published
 seoScore: 96
 ---

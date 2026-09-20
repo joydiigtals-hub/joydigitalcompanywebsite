@@ -6,7 +6,7 @@ date: '2026-08-30'
 lastUpdatedDate: '2026-08-30'
 category: Web Development
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/hero-banner.webp"
 imageAlt: 'Why UK Businesses Save 60% with Custom React Agencies in India'
 imageCaption: ''
 tags:
@@ -49,11 +49,11 @@ faqs:
 ogTitle: 'Why UK Businesses Hire React & Next.js Agencies in India (2026)'
 ogDescription: >-
   Discover why UK businesses save 60% on custom web development by partnering with specialized React & Next.js agencies in India. High speed, GMT sync, 95+ PageSpeed.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/hero-banner.webp"
 twitterTitle: 'Why UK Businesses Hire React & Next.js Agencies in India (2026)'
 twitterDescription: >-
   Discover why UK businesses save 60% on custom web development by partnering with specialized React & Next.js agencies in India. High speed, GMT sync, 95+ PageSpeed.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/hero-banner.webp"
 status: Published
 seoScore: 95
 ---

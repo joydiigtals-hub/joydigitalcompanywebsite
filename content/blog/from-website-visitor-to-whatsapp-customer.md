@@ -5,7 +5,7 @@ date: '2026-09-06'
 lastUpdatedDate: '2026-09-06'
 category: Web Development
 author: Saravanan L
-image: /assets/images/hero-banner.webp
+image: "/assets/images/marketing-poster-mockup.webp"
 imageAlt: From Website Visitor to WhatsApp Customer
 imageCaption: Comprehensive guide for tour operators, real estate agents, service businesses, and e-commerce stores on WhatsApp lead automation.
 tags:
@@ -57,11 +57,11 @@ faqs:
 ogTitle: 'From Website Visitor to WhatsApp Customer | Joy Digital'
 ogDescription: >-
   Discover how website-to-WhatsApp automation increases conversion rates, speeds up sales inquiries, and turns website visitors into paying customers.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/marketing-poster-mockup.webp"
 twitterTitle: 'From Website Visitor to WhatsApp Customer | Joy Digital'
 twitterDescription: >-
   Discover how website-to-WhatsApp automation increases conversion rates, speeds up sales inquiries, and turns website visitors into paying customers.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/marketing-poster-mockup.webp"
 status: Published
 seoScore: 98
 ---

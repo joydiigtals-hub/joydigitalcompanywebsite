@@ -7,7 +7,7 @@ date: '2026-08-08'
 lastUpdatedDate: '2026-08-08'
 category: Web Development
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/hero-banner.webp"
 imageAlt: Why a Website Is Important for Business Growth in Chennai in 2026
 imageCaption: ''
 tags:
@@ -45,12 +45,12 @@ ogTitle: Why a Website Is Important for Business Growth in Chennai in 2026
 ogDescription: >-
   Learn why every business in Chennai needs a professional website in 2026.
   Improve trust, Google visibility, enquiries, and sales.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/hero-banner.webp"
 twitterTitle: Why a Website Is Important for Business Growth in Chennai in 2026
 twitterDescription: >-
   Learn why every business in Chennai needs a professional website in 2026.
   Improve trust, Google visibility, enquiries, and sales.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/hero-banner.webp"
 status: Published
 seoScore: 90
 ---

@@ -7,7 +7,7 @@ date: '2026-09-08'
 lastUpdatedDate: '2026-09-08'
 category: Local SEO
 author: Saravanan L
-image: /assets/images/hero-banner.webp
+image: "/assets/images/business-card-mockup.webp"
 imageAlt: >-
   When Customers Need You Urgently, Can They Find Your Business on Google?
 imageCaption: ''
@@ -62,12 +62,12 @@ ogTitle: >-
   When Customers Need You Urgently, Can They Find Your Business on Google?
 ogDescription: >-
   Learn why Google visibility, Local SEO, and Google Business Profile optimization are critical for local service businesses to capture urgent customer leads.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/business-card-mockup.webp"
 twitterTitle: >-
   When Customers Need You Urgently, Can They Find Your Business on Google?
 twitterDescription: >-
   Learn why Google visibility, Local SEO, and Google Business Profile optimization are critical for local service businesses to capture urgent customer leads.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/business-card-mockup.webp"
 status: Published
 seoScore: 92
 ---

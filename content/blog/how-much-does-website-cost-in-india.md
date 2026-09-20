@@ -8,7 +8,7 @@ date: '2026-06-01'
 lastUpdatedDate: '2026-06-01'
 category: Web Development
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/gbp-showcase.webp"
 imageAlt: How Much Does a Website Cost in India? 2026 Pricing Guide
 imageCaption: ''
 tags:
@@ -48,13 +48,13 @@ ogDescription: >-
   A comprehensive analysis of how much it costs to design and develop websites
   in India in 2026, comparing custom Next.js builds with standard WordPress
   layouts.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/gbp-showcase.webp"
 twitterTitle: How Much Does a Website Cost in India? 2026 Pricing Guide
 twitterDescription: >-
   A comprehensive analysis of how much it costs to design and develop websites
   in India in 2026, comparing custom Next.js builds with standard WordPress
   layouts.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/gbp-showcase.webp"
 status: Published
 seoScore: 90
 ---

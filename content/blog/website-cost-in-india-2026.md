@@ -7,7 +7,7 @@ date: '2026-08-18'
 lastUpdatedDate: '2026-08-18'
 category: Web Development
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/marketing-poster-mockup.webp"
 imageAlt: How Much Does a Website Cost in India in 2026? A Practical Pricing Guide
 imageCaption: ''
 tags:
@@ -44,12 +44,12 @@ ogTitle: How Much Does a Website Cost in India in 2026? A Practical Pricing Guid
 ogDescription: >-
   How much does a website cost in India in 2026? Explore practical pricing for
   business, e-commerce, and custom website packages.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/marketing-poster-mockup.webp"
 twitterTitle: How Much Does a Website Cost in India in 2026? A Practical Pricing Guide
 twitterDescription: >-
   How much does a website cost in India in 2026? Explore practical pricing for
   business, e-commerce, and custom website packages.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/marketing-poster-mockup.webp"
 status: Published
 seoScore: 96
 ---

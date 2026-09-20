@@ -5,7 +5,7 @@ date: '2026-09-07'
 lastUpdatedDate: '2026-09-07'
 category: Digital Marketing
 author: Saravanan L
-image: /assets/images/hero-banner.webp
+image: "/assets/images/gbp-showcase.webp"
 imageAlt: 'How to Find the Right Customers for Your Business in 2026'
 imageCaption: 'Comprehensive guide to customer acquisition, custom website development, SEO, and conversion optimization for global B2B and SME businesses in 2026.'
 tags:
@@ -66,11 +66,11 @@ faqs:
 ogTitle: 'How to Find the Right Customers for Your Business in 2026'
 ogDescription: >-
   Learn how to find and attract the right customers in 2026 using custom website development, SEO, content marketing, and conversion-focused strategies.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/gbp-showcase.webp"
 twitterTitle: 'How to Find the Right Customers for Your Business in 2026'
 twitterDescription: >-
   Learn how to find and attract the right customers in 2026 using custom website development, SEO, content marketing, and conversion-focused strategies.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/gbp-showcase.webp"
 status: Published
 seoScore: 98
 ---

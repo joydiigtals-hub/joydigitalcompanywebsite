@@ -6,7 +6,7 @@ date: '2026-08-31'
 lastUpdatedDate: '2026-08-31'
 category: Web Development
 author: Saravanan L
-image: /assets/images/blog/travel-website-features-hero.png
+image: "/assets/images/blog/travel-website-features-hero.png"
 imageAlt: '15 Travel Website Features Tour Operators Need in 2026'
 imageCaption: 'Essential travel website features every tour operator and travel agency needs in 2026'
 tags:
@@ -65,11 +65,11 @@ faqs:
 ogTitle: '15 Travel Website Features Tour Operators Need in 2026 | Joy Digital'
 ogDescription: >-
   Discover the 15 essential travel website features tour operators need in 2026 to generate more enquiries, build trust, improve SEO and increase direct bookings.
-ogImage: /assets/images/blog/travel-website-features-hero.png
+ogImage: "/assets/images/blog/travel-website-features-hero.png"
 twitterTitle: '15 Travel Website Features Tour Operators Need in 2026 | Joy Digital'
 twitterDescription: >-
   Discover the 15 essential travel website features tour operators need in 2026 to generate more enquiries, build trust, improve SEO and increase direct bookings.
-twitterImage: /assets/images/blog/travel-website-features-hero.png
+twitterImage: "/assets/images/blog/travel-website-features-hero.png"
 status: Published
 seoScore: 95
 ---

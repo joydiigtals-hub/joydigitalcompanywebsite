@@ -5,7 +5,7 @@ date: '2026-09-06'
 lastUpdatedDate: '2026-09-06'
 category: Web Speed
 author: Saravanan L
-image: /assets/images/hero-banner.webp
+image: "/assets/images/hero-banner.webp"
 imageAlt: Why a Slow Website Could Be Costing Your Business Customers
 imageCaption: Essential website speed optimization guide for business owners, e-commerce stores, and service companies.
 tags:
@@ -57,11 +57,11 @@ faqs:
 ogTitle: 'Why a Slow Website Costs Your Business Customers | Joy Digital'
 ogDescription: >-
   Discover how a slow-loading website loses customers, hurts Google rankings, and wastes ad spend. Learn 7 practical steps to optimize website speed and boost conversions.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/hero-banner.webp"
 twitterTitle: 'Why a Slow Website Costs Your Business Customers | Joy Digital'
 twitterDescription: >-
   Discover how a slow-loading website loses customers, hurts Google rankings, and wastes ad spend. Learn 7 practical steps to optimize website speed and boost conversions.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/hero-banner.webp"
 status: Published
 seoScore: 98
 ---

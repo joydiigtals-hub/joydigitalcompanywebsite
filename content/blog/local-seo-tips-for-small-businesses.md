@@ -7,7 +7,7 @@ date: '2026-06-11'
 lastUpdatedDate: '2026-06-11'
 category: Local SEO
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/marketing-poster-mockup.webp"
 imageAlt: 15 Local SEO Tips for Small Businesses to Get More Customers in 2026
 imageCaption: ''
 tags:
@@ -45,12 +45,12 @@ ogTitle: 15 Local SEO Tips for Small Businesses to Get More Customers in 2026
 ogDescription: >-
   Discover 15 actionable Local SEO Tips to drive more foot traffic, calls, and
   sales to your small business in 2026. Read our ultimate local search guide.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/marketing-poster-mockup.webp"
 twitterTitle: 15 Local SEO Tips for Small Businesses to Get More Customers in 2026
 twitterDescription: >-
   Discover 15 actionable Local SEO Tips to drive more foot traffic, calls, and
   sales to your small business in 2026. Read our ultimate local search guide.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/marketing-poster-mockup.webp"
 status: Published
 seoScore: 90
 ---

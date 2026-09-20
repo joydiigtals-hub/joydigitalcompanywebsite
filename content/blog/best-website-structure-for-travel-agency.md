@@ -6,7 +6,7 @@ date: '2026-09-14'
 lastUpdatedDate: '2026-09-14'
 category: Industry Solutions
 author: Saravanan
-image: /assets/images/hero-banner.webp
+image: "/assets/images/blog/travel-direct-booking.png"
 imageAlt: 'Best Website Structure for a Travel Agency'
 imageCaption: 'Architecting high-converting travel agency websites for global tour operators and DMCs'
 tags:
@@ -46,11 +46,11 @@ faqs:
 ogTitle: 'Best Website Structure for a Travel Agency | Joy Digital'
 ogDescription: >-
   Discover the best website structure for travel agencies, tour operators, and DMCs. Learn how destination pages, tour package filters, and travel SEO drive enquiries.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/blog/travel-direct-booking.png"
 twitterTitle: 'Best Website Structure for a Travel Agency | Joy Digital'
 twitterDescription: >-
   Discover the best website structure for travel agencies, tour operators, and DMCs. Learn how destination pages, tour package filters, and travel SEO drive enquiries.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/blog/travel-direct-booking.png"
 status: Published
 seoScore: 98
 ---

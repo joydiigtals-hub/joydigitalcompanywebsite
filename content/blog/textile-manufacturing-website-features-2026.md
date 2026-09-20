@@ -6,7 +6,7 @@ date: '2026-08-31'
 lastUpdatedDate: '2026-08-31'
 category: Web Development
 author: Saravanan L
-image: /assets/images/blog/textile-manufacturing-hero.png
+image: "/assets/images/blog/textile-manufacturing-hero.png"
 imageAlt: 'Textile Manufacturing Website: 15 Features Global Buyers Expect in 2026'
 imageCaption: 'Essential features for global textile manufacturing and B2B exporter websites in 2026'
 tags:
@@ -69,11 +69,11 @@ faqs:
 ogTitle: 'Textile Manufacturing Website: 15 Features Global Buyers Expect in 2026 | Joy Digital'
 ogDescription: >-
   Discover 15 essential features every textile manufacturing website needs in 2026 to attract global buyers, showcase products, generate enquiries and build trust online.
-ogImage: /assets/images/blog/textile-manufacturing-hero.png
+ogImage: "/assets/images/blog/textile-manufacturing-hero.png"
 twitterTitle: 'Textile Manufacturing Website: 15 Features Global Buyers Expect in 2026 | Joy Digital'
 twitterDescription: >-
   Discover 15 essential features every textile manufacturing website needs in 2026 to attract global buyers, showcase products, generate enquiries and build trust online.
-twitterImage: /assets/images/blog/textile-manufacturing-hero.png
+twitterImage: "/assets/images/blog/textile-manufacturing-hero.png"
 status: Published
 seoScore: 96
 ---

@@ -6,7 +6,7 @@ date: '2026-09-04'
 lastUpdatedDate: '2026-09-04'
 category: Web Development
 author: Saravanan L
-image: /assets/images/hero-banner.webp
+image: "/assets/images/gbp-showcase.webp"
 imageAlt: '5 Website Features That Can Help Pest Control Companies Get More Leads'
 imageCaption: 'Essential website features for pest control businesses and commercial pest management companies'
 tags:
@@ -58,11 +58,11 @@ faqs:
 ogTitle: '5 Website Features for Pest Control Companies to Get Leads | Joy Digital'
 ogDescription: >-
   Discover 5 essential website features pest control companies need to attract more leads, build customer trust, rank on Google, and convert visitors into calls.
-ogImage: /assets/images/hero-banner.webp
+ogImage: "/assets/images/gbp-showcase.webp"
 twitterTitle: '5 Website Features for Pest Control Companies to Get Leads | Joy Digital'
 twitterDescription: >-
   Discover 5 essential website features pest control companies need to attract more leads, build customer trust, rank on Google, and convert visitors into calls.
-twitterImage: /assets/images/hero-banner.webp
+twitterImage: "/assets/images/gbp-showcase.webp"
 status: Published
 seoScore: 95
 ---
