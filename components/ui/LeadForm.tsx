@@ -65,7 +65,7 @@ export default function LeadForm({
   layout = "vertical",
   title = "Claim Free Consultation",
   subtitle = "Fill in 3 quick fields below. Our experts will call you in 15 mins.",
-  ctaText = "Get Free Quote in 15 Mins 🚀",
+  ctaText = "Claim My Free Proposal →",
   source = "General Lead Funnel",
   showWebsiteField = true,
   hideEmailField = false,
@@ -169,8 +169,10 @@ export default function LeadForm({
       }
     }
 
-    if (!formData.service) {
-      tempErrors.service = "Please select a required service.";
+    if (!simplified) {
+      if (!formData.service) {
+        tempErrors.service = "Please select a required service.";
+      }
     }
 
     setErrors(tempErrors);
@@ -200,7 +202,7 @@ export default function LeadForm({
         Mobile: formData.mobile.trim().startsWith("+")
           ? formData.mobile.trim()
           : `${selectedCountryCode} ${formData.mobile.trim()}`,
-        Service: formData.service,
+        Service: simplified ? "General Inquiry / CRO" : formData.service,
         Budget: formData.budget || "N/A",
         Timeline: formData.timeline || "N/A",
         Message: formData.message.trim() || "Ultra-lean 3-field quick lead submission.",
@@ -266,7 +268,7 @@ export default function LeadForm({
       // Redirect to thank you page with personalized query params
       const queryParams = new URLSearchParams({
         name: formData.name.trim(),
-        service: formData.service || "Web Services",
+        service: simplified ? "General Inquiry / CRO" : (formData.service || "Web Services"),
         mobile: formData.mobile.trim()
       }).toString();
 
@@ -331,6 +333,7 @@ export default function LeadForm({
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Enter your name"
+                autoFocus
                 className="w-full text-xs bg-transparent outline-none border-none text-text-primary placeholder:text-text-muted font-semibold"
               />
             </div>
@@ -452,68 +455,70 @@ export default function LeadForm({
             {errors.mobile && <span className="text-[9px] font-semibold text-[#ef4444] mt-0.5">{errors.mobile}</span>}
           </div>
 
-          {/* 3. Required Service Selection */}
-          <div className="flex flex-col gap-1">
-            <label htmlFor="service" className="text-[9px] font-extrabold text-[#6B6478] uppercase tracking-wider mb-0.5 block">
-              Required Service <span className="text-error-red">*</span>
-            </label>
-            <div className="relative z-20" ref={serviceDropdownRef}>
-              <button
-                type="button"
-                onClick={() => setIsServiceOpen(!isServiceOpen)}
-                className={`w-full flex items-center justify-between bg-[#FAF9FF] rounded-lg border px-3 py-2.5 group transition-all duration-300 focus:bg-white focus:border-[#7C3AED] focus:ring-4 focus:ring-[#7C3AED]/10 ${
-                  errors.service ? "border-[#ef4444] bg-red-50/10" : "border-[#E9E4F2] hover:border-[#7C3AED]/20"
-                }`}
-              >
-                <span className="flex items-center gap-2 text-left w-full overflow-hidden">
-                  <span className={`text-[11px] transition-colors duration-300 shrink-0 ${errors.service ? "text-error-red" : "text-text-muted group-focus-within:text-[#7C3AED]"}`}>
-                    {getSelectedServiceIcon(formData.service)}
-                  </span>
-                  <span className={`text-xs font-semibold truncate ${formData.service ? "text-text-primary" : "text-text-muted"}`}>
-                    {formData.service ? SERVICE_OPTIONS.find(o => o.value === formData.service)?.label : "Select a Service"}
-                  </span>
-                </span>
-                <span className={`text-[8px] text-text-muted transition-transform duration-300 shrink-0 ${isServiceOpen ? "rotate-180" : ""}`}>
-                  <i className="fa-solid fa-chevron-down" />
-                </span>
-              </button>
-
-              {isServiceOpen && (
-                <div 
-                  className="absolute z-50 left-0 top-[108%] w-full bg-white border border-[#E9E4F2] rounded-xl shadow-2xl py-1 max-h-64 overflow-y-auto"
-                  style={{ animation: "fadeInSlideDown 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards" }}
+          {/* 3. Required Service Selection (Hidden in simplified mode) */}
+          {!simplified && (
+            <div className="flex flex-col gap-1">
+              <label htmlFor="service" className="text-[9px] font-extrabold text-[#6B6478] uppercase tracking-wider mb-0.5 block">
+                Required Service <span className="text-error-red">*</span>
+              </label>
+              <div className="relative z-20" ref={serviceDropdownRef}>
+                <button
+                  type="button"
+                  onClick={() => setIsServiceOpen(!isServiceOpen)}
+                  className={`w-full flex items-center justify-between bg-[#FAF9FF] rounded-lg border px-3 py-2.5 group transition-all duration-300 focus:bg-white focus:border-[#7C3AED] focus:ring-4 focus:ring-[#7C3AED]/10 ${
+                    errors.service ? "border-[#ef4444] bg-red-50/10" : "border-[#E9E4F2] hover:border-[#7C3AED]/20"
+                  }`}
                 >
-                  {SERVICE_OPTIONS.map((opt) => (
-                    <button
-                      key={opt.value}
-                      type="button"
-                      onClick={() => {
-                        setFormData(prev => ({ ...prev, service: opt.value }));
-                        setIsServiceOpen(false);
-                        if (errors.service) setErrors(prev => ({ ...prev, service: "" }));
-                      }}
-                      className={`w-full flex items-start gap-3 px-3 py-2 text-left transition-colors hover:bg-[#FAF9FF] ${
-                        formData.service === opt.value ? "bg-[#7C3AED]/5 text-[#7C3AED]" : "text-text-primary"
-                      }`}
-                    >
-                      <span className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs shrink-0 mt-0.5 transition-colors ${
-                        formData.service === opt.value ? "bg-[#7C3AED] text-white" : "bg-[#FAF9FF] text-text-secondary"
-                      }`}>
-                        <i className={opt.icon} />
-                      </span>
-                      <div className="flex flex-col gap-0.5 overflow-hidden">
-                        <span className={`text-xs font-bold ${formData.service === opt.value ? "text-[#7C3AED]" : "text-text-primary"}`}>
-                          {opt.label}
+                  <span className="flex items-center gap-2 text-left w-full overflow-hidden">
+                    <span className={`text-[11px] transition-colors duration-300 shrink-0 ${errors.service ? "text-error-red" : "text-text-muted group-focus-within:text-[#7C3AED]"}`}>
+                      {getSelectedServiceIcon(formData.service)}
+                    </span>
+                    <span className={`text-xs font-semibold truncate ${formData.service ? "text-text-primary" : "text-text-muted"}`}>
+                      {formData.service ? SERVICE_OPTIONS.find(o => o.value === formData.service)?.label : "Select a Service"}
+                    </span>
+                  </span>
+                  <span className={`text-[8px] text-text-muted transition-transform duration-300 shrink-0 ${isServiceOpen ? "rotate-180" : ""}`}>
+                    <i className="fa-solid fa-chevron-down" />
+                  </span>
+                </button>
+
+                {isServiceOpen && (
+                  <div 
+                    className="absolute z-50 left-0 top-[108%] w-full bg-white border border-[#E9E4F2] rounded-xl shadow-2xl py-1 max-h-64 overflow-y-auto"
+                    style={{ animation: "fadeInSlideDown 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards" }}
+                  >
+                    {SERVICE_OPTIONS.map((opt) => (
+                      <button
+                        key={opt.value}
+                        type="button"
+                        onClick={() => {
+                          setFormData(prev => ({ ...prev, service: opt.value }));
+                          setIsServiceOpen(false);
+                          if (errors.service) setErrors(prev => ({ ...prev, service: "" }));
+                        }}
+                        className={`w-full flex items-start gap-3 px-3 py-2 text-left transition-colors hover:bg-[#FAF9FF] ${
+                          formData.service === opt.value ? "bg-[#7C3AED]/5 text-[#7C3AED]" : "text-text-primary"
+                        }`}
+                      >
+                        <span className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs shrink-0 mt-0.5 transition-colors ${
+                          formData.service === opt.value ? "bg-[#7C3AED] text-white" : "bg-[#FAF9FF] text-text-secondary"
+                        }`}>
+                          <i className={opt.icon} />
                         </span>
-                        <span className="text-[9px] text-text-muted truncate">{opt.desc}</span>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              )}
+                        <div className="flex flex-col gap-0.5 overflow-hidden">
+                          <span className={`text-xs font-bold ${formData.service === opt.value ? "text-[#7C3AED]" : "text-text-primary"}`}>
+                            {opt.label}
+                          </span>
+                          <span className="text-[9px] text-text-muted truncate">{opt.desc}</span>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+              {errors.service && <span className="text-[9px] font-semibold text-[#ef4444] mt-0.5">{errors.service}</span>}
             </div>
-            {errors.service && <span className="text-[9px] font-semibold text-[#ef4444] mt-0.5">{errors.service}</span>}
-          </div>
+          )}
 
           {/* Full Detailed Mode Extra Fields (Only if simplified is FALSE) */}
           {!simplified && (
@@ -618,6 +623,12 @@ export default function LeadForm({
               </>
             )}
           </button>
+          
+          <div className="text-center pt-1">
+            <span className="text-[9px] font-medium text-text-muted flex items-center justify-center gap-1.5">
+              <i className="fa-solid fa-lock text-emerald-500" /> We respect your privacy. No spam ever.
+            </span>
+          </div>
         </form>
       </div>
 

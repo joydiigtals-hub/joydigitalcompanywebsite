@@ -25,6 +25,21 @@ interface CaseStudy {
 const CASE_STUDIES: CaseStudy[] = [
   {
     category: "websites",
+    categoryLabel: "Travel & Destination Website",
+    title: "You & Me Voyage",
+    client: "You & Me Voyage",
+    image: "/assets/images/hero-banner.webp",
+    challenge: "Needed a travel platform designed for high-converting holiday package tours with fast loading speed and a sleek UI.",
+    solution: "Engineered a custom Next.js travel agency platform focused on sub-second load times and a seamless user experience.",
+    techStack: ["Next.js", "Responsive Design", "Local SEO Optimized"],
+    features: ["Travel Booking UI", "High-Converting Tours", "Mobile First Design"],
+    before: "Generic web template with slow load times.",
+    whatWeChanged: "Built a custom, responsive Next.js frontend with targeted local SEO.",
+    after: "Lightning-fast page speeds and increased holiday package inquiries.",
+    liveUrl: "https://www.youandmevoyage.com/",
+  },
+  {
+    category: "websites",
     categoryLabel: "Website Design & Development",
     title: "Ganesan Associates LIC Star Health Portal",
     client: "Ganesan Associates (Insurance & Advisory)",

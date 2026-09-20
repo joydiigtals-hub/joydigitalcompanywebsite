@@ -97,7 +97,6 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
   // Form State
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     mobile: "",
     website: "",
   });
@@ -155,15 +154,6 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
       tempErrors.name = "Full Name is required.";
     }
 
-    if (!formData.email.trim()) {
-      tempErrors.email = "Work Email is required.";
-    } else {
-      const emailReg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-      if (!emailReg.test(formData.email.trim())) {
-        tempErrors.email = "Please enter a valid work email.";
-      }
-    }
-
     const mobileVal = formData.mobile.trim();
     if (mobileVal) {
       const numbersOnly = mobileVal.replace(/\D/g, "");
@@ -185,7 +175,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
       const utm = getUtmParameters();
       const payload = {
         Name: formData.name.trim(),
-        Email: formData.email.trim(),
+        Email: "provided-on-call@joydigital.in",
         Mobile: formData.mobile.trim().startsWith("+")
           ? formData.mobile.trim()
           : `${selectedCountryCode} ${formData.mobile.trim()}`,
@@ -455,33 +445,14 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="John Doe"
+                      autoFocus
                       className="w-full text-xs bg-transparent outline-none text-white placeholder:text-slate-500 font-medium"
                     />
                   </div>
                   {errors.name && <span className="text-[10px] text-red-400 font-medium">{errors.name}</span>}
                 </div>
 
-                {/* Field 2: Work Email */}
-                <div className="flex flex-col gap-1">
-                  <label htmlFor="hero-email" className="text-[10px] font-extrabold text-slate-300 uppercase tracking-wider block">
-                    Work Email <span className="text-red-400">*</span>
-                  </label>
-                  <div className={`flex items-center gap-2 bg-[#1A1433] border rounded-xl px-3 py-2.5 transition-all duration-300 focus-within:bg-[#1E173C] focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/20 focus-within:shadow-[0_0_15px_rgba(124,58,237,0.2)] ${
-                    errors.email ? "border-red-500/80 bg-red-950/10" : "border-[#2D2352]"
-                  }`}>
-                    <Mail className="w-4 h-4 text-slate-400 shrink-0 transition-colors group-focus-within:text-[#A78BFA]" />
-                    <input
-                      type="email"
-                      id="hero-email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="name@company.com"
-                      className="w-full text-xs bg-transparent outline-none text-white placeholder:text-slate-500 font-medium"
-                    />
-                  </div>
-                  {errors.email && <span className="text-[10px] text-red-400 font-medium">{errors.email}</span>}
-                </div>
+
 
                 {/* Field 3: Phone / WhatsApp Number */}
                 <div className="flex flex-col gap-1">
@@ -577,33 +548,50 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                   </div>
                 </div>
 
-                {/* Primary CTA Button with Automated Shimmer Light Reflection & Hover Scale */}
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full mt-2 py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#7C3AED] via-[#6D28D9] to-[#3B82F6] hover:from-[#6D28D9] hover:to-[#2563EB] text-white font-extrabold text-sm shadow-xl shadow-purple-900/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2 cursor-pointer relative overflow-hidden group"
-                >
-                  {/* Automated Subtle Shimmer-Sweep Reflection */}
-                  <span className="absolute inset-0 w-1/3 h-full bg-white/25 blur-sm transform -skew-x-12 animate-shimmer-sweep pointer-events-none" />
+                {/* Action Buttons Container */}
+                <div className="flex flex-col sm:flex-row gap-3 mt-2">
+                  {/* Primary CTA Button */}
+                  <button
+                    type="submit"
+                    disabled={isLoading}
+                    className="flex-1 py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#7C3AED] via-[#6D28D9] to-[#3B82F6] hover:from-[#6D28D9] hover:to-[#2563EB] text-white font-extrabold text-sm shadow-xl shadow-purple-900/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2 cursor-pointer relative overflow-hidden group"
+                  >
+                    <span className="absolute inset-0 w-1/3 h-full bg-white/25 blur-sm transform -skew-x-12 animate-shimmer-sweep pointer-events-none" />
+                    {isLoading ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin text-white" />
+                        <span>Scheduling...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Claim My Free Proposal</span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                      </>
+                    )}
+                  </button>
 
-                  {isLoading ? (
-                    <>
-                      <Loader2 className="w-4 h-4 animate-spin text-white" />
-                      <span>Scheduling Call...</span>
-                    </>
-                  ) : (
-                    <>
-                      <span>Get Free Audit &amp; Strategy Call</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                    </>
-                  )}
-                </button>
+                  {/* Secondary CTA Button (WhatsApp) */}
+                  <a
+                    href="https://wa.me/919080026133?text=Hi%20Joy%20Digital,%20I'd%20like%20to%20claim%20my%20free%20proposal%20and%20strategy%20call."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="sm:w-[45%] py-3.5 px-4 rounded-xl bg-[#1A1433] hover:bg-[#20193B] border border-[#2D2352] hover:border-emerald-500/50 text-white font-bold text-xs sm:text-sm shadow-lg hover:shadow-emerald-900/20 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer group"
+                  >
+                    <svg className="w-4 h-4 text-emerald-400 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                    </svg>
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
 
                 {/* Micro-trust footer */}
-                <div className="pt-2 text-center">
-                  <p className="text-[10px] font-medium text-slate-400 flex items-center justify-center gap-1.5">
+                <div className="pt-2 text-center flex flex-col gap-1.5">
+                  <p className="text-[10px] font-medium text-slate-400 flex items-center justify-center gap-1.5 flex-wrap">
                     <ShieldCheck className="w-3 h-3 text-emerald-400 shrink-0" />
-                    <span>🎁 Free $499 Audit Included • Zero Commitment • 100% Confidential</span>
+                    <span>No credit card required • Instant 15-min call • Zero commitment</span>
+                  </p>
+                  <p className="text-[9px] font-semibold text-slate-500 flex items-center justify-center gap-1">
+                    <i className="fa-solid fa-lock text-emerald-500/70" /> We respect your privacy. No spam ever.
                   </p>
                 </div>
               </form>
