@@ -314,7 +314,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
         <motion.div
           className="lg:col-span-7 flex flex-col items-start text-left space-y-6"
           variants={containerVariants}
-          initial="hidden"
+          initial={false}
           animate="visible"
         >
           
@@ -334,7 +334,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
           {/* Step 2: Main Headline with Anti-Gravity Staggered Word Reveal */}
           <motion.h1
             variants={antiGravityHeaderVariants}
-            initial="hidden"
+            initial={false}
             animate="visible"
             className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.14] flex flex-wrap gap-x-[0.28em] gap-y-1 sm:gap-y-2 select-none"
           >
@@ -411,7 +411,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
         <motion.div
           className="lg:col-span-5 flex justify-center lg:justify-end w-full"
           variants={cardVariants}
-          initial="hidden"
+          initial={false}
           animate="visible"
         >
           <div className="w-full max-w-md relative rounded-2xl p-[1px] overflow-hidden group">

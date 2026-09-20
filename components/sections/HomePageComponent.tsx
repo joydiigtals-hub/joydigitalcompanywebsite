@@ -11,7 +11,7 @@ const WorldwideServiceNetwork = dynamic(() => import("@/components/ui/WorldwideS
 const Footer = dynamic(() => import("@/components/layout/Footer"));
 const LeadForm = dynamic(() => import("@/components/ui/LeadForm"));
 const Accordion = dynamic(() => import("@/components/ui/Accordion"));
-const ModernHeroSection = dynamic(() => import("@/components/sections/ModernHeroSection"));
+import ModernHeroSection from "@/components/sections/ModernHeroSection";
 
 // Lightweight Count-Up Component honoring prefers-reduced-motion
 function CountUpNumber({ target, suffix = "" }: { target: number; suffix?: string }) {
