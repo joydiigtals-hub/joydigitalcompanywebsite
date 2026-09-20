@@ -1,7 +1,9 @@
-import { notFound } from "next/navigation";
+import PortfolioClient from "./PortfolioClient";
+import { metadata } from "./metadata";
+
+export { metadata };
 
 export default function PortfolioPage() {
-  notFound();
+  return <PortfolioClient />;
 }
-
 
