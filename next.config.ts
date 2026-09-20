@@ -167,6 +167,31 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        source: "/fr",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/fr/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/pages",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/pages/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/kr/:path*",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
   async headers() {
