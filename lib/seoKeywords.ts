@@ -50,8 +50,11 @@ export interface SeoPageMapping {
 const KEYWORDS_FILE = path.join(process.cwd(), "data", "seo-keywords.json");
 const PAGES_FILE = path.join(process.cwd(), "data", "seo-pages.json");
 
-// Helper to read local JSON file
-function readJsonFile<T>(filePath: string): T[] {
+import keywordsStaticData from "@/data/seo-keywords.json";
+import pagesStaticData from "@/data/seo-pages.json";
+
+// Helper to read local JSON file with a static fallback for Vercel production
+function readJsonFile<T>(filePath: string, staticData: any[]): T[] {
   try {
     if (fs.existsSync(filePath)) {
       const data = fs.readFileSync(filePath, "utf-8");
@@ -60,7 +63,7 @@ function readJsonFile<T>(filePath: string): T[] {
   } catch (error) {
     console.error(`Error reading file ${filePath}:`, error);
   }
-  return [];
+  return staticData as T[];
 }
 
 // Helper to write local JSON file
@@ -103,7 +106,7 @@ export async function getAllKeywords(): Promise<SeoKeyword[]> {
     console.warn("MongoDB connection unavailable for getAllKeywords, falling back to local file:", err);
   }
 
-  return readJsonFile<SeoKeyword>(KEYWORDS_FILE);
+  return readJsonFile<SeoKeyword>(KEYWORDS_FILE, keywordsStaticData);
 }
 
 export async function saveKeyword(keyword: SeoKeyword): Promise<SeoKeyword> {
@@ -189,7 +192,7 @@ export async function getAllSeoPages(): Promise<SeoPageMapping[]> {
     console.warn("MongoDB connection unavailable for getAllSeoPages, falling back to local file:", err);
   }
 
-  return readJsonFile<SeoPageMapping>(PAGES_FILE);
+  return readJsonFile<SeoPageMapping>(PAGES_FILE, pagesStaticData);
 }
 
 export async function getSeoPageByPath(path: string): Promise<SeoPageMapping | null> {
