@@ -25,15 +25,35 @@ export async function POST(request: Request) {
 
     const clientIp = headers.get("x-forwarded-for")?.split(",")[0] || headers.get("x-real-ip") || "";
 
-    // Local development fallback
-    const isLocalhost = request.url.includes("localhost") || request.url.includes("127.0.0.1") || clientIp === "127.0.0.1" || clientIp === "::1";
+    // Fix for reverse proxies setting localhost in request.url
+    const isLocalhost = process.env.NODE_ENV === "development" || clientIp === "127.0.0.1" || clientIp === "::1" || !clientIp;
+
     if (!city) {
       if (isLocalhost) {
         city = "Local Dev Machine";
         region = "Localhost";
         country = "IN";
       } else {
-        city = "Global Reader";
+        try {
+          // Fetch from free geoip API if edge headers are missing
+          const geoRes = await fetch(`http://ip-api.com/json/${clientIp}?fields=status,countryCode,regionName,city,lat,lon`);
+          if (geoRes.ok) {
+            const geoData = await geoRes.json();
+            if (geoData.status === "success") {
+              city = geoData.city;
+              region = geoData.regionName;
+              country = geoData.countryCode;
+              lat = geoData.lat;
+              lng = geoData.lon;
+            } else {
+              city = "Unknown City";
+            }
+          } else {
+            city = "Unknown City";
+          }
+        } catch (error) {
+          city = "Unknown City";
+        }
       }
     }
 

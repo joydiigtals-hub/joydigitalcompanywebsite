@@ -24,16 +24,43 @@ export async function POST(request: Request) {
     }
 
     const headers = request.headers;
-    let country = headers.get("x-vercel-ip-country") || "IN";
-    let region = headers.get("x-vercel-ip-country-region") || "TN";
-    let city = headers.get("x-vercel-ip-city") || "Chennai";
+    let country = headers.get("x-vercel-ip-country") || headers.get("cf-ipcountry") || "";
+    let region = headers.get("x-vercel-ip-country-region") || "";
+    let city = headers.get("x-vercel-ip-city") || headers.get("cf-ipcity") || "";
 
-    // Fallback for localhost testing
-    const isLocalhost = request.url.includes("localhost") || request.url.includes("127.0.0.1");
-    if (isLocalhost && !headers.get("x-vercel-ip-city")) {
-      city = "Chennai (Local Test)";
-      region = "Tamil Nadu";
-      country = "IN";
+    const clientIp = headers.get("x-forwarded-for")?.split(",")[0] || headers.get("x-real-ip") || "";
+    const isLocalhost = process.env.NODE_ENV === "development" || clientIp === "127.0.0.1" || clientIp === "::1" || !clientIp;
+
+    if (!city) {
+      if (isLocalhost) {
+        city = "Chennai (Local Test)";
+        region = "Tamil Nadu";
+        country = "IN";
+      } else {
+        try {
+          const geoRes = await fetch(`http://ip-api.com/json/${clientIp}?fields=status,countryCode,regionName,city`);
+          if (geoRes.ok) {
+            const geoData = await geoRes.json();
+            if (geoData.status === "success") {
+              city = geoData.city;
+              region = geoData.regionName;
+              country = geoData.countryCode;
+            } else {
+              city = "Chennai";
+              region = "TN";
+              country = "IN";
+            }
+          } else {
+            city = "Chennai";
+            region = "TN";
+            country = "IN";
+          }
+        } catch (error) {
+          city = "Chennai";
+          region = "TN";
+          country = "IN";
+        }
+      }
     }
 
     const { getDb } = await import("@/lib/mongodb");
