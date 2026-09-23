@@ -1,61 +1,23 @@
-"use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import ClientScrollObserver from "@/components/ui/ClientScrollObserver";
+import CountUpNumber from "@/components/ui/CountUpNumber";
+import TrackedLink from "@/components/ui/TrackedLink";
+import TrackedWaLink from "@/components/ui/TrackedWaLink";
+import IndustryTabs from "@/components/sections/IndustryTabs";
+import ProcessSection from "@/components/sections/ProcessSection";
+import PricingSection from "@/components/sections/PricingSection";
 import Header from "@/components/layout/Header";
 import DigitalNetworkBackground from "@/components/ui/DigitalNetworkBackground";
 
-const WorldwideServiceNetwork = dynamic(() => import("@/components/ui/WorldwideServiceNetwork"), { ssr: false });
+const WorldwideServiceNetwork = dynamic(() => import("@/components/ui/WorldwideServiceNetwork"));
 const Footer = dynamic(() => import("@/components/layout/Footer"));
 const LeadForm = dynamic(() => import("@/components/ui/LeadForm"));
 const Accordion = dynamic(() => import("@/components/ui/Accordion"));
 import ModernHeroSection from "@/components/sections/ModernHeroSection";
-
-// Lightweight Count-Up Component honoring prefers-reduced-motion
-function CountUpNumber({ target, suffix = "" }: { target: number; suffix?: string }) {
-  const [count, setCount] = useState(0);
-  const [triggered, setTriggered] = useState(false);
-  const elementRef = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReduced) {
-      setCount(target);
-      return;
-    }
-
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting && !triggered) {
-        setTriggered(true);
-        let start = 0;
-        const duration = 1200; // Count duration: 1.2s
-        const stepTime = 16;
-        const totalSteps = Math.ceil(duration / stepTime);
-        const increment = target / totalSteps;
-        
-        const timer = setInterval(() => {
-          start += increment;
-          if (start >= target) {
-            setCount(target);
-            clearInterval(timer);
-          } else {
-            setCount(Math.floor(start));
-          }
-        }, stepTime);
-      }
-    }, { threshold: 0.1 });
-    
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
-    
-    return () => observer.disconnect();
-  }, [target, triggered]);
-
-  return <span ref={elementRef}>{count}{suffix}</span>;
-}
 
 export const HOME_FAQS = [
   {
@@ -137,71 +99,10 @@ interface HomePageComponentProps {
 }
 
 export default function HomePageComponent({ country }: HomePageComponentProps) {
-  const [selectedIndustry, setSelectedIndustry] = useState("Startups");
   
-  // Dynamic rotating hero phrase state
-  const [activePhrase, setActivePhrase] = useState("Grow Your Business");
-  const [fadeState, setFadeState] = useState("opacity-100 translate-y-0");
   
-  // Section line reveal status
-  const [processInView, setProcessInView] = useState(false);
 
-  // Rotating phrases effect (SaaS headline style)
-  useEffect(() => {
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReduced) return;
 
-    const phrases = ["Grow Your Business", "Grow Your Brand", "Grow Online"];
-    let idx = 0;
-
-    const interval = setInterval(() => {
-      setFadeState("opacity-0 -translate-y-2");
-      setTimeout(() => {
-        idx = (idx + 1) % phrases.length;
-        setActivePhrase(phrases[idx]);
-        setFadeState("opacity-0 translate-y-2");
-        setTimeout(() => {
-          setFadeState("opacity-100 translate-y-0");
-        }, 50);
-      }, 300);
-    }, 3600);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  // Intersection Observer for scroll reveal animations
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("reveal-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
-    );
-
-    const elements = document.querySelectorAll(".reveal-hidden");
-    elements.forEach((el) => observer.observe(el));
-
-    // Process section visual draw line trigger
-    const processObserver = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setProcessInView(true);
-        processObserver.unobserve(entry.target);
-      }
-    }, { threshold: 0.15 });
-
-    const processSec = document.getElementById("process-section");
-    if (processSec) processObserver.observe(processSec);
-
-    return () => {
-      elements.forEach((el) => observer.unobserve(el));
-      if (processSec) processObserver.unobserve(processSec);
-    };
-  }, []);
 
   // Dynamic localized copy overrides
   const getHeroContent = () => {
@@ -387,58 +288,6 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
     }
   ];
 
-  // 4. WHO WE HELP DIRECTORY
-  const INDUSTRIES = [
-    {
-      name: "Startups",
-      desc: "Fast, custom landing pages and scalable web structures to establish brand presence, validate features, and collect early customer registrations."
-    },
-    {
-      name: "Small Businesses",
-      desc: "Affordable multipage platforms to present your services clearly, set up call-to-actions, and start ranking for local search queries."
-    },
-    {
-      name: "Entrepreneurs",
-      desc: "Clean digital portals and personal portfolios built quickly to showcase consultation models, book discovery slots, and accept details."
-    },
-    {
-      name: "Professional Services",
-      desc: "Highly-trustworthy consulting platforms for legal advisors, accountants, and finance professionals to generate qualified booking leads."
-    },
-    {
-      name: "Real Estate",
-      desc: "Clean layout properties directories featuring localized maps, structured specifications lists, and quick WhatsApp callback triggers."
-    },
-    {
-      name: "Hotels & Hospitality",
-      desc: "Responsive portal sites showcasing room configurations, amenity directories, and direct inquiry forms to reduce booking fees."
-    },
-    {
-      name: "Healthcare",
-      desc: "Fully responsive layouts for dental clinics, practitioners, and medical setups. Includes online scheduling details and mapping."
-    },
-    {
-      name: "Insurance",
-      desc: "Lead acquisition templates for independent agents to present policy features and capture structured advisor consultations."
-    },
-    {
-      name: "Education",
-      desc: "Professional portals for academies, tutor setups, and trainers featuring structured curricula maps and signup triggers."
-    },
-    {
-      name: "Tours & Travel",
-      desc: "Vibrant custom packages directories with pricing tiers, scheduling guides, and quick inquiry buttons for travel setups."
-    },
-    {
-      name: "E-commerce",
-      desc: "Next-gen storefronts pre-rendering static catalogs to load instantly on slow mobile connections, reducing checkout abandonment."
-    },
-    {
-      name: "Local Businesses",
-      desc: "Localized search optimization setups combined with maps directory syncs to guarantee exposure in nearby queries."
-    }
-  ];
-
   // 5. PORTFOLIO / REAL PROJECTS ONLY
   const PORTFOLIO_PROJECTS = [
     {
@@ -456,35 +305,6 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
       desc: "Rebuilt client presence into a clean, mobile-first consultation funnel. Optimized images and static assets to load in under 1.2 seconds, securing over 50 monthly WhatsApp leads.",
       image: "/assets/images/hero-banner.webp",
       link: "https://chithrainsurance.com"
-    }
-  ];
-
-  // 6. HOW WE WORK PROCESS
-  const PROCESS_STEPS = [
-    {
-      step: "01",
-      title: "Tell Us About Your Business",
-      desc: "Submit your basic parameters on our audit form or drop a line on WhatsApp outlining your services and targets."
-    },
-    {
-      step: "02",
-      title: "Understand Your Goals",
-      desc: "We run a brief remote discovery chat to evaluate competitors, target keywords, speed bottlenecks, and user paths."
-    },
-    {
-      step: "03",
-      title: "Plan & Design Layouts",
-      desc: "Our design team structures wireframes and conversion funnels, maintaining a premium brand identity."
-    },
-    {
-      step: "04",
-      title: "Develop & Launch",
-      desc: "We write clean Next.js/React layouts, configure meta structures, embed Schema markups, and launch live."
-    },
-    {
-      step: "05",
-      title: "Support & Organic Growth",
-      desc: "Post-deployment, we configure backups, run speed diagnostics, check Google indexings, and tune structures."
     }
   ];
 
@@ -549,33 +369,89 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
 
   // 11. FAQ LIST (uses HOME_FAQS from top level)
 
-  const handleCtaEvent = (ctaName: string) => {
-    if (typeof window !== "undefined") {
-      const tracker = (window as any).trackJoyDigitalEvent;
-      if (typeof tracker === "function") {
-        tracker("cta_click", { button_text: ctaName, location: "homepage" });
-      }
-    }
-  };
-
-  const handleWaEvent = (location: string) => {
-    if (typeof window !== "undefined") {
-      const tracker = (window as any).trackJoyDigitalEvent;
-      if (typeof tracker === "function") {
-        tracker("whatsapp_click", { location });
-      }
-    }
-  };
-
   return (
     <>
+      <ClientScrollObserver />
       <Header transparent={true} />
       
       <main className="bg-[#FAF9FF] text-[#1F1B2D] min-h-screen overflow-hidden">
         
         {/* 1. MODERNIZED INTERNATIONAL HERO SECTION */}
         <ModernHeroSection country={country} />
-
+        
+        {/* TRAVEL, TOURISM & SAFARI SECTION */}
+        <section className="py-20 bg-white border-b border-[#E9E4F2] relative z-10 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="reveal-hidden">
+              <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">
+                Industry Specialization
+              </span>
+              <h2 className="text-3xl lg:text-4xl font-extrabold text-[#1F1B2D] mb-6 leading-tight">
+                High-Converting Websites for Travel, Tourism &amp; Safari
+              </h2>
+              <p className="text-sm text-[#6B6478] font-semibold leading-relaxed mb-8">
+                We build custom, high-speed websites tailored specifically for Travel Agencies, Tour Operators, DMCs, and Safari Operators worldwide. Generate more qualified tour enquiries with layouts designed for the tourism industry.
+              </p>
+              
+              <ul className="space-y-4 mb-10 text-sm font-bold text-[#1F1B2D]">
+                <li className="flex items-start gap-3">
+                  <i className="fa-solid fa-circle-check text-emerald-500 mt-1" />
+                  <span>Dynamic Tour Package &amp; Itinerary Management (CMS)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <i className="fa-solid fa-circle-check text-emerald-500 mt-1" />
+                  <span>Direct WhatsApp Enquiry &amp; Booking Integration</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <i className="fa-solid fa-circle-check text-emerald-500 mt-1" />
+                  <span>Mobile-First Design for Global Travelers on the go</span>
+                </li>
+              </ul>
+              
+              <div className="flex flex-wrap gap-4">
+                <Link href="/travel-website-development" className="inline-flex items-center gap-2 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-xs px-6 py-3.5 rounded-xl shadow-md transition-all hover:-translate-y-0.5">
+                  Explore Travel Web Dev <i className="fa-solid fa-arrow-right" />
+                </Link>
+                <Link href="/safari-website-development" className="inline-flex items-center gap-2 bg-[#FAF9FF] hover:bg-[#F3F0FF] border border-[#E9E4F2] hover:border-[#7C3AED]/40 text-[#1F1B2D] font-bold text-xs px-6 py-3.5 rounded-xl transition-all hover:-translate-y-0.5">
+                  Safari Web Dev <i className="fa-solid fa-compass text-[#7C3AED]" />
+                </Link>
+              </div>
+            </div>
+            
+            <div className="relative reveal-hidden">
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#7C3AED]/20 to-emerald-500/10 rounded-[32px] blur-3xl transform -rotate-6" />
+              <div className="relative bg-[#1A1433] rounded-[32px] p-8 border border-[#2D244E] shadow-2xl overflow-hidden">
+                <div className="flex items-center justify-between border-b border-[#2D244E] pb-4 mb-6">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-rose-500" />
+                    <div className="w-3 h-3 rounded-full bg-amber-500" />
+                    <div className="w-3 h-3 rounded-full bg-emerald-500" />
+                  </div>
+                  <div className="text-[10px] font-bold text-slate-400 font-mono">Safari Operator Dashboard</div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex gap-4 items-center">
+                    <div className="w-16 h-16 rounded-xl bg-slate-800 shrink-0" />
+                    <div className="space-y-2 flex-1">
+                      <div className="h-3 bg-slate-700 rounded-full w-3/4" />
+                      <div className="h-2 bg-slate-800 rounded-full w-1/2" />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-[#2D244E]">
+                    <div className="bg-[#211942] rounded-xl p-4 border border-[#3A2D70]">
+                      <div className="text-[10px] text-slate-400 mb-1 uppercase font-bold">New Leads</div>
+                      <div className="text-2xl font-extrabold text-emerald-400">+42%</div>
+                    </div>
+                    <div className="bg-[#211942] rounded-xl p-4 border border-[#3A2D70]">
+                      <div className="text-[10px] text-slate-400 mb-1 uppercase font-bold">Mobile Speed</div>
+                      <div className="text-2xl font-extrabold text-white">0.8s</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* 2. TRUST / VALUE SECTION WITH SCROLL REVEALS (Soft background alternates) */}
         <section id="value-proposition" className="py-20 bg-white border-b border-[#E9E4F2] relative z-10">
           <div className="max-w-7xl mx-auto px-6">
@@ -779,51 +655,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
               </p>
             </div>
 
-            {/* Industry selector tabs layout with scroll reveal */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start reveal-hidden">
-              <div className="lg:col-span-4 flex flex-col gap-2.5 overflow-x-auto lg:overflow-visible flex-row lg:flex-col pb-4 lg:pb-0 scrollbar-thin">
-                {INDUSTRIES.map((ind) => (
-                  <button
-                    key={ind.name}
-                    onClick={() => setSelectedIndustry(ind.name)}
-                    className={`text-xs px-5 py-3.5 rounded-xl font-bold border transition-all text-left whitespace-nowrap lg:whitespace-normal cursor-pointer ${
-                      selectedIndustry === ind.name
-                        ? "bg-[#7C3AED] text-white border-[#7C3AED] shadow-md shadow-[#7C3AED]/10"
-                        : "bg-white text-[#1F1B2D] border-[#E9E4F2] hover:bg-slate-50"
-                    }`}
-                  >
-                    {ind.name}
-                  </button>
-                ))}
-              </div>
-
-              {/* Selected industry details card */}
-              <div className="lg:col-span-8 bg-white border border-[#E9E4F2] p-8 sm:p-12 rounded-[24px] shadow-sm text-left h-full flex flex-col justify-center min-h-[300px] hover:border-[#7C3AED]/15 transition-colors">
-                <span className="text-[10px] font-extrabold text-[#7C3AED] uppercase tracking-widest block mb-3">Target Industry Blueprint</span>
-                <h3 className="text-2xl font-black text-[#1F1B2D] mb-4">Joy Digital for {selectedIndustry}</h3>
-                <p className="text-sm text-[#6B6478] leading-relaxed font-semibold max-w-xl">
-                  {INDUSTRIES.find(i => i.name === selectedIndustry)?.desc}
-                </p>
-                <div className="mt-8 border-t border-[#E9E4F2] pt-6 flex flex-wrap gap-4 items-center">
-                  <a
-                    href="#enquiry-section"
-                    onClick={() => handleCtaEvent(`Start ${selectedIndustry} Project`)}
-                    className="bg-[#7C3AED] hover:bg-[#6D28D9] hover:scale-[1.03] transition-all text-white font-bold text-xs px-6 py-3 rounded-lg shadow-sm"
-                  >
-                    Start {selectedIndustry} Project
-                  </a>
-                  <a
-                    href="https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20discuss%20our%20project."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => handleWaEvent("who_we_help")}
-                    className="text-xs text-[#10b981] hover:text-[#059669] font-bold flex items-center gap-1.5 group"
-                  >
-                    <i className="fa-brands fa-whatsapp text-sm group-hover:scale-110 transition-transform" /> Chat on WhatsApp
-                  </a>
-                </div>
-              </div>
-            </div>
+            <IndustryTabs />
           </div>
         </section>
 
@@ -1041,22 +873,20 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                   </p>
                 </div>
                 <div className="md:col-span-4 flex flex-col gap-3 justify-end">
-                  <a
+                  <TrackedLink
                     href="#enquiry-section"
-                    onClick={() => handleCtaEvent("Free Tools Lead Consultation")}
+                    eventName="Free Tools Lead Consultation"
                     className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-center font-bold text-xs py-3.5 px-6 rounded-xl shadow-sm hover:scale-[1.01] transition-all cursor-pointer"
                   >
                     Get a Free Consultation
-                  </a>
-                  <a
+                  </TrackedLink>
+                  <TrackedWaLink
                     href="https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I%20saw%20your%20free%20business%20tools%20and%20I'd%20like%2520to%2520get%2520a%2520free%2520consultation%2520for%2520my%2520business."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => handleWaEvent("free_tools_cta")}
+                    location="free_tools_cta"
                     className="bg-[#10b981] hover:bg-[#059669] text-white text-center font-bold text-xs py-3.5 px-6 rounded-xl shadow-sm hover:scale-[1.01] transition-all cursor-pointer flex items-center justify-center gap-1.5"
                   >
                     <i className="fa-brands fa-whatsapp text-sm" /> Chat on WhatsApp
-                  </a>
+                  </TrackedWaLink>
                 </div>
               </div>
             </div>
@@ -1082,37 +912,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
               </p>
             </div>
 
-            <div className="relative">
-              {/* Progressive animated horizontal connecting gradient line (purple theme) */}
-              <div className="absolute top-6 left-12 right-12 h-[2px] bg-slate-100 hidden lg:block z-0">
-                <div 
-                  className="h-full bg-gradient-to-r from-[#7C3AED] to-[#A78BFA] origin-left transition-transform duration-1000 ease-out"
-                  style={{ transform: processInView ? "scaleX(1)" : "scaleX(0)" }}
-                />
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
-                {PROCESS_STEPS.map((step, idx) => (
-                  <div 
-                    key={idx} 
-                    style={{ transitionDelay: `${idx * 150}ms` }}
-                    className="flex flex-col items-start text-left group reveal-hidden"
-                  >
-                    <div className="relative mb-6">
-                      <span className="text-4xl font-black text-[#7C3AED]/15 group-hover:text-[#7C3AED] transition-colors duration-300">
-                        {step.step}
-                      </span>
-                    </div>
-                    <h3 className="text-sm font-extrabold text-[#1F1B2D] mb-3 group-hover:text-[#7C3AED] transition-colors">
-                      {step.title}
-                    </h3>
-                    <p className="text-xs text-[#6B6478] leading-relaxed font-semibold">
-                      {step.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <ProcessSection />
           </div>
         </section>
 
@@ -1308,133 +1108,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
-              {/* Card 1: Starter Website */}
-              <div className="bg-[#FAF9FF] border border-[#E9E4F2] p-8 rounded-[24px] shadow-sm flex flex-col justify-between text-left hover:shadow-lg hover:border-[#7C3AED]/40 transition-all duration-300 reveal-hidden group">
-                <div>
-                  <span className="inline-block bg-[#7C3AED]/10 text-[#7C3AED] font-extrabold text-[9px] uppercase tracking-widest px-3 py-1 rounded-full mb-4">Standard Setup</span>
-                  <h3 className="text-lg font-black text-[#1F1B2D] mb-2 group-hover:text-[#7C3AED] transition-colors">Starter Website</h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed mb-6 font-semibold">Perfect for new local service businesses wanting to establish professional authority online.</p>
-                  
-                  <div className="mb-6 flex items-baseline gap-1">
-                    <span className="text-3xl font-black text-[#171126]">
-                      {country === "in" ? "₹25,000" : "$1,200"}
-                    </span>
-                    <span className="text-xs text-[#6B6478] font-semibold">
-                      {country === "in" ? "One-time" : "One-time ($1,200 USD)"}
-                    </span>
-                  </div>
-
-                  <ul className="flex flex-col gap-3 text-xs text-[#6B6478] font-semibold border-t border-[#E9E4F2] pt-6 mb-8">
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Custom responsive website</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Mobile optimization</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> WhatsApp integration</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Lead Contact form</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Basic SEO setup</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Google Search Console sync</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> XML Sitemap generated</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Google Analytics integration</li>
-                  </ul>
-                </div>
-                <a
-                  href="https://wa.me/919080026133?text=Hi%20Joy%20Digital,%20I%2520am%2520interested%2520in%2520the%2520Starter%2520Website%2520package.%2520Please%2520share%2520the%2520details."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => {
-                    handleWaEvent("pricing_starter");
-                    handleCtaEvent("Get Started - Starter");
-                  }}
-                  className="w-full text-center bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-xs py-3.5 rounded-xl shadow-sm transition-all"
-                >
-                  Get Started
-                </a>
-              </div>
-
-              {/* Card 2: Business Growth Website (Recommended) */}
-              <div className="bg-[#FAF9FF] border border-[#7C3AED] p-8 rounded-[24px] shadow-sm flex flex-col justify-between text-left hover:shadow-lg hover:border-[#7C3AED]/60 transition-all duration-300 reveal-hidden group relative">
-                <div className="absolute top-4 right-4">
-                  <span className="bg-[#7C3AED] text-white font-black text-[8px] uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">Recommended</span>
-                </div>
-                <div>
-                  <span className="inline-block bg-[#7C3AED]/10 text-[#7C3AED] font-extrabold text-[9px] uppercase tracking-widest px-3 py-1 rounded-full mb-4">Enterprise & Growth</span>
-                  <h3 className="text-lg font-black text-[#1F1B2D] mb-2 group-hover:text-[#7C3AED] transition-colors">Business Growth Website</h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed mb-6 font-semibold">Recommended for companies targeting local search rankings and active online client acquisition.</p>
-                  
-                  <div className="mb-6 flex items-baseline gap-1">
-                    <span className="text-3xl font-black text-[#171126]">
-                      {country === "in" ? "₹45,000" : "$2,800"}
-                    </span>
-                    <span className="text-xs text-[#6B6478] font-semibold">
-                      {country === "in" ? "Starting rate" : "Starting rate ($2,800 USD)"}
-                    </span>
-                  </div>
-
-                  <ul className="flex flex-col gap-3 text-xs text-[#6B6478] font-semibold border-t border-[#E9E4F2] pt-6 mb-8">
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Custom website layout</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Conversion-focused UI/UX</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> SEO-ready architecture</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Advanced contact forms</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> WhatsApp leads sync</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Search Console configuration</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Google Analytics event tracking</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Core Web Vitals speed tuning</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Basic content copywriting check</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Admin panel / CMS option</li>
-                  </ul>
-                </div>
-                <a
-                  href="https://wa.me/919080026133?text=Hi%20Joy%20Digital,%20I%2520need%2520a%2520quote%252520for%252520the%252520Business%252520Growth%252520Website%252520package.%252520Please%252520share%252520details."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => {
-                    handleWaEvent("pricing_growth");
-                    handleCtaEvent("Request a Quote - Business");
-                  }}
-                  className="w-full text-center bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-xs py-3.5 rounded-xl shadow-sm transition-all"
-                >
-                  Request a Quote
-                </a>
-              </div>
-
-              {/* Card 3: Website + SEO Growth */}
-              <div className="bg-[#FAF9FF] border border-[#E9E4F2] p-8 rounded-[24px] shadow-sm flex flex-col justify-between text-left hover:shadow-lg hover:border-[#7C3AED]/40 transition-all duration-300 reveal-hidden group">
-                <div>
-                  <span className="inline-block bg-[#7C3AED]/10 text-[#7C3AED] font-extrabold text-[9px] uppercase tracking-widest px-3 py-1 rounded-full mb-4">Complete SEO Solution</span>
-                  <h3 className="text-lg font-black text-[#1F1B2D] mb-2 group-hover:text-[#7C3AED] transition-colors">Website + SEO Growth</h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed mb-6 font-semibold">Perfect for companies seeking persistent ranking growth, organic pipelines, and local lead dominance.</p>
-                  
-                  <div className="mb-6 flex items-baseline gap-1">
-                    <span className="text-3xl font-black text-[#171126]">Custom Quote</span>
-                    <span className="text-xs text-[#6B6478] font-semibold">Monthly SEO retainer campaigns</span>
-                  </div>
-
-                  <ul className="flex flex-col gap-3 text-xs text-[#6B6478] font-semibold border-t border-[#E9E4F2] pt-6 mb-8">
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Custom website layout</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Technical SEO code audits</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Advanced On-page SEO setup</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> High-intent keyword research</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Local SEO & maps optimizations</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Google Business Profile setups</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Comprehensive content strategy</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Monthly SEO retainer campaigns</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Index monitoring & audit fixes</li>
-                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Google Search Console reporting</li>
-                  </ul>
-                </div>
-                <a
-                  href="https://wa.me/919080026133?text=Hi%20Joy%20Digital,%20I%2520am%2520interested%2520in%2520the%2520Website%2520%2B%2520SEO%2520Growth%2520package.%2520Please%2520connect%2520me%2520with%2520an%2520SEO%2520expert."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => {
-                    handleWaEvent("pricing_seo");
-                    handleCtaEvent("Talk to an SEO Expert");
-                  }}
-                  className="w-full text-center bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-xs py-3.5 rounded-xl shadow-sm transition-all"
-                >
-                  Talk to an SEO Expert
-                </a>
-              </div>
-            </div>
+            <PricingSection country={country} />
             
             <p className="text-[10px] text-[#6B6478] font-bold uppercase tracking-wider text-center mt-8">
               Need a custom layout or dedicated corporate contract? <a href="https://wa.me/919080026133" className="text-[#7C3AED] underline hover:text-[#A78BFA]">Chat with our engineers</a>.
@@ -1480,25 +1154,23 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
             </p>
             
             <div className="flex flex-wrap items-center justify-center gap-4 w-full sm:w-auto">
-              <Link
+              <TrackedLink
                 href="/free-website-audit"
-                onClick={() => handleCtaEvent("Get Free Website Audit - Final")}
+                eventName="Get Free Website Audit - Final"
                 className="w-full sm:w-auto bg-[#7C3AED] hover:bg-[#6D28D9] hover:scale-[1.025] hover:shadow-lg transition-all text-white font-bold text-xs px-8 py-4 rounded-xl shadow-md flex items-center justify-center gap-1.5 group"
               >
                 Get Free Website Audit
                 <i className="fa-solid fa-arrow-right group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </Link>
+              </TrackedLink>
               
-              <a
+              <TrackedWaLink
                 href="https://wa.me/919080026133?text=Hi%20Joy%20Digital,%20I%20need%20a%20website%20for%20my%20business.%20I%20would%20like%20to%20know%20the%20pricing%20and%20process."
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => handleWaEvent("final_cta")}
+                location="final_cta"
                 className="w-full sm:w-auto bg-[#10b981] hover:bg-[#059669] hover:scale-[1.025] hover:shadow-lg transition-all text-white font-bold text-xs px-8 py-4 rounded-xl shadow-md flex items-center justify-center gap-2 cursor-pointer"
               >
                 <i className="fa-brands fa-whatsapp text-lg animate-pulse" />
-                Chat on WhatsApp
-              </a>
+                Chat with an Expert
+              </TrackedWaLink>
             </div>
           </div>
         </section>

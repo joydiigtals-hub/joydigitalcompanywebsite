@@ -6,13 +6,14 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://joydigital.in"),
-  title: "Premium Web Development Company | Joy Digital",
-  description: "Joy Digital is a global web development company. We build sub-second Next.js web applications, bespoke digital experiences, and scalable search engine solutions for enterprise brands.",
+  title: "Custom Website Development Company | Travel & Safari Specialists",
+  description: "We build high-converting custom websites for businesses globally. Specialized in travel, tourism, and safari website development designed to generate qualified leads.",
   keywords: [
-    "Web Development Company",
-    "Web Design Agency",
-    "Custom Website Development",
-    "SEO Services"
+    "Custom Website Development Company",
+    "Professional Website Design",
+    "Business Website Development",
+    "Travel Website Development Company",
+    "B2B Web Development"
   ],
   authors: [{ name: "Joy Digital", url: "https://joydigital.in" }],
   publisher: "Joy Digital",
@@ -50,8 +51,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://joydigital.in",
     siteName: "Joy Digital",
-    title: "Premium Web Development Company | Joy Digital",
-    description: "Joy Digital is a global web development company. We build sub-second Next.js web applications, bespoke digital experiences, and scalable search engine solutions for enterprise brands.",
+    title: "Custom Website Development Company | Travel & Safari Specialists",
+    description: "We build high-converting custom websites for businesses globally. Specialized in travel, tourism, and safari website development designed to generate qualified leads.",
     images: [
       {
         url: "https://joydigital.in/assets/images/hero-banner.webp",
@@ -63,8 +64,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Premium Web Development Company | Joy Digital",
-    description: "Joy Digital is a global web development company. We build sub-second Next.js web applications, bespoke digital experiences, and scalable search engine solutions for enterprise brands.",
+    title: "Custom Website Development Company | Travel & Safari Specialists",
+    description: "We build high-converting custom websites for businesses globally. Specialized in travel, tourism, and safari website development designed to generate qualified leads.",
     images: ["https://joydigital.in/assets/images/hero-banner.webp"],
     creator: "@joydigital",
   },
@@ -73,8 +74,8 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const homeGraph = buildPageGraphSchema({
     url: "https://joydigital.in/",
-    title: "Web Development Company & SEO Agency | Joy Digital",
-    description: "Grow your business globally with Joy Digital. We build high-converting, fast Next.js websites and data-driven SEO solutions.",
+    title: "Custom Website Development Company | Travel & Safari Specialists",
+    description: "We build high-converting custom websites for businesses globally. Specialized in travel, tourism, and safari website development designed to generate qualified leads.",
     isHomepage: true,
     faqs: HOME_FAQS,
   });

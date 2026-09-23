@@ -5,18 +5,63 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 
-const SERVICES_LINKS = [
-  { href: "/website-development", label: "Web Development", localized: true },
-  { href: "/web-design-services", label: "Web Design", localized: false },
-  { href: "/static-website-development", label: "Static Website Development", localized: false },
-  { href: "/portfolio-website-development", label: "Portfolio Website Development", localized: false },
-  { href: "/landing-page-development", label: "Landing Page Development", localized: false },
-  { href: "/custom-website-development", label: "Custom Web Systems", localized: false },
-  { href: "/dynamic-website-development", label: "Dynamic Web Applications", localized: false },
-  { href: "/ecommerce-website-development", label: "E-commerce Development", localized: false },
-  { href: "/seo-services", label: "SEO Services", localized: true },
-  { href: "/local-seo-services", label: "Local SEO Services", localized: false },
-  { href: "/ai-search-optimization", label: "AI Search Optimization (GEO)", localized: false },
+const SERVICES_CATEGORIES = [
+  {
+    title: "Web Development",
+    href: "/website-development",
+    localized: true,
+    subServices: [
+      { href: "/static-website-development", label: "Static Website Development", localized: false },
+      { href: "/dynamic-website-development", label: "Dynamic Website Development", localized: false },
+      { href: "/custom-website-development", label: "Custom Web Systems", localized: false },
+      { href: "/ecommerce-website-development", label: "E-commerce Development", localized: false },
+    ]
+  },
+  {
+    title: "Web Design",
+    href: "/web-design-services",
+    localized: false,
+    subServices: [
+      { href: "/web-design-services", label: "Business Website Design", localized: false },
+      { href: "/landing-page-development", label: "Landing Page Design", localized: false },
+      { href: "/web-design-services", label: "UI/UX Design", localized: false },
+    ]
+  },
+  {
+    title: "Travel & Safari Websites",
+    href: "/travel-website-development",
+    localized: false,
+    subServices: [
+      { href: "/travel-website-development", label: "Travel Agency Websites", localized: false },
+      { href: "/travel-website-development", label: "Tour Operator Websites", localized: false },
+      { href: "/safari-website-development", label: "Safari Websites", localized: false },
+      { href: "/travel-website-development", label: "Tourism Websites", localized: false },
+      { href: "/travel-website-development", label: "DMC Websites", localized: false },
+    ]
+  },
+  {
+    title: "SEO Services",
+    href: "/seo-services",
+    localized: true,
+    subServices: [
+      { href: "/seo-services", label: "Website SEO", localized: true },
+      { href: "/seo-services", label: "Technical SEO", localized: true },
+      { href: "/seo-services", label: "On-Page SEO", localized: true },
+      { href: "/seo-services", label: "SEO Content", localized: true },
+    ]
+  },
+  {
+    title: "Local SEO",
+    href: "/local-seo-services",
+    localized: false,
+    subServices: []
+  },
+  {
+    title: "AI Search Optimization (GEO)",
+    href: "/ai-search-optimization",
+    localized: false,
+    subServices: []
+  }
 ];
 
 const REGIONS = [
@@ -302,34 +347,83 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                 <i className={`fa-solid fa-chevron-down text-[10px] transition-transform duration-200 ${isServicesDropdownOpen ? "rotate-180" : ""}`}></i>
               </button>
 
-              {/* Dropdown Menu - Bridge container (top-full pt-1.5) to prevent mouse leave gap */}
+              {/* Dropdown Menu - Mega Menu Style */}
               <div
-                className={`absolute left-0 top-full pt-1.5 w-64 transition-all duration-200 z-[70] ${
+                className={`absolute left-0 top-full pt-1.5 w-[600px] transition-all duration-200 z-[70] ${
                   isServicesDropdownOpen
                     ? "opacity-100 visible translate-y-0"
                     : "opacity-0 invisible -translate-y-2 pointer-events-none"
                 }`}
               >
-                <div className="bg-white border border-[#E9E4F2] rounded-xl shadow-xl py-2 overflow-hidden">
-                  {SERVICES_LINKS.map((link) => {
-                    const targetHref = link.localized ? getRegionalHref(link.href) : link.href;
-                    return (
-                      <Link
-                        key={link.href}
-                        href={targetHref}
-                        title={link.label}
-                        onClick={() => setIsServicesDropdownOpen(false)}
-                        className={`block px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-[#FAF9FF] hover:text-[#7C3AED] ${
-                          pathname === targetHref ? "text-[#7C3AED] bg-[#FAF9FF] font-extrabold" : "text-slate-700"
-                        }`}
-                      >
-                        {link.label}
-                      </Link>
-                    );
-                  })}
+                <div className="bg-white border border-[#E9E4F2] rounded-2xl shadow-xl p-6 overflow-hidden">
+                  <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+                    {SERVICES_CATEGORIES.map((category) => {
+                      const targetCategoryHref = category.localized ? getRegionalHref(category.href) : category.href;
+                      return (
+                        <div key={category.title} className="flex flex-col gap-2.5">
+                          <Link
+                            href={targetCategoryHref}
+                            title={category.title}
+                            onClick={() => setIsServicesDropdownOpen(false)}
+                            className="font-bold text-[13px] text-[#1F1B2D] hover:text-[#7C3AED] transition-colors border-b border-[#E9E4F2] pb-2 uppercase tracking-wide"
+                          >
+                            {category.title}
+                          </Link>
+                          {category.subServices.length > 0 && (
+                            <div className="flex flex-col gap-2">
+                              {category.subServices.map((sub, idx) => {
+                                const targetSubHref = sub.localized ? getRegionalHref(sub.href) : sub.href;
+                                return (
+                                  <Link
+                                    key={`${sub.label}-${idx}`}
+                                    href={targetSubHref}
+                                    title={sub.label}
+                                    onClick={() => setIsServicesDropdownOpen(false)}
+                                    className={`text-[13px] font-semibold transition-colors hover:text-[#7C3AED] ${
+                                      pathname === targetSubHref ? "text-[#7C3AED]" : "text-slate-600"
+                                    }`}
+                                  >
+                                    {sub.label}
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
+
+            <Link
+              href="/travel-website-development"
+              title="Travel & Safari"
+              className={`font-semibold text-sm transition-colors nav-link-underline ${
+                isScrolled ? "hover:text-accent" : "hover:text-primary-light"
+              } ${
+                isActive("/travel-website-development") || isActive("/safari-website-development")
+                  ? (isScrolled ? "text-accent" : "text-primary-light") 
+                  : (isScrolled ? "text-text-primary" : "text-slate-100")
+              }`}
+            >
+              Travel & Safari
+            </Link>
+
+            <Link
+              href="/portfolio-website-development"
+              title="Portfolio"
+              className={`font-semibold text-sm transition-colors nav-link-underline ${
+                isScrolled ? "hover:text-accent" : "hover:text-primary-light"
+              } ${
+                isActive("/portfolio-website-development") 
+                  ? (isScrolled ? "text-accent" : "text-primary-light") 
+                  : (isScrolled ? "text-text-primary" : "text-slate-100")
+              }`}
+            >
+              Portfolio
+            </Link>
 
             <Link
               href="/about"
@@ -614,25 +708,67 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             <span className="font-semibold text-lg text-primary-dark border-b border-[#E5E7EB] pb-2 flex justify-between items-center">
               Our Services
             </span>
-            <div className="pl-4 flex flex-col gap-3 mt-2">
-              {SERVICES_LINKS.map((link) => {
-                const targetHref = link.localized ? getRegionalHref(link.href) : link.href;
+            <div className="flex flex-col gap-4 mt-2">
+              {SERVICES_CATEGORIES.map((category) => {
+                const targetCategoryHref = category.localized ? getRegionalHref(category.href) : category.href;
                 return (
-                  <Link
-                    key={link.href}
-                    href={targetHref}
-                    title={link.label}
-                    className={`text-sm font-medium transition-colors hover:text-accent ${
-                      pathname === targetHref ? "text-accent" : "text-text-secondary"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
+                  <div key={category.title} className="flex flex-col gap-2">
+                    <Link
+                      href={targetCategoryHref}
+                      title={category.title}
+                      onClick={() => setIsMobileOpen(false)}
+                      className={`font-bold text-[15px] transition-colors ${
+                        pathname === targetCategoryHref ? "text-accent" : "text-primary-dark"
+                      }`}
+                    >
+                      {category.title}
+                    </Link>
+                    {category.subServices.length > 0 && (
+                      <div className="pl-4 flex flex-col gap-2 border-l-2 border-[#E9E4F2] ml-1">
+                        {category.subServices.map((sub, idx) => {
+                          const targetSubHref = sub.localized ? getRegionalHref(sub.href) : sub.href;
+                          return (
+                            <Link
+                              key={`${sub.label}-${idx}`}
+                              href={targetSubHref}
+                              title={sub.label}
+                              onClick={() => setIsMobileOpen(false)}
+                              className={`text-sm font-semibold transition-colors hover:text-accent ${
+                                pathname === targetSubHref ? "text-accent" : "text-slate-500"
+                              }`}
+                            >
+                              {sub.label}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
                 );
               })}
             </div>
           </div>
+          <Link
+            href="/travel-website-development"
+            title="Travel & Safari"
+            onClick={() => setIsMobileOpen(false)}
+            className={`font-semibold text-lg border-b border-[#E5E7EB] pb-2 ${
+              isActive("/travel-website-development") || isActive("/safari-website-development") ? "text-accent" : "text-primary-dark"
+            }`}
+          >
+            Travel & Safari
+          </Link>
 
+          <Link
+            href="/portfolio-website-development"
+            title="Portfolio"
+            onClick={() => setIsMobileOpen(false)}
+            className={`font-semibold text-lg border-b border-[#E5E7EB] pb-2 ${
+              isActive("/portfolio-website-development") ? "text-accent" : "text-primary-dark"
+            }`}
+          >
+            Portfolio
+          </Link>
           <Link
             href="/about"
             title="About Us"

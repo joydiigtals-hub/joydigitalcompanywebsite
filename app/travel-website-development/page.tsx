@@ -4,15 +4,17 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Tour Operator & Travel Agency Website Development | Joy Digital",
-  description: "Joy Digital is a leading tourism website development company. We offer custom website development for tour operators, travel booking website development, and travel agency website redesign.",
+  title: "Travel Website Development Company | For Tour Operators & DMCs",
+  description: "Custom travel website development for travel agencies, tour operators, and DMCs. We build high-converting websites designed to generate more travel enquiries.",
   keywords: [
-    "Travel Agency Website Design",
-    "Travel Website Development",
-    "Tour Operator Website"
+    "travel website development",
+    "tour operator website development",
+    "travel agency website design",
+    "tourism website development",
+    "custom travel website design"
   ],
   alternates: {
-    canonical: "https://joydigital.in/website-for-tours-and-travels",
+    canonical: "https://joydigital.in/travel-website-development",
   },
 };
 
@@ -46,13 +48,13 @@ export default async function ToursTravelsWebPage() {
 
   return (
     <ServicePageTemplate
-      serviceName="Website for Tours & Travels"
-      heroTitle="Custom Website Development for Tour Operators & Travel Agencies"
-      heroSubtitle="Partner with a premier tourism website development company. Build custom travel website development systems, tour package website development portals, and travel booking website setups."
-      leadSource="Website for Tours and Travels Landing Page"
-      heroCtaText="Get Travel Website Quote"
-      canonicalUrl="https://joydigital.in/website-for-tours-and-travels"
-      overviewTitle="Custom Travel Agency Website Development Services"
+      serviceName="Travel Website Development"
+      heroTitle="Custom Travel Website Development for Tour Operators & Agencies"
+      heroSubtitle="Partner with a premier tourism website development company. Build high-converting travel website development systems and tour package portals to generate global travel enquiries."
+      leadSource="Travel Website Development Landing Page"
+      heroCtaText="Request a Travel Website Quote"
+      canonicalUrl="https://joydigital.in/travel-website-development"
+      overviewTitle="High-Converting Websites for the Travel Industry"
       overviewContent={
         <div className="space-y-6">
           <p>

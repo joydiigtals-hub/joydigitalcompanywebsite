@@ -11,27 +11,27 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function CustomWebDevPage() {
   const seoData = await generatePageSeo(
     "/custom-website-development",
-    "Custom Website Development Services | Joy Digital",
-    "Enterprise custom website development services. Sub-second Next.js page loads, 99+ Core Web Vitals, and 100% IP ownership."
+    "Custom Website Development Services For Businesses | Joy Digital",
+    "Professional custom website development services for businesses worldwide. We build high-converting, SEO-ready websites designed to generate B2B enquiries."
   );
 
   return (
     <>
       <ServicePageTemplate
         serviceName="Custom Website Development"
-        heroTitle={seoData.pageMapping?.h1 || "Custom Website Development Services for Global Enterprises"}
-        heroSubtitle="Engineered for global scale. Build bespoke, sub-second Next.js web applications with zero template bloat, 99+ Core Web Vitals, and 100% IP code ownership."
+        heroTitle={seoData.pageMapping?.h1 || "Custom Website Development Services Built for Business Growth"}
+        heroSubtitle="A premium, results-oriented custom website development service that helps businesses across diverse industries build authority, trust, and generate qualified leads globally."
         leadSource="Custom Website Development Page"
-        heroCtaText="Book a Free Architecture Call"
+        heroCtaText="Get a Website Quote"
         canonicalUrl="https://joydigital.in/custom-website-development"
-        overviewTitle="High-Intent Custom Website Development for Global Businesses"
+        overviewTitle="Websites That Turn Visitors Into Enquiries"
         overviewContent={
           <div className="space-y-6">
             <p>
-              Joy Digital is an enterprise <strong>custom website development</strong> agency delivering tailored digital platforms, high-speed applications, and <strong>custom website development services</strong>. We eliminate the vulnerabilities, slow load times, and bloated codebase of legacy page builders by engineering modern, decoupled Next.js & React solutions.
+              A website is a business asset, not just a digital brochure. It must work 24/7 to bring in leads. Joy Digital is a premium <strong>custom website development</strong> agency delivering high-speed platforms and <strong>custom website development services</strong> designed to generate B2B enquiries globally.
             </p>
             <p>
-              If your company requires <strong>bespoke web development</strong> or <strong>custom business websites</strong> built to capture organic traffic and scale seamlessly, our full-stack engineering team builds scalable <strong>dynamic web development</strong> platforms tailored to your exact business objectives.
+              Whether you are in Corporate, Retail, Tech, Healthcare, or Manufacturing, our <strong>business website development</strong> team builds scalable platforms that pass Google's Core Web Vitals, giving your business a technical SEO advantage from day one.
             </p>
             <h3 className="text-xl font-extrabold text-primary-dark mt-8 mb-4">Custom Code (Next.js / React) vs. Off-the-Shelf Templates (WordPress / Wix)</h3>
             <div className="overflow-x-auto my-6">
@@ -73,8 +73,8 @@ export default async function CustomWebDevPage() {
             </p>
           </div>
         }
-        benefitsTitle="Core Web Engineering Capabilities"
-        benefitsSubtitle="How our custom engineering approach outperforms generic templates."
+        benefitsTitle="Built for Performance, SEO, and Scale"
+        benefitsSubtitle="How our custom engineering approach outperforms generic templates to bring you more leads."
         benefits={[
           {
             icon: "fa-solid fa-cubes",
