@@ -425,20 +425,6 @@ export default function Header({ transparent = false }: { transparent?: boolean 
               Portfolio
             </Link>
 
-            <Link
-              href="/about"
-              title="About Us"
-              className={`font-semibold text-sm transition-colors nav-link-underline ${
-                isScrolled ? "hover:text-accent" : "hover:text-primary-light"
-              } ${
-                isActive("/about") 
-                  ? (isScrolled ? "text-accent" : "text-primary-light") 
-                  : (isScrolled ? "text-text-primary" : "text-slate-100")
-              }`}
-            >
-              About Us
-            </Link>
-
 
             <Link
               href="/blog"
@@ -452,20 +438,6 @@ export default function Header({ transparent = false }: { transparent?: boolean 
               }`}
             >
               Blog
-            </Link>
-
-            <Link
-              href="/free-tools"
-              title="Free Tools"
-              className={`font-semibold text-sm transition-colors nav-link-underline ${
-                isScrolled ? "hover:text-accent" : "hover:text-primary-light"
-              } ${
-                isActive("/free-tools") 
-                  ? (isScrolled ? "text-accent" : "text-primary-light") 
-                  : (isScrolled ? "text-text-primary" : "text-slate-100")
-              }`}
-            >
-              Free Tools
             </Link>
 
 
@@ -769,16 +741,6 @@ export default function Header({ transparent = false }: { transparent?: boolean 
           >
             Portfolio
           </Link>
-          <Link
-            href="/about"
-            title="About Us"
-            className={`font-semibold text-lg border-b border-[#E5E7EB] pb-2 ${
-              isActive("/about") ? "text-accent" : "text-primary-dark"
-            }`}
-          >
-            About Us
-          </Link>
-
 
           <Link
             href="/blog"
@@ -788,16 +750,6 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             }`}
           >
             Blog
-          </Link>
-
-          <Link
-            href="/free-tools"
-            title="Free Tools"
-            className={`font-semibold text-lg border-b border-[#E5E7EB] pb-2 ${
-              isActive("/free-tools") ? "text-accent" : "text-primary-dark"
-            }`}
-          >
-            Free Tools
           </Link>
 
 
