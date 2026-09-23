@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import {
   Smartphone,
   MessageCircle,
@@ -49,13 +49,13 @@ export default function WebsiteAuditWidget({
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   // Variants for framer motion
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 20, scale: 0.95 },
     visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.4, ease: "easeOut" } },
     exit: { opacity: 0, y: -20, scale: 0.95, transition: { duration: 0.3 } }
   };
 
-  const optionVariants = {
+  const optionVariants: Variants = {
     hidden: { opacity: 0, x: -20 },
     visible: (i: number) => ({
       opacity: 1,
