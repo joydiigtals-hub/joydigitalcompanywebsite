@@ -17,6 +17,17 @@ export default function AnalyticsTracker() {
 
     const trackVisit = async () => {
       try {
+        let clientIp = "";
+        try {
+          const ipRes = await fetch("https://api.ipify.org?format=json");
+          if (ipRes.ok) {
+            const ipData = await ipRes.json();
+            clientIp = ipData.ip;
+          }
+        } catch (e) {
+          console.warn("Could not fetch client IP from frontend");
+        }
+
         await fetch("/api/analytics/track", {
           method: "POST",
           headers: {
@@ -25,6 +36,7 @@ export default function AnalyticsTracker() {
           body: JSON.stringify({
             path: pathname,
             referrer: typeof document !== "undefined" ? document.referrer : "",
+            clientIp,
           }),
         });
       } catch (err) {

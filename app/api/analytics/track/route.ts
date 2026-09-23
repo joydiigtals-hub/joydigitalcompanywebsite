@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { path, referrer } = body;
+    const { path, referrer, clientIp: bodyClientIp } = body;
 
     const MONGODB_URI = process.env.MONGODB_URI;
     if (!MONGODB_URI) {
@@ -23,10 +23,11 @@ export async function POST(request: Request) {
     let lat = latStr ? parseFloat(latStr) : 13.0827;
     let lng = lngStr ? parseFloat(lngStr) : 80.2707;
 
-    const clientIp = headers.get("x-forwarded-for")?.split(",")[0] || headers.get("x-real-ip") || "";
+    const headerIp = headers.get("x-forwarded-for")?.split(",")[0] || headers.get("x-real-ip") || "";
+    const finalClientIp = bodyClientIp || headerIp;
 
     // Fix for reverse proxies setting localhost in request.url
-    const isLocalhost = process.env.NODE_ENV === "development" || clientIp === "127.0.0.1" || clientIp === "::1" || !clientIp;
+    const isLocalhost = process.env.NODE_ENV === "development" && (!finalClientIp || finalClientIp === "127.0.0.1" || finalClientIp === "::1");
 
     if (!city) {
       if (isLocalhost) {
@@ -36,7 +37,7 @@ export async function POST(request: Request) {
       } else {
         try {
           // Fetch from free geoip API if edge headers are missing
-          const geoRes = await fetch(`http://ip-api.com/json/${clientIp}?fields=status,countryCode,regionName,city,lat,lon`);
+          const geoRes = await fetch(`http://ip-api.com/json/${finalClientIp}?fields=status,countryCode,regionName,city,lat,lon`);
           if (geoRes.ok) {
             const geoData = await geoRes.json();
             if (geoData.status === "success") {
