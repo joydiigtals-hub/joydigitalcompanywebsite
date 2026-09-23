@@ -411,20 +411,6 @@ export default function Header({ transparent = false }: { transparent?: boolean 
               Travel & Safari
             </Link>
 
-            <Link
-              href="/portfolio-website-development"
-              title="Portfolio"
-              className={`font-semibold text-sm transition-colors nav-link-underline ${
-                isScrolled ? "hover:text-accent" : "hover:text-primary-light"
-              } ${
-                isActive("/portfolio-website-development") 
-                  ? (isScrolled ? "text-accent" : "text-primary-light") 
-                  : (isScrolled ? "text-text-primary" : "text-slate-100")
-              }`}
-            >
-              Portfolio
-            </Link>
-
 
             <Link
               href="/blog"
@@ -729,17 +715,6 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             }`}
           >
             Travel & Safari
-          </Link>
-
-          <Link
-            href="/portfolio-website-development"
-            title="Portfolio"
-            onClick={() => setIsMobileOpen(false)}
-            className={`font-semibold text-lg border-b border-[#E5E7EB] pb-2 ${
-              isActive("/portfolio-website-development") ? "text-accent" : "text-primary-dark"
-            }`}
-          >
-            Portfolio
           </Link>
 
           <Link
