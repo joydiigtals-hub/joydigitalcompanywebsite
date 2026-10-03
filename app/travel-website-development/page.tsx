@@ -32,9 +32,9 @@ const pageSchema = {
   "description": "Joy Digital is a leading tourism website development company providing custom website development for tour operators, safari tour operator website development, and travel booking website development.",
   "offers": {
     "@type": "AggregateOffer",
-    "priceCurrency": "INR",
-    "lowPrice": "25000",
-    "highPrice": "65000",
+    "priceCurrency": "USD",
+    "lowPrice": "900",
+    "highPrice": "4500",
     "offerCount": "3"
   }
 };
@@ -141,7 +141,7 @@ export default async function ToursTravelsWebPage() {
       pricingTiers={[
         {
           name: "Standard Agency Profile",
-          price: "₹25,000",
+          price: "$900",
           period: "one-time",
           description: "Perfect for local travel agents aiming for a professional profile and featured packages grid.",
           features: [
@@ -156,7 +156,7 @@ export default async function ToursTravelsWebPage() {
         },
         {
           name: "Premium Tour Operator Portal",
-          price: "₹35,000",
+          price: "$1,200",
           period: "one-time",
           description: "Recommended for tour operators, trekking clubs, and agencies managing multiple recurring routes.",
           isPopular: true,

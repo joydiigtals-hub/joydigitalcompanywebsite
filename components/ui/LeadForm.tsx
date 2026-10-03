@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { getUtmParameters } from "@/lib/utmTracker";
+import Image from "next/image";
 
 interface LeadFormProps {
   layout?: "vertical" | "horizontal";
@@ -10,9 +11,6 @@ interface LeadFormProps {
   subtitle?: string;
   ctaText?: string;
   source?: string;
-  showWebsiteField?: boolean;
-  hideEmailField?: boolean;
-  simplified?: boolean;
 }
 
 const COUNTRY_CODES = [
@@ -23,56 +21,16 @@ const COUNTRY_CODES = [
   { code: "+61", flag: "🇦🇺", name: "Australia" },
   { code: "+65", flag: "🇸🇬", name: "Singapore" },
   { code: "+1", flag: "🇨🇦", name: "Canada" },
-  { code: "+60", flag: "🇲🇾", name: "Malaysia" },
-  { code: "+94", flag: "🇱🇰", name: "Sri Lanka" },
-  { code: "+49", flag: "🇩🇪", name: "Germany" },
-  { code: "+33", flag: "🇫🇷", name: "France" },
-  { code: "+966", flag: "🇸🇦", name: "Saudi Arabia" },
-  { code: "+974", flag: "🇶🇦", name: "Qatar" },
-  { code: "+965", flag: "🇰🇼", name: "Kuwait" },
-  { code: "+968", flag: "🇴🇲", name: "Oman" },
-  { code: "+973", flag: "🇧🇭", name: "Bahrain" },
-  { code: "+64", flag: "🇳🇿", name: "New Zealand" },
-  { code: "+353", flag: "🇮🇪", name: "Ireland" },
-  { code: "+27", flag: "🇿🇦", name: "South Africa" },
-];
-
-const SERVICE_OPTIONS = [
-  { value: "SEO Services", label: "SEO Services & Google Ranking", desc: "Organic search optimization & Map pack rankings", icon: "fa-solid fa-magnifying-glass-chart" },
-  { value: "Website Design & Development", label: "Next.js Web Design & Development", desc: "Speed-optimized custom React business sites", icon: "fa-solid fa-laptop-code" },
-  { value: "Corporate Multipage Site", label: "Corporate Business Website", desc: "Multipage company profiles & lead funnels", icon: "fa-solid fa-building" },
-  { value: "Headless E-commerce Store", label: "Headless E-commerce Store", desc: "Ultra-fast headless WooCommerce/Shopify storefronts", icon: "fa-solid fa-cart-shopping" },
-  { value: "Landing Page Development", label: "Landing Page & Lead Funnel", desc: "High-converting single page funnel setups", icon: "fa-solid fa-funnel-dollar" },
-  { value: "Custom Web Application", label: "Custom React Web Application", desc: "Bespoke dynamic platforms & database portals", icon: "fa-solid fa-code" },
-  { value: "Other Web Services", label: "Maintenance / Custom Web Support", desc: "Migrations, speed tuning, or maintenance contracts", icon: "fa-solid fa-screwdriver-wrench" },
-];
-
-const BUDGET_OPTIONS = [
-  { value: "15k_50k", label: "₹15,000 - ₹50,000 (approx. $200 - $600)" },
-  { value: "50k_1.5l", label: "₹50,000 - ₹1.5L (approx. $600 - $2,000)" },
-  { value: "1.5l_5l", label: "₹1.5L - ₹5L (approx. $2,000 - $6,000)" },
-  { value: "above_5l", label: "Above ₹5L ($6,000+)" },
-];
-
-const TIMELINE_OPTIONS = [
-  { value: "immediate", label: "Immediate (Within 1 week)" },
-  { value: "1_2_weeks", label: "1-2 Weeks" },
-  { value: "1_month", label: "Within 1 Month" },
-  { value: "flexible", label: "Flexible / Researching" },
 ];
 
 export default function LeadForm({
   layout = "vertical",
-  title = "Claim Free Consultation",
-  subtitle = "Fill in 3 quick fields below. Our experts will call you in 15 mins.",
-  ctaText = "Claim My Free Proposal →",
+  title = "Request a Free Proposal",
+  subtitle = "Fill in your details below. Our experts will get back to you within 24 hours.",
+  ctaText = "Get My Free Proposal →",
   source = "General Lead Funnel",
-  showWebsiteField = true,
-  hideEmailField = false,
-  simplified = true,
 }: LeadFormProps) {
   const pathname = usePathname();
-  const router = useRouter();
 
   // Detect current region from pathname
   const parts = pathname.split("/").filter(Boolean);
@@ -91,18 +49,16 @@ export default function LeadForm({
   const [selectedCountryCode, setSelectedCountryCode] = useState(() => getDefaultCountryCode(detectedRegion));
 
   // Form State
-  const [formData, setFormData] = useState(() => ({
+  const [formData, setFormData] = useState({
     name: "",
-    companyName: "",
-    website: "",
     email: "",
+    website: "",
     mobile: "",
-    service: "",
-    budget: "",
-    timeline: "",
     message: "",
+    _honey: "", // Honeypot
+    utm_source: "", // Persistent UTM Source
     region: detectedRegion || "in",
-  }));
+  });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isLoading, setIsLoading] = useState(false);
@@ -110,11 +66,8 @@ export default function LeadForm({
 
   // Dropdown States
   const [isCountryOpen, setIsCountryOpen] = useState(false);
-  const [isServiceOpen, setIsServiceOpen] = useState(false);
   const [countrySearch, setCountrySearch] = useState("");
-
   const countryDropdownRef = useRef<HTMLDivElement>(null);
-  const serviceDropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdowns on outside click
   useEffect(() => {
@@ -122,11 +75,15 @@ export default function LeadForm({
       if (countryDropdownRef.current && !countryDropdownRef.current.contains(event.target as Node)) {
         setIsCountryOpen(false);
       }
-      if (serviceDropdownRef.current && !serviceDropdownRef.current.contains(event.target as Node)) {
-        setIsServiceOpen(false);
-      }
     }
     document.addEventListener("mousedown", handleClickOutside);
+    
+    // Capture UTM Source on load
+    const utm = getUtmParameters();
+    if (utm && utm.utm_source) {
+      setFormData(prev => ({ ...prev, utm_source: utm.utm_source as string }));
+    }
+    
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
@@ -148,30 +105,20 @@ export default function LeadForm({
       tempErrors.name = "Full Name is required.";
     }
 
-    if (!simplified && !hideEmailField) {
-      if (!formData.email.trim()) {
-        tempErrors.email = "Email Address is required.";
-      } else {
-        const emailReg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        if (!emailReg.test(formData.email.trim())) {
-          tempErrors.email = "Please enter a valid email address.";
-        }
+    if (!formData.email.trim()) {
+      tempErrors.email = "Work Email is required.";
+    } else {
+      const emailReg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailReg.test(formData.email.trim())) {
+        tempErrors.email = "Please enter a valid email address.";
       }
     }
 
     const mobileVal = formData.mobile.trim();
-    if (!mobileVal) {
-      tempErrors.mobile = "Contact number is required.";
-    } else {
+    if (mobileVal) {
       const numbersOnly = mobileVal.replace(/\D/g, "");
-      if (numbersOnly.length < 7) {
+      if (numbersOnly.length > 0 && numbersOnly.length < 7) {
         tempErrors.mobile = "Please enter a valid phone number.";
-      }
-    }
-
-    if (!simplified) {
-      if (!formData.service) {
-        tempErrors.service = "Please select a required service.";
       }
     }
 
@@ -179,7 +126,7 @@ export default function LeadForm({
     return Object.keys(tempErrors).length === 0;
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     if (errors[name]) {
@@ -191,27 +138,29 @@ export default function LeadForm({
     e.preventDefault();
     if (!validateForm()) return;
 
+    // Honeypot check on client
+    if (formData._honey) {
+      // Act like it succeeded to fool bots
+      setIsSuccess(true);
+      return;
+    }
+
     setIsLoading(true);
     try {
       const utm = getUtmParameters();
       const payload = {
         Name: formData.name.trim(),
-        CompanyName: formData.companyName.trim() || "N/A",
+        Email: formData.email.trim(),
         Website: formData.website.trim() || "N/A",
-        Email: formData.email.trim() || "provided-on-call@joydigital.in",
-        Mobile: formData.mobile.trim().startsWith("+")
-          ? formData.mobile.trim()
-          : `${selectedCountryCode} ${formData.mobile.trim()}`,
-        Service: simplified ? "General Inquiry / CRO" : formData.service,
-        Budget: formData.budget || "N/A",
-        Timeline: formData.timeline || "N/A",
-        Message: formData.message.trim() || "Ultra-lean 3-field quick lead submission.",
+        Mobile: formData.mobile.trim() 
+          ? (formData.mobile.trim().startsWith("+") ? formData.mobile.trim() : `${selectedCountryCode} ${formData.mobile.trim()}`)
+          : "N/A",
+        Message: formData.message.trim() || "No message provided.",
         Source: source,
         TargetRegion: formData.region.toUpperCase(),
+        _honey: formData._honey,
         utmParams: utm || undefined,
-        _subject: `🔥 Ultra-Lean 3-Field Lead [${formData.region.toUpperCase()}] - Joy Digital`,
-        _captcha: "false",
-        _template: "table",
+        _subject: `🔥 Inbound Lead [${formData.region.toUpperCase()}] - ${formData.name}`,
       };
 
       const response = await fetch("/api/enquiry", {
@@ -231,48 +180,23 @@ export default function LeadForm({
       if (typeof window !== "undefined") {
         const tracker = (window as any).trackJoyDigitalEvent;
         if (typeof tracker === "function") {
-          tracker("contact_form_submission", {
+          tracker("form_submit", {
             form_source: source,
             page_url: window.location.href,
-            budget: formData.budget,
-            timeline: formData.timeline,
           });
         } else {
           const gtag = (window as any).gtag;
           if (typeof gtag === "function") {
-            gtag("event", "contact_form_submission", {
+            gtag("event", "form_submit", {
               form_source: source,
               page_url: window.location.href,
-              budget: formData.budget,
-              timeline: formData.timeline,
             });
           }
         }
       }
 
-      // Reset Form
-      setFormData({
-        name: "",
-        companyName: "",
-        website: "",
-        email: "",
-        mobile: "",
-        service: "",
-        budget: "",
-        timeline: "",
-        message: "",
-        region: detectedRegion || "in",
-      });
-      setErrors({});
-      
-      // Redirect to thank you page with personalized query params
-      const queryParams = new URLSearchParams({
-        name: formData.name.trim(),
-        service: simplified ? "General Inquiry / CRO" : (formData.service || "Web Services"),
-        mobile: formData.mobile.trim()
-      }).toString();
-
-      router.push(`/thank-you?${queryParams}`);
+      // Show inline success
+      setIsSuccess(true);
     } catch (err) {
       console.error(err);
       alert("Enquiry delivery failed. Please email us at saravanan061193@gmail.com directly.");
@@ -281,21 +205,38 @@ export default function LeadForm({
     }
   };
 
-  const getSelectedServiceIcon = (value: string) => {
-    const option = SERVICE_OPTIONS.find(o => o.value === value);
-    return option ? <i className={option.icon} /> : <i className="fa-solid fa-screwdriver-wrench" />;
-  };
-
-  const selectedCountry = COUNTRY_CODES.find(c => c.code === selectedCountryCode);
+  const selectedCountry = COUNTRY_CODES.find(c => c.code === selectedCountryCode) || COUNTRY_CODES[0];
   const filteredCountries = COUNTRY_CODES.filter(
     (c) =>
       c.name.toLowerCase().includes(countrySearch.toLowerCase()) ||
       c.code.includes(countrySearch)
   );
 
+  if (isSuccess) {
+    return (
+      <div className={`bg-white border border-[#E9E4F2] p-8 rounded-2xl shadow-xl w-full ${layout === "horizontal" ? "max-w-4xl" : "max-w-md"} text-center animate-fade-in`}>
+        <div className="w-16 h-16 bg-emerald-100 text-emerald-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+          <i className="fa-solid fa-check" />
+        </div>
+        <h3 className="text-xl font-extrabold text-primary-dark mb-2">Message Sent!</h3>
+        <p className="text-sm text-text-secondary mb-6">
+          Thank you, {formData.name.split(" ")[0]}. We have received your request. Our team will review your details and send you a calendar link to discuss your project within 24 hours.
+        </p>
+        <button
+          onClick={() => {
+            setIsSuccess(false);
+            setFormData(prev => ({ ...prev, name: "", email: "", website: "", mobile: "", message: "", _honey: "" }));
+          }}
+          className="text-xs font-bold text-[#7C3AED] hover:text-[#6D28D9] transition-colors"
+        >
+          Submit another request
+        </button>
+      </div>
+    );
+  }
+
   return (
     <>
-      {/* Locally-Scoped Animation Styles */}
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes fadeInSlideDown {
           from { opacity: 0; transform: translateY(-8px); }
@@ -303,355 +244,129 @@ export default function LeadForm({
         }
       ` }} />
 
-      <div className={`bg-white border border-[#E9E4F2] p-5 sm:p-6 rounded-2xl shadow-2xl w-full ${layout === "horizontal" ? "max-w-4xl" : "max-w-md"} relative transition-all duration-300 hover:shadow-2xl hover:border-gray-200`}>
-        {/* Top Accent Gradient Border */}
+      <div className={`bg-white border border-[#E9E4F2] p-5 sm:p-7 rounded-2xl shadow-xl w-full ${layout === "horizontal" ? "max-w-4xl" : "max-w-md"} relative transition-all duration-300 hover:shadow-2xl`}>
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#7C3AED] via-[#A78BFA] to-[#F97316] rounded-t-2xl" />
 
-        {/* Title Zone */}
-        <div className="mb-4 mt-1">
-          {title && <h3 className="text-lg font-extrabold text-primary-dark mb-0.5 leading-snug">{title}</h3>}
-          {subtitle && <p className="text-[11px] text-text-secondary leading-relaxed">{subtitle}</p>}
+        <div className="mb-6 mt-1 text-center sm:text-left">
+          {title && <h3 className="text-xl font-extrabold text-primary-dark mb-1 leading-snug">{title}</h3>}
+          {subtitle && <p className="text-xs text-text-secondary leading-relaxed">{subtitle}</p>}
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3.5">
-          
-          {/* 1. Full Name */}
-          <div className="flex flex-col gap-1">
-            <label htmlFor="name" className="text-[9px] font-extrabold text-[#6B6478] uppercase tracking-wider mb-0.5 block">
-              Full Name <span className="text-error-red font-normal">*</span>
-            </label>
-            <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-lg border px-3 py-2.5 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 ${
-              errors.name ? "border-[#ef4444] bg-red-50/10" : "border-[#E9E4F2] hover:border-[#7C3AED]/20"
-            }`}>
-              <span className={`text-[11px] transition-colors duration-300 shrink-0 ${errors.name ? "text-error-red" : "text-text-muted group-focus-within:text-[#7C3AED]"}`}>
-                <i className="fa-solid fa-user" />
-              </span>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Enter your name"
-                autoFocus
-                className="w-full text-xs bg-transparent outline-none border-none text-text-primary placeholder:text-text-muted font-semibold"
-              />
-            </div>
-            {errors.name && <span className="text-[9px] font-semibold text-[#ef4444] mt-0.5">{errors.name}</span>}
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          {/* Honeypot & UTM - hidden from real users */}
+          <div className="hidden" aria-hidden="true">
+            <input type="text" name="_honey" value={formData._honey} onChange={handleChange} tabIndex={-1} autoComplete="off" />
+            <input type="hidden" name="utm_source" value={formData.utm_source} />
           </div>
 
-          {/* Email Address (Only if NOT simplified) */}
-          {!simplified && !hideEmailField && (
-            <div className="flex flex-col gap-1">
-              <label htmlFor="email" className="text-[9px] font-extrabold text-[#6B6478] uppercase tracking-wider mb-0.5 block">
-                Email ID <span className="text-error-red">*</span>
+          <div className={`grid grid-cols-1 ${layout === "horizontal" ? "md:grid-cols-2" : ""} gap-4`}>
+            {/* Name */}
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="name" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
+                Full Name <span className="text-error-red">*</span>
               </label>
-              <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-lg border px-3 py-2.5 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 ${
-                errors.email ? "border-[#ef4444] bg-red-50/10" : "border-[#E9E4F2] hover:border-[#7C3AED]/20"
-              }`}>
-                <span className={`text-[11px] transition-colors duration-300 shrink-0 ${errors.email ? "text-error-red" : "text-text-muted group-focus-within:text-[#7C3AED]"}`}>
-                  <i className="fa-solid fa-envelope" />
-                </span>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="you@example.com"
-                  className="w-full text-xs bg-transparent outline-none border-none text-text-primary placeholder:text-text-muted font-semibold"
-                />
+              <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-xl border px-3.5 py-3 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 ${errors.name ? "border-[#ef4444]" : "border-[#E9E4F2]"}`}>
+                <i className={`fa-solid fa-user text-[13px] shrink-0 ${errors.name ? "text-error-red" : "text-slate-400 group-focus-within:text-[#7C3AED]"}`} />
+                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400" />
               </div>
-              {errors.email && <span className="text-[9px] font-semibold text-[#ef4444] mt-0.5">{errors.email}</span>}
+              {errors.name && <span className="text-[10px] font-semibold text-[#ef4444]">{errors.name}</span>}
             </div>
-          )}
 
-          {/* 2. Contact Number */}
-          <div className="flex flex-col gap-1">
-            <label htmlFor="mobile" className="text-[9px] font-extrabold text-[#6B6478] uppercase tracking-wider mb-0.5 block">
-              Contact Number (Mobile / WhatsApp) <span className="text-error-red">*</span>
-            </label>
-            <div className="flex gap-2 relative">
-              {/* Custom Country Selector Dropdown Container */}
-              <div className="relative" ref={countryDropdownRef}>
-                <button
-                  type="button"
-                  onClick={() => setIsCountryOpen(!isCountryOpen)}
-                  className="w-[100px] text-xs py-2.5 px-3 bg-[#FAF9FF] rounded-lg border border-[#E9E4F2] hover:border-gray-300 hover:bg-white text-left flex items-center justify-between outline-none cursor-pointer font-bold text-text-primary transition-all focus:ring-4 focus:ring-[#7C3AED]/10 focus:border-[#7C3AED] focus:bg-white h-full"
-                >
-                  <span className="flex items-center gap-1.5 select-none">
-                    <span>{selectedCountry?.flag}</span>
-                    <span>{selectedCountryCode}</span>
-                  </span>
-                  <span className={`text-[8px] text-text-muted transition-transform duration-300 shrink-0 ${isCountryOpen ? "rotate-180" : ""}`}>
-                    <i className="fa-solid fa-chevron-down" />
-                  </span>
-                </button>
+            {/* Email */}
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="email" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
+                Work Email <span className="text-error-red">*</span>
+              </label>
+              <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-xl border px-3.5 py-3 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 ${errors.email ? "border-[#ef4444]" : "border-[#E9E4F2]"}`}>
+                <i className={`fa-solid fa-envelope text-[13px] shrink-0 ${errors.email ? "text-error-red" : "text-slate-400 group-focus-within:text-[#7C3AED]"}`} />
+                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="john@company.com" className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400" />
+              </div>
+              {errors.email && <span className="text-[10px] font-semibold text-[#ef4444]">{errors.email}</span>}
+            </div>
+          </div>
 
-                {isCountryOpen && (
-                  <div 
-                    className="absolute z-30 left-0 top-[108%] w-64 max-h-60 overflow-y-auto bg-white border border-[#E9E4F2] rounded-lg shadow-xl py-1"
-                    style={{ animation: "fadeInSlideDown 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards" }}
-                  >
-                    {/* Dropdown Search Box */}
-                    <div className="p-2 border-b border-[#E9E4F2] bg-[#FAF9FF] sticky top-0 z-10">
-                      <input
-                        type="text"
-                        placeholder="Search country..."
-                        value={countrySearch}
-                        onChange={(e) => setCountrySearch(e.target.value)}
-                        className="w-full text-xs px-2.5 py-1.5 bg-white border border-[#E9E4F2] rounded-md focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/5 outline-none transition-all"
-                        onClick={(e) => e.stopPropagation()}
-                      />
-                    </div>
-                    
-                    {/* Dropdown List Items */}
-                    {filteredCountries.length > 0 ? (
-                      filteredCountries.map((c) => (
-                        <button
-                          key={`${c.code}-${c.name}`}
-                          type="button"
-                          onClick={() => {
-                            setSelectedCountryCode(c.code);
-                            setIsCountryOpen(false);
-                            setCountrySearch("");
-                          }}
-                          className={`w-full flex items-center justify-between px-4 py-2 text-left text-xs transition-colors hover:bg-[#FAF9FF] ${
-                            selectedCountryCode === c.code ? "bg-[#7C3AED]/5 font-bold text-[#7C3AED]" : "text-text-primary"
-                          }`}
-                        >
-                          <span className="flex items-center gap-2">
-                            <span className="select-none">{c.flag}</span>
-                            <span className="font-medium truncate max-w-[130px]">{c.name}</span>
-                          </span>
-                          <span className="font-semibold text-text-muted text-[10px]">{c.code}</span>
+          <div className={`grid grid-cols-1 ${layout === "horizontal" ? "md:grid-cols-2" : ""} gap-4`}>
+            {/* Website/Project (Optional) */}
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="website" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
+                Website / Project (Optional)
+              </label>
+              <div className="flex items-center gap-2 bg-[#FAF9FF] rounded-xl border border-[#E9E4F2] px-3.5 py-3 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10">
+                <i className="fa-solid fa-link text-[13px] text-slate-400 group-focus-within:text-[#7C3AED] shrink-0" />
+                <input type="text" id="website" name="website" value={formData.website} onChange={handleChange} placeholder="example.com" className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400" />
+              </div>
+            </div>
+
+            {/* Mobile (Optional) */}
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="mobile" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
+                Phone / WhatsApp (Optional)
+              </label>
+              <div className="flex gap-2 relative">
+                <div className="relative shrink-0" ref={countryDropdownRef}>
+                  <button type="button" onClick={() => setIsCountryOpen(!isCountryOpen)} className="w-[85px] h-full text-sm px-3 bg-[#FAF9FF] rounded-xl border border-[#E9E4F2] hover:bg-white text-left flex items-center justify-between outline-none font-semibold text-primary-dark transition-all focus:border-[#7C3AED] focus:bg-white focus:ring-4 focus:ring-[#7C3AED]/10">
+                    <span className="flex items-center gap-1.5">
+                      <span>{selectedCountry.flag}</span>
+                    </span>
+                    <i className={`fa-solid fa-chevron-down text-[9px] text-slate-400 ${isCountryOpen ? "rotate-180" : ""}`} />
+                  </button>
+
+                  {isCountryOpen && (
+                    <div className="absolute z-30 left-0 top-[108%] w-56 max-h-60 overflow-y-auto bg-white border border-[#E9E4F2] rounded-xl shadow-xl py-1" style={{ animation: "fadeInSlideDown 0.18s ease-out forwards" }}>
+                      <div className="p-2 border-b border-[#E9E4F2] bg-[#FAF9FF] sticky top-0 z-10">
+                        <input type="text" placeholder="Search country..." value={countrySearch} onChange={(e) => setCountrySearch(e.target.value)} onClick={(e) => e.stopPropagation()} className="w-full text-xs px-2.5 py-1.5 border border-[#E9E4F2] rounded-lg focus:border-[#7C3AED] outline-none" />
+                      </div>
+                      {filteredCountries.map((c) => (
+                        <button key={c.code} type="button" onClick={() => { setSelectedCountryCode(c.code); setIsCountryOpen(false); setCountrySearch(""); }} className="w-full flex justify-between px-4 py-2.5 text-left text-xs hover:bg-[#FAF9FF] text-primary-dark">
+                          <span className="flex items-center gap-2"><span className="text-base">{c.flag}</span> <span className="font-semibold">{c.name}</span></span>
+                          <span className="text-slate-400">{c.code}</span>
                         </button>
-                      ))
-                    ) : (
-                      <div className="px-4 py-3 text-xs text-text-muted text-center font-medium">No results found</div>
-                    )}
-                  </div>
-                )}
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-xl border px-3.5 py-3 w-full group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 ${errors.mobile ? "border-[#ef4444]" : "border-[#E9E4F2]"}`}>
+                  <input type="tel" id="mobile" name="mobile" value={formData.mobile} onChange={handleChange} placeholder="Phone number" className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400" />
+                </div>
               </div>
-
-              {/* Phone input wrapper */}
-              <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-lg border px-3 py-2.5 flex-1 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 ${
-                errors.mobile ? "border-[#ef4444] bg-red-50/10" : "border-[#E9E4F2] hover:border-[#7C3AED]/20"
-              }`}>
-                <span className={`text-[11px] transition-colors duration-300 shrink-0 ${errors.mobile ? "text-error-red" : "text-text-muted group-focus-within:text-[#7C3AED]"}`}>
-                  <i className="fa-solid fa-phone" />
-                </span>
-                <input
-                  type="tel"
-                  id="mobile"
-                  name="mobile"
-                  value={formData.mobile}
-                  onChange={handleChange}
-                  placeholder="Enter phone or WhatsApp"
-                  className="w-full text-xs bg-transparent outline-none border-none text-text-primary placeholder:text-text-muted font-semibold"
-                />
-              </div>
+              {errors.mobile && <span className="text-[10px] font-semibold text-[#ef4444]">{errors.mobile}</span>}
             </div>
-            {errors.mobile && <span className="text-[9px] font-semibold text-[#ef4444] mt-0.5">{errors.mobile}</span>}
           </div>
 
-          {/* 3. Required Service Selection (Hidden in simplified mode) */}
-          {!simplified && (
-            <div className="flex flex-col gap-1">
-              <label htmlFor="service" className="text-[9px] font-extrabold text-[#6B6478] uppercase tracking-wider mb-0.5 block">
-                Required Service <span className="text-error-red">*</span>
-              </label>
-              <div className="relative z-20" ref={serviceDropdownRef}>
-                <button
-                  type="button"
-                  onClick={() => setIsServiceOpen(!isServiceOpen)}
-                  className={`w-full flex items-center justify-between bg-[#FAF9FF] rounded-lg border px-3 py-2.5 group transition-all duration-300 focus:bg-white focus:border-[#7C3AED] focus:ring-4 focus:ring-[#7C3AED]/10 ${
-                    errors.service ? "border-[#ef4444] bg-red-50/10" : "border-[#E9E4F2] hover:border-[#7C3AED]/20"
-                  }`}
-                >
-                  <span className="flex items-center gap-2 text-left w-full overflow-hidden">
-                    <span className={`text-[11px] transition-colors duration-300 shrink-0 ${errors.service ? "text-error-red" : "text-text-muted group-focus-within:text-[#7C3AED]"}`}>
-                      {getSelectedServiceIcon(formData.service)}
-                    </span>
-                    <span className={`text-xs font-semibold truncate ${formData.service ? "text-text-primary" : "text-text-muted"}`}>
-                      {formData.service ? SERVICE_OPTIONS.find(o => o.value === formData.service)?.label : "Select a Service"}
-                    </span>
-                  </span>
-                  <span className={`text-[8px] text-text-muted transition-transform duration-300 shrink-0 ${isServiceOpen ? "rotate-180" : ""}`}>
-                    <i className="fa-solid fa-chevron-down" />
-                  </span>
-                </button>
-
-                {isServiceOpen && (
-                  <div 
-                    className="absolute z-50 left-0 top-[108%] w-full bg-white border border-[#E9E4F2] rounded-xl shadow-2xl py-1 max-h-64 overflow-y-auto"
-                    style={{ animation: "fadeInSlideDown 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards" }}
-                  >
-                    {SERVICE_OPTIONS.map((opt) => (
-                      <button
-                        key={opt.value}
-                        type="button"
-                        onClick={() => {
-                          setFormData(prev => ({ ...prev, service: opt.value }));
-                          setIsServiceOpen(false);
-                          if (errors.service) setErrors(prev => ({ ...prev, service: "" }));
-                        }}
-                        className={`w-full flex items-start gap-3 px-3 py-2 text-left transition-colors hover:bg-[#FAF9FF] ${
-                          formData.service === opt.value ? "bg-[#7C3AED]/5 text-[#7C3AED]" : "text-text-primary"
-                        }`}
-                      >
-                        <span className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs shrink-0 mt-0.5 transition-colors ${
-                          formData.service === opt.value ? "bg-[#7C3AED] text-white" : "bg-[#FAF9FF] text-text-secondary"
-                        }`}>
-                          <i className={opt.icon} />
-                        </span>
-                        <div className="flex flex-col gap-0.5 overflow-hidden">
-                          <span className={`text-xs font-bold ${formData.service === opt.value ? "text-[#7C3AED]" : "text-text-primary"}`}>
-                            {opt.label}
-                          </span>
-                          <span className="text-[9px] text-text-muted truncate">{opt.desc}</span>
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-              {errors.service && <span className="text-[9px] font-semibold text-[#ef4444] mt-0.5">{errors.service}</span>}
+          {/* Message (Optional) */}
+          <div className="flex flex-col gap-1.5">
+            <label htmlFor="message" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
+              Project Details (Optional)
+            </label>
+            <div className="bg-[#FAF9FF] rounded-xl border border-[#E9E4F2] p-3.5 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10">
+              <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={3} placeholder="Tell us about your goals, timeline, or current challenges..." className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400 resize-none" />
             </div>
-          )}
+          </div>
 
-          {/* Full Detailed Mode Extra Fields (Only if simplified is FALSE) */}
-          {!simplified && (
-            <>
-              {/* Budget Range & Company */}
-              <div className={`grid grid-cols-1 ${layout === "horizontal" ? "md:grid-cols-2" : "sm:grid-cols-2"} gap-3`}>
-                <div className="flex flex-col gap-1">
-                  <label htmlFor="companyName" className="text-[9px] font-extrabold text-[#6B6478] uppercase tracking-wider mb-0.5 block">
-                    Company Name
-                  </label>
-                  <div className="flex items-center gap-2 bg-[#FAF9FF] rounded-lg border border-[#E9E4F2] px-3 py-2 hover:border-[#7C3AED]/20 transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED]">
-                    <span className="text-[11px] text-text-muted shrink-0"><i className="fa-solid fa-building" /></span>
-                    <input
-                      type="text"
-                      id="companyName"
-                      name="companyName"
-                      value={formData.companyName}
-                      onChange={handleChange}
-                      placeholder="e.g. Acme Corp"
-                      className="w-full text-xs bg-transparent outline-none border-none text-text-primary font-semibold"
-                    />
-                  </div>
-                </div>
-
-                {showWebsiteField && (
-                  <div className="flex flex-col gap-1">
-                    <label htmlFor="website" className="text-[9px] font-extrabold text-[#6B6478] uppercase tracking-wider mb-0.5 block">
-                      Website Link
-                    </label>
-                    <div className="flex items-center gap-2 bg-[#FAF9FF] rounded-lg border border-[#E9E4F2] px-3 py-2 hover:border-[#7C3AED]/20 transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED]">
-                      <span className="text-[11px] text-text-muted shrink-0"><i className="fa-solid fa-globe" /></span>
-                      <input
-                        type="text"
-                        id="website"
-                        name="website"
-                        value={formData.website}
-                        onChange={handleChange}
-                        placeholder="e.g. acme.com"
-                        className="w-full text-xs bg-transparent outline-none border-none text-text-primary font-semibold"
-                      />
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Budget */}
-              <div className="flex flex-col gap-1">
-                <label htmlFor="budget" className="text-[9px] font-extrabold text-[#6B6478] uppercase tracking-wider mb-0.5 block">
-                  Budget Range
-                </label>
-                <div className="flex items-center gap-2 bg-[#FAF9FF] rounded-lg border border-[#E9E4F2] px-3 py-2 hover:border-[#7C3AED]/20 transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED]">
-                  <span className="text-[11px] text-text-muted shrink-0"><i className="fa-solid fa-coins" /></span>
-                  <select
-                    id="budget"
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleChange}
-                    className="w-full text-xs bg-transparent outline-none border-none text-text-primary font-semibold cursor-pointer"
-                  >
-                    <option value="">Select Budget Range</option>
-                    {BUDGET_OPTIONS.map(opt => (
-                      <option key={opt.value} value={opt.value}>{opt.label}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              {/* Requirement Details */}
-              <div className="flex flex-col gap-1">
-                <label htmlFor="message" className="text-[9px] font-extrabold text-[#6B6478] uppercase tracking-wider mb-0.5 block">
-                  Requirement Details
-                </label>
-                <div className="flex bg-[#FAF9FF] rounded-lg border border-[#E9E4F2] hover:border-[#7C3AED]/20 p-2.5 transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED]">
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={2}
-                    placeholder="Describe your requirements (pages, features, timeline, etc.)..."
-                    className="w-full text-xs bg-transparent outline-none border-none text-text-primary font-semibold resize-none"
-                  />
-                </div>
-              </div>
-            </>
-          )}
-
-          {/* Submit Button */}
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-xs py-3.5 rounded-xl shadow-lg shadow-[#7C3AED]/20 hover:shadow-[#7C3AED]/30 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-1 cursor-pointer"
+            className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-sm py-4 rounded-xl shadow-lg shadow-[#7C3AED]/20 hover:shadow-[#7C3AED]/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-2"
           >
             {isLoading ? (
-              <>
-                <i className="fa-solid fa-spinner animate-spin" /> Submitting...
-              </>
+              <><i className="fa-solid fa-spinner animate-spin" /> Submitting...</>
             ) : (
-              <>
-                <span>{ctaText}</span>
-                <i className="fa-solid fa-paper-plane text-[10px]" />
-              </>
+              <><span>{ctaText}</span><i className="fa-solid fa-arrow-right text-[11px]" /></>
             )}
           </button>
           
-          <div className="text-center pt-1">
-            <span className="text-[9px] font-medium text-text-muted flex items-center justify-center gap-1.5">
-              <i className="fa-solid fa-lock text-emerald-500" /> We respect your privacy. No spam ever.
-            </span>
+          <div className="mt-3 flex flex-col items-center gap-3">
+            <p className="text-[10px] text-slate-500 font-medium text-center leading-relaxed max-w-[280px]">
+              <i className="fa-solid fa-lock text-emerald-500 mr-1" />
+              <strong>What happens next?</strong> We'll review your details and send you a calendar link to discuss your project within 24 hours.
+            </p>
+            <div className="flex items-center gap-4 pt-3 border-t border-slate-100 w-full justify-center opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
+              <Image src="/assets/images/clutch-logo.svg" alt="Clutch Reviews" width={60} height={20} className="object-contain" />
+              <Image src="/assets/images/google-reviews.svg" alt="Google Reviews" width={60} height={20} className="object-contain" />
+            </div>
           </div>
         </form>
       </div>
-
-      {/* Success Modal Overlay */}
-      {isSuccess && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-md flex items-center justify-center p-6 animate-fade-in">
-          <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-sm w-full text-center border border-[#E5E7EB] flex flex-col items-center">
-            <div className="text-[#10b981] text-6xl mb-4 leading-none animate-bounce">
-              <i className="fa-solid fa-circle-check" />
-            </div>
-            <h4 className="text-xl font-extrabold text-primary-dark mb-2">Enquiry Submitted!</h4>
-            <p className="text-sm text-text-secondary mb-6 leading-relaxed">
-              Thank you for reaching out. We have received your enquiry. Our team will review your requirements and get back to you within 24 hours.
-            </p>
-            <button
-              onClick={() => setIsSuccess(false)}
-              className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold px-8 py-2.5 rounded-lg shadow-md transition-all duration-200 cursor-pointer"
-            >
-              Done
-            </button>
-          </div>
-        </div>
-      )}
     </>
   );
 }

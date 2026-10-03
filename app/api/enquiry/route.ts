@@ -26,6 +26,23 @@ export async function POST(request: Request) {
   try {
     const rawBody = await request.json();
     const body = sanitizeObject(rawBody);
+
+    // 1. Honeypot Check (Spam Protection)
+    if (body._honey) {
+      console.warn("Spam bot detected via honeypot field. Silently dropping.");
+      // Return 200 to fool the bot
+      return NextResponse.json({ success: true, id: crypto.randomUUID() });
+    }
+
+    // 2. Server-side validation
+    const name = body.Name || body.name;
+    const email = body.Email || body.email;
+    if (!name || !email) {
+      return NextResponse.json(
+        { error: "Name and Work Email are required fields." },
+        { status: 400 }
+      );
+    }
     
     // Construct new lead record
     const newEnquiry = {

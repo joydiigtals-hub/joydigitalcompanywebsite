@@ -58,7 +58,7 @@ export default function ExportLeadForm() {
         Name: formData.name.trim(),
         CompanyName: "N/A",
         Website: "N/A",
-        Email: "provided-on-call@joydigital.in",
+        Email: "saravanan061193@gmail.com",
         Mobile: formData.mobile.trim(),
         Service: `B2B Export Engine (${formData.businessScale})`,
         Budget: "N/A",

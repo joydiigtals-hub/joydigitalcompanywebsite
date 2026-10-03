@@ -6,8 +6,8 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://joydigital.in"),
-  title: "Custom Website Development Company | Travel & Safari Specialists",
-  description: "We build high-converting custom websites for businesses globally. Specialized in travel, tourism, and safari website development designed to generate qualified leads.",
+  title: "Global SEO & Custom Website Development | Joy Digital",
+  description: "Accelerate growth with custom website development & generative engine optimization. Partner with a premium global SEO agency. Maximize your ROI today!",
   keywords: [
     "Custom Website Development Company",
     "Professional Website Design",
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://joydigital.in",
     siteName: "Joy Digital",
-    title: "Custom Website Development Company | Travel & Safari Specialists",
-    description: "We build high-converting custom websites for businesses globally. Specialized in travel, tourism, and safari website development designed to generate qualified leads.",
+    title: "Global SEO & Custom Website Development | Joy Digital",
+    description: "Accelerate growth with custom website development & generative engine optimization. Partner with a premium global SEO agency. Maximize your ROI today!",
     images: [
       {
         url: "https://joydigital.in/assets/images/hero-banner.webp",
@@ -64,8 +64,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Website Development Company | Travel & Safari Specialists",
-    description: "We build high-converting custom websites for businesses globally. Specialized in travel, tourism, and safari website development designed to generate qualified leads.",
+    title: "Global SEO & Custom Website Development | Joy Digital",
+    description: "Accelerate growth with custom website development & generative engine optimization. Partner with a premium global SEO agency. Maximize your ROI today!",
     images: ["https://joydigital.in/assets/images/hero-banner.webp"],
     creator: "@joydigital",
   },
@@ -74,8 +74,8 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const homeGraph = buildPageGraphSchema({
     url: "https://joydigital.in/",
-    title: "Custom Website Development Company | Travel & Safari Specialists",
-    description: "We build high-converting custom websites for businesses globally. Specialized in travel, tourism, and safari website development designed to generate qualified leads.",
+    title: "Global SEO & Custom Website Development | Joy Digital",
+    description: "Accelerate growth with custom website development & generative engine optimization. Partner with a premium global SEO agency. Maximize your ROI today!",
     isHomepage: true,
     faqs: HOME_FAQS,
   });

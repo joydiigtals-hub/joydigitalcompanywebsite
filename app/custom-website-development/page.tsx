@@ -140,8 +140,8 @@ export default async function CustomWebDevPage() {
         pricingTiers={[
           {
             name: "Custom MVP Build",
-            price: "₹45,000",
-            period: "starting rate (~$550)",
+            price: "$1,200",
+            period: "starting rate",
             description: "Ideal for startups needing a high-speed custom web application prototype.",
             features: [
               "Custom Next.js & React Frontend",

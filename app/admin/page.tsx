@@ -6,6 +6,7 @@ import VisitorMap from "@/components/VisitorMap";
 import LeadDetailsDrawer from "@/components/ui/LeadDetailsDrawer";
 import BlogAdminPanel from "@/components/admin/BlogAdminPanel";
 import SeoKeywordManager from "@/components/admin/SeoKeywordManager";
+import DocumentsAdminPanel from "@/components/admin/DocumentsAdminPanel";
 
 interface UtmData {
   source?: string;
@@ -118,8 +119,8 @@ export default function AdminPage() {
   const [enquiries, setEnquiries] = useState<Enquiry[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Active Menu: "dashboard" | "leads" | "map" | "heatmaps" | "blog" | "seo" | "reports" | "chats" | "settings"
-  const [activeTab, setActiveTab] = useState<"dashboard" | "leads" | "map" | "heatmaps" | "blog" | "seo" | "reports" | "chats" | "settings">("dashboard");
+  // Active Menu: "dashboard" | "leads" | "map" | "heatmaps" | "blog" | "seo" | "reports" | "chats" | "settings" | "documents"
+  const [activeTab, setActiveTab] = useState<"dashboard" | "leads" | "map" | "heatmaps" | "blog" | "seo" | "reports" | "chats" | "settings" | "documents">("dashboard");
   const [trafficTimeframe, setTrafficTimeframe] = useState<"daily" | "weekly" | "monthly" | "yearly">("daily");
   const [trafficScope, setTrafficScope] = useState<"all" | "blog">("all");
   const [settingsSubTab, setSettingsSubTab] = useState<"cloudinary" | "system">("cloudinary");
@@ -1381,7 +1382,8 @@ export default function AdminPage() {
                 { id: "dashboard", label: "Dashboard Hub", icon: "fa-solid fa-gauge" },
                 { id: "leads", label: "CRM Pipeline v2", icon: "fa-regular fa-address-book" },
                 { id: "blog", label: "Blog Editor Desk", icon: "fa-regular fa-pen-to-square" },
-                { id: "seo", label: "SEO Keyword Manager", icon: "fa-solid fa-chart-line" }
+                { id: "seo", label: "SEO Keyword Manager", icon: "fa-solid fa-chart-line" },
+                { id: "documents", label: "Documents", icon: "fa-solid fa-file-pdf" }
               ].map((tab) => {
                 const isTabActive = activeTab === tab.id;
                 return (
@@ -3620,6 +3622,12 @@ export default function AdminPage() {
           {activeTab === "blog" && (
             <div className="w-full animate-fade-in">
               <BlogAdminPanel />
+            </div>
+          )}
+
+          {activeTab === "documents" && (
+            <div className="w-full animate-fade-in">
+              <DocumentsAdminPanel />
             </div>
           )}
 

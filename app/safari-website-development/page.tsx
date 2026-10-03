@@ -31,9 +31,9 @@ const pageSchema = {
   "description": "Premium safari website development for safari operators, lodges, and wildlife tourism businesses globally.",
   "offers": {
     "@type": "AggregateOffer",
-    "priceCurrency": "INR",
-    "lowPrice": "35000",
-    "highPrice": "85000",
+    "priceCurrency": "USD",
+    "lowPrice": "1200",
+    "highPrice": "5000",
     "offerCount": "2"
   }
 };
@@ -132,7 +132,7 @@ export default function SafariWebPage() {
       pricingTiers={[
         {
           name: "Professional Safari Portal",
-          price: "₹35,000",
+          price: "$1,200",
           period: "starting at",
           description: "Perfect for independent safari guides or single-country operators needing a high-trust digital presence.",
           features: [

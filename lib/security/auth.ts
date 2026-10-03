@@ -19,7 +19,7 @@ export interface UserSession {
 // Default Admin credentials (can be overridden by ENV)
 export const DEFAULT_ADMIN_CONFIG = {
   username: process.env.ADMIN_USERNAME || "admin",
-  email: process.env.ADMIN_EMAIL || "admin@joydigital.in",
+  email: process.env.ADMIN_EMAIL || "saravanan061193@gmail.com",
   // Default PIN hash & Password hash support
   validPins: [
     process.env.ADMIN_PIN || "2613",

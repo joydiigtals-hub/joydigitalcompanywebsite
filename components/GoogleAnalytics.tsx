@@ -61,6 +61,15 @@ export default function GoogleAnalytics() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             window.gtag = gtag;
+
+            // Default Consent Mode v2 Configuration
+            gtag('consent', 'default', {
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'analytics_storage': 'denied'
+            });
+
             gtag('js', new Date());
             gtag('config', '${measurementId}', {
               page_path: window.location.pathname,

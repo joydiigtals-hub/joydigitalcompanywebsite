@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import CompanyProfileDownload from "@/components/ui/CompanyProfileDownload";
 
 const REGIONAL_SITES = [
   { code: "", label: "Global (USD)", flag: "🌐" },
@@ -207,6 +208,11 @@ export default function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/enterprise-web-solutions" className="hover:text-accent hover:pl-1 transition-all font-semibold text-accent">
+                Enterprise Web Solutions
+              </Link>
+            </li>
+            <li>
               <Link href="/ai-search-optimization" className="hover:text-accent hover:pl-1 transition-all font-semibold text-accent">
                 AI Search Optimization (GEO)
               </Link>
@@ -370,6 +376,7 @@ export default function Footer() {
             <li>
               <Link href="/case-studies" className="hover:text-accent hover:pl-1 transition-all">Case Studies</Link>
             </li>
+            <CompanyProfileDownload />
             <li>
               <Link href="/privacy-policy" className="hover:text-accent hover:pl-1 transition-all">Privacy Policy</Link>
             </li>

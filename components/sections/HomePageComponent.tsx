@@ -207,6 +207,14 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
       cta: "Explore Web Design"
     },
     {
+      icon: "fa-brands fa-react text-[#7C3AED]",
+      title: "Next.js Development Agency",
+      description: "Premium Next.js development agency delivering highly scalable, sub-second web applications for global enterprise clients.",
+      benefits: ["Sub-second page loads", "Server-side rendering", "Headless architecture"],
+      href: "/nextjs-development-agency",
+      cta: "Explore Next.js Agency"
+    },
+    {
       icon: "fa-solid fa-bolt",
       title: "Static Website Development",
       description: "Sub-second pre-rendered static sites built with Next.js & React. Zero database bottlenecks, 100% serverless security, and top Core Web Vitals.",
@@ -237,6 +245,14 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
       benefits: ["Blazing fast CDN pre-renders", "Serverless cloud setup", "Clean reusable components"],
       href: "/website-development",
       cta: "Explore Web Dev"
+    },
+    {
+      icon: "fa-solid fa-plane-departure text-[#7C3AED]",
+      title: "Tour Operator Website Dev",
+      description: "Custom booking portals and high-converting websites specifically designed for global Tour Operators and DMCs.",
+      benefits: ["Dynamic day-by-day itineraries", "Direct WhatsApp booking", "Seasonal pricing CMS"],
+      href: "/tour-operator-website-development",
+      cta: "Explore Tour Operator Dev"
     },
     {
       icon: "fa-solid fa-cart-shopping",

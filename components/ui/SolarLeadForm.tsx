@@ -57,7 +57,7 @@ export default function SolarLeadForm() {
         Name: formData.name.trim(),
         CompanyName: "N/A",
         Website: "N/A",
-        Email: "provided-on-call@joydigital.in",
+        Email: "saravanan061193@gmail.com",
         Mobile: formData.mobile.trim(),
         Service: `Commercial Solar EPC Web Development (${formData.projectScale})`,
         Budget: "N/A",

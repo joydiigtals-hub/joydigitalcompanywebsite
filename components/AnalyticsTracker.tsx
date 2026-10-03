@@ -47,6 +47,37 @@ export default function AnalyticsTracker() {
     trackVisit();
   }, [pathname]);
 
+  // Global click event listener for CTAs
+  useEffect(() => {
+    const handleGlobalClick = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement).closest("a, button");
+      if (!target) return;
+
+      const href = target.getAttribute("href") || "";
+      const text = target.textContent?.toLowerCase() || "";
+      const tracker = (window as any).trackJoyDigitalEvent;
+
+      if (!tracker) return;
+
+      if (href.includes("wa.me")) {
+        tracker("whatsapp_click", { url: href, page: pathname });
+      } else if (href.includes("calendly.com")) {
+        tracker("book_call_click", { url: href, page: pathname });
+      } else if (href.startsWith("mailto:")) {
+        tracker("email_click", { url: href, page: pathname });
+      } else if (href.startsWith("tel:")) {
+        tracker("phone_click", { url: href, page: pathname });
+      } else if (href.includes("free-website-audit") || text.includes("free audit")) {
+        tracker("free_audit_start", { url: href, page: pathname });
+      }
+    };
+
+    document.addEventListener("click", handleGlobalClick);
+    return () => {
+      document.removeEventListener("click", handleGlobalClick);
+    };
+  }, [pathname]);
+
   return null;
 }
 

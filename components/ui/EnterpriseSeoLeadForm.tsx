@@ -58,7 +58,7 @@ export default function EnterpriseSeoLeadForm() {
         Name: formData.name.trim(),
         CompanyName: "N/A",
         Website: "N/A",
-        Email: "provided-on-call@joydigital.in",
+        Email: "saravanan061193@gmail.com",
         Mobile: formData.mobile.trim(),
         Service: `Enterprise B2B SEO & GEO (${formData.businessType})`,
         Budget: "N/A",

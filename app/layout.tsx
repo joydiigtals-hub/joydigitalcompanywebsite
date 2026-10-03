@@ -6,10 +6,11 @@ import FontAwesomeLoader from "@/components/layout/FontAwesomeLoader";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
 import ClarityTracker from "@/components/ClarityTracker";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import NavigationLoadingBar from "@/components/ui/NavigationLoadingBar";
 
 import GoogleTranslateLoader from "@/components/GoogleTranslateLoader";
 import ClientWidgets from "@/components/ui/ClientWidgets";
+import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
+import CookieConsent from "@/components/ui/CookieConsent";
 import "./globals.css";
 
 const inter = Inter({
@@ -173,13 +174,14 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-light-bg text-text-primary">
-        <NavigationLoadingBar />
         <GoogleAnalytics />
         <AnalyticsTracker />
         <ClarityTracker />
         <GoogleTranslateLoader />
         {children}
         <ClientWidgets />
+        <StickyMobileCTA />
+        <CookieConsent />
       </body>
     </html>
   );

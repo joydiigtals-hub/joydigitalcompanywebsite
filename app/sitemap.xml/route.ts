@@ -38,7 +38,7 @@ export async function GET() {
     const todayStr = new Date().toISOString().split('T')[0];
 
     // Target country codes for localized routes
-    const countries = ['us', 'uk', 'ae', 'ca', 'au', 'es', 'de', 'fr', 'it', 'sg', 'mx', 'br'];
+    const countries = ['us', 'uk', 'ae', 'ca', 'au', 'sg'];
 
     // Localized route paths
     const localizedPaths = ['', '/seo-services', '/website-development', '/contact'];
@@ -80,40 +80,6 @@ export async function GET() {
       '/whatsapp-link-generator',
       '/seo-audit-tool',
       '/image-compressor',
-      '/website-for-insurance-agents',
-      '/website-for-hospitals',
-      '/website-for-hotels',
-      '/website-for-real-estate',
-      '/website-for-tours-and-travels',
-      '/africa/tourism-website-development',
-      '/website-for-schools',
-      '/website-for-ecommerce',
-      '/website-for-small-business',
-      '/website-for-solar-companies',
-      '/website-for-textile-manufacturers',
-      '/website-for-manufacturing-companies',
-      '/website-for-law-firms',
-      '/website-for-consulting-companies',
-      '/website-for-logistics-and-shipping',
-      '/website-for-export-and-import',
-      '/website-for-marketing-agencies',
-      '/website-for-luxury-brands',
-      '/website-design-company-madurai',
-      '/web-development-company-madurai',
-      '/website-development-company-madurai',
-      '/seo-company-madurai',
-      '/seo-services-madurai',
-      '/digital-marketing-agency-madurai',
-      '/local-seo-madurai',
-      '/website-design-company-chennai',
-      '/web-development-company-chennai',
-      '/website-development-company-chennai',
-      '/affordable-web-design-agency-chennai',
-      '/digital-marketing-agency-in-chennai',
-      '/seo-company-chennai',
-      '/seo-services-chennai',
-      '/website-design-company-coimbatore',
-      '/seo-company-coimbatore',
     ];
 
     const entries: SitemapEntry[] = [];
@@ -127,13 +93,7 @@ export async function GET() {
       'en-ae': `${baseUrl}/ae${routePath}`,
       'en-ca': `${baseUrl}/ca${routePath}`,
       'en-au': `${baseUrl}/au${routePath}`,
-      'es-es': `${baseUrl}/es${routePath}`,
-      'de-de': `${baseUrl}/de${routePath}`,
-      'fr-fr': `${baseUrl}/fr${routePath}`,
-      'it-it': `${baseUrl}/it${routePath}`,
       'en-sg': `${baseUrl}/sg${routePath}`,
-      'es-mx': `${baseUrl}/mx${routePath}`,
-      'pt-br': `${baseUrl}/br${routePath}`,
     });
 
     // 1. Regional & Localized Routes (Homepage + Core Services across countries)
