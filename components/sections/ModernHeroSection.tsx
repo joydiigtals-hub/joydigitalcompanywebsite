@@ -269,7 +269,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
         <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6">
           
           {/* Step 1: Top Badges */}
-          <div className="flex flex-wrap items-center gap-2 animate-fade-up-item">
+          <div className="flex flex-wrap items-center gap-2">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#18132E] border border-[#2D244E] text-[#A78BFA] text-xs font-semibold shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-[#A78BFA]" />
               <span>Global B2B &amp; Travel Website Specialists</span>
@@ -281,22 +281,22 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
             </div>
           </div>
 
-          {/* Step 2: Main Headline with Anti-Gravity Staggered Word Reveal */}
+          {/* Step 2: Main Headline with Staggered Word Reveal */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.14] flex flex-wrap gap-x-[0.28em] gap-y-1 sm:gap-y-2 select-none">
             {heroMainWords.map((word, idx) => (
-              <span key={`main-w-${idx}`} className="inline-block will-change-transform animate-fade-up-word" style={{ animationDelay: `${0.05 + idx * 0.04}s` }}>
+              <span key={`main-w-${idx}`} className="inline-block">
                 {word}
               </span>
             ))}
             {heroGradientWords.map((word, idx) => (
-              <span key={`grad-w-${idx}`} className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-300 animate-gradient-shimmer will-change-transform animate-fade-up-word" style={{ animationDelay: `${0.05 + (heroMainWords.length + idx) * 0.04}s` }}>
+              <span key={`grad-w-${idx}`} className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-300 animate-gradient-shimmer">
                 {word}
               </span>
             ))}
           </h1>
 
           {/* Step 3: Subtitle & Feature Bullet Points */}
-          <div className="space-y-4 max-w-2xl animate-fade-up-item">
+          <div className="space-y-4 max-w-2xl">
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
               Custom website design and development for businesses worldwide, with specialized expertise in Travel, Tourism & Safari businesses.
             </p>
@@ -326,7 +326,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
           </div>
 
           {/* Step 4: Left CTA Button & Social Proof */}
-          <div className="space-y-6 pt-2 w-full max-w-xl animate-fade-up-item">
+          <div className="space-y-6 pt-2 w-full max-w-xl">
             <div>
               <a
                 href="#case-studies"
@@ -345,7 +345,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
             </div>
           </div>
         </div>
-        <div className="lg:col-span-5 flex justify-center lg:justify-end w-full animate-fade-up-card" style={{ animationDelay: "0.2s" }}>
+        <div className="lg:col-span-5 flex justify-center lg:justify-end w-full">
           <div className="w-full max-w-md relative rounded-2xl p-[1px] overflow-hidden group">
             
             {/* Animated Conic Glowing Border Beam */}
@@ -553,7 +553,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
         </div>
 
         {/* Step 6: Scroll Down Indicator Button (Centered at Bottom for Desktop & Mobile) */}
-        <div className="lg:col-span-12 flex justify-center pt-8 sm:pt-10 z-20 animate-fade-up-card" style={{ animationDelay: "0.8s" }}>
+        <div className="lg:col-span-12 flex justify-center pt-8 sm:pt-10 z-20">
           <button
             type="button"
             onClick={() => {
