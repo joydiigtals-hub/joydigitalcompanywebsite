@@ -373,7 +373,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                 
                 {/* Hidden Honeypot & UTM */}
                 <input type="text" name="_honey" value="" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
-                <input type="hidden" name="utm_source" value={getUtmParameters()?.utm_source || ""} />
+                <input type="hidden" name="utm_source" value={getUtmParameters()?.source || ""} />
                 
                 {/* Field 1: Full Name */}
                 <div className="flex flex-col gap-1">

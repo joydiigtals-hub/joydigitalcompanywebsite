@@ -80,8 +80,8 @@ export default function LeadForm({
     
     // Capture UTM Source on load
     const utm = getUtmParameters();
-    if (utm && utm.utm_source) {
-      setFormData(prev => ({ ...prev, utm_source: utm.utm_source as string }));
+    if (utm && utm.source) {
+      setFormData(prev => ({ ...prev, utm_source: utm.source as string }));
     }
     
     return () => document.removeEventListener("mousedown", handleClickOutside);
