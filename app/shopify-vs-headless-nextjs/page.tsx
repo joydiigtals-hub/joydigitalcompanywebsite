@@ -93,7 +93,6 @@ export default function ShopifyVsHeadlessNextjsPage() {
                 subtitle="Submit your product store details for a custom Next.js e-commerce proposal."
                 ctaText="Get E-Commerce Proposal"
                 source="Shopify vs Headless Next.js Landing Page"
-                showWebsiteField={true}
               />
             </div>
           </div>

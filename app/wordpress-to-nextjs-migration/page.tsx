@@ -93,7 +93,6 @@ export default function WordPressToNextjsMigrationPage() {
                 subtitle="Submit your WordPress URL to get a complete migration plan and flat-rate quote."
                 ctaText="Request Migration Plan"
                 source="WordPress to Next.js Landing Page"
-                showWebsiteField={true}
               />
             </div>
           </div>

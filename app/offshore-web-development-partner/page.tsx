@@ -117,7 +117,6 @@ export default function OffshoreWebDevelopmentPartnerPage() {
                 subtitle="Get developer availability, hourly rates ($25-$35/hr), and free site analysis."
                 ctaText="Get Free Audit & Offshore Rate Card →"
                 source="Offshore Web Development Partner Page"
-                showWebsiteField={true}
               />
             </div>
           </div>
