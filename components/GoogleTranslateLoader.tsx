@@ -31,7 +31,15 @@ export default function GoogleTranslateLoader() {
       script.id = "google-translate-script";
       script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
       script.async = true;
-      document.body.appendChild(script);
+      script.defer = true;
+      
+      // Only append if we actually need it, but we always need it for the widget.
+      // Wait for idle time so it doesn't block main thread
+      if ('requestIdleCallback' in window) {
+        (window as any).requestIdleCallback(() => document.body.appendChild(script));
+      } else {
+        setTimeout(() => document.body.appendChild(script), 1500);
+      }
     }
 
     // Function to check and force select element to match selected language
@@ -53,6 +61,7 @@ export default function GoogleTranslateLoader() {
 
       if (targetLang && targetLang !== "en") {
         let attempts = 0;
+        // Less aggressive polling to avoid forced reflows on mobile
         const interval = setInterval(() => {
           attempts++;
           const selectElem = document.querySelector(".goog-te-combo") as HTMLSelectElement | null;
@@ -64,15 +73,15 @@ export default function GoogleTranslateLoader() {
             }
             clearInterval(interval);
           }
-          if (attempts > 40) {
+          if (attempts > 20) {
             clearInterval(interval);
           }
-        }, 200);
+        }, 500);
       }
     };
 
-    // Run sync check after script loads
-    const timer = setTimeout(checkAndSyncLanguage, 500);
+    // Run sync check after a longer delay to ensure widget is loaded
+    const timer = setTimeout(checkAndSyncLanguage, 2500);
     return () => clearTimeout(timer);
   }, []);
 
