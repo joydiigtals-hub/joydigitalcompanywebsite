@@ -313,7 +313,7 @@ export default function Footer() {
               <Link href="/website-for-real-estate" className="hover:text-accent hover:pl-1 transition-all">Website for Real Estate</Link>
             </li>
             <li>
-              <Link href="/website-for-tours-and-travels" className="hover:text-accent hover:pl-1 transition-all">Website for Tours & Travels</Link>
+              <Link href="/travel-website-development" className="hover:text-accent hover:pl-1 transition-all">Website for Tours & Travels</Link>
             </li>
             <li>
               <Link href="/website-for-schools" className="hover:text-accent hover:pl-1 transition-all">Website for Schools</Link>

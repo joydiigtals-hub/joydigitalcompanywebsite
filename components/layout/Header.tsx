@@ -398,17 +398,17 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             </div>
 
             <Link
-              href="/travel-website-development"
-              title="Travel & Safari"
+              href="/free-tools"
+              title="Free Tools"
               className={`font-semibold text-sm transition-colors nav-link-underline ${
                 isScrolled ? "hover:text-accent" : "hover:text-primary-light"
               } ${
-                isActive("/travel-website-development") || isActive("/safari-website-development")
+                isActive("/free-tools")
                   ? (isScrolled ? "text-accent" : "text-primary-light") 
                   : (isScrolled ? "text-text-primary" : "text-slate-100")
               }`}
             >
-              Travel & Safari
+              Free Tools
             </Link>
 
 
@@ -707,14 +707,14 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             </div>
           </div>
           <Link
-            href="/travel-website-development"
-            title="Travel & Safari"
+            href="/free-tools"
+            title="Free Tools"
             onClick={() => setIsMobileOpen(false)}
             className={`font-semibold text-lg border-b border-[#E5E7EB] pb-2 ${
-              isActive("/travel-website-development") || isActive("/safari-website-development") ? "text-accent" : "text-primary-dark"
+              isActive("/free-tools") ? "text-accent" : "text-primary-dark"
             }`}
           >
-            Travel & Safari
+            Free Tools
           </Link>
 
           <Link
