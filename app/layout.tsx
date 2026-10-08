@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Script from "next/script";
 import dynamic from "next/dynamic";
 import FontAwesomeLoader from "@/components/layout/FontAwesomeLoader";
@@ -13,13 +12,6 @@ import ClientWidgets from "@/components/ui/ClientWidgets";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import CookieConsent from "@/components/ui/CookieConsent";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://joydigital.in"),
@@ -116,8 +108,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className="h-full antialiased font-sans">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+        />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
