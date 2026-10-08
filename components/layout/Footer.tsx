@@ -7,13 +7,13 @@ import { usePathname } from "next/navigation";
 import CompanyProfileDownload from "@/components/ui/CompanyProfileDownload";
 
 const REGIONAL_SITES = [
-  { code: "", label: "Global (USD)", flag: "ðŸŒ" },
-  { code: "us", label: "United States (USD)", flag: "ðŸ‡ºðŸ‡¸" },
-  { code: "uk", label: "United Kingdom (GBP)", flag: "ðŸ‡¬ðŸ‡§" },
-  { code: "ae", label: "United Arab Emirates (AED)", flag: "ðŸ‡¦ðŸ‡ª" },
-  { code: "in", label: "India (INR)", flag: "ðŸ‡®ðŸ‡³" },
-  { code: "ca", label: "Canada (CAD)", flag: "ðŸ‡¨ðŸ‡¦" },
-  { code: "au", label: "Australia (AUD)", flag: "ðŸ‡¦ðŸ‡º" },
+  { code: "", label: "Global (USD)", flag: "🌐" },
+  { code: "us", label: "United States (USD)", flag: "🇺🇸" },
+  { code: "uk", label: "United Kingdom (GBP)", flag: "🇬🇧" },
+  { code: "ae", label: "United Arab Emirates (AED)", flag: "🇦🇪" },
+  { code: "in", label: "India (INR)", flag: "🇮🇳" },
+  { code: "ca", label: "Canada (CAD)", flag: "🇨🇦" },
+  { code: "au", label: "Australia (AUD)", flag: "🇦🇺" },
 ];
 
 export default function Footer() {
@@ -507,3 +507,4 @@ export default function Footer() {
     </footer>
   );
 }
+
