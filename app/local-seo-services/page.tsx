@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import LocalSeoLeadForm from "@/components/ui/LocalSeoLeadForm";
@@ -32,7 +32,7 @@ const pageSchema = {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Old Perungalathur",
-      "addressLocality": "Chennai",
+      "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
       "postalCode": "600063",
       "addressCountry": "IN"
@@ -60,10 +60,10 @@ export default function LocalSEOPage() {
       overviewContent={
         <div className="space-y-6">
           <p>
-            When enterprise customers search for services nearby—whether they are looking for a global consultancy branch, a regional retail franchise, or a distributed clinic network—they rely heavily on localized Google Maps results and AI Overviews. If your multi-location brand fails to rank consistently in the <strong>Global Maps 3-Pack</strong> across different territories, you are yielding high-value local market share to smaller, agile competitors.
+            When enterprise customers search for services nearbyâ€”whether they are looking for a global consultancy branch, a regional retail franchise, or a distributed clinic networkâ€”they rely heavily on localized Google Maps results and AI Overviews. If your multi-location brand fails to rank consistently in the <strong>Global Maps 3-Pack</strong> across different territories, you are yielding high-value local market share to smaller, agile competitors.
           </p>
           <p>
-            At Joy Digital, our specialized <strong>Multi-Location Local SEO Services</strong> are engineered for global businesses. We streamline <strong>Enterprise Google Business Profile Management</strong>, unifying data across hundreds of listings. By deploying centralized optimization, we ensure your brand captures Hyper-Local Geo-Targeted SEO traffic in every market you operate in—from the US and UK to the UAE and Australia.
+            At Joy Digital, our specialized <strong>Multi-Location Local SEO Services</strong> are engineered for global businesses. We streamline <strong>Enterprise Google Business Profile Management</strong>, unifying data across hundreds of listings. By deploying centralized optimization, we ensure your brand captures Hyper-Local Geo-Targeted SEO traffic in every market you operate inâ€”from the US and UK to the UAE and Australia.
           </p>
           <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Mastering Franchise Local Search Strategy & AI Ecosystems</h3>
           <p>
@@ -145,7 +145,7 @@ export default function LocalSEOPage() {
       pricingTiers={[
         {
           name: "Single Location Accelerator",
-          price: "Starts from ₹1,000",
+          price: "Starts from â‚¹1,000",
           period: "/month",
           description: "Best for high-value B2B firms or premium local businesses operating from a single global headquarters.",
           features: [
@@ -160,7 +160,7 @@ export default function LocalSEOPage() {
         },
         {
           name: "Regional & Multi-City Growth",
-          price: "Starts from ₹3,500",
+          price: "Starts from â‚¹3,500",
           period: "/month",
           description: "Perfect for brands operating 2-5 branch locations or targeting surrounding metropolitan regions.",
           isPopular: true,

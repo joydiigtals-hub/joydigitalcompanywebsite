@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
@@ -32,11 +32,11 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "â‚¹â‚¹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
-          "addressLocality": "Chennai",
+          "addressLocality": "Madurai",
           "addressRegion": "Tamil Nadu",
           "postalCode": "600063",
           "addressCountry": "IN"
@@ -204,7 +204,7 @@ export default function LuxuryBrandWebPage() {
       pricingTiers={[
         {
           name: "Boutique Luxury Atelier Plan",
-          price: "₹30,000",
+          price: "â‚¹30,000",
           period: "one-time ($1,500 USD)",
           description: "Ideal for boutique jewelry designers, haute couture ateliers, and independent luxury artisan brands.",
           features: [
@@ -221,7 +221,7 @@ export default function LuxuryBrandWebPage() {
         },
         {
           name: "Grand Flagship Digital Portal",
-          price: "₹90,000",
+          price: "â‚¹90,000",
           period: "one-time ($4,200 USD)",
           description: "Recommended for global luxury fashion houses, fine jewelry brands, and multi-location luxury groups.",
           isPopular: true,
@@ -241,7 +241,7 @@ export default function LuxuryBrandWebPage() {
       faqs={[
         {
           question: "How much does a website for a luxury brand cost?",
-          answer: "Our luxury brand website packages start from ₹30,000 ($1,500 USD) for boutique ateliers up to ₹90,000 ($4,200 USD) for grand flagship digital portals.",
+          answer: "Our luxury brand website packages start from â‚¹30,000 ($1,500 USD) for boutique ateliers up to â‚¹90,000 ($4,200 USD) for grand flagship digital portals.",
         },
         {
           question: "Can VIP clients book private boutique or virtual consultations on the site?",

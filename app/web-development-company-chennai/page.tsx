@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
@@ -20,10 +20,10 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "₹₹",
+    "priceRange": "â‚¹â‚¹",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Chennai",
+      "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
       "postalCode": "600063",
       "addressCountry": "IN"
@@ -126,7 +126,7 @@ export default function WebDevChennai() {
       pricingTiers={[
         {
           name: "Starter Site",
-          price: "₹25,000",
+          price: "â‚¹25,000",
           period: "one-time",
           description: "Ideal for local advisors, growing retail shops, and professional business portfolios.",
           features: [
@@ -141,7 +141,7 @@ export default function WebDevChennai() {
         },
         {
           name: "Professional Plan",
-          price: "₹25,000",
+          price: "â‚¹25,000",
           period: "one-time",
           description: "Best for medical clinics, local resorts, educational hubs, and growing companies.",
           isPopular: true,

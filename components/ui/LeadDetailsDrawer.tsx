@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 
@@ -361,7 +361,7 @@ export default function LeadDetailsDrawer({
     
     const updatedActivities = logActivity(
       "proposal", 
-      `Generated proposal quote worth ₹${proposalTotal.toLocaleString()} & advanced stage to Proposal Sent`
+      `Generated proposal quote worth â‚¹${proposalTotal.toLocaleString()} & advanced stage to Proposal Sent`
     );
 
     await triggerPatch(updates, updatedActivities);
@@ -377,7 +377,7 @@ export default function LeadDetailsDrawer({
       <tr style="border-bottom: 1px solid #E2E8F0;">
         <td style="padding: 12px; font-size: 12px; color: #1E293B;">${idx + 1}</td>
         <td style="padding: 12px; font-size: 12px; color: #1E293B; font-weight: 500;">${item.description}</td>
-        <td style="padding: 12px; font-size: 12px; color: #1E293B; text-align: right;">₹${item.price.toLocaleString()}</td>
+        <td style="padding: 12px; font-size: 12px; color: #1E293B; text-align: right;">â‚¹${item.price.toLocaleString()}</td>
       </tr>
     `).join("");
 
@@ -436,7 +436,7 @@ export default function LeadDetailsDrawer({
             <div class="info-block">
               <h4>Prepared By:</h4>
               <p style="font-weight: 700; color: #0F172A; font-size: 14px;">Joy Digital Agency</p>
-              <p>Chennai, Tamil Nadu, India</p>
+              <p>Madurai, Tamil Nadu, India</p>
               <p>Email: saravanan061193@gmail.com</p>
               <p>Web: www.joydigital.in</p>
             </div>
@@ -458,15 +458,15 @@ export default function LeadDetailsDrawer({
           <div class="totals-container">
             <div class="total-row">
               <span style="color: #64748B;">Subtotal:</span>
-              <span style="font-weight: 600;">₹${proposalSubtotal.toLocaleString()}</span>
+              <span style="font-weight: 600;">â‚¹${proposalSubtotal.toLocaleString()}</span>
             </div>
             <div class="total-row">
               <span style="color: #64748B;">GST (${proposalTax}%):</span>
-              <span style="font-weight: 600;">₹${proposalTaxAmount.toLocaleString()}</span>
+              <span style="font-weight: 600;">â‚¹${proposalTaxAmount.toLocaleString()}</span>
             </div>
             <div class="total-row grand">
               <span>Grand Total:</span>
-              <span>₹${proposalTotal.toLocaleString()}</span>
+              <span>â‚¹${proposalTotal.toLocaleString()}</span>
             </div>
           </div>
 
@@ -512,7 +512,7 @@ export default function LeadDetailsDrawer({
             <div>
               <h3 className="text-sm font-extrabold text-slate-900 leading-tight">{lead.name}</h3>
               <p className="text-[10px] text-slate-500 mt-1 font-medium">
-                {lead.companyName !== "N/A" ? lead.companyName : "Individual Lead"} • ID: <code className="bg-slate-100 text-blue-600 px-1 py-0.5 rounded font-mono text-[9px]">{lead.id.substring(0, 8)}</code>
+                {lead.companyName !== "N/A" ? lead.companyName : "Individual Lead"} â€¢ ID: <code className="bg-slate-100 text-blue-600 px-1 py-0.5 rounded font-mono text-[9px]">{lead.id.substring(0, 8)}</code>
               </p>
             </div>
           </div>
@@ -831,7 +831,7 @@ export default function LeadDetailsDrawer({
                             <div className="font-bold text-slate-800">{act.message}</div>
                             <div className="text-[10px] text-slate-450 font-semibold flex items-center gap-2">
                               <span>By {act.agent}</span>
-                              <span>•</span>
+                              <span>â€¢</span>
                               <span>{new Date(act.timestamp).toLocaleString()}</span>
                             </div>
                           </div>
@@ -967,7 +967,7 @@ export default function LeadDetailsDrawer({
                         className="flex-1 text-xs px-3 py-2 bg-white border border-slate-200 rounded-xl outline-none font-semibold text-slate-800"
                       />
                       <div className="relative w-28 shrink-0">
-                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs font-bold">₹</span>
+                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs font-bold">â‚¹</span>
                         <input
                           type="number"
                           placeholder="Price"
@@ -1037,15 +1037,15 @@ export default function LeadDetailsDrawer({
                 <div className="border-t border-slate-150 pt-4 mt-2 flex flex-col items-end gap-2 text-xs">
                   <div className="flex justify-between w-52 text-slate-500 font-semibold">
                     <span>Subtotal:</span>
-                    <span>₹{proposalSubtotal.toLocaleString()}</span>
+                    <span>â‚¹{proposalSubtotal.toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between w-52 text-slate-500 font-semibold">
                     <span>GST ({proposalTax}%):</span>
-                    <span>₹{proposalTaxAmount.toLocaleString()}</span>
+                    <span>â‚¹{proposalTaxAmount.toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between w-52 font-black text-slate-900 border-t border-slate-200 pt-2 text-[13px]">
                     <span>Grand Total:</span>
-                    <span>₹{proposalTotal.toLocaleString()}</span>
+                    <span>â‚¹{proposalTotal.toLocaleString()}</span>
                   </div>
                 </div>
 

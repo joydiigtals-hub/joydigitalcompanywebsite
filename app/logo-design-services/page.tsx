@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
@@ -20,11 +20,11 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "₹₹",
+    "priceRange": "â‚¹â‚¹",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Old Perungalathur",
-      "addressLocality": "Chennai",
+      "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
       "postalCode": "600063",
       "addressCountry": "IN"
@@ -61,7 +61,7 @@ export default function LogoPage() {
             A consistent brand identity uses matching design elements across all marketing platforms. We provide complete branding packages that include custom typography guides, secondary submarks, and print layouts. This ensures your branding looks unified whether it is displayed on your website, social profiles, business cards, letterheads, or marketing brochures.
           </p>
           <p>
-            We deliver all designs in vector formats (SVG, PDF, EPS, AI), allowing you to scale them for any print or digital need—from small website icons to massive outdoor billboards—without losing resolution. This provides you with the creative files needed to represent your business professionally in any commercial setting.
+            We deliver all designs in vector formats (SVG, PDF, EPS, AI), allowing you to scale them for any print or digital needâ€”from small website icons to massive outdoor billboardsâ€”without losing resolution. This provides you with the creative files needed to represent your business professionally in any commercial setting.
           </p>
           <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Color Psychology and Typography Pairings</h3>
           <p>
@@ -136,7 +136,7 @@ export default function LogoPage() {
       pricingTiers={[
         {
           name: "Startup Logo Plan",
-          price: "₹5,000",
+          price: "â‚¹5,000",
           description: "Ideal for new businesses needing a clean, professional logo mark to start operations.",
           features: [
             "2 Creative Custom Logo Concepts",
@@ -150,7 +150,7 @@ export default function LogoPage() {
         },
         {
           name: "Corporate Brand Identity",
-          price: "₹12,000",
+          price: "â‚¹12,000",
           description: "Recommended for growing companies that want a consistent look across print and digital media.",
           isPopular: true,
           features: [
@@ -165,7 +165,7 @@ export default function LogoPage() {
         },
         {
           name: "Enterprise Design System",
-          price: "₹25,000+",
+          price: "â‚¹25,000+",
           description: "For companies requiring comprehensive brand books, presentation templates, and brochures.",
           features: [
             "Unlimited Logo Concept Iterations",

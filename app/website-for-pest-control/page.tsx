@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
@@ -33,11 +33,11 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "â‚¹â‚¹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
-          "addressLocality": "Chennai",
+          "addressLocality": "Madurai",
           "addressRegion": "Tamil Nadu",
           "postalCode": "600063",
           "addressCountry": "IN"
@@ -74,7 +74,7 @@ export default async function PestControlWebPage() {
             When homeowners or restaurant managers discover termites, bed bugs, cockroaches, or rodents, they act with extreme urgency. They search Google for immediate exterminators and choose the website that loads instantly, displays clear treatment packages, and offers 1-tap WhatsApp or phone contact.
           </p>
           <p>
-            Unfortunately, many pest control websites suffer from slow mobile speeds, missing service area breakdowns, unorganized treatment packages, and lack of immediate emergency contact buttons—causing high-intent leads to bounce to competitors.
+            Unfortunately, many pest control websites suffer from slow mobile speeds, missing service area breakdowns, unorganized treatment packages, and lack of immediate emergency contact buttonsâ€”causing high-intent leads to bounce to competitors.
           </p>
           <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
             <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Pest Control Websites</h3>
@@ -209,7 +209,7 @@ export default async function PestControlWebPage() {
       pricingTiers={[
         {
           name: "Local Exterminator Plan",
-          price: "₹25,000",
+          price: "â‚¹25,000",
           period: "one-time ($600 USD)",
           description: "Perfect for local pest control contractors, termite experts, and city service teams.",
           features: [
@@ -225,7 +225,7 @@ export default async function PestControlWebPage() {
         },
         {
           name: "Enterprise Commercial Portal",
-          price: "₹45,000",
+          price: "â‚¹45,000",
           period: "one-time ($1,400 USD)",
           description: "Recommended for commercial pest control companies, multi-city franchises, and B2B AMC vendors.",
           isPopular: true,
@@ -244,7 +244,7 @@ export default async function PestControlWebPage() {
       faqs={[
         {
           question: "How much does a website for a pest control company cost?",
-          answer: "Our pest control website packages start from ₹25,000 ($600 USD) for local exterminators up to ₹45,000 ($1,400 USD) for multi-city commercial pest management portals.",
+          answer: "Our pest control website packages start from â‚¹25,000 ($600 USD) for local exterminators up to â‚¹45,000 ($1,400 USD) for multi-city commercial pest management portals.",
         },
         {
           question: "Can customers request emergency inspections directly through the website?",

@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
@@ -31,11 +31,11 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "₹₹",
+    "priceRange": "â‚¹â‚¹",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Old Perungalathur",
-      "addressLocality": "Chennai",
+      "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
       "postalCode": "600063",
       "addressCountry": "IN"
@@ -144,7 +144,7 @@ export default function CustomSoftwarePage() {
       pricingTiers={[
         {
           name: "Basic Web Portal",
-          price: "₹45,000",
+          price: "â‚¹45,000",
           period: "one-time",
           description: "Ideal for businesses needing a customer reservation portal or member database login.",
           features: [
@@ -159,7 +159,7 @@ export default function CustomSoftwarePage() {
         },
         {
           name: "SaaS Business System",
-          price: "₹85,000",
+          price: "â‚¹85,000",
           period: "one-time",
           description: "Best for growing companies looking to automate processes and integrate payment pipelines.",
           isPopular: true,

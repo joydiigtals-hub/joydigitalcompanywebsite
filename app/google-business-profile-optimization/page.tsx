@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
@@ -31,11 +31,11 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "₹₹",
+    "priceRange": "â‚¹â‚¹",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Old Perungalathur",
-      "addressLocality": "Chennai",
+      "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
       "postalCode": "600063",
       "addressCountry": "IN"
@@ -144,7 +144,7 @@ export default function GoogleBusinessProfilePage() {
       pricingTiers={[
         {
           name: "Starter Setup",
-          price: "₹5,000",
+          price: "â‚¹5,000",
           period: "one-time",
           description: "Best for new businesses or single-profile setups needing basic verification and layout.",
           features: [
@@ -159,7 +159,7 @@ export default function GoogleBusinessProfilePage() {
         },
         {
           name: "Premium Optimization",
-          price: "₹12,000",
+          price: "â‚¹12,000",
           period: "one-time",
           description: "Best for medical clinics, local hotels, travels, and growing companies aiming to rank.",
           isPopular: true,

@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Why a Slow Website Could Be Costing Your Business Customers'
 description: Discover how a slow-loading website loses customers, hurts Google rankings, and wastes ad spend. Learn 7 practical steps to optimize website speed and boost conversions.
 date: '2026-09-06'
@@ -180,7 +180,7 @@ The problem is what happens after the click.
 
 Your website needs to continue the customer journey smoothly from:
 
-**Ad → Website → Information → Enquiry → Customer**
+**Ad â†’ Website â†’ Information â†’ Enquiry â†’ Customer**
 
 If the website is slow, this journey can break.
 
@@ -297,9 +297,9 @@ However, knowing a few important terms can help you make better decisions.
 
 Google's Core Web Vitals focus on important aspects of user experience, including:
 
-* **LCP (Largest Contentful Paint)** – how quickly the main content becomes visible
-* **INP (Interaction to Next Paint)** – how responsive the page is to user interactions
-* **CLS (Cumulative Layout Shift)** – how stable the page layout is while loading
+* **LCP (Largest Contentful Paint)** â€“ how quickly the main content becomes visible
+* **INP (Interaction to Next Paint)** â€“ how responsive the page is to user interactions
+* **CLS (Cumulative Layout Shift)** â€“ how stable the page layout is while loading
 
 These metrics help developers understand how real users experience a website.
 
@@ -386,5 +386,6 @@ Ready to transform your website speed and convert more online visitors into cust
 * **Phone / Call Support:** [+91 90800 26133](tel:+919080026133)
 * **WhatsApp Chat:** [Chat on WhatsApp (+91 90800 26133)](https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20get%20more%20details%20about%20website%20speed%20optimization.)
 * **Email:** [saravanan061193@gmail.com](mailto:saravanan061193@gmail.com)
-* **Office Address:** Old Perungalathur, Chennai 600063, Tamil Nadu, India
+* **Office Address:** Tamil Nadu, India
 * **Website & Performance Audit:** [Request a Free Website Performance Review](https://joydigital.in/contact?service=Website%20Development)
+

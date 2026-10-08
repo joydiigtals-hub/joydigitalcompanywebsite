@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import dynamic from "next/dynamic";
@@ -132,8 +132,7 @@ export default function RootLayout({
                   "priceRange": "$$$",
                   "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "Perungalathur",
-                    "addressLocality": "Chennai",
+                    "addressLocality": "Tamil Nadu",
                     "addressRegion": "Tamil Nadu",
                     "addressCountry": "IN"
                   },
@@ -186,3 +185,4 @@ export default function RootLayout({
     </html>
   );
 }
+

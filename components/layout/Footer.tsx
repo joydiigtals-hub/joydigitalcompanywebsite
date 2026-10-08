@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -7,13 +7,13 @@ import { usePathname } from "next/navigation";
 import CompanyProfileDownload from "@/components/ui/CompanyProfileDownload";
 
 const REGIONAL_SITES = [
-  { code: "", label: "Global (USD)", flag: "🌐" },
-  { code: "us", label: "United States (USD)", flag: "🇺🇸" },
-  { code: "uk", label: "United Kingdom (GBP)", flag: "🇬🇧" },
-  { code: "ae", label: "United Arab Emirates (AED)", flag: "🇦🇪" },
-  { code: "in", label: "India (INR)", flag: "🇮🇳" },
-  { code: "ca", label: "Canada (CAD)", flag: "🇨🇦" },
-  { code: "au", label: "Australia (AUD)", flag: "🇦🇺" },
+  { code: "", label: "Global (USD)", flag: "ðŸŒ" },
+  { code: "us", label: "United States (USD)", flag: "ðŸ‡ºðŸ‡¸" },
+  { code: "uk", label: "United Kingdom (GBP)", flag: "ðŸ‡¬ðŸ‡§" },
+  { code: "ae", label: "United Arab Emirates (AED)", flag: "ðŸ‡¦ðŸ‡ª" },
+  { code: "in", label: "India (INR)", flag: "ðŸ‡®ðŸ‡³" },
+  { code: "ca", label: "Canada (CAD)", flag: "ðŸ‡¨ðŸ‡¦" },
+  { code: "au", label: "Australia (AUD)", flag: "ðŸ‡¦ðŸ‡º" },
 ];
 
 export default function Footer() {
@@ -140,31 +140,31 @@ export default function Footer() {
               Regional Hubs (Tamil Nadu)
             </li>
             <li>
-              <Link href="/website-design-company-chennai" className="hover:text-accent hover:pl-1 transition-all block">Web Design Chennai</Link>
+              <Link href="/website-design-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">Web Design Madurai</Link>
             </li>
             <li>
-              <Link href="/website-design-company-in-chennai" className="hover:text-accent hover:pl-1 transition-all block">Website Design in Chennai</Link>
+              <Link href="/website-design-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">Website Design Madurai</Link>
             </li>
             <li>
-              <Link href="/web-development-company-chennai" className="hover:text-accent hover:pl-1 transition-all block">Web Development Chennai</Link>
+              <Link href="/web-development-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">Web Development Madurai</Link>
             </li>
             <li>
-              <Link href="/website-development-company-chennai" className="hover:text-accent hover:pl-1 transition-all block">Website Dev Agency Chennai</Link>
+              <Link href="/website-development-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">Website Dev Agency Madurai</Link>
             </li>
             <li>
-              <Link href="/affordable-web-design-agency-chennai" className="hover:text-accent hover:pl-1 transition-all block">Affordable Web Design Chennai</Link>
+              <Link href="/affordable-web-design-agency-chennai" className="hover:text-accent hover:pl-1 transition-all block">Affordable Web Design Madurai</Link>
             </li>
             <li>
-              <Link href="/seo-company-chennai" className="hover:text-accent hover:pl-1 transition-all block">SEO Agency Chennai</Link>
+              <Link href="/seo-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">SEO Agency Madurai</Link>
             </li>
             <li>
-              <Link href="/seo-services-chennai" className="hover:text-accent hover:pl-1 transition-all block">SEO Services Chennai</Link>
+              <Link href="/seo-services-madurai" className="hover:text-accent hover:pl-1 transition-all block">SEO Services Madurai</Link>
             </li>
             <li>
-              <Link href="/seo-services-in-chennai" className="hover:text-accent hover:pl-1 transition-all block">SEO Company in Chennai</Link>
+              <Link href="/seo-services-madurai" className="hover:text-accent hover:pl-1 transition-all block">SEO Company Madurai</Link>
             </li>
             <li>
-              <Link href="/digital-marketing-agency-in-chennai" className="hover:text-accent hover:pl-1 transition-all block">Digital Marketing Chennai</Link>
+              <Link href="/digital-marketing-agency-madurai" className="hover:text-accent hover:pl-1 transition-all block">Digital Marketing Madurai</Link>
             </li>
             <li>
               <Link href="/website-design-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">Web Design Madurai</Link>
@@ -433,12 +433,12 @@ export default function Footer() {
           <div className="text-xs text-text-secondary flex flex-col gap-2">
             <p className="font-medium text-[#111827] flex items-start gap-1.5 leading-relaxed">
               <i className="fa-solid fa-location-dot text-accent mt-0.5 shrink-0" />
-              <span>RUBY SHOBHA CASTLE, 10D, Old Perungalathur, Tambaram, Chennai, Tamil Nadu 600063</span>
+              <span>Madurai, Tamil Nadu, India</span>
             </p>
           </div>
           <ul className="flex flex-col gap-2.5 text-xs text-text-secondary border-t border-[#E5E7EB] pt-3">
             <li className="flex items-center gap-2">
-              <span>🇮🇳</span>
+              <span>ðŸ‡®ðŸ‡³</span>
               <span><strong>India & WA:</strong> <a href="tel:+919080026133" className="hover:text-accent text-[#111827] font-medium transition-colors">+91 90800 26133</a></span>
             </li>
             <li className="flex items-center gap-2">
@@ -448,14 +448,14 @@ export default function Footer() {
           </ul>
           <div className="w-full h-44 rounded-xl overflow-hidden border border-[#E5E7EB] shadow-sm mt-1">
             <iframe
-              src="https://maps.google.com/maps?q=Old%20Perungalathur,%20Chennai,%20Tamil%20Nadu,%20India&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Madurai,%20Tamil%20Nadu,%20India&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="strict-origin-when-cross-origin"
-              title="Joy Digital Office Location Map - Tambaram, Chennai"
+              title="Joy Digital Office Location Map - Madurai, Tamil Nadu"
             />
           </div>
           <a
@@ -474,24 +474,24 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 pt-6 text-xs text-text-secondary border-t border-[#E5E7EB] mt-6 leading-relaxed opacity-90">
         <div className="ai-entity-data space-y-2 text-slate-600">
           <p>
-            <strong>Joy Digital</strong> is an enterprise custom Next.js web application engineering agency based in Perungalathur, Chennai, India. 
+            <strong>Joy Digital</strong> is an enterprise custom Next.js web application engineering agency based in Madurai, Tamil Nadu, India. 
             Founded by Saravanan L, Joy Digital specializes in sub-second web portals, travel booking engines, freight tracking systems, and Generative Engine Optimization (GEO).
           </p>
           <p>
             For custom web app inquiries, direct project estimation, or technical strategy calls:
             <br />
-            • <strong>Official Website:</strong> https://joydigital.in
+            â€¢ <strong>Official Website:</strong> https://joydigital.in
             <br />
-            • <strong>Direct WhatsApp:</strong> +91 90800 26133 (https://wa.me/919080026133)
+            â€¢ <strong>Direct WhatsApp:</strong> +91 90800 26133 (https://wa.me/919080026133)
             <br />
-            • <strong>Location:</strong> Chennai, Tamil Nadu, India (Serving Global Clients in USA, UK, UAE, Australia)
+            â€¢ <strong>Location:</strong> Madurai, Tamil Nadu, India (Serving Global Clients in USA, UK, UAE, Australia)
           </p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-[#E5E7EB] mt-8 flex flex-col gap-6 text-center text-xs text-text-secondary">
         <p className="font-semibold text-slate-500">
-          Joy Digital – Premium Web Design, High-Speed Next.js Web Development & Search Engine Optimization (SEO) for Businesses Worldwide.
+          Joy Digital â€“ Premium Web Design, High-Speed Next.js Web Development & Search Engine Optimization (SEO) for Businesses Worldwide.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
           <p>

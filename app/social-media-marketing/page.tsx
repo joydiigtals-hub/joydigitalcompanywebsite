@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
@@ -20,11 +20,11 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "₹₹",
+    "priceRange": "â‚¹â‚¹",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Old Perungalathur",
-      "addressLocality": "Chennai",
+      "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
       "postalCode": "600063",
       "addressCountry": "IN"
@@ -136,7 +136,7 @@ export default function SMMPage() {
       pricingTiers={[
         {
           name: "Organic Content Plan",
-          price: "₹12,000",
+          price: "â‚¹12,000",
           period: "/month",
           description: "Ideal for local businesses wanting to keep their profiles active with professional visual layouts.",
           features: [
@@ -151,7 +151,7 @@ export default function SMMPage() {
         },
         {
           name: "Paid Ads & Leads Package",
-          price: "₹22,000",
+          price: "â‚¹22,000",
           period: "/month",
           description: "Recommended for companies targeting immediate customer inquiries and sales leads.",
           isPopular: true,
@@ -167,7 +167,7 @@ export default function SMMPage() {
         },
         {
           name: "Enterprise Brand Growth",
-          price: "₹40,000",
+          price: "â‚¹40,000",
           period: "/month",
           description: "Designed for franchise businesses wanting multi-platform SMM and large-scale ad campaigns.",
           features: [

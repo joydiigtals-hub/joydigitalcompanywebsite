@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
@@ -32,11 +32,11 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "â‚¹â‚¹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
-          "addressLocality": "Chennai",
+          "addressLocality": "Madurai",
           "addressRegion": "Tamil Nadu",
           "postalCode": "600063",
           "addressCountry": "IN"
@@ -121,7 +121,7 @@ export default function SchoolWebPage() {
         {
           icon: "fa-solid fa-school",
           title: "3. Virtual Campus Tour & Infrastructure Gallery",
-          description: "High-resolution photo galleries and 360° video tours of smart classrooms, science labs, swimming pools, and auditoriums.",
+          description: "High-resolution photo galleries and 360Â° video tours of smart classrooms, science labs, swimming pools, and auditoriums.",
         },
         {
           icon: "fa-solid fa-trophy",
@@ -204,7 +204,7 @@ export default function SchoolWebPage() {
       pricingTiers={[
         {
           name: "Play School & Academy Plan",
-          price: "₹18,000",
+          price: "â‚¹18,000",
           period: "one-time ($900 USD)",
           description: "Ideal for pre-schools, Montessori academies, day care centers, and specialized coaching institutes.",
           features: [
@@ -221,7 +221,7 @@ export default function SchoolWebPage() {
         },
         {
           name: "Grand International School Portal",
-          price: "₹45,000",
+          price: "â‚¹45,000",
           period: "one-time ($2,200 USD)",
           description: "Recommended for K-12 international schools, IB/IGCSE academies, and higher education institutes.",
           isPopular: true,
@@ -240,7 +240,7 @@ export default function SchoolWebPage() {
       faqs={[
         {
           question: "How much does a website for a school cost?",
-          answer: "Our school website packages start from ₹18,000 ($900 USD) for pre-schools up to ₹45,000 ($2,200 USD) for international K-12 school portals.",
+          answer: "Our school website packages start from â‚¹18,000 ($900 USD) for pre-schools up to â‚¹45,000 ($2,200 USD) for international K-12 school portals.",
         },
         {
           question: "Can parents submit admission inquiry forms and download prospectus PDFs online?",

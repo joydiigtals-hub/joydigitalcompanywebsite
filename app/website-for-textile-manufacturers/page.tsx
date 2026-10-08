@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
@@ -33,11 +33,11 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "â‚¹â‚¹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
-          "addressLocality": "Chennai",
+          "addressLocality": "Madurai",
           "addressRegion": "Tamil Nadu",
           "postalCode": "600063",
           "addressCountry": "IN"
@@ -210,7 +210,7 @@ export default async function TextileWebPage() {
       pricingTiers={[
         {
           name: "Global Exporter Plan",
-          price: "₹25,000",
+          price: "â‚¹25,000",
           period: "one-time ($1,200 USD)",
           description: "Ideal for specialized yarn mills, woven fabric exporters, or single-facility garment manufacturers.",
           features: [
@@ -227,7 +227,7 @@ export default async function TextileWebPage() {
         },
         {
           name: "Enterprise Textile Mill Portal",
-          price: "₹45,000",
+          price: "â‚¹45,000",
           period: "one-time ($2,200 USD)",
           description: "Recommended for composite mills, multi-category fabric weavers, and full-package apparel OEM factories.",
           isPopular: true,
@@ -245,7 +245,7 @@ export default async function TextileWebPage() {
         },
         {
           name: "Custom OEM Ecosystem",
-          price: "₹75,000",
+          price: "â‚¹75,000",
           period: "one-time ($3,500 USD)",
           description: "Designed for large textile conglomerates, multi-factory apparel groups, and global supply chain networks.",
           features: [
@@ -264,7 +264,7 @@ export default async function TextileWebPage() {
       faqs={[
         {
           question: "How much does a website for a textile manufacturing company cost?",
-          answer: "Our B2B textile manufacturer website packages start from ₹25,000 ($1,200 USD) for specialized exporter sites up to ₹75,000 ($3,500 USD) for enterprise multi-factory textile portals.",
+          answer: "Our B2B textile manufacturer website packages start from â‚¹25,000 ($1,200 USD) for specialized exporter sites up to â‚¹75,000 ($3,500 USD) for enterprise multi-factory textile portals.",
         },
         {
           question: "Can international buyers request physical fabric swatches or samples through the website?",

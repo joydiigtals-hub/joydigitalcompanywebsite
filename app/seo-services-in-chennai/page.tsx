@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
@@ -31,11 +31,11 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "₹₹",
+    "priceRange": "â‚¹â‚¹",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Old Perungalathur",
-      "addressLocality": "Chennai",
+      "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
       "postalCode": "600063",
       "addressCountry": "IN"
@@ -144,7 +144,7 @@ export default function SEOServicesChennai() {
       pricingTiers={[
         {
           name: "Single Location Plan",
-          price: "₹10,000",
+          price: "â‚¹10,000",
           period: "/month",
           description: "Best for local stores, medical clinics, and service providers targeting their home city.",
           features: [
@@ -159,7 +159,7 @@ export default function SEOServicesChennai() {
         },
         {
           name: "Regional Growth Plan",
-          price: "₹18,000",
+          price: "â‚¹18,000",
           period: "/month",
           description: "Perfect for companies serving multiple towns or surrounding districts.",
           isPopular: true,
@@ -175,7 +175,7 @@ export default function SEOServicesChennai() {
         },
         {
           name: "Multi-Location Enterprise",
-          price: "₹30,000",
+          price: "â‚¹30,000",
           period: "/month",
           description: "For franchise businesses and multi-branch companies targeting competitive search terms.",
           features: [

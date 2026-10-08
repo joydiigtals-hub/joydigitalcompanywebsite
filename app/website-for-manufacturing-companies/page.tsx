@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
@@ -32,11 +32,11 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "â‚¹â‚¹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
-          "addressLocality": "Chennai",
+          "addressLocality": "Madurai",
           "addressRegion": "Tamil Nadu",
           "postalCode": "600063",
           "addressCountry": "IN"
@@ -66,7 +66,7 @@ export default function ManufacturingWebPage() {
       overviewContent={
         <div className="space-y-6">
           <p>
-            Industrial procurement officers, B2B sourcing managers, and engineering leads search the web with strict technical criteria—inspecting tolerance limits, material grades, machine tonnage, ISO accreditations, and production capacities before reaching out.
+            Industrial procurement officers, B2B sourcing managers, and engineering leads search the web with strict technical criteriaâ€”inspecting tolerance limits, material grades, machine tonnage, ISO accreditations, and production capacities before reaching out.
           </p>
           <p>
             Unfortunately, most manufacturing websites look outdated, take over 5 seconds to load, hide machinery specs in clunky PDFs, and lack direct CAD file upload forms or instant WhatsApp inquiry options.
@@ -204,7 +204,7 @@ export default function ManufacturingWebPage() {
       pricingTiers={[
         {
           name: "Industrial Exporter Plan",
-          price: "₹20,000",
+          price: "â‚¹20,000",
           period: "one-time ($1,000 USD)",
           description: "Ideal for specialized machining units, component fabricators, and regional OEM vendors.",
           features: [
@@ -221,7 +221,7 @@ export default function ManufacturingWebPage() {
         },
         {
           name: "Enterprise Plant Portal",
-          price: "₹40,000",
+          price: "â‚¹40,000",
           period: "one-time ($2,000 USD)",
           description: "Recommended for integrated manufacturing plants, heavy machinery OEMs, and contract exporters.",
           isPopular: true,
@@ -239,7 +239,7 @@ export default function ManufacturingWebPage() {
         },
         {
           name: "Custom OEM Ecosystem",
-          price: "₹60,000",
+          price: "â‚¹60,000",
           period: "one-time ($3,000 USD)",
           description: "Designed for large manufacturing conglomerates, multi-plant groups, and global industrial brands.",
           features: [
@@ -257,7 +257,7 @@ export default function ManufacturingWebPage() {
       faqs={[
         {
           question: "How much does a website for a manufacturing company cost?",
-          answer: "Our industrial manufacturing website packages start from ₹20,000 ($1,000 USD) for specialized machine shops up to ₹60,000 ($3,000 USD) for multi-plant manufacturing portals.",
+          answer: "Our industrial manufacturing website packages start from â‚¹20,000 ($1,000 USD) for specialized machine shops up to â‚¹60,000 ($3,000 USD) for multi-plant manufacturing portals.",
         },
         {
           question: "Can buyers upload 2D and 3D CAD drawings (STEP, DWG, PDF) for RFQ quotes?",

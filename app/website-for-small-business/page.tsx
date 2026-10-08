@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
@@ -32,11 +32,11 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "â‚¹â‚¹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
-          "addressLocality": "Chennai",
+          "addressLocality": "Madurai",
           "addressRegion": "Tamil Nadu",
           "postalCode": "600063",
           "addressCountry": "IN"
@@ -204,7 +204,7 @@ export default function SmallBusinessWebPage() {
       pricingTiers={[
         {
           name: "Small Business Starter",
-          price: "₹25,000",
+          price: "â‚¹25,000",
           period: "one-time ($600 USD)",
           description: "Perfect for single-service professionals, local tradesmen, and new micro-businesses.",
           features: [
@@ -219,7 +219,7 @@ export default function SmallBusinessWebPage() {
         },
         {
           name: "Small Business Growth Plan",
-          price: "₹45,000",
+          price: "â‚¹45,000",
           period: "one-time ($1,400 USD)",
           description: "Recommended for growing service companies, local shops, and multi-service vendors.",
           isPopular: true,
@@ -238,7 +238,7 @@ export default function SmallBusinessWebPage() {
       faqs={[
         {
           question: "How much does a website for a small business cost?",
-          answer: "Our small business website packages start from ₹25,000 ($600 USD) for starter sites up to ₹45,000 ($1,400 USD) for multi-page growth portals.",
+          answer: "Our small business website packages start from â‚¹25,000 ($600 USD) for starter sites up to â‚¹45,000 ($1,400 USD) for multi-page growth portals.",
         },
         {
           question: "How long does it take to build a small business website?",

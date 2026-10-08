@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -59,7 +59,7 @@ export default function ContactPage() {
               Let&apos;s Grow Your <span className="text-gradient">Digital Presence</span>
             </h1>
             <p className="text-sm text-text-secondary max-w-xl mx-auto leading-relaxed">
-              Ready to grow your search visibility and customer leads? Contact us today. Our consulting team is based in Chennai, Tamil Nadu, India.
+              Ready to grow your search visibility and customer leads? Contact us today. Our consulting team is based in Madurai, Tamil Nadu, India.
             </p>
           </div>
         </section>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                   <div className="flex flex-col">
                     <span className="text-[10px] font-bold text-text-muted uppercase">Office Address</span>
                     <span className="text-sm font-bold text-primary-dark mt-0.5">
-                      Joy Digital Growth Agency, Old Perungalathur, Chennai 600063, Tamil Nadu, India
+                      Joy Digital Growth Agency, Madurai, Tamil Nadu, India
                     </span>
                   </div>
                 </div>
@@ -185,7 +185,7 @@ export default function ContactPage() {
               {/* Map Embed card */}
               <div className="w-full rounded-xl overflow-hidden shadow-sm border border-gray-100 mt-2">
                 <iframe
-                  src="https://maps.google.com/maps?q=Old%20Perungalathur,%20Chennai,%20Tamil%20Nadu,%20India&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Madurai,%20Tamil%20Nadu,%20India&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="250"
                   style={{ border: 0, filter: "grayscale(100%) invert(90%) contrast(90%)" }}

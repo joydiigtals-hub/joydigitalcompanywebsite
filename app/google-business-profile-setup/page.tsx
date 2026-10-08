@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
@@ -20,11 +20,11 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "₹₹",
+    "priceRange": "â‚¹â‚¹",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Old Perungalathur",
-      "addressLocality": "Chennai",
+      "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
       "postalCode": "600063",
       "addressCountry": "IN"
@@ -136,7 +136,7 @@ export default function GBPPage() {
       pricingTiers={[
         {
           name: "Basic Setup & Verify",
-          price: "₹5,000",
+          price: "â‚¹5,000",
           description: "Ideal for new businesses needing professional help setting up and verifying their map listing.",
           features: [
             "Google Business Profile Creation",
@@ -150,7 +150,7 @@ export default function GBPPage() {
         },
         {
           name: "GMB Maps Dominance",
-          price: "₹9,000",
+          price: "â‚¹9,000",
           description: "Recommended for established local businesses wanting to rank higher than nearby competitors.",
           isPopular: true,
           features: [
@@ -165,7 +165,7 @@ export default function GBPPage() {
         },
         {
           name: "Franchise Multi-Profile",
-          price: "₹15,000+",
+          price: "â‚¹15,000+",
           description: "For companies managing multiple branches, offices, or service area locations.",
           features: [
             "Multi-Location Profile Management",

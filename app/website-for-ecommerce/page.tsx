@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
@@ -32,11 +32,11 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "â‚¹â‚¹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
-          "addressLocality": "Chennai",
+          "addressLocality": "Madurai",
           "addressRegion": "Tamil Nadu",
           "postalCode": "600063",
           "addressCountry": "IN"
@@ -204,7 +204,7 @@ export default function EcommerceWebPage() {
       pricingTiers={[
         {
           name: "Global E-Commerce Startup",
-          price: "₹35,000",
+          price: "â‚¹35,000",
           period: "one-time ($1,500 USD)",
           description: "Perfect for direct-to-consumer boutiques, specialized product brands, and early-stage stores.",
           features: [
@@ -220,7 +220,7 @@ export default function EcommerceWebPage() {
         },
         {
           name: "Enterprise Headless Storefront",
-          price: "₹95,000",
+          price: "â‚¹95,000",
           period: "one-time ($4,200 USD)",
           description: "Recommended for high-volume retail brands, multi-category catalogs, and cross-border platforms.",
           isPopular: true,

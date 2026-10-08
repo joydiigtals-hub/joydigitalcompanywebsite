@@ -1,4 +1,4 @@
-export const SITE_URL = "https://joydigital.in";
+﻿export const SITE_URL = "https://joydigital.in";
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 export const LOCALBUSINESS_ID = `${SITE_URL}/#localbusiness`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
@@ -15,7 +15,7 @@ export const BUSINESS_INFO = {
   address: {
     "@type": "PostalAddress",
     "streetAddress": "RUBY SHOBHA CASTLE, 10D, Old Perungalathur",
-    "addressLocality": "Tambaram, Chennai",
+    "addressLocality": "Madurai, Tamil Nadu",
     "addressRegion": "Tamil Nadu",
     "postalCode": "600063",
     "addressCountry": "IN"
@@ -27,7 +27,7 @@ export const BUSINESS_INFO = {
   },
   areaServed: [
     { "@type": "City", "name": "Madurai" },
-    { "@type": "City", "name": "Chennai" },
+    { "@type": "City", "name": "Madurai" },
     { "@type": "State", "name": "Tamil Nadu" },
     { "@type": "Country", "name": "India" },
     { "@type": "AdministrativeArea", "name": "Worldwide" }
