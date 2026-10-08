@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -82,7 +82,7 @@ export default function PortfolioSection() {
               </a>
               
               <TrackedWaLink
-                text="Hi Joy Digital, I want a website like You & Me Voyage."
+                href="https://wa.me/919080026133?text=Hi%20Joy%20Digital,%20I%20want%20a%20website%20like%20You%20and%20Me%20Voyage." location="portfolio_cta"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#17122B] hover:bg-[#20193B] border border-[#2B2346] hover:border-emerald-500/50 text-white text-sm font-bold transition-all group"
               >
                 <i className="fa-brands fa-whatsapp text-emerald-400 text-lg group-hover:scale-110 transition-transform" />
