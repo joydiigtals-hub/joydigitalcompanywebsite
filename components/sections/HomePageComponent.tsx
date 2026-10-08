@@ -1,4 +1,4 @@
-
+﻿
 import React from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -18,6 +18,7 @@ const Footer = dynamic(() => import("@/components/layout/Footer"));
 const LeadForm = dynamic(() => import("@/components/ui/LeadForm"));
 const Accordion = dynamic(() => import("@/components/ui/Accordion"));
 import ModernHeroSection from "@/components/sections/ModernHeroSection";
+import PortfolioSection from "@/components/sections/PortfolioSection";
 
 export const HOME_FAQS = [
   {
@@ -164,7 +165,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
     {
       icon: "fa-solid fa-tags text-[#7C3AED]",
       title: "Transparent Flat Pricing",
-      description: "Get detailed, flat-rate proposals starting from ₹15,000 ($250). Absolute clarity on hosting setup and maintainer retainers."
+      description: "Get detailed, flat-rate proposals starting from â‚¹15,000 ($250). Absolute clarity on hosting setup and maintainer retainers."
     },
     {
       icon: "fa-solid fa-sliders text-[#7C3AED]",
@@ -688,7 +689,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                 Free Online Business Tools & Calculators
               </h2>
               <p className="text-xs sm:text-sm text-[#6B6478] font-semibold leading-relaxed">
-                Free, fast and easy-to-use online tools for businesses, freelancers, students and professionals. Calculate GST, create invoices and quotations, generate QR codes, improve website SEO and simplify everyday business tasks — completely online.
+                Free, fast and easy-to-use online tools for businesses, freelancers, students and professionals. Calculate GST, create invoices and quotations, generate QR codes, improve website SEO and simplify everyday business tasks â€” completely online.
               </p>
             </div>
 
@@ -872,10 +873,10 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                 If you are searching for a trusted <strong>web developer near me</strong>, a creative <strong>website designer near me</strong>, or an experienced <strong>website developer near me</strong>, Joy Digital is your premier digital engineering team. We build high-speed Next.js websites, custom web applications, responsive corporate portals, and data-driven local SEO campaigns engineered to bring local and global customers straight to your business.
               </p>
               <div className="flex flex-wrap gap-2 text-[10px] font-bold text-[#7C3AED]">
-                <span className="bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-3 py-1 rounded-full">✓ Web Developer Near Me</span>
-                <span className="bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-3 py-1 rounded-full">✓ Website Designer Near Me</span>
-                <span className="bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-3 py-1 rounded-full">✓ Website Developer Near Me</span>
-                <span className="bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-3 py-1 rounded-full">✓ Web Designer Near Me</span>
+                <span className="bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-3 py-1 rounded-full">âœ“ Web Developer Near Me</span>
+                <span className="bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-3 py-1 rounded-full">âœ“ Website Designer Near Me</span>
+                <span className="bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-3 py-1 rounded-full">âœ“ Website Developer Near Me</span>
+                <span className="bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-3 py-1 rounded-full">âœ“ Web Designer Near Me</span>
               </div>
             </div>
 
@@ -980,6 +981,8 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
             <WorldwideServiceNetwork />
           </div>
         </section>
+
+        <PortfolioSection />
 
         {/* 9. CASE STUDIES WITH COUNT-UP NUMERICAL COUNTERS */}
         <section id="case-studies" className="py-20 bg-white border-b border-[#E9E4F2]">
@@ -1086,7 +1089,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                     </div>
                     <div className="flex-grow">
                       <span className="text-xs font-bold text-[#1F1B2D] block leading-tight">{t.name}</span>
-                      <span className="text-[10px] text-[#6B6478] block mt-0.5 font-bold">{t.role} — {t.company}</span>
+                      <span className="text-[10px] text-[#6B6478] block mt-0.5 font-bold">{t.role} â€” {t.company}</span>
                     </div>
                   </div>
                 </div>
