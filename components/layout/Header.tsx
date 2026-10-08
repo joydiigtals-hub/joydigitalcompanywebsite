@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -65,7 +65,7 @@ const SERVICES_CATEGORIES = [
 ];
 
 const REGIONS = [
-  { code: "", label: "Global", flag: "🌐" },
+  { code: "", label: "Global", flag: "🌍" },
   { code: "us", label: "United States", flag: "🇺🇸" },
   { code: "uk", label: "United Kingdom", flag: "🇬🇧" },
   { code: "ae", label: "United Arab Emirates", flag: "🇦🇪" },
@@ -76,31 +76,30 @@ const REGIONS = [
 
 const LANGUAGES = [
   { code: "en", label: "English", flag: "🇺🇸" },
-  { code: "ta", label: "தமிழ் (Tamil)", flag: "🇮🇳" },
-  { code: "hi", label: "हिन्दी (Hindi)", flag: "🇮🇳" },
-  { code: "ar", label: "العربية (Arabic)", flag: "🇦🇪" },
-  { code: "es", label: "Español (Spanish)", flag: "🇪🇸" },
-  { code: "de", label: "Deutsch (German)", flag: "🇩🇪" },
-  { code: "fr", label: "Français (French)", flag: "🇫🇷" },
-  { code: "te", label: "తెలుగు (Telugu)", flag: "🇮🇳" },
-  { code: "kn", label: "ಕನ್ನಡ (Kannada)", flag: "🇮🇳" },
-  { code: "ml", label: "മലയാളം (Malayalam)", flag: "🇮🇳" },
-  { code: "bn", label: "বাংলা (Bengali)", flag: "🇮🇳" },
-  { code: "mr", label: "मराठी (Marathi)", flag: "🇮🇳" },
-  { code: "gu", label: "ગુજરાતી (Gujarati)", flag: "🇮🇳" },
-  { code: "pa", label: "ਪੰਜਾਬੀ (Punjabi)", flag: "🇮🇳" },
-  { code: "it", label: "Italiano (Italian)", flag: "🇮🇹" },
-  { code: "pt", label: "Português (Portuguese)", flag: "🇵🇹" },
-  { code: "ru", label: "Русский (Russian)", flag: "🇷🇺" },
-  { code: "zh-CN", label: "简体中文 (Chinese)", flag: "🇨🇳" },
-  { code: "ja", label: "日本語 (Japanese)", flag: "🇯🇵" },
-  { code: "ko", label: "한국어 (Korean)", flag: "🇰🇷" },
-  { code: "tr", label: "Türkçe (Turkish)", flag: "🇹🇷" },
-  { code: "nl", label: "Nederlands (Dutch)", flag: "🇳🇱" },
-  { code: "vi", label: "Tiếng Việt (Vietnamese)", flag: "🇻🇳" },
-  { code: "th", label: "ไทย (Thai)", flag: "🇹🇭" },
+  { code: "ta", label: "Tamil", flag: "🇮🇳" },
+  { code: "hi", label: "Hindi", flag: "🇮🇳" },
+  { code: "ar", label: "Arabic", flag: "🇦🇪" },
+  { code: "es", label: "Spanish", flag: "🇪🇸" },
+  { code: "de", label: "German", flag: "🇩🇪" },
+  { code: "fr", label: "French", flag: "🇫🇷" },
+  { code: "te", label: "Telugu", flag: "🇮🇳" },
+  { code: "kn", label: "Kannada", flag: "🇮🇳" },
+  { code: "ml", label: "Malayalam", flag: "🇮🇳" },
+  { code: "bn", label: "Bengali", flag: "🇮🇳" },
+  { code: "mr", label: "Marathi", flag: "🇮🇳" },
+  { code: "gu", label: "Gujarati", flag: "🇮🇳" },
+  { code: "pa", label: "Punjabi", flag: "🇮🇳" },
+  { code: "it", label: "Italian", flag: "🇮🇹" },
+  { code: "pt", label: "Portuguese", flag: "🇵🇹" },
+  { code: "ru", label: "Russian", flag: "🇷🇺" },
+  { code: "zh-CN", label: "Chinese", flag: "🇨🇳" },
+  { code: "ja", label: "Japanese", flag: "🇯🇵" },
+  { code: "ko", label: "Korean", flag: "🇰🇷" },
+  { code: "tr", label: "Turkish", flag: "🇹🇷" },
+  { code: "nl", label: "Dutch", flag: "🇳🇱" },
+  { code: "vi", label: "Vietnamese", flag: "🇻🇳" },
+  { code: "th", label: "Thai", flag: "🇹🇭" },
 ];
-
 export default function Header({ transparent = false }: { transparent?: boolean }) {
   const [isScrolledRaw, setIsScrolledRaw] = useState(false);
   const isScrolled = !transparent || isScrolledRaw;
@@ -483,7 +482,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                 onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
                 className="flex items-center gap-2 px-3 py-1.5 border border-[#E5E7EB] rounded-lg text-sm font-medium hover:border-accent hover:text-accent transition-colors bg-white shadow-sm"
               >
-                <span>{LANGUAGES.find(l => l.code === currentLang)?.flag || "🇺🇸"}</span>
+                <span>{LANGUAGES.find(l => l.code === currentLang)?.flag || "ðŸ‡ºðŸ‡¸"}</span>
                 <span className="uppercase text-xs">{currentLang}</span>
                 <i className={`fa-solid fa-chevron-down text-[8px] transition-transform duration-200 ${isLangDropdownOpen ? "rotate-180" : ""}`} />
               </button>
@@ -557,7 +556,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                 className="flex items-center justify-center w-8 h-8 border border-[#E5E7EB] rounded-lg text-sm bg-white shadow-sm"
                 aria-label="Select Language"
               >
-                <span>{LANGUAGES.find(l => l.code === currentLang)?.flag || "🇺🇸"}</span>
+                <span>{LANGUAGES.find(l => l.code === currentLang)?.flag || "ðŸ‡ºðŸ‡¸"}</span>
               </button>
 
               {isLangDropdownOpen && (
