@@ -92,12 +92,13 @@ export async function POST(req: NextRequest) {
           api_secret: apiSecret,
         });
 
+        const fileExt = documentFile.name.split('.').pop();
         const uploadResult = await new Promise<any>((resolve, reject) => {
           cloudinary.uploader.upload_stream(
             {
               folder: "joydigital_documents",
-              public_id: `${cleanTitle}-${Date.now()}`,
-              resource_type: "auto", // Automatically detect if it's image/raw/video
+              public_id: `${cleanTitle}-${Date.now()}.${fileExt}`,
+              resource_type: "raw", // PDFs, DOCX, PPTX must be raw
             },
             (error, result) => {
               if (error) reject(error);
@@ -203,3 +204,4 @@ export async function DELETE(req: NextRequest) {
     return NextResponse.json({ error: error.message || "Failed to delete document." }, { status: 500 });
   }
 }
+
