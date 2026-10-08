@@ -19,7 +19,6 @@ export default function DocumentsAdminPanel() {
   
   const [title, setTitle] = useState("");
   const [editingDocId, setEditingDocId] = useState<string | null>(null);
-  const [editingDocId, setEditingDocId] = useState<string | null>(null);
   const [description, setDescription] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
