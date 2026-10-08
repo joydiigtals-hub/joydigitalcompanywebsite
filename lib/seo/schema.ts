@@ -1,4 +1,4 @@
-﻿export const SITE_URL = "https://joydigital.in";
+export const SITE_URL = "https://joydigital.in";
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 export const LOCALBUSINESS_ID = `${SITE_URL}/#localbusiness`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
@@ -9,13 +9,13 @@ export const BUSINESS_INFO = {
   url: SITE_URL,
   logo: `${SITE_URL}/assets/images/logo.webp`,
   image: `${SITE_URL}/assets/images/hero-banner.webp`,
-  description: "Grow your business with Joy Digital. We build high-converting, fast Next.js websites and data-driven SEO solutions for global clients.",
+  description: "Joy Digital is a premier Digital Agency & Next.js Web Development company based in Chennai, India. We engineer sub-second web applications, custom software, SEO, and Generative Engine Optimization (GEO) for global brands.",
   telephone: "+91-9080026133",
   email: "saravanan061193@gmail.com",
   address: {
     "@type": "PostalAddress",
     "streetAddress": "RUBY SHOBHA CASTLE, 10D, Old Perungalathur",
-    "addressLocality": "Madurai, Tamil Nadu",
+    "addressLocality": "Chennai",
     "addressRegion": "Tamil Nadu",
     "postalCode": "600063",
     "addressCountry": "IN"
@@ -26,27 +26,39 @@ export const BUSINESS_INFO = {
     "longitude": 80.0885059
   },
   areaServed: [
-    { "@type": "City", "name": "Madurai" },
+    { "@type": "City", "name": "Chennai" },
+    { "@type": "City", "name": "Bangalore" },
     { "@type": "City", "name": "Madurai" },
     { "@type": "State", "name": "Tamil Nadu" },
     { "@type": "Country", "name": "India" },
+    { "@type": "Country", "name": "United States" },
+    { "@type": "Country", "name": "United Kingdom" },
+    { "@type": "Country", "name": "United Arab Emirates" },
+    { "@type": "Country", "name": "Australia" },
+    { "@type": "Country", "name": "Canada" },
+    { "@type": "Country", "name": "Singapore" },
     { "@type": "AdministrativeArea", "name": "Worldwide" }
   ],
   sameAs: [
+    "https://www.joydigital.in",
     "https://www.facebook.com/profile.php?id=61590372457559",
     "https://www.youtube.com/@Joydigital2026",
-    "https://www.linkedin.com/in/saravanan-l-34a861154/"
+    "https://www.linkedin.com/in/saravanan-l-34a861154/",
+    "https://wa.me/919080026133"
   ],
   services: [
+    "Next.js Web Development",
+    "Next.js Solutions",
+    "Custom Web Applications",
+    "SEO & GEO Optimization",
+    "Generative Engine Optimization (GEO)",
+    "AI Search Optimization",
     "Custom Website Development",
-    "Website Design",
-    "Web Development",
-    "SEO Services",
-    "AI Search Optimization (GEO)",
-    "Generative Engine Optimization",
-    "Local SEO",
-    "Digital Marketing",
-    "Logo Design"
+    "Full-Stack Web Engineering",
+    "Technical Core Web Vitals Optimization",
+    "B2B SaaS Web Systems",
+    "E-commerce Website Development",
+    "WordPress to Next.js Migration"
   ]
 };
 
@@ -104,8 +116,34 @@ export function getOrganizationEntity() {
     "email": BUSINESS_INFO.email,
     "address": BUSINESS_INFO.address,
     "areaServed": BUSINESS_INFO.areaServed,
+    "founder": {
+      "@type": "Person",
+      "@id": PERSON_SARAVANAN_ID,
+      "name": "Saravanan L"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": BUSINESS_INFO.telephone,
+        "contactType": "sales",
+        "email": BUSINESS_INFO.email,
+        "availableLanguage": ["English", "Tamil"]
+      }
+    ],
     "sameAs": BUSINESS_INFO.sameAs,
-    "knowsAbout": BUSINESS_INFO.services
+    "knowsAbout": BUSINESS_INFO.services,
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": BUSINESS_INFO.services.map((service, idx) => ({
+        "@type": "Offer",
+        "position": idx + 1,
+        "itemOffered": {
+          "@type": "Service",
+          "name": service
+        }
+      }))
+    }
   };
 }
 
@@ -114,17 +152,33 @@ export function getLocalBusinessEntity() {
     "@type": ["LocalBusiness", "ProfessionalService"],
     "@id": LOCALBUSINESS_ID,
     "name": BUSINESS_INFO.name,
+    "legalName": BUSINESS_INFO.legalName,
     "url": BUSINESS_INFO.url,
     "logo": BUSINESS_INFO.logo,
     "image": BUSINESS_INFO.image,
     "telephone": BUSINESS_INFO.telephone,
     "email": BUSINESS_INFO.email,
+    "priceRange": "$$",
+    "currenciesAccepted": "USD, INR, GBP, EUR, AED, AUD, CAD",
+    "paymentAccepted": "Credit Card, Bank Wire, Stripe, Razorpay",
     "address": BUSINESS_INFO.address,
     "geo": BUSINESS_INFO.geo,
     "areaServed": BUSINESS_INFO.areaServed,
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "20:00"
+      }
+    ],
     "sameAs": BUSINESS_INFO.sameAs,
     "parentOrganization": { "@id": ORGANIZATION_ID }
   };
+}
+
+export function getProfessionalServiceEntity() {
+  return getLocalBusinessEntity();
 }
 
 export function getWebSiteEntity() {
@@ -390,3 +444,43 @@ export function buildPageGraphSchema(options: BuildGraphOptions) {
     "@graph": graph,
   };
 }
+
+export function getRootLayoutSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      getWebSiteEntity(),
+      getOrganizationEntity(),
+      getLocalBusinessEntity(),
+      getPersonEntity(),
+      {
+        "@type": "Service",
+        "@id": `${SITE_URL}/#service-nextjs`,
+        "name": "Custom Next.js Web Application Development",
+        "provider": { "@id": ORGANIZATION_ID },
+        "serviceType": "Next.js Solutions & Web Development",
+        "areaServed": BUSINESS_INFO.areaServed,
+        "description": "High-performance, sub-second Next.js web systems, headless CMS architectures, and enterprise web applications."
+      },
+      {
+        "@type": "Service",
+        "@id": `${SITE_URL}/#service-geo`,
+        "name": "Generative Engine Optimization (GEO) & AI Search",
+        "provider": { "@id": ORGANIZATION_ID },
+        "serviceType": "SEO & GEO Optimization",
+        "areaServed": BUSINESS_INFO.areaServed,
+        "description": "Entity-first Generative Engine Optimization (GEO) to dominate AI citations across ChatGPT, Perplexity, Claude, Google Gemini, and Bing Copilot."
+      },
+      {
+        "@type": "Service",
+        "@id": `${SITE_URL}/#service-custom-apps`,
+        "name": "Custom Web Applications",
+        "provider": { "@id": ORGANIZATION_ID },
+        "serviceType": "Custom Web Apps",
+        "areaServed": BUSINESS_INFO.areaServed,
+        "description": "Scalable B2B SaaS web applications, custom CRM platforms, logistics dashboards, and transactional portals."
+      }
+    ]
+  };
+}
+

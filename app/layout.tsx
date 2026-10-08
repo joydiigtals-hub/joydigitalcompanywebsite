@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import dynamic from "next/dynamic";
@@ -7,6 +7,7 @@ import AnalyticsTracker from "@/components/AnalyticsTracker";
 import ClarityTracker from "@/components/ClarityTracker";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
+import { getRootLayoutSchema } from "@/lib/seo/schema";
 import GoogleTranslateLoader from "@/components/GoogleTranslateLoader";
 import ClientWidgets from "@/components/ui/ClientWidgets";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
@@ -22,17 +23,27 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://joydigital.in"),
-  title: "Next.js Engineering Agency | Build Sub-Second SaaS Apps",
-  description: "Eliminate slow page loads and scale your SaaS. We build high-converting, sub-second Next.js web systems for global tech leaders. Book a 15-min tech call.",
+  title: {
+    default: "Joy Digital | Digital Agency & Next.js Web Development Chennai",
+    template: "%s | Joy Digital",
+  },
+  description: "Joy Digital is a premier Digital Agency & Next.js Web Development company based in Chennai, India. We engineer sub-second web applications, custom software, SEO, and Generative Engine Optimization (GEO) for global brands.",
   keywords: [
-    "Web Development Agency",
-    "Next.js Agency",
-    "Next.js Engineering Agency",
-    "Web Performance Optimization",
-    "B2B SaaS Web Systems",
-    "Modern Frontend Architecture",
+    "Joy Digital",
+    "Digital Agency Chennai",
+    "Next.js Web Development",
+    "Next.js Solutions",
+    "SEO & GEO Optimization",
     "Generative Engine Optimization",
-    "Joy Digital"
+    "AI Search Optimization",
+    "Custom Web Apps",
+    "Web Development Agency India",
+    "Fast Next.js Websites",
+    "Headless CMS Development",
+    "Core Web Vitals Optimization",
+    "ChatGPT Search Optimization",
+    "Perplexity AI SEO",
+    "Google Gemini Search SEO"
   ],
   authors: [{ name: "Joy Digital", url: "https://joydigital.in" }],
   publisher: "Joy Digital",
@@ -79,21 +90,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://joydigital.in",
     siteName: "Joy Digital",
-    title: "Web Design, Next.js Development & SEO Agency | Joy Digital",
-    description: "Grow your business with Joy Digital. We build high-converting, fast Next.js websites and data-driven SEO solutions for global clients.",
+    title: "Joy Digital | Digital Agency & Next.js Web Development Chennai",
+    description: "Premier Digital Agency & Next.js Web Development company based in Chennai, India. We build high-converting, sub-second web applications and generative AI search-optimized systems.",
     images: [
       {
         url: "https://joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
-        alt: "Joy Digital - Web Design, Next.js Development & SEO Agency",
+        alt: "Joy Digital - Digital Agency & Next.js Web Development Chennai",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design, Next.js Development & SEO Agency | Joy Digital",
-    description: "Grow your business with Joy Digital. We build high-converting, fast Next.js websites and data-driven SEO solutions for global clients.",
+    title: "Joy Digital | Digital Agency & Next.js Web Development Chennai",
+    description: "Premier Digital Agency & Next.js Web Development company based in Chennai, India. High-performance Next.js apps, SEO, and Generative Engine Optimization (GEO).",
     images: ["https://joydigital.in/assets/images/hero-banner.webp"],
     creator: "@joydigital",
   },
@@ -119,56 +130,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "ProfessionalService",
-                  "@id": "https://joydigital.in/#organization",
-                  "name": "Joy Digital",
-                  "url": "https://joydigital.in",
-                  "logo": "https://joydigital.in/logo.png",
-                  "telephone": "+91-9080026133",
-                  "priceRange": "$$$",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Tamil Nadu",
-                    "addressRegion": "Tamil Nadu",
-                    "addressCountry": "IN"
-                  },
-                  "founder": {
-                    "@type": "Person",
-                    "name": "Saravanan L"
-                  },
-                  "sameAs": [
-                    "https://share.google/BSniheS2qnzwqUKXU",
-                    "https://www.facebook.com/profile.php?id=61590372457559",
-                    "https://www.youtube.com/@Joydigital2026",
-                    "https://www.linkedin.com/in/saravanan-l-34a861154/",
-                    "https://wa.me/919080026133"
-                  ]
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "https://joydigital.in/#website",
-                  "url": "https://joydigital.in",
-                  "name": "Joy Digital",
-                  "publisher": {
-                    "@id": "https://joydigital.in/#organization"
-                  }
-                },
-                {
-                  "@type": "Service",
-                  "name": "Custom Next.js Web Application Development",
-                  "provider": {
-                    "@id": "https://joydigital.in/#organization"
-                  },
-                  "serviceType": "Web Engineering & GEO",
-                  "areaServed": ["IN", "US", "UK", "UAE", "AU"],
-                  "description": "Sub-second custom Next.js web application development for Tours & Travels booking engines, Logistics tracking portals, and EXIM RFQ platforms."
-                }
-              ]
-            })
+            __html: JSON.stringify(getRootLayoutSchema()),
           }}
         />
       </head>

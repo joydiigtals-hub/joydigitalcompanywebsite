@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getDb } from "@/lib/mongodb";
 import { ObjectId } from "mongodb";
+import fs from "fs";
+import path from "path";
 
 // POST: Capture lead details before document download
 export async function POST(req: NextRequest) {
@@ -42,13 +44,20 @@ export async function POST(req: NextRequest) {
       req.headers.get("x-real-ip") ||
       "Unknown";
 
+    const cleanName = name.trim();
+    const cleanPhone = whatsapp.trim();
+    const cleanEmail = email?.trim() || "";
+    const leadId = crypto.randomUUID();
+    const nowIso = new Date().toISOString();
+
     // Save download lead
     const lead = {
+      id: leadId,
       documentId: objectId,
       documentTitle: doc.title,
-      name: name.trim(),
-      whatsapp: whatsapp.trim(),
-      email: email?.trim() || "",
+      name: cleanName,
+      whatsapp: cleanPhone,
+      email: cleanEmail,
       ip,
       userAgent: req.headers.get("user-agent") || "",
       downloadedAt: new Date(),
@@ -56,19 +65,65 @@ export async function POST(req: NextRequest) {
 
     await db.collection("document_leads").insertOne(lead);
 
-    // Also save to main CRM enquiries so it shows up in the leads pipeline
-    await db.collection("enquiries").insertOne({
-      name: lead.name,
-      phone: lead.whatsapp,
-      email: lead.email,
-      message: `Downloaded document: ${doc.title}`,
-      source: "document_download",
+    // Also save to main CRM enquiries so it shows up seamlessly in the leads pipeline
+    const enquiryRecord = {
+      _id: leadId as any,
+      id: leadId,
+      name: cleanName,
+      companyName: "Individual Lead",
+      website: "N/A",
+      email: cleanEmail,
+      mobile: cleanPhone,
+      phone: cleanPhone,
+      service: `Document: ${doc.title}`,
+      message: `Downloaded document: ${doc.title}${cleanEmail ? `\nEmail: ${cleanEmail}` : ""}\nWhatsApp: ${cleanPhone}`,
+      source: "Company Profile Download",
+      region: "Tamil Nadu, IN",
+      status: "New",
+      createdAt: nowIso,
+      notes: `Downloaded ${doc.title}`,
+      followUpDate: null,
+      pipelineStage: "new",
+      assignedTo: "",
       documentId: objectId,
       documentTitle: doc.title,
       ip,
-      createdAt: new Date(),
-      status: "new",
-    });
+      utmParams: null,
+      activities: [
+        {
+          id: crypto.randomUUID(),
+          timestamp: nowIso,
+          type: "created",
+          message: `Lead registered via Document Download (${doc.title})`,
+          agent: "System",
+        },
+      ],
+      proposals: [],
+      irrelevantReason: "",
+    };
+
+    await db.collection("enquiries").insertOne(enquiryRecord);
+
+    // Also save locally as fallback
+    try {
+      const DATA_FILE = path.join(process.cwd(), "data", "enquiries.json");
+      const DATA_DIR = path.dirname(DATA_FILE);
+      if (!fs.existsSync(DATA_DIR)) {
+        fs.mkdirSync(DATA_DIR, { recursive: true });
+      }
+      let enquiries = [];
+      if (fs.existsSync(DATA_FILE)) {
+        try {
+          enquiries = JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
+        } catch {
+          enquiries = [];
+        }
+      }
+      enquiries.unshift(enquiryRecord);
+      fs.writeFileSync(DATA_FILE, JSON.stringify(enquiries, null, 2), "utf-8");
+    } catch {
+      // ignore
+    }
 
     return NextResponse.json({
       success: true,

@@ -48,30 +48,51 @@ export async function GET() {
       '/about',
       '/ai-search-optimization',
       '/author/saravanan',
+      '/portfolio',
+      '/portfolio-website-development',
+      '/nextjs-development-agency',
       '/custom-website-development',
       '/dynamic-website-development',
+      '/static-website-development',
+      '/landing-page-development',
+      '/enterprise-web-solutions',
+      '/custom-software-development',
+      '/ecommerce-website-development',
+      '/web-design-services',
+      '/wordpress-to-nextjs-migration',
+      '/shopify-vs-headless-nextjs',
+      '/offshore-web-development-partner',
+      '/social-media-marketing',
+      '/logo-design-services',
+      '/google-business-profile-setup',
+      '/google-business-profile-optimization',
+      '/safari-website-development',
+      '/tour-operator-website-development',
+      '/travel-website-development',
+      '/africa/tourism-website-development',
+      '/website-for-consulting-companies',
+      '/website-for-ecommerce',
+      '/website-for-export-and-import',
+      '/website-for-hospitals',
+      '/website-for-hotels',
+      '/website-for-insurance-agents',
+      '/website-for-law-firms',
+      '/website-for-logistics-and-shipping',
+      '/website-for-luxury-brands',
+      '/website-for-manufacturing-companies',
+      '/website-for-marketing-agencies',
+      '/website-for-pest-control',
+      '/website-for-real-estate',
+      '/website-for-schools',
+      '/website-for-small-business',
+      '/website-for-solar-companies',
+      '/website-for-textile-manufacturers',
       '/case-studies',
       '/case-studies/chennai-clinic-leads',
       '/case-studies/ecommerce-sales-increase',
       '/case-studies/saas-landing-optimization',
-      '/wordpress-to-nextjs-migration',
-      '/shopify-vs-headless-nextjs',
-      '/offshore-web-development-partner',
       '/blog',
-      '/web-design-services',
-      '/local-seo-services',
-      '/google-business-profile-setup',
-      '/google-business-profile-optimization',
-      '/social-media-marketing',
-      '/logo-design-services',
-      '/custom-software-development',
-      '/ecommerce-website-development',
       '/free-website-audit',
-      '/privacy-policy',
-      '/terms-and-conditions',
-      '/cookie-policy',
-      '/disclaimer',
-      '/refund-policy',
       '/free-tools',
       '/gst-calculator',
       '/invoice-generator',
@@ -80,6 +101,12 @@ export async function GET() {
       '/whatsapp-link-generator',
       '/seo-audit-tool',
       '/image-compressor',
+      '/sitemap',
+      '/privacy-policy',
+      '/terms-and-conditions',
+      '/cookie-policy',
+      '/disclaimer',
+      '/refund-policy',
     ];
 
     const entries: SitemapEntry[] = [];
@@ -95,6 +122,51 @@ export async function GET() {
       'en-au': `${baseUrl}/au${routePath}`,
       'en-sg': `${baseUrl}/sg${routePath}`,
     });
+
+    // Helper for granular static route priorities & change frequencies
+    const getRouteConfig = (route: string): { priority: number; changefreq: SitemapEntry['changefreq'] } => {
+      if (route === '/blog') return { priority: 0.8, changefreq: 'daily' };
+      if (
+        route === '/nextjs-development-agency' ||
+        route === '/custom-website-development' ||
+        route === '/ai-search-optimization' ||
+        route === '/enterprise-web-solutions'
+      ) {
+        return { priority: 0.9, changefreq: 'weekly' };
+      }
+      if (
+        route.startsWith('/website-for-') ||
+        route.endsWith('-website-development') ||
+        route === '/portfolio' ||
+        route === '/about'
+      ) {
+        return { priority: 0.8, changefreq: 'weekly' };
+      }
+      if (
+        route.startsWith('/free-tools') ||
+        route.endsWith('-calculator') ||
+        route.endsWith('-generator') ||
+        route === '/free-website-audit' ||
+        route === '/seo-audit-tool' ||
+        route === '/image-compressor'
+      ) {
+        return { priority: 0.7, changefreq: 'monthly' };
+      }
+      if (route.startsWith('/case-studies')) {
+        return { priority: 0.7, changefreq: 'monthly' };
+      }
+      if (
+        route === '/privacy-policy' ||
+        route === '/terms-and-conditions' ||
+        route === '/cookie-policy' ||
+        route === '/disclaimer' ||
+        route === '/refund-policy' ||
+        route === '/sitemap'
+      ) {
+        return { priority: 0.3, changefreq: 'monthly' };
+      }
+      return { priority: 0.7, changefreq: 'weekly' };
+    };
 
     // 1. Regional & Localized Routes (Homepage + Core Services across countries)
     localizedPaths.forEach((routePath) => {
@@ -121,11 +193,12 @@ export async function GET() {
 
     // 2. Unified Static Routes
     unifiedStaticPaths.forEach((route) => {
+      const config = getRouteConfig(route);
       entries.push({
         url: `${baseUrl}${route}`,
         lastmod: todayStr,
-        changefreq: 'weekly',
-        priority: route.startsWith('/case-studies/') ? 0.6 : 0.7,
+        changefreq: config.changefreq,
+        priority: config.priority,
       });
     });
 

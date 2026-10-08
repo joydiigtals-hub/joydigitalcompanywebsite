@@ -15,6 +15,26 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://joydigital.in/nextjs-development-agency",
   },
+  openGraph: {
+    type: "website",
+    title: "Next.js Development Agency | Custom React Web Development | Joy Digital",
+    description: "Global Next.js development agency specializing in high-performance, serverless React applications, headless commerce, and sub-second web architecture.",
+    url: "https://joydigital.in/nextjs-development-agency",
+    images: [
+      {
+        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Joy Digital - Next.js Development Agency",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Next.js Development Agency | Custom React Web Development | Joy Digital",
+    description: "Global Next.js development agency specializing in high-performance, serverless React applications, headless commerce, and sub-second web architecture.",
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+  },
 };
 
 const pageSchema = {

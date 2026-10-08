@@ -65,6 +65,8 @@ interface Enquiry {
   proposals?: Proposal[];
   irrelevantReason?: string;
   chatSessionId?: string;
+  documentTitle?: string;
+  documentId?: any;
 }
 
 interface AnalyticsData {
@@ -1901,9 +1903,9 @@ export default function AdminPage() {
                                 {getAvatarInitials(enq.name)}
                               </div>
                               <div className="text-left min-w-0">
-                                <h4 className="font-bold text-slate-900 dark:text-white text-xs truncate">{enq.name}</h4>
+                                <h4 className="font-bold text-slate-900 dark:text-white text-xs truncate">{enq.name || "Anonymous Lead"}</h4>
                                 <p className="text-[10px] text-slate-450 dark:text-slate-500 mt-0.5 truncate">
-                                  {enq.companyName !== "N/A" ? enq.companyName : "Individual"} • {enq.service}
+                                  {enq.companyName && enq.companyName !== "N/A" ? enq.companyName : "Individual"} • {enq.service || (enq.documentTitle ? `Document: ${enq.documentTitle}` : "General Requirement")}
                                 </p>
                               </div>
                             </div>
@@ -2339,8 +2341,8 @@ export default function AdminPage() {
                                               {getAvatarInitials(enq.name)}
                                             </div>
                                             <div>
-                                              <div className="font-bold text-slate-900 dark:text-white text-[13px]">{enq.name}</div>
-                                              {enq.companyName !== "N/A" ? (
+                                              <div className="font-bold text-slate-900 dark:text-white text-[13px]">{enq.name || "Anonymous Lead"}</div>
+                                              {enq.companyName && enq.companyName !== "N/A" ? (
                                                 <div className="text-[10px] text-blue-600 dark:text-blue-400 font-semibold mt-0.5">{enq.companyName}</div>
                                               ) : (
                                                 <div className="text-[10px] text-slate-400 dark:text-slate-500 italic mt-0.5">Individual Lead</div>
@@ -2400,7 +2402,7 @@ export default function AdminPage() {
                                         </td>
 
                                         <td className="px-6 py-2 font-semibold text-slate-800 dark:text-slate-300 max-w-[200px] truncate">
-                                          {enq.service}
+                                          {enq.service || (enq.documentTitle ? `Document: ${enq.documentTitle}` : "General Requirement")}
                                         </td>
 
                                         <td className="px-6 py-2 whitespace-nowrap">
@@ -2516,8 +2518,8 @@ export default function AdminPage() {
                                   {getAvatarInitials(enq.name)}
                                 </div>
                                 <div>
-                                  <h4 className="font-extrabold text-slate-900 dark:text-white text-[13px]">{enq.name}</h4>
-                                  <p className="text-[10px] text-slate-500 dark:text-slate-450 mt-0.5">{enq.companyName !== "N/A" ? enq.companyName : "Individual Lead"}</p>
+                                  <h4 className="font-extrabold text-slate-900 dark:text-white text-[13px]">{enq.name || "Anonymous Lead"}</h4>
+                                  <p className="text-[10px] text-slate-500 dark:text-slate-450 mt-0.5">{enq.companyName && enq.companyName !== "N/A" ? enq.companyName : "Individual Lead"}</p>
                                 </div>
                               </div>
                               <span className={`text-[8.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border ${stageInfo.color}`}>
@@ -2544,7 +2546,7 @@ export default function AdminPage() {
                               </div>
                               <div className="flex items-center gap-2">
                                 <i className="fa-regular fa-folder text-slate-400 text-xs w-4 text-center" />
-                                <span className="font-bold text-slate-700 dark:text-slate-350">{enq.service}</span>
+                                <span className="font-bold text-slate-700 dark:text-slate-350">{enq.service || (enq.documentTitle ? `Document: ${enq.documentTitle}` : "General Requirement")}</span>
                               </div>
                             </div>
 
@@ -2630,20 +2632,20 @@ export default function AdminPage() {
                                 {/* Lead Details block */}
                                 <div className="space-y-1">
                                   <div className="font-bold text-slate-900 dark:text-white text-[12px] leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-400 flex items-center justify-between">
-                                    <span>{enq.name}</span>
+                                    <span>{enq.name || "Anonymous Lead"}</span>
                                     
                                     {/* Region Tag */}
                                     <span className="bg-slate-100 dark:bg-slate-800 px-1 py-0.25 text-[8.5px] font-bold rounded text-slate-500 dark:text-slate-400 select-none">
-                                      {enq.region}
+                                      {enq.region || "Tamil Nadu, IN"}
                                     </span>
                                   </div>
                                   
-                                  {enq.companyName !== "N/A" && (
+                                  {enq.companyName && enq.companyName !== "N/A" && (
                                     <div className="text-[9.5px] font-bold text-blue-600 dark:text-blue-400 truncate">{enq.companyName}</div>
                                   )}
                                   
                                   <div className="text-[10px] text-slate-450 dark:text-slate-500 truncate leading-snug font-medium">
-                                    {enq.service}
+                                    {enq.service || (enq.documentTitle ? `Document: ${enq.documentTitle}` : "General Requirement")}
                                   </div>
                                   
                                   {enq.pipelineStage === "irrelevant" && enq.irrelevantReason && (
@@ -4015,8 +4017,8 @@ export default function AdminPage() {
             fetchEnquiries(); // Refresh dashboard data in case things were edited
           }}
           onUpdate={(updatedLead) => {
-            setSelectedLead(updatedLead);
-            setEnquiries(prev => prev.map(e => e.id === updatedLead.id ? updatedLead : e));
+            setSelectedLead(updatedLead as any);
+            setEnquiries(prev => prev.map(e => e.id === updatedLead.id ? (updatedLead as any) : e));
           }}
           currentUserRole={currentRole}
         />

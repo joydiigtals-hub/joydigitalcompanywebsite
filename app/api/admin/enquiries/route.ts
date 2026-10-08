@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 import { cookies } from "next/headers";
+import { ObjectId } from "mongodb";
 import { SESSION_COOKIE_NAME, verifySessionToken } from "@/lib/security/auth";
 import { hasPermission } from "@/lib/security/rbac";
 import { checkRateLimit, getClientIp } from "@/lib/security/rateLimit";
@@ -67,25 +68,25 @@ export async function GET(request: Request) {
         .toArray();
 
       const mapped = data.map((d: any) => ({
-        id: d.id || d._id?.toString(),
-        name: d.name,
-        companyName: d.companyName,
-        website: d.website,
-        email: d.email,
-        mobile: d.mobile,
-        service: d.service,
-        message: d.message,
-        source: d.source,
-        region: d.region,
-        status: d.status,
-        createdAt: d.createdAt,
+        id: d.id || d._id?.toString() || "",
+        name: d.name || "Anonymous",
+        companyName: d.companyName || d.businessName || "Individual Lead",
+        website: d.website || d.websiteUrl || "N/A",
+        email: d.email || "",
+        mobile: d.mobile || d.phone || d.whatsapp || "",
+        service: d.service || (d.documentTitle ? `Document: ${d.documentTitle}` : (d.message ? d.message.split('\n')[0] : "General Enquiry")),
+        message: d.message || "",
+        source: d.source || (d.documentTitle ? "Company Profile Download" : "Website"),
+        region: d.region || d.targetLocation || "Tamil Nadu, IN",
+        status: d.status || "New",
+        createdAt: d.createdAt ? (typeof d.createdAt === 'object' && d.createdAt.toISOString ? d.createdAt.toISOString() : String(d.createdAt)) : new Date().toISOString(),
         notes: d.notes || "",
         followUpDate: d.followUpDate || null,
         pipelineStage: d.pipelineStage || "new",
         assignedTo: d.assignedTo || "",
         utmParams: d.utmParams || null,
-        activities: d.activities || [],
-        proposals: d.proposals || [],
+        activities: Array.isArray(d.activities) ? d.activities : [],
+        proposals: Array.isArray(d.proposals) ? d.proposals : [],
         irrelevantReason: d.irrelevantReason || "",
         chatSessionId: d.chatSessionId || ""
       }));
@@ -98,25 +99,25 @@ export async function GET(request: Request) {
   // Fallback if MONGODB_URI is not set or failed
   const enquiries = readEnquiries();
   const mapped = enquiries.map((enq: any) => ({
-    id: enq.id,
-    name: enq.name,
-    companyName: enq.companyName,
-    website: enq.website,
-    email: enq.email,
-    mobile: enq.mobile,
-    service: enq.service,
-    message: enq.message,
-    source: enq.source,
-    region: enq.region,
-    status: enq.status,
-    createdAt: enq.createdAt,
+    id: enq.id || enq._id?.toString() || "",
+    name: enq.name || "Anonymous",
+    companyName: enq.companyName || enq.businessName || "Individual Lead",
+    website: enq.website || enq.websiteUrl || "N/A",
+    email: enq.email || "",
+    mobile: enq.mobile || enq.phone || enq.whatsapp || "",
+    service: enq.service || (enq.documentTitle ? `Document: ${enq.documentTitle}` : (enq.message ? enq.message.split('\n')[0] : "General Enquiry")),
+    message: enq.message || "",
+    source: enq.source || (enq.documentTitle ? "Company Profile Download" : "Website"),
+    region: enq.region || enq.targetLocation || "Tamil Nadu, IN",
+    status: enq.status || "New",
+    createdAt: enq.createdAt ? (typeof enq.createdAt === 'object' && enq.createdAt.toISOString ? enq.createdAt.toISOString() : String(enq.createdAt)) : new Date().toISOString(),
     notes: enq.notes || "",
     followUpDate: enq.followUpDate || null,
     pipelineStage: enq.pipelineStage || "new",
     assignedTo: enq.assignedTo || "",
     utmParams: enq.utmParams || null,
-    activities: enq.activities || [],
-    proposals: enq.proposals || [],
+    activities: Array.isArray(enq.activities) ? enq.activities : [],
+    proposals: Array.isArray(enq.proposals) ? enq.proposals : [],
     irrelevantReason: enq.irrelevantReason || "",
     chatSessionId: enq.chatSessionId || ""
   }));
@@ -155,8 +156,19 @@ export async function PATCH(request: Request) {
         if (irrelevantReason !== undefined) updateFields.irrelevantReason = irrelevantReason;
         if (chatSessionId !== undefined) updateFields.chatSessionId = chatSessionId;
 
+        let filter: any = { id: id };
+        if (ObjectId.isValid(id)) {
+          filter = {
+            $or: [
+              { id: id },
+              { _id: new ObjectId(id) },
+              { _id: id }
+            ]
+          };
+        }
+
         const result = await db.collection("enquiries").updateOne(
-          { id: id },
+          filter,
           { $set: updateFields }
         );
         if (result.matchedCount === 0) {
@@ -230,7 +242,17 @@ export async function DELETE(request: Request) {
       try {
         const { getDb } = await import("@/lib/mongodb");
         const db = await getDb();
-        const result = await db.collection("enquiries").deleteOne({ id: id });
+        let filter: any = { id: id };
+        if (ObjectId.isValid(id)) {
+          filter = {
+            $or: [
+              { id: id },
+              { _id: new ObjectId(id) },
+              { _id: id }
+            ]
+          };
+        }
+        const result = await db.collection("enquiries").deleteOne(filter);
         if (result.deletedCount === 0) {
           return NextResponse.json({ error: "Enquiry not found" }, { status: 404 });
         }

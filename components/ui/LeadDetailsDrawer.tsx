@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 
@@ -40,16 +40,18 @@ interface Proposal {
 interface Enquiry {
   id: string;
   name: string;
-  companyName: string;
-  website: string;
-  email: string;
-  mobile: string;
-  service: string;
-  message: string;
-  source: string;
-  region: string;
-  status: string;
-  createdAt: string;
+  companyName?: string;
+  website?: string;
+  email?: string;
+  mobile?: string;
+  phone?: string;
+  whatsapp?: string;
+  service?: string;
+  message?: string;
+  source?: string;
+  region?: string;
+  status?: string;
+  createdAt?: string;
   notes?: string;
   followUpDate?: string | null;
   pipelineStage?: string;
@@ -59,6 +61,8 @@ interface Enquiry {
   proposals?: Proposal[];
   irrelevantReason?: string;
   chatSessionId?: string;
+  documentId?: any;
+  documentTitle?: string;
 }
 
 interface LeadDetailsDrawerProps {
@@ -155,7 +159,7 @@ Joy Digital Team`
   }
 ];
 
-export default function LeadDetailsDrawer({
+function LeadDetailsDrawerContent({
   lead,
   isOpen,
   onClose,
@@ -170,11 +174,11 @@ export default function LeadDetailsDrawer({
   const [chatLoading, setChatLoading] = useState(false);
 
   // Notes and Reminder state
-  const [followUpDate, setFollowUpDate] = useState(lead.followUpDate || "");
-  const [assignedTo, setAssignedTo] = useState(lead.assignedTo || "");
-  const [pipelineStage, setPipelineStage] = useState(lead.pipelineStage || "new");
-  const [notesText, setNotesText] = useState(lead.notes || "");
-  const [irrelevantReason, setIrrelevantReason] = useState(lead.irrelevantReason || "");
+  const [followUpDate, setFollowUpDate] = useState(lead?.followUpDate || "");
+  const [assignedTo, setAssignedTo] = useState(lead?.assignedTo || "");
+  const [pipelineStage, setPipelineStage] = useState(lead?.pipelineStage || "new");
+  const [notesText, setNotesText] = useState(lead?.notes || "");
+  const [irrelevantReason, setIrrelevantReason] = useState(lead?.irrelevantReason || "");
   const [customTextVal, setCustomTextVal] = useState("");
 
   // Activity logger state
@@ -182,7 +186,7 @@ export default function LeadDetailsDrawer({
 
   // Proposal Builder State
   const [proposalItems, setProposalItems] = useState<ProposalItem[]>([
-    { description: `Next.js Development - ${lead.service}`, price: 25000 }
+    { description: `Next.js Development - ${lead?.service || "Web Services"}`, price: 25000 }
   ]);
   const [proposalTax, setProposalTax] = useState(18); // Default 18% GST
   const [proposalTerms, setProposalTerms] = useState("50% Advance, 50% upon project completion before launch.\nProject timeline is 10-15 business days.");
@@ -192,14 +196,14 @@ export default function LeadDetailsDrawer({
   const [selectedEmailTemplate, setSelectedEmailTemplate] = useState(0);
 
   useEffect(() => {
-    // Sync states when active lead changes
+    if (!lead) return;
     setFollowUpDate(lead.followUpDate || "");
     setAssignedTo(lead.assignedTo || "");
     setPipelineStage(lead.pipelineStage || "new");
     setNotesText(lead.notes || "");
     setIrrelevantReason(lead.irrelevantReason || "");
     const isOther = (lead.irrelevantReason || "").startsWith("other:");
-    setCustomTextVal(isOther ? lead.irrelevantReason!.substring(6) : "");
+    setCustomTextVal(isOther ? (lead.irrelevantReason || "").substring(6) : "");
   }, [lead]);
 
   useEffect(() => {
@@ -219,13 +223,13 @@ export default function LeadDetailsDrawer({
 
   // Helpers
   const triggerPatch = async (fieldsToUpdate: Partial<Enquiry>, updatedActivities?: Activity[]) => {
-    const finalActivities = updatedActivities || lead.activities || [];
+    const finalActivities = updatedActivities || lead?.activities || [];
     try {
       const res = await fetch("/api/admin/enquiries", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          id: lead.id,
+          id: lead?.id,
           ...fieldsToUpdate,
           activities: finalActivities
         })
@@ -250,7 +254,7 @@ export default function LeadDetailsDrawer({
       message,
       agent: currentUserRole
     };
-    return [newAct, ...(lead.activities || [])];
+    return [newAct, ...(lead?.activities || [])];
   };
 
   const handleFieldChange = async (fieldName: string, value: any) => {
@@ -350,7 +354,7 @@ export default function LeadDetailsDrawer({
       status: "sent"
     };
 
-    const updatedProposals = [...(lead.proposals || []), newProposal];
+    const updatedProposals = [...(lead?.proposals || []), newProposal];
     
     // Auto advance stage to proposal_sent
     const updates: Partial<Enquiry> = {
@@ -421,17 +425,17 @@ export default function LeadDetailsDrawer({
             <div style="text-align: right;">
               <h2 class="meta-title">Quotation Proposal</h2>
               <div style="font-size: 11px; color: #64748B; margin-top: 6px;">Date: ${new Date().toISOString().split("T")[0]}</div>
-              <div style="font-size: 11px; color: #64748B;">Quote Ref: JD-${lead.id.substring(0, 6).toUpperCase()}</div>
+              <div style="font-size: 11px; color: #64748B;">Quote Ref: JD-${(lead?.id || "").substring(0, 6).toUpperCase()}</div>
             </div>
           </div>
 
           <div class="info-grid">
             <div class="info-block">
               <h4>Prepared For:</h4>
-              <p style="font-weight: 700; color: #0F172A; font-size: 14px;">${lead.name}</p>
-              ${lead.companyName !== "N/A" ? `<p>${lead.companyName}</p>` : ""}
-              <p>Email: ${lead.email}</p>
-              <p>Mobile: ${lead.mobile}</p>
+              <p style="font-weight: 700; color: #0F172A; font-size: 14px;">${lead?.name || "Client"}</p>
+              ${lead?.companyName && lead.companyName !== "N/A" ? `<p>${lead.companyName}</p>` : ""}
+              <p>Email: ${lead?.email || "N/A"}</p>
+              <p>Mobile: ${lead?.mobile || "N/A"}</p>
             </div>
             <div class="info-block">
               <h4>Prepared By:</h4>
@@ -483,14 +487,15 @@ export default function LeadDetailsDrawer({
 
   // WhatsApp generator
   const getWhatsAppLink = () => {
-    const prefilledText = `Hi ${lead.name}, thanks for contacting Joy Digital regarding our ${lead.service} services. I'd love to discuss your project requirements!`;
-    const cleanedMobile = lead.mobile.replace(/\D/g, "");
+    const prefilledText = `Hi ${lead?.name || "there"}, thanks for contacting Joy Digital regarding our ${lead?.service || "digital"} services. I'd love to discuss your project requirements!`;
+    const cleanedMobile = (lead?.mobile || "").replace(/\D/g, "");
+    if (!cleanedMobile) return "#";
     return `https://wa.me/${cleanedMobile}?text=${encodeURIComponent(prefilledText)}`;
   };
 
-  const currentTemplate = EMAIL_TEMPLATES[selectedEmailTemplate];
-  const templateBody = currentTemplate.body(lead.name, lead.service);
-  const mailtoLink = `mailto:${lead.email}?subject=${encodeURIComponent(currentTemplate.subject)}&body=${encodeURIComponent(templateBody)}`;
+  const currentTemplate = EMAIL_TEMPLATES[selectedEmailTemplate] || EMAIL_TEMPLATES[0];
+  const templateBody = currentTemplate.body(lead?.name || "Client", lead?.service || "Digital Services");
+  const mailtoLink = lead?.email ? `mailto:${lead.email}?subject=${encodeURIComponent(currentTemplate.subject)}&body=${encodeURIComponent(templateBody)}` : "#";
 
   return (
     <div className="fixed inset-0 z-50 flex justify-end animate-fade-in select-none">
@@ -507,12 +512,12 @@ export default function LeadDetailsDrawer({
         <div className="p-6 border-b border-slate-200/80 bg-slate-50 flex items-center justify-between">
           <div className="flex items-center gap-3.5">
             <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm">
-              {lead.name.charAt(0).toUpperCase()}
+              {(lead?.name || "L").charAt(0).toUpperCase()}
             </div>
             <div>
-              <h3 className="text-sm font-extrabold text-slate-900 leading-tight">{lead.name}</h3>
+              <h3 className="text-sm font-extrabold text-slate-900 leading-tight">{lead?.name || "Anonymous Lead"}</h3>
               <p className="text-[10px] text-slate-500 mt-1 font-medium">
-                {lead.companyName !== "N/A" ? lead.companyName : "Individual Lead"} • ID: <code className="bg-slate-100 text-blue-600 px-1 py-0.5 rounded font-mono text-[9px]">{lead.id.substring(0, 8)}</code>
+                {lead?.companyName && lead.companyName !== "N/A" ? lead.companyName : "Individual Lead"} • ID: <code className="bg-slate-100 text-blue-600 px-1 py-0.5 rounded font-mono text-[9px]">{(lead?.id || "").substring(0, 8)}</code>
               </p>
             </div>
           </div>
@@ -575,15 +580,23 @@ export default function LeadDetailsDrawer({
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                   <div className="space-y-1">
                     <span className="text-slate-450 block font-semibold text-[10px]">Email ID</span>
-                    <a href={`mailto:${lead.email}`} className="text-slate-800 font-bold hover:text-blue-600 hover:underline">{lead.email}</a>
+                    {lead?.email ? (
+                      <a href={`mailto:${lead.email}`} className="text-slate-800 font-bold hover:text-blue-600 hover:underline">{lead.email}</a>
+                    ) : (
+                      <span className="text-slate-400 italic">Not Provided</span>
+                    )}
                   </div>
                   <div className="space-y-1">
                     <span className="text-slate-450 block font-semibold text-[10px]">Mobile Phone</span>
-                    <a href={`tel:${lead.mobile}`} className="text-slate-800 font-bold hover:text-blue-600 hover:underline">{lead.mobile}</a>
+                    {lead?.mobile ? (
+                      <a href={`tel:${lead.mobile}`} className="text-slate-800 font-bold hover:text-blue-600 hover:underline">{lead.mobile}</a>
+                    ) : (
+                      <span className="text-slate-400 italic">Not Provided</span>
+                    )}
                   </div>
                   <div className="space-y-1">
                     <span className="text-slate-450 block font-semibold text-[10px]">Website URL</span>
-                    {lead.website !== "N/A" ? (
+                    {lead?.website && lead.website !== "N/A" ? (
                       <a href={lead.website.startsWith("http") ? lead.website : `https://${lead.website}`} target="_blank" rel="noopener noreferrer" className="text-blue-600 font-bold hover:underline flex items-center gap-1">
                         {lead.website} <i className="fa-solid fa-arrow-up-right-from-square text-[9px]" />
                       </a>
@@ -593,7 +606,7 @@ export default function LeadDetailsDrawer({
                   </div>
                   <div className="space-y-1">
                     <span className="text-slate-450 block font-semibold text-[10px]">Region</span>
-                    <span className="bg-slate-100 border border-slate-200 px-2 py-0.5 font-bold rounded text-[9.5px] text-slate-600 uppercase inline-block">{lead.region}</span>
+                    <span className="bg-slate-100 border border-slate-200 px-2 py-0.5 font-bold rounded text-[9.5px] text-slate-600 uppercase inline-block">{lead?.region || "Tamil Nadu, IN"}</span>
                   </div>
                 </div>
               </div>
@@ -698,12 +711,12 @@ export default function LeadDetailsDrawer({
                 <div className="space-y-3 text-xs">
                   <div>
                     <span className="text-slate-450 block font-semibold text-[10px] mb-0.5">Target Service</span>
-                    <span className="font-bold text-slate-800">{lead.service}</span>
+                    <span className="font-bold text-slate-800">{lead?.service || "General Inquiry"}</span>
                   </div>
                   <div>
                     <span className="text-slate-450 block font-semibold text-[10px] mb-1">Requirement Details Message</span>
                     <div className="bg-white border border-slate-200 rounded-xl p-4 text-[12px] text-slate-700 leading-relaxed whitespace-pre-wrap max-h-40 overflow-y-auto">
-                      {lead.message}
+                      {lead?.message || "No requirement message provided."}
                     </div>
                   </div>
                 </div>
@@ -809,7 +822,7 @@ export default function LeadDetailsDrawer({
                 
                 {lead.activities && lead.activities.length > 0 ? (
                   <div className="relative pl-6 border-l-2 border-slate-200 space-y-6 ml-3 text-xs">
-                    {lead.activities.map((act) => {
+                    {lead.activities.map((act: Activity) => {
                       // Determine Icon and Color
                       let icon = "fa-solid fa-circle-dot text-slate-400";
                       if (act.type === "created") icon = "fa-solid fa-stars text-orange-500 bg-orange-50";
@@ -906,14 +919,21 @@ export default function LeadDetailsDrawer({
                 </div>
                 
                 <p className="text-xs text-slate-600 leading-relaxed font-semibold">
-                  Launch the WhatsApp API instantly to chat with <strong className="text-slate-800">{lead.name}</strong>. The system will pre-fill a personalized greeting summarizing the requested service details.
+                  Launch the WhatsApp API instantly to chat with <strong className="text-slate-800">{lead?.name || "the client"}</strong>. The system will pre-fill a personalized greeting summarizing the requested service details.
                 </p>
 
                 <a
                   href={getWhatsAppLink()}
-                  target="_blank"
+                  target={lead?.mobile ? "_blank" : undefined}
                   rel="noopener noreferrer"
-                  onClick={() => handleQuickLog("whatsapp", "Sent direct update WhatsApp message")}
+                  onClick={(e) => {
+                    if (!lead?.mobile) {
+                      e.preventDefault();
+                      alert("No mobile/WhatsApp number provided for this lead.");
+                      return;
+                    }
+                    handleQuickLog("whatsapp", "Sent direct update WhatsApp message");
+                  }}
                   className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs py-3.5 rounded-xl shadow-xs transition-colors text-center flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <i className="fa-brands fa-whatsapp text-base" /> Start WhatsApp Chat <i className="fa-solid fa-arrow-up-right-from-square text-[9px] ml-0.5" />
@@ -1117,7 +1137,14 @@ export default function LeadDetailsDrawer({
                   </button>
                   <a
                     href={mailtoLink}
-                    onClick={() => handleQuickLog("email", `Sent email template: ${currentTemplate.name}`)}
+                    onClick={(e) => {
+                      if (!lead?.email) {
+                        e.preventDefault();
+                        alert("No email address provided for this lead.");
+                        return;
+                      }
+                      handleQuickLog("email", `Sent email template: ${currentTemplate.name}`);
+                    }}
                     className="flex-1 py-2.5 bg-blue-600 hover:bg-blue-700 font-extrabold text-xs text-white rounded-xl transition-all text-center flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
                   >
                     <i className="fa-regular fa-paper-plane" /> Open Email Client
@@ -1173,5 +1200,53 @@ export default function LeadDetailsDrawer({
 
       </div>
     </div>
+  );
+}
+
+class DrawerErrorBoundary extends React.Component<
+  { onClose: () => void; children: React.ReactNode },
+  { hasError: boolean; error: any }
+> {
+  constructor(props: any) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+  static getDerivedStateFromError(error: any) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error: any, errorInfo: any) {
+    console.error("LeadDetailsDrawer render error:", error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="fixed inset-0 z-50 flex justify-end animate-fade-in select-none">
+          <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-xs" onClick={this.props.onClose} />
+          <div className="relative w-full max-w-2xl bg-white h-full shadow-2xl flex flex-col z-10 p-8 justify-center items-center text-center">
+            <div className="w-14 h-14 rounded-2xl bg-rose-50 border border-rose-200 text-rose-600 flex items-center justify-center mb-4 text-xl">
+              <i className="fa-solid fa-triangle-exclamation" />
+            </div>
+            <h3 className="text-base font-extrabold text-slate-900 mb-1">Lead Details Notice</h3>
+            <p className="text-xs text-slate-500 mb-6 max-w-sm">Some values in this lead record are unexpectedly formatted. The dashboard remained stable.</p>
+            <button
+              onClick={this.props.onClose}
+              className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl cursor-pointer transition-colors"
+            >
+              Close Drawer
+            </button>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+export default function LeadDetailsDrawer(props: LeadDetailsDrawerProps) {
+  if (!props.isOpen) return null;
+  return (
+    <DrawerErrorBoundary onClose={props.onClose}>
+      <LeadDetailsDrawerContent {...props} />
+    </DrawerErrorBoundary>
   );
 }
