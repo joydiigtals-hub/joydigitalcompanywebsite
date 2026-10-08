@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 interface DocumentItem {
   _id: string;
@@ -11,16 +11,31 @@ interface DocumentItem {
   createdAt: string;
 }
 
+interface DownloadLead {
+  _id: string;
+  documentTitle: string;
+  name: string;
+  whatsapp: string;
+  email: string;
+  ip: string;
+  downloadedAt: string;
+}
+
 export default function DocumentsAdminPanel() {
   const [documents, setDocuments] = useState<DocumentItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [isUploading, setIsUploading] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
-  
+
   const [title, setTitle] = useState("");
   const [editingDocId, setEditingDocId] = useState<string | null>(null);
   const [description, setDescription] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Download leads state
+  const [selectedDocForLeads, setSelectedDocForLeads] = useState<DocumentItem | null>(null);
+  const [leads, setLeads] = useState<DownloadLead[]>([]);
+  const [leadsLoading, setLeadsLoading] = useState(false);
 
   useEffect(() => {
     fetchDocuments();
@@ -43,11 +58,28 @@ export default function DocumentsAdminPanel() {
     }
   };
 
+  const fetchLeads = async (doc: DocumentItem) => {
+    setSelectedDocForLeads(doc);
+    setLeadsLoading(true);
+    setLeads([]);
+    try {
+      const res = await fetch(`/api/documents/lead?documentId=${doc._id}`);
+      if (res.ok) {
+        const data = await res.json();
+        setLeads(data);
+      }
+    } catch {
+      // ignore
+    } finally {
+      setLeadsLoading(false);
+    }
+  };
+
   const handleEdit = (doc: DocumentItem) => {
     setEditingDocId(doc._id);
     setTitle(doc.title);
     setDescription(doc.description);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const cancelEdit = () => {
@@ -64,7 +96,7 @@ export default function DocumentsAdminPanel() {
       setErrorMsg("Title is required.");
       return;
     }
-    
+
     if (editingDocId) {
       setIsUploading(true);
       setErrorMsg("");
@@ -125,14 +157,15 @@ export default function DocumentsAdminPanel() {
 
   const handleDelete = async (id: string) => {
     if (!confirm("Are you sure you want to delete this document?")) return;
-    
+
     try {
       const res = await fetch(`/api/admin/documents?id=${id}`, {
         method: "DELETE",
       });
-      
+
       if (res.ok) {
         setDocuments((prev) => prev.filter((d) => d._id !== id));
+        if (selectedDocForLeads?._id === id) setSelectedDocForLeads(null);
       } else {
         alert("Failed to delete document.");
       }
@@ -155,9 +188,11 @@ export default function DocumentsAdminPanel() {
     <div className="space-y-6">
       {/* Upload Section */}
       <div className="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-800">
-        <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-4">{editingDocId ? "Edit Document Metadata" : "Upload New Document"}</h3>
+        <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-4">
+          {editingDocId ? "Edit Document Metadata" : "Upload New Document"}
+        </h3>
         {errorMsg && <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-lg">{errorMsg}</div>}
-        
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -182,10 +217,12 @@ export default function DocumentsAdminPanel() {
               />
             </div>
           </div>
-          
+
           {!editingDocId && (
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">File (PPT, PDF, DOCX) *</label>
+              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                File (PPT, PDF, DOCX) *
+              </label>
               <input
                 type="file"
                 ref={fileInputRef}
@@ -201,7 +238,13 @@ export default function DocumentsAdminPanel() {
               disabled={isUploading}
               className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg disabled:opacity-50"
             >
-              {isUploading ? (editingDocId ? "Updating..." : "Uploading...") : (editingDocId ? "Update Document" : "Upload Document")}
+              {isUploading
+                ? editingDocId
+                  ? "Updating..."
+                  : "Uploading..."
+                : editingDocId
+                ? "Update Metadata"
+                : "Upload Document"}
             </button>
             {editingDocId && (
               <button
@@ -219,7 +262,7 @@ export default function DocumentsAdminPanel() {
       {/* Documents List */}
       <div className="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-800">
         <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-4">Uploaded Documents</h3>
-        
+
         {documents.length === 0 ? (
           <p className="text-slate-500">No documents uploaded yet.</p>
         ) : (
@@ -236,7 +279,10 @@ export default function DocumentsAdminPanel() {
               </thead>
               <tbody>
                 {documents.map((doc) => (
-                  <tr key={doc._id} className="border-b border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                  <tr
+                    key={doc._id}
+                    className="border-b border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+                  >
                     <td className="py-3 px-4">
                       <p className="font-medium text-slate-900 dark:text-white">{doc.title}</p>
                       {doc.description && <p className="text-sm text-slate-500">{doc.description}</p>}
@@ -254,28 +300,37 @@ export default function DocumentsAdminPanel() {
                     <td className="py-3 px-4 text-slate-600 dark:text-slate-400">
                       {new Date(doc.createdAt).toLocaleDateString()}
                     </td>
-                    <td className="py-3 px-4 space-x-2">
-                      <button
-                        onClick={() => handleEdit(doc)}
-                        className="p-2 text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-                        title="Edit Document"
-                      >
-                        <i className="fa-solid fa-pen-to-square"></i> Edit
-                      </button>
-                      <button
-                        onClick={() => copyToClipboard(doc._id)}
-                        className="p-2 text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                        title="Copy Public Link"
-                      >
-                        <i className="fa-solid fa-link"></i> Link
-                      </button>
-                      <button
-                        onClick={() => handleDelete(doc._id)}
-                        className="p-2 text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors"
-                        title="Delete Document"
-                      >
-                        <i className="fa-solid fa-trash"></i> Delete
-                      </button>
+                    <td className="py-3 px-4">
+                      <div className="flex items-center gap-1 flex-wrap">
+                        <button
+                          onClick={() => fetchLeads(doc)}
+                          className="px-2 py-1 text-xs text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors flex items-center gap-1"
+                          title="View Download Leads"
+                        >
+                          <i className="fa-solid fa-users"></i> Leads
+                        </button>
+                        <button
+                          onClick={() => handleEdit(doc)}
+                          className="px-2 py-1 text-xs text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors flex items-center gap-1"
+                          title="Edit Document"
+                        >
+                          <i className="fa-solid fa-pen-to-square"></i> Edit
+                        </button>
+                        <button
+                          onClick={() => copyToClipboard(doc._id)}
+                          className="px-2 py-1 text-xs text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1"
+                          title="Copy Public Link"
+                        >
+                          <i className="fa-solid fa-link"></i> Link
+                        </button>
+                        <button
+                          onClick={() => handleDelete(doc._id)}
+                          className="px-2 py-1 text-xs text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors flex items-center gap-1"
+                          title="Delete Document"
+                        >
+                          <i className="fa-solid fa-trash"></i> Delete
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))}
@@ -284,7 +339,90 @@ export default function DocumentsAdminPanel() {
           </div>
         )}
       </div>
+
+      {/* Download Leads Report */}
+      {selectedDocForLeads && (
+        <div className="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-800">
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h3 className="text-xl font-bold text-slate-800 dark:text-white">
+                📥 Download Leads
+              </h3>
+              <p className="text-sm text-slate-500 mt-0.5">
+                {selectedDocForLeads.title} — {leads.length} lead{leads.length !== 1 ? "s" : ""}
+              </p>
+            </div>
+            <button
+              onClick={() => setSelectedDocForLeads(null)}
+              className="text-slate-400 hover:text-slate-600 text-xl"
+            >
+              ✕
+            </button>
+          </div>
+
+          {leadsLoading ? (
+            <p className="text-slate-500 text-sm">Loading leads...</p>
+          ) : leads.length === 0 ? (
+            <div className="text-center py-8 text-slate-400">
+              <i className="fa-solid fa-inbox text-3xl mb-2 block"></i>
+              <p>No leads yet. Share the download link to start collecting leads!</p>
+            </div>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse text-sm">
+                <thead>
+                  <tr className="border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50">
+                    <th className="py-3 px-4 font-semibold text-slate-600 dark:text-slate-400">#</th>
+                    <th className="py-3 px-4 font-semibold text-slate-600 dark:text-slate-400">Name</th>
+                    <th className="py-3 px-4 font-semibold text-slate-600 dark:text-slate-400">
+                      <i className="fa-brands fa-whatsapp text-green-500 mr-1"></i>WhatsApp
+                    </th>
+                    <th className="py-3 px-4 font-semibold text-slate-600 dark:text-slate-400">Email</th>
+                    <th className="py-3 px-4 font-semibold text-slate-600 dark:text-slate-400">IP / Location</th>
+                    <th className="py-3 px-4 font-semibold text-slate-600 dark:text-slate-400">Downloaded At</th>
+                    <th className="py-3 px-4 font-semibold text-slate-600 dark:text-slate-400">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {leads.map((lead, i) => (
+                    <tr
+                      key={lead._id}
+                      className="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/30"
+                    >
+                      <td className="py-3 px-4 text-slate-400">{i + 1}</td>
+                      <td className="py-3 px-4 font-medium text-slate-800 dark:text-white">{lead.name}</td>
+                      <td className="py-3 px-4 text-slate-700 dark:text-slate-300">{lead.whatsapp}</td>
+                      <td className="py-3 px-4 text-slate-600 dark:text-slate-400">
+                        {lead.email || <span className="text-slate-300 italic">—</span>}
+                      </td>
+                      <td className="py-3 px-4 text-slate-500 font-mono text-xs">{lead.ip}</td>
+                      <td className="py-3 px-4 text-slate-500 whitespace-nowrap">
+                        {new Date(lead.downloadedAt).toLocaleString("en-IN", {
+                          day: "2-digit",
+                          month: "short",
+                          year: "numeric",
+                          hour: "2-digit",
+                          minute: "2-digit",
+                        })}
+                      </td>
+                      <td className="py-3 px-4">
+                        <a
+                          href={`https://wa.me/${lead.whatsapp.replace(/\D/g, "")}?text=Hi%20${encodeURIComponent(lead.name)},%20thank%20you%20for%20downloading%20our%20Company%20Profile!`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 px-2 py-1 bg-green-100 hover:bg-green-200 text-green-700 rounded text-xs font-medium transition-colors"
+                        >
+                          <i className="fa-brands fa-whatsapp"></i> Chat
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
-
