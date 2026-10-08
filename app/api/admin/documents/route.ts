@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+﻿import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 import { cookies } from "next/headers";
@@ -149,6 +149,33 @@ export async function POST(req: NextRequest) {
   } catch (error: any) {
     console.error("Error creating document:", error);
     return NextResponse.json({ error: error.message || "Failed to upload document." }, { status: 500 });
+  }
+}
+
+// PATCH: Update a document metadata
+export async function PATCH(req: NextRequest) {
+  const auth = await authenticateAdminRequest(req, null);
+  if (!auth.authenticated) return auth.response!;
+
+  try {
+    const { _id, title, description } = await req.json();
+
+    if (!_id || !process.env.MONGODB_URI) {
+      return NextResponse.json({ error: "Missing id parameter or DB not connected." }, { status: 400 });
+    }
+
+    const db = await getDb();
+    const documentsCol = db.collection("documents");
+    
+    const result = await documentsCol.updateOne(
+      { _id: new ObjectId(_id) },
+      { $set: { title, description } }
+    );
+    
+    return NextResponse.json({ success: true, modifiedCount: result.modifiedCount });
+  } catch (error: any) {
+    console.error("Error updating document:", error);
+    return NextResponse.json({ error: error.message || "Failed to update document." }, { status: 500 });
   }
 }
 
