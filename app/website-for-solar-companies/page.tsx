@@ -178,12 +178,12 @@ export default function SolarWebPage() {
         },
       ]}
       pricingTitle="Investment Portfolios for Solar EPC Growth"
-      pricingSubtitle="Scalable digital infrastructure priced in USD for global reach. (Indian partners: â‚¹ INR equivalent available)."
+      pricingSubtitle="Scalable digital infrastructure priced in USD for global reach. (Indian partners: ₹ INR equivalent available)."
       pricingTiers={[
         {
           name: "Regional Growth Plan",
           price: "$750 USD",
-          period: "one-time (approx. â‚¹60,000 INR)",
+          period: "one-time (approx. ₹60,000 INR)",
           description: "Ideal for growing commercial installers targeting regional C&I rooftop projects.",
           features: [
             "Up to 8 Custom Next.js Pages",
@@ -198,7 +198,7 @@ export default function SolarWebPage() {
         {
           name: "Global Commercial EPC & Utility Portal",
           price: "$1,600 USD",
-          period: "one-time (approx. â‚¹1,35,000 INR)",
+          period: "one-time (approx. ₹1,35,000 INR)",
           description: "The ultimate architecture for utility-scale developers and global EPC contractors.",
           isPopular: true,
           features: [

@@ -136,7 +136,7 @@ This also gives your website more opportunities to rank for specific Google sear
 
 Search Engine Optimization can help your website appear when potential buyers search for products and suppliers.
 
-Instead of targeting only broad keywords like **â€œspice exporterâ€**, create content around specific buyer searches such as:
+Instead of targeting only broad keywords like **“spice exporter”**, create content around specific buyer searches such as:
 
 * Spice exporters from India
 * Bulk turmeric suppliers

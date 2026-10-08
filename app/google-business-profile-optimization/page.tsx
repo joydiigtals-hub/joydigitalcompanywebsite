@@ -31,7 +31,7 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "â‚¹â‚¹",
+    "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Old Perungalathur",
@@ -144,7 +144,7 @@ export default function GoogleBusinessProfilePage() {
       pricingTiers={[
         {
           name: "Starter Setup",
-          price: "â‚¹5,000",
+          price: "₹5,000",
           period: "one-time",
           description: "Best for new businesses or single-profile setups needing basic verification and layout.",
           features: [
@@ -159,7 +159,7 @@ export default function GoogleBusinessProfilePage() {
         },
         {
           name: "Premium Optimization",
-          price: "â‚¹12,000",
+          price: "₹12,000",
           period: "one-time",
           description: "Best for medical clinics, local hotels, travels, and growing companies aiming to rank.",
           isPopular: true,

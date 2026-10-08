@@ -32,7 +32,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "â‚¹â‚¹",
+        "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -66,7 +66,7 @@ export default function LawFirmWebPage() {
       overviewContent={
         <div className="space-y-6">
           <p>
-            When individuals or corporate executives face complex legal challengesâ€”whether corporate compliance, IP protection, commercial litigation, or real estate disputesâ€”they search for experienced, authoritative legal counsel with clear credentials.
+            When individuals or corporate executives face complex legal challenges—whether corporate compliance, IP protection, commercial litigation, or real estate disputes—they search for experienced, authoritative legal counsel with clear credentials.
           </p>
           <p>
             However, many legal websites look sterile, load slowly on mobile devices, display outdated attorney bios, and lack clear confidential case submission forms or instant phone/WhatsApp routing.
@@ -204,7 +204,7 @@ export default function LawFirmWebPage() {
       pricingTiers={[
         {
           name: "Advocate & Solo Practice Plan",
-          price: "â‚¹18,000",
+          price: "₹18,000",
           period: "one-time ($900 USD)",
           description: "Perfect for independent attorneys, advocates, specialized legal consultants, and boutique chambers.",
           features: [
@@ -221,7 +221,7 @@ export default function LawFirmWebPage() {
         },
         {
           name: "Enterprise Law Firm Portal",
-          price: "â‚¹45,000",
+          price: "₹45,000",
           period: "one-time ($2,200 USD)",
           description: "Recommended for full-service law firms, corporate legal advisories, and multi-partner practices.",
           isPopular: true,
@@ -241,7 +241,7 @@ export default function LawFirmWebPage() {
       faqs={[
         {
           question: "How much does a website for a law firm cost?",
-          answer: "Our law firm website packages start from â‚¹18,000 ($900 USD) for solo practice advocates up to â‚¹45,000 ($2,200 USD) for multi-partner law firm portals.",
+          answer: "Our law firm website packages start from ₹18,000 ($900 USD) for solo practice advocates up to ₹45,000 ($2,200 USD) for multi-partner law firm portals.",
         },
         {
           question: "Can prospective clients submit confidential case details online?",

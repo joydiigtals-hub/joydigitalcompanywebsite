@@ -31,7 +31,7 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "â‚¹â‚¹",
+    "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Old Perungalathur",
@@ -141,7 +141,7 @@ export default function WebsiteDesignChennai() {
       pricingTiers={[
         {
           name: "Starter Design",
-          price: "â‚¹25,000",
+          price: "₹25,000",
           period: "one-time",
           description: "Perfect for local service providers, small business portfolios, and LIC advisors.",
           features: [
@@ -156,7 +156,7 @@ export default function WebsiteDesignChennai() {
         },
         {
           name: "Professional Design",
-          price: "â‚¹35,000",
+          price: "₹35,000",
           period: "one-time",
           description: "Best for medical clinics, local hotels, educational hubs, and growing companies.",
           isPopular: true,

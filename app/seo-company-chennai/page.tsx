@@ -31,7 +31,7 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "â‚¹â‚¹",
+    "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Madurai",
@@ -151,7 +151,7 @@ export default function SeoCompanyChennai() {
       pricingTiers={[
         {
           name: "Local SEO Starter",
-          price: "â‚¹15,000",
+          price: "₹15,000",
           period: "one-time setup",
           description: "Perfect for local physical storefronts, clinics, and service professionals.",
           features: [
@@ -166,7 +166,7 @@ export default function SeoCompanyChennai() {
         },
         {
           name: "Organic Search Growth Retainer",
-          price: "â‚¹15,000",
+          price: "₹15,000",
           period: "per month",
           description: "Recommended for hotels, schools, e-commerce, and expanding companies.",
           isPopular: true,

@@ -32,7 +32,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "â‚¹â‚¹",
+        "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -204,7 +204,7 @@ export default function MarketingAgencyWebPage() {
       pricingTiers={[
         {
           name: "Boutique Agency Plan",
-          price: "â‚¹18,000",
+          price: "₹18,000",
           period: "one-time ($900 USD)",
           description: "Ideal for boutique digital marketing firms, freelance collectives, and specialized media studios.",
           features: [
@@ -221,7 +221,7 @@ export default function MarketingAgencyWebPage() {
         },
         {
           name: "Enterprise Agency Portal",
-          price: "â‚¹45,000",
+          price: "₹45,000",
           period: "one-time ($2,200 USD)",
           description: "Recommended for full-service marketing agencies, PR firms, and performance ad agencies.",
           isPopular: true,
@@ -241,7 +241,7 @@ export default function MarketingAgencyWebPage() {
       faqs={[
         {
           question: "How much does a website for a marketing agency cost?",
-          answer: "Our marketing agency website packages start from â‚¹18,000 ($900 USD) for boutique studios up to â‚¹45,000 ($2,200 USD) for enterprise multi-service agency portals.",
+          answer: "Our marketing agency website packages start from ₹18,000 ($900 USD) for boutique studios up to ₹45,000 ($2,200 USD) for enterprise multi-service agency portals.",
         },
         {
           question: "Can prospective clients request a free marketing audit directly on the site?",

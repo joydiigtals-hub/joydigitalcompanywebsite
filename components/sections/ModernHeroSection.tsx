@@ -120,7 +120,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
         Service: "15-Min Strategy Call + Free $499 Website & SEO Audit",
         Source: "Hero Booking Consultation Form",
         utmParams: utm || undefined,
-        _subject: `ðŸ”¥ Free Audit & Strategy Call Booking - ${formData.name.trim()} [Joy Digital]`,
+        _subject: `🔥 Free Audit & Strategy Call Booking - ${formData.name.trim()} [Joy Digital]`,
       };
 
       const response = await fetch("/api/enquiry", {
@@ -277,7 +277,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
 
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/40 text-emerald-300 text-xs font-bold shadow-sm">
               <Zap className="w-3.5 h-3.5 text-emerald-400" />
-              <span>ðŸŽ Free Website &amp; SEO Audit ($499 Value)</span>
+              <span>🎁 Free Website &amp; SEO Audit ($499 Value)</span>
             </div>
           </div>
 
@@ -358,7 +358,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
               <div className="mb-5">
                 <div className="inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-widest text-emerald-300 bg-emerald-950/60 border border-emerald-500/40 px-2.5 py-0.5 rounded-full mb-2">
                   <Clock className="w-3 h-3 text-emerald-400" />
-                  <span>ðŸŽ Free $499 Audit Included</span>
+                  <span>🎁 Free $499 Audit Included</span>
                 </div>
                 <h3 className="text-xl font-extrabold text-white tracking-tight">
                   Book a 15-Min Strategy Call
@@ -541,7 +541,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                 <div className="pt-2 text-center flex flex-col gap-1.5">
                   <p className="text-[10px] font-medium text-slate-400 flex items-center justify-center gap-1.5 flex-wrap">
                     <ShieldCheck className="w-3 h-3 text-emerald-400 shrink-0" />
-                    <span>No credit card required â€¢ Instant 15-min call â€¢ Zero commitment</span>
+                    <span>No credit card required • Instant 15-min call • Zero commitment</span>
                   </p>
                   <p className="text-[9px] font-semibold text-slate-500 flex items-center justify-center gap-1">
                     <i className="fa-solid fa-lock text-emerald-500/70" /> We respect your privacy. No spam ever.

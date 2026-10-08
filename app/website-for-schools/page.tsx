@@ -32,7 +32,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "â‚¹â‚¹",
+        "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -204,7 +204,7 @@ export default function SchoolWebPage() {
       pricingTiers={[
         {
           name: "Play School & Academy Plan",
-          price: "â‚¹18,000",
+          price: "₹18,000",
           period: "one-time ($900 USD)",
           description: "Ideal for pre-schools, Montessori academies, day care centers, and specialized coaching institutes.",
           features: [
@@ -221,7 +221,7 @@ export default function SchoolWebPage() {
         },
         {
           name: "Grand International School Portal",
-          price: "â‚¹45,000",
+          price: "₹45,000",
           period: "one-time ($2,200 USD)",
           description: "Recommended for K-12 international schools, IB/IGCSE academies, and higher education institutes.",
           isPopular: true,
@@ -240,7 +240,7 @@ export default function SchoolWebPage() {
       faqs={[
         {
           question: "How much does a website for a school cost?",
-          answer: "Our school website packages start from â‚¹18,000 ($900 USD) for pre-schools up to â‚¹45,000 ($2,200 USD) for international K-12 school portals.",
+          answer: "Our school website packages start from ₹18,000 ($900 USD) for pre-schools up to ₹45,000 ($2,200 USD) for international K-12 school portals.",
         },
         {
           question: "Can parents submit admission inquiry forms and download prospectus PDFs online?",

@@ -438,7 +438,7 @@ export default function Footer() {
           </div>
           <ul className="flex flex-col gap-2.5 text-xs text-text-secondary border-t border-[#E5E7EB] pt-3">
             <li className="flex items-center gap-2">
-              <span>ðŸ‡®ðŸ‡³</span>
+              <span>🇮🇳</span>
               <span><strong>India & WA:</strong> <a href="tel:+919080026133" className="hover:text-accent text-[#111827] font-medium transition-colors">+91 90800 26133</a></span>
             </li>
             <li className="flex items-center gap-2">
@@ -480,18 +480,18 @@ export default function Footer() {
           <p>
             For custom web app inquiries, direct project estimation, or technical strategy calls:
             <br />
-            â€¢ <strong>Official Website:</strong> https://joydigital.in
+            • <strong>Official Website:</strong> https://joydigital.in
             <br />
-            â€¢ <strong>Direct WhatsApp:</strong> +91 90800 26133 (https://wa.me/919080026133)
+            • <strong>Direct WhatsApp:</strong> +91 90800 26133 (https://wa.me/919080026133)
             <br />
-            â€¢ <strong>Location:</strong> Madurai, Tamil Nadu, India (Serving Global Clients in USA, UK, UAE, Australia)
+            • <strong>Location:</strong> Madurai, Tamil Nadu, India (Serving Global Clients in USA, UK, UAE, Australia)
           </p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-[#E5E7EB] mt-8 flex flex-col gap-6 text-center text-xs text-text-secondary">
         <p className="font-semibold text-slate-500">
-          Joy Digital â€“ Premium Web Design, High-Speed Next.js Web Development & Search Engine Optimization (SEO) for Businesses Worldwide.
+          Joy Digital – Premium Web Design, High-Speed Next.js Web Development & Search Engine Optimization (SEO) for Businesses Worldwide.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
           <p>

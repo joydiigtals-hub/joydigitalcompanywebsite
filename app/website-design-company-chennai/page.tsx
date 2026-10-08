@@ -20,7 +20,7 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "â‚¹â‚¹",
+    "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Madurai",
@@ -126,7 +126,7 @@ export default function WebDesignChennai() {
       pricingTiers={[
         {
           name: "Standard Plan",
-          price: "â‚¹25,000",
+          price: "₹25,000",
           period: "one-time",
           description: "Perfect for local service providers, freelancers, and small shops.",
           features: [
@@ -141,7 +141,7 @@ export default function WebDesignChennai() {
         },
         {
           name: "Business growth Plan",
-          price: "â‚¹35,000",
+          price: "₹35,000",
           period: "one-time",
           description: "Recommended for clinics, restaurants, educational hubs, and builders.",
           isPopular: true,

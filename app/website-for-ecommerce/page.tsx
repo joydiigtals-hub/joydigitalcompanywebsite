@@ -32,7 +32,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "â‚¹â‚¹",
+        "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -204,7 +204,7 @@ export default function EcommerceWebPage() {
       pricingTiers={[
         {
           name: "Global E-Commerce Startup",
-          price: "â‚¹35,000",
+          price: "₹35,000",
           period: "one-time ($1,500 USD)",
           description: "Perfect for direct-to-consumer boutiques, specialized product brands, and early-stage stores.",
           features: [
@@ -220,7 +220,7 @@ export default function EcommerceWebPage() {
         },
         {
           name: "Enterprise Headless Storefront",
-          price: "â‚¹95,000",
+          price: "₹95,000",
           period: "one-time ($4,200 USD)",
           description: "Recommended for high-volume retail brands, multi-category catalogs, and cross-border platforms.",
           isPopular: true,

@@ -75,7 +75,7 @@ const REGIONS = [
 ];
 
 const LANGUAGES = [
-  { code: "en", label: "English", flag: "🇺🇸" },
+  { code: "en", label: "English", flag: "🇬🇧" },
   { code: "ta", label: "Tamil", flag: "🇮🇳" },
   { code: "hi", label: "Hindi", flag: "🇮🇳" },
   { code: "ar", label: "Arabic", flag: "🇦🇪" },
@@ -90,15 +90,6 @@ const LANGUAGES = [
   { code: "gu", label: "Gujarati", flag: "🇮🇳" },
   { code: "pa", label: "Punjabi", flag: "🇮🇳" },
   { code: "it", label: "Italian", flag: "🇮🇹" },
-  { code: "pt", label: "Portuguese", flag: "🇵🇹" },
-  { code: "ru", label: "Russian", flag: "🇷🇺" },
-  { code: "zh-CN", label: "Chinese", flag: "🇨🇳" },
-  { code: "ja", label: "Japanese", flag: "🇯🇵" },
-  { code: "ko", label: "Korean", flag: "🇰🇷" },
-  { code: "tr", label: "Turkish", flag: "🇹🇷" },
-  { code: "nl", label: "Dutch", flag: "🇳🇱" },
-  { code: "vi", label: "Vietnamese", flag: "🇻🇳" },
-  { code: "th", label: "Thai", flag: "🇹🇭" },
 ];
 export default function Header({ transparent = false }: { transparent?: boolean }) {
   const [isScrolledRaw, setIsScrolledRaw] = useState(false);
@@ -494,7 +485,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                 onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
                 className="flex items-center gap-2 px-3 py-1.5 border border-[#E5E7EB] rounded-lg text-sm font-medium hover:border-accent hover:text-accent transition-colors bg-white shadow-sm"
               >
-                <span>{LANGUAGES.find(l => l.code === currentLang)?.flag || "ðŸ‡ºðŸ‡¸"}</span>
+                <span>{LANGUAGES.find(l => l.code === currentLang)?.flag || "🇺🇸"}</span>
                 <span className="uppercase text-xs">{currentLang}</span>
                 <i className={`fa-solid fa-chevron-down text-[8px] transition-transform duration-200 ${isLangDropdownOpen ? "rotate-180" : ""}`} />
               </button>
@@ -568,7 +559,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                 className="flex items-center justify-center w-8 h-8 border border-[#E5E7EB] rounded-lg text-sm bg-white shadow-sm"
                 aria-label="Select Language"
               >
-                <span>{LANGUAGES.find(l => l.code === currentLang)?.flag || "ðŸ‡ºðŸ‡¸"}</span>
+                <span>{LANGUAGES.find(l => l.code === currentLang)?.flag || "🇺🇸"}</span>
               </button>
 
               {isLangDropdownOpen && (

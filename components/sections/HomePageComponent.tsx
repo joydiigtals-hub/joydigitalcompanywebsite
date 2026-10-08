@@ -165,7 +165,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
     {
       icon: "fa-solid fa-tags text-[#7C3AED]",
       title: "Transparent Flat Pricing",
-      description: "Get detailed, flat-rate proposals starting from â‚¹15,000 ($250). Absolute clarity on hosting setup and maintainer retainers."
+      description: "Get detailed, flat-rate proposals starting from ₹15,000 ($250). Absolute clarity on hosting setup and maintainer retainers."
     },
     {
       icon: "fa-solid fa-sliders text-[#7C3AED]",
@@ -689,7 +689,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                 Free Online Business Tools & Calculators
               </h2>
               <p className="text-xs sm:text-sm text-[#6B6478] font-semibold leading-relaxed">
-                Free, fast and easy-to-use online tools for businesses, freelancers, students and professionals. Calculate GST, create invoices and quotations, generate QR codes, improve website SEO and simplify everyday business tasks â€” completely online.
+                Free, fast and easy-to-use online tools for businesses, freelancers, students and professionals. Calculate GST, create invoices and quotations, generate QR codes, improve website SEO and simplify everyday business tasks — completely online.
               </p>
             </div>
 
@@ -1089,7 +1089,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                     </div>
                     <div className="flex-grow">
                       <span className="text-xs font-bold text-[#1F1B2D] block leading-tight">{t.name}</span>
-                      <span className="text-[10px] text-[#6B6478] block mt-0.5 font-bold">{t.role} â€” {t.company}</span>
+                      <span className="text-[10px] text-[#6B6478] block mt-0.5 font-bold">{t.role} — {t.company}</span>
                     </div>
                   </div>
                 </div>

@@ -101,7 +101,7 @@ If your company website does not appear professionally or provide enough informa
 
 ## 1. Build a Professional B2B Website
 
-Your website should look like a real manufacturing company's online headquartersâ€”not just an online brochure.
+Your website should look like a real manufacturing company's online headquarters—not just an online brochure.
 
 The homepage should quickly communicate:
 
@@ -178,7 +178,7 @@ Potential buyers need to find your website first.
 
 Search Engine Optimization can help your pages appear when international buyers search for products and suppliers.
 
-Instead of targeting only broad keywords such as **â€œmanufacturer in China,â€** create pages around specific buyer-intent searches.
+Instead of targeting only broad keywords such as **“manufacturer in China,”** create pages around specific buyer-intent searches.
 
 Examples include:
 
@@ -354,7 +354,7 @@ A professional website can do much more than display products. It can showcase m
 
 The key is to build the website around the **buyer journey**:
 
-**Find the manufacturer â†’ Understand the products â†’ Verify credibility â†’ Check capabilities â†’ Request a quote â†’ Start a conversation.**
+**Find the manufacturer → Understand the products → Verify credibility → Check capabilities → Request a quote → Start a conversation.**
 
 For manufacturers selling electronics, household products, hardware, electrical products, machinery, packaging, and other B2B products, a strong online presence can become an important part of international business growth.
 

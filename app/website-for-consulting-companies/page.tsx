@@ -32,7 +32,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "â‚¹â‚¹",
+        "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -66,7 +66,7 @@ export default function ConsultingWebPage() {
       overviewContent={
         <div className="space-y-6">
           <p>
-            C-level executives, founders, and enterprise decision-makers evaluate consulting partners based on proof of impactâ€”demanding clear case studies, quantifiable ROI metrics, methodologies, and executive team expertise.
+            C-level executives, founders, and enterprise decision-makers evaluate consulting partners based on proof of impact—demanding clear case studies, quantifiable ROI metrics, methodologies, and executive team expertise.
           </p>
           <p>
             Yet most consulting websites rely on vague buzzwords, lack structured case study presentations, load slowly, and fail to provide direct audit booking or whitepaper lead capture features.
@@ -204,7 +204,7 @@ export default function ConsultingWebPage() {
       pricingTiers={[
         {
           name: "Consultant Growth Plan",
-          price: "â‚¹20,000",
+          price: "₹20,000",
           period: "one-time ($1,000 USD)",
           description: "Ideal for boutique advisory practices, independent consultants, and specialized strategy firms.",
           features: [
@@ -221,7 +221,7 @@ export default function ConsultingWebPage() {
         },
         {
           name: "Enterprise Advisory Portal",
-          price: "â‚¹50,000",
+          price: "₹50,000",
           period: "one-time ($2,500 USD)",
           description: "Recommended for full-service consulting firms, IT advisories, and multi-practice corporate agencies.",
           isPopular: true,
@@ -241,7 +241,7 @@ export default function ConsultingWebPage() {
       faqs={[
         {
           question: "How much does a website for a consulting company cost?",
-          answer: "Our consulting website packages start from â‚¹20,000 ($1,000 USD) for boutique practices up to â‚¹50,000 ($2,500 USD) for enterprise multi-practice advisory portals.",
+          answer: "Our consulting website packages start from ₹20,000 ($1,000 USD) for boutique practices up to ₹50,000 ($2,500 USD) for enterprise multi-practice advisory portals.",
         },
         {
           question: "Can prospective corporate clients book strategy consultations directly on the site?",

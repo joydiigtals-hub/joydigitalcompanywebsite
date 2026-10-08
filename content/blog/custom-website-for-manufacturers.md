@@ -275,7 +275,7 @@ It can be connected with tools such as:
 
 For example:
 
-**Website visitor â†’ Product page â†’ Request Quote â†’ Sales notification â†’ Follow-up**
+**Website visitor → Product page → Request Quote → Sales notification → Follow-up**
 
 This creates a much more organised lead-generation process.
 

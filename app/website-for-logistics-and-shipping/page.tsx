@@ -32,7 +32,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "â‚¹â‚¹",
+        "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -66,7 +66,7 @@ export default function LogisticsWebPage() {
       overviewContent={
         <div className="space-y-6">
           <p>
-            Importers, exporters, and supply chain managers require fast, reliable information when selecting logistics partnersâ€”evaluating trade lane coverage, container options (FCL/LCL), customs clearance speed, and tracking transparency.
+            Importers, exporters, and supply chain managers require fast, reliable information when selecting logistics partners—evaluating trade lane coverage, container options (FCL/LCL), customs clearance speed, and tracking transparency.
           </p>
           <p>
             Unfortunately, many logistics websites suffer from clunky navigation, broken container tracking widgets, hidden rate inquiry options, and slow loading speeds across mobile trade networks.
@@ -204,7 +204,7 @@ export default function LogisticsWebPage() {
       pricingTiers={[
         {
           name: "Freight Forwarder Plan",
-          price: "â‚¹20,000",
+          price: "₹20,000",
           period: "one-time ($1,000 USD)",
           description: "Ideal for regional freight forwarders, customs brokers, and specialized cargo booking agencies.",
           features: [
@@ -221,7 +221,7 @@ export default function LogisticsWebPage() {
         },
         {
           name: "Enterprise Shipping Portal",
-          price: "â‚¹55,000",
+          price: "₹55,000",
           period: "one-time ($2,600 USD)",
           description: "Recommended for international logistics providers, 3PL warehousing companies, and ocean fleet operators.",
           isPopular: true,
@@ -241,7 +241,7 @@ export default function LogisticsWebPage() {
       faqs={[
         {
           question: "How much does a website for a logistics company cost?",
-          answer: "Our logistics website packages start from â‚¹20,000 ($1,000 USD) for regional freight forwarders up to â‚¹55,000 ($2,600 USD) for enterprise 3PL shipping portals.",
+          answer: "Our logistics website packages start from ₹20,000 ($1,000 USD) for regional freight forwarders up to ₹55,000 ($2,600 USD) for enterprise 3PL shipping portals.",
         },
         {
           question: "Can shippers request instant freight rate quotes on the website?",

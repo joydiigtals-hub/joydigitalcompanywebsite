@@ -31,7 +31,7 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "â‚¹â‚¹",
+    "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Madurai",
@@ -61,7 +61,7 @@ export default function WebDevChennai() {
       overviewContent={
         <div className="space-y-6 text-justify">
           <p>
-            In the tech-driven ecosystem of Chennaiâ€”from the IT corridors of OMR and corporate parks of Guindy to growing hubs in Velachery and Ambatturâ€”digital competition is intense. For modern companies, basic online brochures no longer stand out. If your business wants to capture high-intent inquiries and rank at the top of Google searches, custom coding is essential. We are a specialized <strong>Next.js web development company in Chennai</strong> focusing on writing clean React JS frontend pages. We skip bloated database dependencies to build web platforms that load in under 1.5 seconds.
+            In the tech-driven ecosystem of Chennai—from the IT corridors of OMR and corporate parks of Guindy to growing hubs in Velachery and Ambattur—digital competition is intense. For modern companies, basic online brochures no longer stand out. If your business wants to capture high-intent inquiries and rank at the top of Google searches, custom coding is essential. We are a specialized <strong>Next.js web development company in Chennai</strong> focusing on writing clean React JS frontend pages. We skip bloated database dependencies to build web platforms that load in under 1.5 seconds.
           </p>
           <p>
             As professional <strong>fast loading website developers</strong>, we make sure that speed, design structure, and search engine parameters are fully optimized from day one. Standard template systems often introduce layout shift errors and contain unnecessary scripts that increase mobile load times. We code your website block by block, guaranteeing optimal Core Web Vitals and a smooth user experience.
@@ -147,7 +147,7 @@ export default function WebDevChennai() {
       pricingTiers={[
         {
           name: "Startup Website",
-          price: "â‚¹25,000",
+          price: "₹25,000",
           period: "one-time",
           description: "Perfect for local service providers, LIC agents, and small business portfolios.",
           features: [
@@ -162,7 +162,7 @@ export default function WebDevChennai() {
         },
         {
           name: "Professional Plan",
-          price: "â‚¹25,000",
+          price: "₹25,000",
           period: "one-time",
           description: "Best for medical clinics, local hotels, educational hubs, and growing companies.",
           isPopular: true,
@@ -202,7 +202,7 @@ export default function WebDevChennai() {
         },
         {
           question: "What is your website maintenance policy?",
-          answer: "We support you for 1 year with initial hosting setup and minor adjustments. There are no lock-in maintenance contractsâ€”you retain complete ownership of the code repository and files.",
+          answer: "We support you for 1 year with initial hosting setup and minor adjustments. There are no lock-in maintenance contracts—you retain complete ownership of the code repository and files.",
         },
       ]}
       schemaMarkup={pageSchema}

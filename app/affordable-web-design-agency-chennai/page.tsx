@@ -31,7 +31,7 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "â‚¹â‚¹",
+    "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Old Perungalathur",
@@ -63,7 +63,7 @@ export default function AffordableWebDesignChennai() {
       overviewContent={
         <div className="space-y-6">
           <p>
-            Many businesses assume that custom Next.js engineering is extremely expensive. At Joy Digital, a leading <strong>affordable web design agency in Chennai</strong>, we offer premium quality layouts starting from just â‚¹25,000. We maintain transparent pricing profiles with zero hidden fees.
+            Many businesses assume that custom Next.js engineering is extremely expensive. At Joy Digital, a leading <strong>affordable web design agency in Chennai</strong>, we offer premium quality layouts starting from just ₹25,000. We maintain transparent pricing profiles with zero hidden fees.
           </p>
           <p>
             Our <strong>low cost website development in Chennai</strong> uses optimized, serverless architectures. This gives you a fast-loading business website that ranks high on search results, loads in under 1.5 seconds, and delivers actual conversions.
@@ -80,7 +80,7 @@ export default function AffordableWebDesignChennai() {
         {
           icon: "fa-solid fa-tags",
           title: "Affordable Web Design Agency",
-          description: "Flexible packages starting at â‚¹25,000 for standard local business profiles with no maintenance contracts.",
+          description: "Flexible packages starting at ₹25,000 for standard local business profiles with no maintenance contracts.",
         },
         {
           icon: "fa-solid fa-gauge-high",
@@ -141,7 +141,7 @@ export default function AffordableWebDesignChennai() {
       pricingTiers={[
         {
           name: "Starter Website",
-          price: "â‚¹25,000",
+          price: "₹25,000",
           period: "one-time",
           description: "Ideal for local service providers, LIC agents, and small business portfolios.",
           features: [
@@ -156,7 +156,7 @@ export default function AffordableWebDesignChennai() {
         },
         {
           name: "Professional Plan",
-          price: "â‚¹35,000",
+          price: "₹35,000",
           period: "one-time",
           description: "Best for medical clinics, local hotels, educational hubs, and growing companies.",
           isPopular: true,
@@ -188,7 +188,7 @@ export default function AffordableWebDesignChennai() {
       faqs={[
         {
           question: "How much does a custom website design cost in Chennai?",
-          answer: "A custom website design in Chennai starts from â‚¹25,000 for a starter business landing page. Custom website development projects, complex e-commerce portals, and enterprise web solutions are priced based on the page count, custom features, API integrations, and ongoing technical support needs.",
+          answer: "A custom website design in Chennai starts from ₹25,000 for a starter business landing page. Custom website development projects, complex e-commerce portals, and enterprise web solutions are priced based on the page count, custom features, API integrations, and ongoing technical support needs.",
         },
         {
           question: "Why is Next.js better than traditional WordPress for local SEO?",

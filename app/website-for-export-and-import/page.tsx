@@ -172,12 +172,12 @@ export default function ExportImportWebPage() {
         },
       ]}
       pricingTitle="B2B Export Trade Engine Retainers (Priced in USD)"
-      pricingSubtitle="Invest in a high-converting digital export asset with zero commission fees. (Indian partners: â‚¹ INR equivalent available)."
+      pricingSubtitle="Invest in a high-converting digital export asset with zero commission fees. (Indian partners: ₹ INR equivalent available)."
       pricingTiers={[
         {
           name: "Merchant Exporter Plan",
           price: "$900 USD",
-          period: "one-time (approx. â‚¹75,000 INR)",
+          period: "one-time (approx. ₹75,000 INR)",
           description: "Ideal for boutique merchant exporters and specialized single-commodity traders scaling globally.",
           features: [
             "Advanced Responsive Next.js Architecture",
@@ -192,7 +192,7 @@ export default function ExportImportWebPage() {
         {
           name: "Global Enterprise Trade House Portal",
           price: "$2,300 USD",
-          period: "one-time (approx. â‚¹1,90,000 INR)",
+          period: "one-time (approx. ₹1,90,000 INR)",
           description: "Recommended for multi-product trade houses, manufacturing exporters, and global commodity distributors.",
           isPopular: true,
           features: [
@@ -221,7 +221,7 @@ export default function ExportImportWebPage() {
         },
         {
           question: "Can you feature our OEM and Private Label capabilities?",
-          answer: "Absolutely. We build dedicated Private Labeling & OEM Packaging Portals within your site to showcase custom pouching, vacuum sealing, and white-label brandingâ€”crucial for securing high-volume retail distributor contracts.",
+          answer: "Absolutely. We build dedicated Private Labeling & OEM Packaging Portals within your site to showcase custom pouching, vacuum sealing, and white-label branding—crucial for securing high-volume retail distributor contracts.",
         },
         {
           question: "Will this platform help with International B2B Trade SEO?",

@@ -31,7 +31,7 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "â‚¹â‚¹",
+    "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Old Perungalathur",
@@ -144,7 +144,7 @@ export default function CustomSoftwarePage() {
       pricingTiers={[
         {
           name: "Basic Web Portal",
-          price: "â‚¹45,000",
+          price: "₹45,000",
           period: "one-time",
           description: "Ideal for businesses needing a customer reservation portal or member database login.",
           features: [
@@ -159,7 +159,7 @@ export default function CustomSoftwarePage() {
         },
         {
           name: "SaaS Business System",
-          price: "â‚¹85,000",
+          price: "₹85,000",
           period: "one-time",
           description: "Best for growing companies looking to automate processes and integrate payment pipelines.",
           isPopular: true,

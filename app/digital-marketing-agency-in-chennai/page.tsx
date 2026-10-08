@@ -31,7 +31,7 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "â‚¹â‚¹",
+    "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Old Perungalathur",
@@ -144,7 +144,7 @@ export default function DigitalMarketingChennai() {
       pricingTiers={[
         {
           name: "Local Growth Plan",
-          price: "â‚¹15,000",
+          price: "₹15,000",
           period: "/month",
           description: "Ideal for local doctors, Travels, retail showrooms, and insurance advisors.",
           features: [
@@ -159,7 +159,7 @@ export default function DigitalMarketingChennai() {
         },
         {
           name: "Regional Authority Plan",
-          price: "â‚¹30,000",
+          price: "₹30,000",
           period: "/month",
           description: "Best for medical clinics, local hotel networks, and multi-location firms.",
           isPopular: true,

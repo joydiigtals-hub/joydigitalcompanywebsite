@@ -180,7 +180,7 @@ The problem is what happens after the click.
 
 Your website needs to continue the customer journey smoothly from:
 
-**Ad â†’ Website â†’ Information â†’ Enquiry â†’ Customer**
+**Ad → Website → Information → Enquiry → Customer**
 
 If the website is slow, this journey can break.
 
@@ -297,9 +297,9 @@ However, knowing a few important terms can help you make better decisions.
 
 Google's Core Web Vitals focus on important aspects of user experience, including:
 
-* **LCP (Largest Contentful Paint)** â€“ how quickly the main content becomes visible
-* **INP (Interaction to Next Paint)** â€“ how responsive the page is to user interactions
-* **CLS (Cumulative Layout Shift)** â€“ how stable the page layout is while loading
+* **LCP (Largest Contentful Paint)** – how quickly the main content becomes visible
+* **INP (Interaction to Next Paint)** – how responsive the page is to user interactions
+* **CLS (Cumulative Layout Shift)** – how stable the page layout is while loading
 
 These metrics help developers understand how real users experience a website.
 

@@ -311,7 +311,7 @@ A custom website can also integrate:
 
 This creates a simple journey:
 
-**Google Search â†’ Website â†’ Product/Service Page â†’ Enquiry â†’ Sales Follow-up**
+**Google Search → Website → Product/Service Page → Enquiry → Sales Follow-up**
 
 ---
 

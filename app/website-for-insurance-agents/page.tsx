@@ -33,7 +33,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "â‚¹â‚¹",
+        "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -210,7 +210,7 @@ export default async function InsuranceWebPage() {
       pricingTiers={[
         {
           name: "Individual Advisor Plan",
-          price: "â‚¹15,000",
+          price: "₹15,000",
           period: "one-time ($750 USD)",
           description: "Ideal for individual insurance agents, LIC advisors, and independent health insurance consultants.",
           features: [
@@ -227,7 +227,7 @@ export default async function InsuranceWebPage() {
         },
         {
           name: "Enterprise Agency Portal",
-          price: "â‚¹38,000",
+          price: "₹38,000",
           period: "one-time ($1,800 USD)",
           description: "Recommended for insurance brokerages, financial planning firms, and NRI policy advisories.",
           isPopular: true,
@@ -247,7 +247,7 @@ export default async function InsuranceWebPage() {
       faqs={[
         {
           question: "How much does a website for an insurance agent cost?",
-          answer: "Our insurance agent website packages start from â‚¹15,000 ($750 USD) for individual advisors up to â‚¹38,000 ($1,800 USD) for enterprise brokerage portals.",
+          answer: "Our insurance agent website packages start from ₹15,000 ($750 USD) for individual advisors up to ₹38,000 ($1,800 USD) for enterprise brokerage portals.",
         },
         {
           question: "Can prospective clients request policy quotes for health and term insurance online?",

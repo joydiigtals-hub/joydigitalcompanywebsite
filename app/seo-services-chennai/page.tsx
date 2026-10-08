@@ -31,7 +31,7 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "â‚¹â‚¹",
+    "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Madurai",
@@ -61,7 +61,7 @@ export default function SeoServicesChennai() {
       overviewContent={
         <div className="space-y-6 text-justify">
           <p>
-            For startups, professional service agencies, and corporate businesses in Chennaiâ€”competing in high-density markets like T.Nagar, Adyar, and the OMR IT corridorâ€”appearing on Google page one is crucial for capturing inbound leads. Standard business listings are often buried under national aggregators or competitors with better search strategies. We are a results-focused <strong>SEO company in Chennai</strong> specialized in performing in-depth technical code audits, keyword alignment, map packs optimization, and analytics event tracking.
+            For startups, professional service agencies, and corporate businesses in Chennai—competing in high-density markets like T.Nagar, Adyar, and the OMR IT corridor—appearing on Google page one is crucial for capturing inbound leads. Standard business listings are often buried under national aggregators or competitors with better search strategies. We are a results-focused <strong>SEO company in Chennai</strong> specialized in performing in-depth technical code audits, keyword alignment, map packs optimization, and analytics event tracking.
           </p>
           <p>
             As professional search marketing experts, we optimize every layer of your website. Standard search agencies often focus only on basic keywords and blogging advice. We correct heading structures, setup canonical redirects, optimize file sizes, and configure local business schemas. This ensures search engines easily index your services, pushing your website to the top of Google results.
@@ -147,7 +147,7 @@ export default function SeoServicesChennai() {
       pricingTiers={[
         {
           name: "Local SEO Starter",
-          price: "â‚¹15,000",
+          price: "₹15,000",
           period: "monthly",
           description: "Perfect for local service providers, clinic listings, and local portfolios.",
           features: [
@@ -162,7 +162,7 @@ export default function SeoServicesChennai() {
         },
         {
           name: "Growth Plan",
-          price: "â‚¹25,000",
+          price: "₹25,000",
           period: "monthly",
           description: "Best for growing businesses, multipage sites, and competitive niches.",
           isPopular: true,

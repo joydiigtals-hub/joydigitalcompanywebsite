@@ -78,7 +78,7 @@ The problem is simple: **customers want quick communication.**
 
 For many businesses, WhatsApp has become one of the easiest ways to communicate with potential customers. Instead of making visitors fill out a long form, businesses can allow them to start a conversation directly through WhatsApp.
 
-With the right website setup, a visitor can move from **website â†’ WhatsApp inquiry â†’ sales conversation** in just a few clicks. Learn more in our specialized [Travel Website Development Services](https://joydigital.in/website-for-tours-and-travels).
+With the right website setup, a visitor can move from **website → WhatsApp inquiry → sales conversation** in just a few clicks. Learn more in our specialized [Travel Website Development Services](https://joydigital.in/website-for-tours-and-travels).
 
 This can make the sales process faster, simpler, and more convenient for both the customer and the business.
 
@@ -382,7 +382,7 @@ Your website can attract visitors through search engines and marketing campaigns
 
 In other words:
 
-**Traffic â†’ Website â†’ Interest â†’ WhatsApp Inquiry â†’ Sales Conversation â†’ Customer**
+**Traffic → Website → Interest → WhatsApp Inquiry → Sales Conversation → Customer**
 
 Each step matters.
 

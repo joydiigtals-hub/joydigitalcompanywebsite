@@ -319,27 +319,27 @@ Your digital strategy should connect the entire journey:
 
 **Google Search / AI Search**
 
-â†“
+↓
 
 **Relevant Website Page**
 
-â†“
+↓
 
 **Product & Company Information**
 
-â†“
+↓
 
 **Trust Signals**
 
-â†“
+↓
 
 **Clear Call to Action**
 
-â†“
+↓
 
 **Enquiry**
 
-â†“
+↓
 
 **Sales Follow-up**
 

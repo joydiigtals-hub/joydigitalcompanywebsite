@@ -32,7 +32,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "â‚¹â‚¹",
+        "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -66,7 +66,7 @@ export default function HospitalWebPage() {
       overviewContent={
         <div className="space-y-6">
           <p>
-            Patients seeking specialized treatmentsâ€”whether cardiology, oncology, orthopedics, IVF, or cosmetic surgeryâ€”conduct meticulous research before choosing a hospital. International medical tourists look for doctor qualifications, treatment success rates, NABH/JCI accreditations, cost estimates, and visa assistance.
+            Patients seeking specialized treatments—whether cardiology, oncology, orthopedics, IVF, or cosmetic surgery—conduct meticulous research before choosing a hospital. International medical tourists look for doctor qualifications, treatment success rates, NABH/JCI accreditations, cost estimates, and visa assistance.
           </p>
           <p>
             Unfortunately, many hospital websites have confused navigation, slow mobile load speeds, buried doctor profiles, and lack direct medical opinion request forms or WhatsApp international patient desks.
@@ -204,7 +204,7 @@ export default function HospitalWebPage() {
       pricingTiers={[
         {
           name: "Clinic & Specialty Care Plan",
-          price: "â‚¹25,000",
+          price: "₹25,000",
           period: "one-time ($1,200 USD)",
           description: "Ideal for specialized single-specialty clinics, diagnostic centers, and boutique surgical units.",
           features: [
@@ -221,7 +221,7 @@ export default function HospitalWebPage() {
         },
         {
           name: "Enterprise Hospital & Tourism Portal",
-          price: "â‚¹65,000",
+          price: "₹65,000",
           period: "one-time ($2,800 USD)",
           description: "Recommended for multi-specialty hospitals, surgical institutes, and medical tourism centers.",
           isPopular: true,
@@ -240,7 +240,7 @@ export default function HospitalWebPage() {
       faqs={[
         {
           question: "How much does a website for a hospital cost?",
-          answer: "Our hospital website packages start from â‚¹25,000 ($1,200 USD) for specialty clinics up to â‚¹65,000 ($2,800 USD) for enterprise multi-specialty medical tourism portals.",
+          answer: "Our hospital website packages start from ₹25,000 ($1,200 USD) for specialty clinics up to ₹65,000 ($2,800 USD) for enterprise multi-specialty medical tourism portals.",
         },
         {
           question: "Can international patients upload medical reports for doctor second opinions?",

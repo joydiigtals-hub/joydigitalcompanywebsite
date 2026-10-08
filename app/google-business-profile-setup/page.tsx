@@ -20,7 +20,7 @@ const pageSchema = {
     "name": "Joy Digital",
     "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "priceRange": "â‚¹â‚¹",
+    "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Old Perungalathur",
@@ -136,7 +136,7 @@ export default function GBPPage() {
       pricingTiers={[
         {
           name: "Basic Setup & Verify",
-          price: "â‚¹5,000",
+          price: "₹5,000",
           description: "Ideal for new businesses needing professional help setting up and verifying their map listing.",
           features: [
             "Google Business Profile Creation",
@@ -150,7 +150,7 @@ export default function GBPPage() {
         },
         {
           name: "GMB Maps Dominance",
-          price: "â‚¹9,000",
+          price: "₹9,000",
           description: "Recommended for established local businesses wanting to rank higher than nearby competitors.",
           isPopular: true,
           features: [
@@ -165,7 +165,7 @@ export default function GBPPage() {
         },
         {
           name: "Franchise Multi-Profile",
-          price: "â‚¹15,000+",
+          price: "₹15,000+",
           description: "For companies managing multiple branches, offices, or service area locations.",
           features: [
             "Multi-Location Profile Management",
