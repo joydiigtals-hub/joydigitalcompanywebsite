@@ -182,10 +182,13 @@ export async function GET() {
 
     xml += `</urlset>`;
 
-    return new Response(xml, {
+    const xmlBuffer = Buffer.from(xml, 'utf-8');
+
+    return new Response(xmlBuffer, {
       status: 200,
       headers: {
         'Content-Type': 'application/xml; charset=utf-8',
+        'Content-Length': xmlBuffer.length.toString(),
         'Cache-Control': 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=43200',
       },
     });
@@ -201,10 +204,13 @@ export async function GET() {
   </url>
 </urlset>`;
 
-    return new Response(fallbackXml, {
+    const fallbackBuffer = Buffer.from(fallbackXml, 'utf-8');
+
+    return new Response(fallbackBuffer, {
       status: 200,
       headers: {
         'Content-Type': 'application/xml; charset=utf-8',
+        'Content-Length': fallbackBuffer.length.toString(),
         'Cache-Control': 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=1800',
       },
     });
