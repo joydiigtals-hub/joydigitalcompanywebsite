@@ -397,6 +397,18 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             </div>
 
             <Link
+              href="/#portfolio"
+              title="Portfolio"
+              className={`font-semibold text-sm transition-colors nav-link-underline ${
+                isScrolled ? "hover:text-accent" : "hover:text-primary-light"
+              } ${
+                isScrolled ? "text-text-primary" : "text-slate-100"
+              }`}
+            >
+              Portfolio
+            </Link>
+
+            <Link
               href="/free-tools"
               title="Free Tools"
               className={`font-semibold text-sm transition-colors nav-link-underline ${
@@ -706,6 +718,15 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             </div>
           </div>
           <Link
+              href="/#portfolio"
+              title="Portfolio"
+              onClick={() => setIsMobileOpen(false)}
+              className="font-semibold text-lg border-b border-[#E5E7EB] pb-2 text-primary-dark"
+            >
+              Portfolio
+            </Link>
+
+            <Link
             href="/free-tools"
             title="Free Tools"
             onClick={() => setIsMobileOpen(false)}
