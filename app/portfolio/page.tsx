@@ -10,8 +10,8 @@ export default function PortfolioPage() {
   const canonicalUrl = "https://joydigital.in/portfolio";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
-    title: "Portfolio & Case Studies | Joy Digital Agency",
-    description: "Explore real client projects built by Joy Digital — from travel portals and LIC advisor websites to SaaS landing pages and local SEO campaigns.",
+    title: "Portfolio: You & Me Voyage Travel Platform | Joy Digital",
+    description: "Explore our featured client project: You & Me Voyage. Discover how Joy Digital engineered a high-performance Next.js travel platform with sub-second speeds and direct conversion funnels.",
     breadcrumbs: [
       { name: "Home", item: "https://joydigital.in" },
       { name: "Portfolio", item: canonicalUrl },
@@ -25,4 +25,3 @@ export default function PortfolioPage() {
     </>
   );
 }
-
