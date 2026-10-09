@@ -360,9 +360,27 @@ export default function LeadForm({
               <i className="fa-solid fa-lock text-emerald-500 mr-1" />
               <strong>What happens next?</strong> We'll review your details and send you a calendar link to discuss your project within 24 hours.
             </p>
-            <div className="flex items-center gap-4 pt-3 border-t border-slate-100 w-full justify-center opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
-              <Image src="/assets/images/clutch-logo.svg" alt="Clutch Reviews" width={60} height={20} className="object-contain" />
-              <Image src="/assets/images/google-reviews.svg" alt="Google Reviews" width={60} height={20} className="object-contain" />
+            <div className="flex items-center gap-3 pt-3 border-t border-slate-100 w-full justify-center opacity-85 hover:opacity-100 transition-all duration-300">
+              <div className="flex items-center h-6 px-2 py-0.5 rounded bg-slate-50 border border-slate-200">
+                <Image
+                  src="/assets/images/google-reviews.svg"
+                  alt="Google Reviews"
+                  width={80}
+                  height={18}
+                  unoptimized
+                  className="h-4 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center h-6 px-2 py-0.5 rounded bg-slate-50 border border-slate-200">
+                <Image
+                  src="/assets/images/clutch-logo.svg"
+                  alt="Clutch Reviews"
+                  width={75}
+                  height={18}
+                  unoptimized
+                  className="h-4 w-auto object-contain"
+                />
+              </div>
             </div>
           </div>
         </form>
