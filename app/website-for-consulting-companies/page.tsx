@@ -1,20 +1,26 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Consulting Firm Website Design & Advisory SEO | Joy Digital",
-  description: "High-converting website design & digital marketing for management consulting companies, IT advisory firms, strategy agencies, and corporate consultants. Features case study portals, audit request forms, and SEO.",
+  title: "Corporate Website Development for Consultants | Joy Digital",
+  description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
   alternates: {
-    canonical: "https://joydigital.in/website-for-consulting-companies",
+    canonical: "https://www.joydigital.in/website-for-consulting-companies",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-consulting-companies",
-    title: "Consulting Firm Website Design & Client Lead Generation | Joy Digital",
-    description: "Ultra-fast Next.js websites built for strategy consultants, business advisory firms, and corporate trainers. Includes case study showcases, ROI audit booking, and search engine optimization.",
+    url: "https://www.joydigital.in/website-for-consulting-companies",
+    title: "Corporate Website Development for Consultants | Joy Digital",
+    description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
     images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Consulting Firm Website Design Joy Digital" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Corporate Website Development for Consultants | Joy Digital",
+    description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 

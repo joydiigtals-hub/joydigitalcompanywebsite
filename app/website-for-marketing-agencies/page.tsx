@@ -1,20 +1,26 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Marketing Agency Website Design & Agency Growth SEO | Joy Digital",
-  description: "High-converting website design & digital growth portals for marketing agencies, digital media firms, creative studios, and PR agencies. Features client portfolio showcases, audit booking forms, and agency SEO.",
+  title: "High-Converting Website Design for Agencies | Joy Digital",
+  description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
   alternates: {
-    canonical: "https://joydigital.in/website-for-marketing-agencies",
+    canonical: "https://www.joydigital.in/website-for-marketing-agencies",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-marketing-agencies",
-    title: "Marketing Agency Website Design & Client Acquisition | Joy Digital",
-    description: "Ultra-fast Next.js website design for marketing agencies, performance media firms, and creative studios. Interactive portfolio showcases, lead audit tools, and agency search ranking.",
+    url: "https://www.joydigital.in/website-for-marketing-agencies",
+    title: "High-Converting Website Design for Agencies | Joy Digital",
+    description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
     images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Marketing Agency Website Design Joy Digital" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "High-Converting Website Design for Agencies | Joy Digital",
+    description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 

@@ -1,21 +1,27 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Pest Control Website Design & Exterminator SEO | Joy Digital",
-  description: "High-converting website design & lead portals for pest control companies, termite exterminators, bed bug treatment providers, and commercial pest management agencies. Emergency booking forms, WhatsApp leads, and local SEO.",
+  title: "Local SEO & Website Design for Pest Control | Joy Digital",
+  description: "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
   alternates: {
-    canonical: "https://joydigital.in/website-for-pest-control",
+    canonical: "https://www.joydigital.in/website-for-pest-control",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-pest-control",
-    title: "Pest Control Website Design & Lead Generation | Joy Digital",
-    description: "Ultra-fast Next.js website design for pest control agencies, termite exterminators, and commercial pest control companies. Mobile-friendly inspection booking, WhatsApp leads, and search engine optimization.",
+    url: "https://www.joydigital.in/website-for-pest-control",
+    title: "Local SEO & Website Design for Pest Control | Joy Digital",
+    description: "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
     images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Pest Control Website Design Joy Digital" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Local SEO & Website Design for Pest Control | Joy Digital",
+    description: "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 

@@ -289,8 +289,8 @@ export default function Header({ transparent = false }: { transparent?: boolean 
               src="/assets/images/logo.webp"
               alt="Joy Digital - Web Design, Web Development & SEO Services Worldwide"
               title="Joy Digital Logo"
-              width={isScrolled ? 50 : 60}
-              height={isScrolled ? 50 : 60}
+              width={50}
+              height={50}
               className="object-contain transition-all duration-300"
               priority
             />

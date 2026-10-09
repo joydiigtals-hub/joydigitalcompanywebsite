@@ -1,20 +1,26 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "School & Educational Institute Website Design | Education SEO | Joy Digital",
-  description: "High-converting website design & digital marketing for international schools, K-12 institutes, colleges, and study abroad advisories. Online admission inquiry forms, fee structure portals, and educational SEO.",
+  title: "School Website Design & Development Services | Joy Digital",
+  description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
   alternates: {
-    canonical: "https://joydigital.in/website-for-schools",
+    canonical: "https://www.joydigital.in/website-for-schools",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-schools",
-    title: "School Website Design & Global Student Admission Portals | Joy Digital",
-    description: "Ultra-fast Next.js website design for international schools, IB/IGCSE academies, and higher education institutes. Online admission forms, virtual campus tours, curriculum guides, and global educational SEO.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "School Website Design Joy Digital" }],
+    url: "https://www.joydigital.in/website-for-schools",
+    title: "School Website Design & Development Services | Joy Digital",
+    description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "School Website Design Joy Digital" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "School Website Design & Development Services | Joy Digital",
+    description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 

@@ -3,17 +3,38 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Safari Website Development Company | For Safari Operators & Lodges",
-  description: "Premium safari website development for safari operators and wildlife tourism businesses. We build custom, high-converting websites that generate high-ticket enquiries.",
+  title: "Safari Website Development Company",
+  description: "Custom safari website engineering for safari operators and wildlife lodges. Sub-second booking portals and global SEO to capture high-ticket bookings.",
   keywords: [
     "safari website development",
     "safari operator website design",
     "wildlife tourism website development",
     "african safari website design",
-    "safari lodge website development"
+    "safari lodge website development",
+    "travel & safari web platforms"
   ],
   alternates: {
     canonical: "https://joydigital.in/safari-website-development",
+  },
+  openGraph: {
+    type: "website",
+    title: "Safari Website Development Company | Joy Digital",
+    description: "Custom safari website engineering for safari operators and wildlife lodges. Sub-second booking portals and global SEO to capture high-ticket bookings.",
+    url: "https://joydigital.in/safari-website-development",
+    images: [
+      {
+        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Joy Digital - Safari Website Development Company",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Safari Website Development Company | Joy Digital",
+    description: "Custom safari website engineering for safari operators and wildlife lodges. Sub-second booking portals and global SEO to capture high-ticket bookings.",
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 

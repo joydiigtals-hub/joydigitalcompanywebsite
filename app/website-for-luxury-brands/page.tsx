@@ -1,20 +1,26 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Luxury Brand Website Design & Premium SEO Services | Joy Digital",
-  description: "High-converting website design & digital experiences for luxury brands, haute couture fashion, fine jewelry ateliers, and premium lifestyle goods. Editorial layouts, VIP concierge forms, and prestige SEO.",
+  title: "Premium Luxury Brand Website Design Services | Joy Digital",
+  description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
   alternates: {
-    canonical: "https://joydigital.in/website-for-luxury-brands",
+    canonical: "https://www.joydigital.in/website-for-luxury-brands",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-luxury-brands",
-    title: "Luxury Brand Website Design & Digital Prestige | Joy Digital",
-    description: "Ultra-fast Next.js web experiences built for luxury fashion houses, bespoke jewelry designers, and premium lifestyle brands. Editorial storytelling, private VIP concierge booking, and global prestige SEO.",
+    url: "https://www.joydigital.in/website-for-luxury-brands",
+    title: "Premium Luxury Brand Website Design Services | Joy Digital",
+    description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
     images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Luxury Brand Website Design Joy Digital" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Premium Luxury Brand Website Design Services | Joy Digital",
+    description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 

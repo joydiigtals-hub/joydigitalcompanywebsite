@@ -4,17 +4,39 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Travel Website Development Company | For Tour Operators & DMCs",
-  description: "Custom travel website development for travel agencies, tour operators, and DMCs. We build high-converting websites designed to generate more travel enquiries.",
+  title: "Travel & Safari Website Development",
+  description: "Custom travel & safari website engineering with instant booking engines, sub-second itinerary loading, and global SEO. Book your free consultation!",
   keywords: [
     "travel website development",
+    "safari website development company",
     "tour operator website development",
     "travel agency website design",
     "tourism website development",
-    "custom travel website design"
+    "custom travel booking platform",
+    "safari tour operator website"
   ],
   alternates: {
     canonical: "https://joydigital.in/travel-website-development",
+  },
+  openGraph: {
+    type: "website",
+    title: "Travel & Safari Website Development | Joy Digital",
+    description: "Custom travel & safari website engineering with instant booking engines, sub-second itinerary loading, and global SEO. Book your free consultation!",
+    url: "https://joydigital.in/travel-website-development",
+    images: [
+      {
+        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Joy Digital - Travel & Safari Website Development",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Travel & Safari Website Development | Joy Digital",
+    description: "Custom travel & safari website engineering with instant booking engines, sub-second itinerary loading, and global SEO. Book your free consultation!",
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -49,7 +71,7 @@ export default async function ToursTravelsWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Travel Website Development"
-      heroTitle="Custom Travel Website Development for Tour Operators & Agencies"
+      heroTitle="Custom Travel & Safari Website Platform Engineering"
       heroSubtitle="Partner with a premier tourism website development company. Build high-converting travel website development systems and tour package portals to generate global travel enquiries."
       leadSource="Travel Website Development Landing Page"
       heroCtaText="Request a Travel Website Quote"

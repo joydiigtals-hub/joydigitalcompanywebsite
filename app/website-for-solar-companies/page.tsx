@@ -1,21 +1,27 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 import SolarLeadForm from "@/components/ui/SolarLeadForm";
 
 export const metadata: Metadata = {
-  title: "Commercial Solar EPC Web Development & B2B SEO | Joy Digital",
-  description: "High-performance web architecture, C&I lead generation portals, and global SEO for utility-scale solar developers, EPC contractors, and clean energy distributors.",
+  title: "Solar Energy Company Website Development | Joy Digital",
+  description: "Generate high-intent residential & commercial solar leads with modern, fast-loading websites built for renewable energy companies. Get a free quote!",
   alternates: {
-    canonical: "https://joydigital.in/website-for-solar-companies",
+    canonical: "https://www.joydigital.in/website-for-solar-companies",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-solar-companies",
-    title: "Commercial Solar EPC Web Development | Joy Digital",
-    description: "High-performance web architecture, C&I lead generation portals, and global SEO for utility-scale solar developers, EPC contractors, and clean energy distributors.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Commercial Solar EPC Web Development Joy Digital" }],
+    url: "https://www.joydigital.in/website-for-solar-companies",
+    title: "Solar Energy Company Website Development | Joy Digital",
+    description: "Generate high-intent residential & commercial solar leads with modern, fast-loading websites built for renewable energy companies. Get a free quote!",
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Solar Energy Company Website Development Joy Digital" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Solar Energy Company Website Development | Joy Digital",
+    description: "Generate high-intent residential & commercial solar leads with modern, fast-loading websites built for renewable energy companies. Get a free quote!",
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 

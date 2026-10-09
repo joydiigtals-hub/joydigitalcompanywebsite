@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
@@ -174,89 +174,6 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
 
   return (
     <section className="relative pt-24 lg:pt-32 pb-20 overflow-hidden bg-[#0B0914] text-white border-b border-[#1E1838] select-none">
-      
-      {/* Embedded CSS Keyframes for GPU-Accelerated Micro-Animations */}
-      <style dangerouslySetInnerHTML={{ __html: `
-        @media (min-width: 768px) {
-          @keyframes auroraDrift1 {
-            0%, 100% { transform: translate3d(0px, 0px, 0) scale(1); opacity: 0.22; }
-            33% { transform: translate3d(50px, -40px, 0) scale(1.12); opacity: 0.32; }
-            66% { transform: translate3d(-35px, 25px, 0) scale(0.92); opacity: 0.18; }
-          }
-          @keyframes auroraDrift2 {
-            0%, 100% { transform: translate3d(0px, 0px, 0) scale(1); opacity: 0.20; }
-            40% { transform: translate3d(-55px, 35px, 0) scale(1.18); opacity: 0.30; }
-            75% { transform: translate3d(45px, -25px, 0) scale(0.88); opacity: 0.16; }
-          }
-          @keyframes auroraDrift3 {
-            0%, 100% { transform: translate3d(0px, 0px, 0) scale(1); opacity: 0.16; }
-            50% { transform: translate3d(35px, 50px, 0) scale(1.15); opacity: 0.28; }
-          }
-          .animate-aurora-1 {
-            animation: auroraDrift1 16s ease-in-out infinite;
-            will-change: transform, opacity;
-          }
-          .animate-aurora-2 {
-            animation: auroraDrift2 20s ease-in-out infinite 2s;
-            will-change: transform, opacity;
-          }
-          .animate-aurora-3 {
-            animation: auroraDrift3 24s ease-in-out infinite 4s;
-            will-change: transform, opacity;
-          }
-        }
-
-        @keyframes fadeUpWord {
-          0% { opacity: 0; transform: translateY(14px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeUpItem {
-          0% { opacity: 0; transform: translateY(16px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeUpCard {
-          0% { opacity: 0; transform: translateY(20px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-up-word {
-          opacity: 0;
-          animation: fadeUpWord 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-          will-change: transform, opacity;
-        }
-        .animate-fade-up-item {
-          opacity: 0;
-          animation: fadeUpItem 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-          will-change: transform, opacity;
-        }
-        .animate-fade-up-card {
-          opacity: 0;
-          animation: fadeUpCard 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-          will-change: transform, opacity;
-        }
-        @keyframes gradientShimmer {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        @keyframes borderBeamRotate {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-        @keyframes shimmerSweep {
-          0% { transform: translateX(-120%) rotate(25deg); }
-          30%, 100% { transform: translateX(260%) rotate(25deg); }
-        }
-        .animate-gradient-shimmer {
-          background-size: 200% 200%;
-          animation: gradientShimmer 6s ease infinite;
-        }
-        .animate-border-beam {
-          animation: borderBeamRotate 8s linear infinite;
-        }
-        .animate-shimmer-sweep {
-          animation: shimmerSweep 3.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-        }
-      ` }} />
 
       {/* Moving Aurora Orbs (Optimized for Mobile: Hidden on small screens, desktop-only ambient lighting) */}
       <div className="hidden md:block absolute -top-28 right-1/4 w-[600px] lg:w-[750px] h-[600px] lg:h-[750px] bg-gradient-to-tr from-purple-700/25 via-purple-600/20 to-indigo-600/15 rounded-full blur-[140px] pointer-events-none z-0 animate-aurora-1" />
@@ -295,10 +212,10 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
             ))}
           </h1>
 
-          {/* Step 3: Subtitle & Feature Bullet Points */}
+            {/* Step 3: Subtitle & Feature Bullet Points */}
           <div className="space-y-4 max-w-2xl">
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-              Custom website design and development for businesses worldwide, with specialized expertise in Travel, Tourism & Safari businesses.
+              Custom Next.js &amp; full-stack web development engineered for high-growth global businesses, with specialized expertise in travel &amp; safari platforms.
             </p>
 
             <div className="space-y-2.5 pt-1">
@@ -391,7 +308,6 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="John Doe"
-                      autoFocus
                       className="w-full text-xs bg-transparent outline-none text-white placeholder:text-slate-500 font-medium"
                     />
                   </div>

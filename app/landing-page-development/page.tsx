@@ -6,8 +6,8 @@ import { generatePageSeo } from "@/lib/seoEngine";
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await generatePageSeo(
     "/landing-page-development",
-    "High-Converting Landing Page Development Services | Joy Digital",
-    "Build distraction-free, sub-second landing pages engineered for paid ads, Google PPC, social media campaigns, and lead generation. Convert campaign clicks into customers."
+    "High-Converting Landing Page Design & Dev | Joy Digital",
+    "Maximize ad ROI with sub-second, custom landing pages built for Google & Meta PPC campaigns. High-converting UX with fast turnaround. Request a quote!"
   );
   return seoData.metadata;
 }
@@ -15,15 +15,15 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function LandingPageDevPage() {
   const seoData = await generatePageSeo(
     "/landing-page-development",
-    "High-Converting Landing Page Development Services | Joy Digital",
-    "Build distraction-free, sub-second landing pages engineered for paid ads, Google PPC, social media campaigns, and lead generation. Convert campaign clicks into customers."
+    "High-Converting Landing Page Design & Dev | Joy Digital",
+    "Maximize ad ROI with sub-second, custom landing pages built for Google & Meta PPC campaigns. High-converting UX with fast turnaround. Request a quote!"
   );
 
   return (
     <>
       <ServicePageTemplate
         serviceName="Landing Page Development"
-        heroTitle={seoData.pageMapping?.h1 || "High-Converting Landing Page Development Services for Sales & PPC Ads"}
+        heroTitle={seoData.pageMapping?.h1 || "High-Converting Landing Page Development for SaaS & B2B"}
         heroSubtitle="Turn paid ad clicks and social campaign traffic into qualified leads. We build distraction-free, sub-second landing pages optimized for Google Ads, Meta PPC, and high-ROI conversion funnels."
         leadSource="Landing Page Development Page"
         heroCtaText="Request a Landing Page Quote"

@@ -102,20 +102,23 @@ export const metadata: Metadata = {
   },
 };
 
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+  weight: ["400", "600", "700", "800"],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased font-sans">
+    <html lang="en" className={`${inter.variable} ${inter.className} h-full antialiased font-sans`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
-        />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -124,7 +127,6 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.clarity.ms" />
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
-        <FontAwesomeLoader />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -133,6 +135,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-light-bg text-text-primary">
+        <FontAwesomeLoader />
         <GoogleAnalytics />
         <AnalyticsTracker />
         <ClarityTracker />

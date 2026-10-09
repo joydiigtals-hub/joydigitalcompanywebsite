@@ -3,36 +3,38 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Next.js Development Agency | Custom React Web Development",
-  description: "Global Next.js development agency specializing in high-performance, serverless React applications, headless commerce, and sub-second web architecture.",
+  title: "Next.js & React Development Agency",
+  description: "Hire expert Next.js & React developers. We engineer scalable, sub-second web apps, headless systems, and serverless platforms. Get a free proposal!",
   keywords: [
-    "next.js development agency",
-    "nextjs development company",
-    "react js development company",
-    "headless web development",
-    "serverless web architecture"
+    "Next.js Development Agency",
+    "Next.js Development Company",
+    "React JS Development Company",
+    "Headless Web Development",
+    "Hire Next.js Developers",
+    "Custom React Web Development",
+    "Serverless Web Architecture"
   ],
   alternates: {
     canonical: "https://joydigital.in/nextjs-development-agency",
   },
   openGraph: {
     type: "website",
-    title: "Next.js Development Agency | Custom React Web Development | Joy Digital",
-    description: "Global Next.js development agency specializing in high-performance, serverless React applications, headless commerce, and sub-second web architecture.",
+    title: "Next.js & React Development Agency | Joy Digital",
+    description: "Hire expert Next.js & React developers. We engineer scalable, sub-second web apps, headless systems, and serverless platforms. Get a free proposal!",
     url: "https://joydigital.in/nextjs-development-agency",
     images: [
       {
         url: "https://joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
-        alt: "Joy Digital - Next.js Development Agency",
+        alt: "Joy Digital - Next.js & React Development Agency",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Next.js Development Agency | Custom React Web Development | Joy Digital",
-    description: "Global Next.js development agency specializing in high-performance, serverless React applications, headless commerce, and sub-second web architecture.",
+    title: "Next.js & React Development Agency | Joy Digital",
+    description: "Hire expert Next.js & React developers. We engineer scalable, sub-second web apps, headless systems, and serverless platforms. Get a free proposal!",
     images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
