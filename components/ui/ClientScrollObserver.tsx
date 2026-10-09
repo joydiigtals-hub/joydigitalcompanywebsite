@@ -4,6 +4,12 @@ import { useEffect } from "react";
 
 export default function ClientScrollObserver() {
   useEffect(() => {
+    // If user accesses /#portfolio via old bookmark/link, smoothly redirect to standalone /portfolio page
+    if (typeof window !== "undefined" && window.location.hash === "#portfolio") {
+      window.location.replace("/portfolio");
+      return;
+    }
+
     // If bot / crawler, immediately reveal all elements without scroll waiting
     const isBot =
       typeof navigator !== "undefined" &&

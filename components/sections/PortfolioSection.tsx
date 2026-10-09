@@ -1,6 +1,7 @@
-﻿"use client";
+"use client";
 
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import TrackedWaLink from "@/components/ui/TrackedWaLink";
@@ -15,7 +16,7 @@ export default function PortfolioSection() {
   ];
 
   return (
-    <section id="portfolio" className="py-24 bg-[#0B0914] text-white border-b border-[#1E1838]">
+    <section id="featured-work" className="py-24 bg-[#0B0914] text-white border-b border-[#1E1838]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16 reveal-hidden text-center max-w-3xl mx-auto">
           <span className="text-xs font-bold text-[#A78BFA] uppercase tracking-widest block mb-3">
@@ -70,20 +71,28 @@ export default function PortfolioSection() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4">
               <a
                 href="https://www.youandmevoyage.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-sm font-bold transition-all shadow-lg shadow-purple-900/20 group"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-sm font-bold transition-all shadow-lg shadow-purple-900/20 group"
               >
                 <span>Visit Live Website</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
+
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-purple-950/40 hover:bg-purple-900/60 border border-purple-500/30 text-purple-200 text-sm font-bold transition-all group"
+              >
+                <span>View Full Portfolio</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
               
               <TrackedWaLink
                 href="https://wa.me/919080026133?text=Hi%20Joy%20Digital,%20I%20want%20a%20website%20like%20You%20and%20Me%20Voyage." location="portfolio_cta"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#17122B] hover:bg-[#20193B] border border-[#2B2346] hover:border-emerald-500/50 text-white text-sm font-bold transition-all group"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#17122B] hover:bg-[#20193B] border border-[#2B2346] hover:border-emerald-500/50 text-white text-sm font-bold transition-all group"
               >
                 <i className="fa-brands fa-whatsapp text-emerald-400 text-lg group-hover:scale-110 transition-transform" />
                 <span>I Want a Website Like This</span>

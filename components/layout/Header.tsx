@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -388,12 +388,14 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             </div>
 
             <Link
-              href="/#portfolio"
+              href="/portfolio"
               title="Portfolio"
               className={`font-semibold text-sm transition-colors nav-link-underline ${
                 isScrolled ? "hover:text-accent" : "hover:text-primary-light"
               } ${
-                isScrolled ? "text-text-primary" : "text-slate-100"
+                isActive("/portfolio")
+                  ? (isScrolled ? "text-accent" : "text-primary-light")
+                  : (isScrolled ? "text-text-primary" : "text-slate-100")
               }`}
             >
               Portfolio
@@ -709,13 +711,15 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             </div>
           </div>
           <Link
-              href="/#portfolio"
-              title="Portfolio"
-              onClick={() => setIsMobileOpen(false)}
-              className="font-semibold text-lg border-b border-[#E5E7EB] pb-2 text-primary-dark"
-            >
-              Portfolio
-            </Link>
+            href="/portfolio"
+            title="Portfolio"
+            onClick={() => setIsMobileOpen(false)}
+            className={`font-semibold text-lg border-b border-[#E5E7EB] pb-2 ${
+              isActive("/portfolio") ? "text-accent" : "text-primary-dark"
+            }`}
+          >
+            Portfolio
+          </Link>
 
             <Link
             href="/free-tools"
