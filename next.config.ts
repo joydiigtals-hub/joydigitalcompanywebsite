@@ -27,20 +27,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // 1. Host-level 301 redirect: www.joydigital.in -> https://joydigital.in
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "www.joydigital.in",
-          },
-        ],
-        destination: "https://joydigital.in/:path*",
-        permanent: true,
-      },
-
-      // 2. Chennai SEO: keep /seo-services-chennai
+      // 1. Chennai SEO: keep /seo-services-chennai
       { source: "/seo-services-in-chennai", destination: "/seo-services-chennai", permanent: true },
       { source: "/seo-company-chennai", destination: "/seo-services-chennai", permanent: true },
 
