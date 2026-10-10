@@ -31,7 +31,7 @@ export default function LeadForm({
   source = "General Lead Funnel",
 }: LeadFormProps) {
   const pathname = usePathname();
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
 
   // Detect current region from pathname
   const parts = pathname.split("/").filter(Boolean);

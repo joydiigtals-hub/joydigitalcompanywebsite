@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 };
 
 export default function CookiePolicyPage() {
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
   const canonicalUrl = "https://joydigital.in/cookie-policy";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,

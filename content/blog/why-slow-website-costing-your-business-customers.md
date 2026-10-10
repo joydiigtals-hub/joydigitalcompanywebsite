@@ -297,9 +297,9 @@ However, knowing a few important terms can help you make better decisions.
 
 Google's Core Web Vitals focus on important aspects of user experience, including:
 
-* **LCP (Largest Contentful Paint)** – how quickly the main content becomes visible
-* **INP (Interaction to Next Paint)** – how responsive the page is to user interactions
-* **CLS (Cumulative Layout Shift)** – how stable the page layout is while loading
+* **LCP (Largest Contentful Paint)** ï¿½ how quickly the main content becomes visible
+* **INP (Interaction to Next Paint)** ï¿½ how responsive the page is to user interactions
+* **CLS (Cumulative Layout Shift)** ï¿½ how stable the page layout is while loading
 
 These metrics help developers understand how real users experience a website.
 
@@ -385,7 +385,7 @@ Ready to transform your website speed and convert more online visitors into cust
 * **Agency Name:** Joy Digital Growth Agency
 * **Phone / Call Support:** [+91 90800 26133](tel:+919080026133)
 * **WhatsApp Chat:** [Chat on WhatsApp (+91 90800 26133)](https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20get%20more%20details%20about%20website%20speed%20optimization.)
-* **Email:** [contact@joydigital.in](mailto:contact@joydigital.in)
+* **Contact:** [Contact Us Online](https://joydigital.in/contact)
 * **Office Address:** Tamil Nadu, India
 * **Website & Performance Audit:** [Request a Free Website Performance Review](https://joydigital.in/contact?service=Website%20Development)
 

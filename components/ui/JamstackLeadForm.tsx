@@ -13,7 +13,7 @@ const WEB_STACK_OPTIONS = [
 
 export default function JamstackLeadForm() {
   const router = useRouter();
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",

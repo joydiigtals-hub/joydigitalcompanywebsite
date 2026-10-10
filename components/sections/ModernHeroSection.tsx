@@ -24,7 +24,7 @@ interface ModernHeroSectionProps {
   country?: string;
 }
 
-const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
+const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
 
 const heroMainWords = ["Next.js", "&", "Custom", "Web", "Development", "Company", "for"];
 const heroGradientWords = ["Global", "Businesses"];

@@ -257,7 +257,7 @@ export default async function CountryContactPage({ params }: PageProps) {
   const { country } = await params;
   const countryLower = country.toLowerCase();
   const config = REGIONAL_CONTACTS[countryLower] || REGIONAL_CONTACTS.us;
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
 
   return (
     <>

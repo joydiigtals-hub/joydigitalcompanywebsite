@@ -11,7 +11,7 @@ export const BUSINESS_INFO = {
   image: `${SITE_URL}/assets/images/hero-banner.webp`,
   description: "Joy Digital is a premier Next.js & Custom Web Development company based in Madurai, India. We engineer sub-second web applications, custom software, SEO, and Generative Engine Optimization (GEO) for global brands in the USA, UK, and UAE.",
   telephone: "+91-9080026133",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com",
   address: {
     "@type": "PostalAddress",
     "streetAddress": "Madurai",

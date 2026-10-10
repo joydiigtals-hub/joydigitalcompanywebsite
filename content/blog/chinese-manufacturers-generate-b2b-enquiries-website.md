@@ -101,7 +101,7 @@ If your company website does not appear professionally or provide enough informa
 
 ## 1. Build a Professional B2B Website
 
-Your website should look like a real manufacturing company's online headquarters—not just an online brochure.
+Your website should look like a real manufacturing company's online headquartersï¿½not just an online brochure.
 
 The homepage should quickly communicate:
 
@@ -178,7 +178,7 @@ Potential buyers need to find your website first.
 
 Search Engine Optimization can help your pages appear when international buyers search for products and suppliers.
 
-Instead of targeting only broad keywords such as **“manufacturer in China,”** create pages around specific buyer-intent searches.
+Instead of targeting only broad keywords such as **ï¿½manufacturer in China,ï¿½** create pages around specific buyer-intent searches.
 
 Examples include:
 
@@ -375,7 +375,7 @@ Ready to transform your manufacturing website and win more international B2B lea
 * **Agency Name:** Joy Digital Growth Agency
 * **Phone / Call Support:** [+91 90800 26133](tel:+919080026133)
 * **WhatsApp Chat:** [Chat on WhatsApp (+91 90800 26133)](https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20get%20more%20details%20about%20manufacturing%20website%20development.)
-* **Email:** [contact@joydigital.in](mailto:contact@joydigital.in)
+* **Contact:** [Contact Us Online](https://joydigital.in/contact)
 * **Office Address:** Tamil Nadu, India
 * **Website & Consultation:** [Request a Free B2B Website Quote](https://joydigital.in/contact?service=Custom%20Website%20for%20Manufacturers)
 

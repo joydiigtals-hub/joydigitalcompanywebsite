@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
   const canonicalUrl = "https://joydigital.in/contact";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,

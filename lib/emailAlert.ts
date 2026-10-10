@@ -20,7 +20,7 @@ export interface LeadEmailData {
 export async function sendEmailLeadAlert(lead: LeadEmailData) {
   const smtpUser = process.env.SMTP_USER || "saravanan061193@gmail.com";
   const smtpPass = process.env.SMTP_PASS;
-  const recipientEmail = process.env.CONTACT_EMAIL || process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
+  const recipientEmail = process.env.CONTACT_EMAIL || process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
 
   if (!smtpPass) {
     console.warn("SMTP_PASS is not configured in environment variables. Email notification skipped.");

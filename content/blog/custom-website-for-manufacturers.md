@@ -418,7 +418,7 @@ Ready to transform your manufacturing company website and win more B2B customers
 * **Agency Name:** Joy Digital Growth Agency
 * **Phone / Call Support:** [+91 90800 26133](tel:+919080026133)
 * **WhatsApp Chat:** [Chat on WhatsApp (+91 90800 26133)](https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20get%20more%20details%20about%20manufacturing%20website%20development.)
-* **Email:** [contact@joydigital.in](mailto:contact@joydigital.in)
+* **Contact:** [Contact Us Online](https://joydigital.in/contact)
 * **Office Address:** Tamil Nadu, India
 * **Website & Consultation:** [Request a Manufacturing Website Quote](https://joydigital.in/contact?service=Website%20for%20Manufacturing%20Companies)
 

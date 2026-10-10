@@ -166,7 +166,7 @@ function LeadDetailsDrawerContent({
   onUpdate,
   currentUserRole = "Super Admin"
 }: LeadDetailsDrawerProps) {
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
   const [activeTab, setActiveTab] = useState<"profile" | "timeline" | "notes" | "proposal" | "chatHistory">("profile");
   const [savingField, setSavingField] = useState<string | null>(null);
 

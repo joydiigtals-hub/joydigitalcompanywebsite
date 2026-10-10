@@ -136,7 +136,7 @@ This also gives your website more opportunities to rank for specific Google sear
 
 Search Engine Optimization can help your website appear when potential buyers search for products and suppliers.
 
-Instead of targeting only broad keywords like **“spice exporter”**, create content around specific buyer searches such as:
+Instead of targeting only broad keywords like **ï¿½spice exporterï¿½**, create content around specific buyer searches such as:
 
 * Spice exporters from India
 * Bulk turmeric suppliers
@@ -233,7 +233,7 @@ Ready to transform your export company website and win more international trade 
 * **Agency Name:** Joy Digital Growth Agency
 * **Phone / Call Support:** [+91 90800 26133](tel:+919080026133)
 * **WhatsApp Chat:** [Chat on WhatsApp (+91 90800 26133)](https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20get%20more%20details%20about%20export%20website%20development.)
-* **Email:** [contact@joydigital.in](mailto:contact@joydigital.in)
+* **Contact:** [Contact Us Online](https://joydigital.in/contact)
 * **Office Address:** Tamil Nadu, India
 * **Website & Consultation:** [Request a Free Export Website Quote](https://joydigital.in/contact?service=Website%20for%20Export%20%26%20Import)
 

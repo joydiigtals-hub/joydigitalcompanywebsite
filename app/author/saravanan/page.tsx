@@ -41,7 +41,7 @@ export default async function AuthorSaravananPage() {
         !post.author)
   );
 
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
 
   const profilePageSchema = {
     "@context": "https://schema.org",

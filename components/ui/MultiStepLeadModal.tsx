@@ -50,7 +50,7 @@ export default function MultiStepLeadModal({
   source = "Hero Ultra-Lean Capture",
 }: MultiStepLeadModalProps) {
   const router = useRouter();
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
   const pathname = usePathname();
 
   const [step, setStep] = useState<1 | 2>(1);
