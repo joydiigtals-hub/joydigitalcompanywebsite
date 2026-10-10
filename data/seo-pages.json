@@ -18,8 +18,19 @@
       "Sub-300ms Global Edge Response Times"
     ],
     "primary_keyword_id": "kw-custom-web-01",
-    "secondary_keyword_ids": ["kw-custom-web-03", "kw-custom-web-04", "kw-custom-web-05", "kw-custom-web-10"],
-    "longtail_keyword_ids": ["kw-custom-web-06", "kw-custom-web-07", "kw-custom-web-08", "kw-custom-web-09", "kw-custom-web-12"],
+    "secondary_keyword_ids": [
+      "kw-custom-web-03",
+      "kw-custom-web-04",
+      "kw-custom-web-05",
+      "kw-custom-web-10"
+    ],
+    "longtail_keyword_ids": [
+      "kw-custom-web-06",
+      "kw-custom-web-07",
+      "kw-custom-web-08",
+      "kw-custom-web-09",
+      "kw-custom-web-12"
+    ],
     "faq_schema": [
       {
         "question": "Why choose custom website development over WordPress or templates?",
@@ -55,8 +66,19 @@
       "Role-Based Access Control (RBAC)"
     ],
     "primary_keyword_id": "kw-dynamic-web-01",
-    "secondary_keyword_ids": ["kw-dynamic-web-03", "kw-dynamic-web-04", "kw-dynamic-web-07", "kw-cms-02", "kw-cms-04"],
-    "longtail_keyword_ids": ["kw-dynamic-web-05", "kw-dynamic-web-06", "kw-dynamic-web-08", "kw-cms-03"],
+    "secondary_keyword_ids": [
+      "kw-dynamic-web-03",
+      "kw-dynamic-web-04",
+      "kw-dynamic-web-07",
+      "kw-cms-02",
+      "kw-cms-04"
+    ],
+    "longtail_keyword_ids": [
+      "kw-dynamic-web-05",
+      "kw-dynamic-web-06",
+      "kw-dynamic-web-08",
+      "kw-cms-03"
+    ],
     "faq_schema": [
       {
         "question": "What is a dynamic website development service?",
@@ -96,8 +118,17 @@
       "Automated Technical SEO & JSON-LD Schemas"
     ],
     "primary_keyword_id": "kw-web-services-01",
-    "secondary_keyword_ids": ["kw-web-services-02", "kw-custom-web-11", "kw-web-services-04", "kw-web-services-05"],
-    "longtail_keyword_ids": ["kw-web-services-03", "kw-web-services-06", "kw-web-services-07"],
+    "secondary_keyword_ids": [
+      "kw-web-services-02",
+      "kw-custom-web-11",
+      "kw-web-services-04",
+      "kw-web-services-05"
+    ],
+    "longtail_keyword_ids": [
+      "kw-web-services-03",
+      "kw-web-services-06",
+      "kw-web-services-07"
+    ],
     "faq_schema": [
       {
         "question": "What technologies do you use for web development?",
@@ -129,8 +160,17 @@
       "High-Resolution Image Compression"
     ],
     "primary_keyword_id": "kw-ind-realestate-01",
-    "secondary_keyword_ids": ["kw-ind-realestate-02", "kw-ind-realestate-03", "kw-ind-realestate-04", "kw-ind-realestate-05"],
-    "longtail_keyword_ids": ["kw-ind-realestate-06", "kw-ind-realestate-07", "kw-ind-realestate-08"],
+    "secondary_keyword_ids": [
+      "kw-ind-realestate-02",
+      "kw-ind-realestate-03",
+      "kw-ind-realestate-04",
+      "kw-ind-realestate-05"
+    ],
+    "longtail_keyword_ids": [
+      "kw-ind-realestate-06",
+      "kw-ind-realestate-07",
+      "kw-ind-realestate-08"
+    ],
     "faq_schema": [
       {
         "question": "Can you integrate map filters in real estate websites?",
@@ -155,8 +195,16 @@
       "Automated Booking Confirmation Emails"
     ],
     "primary_keyword_id": "kw-ind-travel-01",
-    "secondary_keyword_ids": ["kw-ind-travel-02", "kw-ind-travel-03", "kw-ind-travel-04"],
-    "longtail_keyword_ids": ["kw-ind-travel-05", "kw-ind-travel-06", "kw-ind-travel-07"],
+    "secondary_keyword_ids": [
+      "kw-ind-travel-02",
+      "kw-ind-travel-03",
+      "kw-ind-travel-04"
+    ],
+    "longtail_keyword_ids": [
+      "kw-ind-travel-05",
+      "kw-ind-travel-06",
+      "kw-ind-travel-07"
+    ],
     "faq_schema": [],
     "alt_texts": [],
     "updated_at": "2026-09-01T00:00:00.000Z"
@@ -176,8 +224,16 @@
       "Teleconsultation API Sync"
     ],
     "primary_keyword_id": "kw-ind-healthcare-01",
-    "secondary_keyword_ids": ["kw-ind-healthcare-02", "kw-ind-healthcare-03", "kw-ind-healthcare-04"],
-    "longtail_keyword_ids": ["kw-ind-healthcare-05", "kw-ind-healthcare-06", "kw-ind-healthcare-07"],
+    "secondary_keyword_ids": [
+      "kw-ind-healthcare-02",
+      "kw-ind-healthcare-03",
+      "kw-ind-healthcare-04"
+    ],
+    "longtail_keyword_ids": [
+      "kw-ind-healthcare-05",
+      "kw-ind-healthcare-06",
+      "kw-ind-healthcare-07"
+    ],
     "faq_schema": [],
     "alt_texts": [],
     "updated_at": "2026-09-01T00:00:00.000Z"
@@ -197,8 +253,16 @@
       "Stripe & Razorpay Integration"
     ],
     "primary_keyword_id": "kw-ind-ecom-01",
-    "secondary_keyword_ids": ["kw-ind-ecom-02", "kw-ind-ecom-03", "kw-ind-ecom-04"],
-    "longtail_keyword_ids": ["kw-ind-ecom-05", "kw-ind-ecom-06", "kw-ind-ecom-07"],
+    "secondary_keyword_ids": [
+      "kw-ind-ecom-02",
+      "kw-ind-ecom-03",
+      "kw-ind-ecom-04"
+    ],
+    "longtail_keyword_ids": [
+      "kw-ind-ecom-05",
+      "kw-ind-ecom-06",
+      "kw-ind-ecom-07"
+    ],
     "faq_schema": [],
     "alt_texts": [],
     "updated_at": "2026-09-01T00:00:00.000Z"
@@ -220,8 +284,16 @@
       "Sub-Second Next.js Page Speeds"
     ],
     "primary_keyword_id": "kw-india-mkt-05",
-    "secondary_keyword_ids": ["kw-india-mkt-02", "kw-india-mkt-03", "kw-india-mkt-06"],
-    "longtail_keyword_ids": ["kw-india-mkt-01", "kw-india-mkt-04", "kw-india-mkt-07"],
+    "secondary_keyword_ids": [
+      "kw-india-mkt-02",
+      "kw-india-mkt-03",
+      "kw-india-mkt-06"
+    ],
+    "longtail_keyword_ids": [
+      "kw-india-mkt-01",
+      "kw-india-mkt-04",
+      "kw-india-mkt-07"
+    ],
     "faq_schema": [
       {
         "question": "Why choose Joy Digital as your digital marketing company in India?",
@@ -253,8 +325,18 @@
       "Sub-Second Global Page Speed & Core Web Vitals"
     ],
     "primary_keyword_id": "kw-static-web-01",
-    "secondary_keyword_ids": ["kw-static-web-02", "kw-static-web-03", "kw-static-web-06", "kw-static-web-07"],
-    "longtail_keyword_ids": ["kw-static-web-04", "kw-static-web-05", "kw-static-web-08", "kw-static-web-09"],
+    "secondary_keyword_ids": [
+      "kw-static-web-02",
+      "kw-static-web-03",
+      "kw-static-web-06",
+      "kw-static-web-07"
+    ],
+    "longtail_keyword_ids": [
+      "kw-static-web-04",
+      "kw-static-web-05",
+      "kw-static-web-08",
+      "kw-static-web-09"
+    ],
     "faq_schema": [
       {
         "question": "What is a static website and how does it work?",
@@ -299,8 +381,18 @@
       "1-Tap Booking & WhatsApp Enquiry Triggers"
     ],
     "primary_keyword_id": "kw-portfolio-01",
-    "secondary_keyword_ids": ["kw-portfolio-02", "kw-portfolio-03", "kw-portfolio-04", "kw-portfolio-05"],
-    "longtail_keyword_ids": ["kw-portfolio-06", "kw-portfolio-07", "kw-portfolio-08", "kw-portfolio-09"],
+    "secondary_keyword_ids": [
+      "kw-portfolio-02",
+      "kw-portfolio-03",
+      "kw-portfolio-04",
+      "kw-portfolio-05"
+    ],
+    "longtail_keyword_ids": [
+      "kw-portfolio-06",
+      "kw-portfolio-07",
+      "kw-portfolio-08",
+      "kw-portfolio-09"
+    ],
     "faq_schema": [
       {
         "question": "What is the benefit of a custom portfolio website over a generic portfolio website maker?",
@@ -345,8 +437,18 @@
       "Structured Q&A Formats & JSON-LD Entity Graphs"
     ],
     "primary_keyword_id": "kw-ai-seo-01",
-    "secondary_keyword_ids": ["kw-ai-seo-02", "kw-ai-seo-03", "kw-ai-seo-04", "kw-ai-seo-05"],
-    "longtail_keyword_ids": ["kw-ai-seo-06", "kw-ai-seo-07", "kw-ai-seo-08", "kw-ai-seo-09"],
+    "secondary_keyword_ids": [
+      "kw-ai-seo-02",
+      "kw-ai-seo-03",
+      "kw-ai-seo-04",
+      "kw-ai-seo-05"
+    ],
+    "longtail_keyword_ids": [
+      "kw-ai-seo-06",
+      "kw-ai-seo-07",
+      "kw-ai-seo-08",
+      "kw-ai-seo-09"
+    ],
     "faq_schema": [
       {
         "question": "What is AI search optimization called and what is the AI search optimization acronym?",
@@ -391,8 +493,18 @@
       "Keyword Focus Mapping & Organic Lead Funnels"
     ],
     "primary_keyword_id": "kw-seo-chennai-01",
-    "secondary_keyword_ids": ["kw-seo-chennai-02", "kw-seo-chennai-03", "kw-seo-chennai-04", "kw-seo-chennai-05"],
-    "longtail_keyword_ids": ["kw-seo-chennai-06", "kw-seo-chennai-07", "kw-seo-chennai-08", "kw-seo-chennai-09"],
+    "secondary_keyword_ids": [
+      "kw-seo-chennai-02",
+      "kw-seo-chennai-03",
+      "kw-seo-chennai-04",
+      "kw-seo-chennai-05"
+    ],
+    "longtail_keyword_ids": [
+      "kw-seo-chennai-06",
+      "kw-seo-chennai-07",
+      "kw-seo-chennai-08",
+      "kw-seo-chennai-09"
+    ],
     "faq_schema": [
       {
         "question": "Why choose Joy Digital as your preferred SEO company in Chennai?",
@@ -426,13 +538,31 @@
     "title_template": "School Website Design & Development Services | Joy Digital",
     "meta_description": "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
     "h1": "School Website Design & Development Services",
-    "h2_tags": ["Admissions & Student Management Portals", "Fast Next.js Architecture for Schools", "Online Fee Integration & Security"],
-    "h3_tags": ["Parent & Student Portals", "Curriculum & Event Schedules"],
-    "secondary_keyword_ids": [],
-    "longtail_keyword_ids": [],
+    "h2_tags": [
+      "Admissions & Student Management Portals",
+      "Fast Next.js Architecture for Schools",
+      "Online Fee Integration & Security"
+    ],
+    "h3_tags": [
+      "Parent & Student Portals",
+      "Curriculum & Event Schedules"
+    ],
+    "secondary_keyword_ids": [
+      "kw-ind-schools-02",
+      "kw-ind-schools-03",
+      "kw-ind-schools-04",
+      "kw-ind-schools-05"
+    ],
+    "longtail_keyword_ids": [
+      "kw-ind-schools-06",
+      "kw-ind-schools-07",
+      "kw-ind-schools-08",
+      "kw-ind-schools-09"
+    ],
     "faq_schema": [],
     "alt_texts": [],
-    "updated_at": "2026-10-09T08:35:00.000Z"
+    "updated_at": "2026-10-10T04:09:32.349Z",
+    "primary_keyword_id": "kw-ind-schools-01"
   },
   {
     "id": "page-website-for-luxury-brands",
@@ -441,13 +571,31 @@
     "title_template": "Premium Luxury Brand Website Design Services | Joy Digital",
     "meta_description": "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
     "h1": "Premium Luxury Brand Website Design Services",
-    "h2_tags": ["Bespoke Visual Storytelling", "Ultra-Fast Luxury Catalog Loading", "VIP Concierge & Client Acquisition"],
-    "h3_tags": ["Editorial Aesthetics", "Global Brand Prestige"],
-    "secondary_keyword_ids": [],
-    "longtail_keyword_ids": [],
+    "h2_tags": [
+      "Bespoke Visual Storytelling",
+      "Ultra-Fast Luxury Catalog Loading",
+      "VIP Concierge & Client Acquisition"
+    ],
+    "h3_tags": [
+      "Editorial Aesthetics",
+      "Global Brand Prestige"
+    ],
+    "secondary_keyword_ids": [
+      "kw-ind-luxury-02",
+      "kw-ind-luxury-03",
+      "kw-ind-luxury-04",
+      "kw-ind-luxury-05"
+    ],
+    "longtail_keyword_ids": [
+      "kw-ind-luxury-06",
+      "kw-ind-luxury-07",
+      "kw-ind-luxury-08",
+      "kw-ind-luxury-09"
+    ],
     "faq_schema": [],
     "alt_texts": [],
-    "updated_at": "2026-10-09T08:35:00.000Z"
+    "updated_at": "2026-10-10T04:09:32.349Z",
+    "primary_keyword_id": "kw-ind-luxury-01"
   },
   {
     "id": "page-website-for-marketing-agencies",
@@ -456,13 +604,31 @@
     "title_template": "High-Converting Website Design for Agencies | Joy Digital",
     "meta_description": "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
     "h1": "High-Converting Website Design for Agencies",
-    "h2_tags": ["Interactive Portfolio Showcases", "Agency Lead Generation Funnels", "Sub-Second Case Study Pages"],
-    "h3_tags": ["Client Proof Modules", "Lead Audit Forms"],
-    "secondary_keyword_ids": [],
-    "longtail_keyword_ids": [],
+    "h2_tags": [
+      "Interactive Portfolio Showcases",
+      "Agency Lead Generation Funnels",
+      "Sub-Second Case Study Pages"
+    ],
+    "h3_tags": [
+      "Client Proof Modules",
+      "Lead Audit Forms"
+    ],
+    "secondary_keyword_ids": [
+      "kw-ind-mkt-agency-02",
+      "kw-ind-mkt-agency-03",
+      "kw-ind-mkt-agency-04",
+      "kw-ind-mkt-agency-05"
+    ],
+    "longtail_keyword_ids": [
+      "kw-ind-mkt-agency-06",
+      "kw-ind-mkt-agency-07",
+      "kw-ind-mkt-agency-08",
+      "kw-ind-mkt-agency-09"
+    ],
     "faq_schema": [],
     "alt_texts": [],
-    "updated_at": "2026-10-09T08:35:00.000Z"
+    "updated_at": "2026-10-10T04:09:32.349Z",
+    "primary_keyword_id": "kw-ind-mkt-agency-01"
   },
   {
     "id": "page-website-for-consulting-companies",
@@ -471,13 +637,31 @@
     "title_template": "Corporate Website Development for Consultants | Joy Digital",
     "meta_description": "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
     "h1": "Corporate Website Development for Consultants",
-    "h2_tags": ["Authoritative B2B Web Presence", "Consulting Case Studies & ROI Metrics", "Corporate Discovery Call Bookings"],
-    "h3_tags": ["Trust & Client Credentials", "Consultant Portfolio Architecture"],
-    "secondary_keyword_ids": [],
-    "longtail_keyword_ids": [],
+    "h2_tags": [
+      "Authoritative B2B Web Presence",
+      "Consulting Case Studies & ROI Metrics",
+      "Corporate Discovery Call Bookings"
+    ],
+    "h3_tags": [
+      "Trust & Client Credentials",
+      "Consultant Portfolio Architecture"
+    ],
+    "secondary_keyword_ids": [
+      "kw-ind-consulting-02",
+      "kw-ind-consulting-03",
+      "kw-ind-consulting-04",
+      "kw-ind-consulting-05"
+    ],
+    "longtail_keyword_ids": [
+      "kw-ind-consulting-06",
+      "kw-ind-consulting-07",
+      "kw-ind-consulting-08",
+      "kw-ind-consulting-09"
+    ],
     "faq_schema": [],
     "alt_texts": [],
-    "updated_at": "2026-10-09T08:35:00.000Z"
+    "updated_at": "2026-10-10T04:09:32.349Z",
+    "primary_keyword_id": "kw-ind-consulting-01"
   },
   {
     "id": "page-website-for-pest-control",
@@ -486,13 +670,31 @@
     "title_template": "Local SEO & Website Design for Pest Control | Joy Digital",
     "meta_description": "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
     "h1": "Local SEO & Website Design for Pest Control",
-    "h2_tags": ["Emergency Inspection Booking Funnels", "Local Map Pack & Exterminator SEO", "Click-to-Call & WhatsApp Lead Triggers"],
-    "h3_tags": ["Termite & Pest Treatment Portals", "Fast Mobile Quotes"],
-    "secondary_keyword_ids": [],
-    "longtail_keyword_ids": [],
+    "h2_tags": [
+      "Emergency Inspection Booking Funnels",
+      "Local Map Pack & Exterminator SEO",
+      "Click-to-Call & WhatsApp Lead Triggers"
+    ],
+    "h3_tags": [
+      "Termite & Pest Treatment Portals",
+      "Fast Mobile Quotes"
+    ],
+    "secondary_keyword_ids": [
+      "kw-ind-pest-02",
+      "kw-ind-pest-03",
+      "kw-ind-pest-04",
+      "kw-ind-pest-05"
+    ],
+    "longtail_keyword_ids": [
+      "kw-ind-pest-06",
+      "kw-ind-pest-07",
+      "kw-ind-pest-08",
+      "kw-ind-pest-09"
+    ],
     "faq_schema": [],
     "alt_texts": [],
-    "updated_at": "2026-10-09T08:35:00.000Z"
+    "updated_at": "2026-10-10T04:09:32.349Z",
+    "primary_keyword_id": "kw-ind-pest-01"
   },
   {
     "id": "page-website-for-e-commerce-stores",
@@ -501,13 +703,31 @@
     "title_template": "Custom E-Commerce Website Development | Joy Digital",
     "meta_description": "Fast Next.js E-commerce websites built for high conversions, payment gateway integration, and SEO. Scale your online store today with Joy Digital!",
     "h1": "Custom E-Commerce Website Development",
-    "h2_tags": ["Sub-Second Product Catalogs", "Multi-Currency Global Checkouts", "Headless Next.js Storefronts"],
-    "h3_tags": ["Stripe & International Payments", "Automated Inventory Sync"],
-    "secondary_keyword_ids": [],
-    "longtail_keyword_ids": [],
+    "h2_tags": [
+      "Sub-Second Product Catalogs",
+      "Multi-Currency Global Checkouts",
+      "Headless Next.js Storefronts"
+    ],
+    "h3_tags": [
+      "Stripe & International Payments",
+      "Automated Inventory Sync"
+    ],
+    "secondary_keyword_ids": [
+      "kw-ind-ecomstores-02",
+      "kw-ind-ecomstores-03",
+      "kw-ind-ecomstores-04",
+      "kw-ind-ecomstores-05"
+    ],
+    "longtail_keyword_ids": [
+      "kw-ind-ecomstores-06",
+      "kw-ind-ecomstores-07",
+      "kw-ind-ecomstores-08",
+      "kw-ind-ecomstores-09"
+    ],
     "faq_schema": [],
     "alt_texts": [],
-    "updated_at": "2026-10-09T08:35:00.000Z"
+    "updated_at": "2026-10-10T04:09:32.349Z",
+    "primary_keyword_id": "kw-ind-ecomstores-01"
   },
   {
     "id": "page-website-for-solar-companies",
@@ -516,13 +736,31 @@
     "title_template": "Solar Energy Company Website Development | Joy Digital",
     "meta_description": "Generate high-intent residential & commercial solar leads with modern, fast-loading websites built for renewable energy companies. Get a free quote!",
     "h1": "Solar Energy Company Website Development",
-    "h2_tags": ["Residential & Commercial Solar Lead Forms", "Solar ROI & Savings Calculators", "Clean Energy B2B Showcase"],
-    "h3_tags": ["EPC Contractor Portals", "Renewable Energy SEO"],
-    "secondary_keyword_ids": [],
-    "longtail_keyword_ids": [],
+    "h2_tags": [
+      "Residential & Commercial Solar Lead Forms",
+      "Solar ROI & Savings Calculators",
+      "Clean Energy B2B Showcase"
+    ],
+    "h3_tags": [
+      "EPC Contractor Portals",
+      "Renewable Energy SEO"
+    ],
+    "secondary_keyword_ids": [
+      "kw-ind-solar-02",
+      "kw-ind-solar-03",
+      "kw-ind-solar-04",
+      "kw-ind-solar-05"
+    ],
+    "longtail_keyword_ids": [
+      "kw-ind-solar-06",
+      "kw-ind-solar-07",
+      "kw-ind-solar-08",
+      "kw-ind-solar-09"
+    ],
     "faq_schema": [],
     "alt_texts": [],
-    "updated_at": "2026-10-09T08:35:00.000Z"
+    "updated_at": "2026-10-10T04:09:32.349Z",
+    "primary_keyword_id": "kw-ind-solar-01"
   },
   {
     "id": "page-website-for-tour-and-safari",
@@ -531,12 +769,30 @@
     "title_template": "Tour & Travel Agency Website Design | Joy Digital",
     "meta_description": "Custom travel websites with itinerary builders, WhatsApp booking & multi-currency options. Boost direct travel bookings with Joy Digital!",
     "h1": "Tour & Travel Agency Website Design",
-    "h2_tags": ["Itinerary Builders & Package Booking", "Multi-Currency Safari & Tour Portals", "Instant WhatsApp Direct Inquiries"],
-    "h3_tags": ["Wildlife & Safari Tour Modules", "Global Travel SEO Architecture"],
-    "secondary_keyword_ids": [],
-    "longtail_keyword_ids": [],
+    "h2_tags": [
+      "Itinerary Builders & Package Booking",
+      "Multi-Currency Safari & Tour Portals",
+      "Instant WhatsApp Direct Inquiries"
+    ],
+    "h3_tags": [
+      "Wildlife & Safari Tour Modules",
+      "Global Travel SEO Architecture"
+    ],
+    "secondary_keyword_ids": [
+      "kw-ind-toursafari-02",
+      "kw-ind-toursafari-03",
+      "kw-ind-toursafari-04",
+      "kw-ind-toursafari-05"
+    ],
+    "longtail_keyword_ids": [
+      "kw-ind-toursafari-06",
+      "kw-ind-toursafari-07",
+      "kw-ind-toursafari-08",
+      "kw-ind-toursafari-09"
+    ],
     "faq_schema": [],
     "alt_texts": [],
-    "updated_at": "2026-10-09T08:35:00.000Z"
+    "updated_at": "2026-10-10T04:09:32.349Z",
+    "primary_keyword_id": "kw-ind-toursafari-01"
   }
 ]
