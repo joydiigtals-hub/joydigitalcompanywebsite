@@ -3,11 +3,22 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Website Design Company in Madurai | Custom Web Designers",
-  description: "Looking for the best website design company in Madurai? We create stunning, responsive, custom websites for local businesses, hotels, and colleges.",
+  title: "Website Design Company in Madurai | UI/UX & Web Designers",
+  description: "Custom website design company in Madurai. We craft responsive, fast Next.js UI/UX designs, landing pages, and branding for growing local businesses.",
   alternates: {
     canonical: "https://joydigital.in/website-design-company-madurai",
   },
+  openGraph: {
+    title: "Website Design Company in Madurai | UI/UX & Web Designers",
+    description: "Custom website design company in Madurai. We craft responsive, fast Next.js UI/UX designs, landing pages, and branding for growing local businesses.",
+    url: "https://joydigital.in/website-design-company-madurai",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Website Design Company in Madurai | UI/UX & Web Designers",
+    description: "Custom website design company in Madurai. We craft responsive, fast Next.js UI/UX designs, landing pages, and branding for growing local businesses.",
+  }
 };
 
 const pageSchema = {
@@ -168,7 +179,7 @@ export default function WebDesignMadurai() {
       schemaMarkup={pageSchema}
       crossLinks={[
         { href: "/website-development-company-madurai", label: "Web Development Madurai" },
-        { href: "/seo-company-madurai", label: "SEO Company Madurai" },
+        { href: "/seo-services-madurai", label: "SEO Services Madurai" },
         { href: "/case-studies", label: "Case Studies" },
       ]}
     />

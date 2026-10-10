@@ -24,8 +24,10 @@ interface ModernHeroSectionProps {
   country?: string;
 }
 
-const heroMainWords = ["Custom", "Websites", "That", "Help", "Your", "Business"];
-const heroGradientWords = ["Grow."];
+const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
+
+const heroMainWords = ["Next.js", "&", "Custom", "Web", "Development", "Company", "for"];
+const heroGradientWords = ["Global", "Businesses"];
 
 // Framer Motion Variants for Staggered Orchestration (Optimized for Mobile Speed)
 export default function ModernHeroSection({ country = "" }: ModernHeroSectionProps) {
@@ -112,7 +114,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
       const utm = getUtmParameters();
       const payload = {
         Name: formData.name.trim(),
-        Email: "saravanan061193@gmail.com",
+        Email: contactEmail,
         Mobile: formData.mobile.trim().startsWith("+")
           ? formData.mobile.trim()
           : `${selectedCountryCode} ${formData.mobile.trim()}`,
@@ -156,7 +158,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
       router.push(`/thank-you?${queryParams}`);
     } catch (err) {
       console.error(err);
-      alert("Enquiry submission failed. Please email us at saravanan061193@gmail.com directly.");
+      alert(`Enquiry submission failed. Please email us at ${contactEmail} directly.`);
     } finally {
       setIsLoading(false);
     }
@@ -215,7 +217,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
             {/* Step 3: Subtitle & Feature Bullet Points */}
           <div className="space-y-4 max-w-2xl">
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-              Custom Next.js &amp; full-stack web development engineered for high-growth global businesses, with specialized expertise in travel &amp; safari platforms.
+              Custom websites that help your business grow. Enterprise Next.js &amp; full-stack web engineering built for global B2B clients, with specialized platforms for travel &amp; safari companies.
             </p>
 
             <div className="space-y-2.5 pt-1">
@@ -444,7 +446,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                     </a>
 
                     <a
-                      href="mailto:saravanan061193@gmail.com"
+                      href={`mailto:${contactEmail}`}
                       className="flex-[1] py-3 px-2 rounded-xl bg-[#1A1433] hover:bg-[#20193B] border border-[#2D2352] text-slate-300 font-bold text-[11px] shadow-lg transition-all duration-300 flex flex-col items-center justify-center gap-1 cursor-pointer group"
                     >
                       <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />

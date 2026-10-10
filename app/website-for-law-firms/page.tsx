@@ -4,8 +4,8 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Law Firm Website Design & Attorney SEO Services | Joy Digital",
-  description: "High-converting website design & search engine optimization for law firms, attorneys, corporate legal advocates, and litigation practices. Confidential consultation booking, attorney profiles, and local legal SEO.",
+  title: "Law Firm Website Design & Legal SEO | Joy Digital",
+  description: "Custom website design and SEO for law firms and attorneys. Confidential client consultation forms, attorney profiles, and top Google rankings.",
   alternates: {
     canonical: "https://joydigital.in/website-for-law-firms",
   },
@@ -32,7 +32,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -45,7 +45,7 @@ const pageSchema = {
       "description": "Custom website development for law firms, trial attorneys, corporate legal consultants, and advocate chambers. Features confidential case evaluation forms, attorney bios, practice area landing pages, and local SEO.",
       "offers": {
         "@type": "AggregateOffer",
-        "priceCurrency": "INR",
+        "priceCurrency": "USD",
         "lowPrice": "18000",
         "highPrice": "45000",
         "offerCount": "2"
@@ -204,7 +204,7 @@ export default function LawFirmWebPage() {
       pricingTiers={[
         {
           name: "Advocate & Solo Practice Plan",
-          price: "₹18,000",
+          price: "$1,200",
           period: "one-time ($900 USD)",
           description: "Perfect for independent attorneys, advocates, specialized legal consultants, and boutique chambers.",
           features: [
@@ -221,7 +221,7 @@ export default function LawFirmWebPage() {
         },
         {
           name: "Enterprise Law Firm Portal",
-          price: "₹45,000",
+          price: "$2,400",
           period: "one-time ($2,200 USD)",
           description: "Recommended for full-service law firms, corporate legal advisories, and multi-partner practices.",
           isPopular: true,
@@ -241,7 +241,7 @@ export default function LawFirmWebPage() {
       faqs={[
         {
           question: "How much does a website for a law firm cost?",
-          answer: "Our law firm website packages start from ₹18,000 ($900 USD) for solo practice advocates up to ₹45,000 ($2,200 USD) for multi-partner law firm portals.",
+          answer: "Our law firm website packages start from $1,200 USD for solo practice advocates up to $2,800 USD for multi-partner law firm portals.",
         },
         {
           question: "Can prospective clients submit confidential case details online?",

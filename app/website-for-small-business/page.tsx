@@ -4,8 +4,8 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Small Business Website Design & Digital Growth SEO | Joy Digital",
-  description: "High-converting website design & digital marketing for small businesses, startups, local shops, and global service vendors. Get fast Next.js sites, Google Maps ranking, and affordable web packages.",
+  title: "Small Business Website Design & SEO | Joy Digital",
+  description: "Fast Next.js website design and local SEO for small businesses and startups. Rank on Google Maps, generate leads, and grow revenue.",
   alternates: {
     canonical: "https://joydigital.in/website-for-small-business",
   },
@@ -32,7 +32,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -45,7 +45,7 @@ const pageSchema = {
       "description": "Custom web design for small businesses, startups, service providers, and local stores. Includes fast Next.js development, lead quote forms, Google Business Profile setup, and search optimization.",
       "offers": {
         "@type": "AggregateOffer",
-        "priceCurrency": "INR",
+        "priceCurrency": "USD",
         "lowPrice": "25000",
         "highPrice": "45000",
         "offerCount": "2"
@@ -204,7 +204,7 @@ export default function SmallBusinessWebPage() {
       pricingTiers={[
         {
           name: "Small Business Starter",
-          price: "₹25,000",
+          price: "$1,200",
           period: "one-time ($600 USD)",
           description: "Perfect for single-service professionals, local tradesmen, and new micro-businesses.",
           features: [
@@ -219,7 +219,7 @@ export default function SmallBusinessWebPage() {
         },
         {
           name: "Small Business Growth Plan",
-          price: "₹45,000",
+          price: "$2,400",
           period: "one-time ($1,400 USD)",
           description: "Recommended for growing service companies, local shops, and multi-service vendors.",
           isPopular: true,
@@ -238,7 +238,7 @@ export default function SmallBusinessWebPage() {
       faqs={[
         {
           question: "How much does a website for a small business cost?",
-          answer: "Our small business website packages start from ₹25,000 ($600 USD) for starter sites up to ₹45,000 ($1,400 USD) for multi-page growth portals.",
+          answer: "Our small business website packages start from $1,200 USD for starter sites up to $2,800 USD for multi-page growth portals.",
         },
         {
           question: "How long does it take to build a small business website?",

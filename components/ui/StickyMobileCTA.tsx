@@ -22,6 +22,8 @@ export default function StickyMobileCTA() {
 
   if (!isVisible) return null;
 
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
+
   return (
     <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-[100] lg:hidden animate-fade-in pb-safe">
       <div className="flex items-center justify-between px-2 py-2 gap-2">
@@ -36,7 +38,7 @@ export default function StickyMobileCTA() {
         </a>
 
         <a
-          href="mailto:saravanan061193@gmail.com"
+          href={`mailto:${contactEmail}`}
           className="flex-1 flex flex-col items-center justify-center gap-1 py-1.5 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors"
         >
           <i className="fa-solid fa-envelope text-xl"></i>

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Custom Website Design & Professional UI/UX Services | Joy Digital",
+  title: "Custom Website Design & UI/UX Services | Joy Digital",
   description: "Joy Digital offers custom website design services. We craft responsive web design, conversion-focused UI/UX layouts, and intuitive brand design systems.",
   keywords: [
     "Web Design Services",

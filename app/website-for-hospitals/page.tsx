@@ -4,8 +4,8 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Hospital Website Design & Medical Tourism SEO Services | Joy Digital",
-  description: "High-converting website design & digital lead portals for hospitals, multi-specialty clinics, healthcare networks, and medical tourism centers. Doctor appointment booking, international patient concierge, and medical SEO.",
+  title: "Hospital Website Design & Medical SEO | Joy Digital",
+  description: "Custom website design and SEO for hospitals and healthcare clinics. Doctor appointment booking, patient portals, and high Google rankings.",
   alternates: {
     canonical: "https://joydigital.in/website-for-hospitals",
   },

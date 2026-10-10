@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   title: "Local SEO & Website Design for Pest Control | Joy Digital",
   description: "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-pest-control",
+    canonical: "https://joydigital.in/website-for-pest-control",
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-pest-control",
+    url: "https://joydigital.in/website-for-pest-control",
     title: "Local SEO & Website Design for Pest Control | Joy Digital",
     description: "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
     images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Pest Control Website Design Joy Digital" }],
@@ -39,7 +39,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -52,7 +52,7 @@ const pageSchema = {
       "description": "Custom website design for pest control companies, termite exterminators, bed bug treatment experts, and commercial pest management providers. Features emergency booking forms, WhatsApp lead routing, service area maps, and local search optimization.",
       "offers": {
         "@type": "AggregateOffer",
-        "priceCurrency": "INR",
+        "priceCurrency": "USD",
         "lowPrice": "25000",
         "highPrice": "45000",
         "offerCount": "2"
@@ -215,7 +215,7 @@ export default async function PestControlWebPage() {
       pricingTiers={[
         {
           name: "Local Exterminator Plan",
-          price: "₹25,000",
+          price: "$1,200",
           period: "one-time ($600 USD)",
           description: "Perfect for local pest control contractors, termite experts, and city service teams.",
           features: [
@@ -231,7 +231,7 @@ export default async function PestControlWebPage() {
         },
         {
           name: "Enterprise Commercial Portal",
-          price: "₹45,000",
+          price: "$2,400",
           period: "one-time ($1,400 USD)",
           description: "Recommended for commercial pest control companies, multi-city franchises, and B2B AMC vendors.",
           isPopular: true,
@@ -250,7 +250,7 @@ export default async function PestControlWebPage() {
       faqs={[
         {
           question: "How much does a website for a pest control company cost?",
-          answer: "Our pest control website packages start from ₹25,000 ($600 USD) for local exterminators up to ₹45,000 ($1,400 USD) for multi-city commercial pest management portals.",
+          answer: "Our pest control website packages start from $1,200 USD for local exterminators up to $2,800 USD for multi-city commercial pest management portals.",
         },
         {
           question: "Can customers request emergency inspections directly through the website?",

@@ -146,7 +146,7 @@ export async function POST(request: Request) {
       const emailResult = await sendEmailLeadAlert(newEnquiry);
       if (!emailResult.success) {
         console.warn("Gmail SMTP lead email failed or skipped, falling back to FormSubmit:", emailResult);
-        const recipientEmail = process.env.CONTACT_EMAIL || "saravanan061193@gmail.com";
+        const recipientEmail = process.env.CONTACT_EMAIL || process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
         const formattedPayload = {
           _subject: `🚨 NEW LEAD INBOUND [${newEnquiry.region}] - ${newEnquiry.name} (${newEnquiry.service})`,
           "Lead Name": newEnquiry.name,

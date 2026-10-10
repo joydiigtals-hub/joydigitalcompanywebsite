@@ -1,23 +1,23 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "SEO Services in Chennai | Technical SEO & Organic Rank Agency",
-  description: "Get organic search growth with Joy Digital's technical SEO services in Chennai. We run code audits, optimize site speeds, and capture high-intent buyers.",
+  title: "SEO Services in Chennai | Technical & Local SEO Agency",
+  description: "Drive organic search rankings with Joy Digital's SEO services in Chennai. We run Core Web Vitals audits, Maps 3-Pack SEO, and GA4 lead tracking.",
   alternates: {
     canonical: "https://joydigital.in/seo-services-chennai",
   },
   openGraph: {
-    title: "SEO Services in Chennai | Technical SEO & Organic Rank Agency",
-    description: "Get organic search growth with Joy Digital's technical SEO services in Chennai. We run code audits, optimize site speeds, and capture high-intent buyers.",
+    title: "SEO Services in Chennai | Technical & Local SEO Agency",
+    description: "Drive organic search rankings with Joy Digital's SEO services in Chennai. We run Core Web Vitals audits, Maps 3-Pack SEO, and GA4 lead tracking.",
     url: "https://joydigital.in/seo-services-chennai",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO Services in Chennai | Technical SEO & Organic Rank Agency",
-    description: "Get organic search growth with Joy Digital's technical SEO services in Chennai. We run code audits, optimize site speeds, and capture high-intent buyers.",
+    title: "SEO Services in Chennai | Technical & Local SEO Agency",
+    description: "Drive organic search rankings with Joy Digital's SEO services in Chennai. We run Core Web Vitals audits, Maps 3-Pack SEO, and GA4 lead tracking.",
   }
 };
 
@@ -25,7 +25,7 @@ const pageSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "SEO Services in Chennai",
-  "serviceType": "Search Engine Optimization",
+  "serviceType": "Search Engine Optimization & Local Maps Ranking",
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
@@ -39,7 +39,7 @@ const pageSchema = {
       "addressCountry": "IN"
     }
   },
-  "description": "Joy Digital is a results-driven SEO company in Chennai. We analyze site speed, resolve crawl blocks, configure local schemas, and setup GA4 tracking.",
+  "description": "Joy Digital is a technical SEO company serving Chennai businesses with Core Web Vitals speed tuning, crawl budget optimization, Maps 3-Pack rankings, and GA4 conversion tracking.",
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "INR",
@@ -53,35 +53,35 @@ export default function SeoServicesChennai() {
   return (
     <ServicePageTemplate
       serviceName="SEO Services Chennai"
-      heroTitle="SEO Services in Chennai"
-      heroSubtitle="Drive high-intent Google search traffic to your landing pages. As an expert SEO company in Chennai, we optimize code layouts, structure indexing schemas, and track customer lead events."
+      heroTitle="Technical & Local SEO Services in Chennai"
+      heroSubtitle="Drive high-intent Google search traffic and claim top spots in the Google Maps Local 3-Pack. We optimize site speed, resolve crawl bottlenecks, structure indexing schemas, and track real customer leads across Chennai."
       leadSource="SEO Services Chennai Landing Page"
       canonicalUrl="https://joydigital.in/seo-services-chennai"
-      overviewTitle="Technical Website Audits & SEO Services in Chennai"
+      overviewTitle="Technical Website Audits & Full-Funnel SEO in Chennai"
       overviewContent={
         <div className="space-y-6 text-justify">
           <p>
-            For startups, professional service agencies, and corporate businesses in Chennai—competing in high-density markets like T.Nagar, Adyar, and the OMR IT corridor—appearing on Google page one is crucial for capturing inbound leads. Standard business listings are often buried under national aggregators or competitors with better search strategies. We are a results-focused <strong>SEO company in Chennai</strong> specialized in performing in-depth technical code audits, keyword alignment, map packs optimization, and analytics event tracking.
+            For startups, professional service agencies, and corporate businesses in Chennai—competing in high-density markets like T. Nagar, Adyar, Guindy, and the OMR IT corridor—appearing on Google Page 1 is crucial for capturing qualified inbound leads. Standard business listings are often buried under national aggregators or competitors with better search strategies. Joy Digital provides results-focused <strong>SEO services in Chennai</strong>, combining deep technical code audits, high-intent keyword alignment, Google Maps Local 3-Pack dominance, and conversion event tracking.
           </p>
           <p>
-            As professional search marketing experts, we optimize every layer of your website. Standard search agencies often focus only on basic keywords and blogging advice. We correct heading structures, setup canonical redirects, optimize file sizes, and configure local business schemas. This ensures search engines easily index your services, pushing your website to the top of Google results.
+            Unlike agencies that rely solely on surface-level keyword stuffing and generic blog posts, we engineer every layer of your website. We correct heading hierarchies, establish strict canonical structures, optimize assets for Core Web Vitals, and configure structured LocalBusiness and FAQ JSON-LD schemas so search engines index and rank your pages ahead of competitors.
           </p>
-          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">Why Technical Audits and Page Speeds Drive Search Ranks</h3>
+          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">Core Web Vitals & Technical Speed Architecture</h3>
           <p>
-            Google search crawlers deprioritize slow, bloated websites. If your website has low speed scores, mobile rendering errors, or broken internal links, your rankings will suffer. We design websites using modern serverless Next.js structures that score 95+ on Core Web Vitals, establishing a strong foundation for search visibility.
+            Google search crawlers deprioritize slow, bloated websites. If your website suffers from poor mobile rendering, layout shifts, or bloated JavaScript bundles, your rankings drop. We build on modern serverless Next.js frameworks designed to achieve 95+ Core Web Vitals scores, providing a high-speed foundation that search engines reward.
           </p>
-          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">Dominating Local Google Map pack listing search</h3>
+          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">Dominating the Google Maps Local 3-Pack</h3>
           <p>
-            Most mobile users choose service providers from Google Maps. Our map pack optimization coordinates citations across major directories, updates business categories, verifies service areas, and configures review acquisition widgets. By linking your Google Business Profile (GBP) with structured schemas in your website's code, we improve your local search visibility.
+            When customers in Chennai search for medical clinics, industrial equipment, hotels, or travel agencies, they turn to Google Maps. Our local SEO framework synchronizes citations across trusted directories (Justdial, Sulekha, IndiaMART), audits Name-Address-Phone (NAP) consistency, configures localized service areas, and injects Google Business Profile schema directly into your code to maximize local phone calls and direction requests.
           </p>
-          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">Structured Event Analytics and ROI Visibility</h3>
+          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">Transparent Event Analytics & Lead Attribution</h3>
           <p>
-            We believe search marketing should lead directly to sales opportunities. We set up Google Search Console and connect Google Analytics 4 (GA4) event trackers to monitor WhatsApp clicks, form submissions, and direct phone calls. This allows you to monitor how many website visitors turn into qualified leads, providing clear insight into your ROI.
+            Every SEO campaign should produce measurable revenue opportunities. We connect Google Search Console and implement Google Analytics 4 (GA4) event trackers to measure phone clicks, form submissions, and WhatsApp consultations, giving you total visibility into how organic traffic converts into paying clients.
           </p>
         </div>
       }
-      benefitsTitle="Why Choose Our Chennai SEO Team?"
-      benefitsSubtitle="We construct SEO setups designed to target commercial terms and drive calls in Chennai."
+      benefitsTitle="Why Partner with Our Chennai SEO Team?"
+      benefitsSubtitle="We construct SEO systems designed to target commercial intent keywords and generate phone calls."
       benefits={[
         {
           icon: "fa-solid fa-magnifying-glass-location",
@@ -114,8 +114,8 @@ export default function SeoServicesChennai() {
           description: "Monitor user clicks on phone numbers and WhatsApp buttons using GA4.",
         },
       ]}
-      processTitle="Our Technical SEO Roadmaps"
-      processSubtitle="We improve and scale your search presence in 4 structured phases."
+      processTitle="Our Technical SEO Roadmap"
+      processSubtitle="We scale your Chennai search presence across four structured phases."
       processSteps={[
         {
           step: "1",
@@ -142,7 +142,7 @@ export default function SeoServicesChennai() {
           description: "We connect GA4 trackers, verify GSC sitemaps, and deliver monthly rankings progress reports.",
         },
       ]}
-      pricingTitle="Transparent SEO Pricing Packages"
+      pricingTitle="Transparent SEO Packages"
       pricingSubtitle="Select the plan that fits your business scale. No hidden fees or long-term lock-in contracts."
       pricingTiers={[
         {
@@ -207,11 +207,10 @@ export default function SeoServicesChennai() {
       ]}
       schemaMarkup={pageSchema}
       crossLinks={[
-        { href: "/seo-company-chennai", label: "SEO Company Chennai" },
-        { href: "/seo-services-in-chennai", label: "SEO Services in Chennai" },
         { href: "/digital-marketing-agency-in-chennai", label: "Digital Marketing Chennai" },
-        { href: "/affordable-web-design-agency-chennai", label: "Affordable Web Design Chennai" },
         { href: "/website-development-company-chennai", label: "Web Development Chennai" },
+        { href: "/google-business-profile-optimization", label: "Google Business Profile Optimization" },
+        { href: "/local-seo-services", label: "Local SEO Services" },
       ]}
     />
   );

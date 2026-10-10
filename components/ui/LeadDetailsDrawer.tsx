@@ -166,6 +166,7 @@ function LeadDetailsDrawerContent({
   onUpdate,
   currentUserRole = "Super Admin"
 }: LeadDetailsDrawerProps) {
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
   const [activeTab, setActiveTab] = useState<"profile" | "timeline" | "notes" | "proposal" | "chatHistory">("profile");
   const [savingField, setSavingField] = useState<string | null>(null);
 
@@ -441,8 +442,8 @@ function LeadDetailsDrawerContent({
               <h4>Prepared By:</h4>
               <p style="font-weight: 700; color: #0F172A; font-size: 14px;">Joy Digital Agency</p>
               <p>Madurai, Tamil Nadu, India</p>
-              <p>Email: saravanan061193@gmail.com</p>
-              <p>Web: www.joydigital.in</p>
+              <p>Email: ${contactEmail}</p>
+              <p>Web: https://joydigital.in</p>
             </div>
           </div>
 

@@ -28,7 +28,7 @@ export async function POST(request: Request) {
 
     if (!emailResult.success) {
       // Fallback to FormSubmit if Gmail SMTP fails or is unconfigured
-      const recipientEmail = process.env.CONTACT_EMAIL || "saravanan061193@gmail.com";
+      const recipientEmail = process.env.CONTACT_EMAIL || process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
       const payload = {
         Name: name,
         Mobile: mobile,

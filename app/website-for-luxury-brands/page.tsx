@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: "Premium Luxury Brand Website Design Services | Joy Digital",
   description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-luxury-brands",
+    canonical: "https://joydigital.in/website-for-luxury-brands",
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-luxury-brands",
+    url: "https://joydigital.in/website-for-luxury-brands",
     title: "Premium Luxury Brand Website Design Services | Joy Digital",
     description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
     images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Luxury Brand Website Design Joy Digital" }],
@@ -38,7 +38,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -51,7 +51,7 @@ const pageSchema = {
       "description": "Custom luxury web design for high-end fashion ateliers, luxury jewelry houses, bespoke artisans, and premium lifestyle products. Features editorial digital lookbooks, private VIP appointment scheduling, and prestige SEO.",
       "offers": {
         "@type": "AggregateOffer",
-        "priceCurrency": "INR",
+        "priceCurrency": "USD",
         "lowPrice": "30000",
         "highPrice": "90000",
         "offerCount": "2"
@@ -210,7 +210,7 @@ export default function LuxuryBrandWebPage() {
       pricingTiers={[
         {
           name: "Boutique Luxury Atelier Plan",
-          price: "₹30,000",
+          price: "$1,500",
           period: "one-time ($1,500 USD)",
           description: "Ideal for boutique jewelry designers, haute couture ateliers, and independent luxury artisan brands.",
           features: [
@@ -227,7 +227,7 @@ export default function LuxuryBrandWebPage() {
         },
         {
           name: "Grand Flagship Digital Portal",
-          price: "₹90,000",
+          price: "$4,200",
           period: "one-time ($4,200 USD)",
           description: "Recommended for global luxury fashion houses, fine jewelry brands, and multi-location luxury groups.",
           isPopular: true,
@@ -247,7 +247,7 @@ export default function LuxuryBrandWebPage() {
       faqs={[
         {
           question: "How much does a website for a luxury brand cost?",
-          answer: "Our luxury brand website packages start from ₹30,000 ($1,500 USD) for boutique ateliers up to ₹90,000 ($4,200 USD) for grand flagship digital portals.",
+          answer: "Our luxury brand website packages start from $1,200 USD for boutique ateliers up to $2,800 USD for grand flagship digital portals.",
         },
         {
           question: "Can VIP clients book private boutique or virtual consultations on the site?",

@@ -4,8 +4,8 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Logistics & Shipping Website Design | Freight Forwarding SEO | Joy Digital",
-  description: "High-converting website design & digital marketing for logistics companies, freight forwarders, 3PL providers, and shipping lines. Features cargo tracking, instant freight rate calculators, and logistics SEO.",
+  title: "Logistics & Shipping Website Design | Joy Digital",
+  description: "Custom website design and SEO for freight forwarders and logistics companies. Cargo tracking integrations, freight rate calculators, and B2B leads.",
   alternates: {
     canonical: "https://joydigital.in/website-for-logistics-and-shipping",
   },
@@ -32,7 +32,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -45,7 +45,7 @@ const pageSchema = {
       "description": "Custom web development for freight forwarders, 3PL warehousing operators, air/sea cargo carriers, and logistics providers. Includes instant freight quote forms, container tracking tools, and international SEO.",
       "offers": {
         "@type": "AggregateOffer",
-        "priceCurrency": "INR",
+        "priceCurrency": "USD",
         "lowPrice": "20000",
         "highPrice": "55000",
         "offerCount": "2"
@@ -204,7 +204,7 @@ export default function LogisticsWebPage() {
       pricingTiers={[
         {
           name: "Freight Forwarder Plan",
-          price: "₹20,000",
+          price: "$1,200",
           period: "one-time ($1,000 USD)",
           description: "Ideal for regional freight forwarders, customs brokers, and specialized cargo booking agencies.",
           features: [
@@ -221,7 +221,7 @@ export default function LogisticsWebPage() {
         },
         {
           name: "Enterprise Shipping Portal",
-          price: "₹55,000",
+          price: "$2,800",
           period: "one-time ($2,600 USD)",
           description: "Recommended for international logistics providers, 3PL warehousing companies, and ocean fleet operators.",
           isPopular: true,
@@ -241,7 +241,7 @@ export default function LogisticsWebPage() {
       faqs={[
         {
           question: "How much does a website for a logistics company cost?",
-          answer: "Our logistics website packages start from ₹20,000 ($1,000 USD) for regional freight forwarders up to ₹55,000 ($2,600 USD) for enterprise 3PL shipping portals.",
+          answer: "Our logistics website packages start from $1,200 USD for regional freight forwarders up to $2,800 USD for enterprise 3PL shipping portals.",
         },
         {
           question: "Can shippers request instant freight rate quotes on the website?",

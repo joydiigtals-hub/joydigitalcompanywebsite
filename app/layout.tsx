@@ -20,23 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Joy Digital",
   },
   description: "Joy Digital is a premier Digital Agency & Next.js Web Development company based in Chennai, India. We engineer sub-second web applications, custom software, SEO, and Generative Engine Optimization (GEO) for global brands.",
-  keywords: [
-    "Joy Digital",
-    "Digital Agency Chennai",
-    "Next.js Web Development",
-    "Next.js Solutions",
-    "SEO & GEO Optimization",
-    "Generative Engine Optimization",
-    "AI Search Optimization",
-    "Custom Web Apps",
-    "Web Development Agency India",
-    "Fast Next.js Websites",
-    "Headless CMS Development",
-    "Core Web Vitals Optimization",
-    "ChatGPT Search Optimization",
-    "Perplexity AI SEO",
-    "Google Gemini Search SEO"
-  ],
+
   authors: [{ name: "Joy Digital", url: "https://joydigital.in" }],
   publisher: "Joy Digital",
   robots: {

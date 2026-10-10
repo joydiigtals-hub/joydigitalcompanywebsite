@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: "Corporate Website Development for Consultants | Joy Digital",
   description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-consulting-companies",
+    canonical: "https://joydigital.in/website-for-consulting-companies",
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-consulting-companies",
+    url: "https://joydigital.in/website-for-consulting-companies",
     title: "Corporate Website Development for Consultants | Joy Digital",
     description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
     images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Consulting Firm Website Design Joy Digital" }],

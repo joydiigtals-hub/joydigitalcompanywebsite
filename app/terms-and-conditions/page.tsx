@@ -23,6 +23,7 @@ export const metadata: Metadata = {
 };
 
 export default function TermsAndConditionsPage() {
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
   const canonicalUrl = "https://joydigital.in/terms-and-conditions";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
@@ -148,7 +149,7 @@ export default function TermsAndConditionsPage() {
                     </p>
                     <p className="text-sm flex items-center gap-2 text-text-secondary">
                       <span className="text-accent"><i className="fa-solid fa-envelope" /></span>
-                      <a href="mailto:saravanan061193@gmail.com" className="hover:text-accent font-semibold transition-colors">saravanan061193@gmail.com</a>
+                      <a href={`mailto:${contactEmail}`} className="hover:text-accent font-semibold transition-colors">{contactEmail}</a>
                     </p>
                   </div>
                 </div>

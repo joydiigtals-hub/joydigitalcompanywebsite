@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: "High-Converting Website Design for Agencies | Joy Digital",
   description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-marketing-agencies",
+    canonical: "https://joydigital.in/website-for-marketing-agencies",
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-marketing-agencies",
+    url: "https://joydigital.in/website-for-marketing-agencies",
     title: "High-Converting Website Design for Agencies | Joy Digital",
     description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
     images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Marketing Agency Website Design Joy Digital" }],
@@ -38,7 +38,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -51,7 +51,7 @@ const pageSchema = {
       "description": "Custom website development for digital marketing agencies, performance media houses, social media firms, and PR agencies. Features portfolio showcases, audit lead capture forms, case study portals, and search optimization.",
       "offers": {
         "@type": "AggregateOffer",
-        "priceCurrency": "INR",
+        "priceCurrency": "USD",
         "lowPrice": "18000",
         "highPrice": "45000",
         "offerCount": "2"
@@ -210,7 +210,7 @@ export default function MarketingAgencyWebPage() {
       pricingTiers={[
         {
           name: "Boutique Agency Plan",
-          price: "₹18,000",
+          price: "$1,200",
           period: "one-time ($900 USD)",
           description: "Ideal for boutique digital marketing firms, freelance collectives, and specialized media studios.",
           features: [
@@ -227,7 +227,7 @@ export default function MarketingAgencyWebPage() {
         },
         {
           name: "Enterprise Agency Portal",
-          price: "₹45,000",
+          price: "$2,400",
           period: "one-time ($2,200 USD)",
           description: "Recommended for full-service marketing agencies, PR firms, and performance ad agencies.",
           isPopular: true,
@@ -247,7 +247,7 @@ export default function MarketingAgencyWebPage() {
       faqs={[
         {
           question: "How much does a website for a marketing agency cost?",
-          answer: "Our marketing agency website packages start from ₹18,000 ($900 USD) for boutique studios up to ₹45,000 ($2,200 USD) for enterprise multi-service agency portals.",
+          answer: "Our marketing agency website packages start from $1,200 USD for boutique studios up to $2,800 USD for enterprise multi-service agency portals.",
         },
         {
           question: "Can prospective clients request a free marketing audit directly on the site?",

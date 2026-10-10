@@ -4,8 +4,8 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Manufacturing Company Website Design & Industrial B2B SEO | Joy Digital",
-  description: "High-converting website design and digital lead portals for manufacturing companies, industrial OEMs, engineering factories, and automated plants. Features RFQ builders, machinery catalogs, and B2B search ranking.",
+  title: "Manufacturing Website Design & B2B SEO | Joy Digital",
+  description: "B2B manufacturing website design and SEO. Digital machinery catalogs, instant RFQ inquiry engines, and international buyer lead generation.",
   alternates: {
     canonical: "https://joydigital.in/website-for-manufacturing-companies",
   },
@@ -32,7 +32,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -45,7 +45,7 @@ const pageSchema = {
       "description": "Custom industrial web design for manufacturing plants, heavy machinery OEMs, contract fabricators, and precision engineering vendors. Includes file upload RFQ forms, machine spec tables, and B2B search engine optimization.",
       "offers": {
         "@type": "AggregateOffer",
-        "priceCurrency": "INR",
+        "priceCurrency": "USD",
         "lowPrice": "20000",
         "highPrice": "60000",
         "offerCount": "3"
@@ -204,7 +204,7 @@ export default function ManufacturingWebPage() {
       pricingTiers={[
         {
           name: "Industrial Exporter Plan",
-          price: "₹20,000",
+          price: "$1,200",
           period: "one-time ($1,000 USD)",
           description: "Ideal for specialized machining units, component fabricators, and regional OEM vendors.",
           features: [
@@ -221,7 +221,7 @@ export default function ManufacturingWebPage() {
         },
         {
           name: "Enterprise Plant Portal",
-          price: "₹40,000",
+          price: "$2,400",
           period: "one-time ($2,000 USD)",
           description: "Recommended for integrated manufacturing plants, heavy machinery OEMs, and contract exporters.",
           isPopular: true,
@@ -239,7 +239,7 @@ export default function ManufacturingWebPage() {
         },
         {
           name: "Custom OEM Ecosystem",
-          price: "₹60,000",
+          price: "$3,600",
           period: "one-time ($3,000 USD)",
           description: "Designed for large manufacturing conglomerates, multi-plant groups, and global industrial brands.",
           features: [
@@ -257,7 +257,7 @@ export default function ManufacturingWebPage() {
       faqs={[
         {
           question: "How much does a website for a manufacturing company cost?",
-          answer: "Our industrial manufacturing website packages start from ₹20,000 ($1,000 USD) for specialized machine shops up to ₹60,000 ($3,000 USD) for multi-plant manufacturing portals.",
+          answer: "Our industrial manufacturing website packages start from $1,200 USD for specialized machine shops up to $2,800 USD for multi-plant manufacturing portals.",
         },
         {
           question: "Can buyers upload 2D and 3D CAD drawings (STEP, DWG, PDF) for RFQ quotes?",

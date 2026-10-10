@@ -9,26 +9,26 @@ export const BUSINESS_INFO = {
   url: SITE_URL,
   logo: `${SITE_URL}/assets/images/logo.webp`,
   image: `${SITE_URL}/assets/images/hero-banner.webp`,
-  description: "Joy Digital is a premier Digital Agency & Next.js Web Development company based in Chennai, India. We engineer sub-second web applications, custom software, SEO, and Generative Engine Optimization (GEO) for global brands.",
+  description: "Joy Digital is a premier Next.js & Custom Web Development company based in Madurai, India. We engineer sub-second web applications, custom software, SEO, and Generative Engine Optimization (GEO) for global brands in the USA, UK, and UAE.",
   telephone: "+91-9080026133",
-  email: "saravanan061193@gmail.com",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in",
   address: {
     "@type": "PostalAddress",
-    "streetAddress": "RUBY SHOBHA CASTLE, 10D, Old Perungalathur",
-    "addressLocality": "Chennai",
+    "streetAddress": "Madurai",
+    "addressLocality": "Madurai",
     "addressRegion": "Tamil Nadu",
-    "postalCode": "600063",
+    "postalCode": "625001",
     "addressCountry": "IN"
   },
   geo: {
     "@type": "GeoCoordinates",
-    "latitude": 12.9256049,
-    "longitude": 80.0885059
+    "latitude": 9.9252,
+    "longitude": 78.1198
   },
   areaServed: [
+    { "@type": "City", "name": "Madurai" },
     { "@type": "City", "name": "Chennai" },
     { "@type": "City", "name": "Bangalore" },
-    { "@type": "City", "name": "Madurai" },
     { "@type": "State", "name": "Tamil Nadu" },
     { "@type": "Country", "name": "India" },
     { "@type": "Country", "name": "United States" },
@@ -40,10 +40,10 @@ export const BUSINESS_INFO = {
     { "@type": "AdministrativeArea", "name": "Worldwide" }
   ],
   sameAs: [
-    "https://www.joydigital.in",
-    "https://www.facebook.com/profile.php?id=61590372457559",
-    "https://www.youtube.com/@Joydigital2026",
     "https://www.linkedin.com/in/saravanan-l-34a861154/",
+    "https://share.google/BSniheS2qnzwqUKXU",
+    "https://www.youtube.com/@Joydigital2026",
+    "https://www.facebook.com/profile.php?id=61590372457559",
     "https://wa.me/919080026133"
   ],
   services: [

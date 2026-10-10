@@ -13,6 +13,7 @@ const BUSINESS_TYPE_OPTIONS = [
 
 export default function EnterpriseSeoLeadForm() {
   const router = useRouter();
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
@@ -58,7 +59,7 @@ export default function EnterpriseSeoLeadForm() {
         Name: formData.name.trim(),
         CompanyName: "N/A",
         Website: "N/A",
-        Email: "saravanan061193@gmail.com",
+        Email: contactEmail,
         Mobile: formData.mobile.trim(),
         Service: `Enterprise B2B SEO & GEO (${formData.businessType})`,
         Budget: "N/A",
@@ -122,7 +123,7 @@ export default function EnterpriseSeoLeadForm() {
       router.push(`/thank-you?${queryParams}`);
     } catch (err) {
       console.error(err);
-      alert("Enquiry delivery failed. Please email us at saravanan061193@gmail.com directly.");
+      alert(`Enquiry delivery failed. Please email us at ${contactEmail} directly.`);
     } finally {
       setIsLoading(false);
     }

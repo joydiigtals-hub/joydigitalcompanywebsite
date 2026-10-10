@@ -5,7 +5,7 @@ import EnterpriseSeoLeadForm from "@/components/ui/EnterpriseSeoLeadForm";
 
 export const metadata: Metadata = {
   title: "Enterprise B2B SEO Services & GEO Optimization | Joy Digital",
-  description: "Drive organic pipeline growth with Enterprise B2B SEO Services. We engineer Technical SEO Architectures and Generative Engine Optimization (GEO) strategies for global brands.",
+  description: "Enterprise B2B SEO services by Joy Digital. Technical SEO architecture, Core Web Vitals, and Generative Engine Optimization (GEO) for global brands.",
   keywords: [
     "Enterprise B2B SEO Services",
     "Generative Engine Optimization",
@@ -235,8 +235,12 @@ export default function SEOPage() {
       ]}
       schemaMarkup={pageSchema}
       crossLinks={[
+        { href: "/wordpress-to-nextjs-migration", label: "WordPress to Next.js SEO Migration" },
+        { href: "/travel-website-development", label: "Travel & Safari SEO" },
+        { href: "/ai-search-optimization", label: "Generative Engine Optimization (GEO)" },
+        { href: "/website-for-insurance-agents", label: "SEO for Insurance Agents" },
+        { href: "/website-for-solar-companies", label: "SEO for Solar Companies" },
         { href: "/static-website-development", label: "Enterprise Jamstack Development" },
-        { href: "/ai-search-optimization", label: "AI Search Optimization" },
         { href: "/local-seo-services", label: "Multi-Location Local SEO" },
       ]}
     />

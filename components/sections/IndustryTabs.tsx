@@ -7,56 +7,69 @@ import TrackedWaLink from "@/components/ui/TrackedWaLink";
 const INDUSTRIES = [
   {
     name: "Startups",
-    desc: "Fast, custom landing pages and scalable web structures to establish brand presence, validate features, and collect early customer registrations."
+    desc: "Fast, custom landing pages and scalable web structures to establish brand presence, validate features, and collect early customer registrations.",
+    pageUrl: "/landing-page-development",
   },
   {
     name: "Small Businesses",
-    desc: "Affordable multipage platforms to present your services clearly, set up call-to-actions, and start ranking for local search queries."
+    desc: "Affordable multipage platforms to present your services clearly, set up call-to-actions, and start ranking for local search queries.",
+    pageUrl: "/website-for-small-business",
   },
   {
-    name: "Entrepreneurs",
-    desc: "Clean digital portals and personal portfolios built quickly to showcase consultation models, book discovery slots, and accept details."
+    name: "Clean Energy & Solar",
+    desc: "High-speed B2B portals and local SEO for solar installers, EPC contractors, and clean energy developers across India and worldwide.",
+    pageUrl: "/website-for-solar-companies",
   },
   {
     name: "Professional Services",
-    desc: "Highly-trustworthy consulting platforms for legal advisors, accountants, and finance professionals to generate qualified booking leads."
+    desc: "Highly-trustworthy consulting platforms for legal advisors, accountants, and finance professionals to generate qualified booking leads.",
+    pageUrl: "/website-for-consulting-companies",
   },
   {
     name: "Real Estate",
-    desc: "Clean layout properties directories featuring localized maps, structured specifications lists, and quick WhatsApp callback triggers."
+    desc: "Clean layout properties directories featuring localized maps, structured specifications lists, and quick WhatsApp callback triggers.",
+    pageUrl: "/website-for-real-estate",
   },
   {
     name: "Hotels & Hospitality",
-    desc: "Responsive portal sites showcasing room configurations, amenity directories, and direct inquiry forms to reduce booking fees."
+    desc: "Responsive portal sites showcasing room configurations, amenity directories, and direct inquiry forms to reduce booking fees.",
+    pageUrl: "/website-for-hotels",
   },
   {
-    name: "Healthcare",
-    desc: "Fully responsive layouts for dental clinics, practitioners, and medical setups. Includes online scheduling details and mapping."
+    name: "Healthcare & Clinics",
+    desc: "Fully responsive layouts for dental clinics, practitioners, and medical setups. Includes online scheduling details and mapping.",
+    pageUrl: "/website-for-hospitals",
   },
   {
-    name: "Insurance",
-    desc: "Lead acquisition templates for independent agents to present policy features and capture structured advisor consultations."
+    name: "Insurance Advisors",
+    desc: "Dedicated website design & local SEO for insurance agents and LIC advisors in India to capture health, term, and NRI expat policy leads.",
+    pageUrl: "/website-for-insurance-agents",
   },
   {
-    name: "Education",
-    desc: "Professional portals for academies, tutor setups, and trainers featuring structured curricula maps and signup triggers."
+    name: "Education & Academies",
+    desc: "Professional portals for academies, tutor setups, and trainers featuring structured curricula maps and signup triggers.",
+    pageUrl: "/website-for-schools",
   },
   {
-    name: "Tours & Travel",
-    desc: "Vibrant custom packages directories with pricing tiers, scheduling guides, and quick inquiry buttons for travel setups."
+    name: "Tours & Safaris",
+    desc: "Vibrant custom packages directories with pricing tiers, scheduling guides, and quick inquiry buttons for global tour and safari setups.",
+    pageUrl: "/travel-website-development",
   },
   {
-    name: "E-commerce",
-    desc: "Next-gen storefronts pre-rendering static catalogs to load instantly on slow mobile connections, reducing checkout abandonment."
+    name: "Headless E-commerce",
+    desc: "Next-gen storefronts pre-rendering static catalogs to load instantly on slow mobile connections, reducing checkout abandonment.",
+    pageUrl: "/website-for-ecommerce",
   },
   {
-    name: "Local Businesses",
-    desc: "Localized search optimization setups combined with maps directory syncs to guarantee exposure in nearby queries."
-  }
+    name: "WordPress Migrations",
+    desc: "Zero-downtime migrations from slow WordPress PHP setups to high-speed serverless Next.js with 100% SEO redirect preservation.",
+    pageUrl: "/wordpress-to-nextjs-migration",
+  },
 ];
 
 export default function IndustryTabs() {
   const [selectedIndustry, setSelectedIndustry] = useState("Startups");
+  const currentIndustry = INDUSTRIES.find(i => i.name === selectedIndustry);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start reveal-hidden">
@@ -80,15 +93,24 @@ export default function IndustryTabs() {
         <span className="text-[10px] font-extrabold text-[#7C3AED] uppercase tracking-widest block mb-3">Target Industry Blueprint</span>
         <h3 className="text-2xl font-black text-[#1F1B2D] mb-4">Joy Digital for {selectedIndustry}</h3>
         <p className="text-sm text-[#6B6478] leading-relaxed font-semibold max-w-xl">
-          {INDUSTRIES.find(i => i.name === selectedIndustry)?.desc}
+          {currentIndustry?.desc}
         </p>
         <div className="mt-8 border-t border-[#E9E4F2] pt-6 flex flex-wrap gap-4 items-center">
+          {currentIndustry?.pageUrl && (
+            <TrackedLink
+              href={currentIndustry.pageUrl}
+              eventName={`View ${selectedIndustry} Page`}
+              className="bg-[#7C3AED] hover:bg-[#6D28D9] hover:scale-[1.03] transition-all text-white font-bold text-xs px-6 py-3 rounded-lg shadow-sm"
+            >
+              Explore {selectedIndustry} Blueprint &rarr;
+            </TrackedLink>
+          )}
           <TrackedLink
             href="#enquiry-section"
             eventName={`Start ${selectedIndustry} Project`}
-            className="bg-[#7C3AED] hover:bg-[#6D28D9] hover:scale-[1.03] transition-all text-white font-bold text-xs px-6 py-3 rounded-lg shadow-sm"
+            className="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs px-6 py-3 rounded-lg border border-slate-200 transition-colors"
           >
-            Start {selectedIndustry} Project
+            Request Proposal
           </TrackedLink>
           <TrackedWaLink
             href="https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20discuss%20our%20project."

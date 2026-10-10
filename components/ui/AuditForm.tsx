@@ -36,10 +36,10 @@ const GOAL_OPTIONS = [
 ];
 
 const BUDGET_OPTIONS = [
-  { value: "15k_30k", label: "₹15,000 - ₹30,000 (approx. $200 - $400)" },
-  { value: "30k_75k", label: "₹30,000 - ₹75,000 (approx. $400 - $1,000)" },
-  { value: "75k_1.5l", label: "₹75,000 - ₹1.5L (approx. $1,000 - $2,000)" },
-  { value: "above_1.5l", label: "Above ₹1.5L ($2,000+)" },
+  { value: "1200_2500", label: "$1,200 - $2,500 USD (Starter Project)" },
+  { value: "2500_5000", label: "$2,500 - $5,000 USD (Growth Platform)" },
+  { value: "5000_10000", label: "$5,000 - $10,000 USD (Custom Web App / Scaled SEO)" },
+  { value: "above_10000", label: "$10,000+ USD (Enterprise Architecture)" },
 ];
 
 const BUSINESS_TYPES = [

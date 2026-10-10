@@ -11,7 +11,7 @@ export default function PortfolioPage() {
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Portfolio: You & Me Voyage Travel Platform | Joy Digital",
-    description: "Explore our featured client project: You & Me Voyage. Discover how Joy Digital engineered a high-performance Next.js travel platform with sub-second speeds and direct conversion funnels.",
+    description: "Explore our client work: You & Me Voyage. See how Joy Digital built a high-speed Next.js travel platform with sub-second loads and direct bookings.",
     breadcrumbs: [
       { name: "Home", item: "https://joydigital.in" },
       { name: "Portfolio", item: canonicalUrl },

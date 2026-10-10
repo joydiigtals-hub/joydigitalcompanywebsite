@@ -1,57 +1,59 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
+import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Google Business Profile Optimization | Joy Digital",
-  description: "Joy Digital offers expert Google Business Profile optimization services. We audit, claim, optimize, and rank your local map listing in Google Maps.",
+  title: "Google Business Profile Optimization Services | Joy Digital",
+  description: "Expert Google Business Profile optimization to rank in Google Maps 3-Pack, gain local visibility, and generate phone calls with Joy Digital.",
   alternates: {
     canonical: "https://joydigital.in/google-business-profile-optimization",
   },
   openGraph: {
-    title: "Google Business Profile Optimization | Rank in Google Maps 3-Pack",
-    description: "Joy Digital offers expert Google Business Profile optimization services. We audit, claim, optimize, and rank your local map listing in Google Maps.",
+    title: "Google Business Profile Optimization Services | Joy Digital",
+    description: "Expert Google Business Profile optimization to rank in Google Maps 3-Pack, gain local visibility, and generate phone calls with Joy Digital.",
     url: "https://joydigital.in/google-business-profile-optimization",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Google Business Profile Optimization | Rank in Google Maps 3-Pack",
-    description: "Joy Digital offers expert Google Business Profile optimization services. We audit, claim, optimize, and rank your local map listing in Google Maps.",
-  }
+    title: "Google Business Profile Optimization Services | Joy Digital",
+    description: "Expert Google Business Profile optimization to rank in Google Maps 3-Pack, gain local visibility, and generate phone calls with Joy Digital.",
+  },
 };
 
-const pageSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Google Business Profile Optimization",
-  "serviceType": "Local SEO Services",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
-    "telephone": "+919080026133",
-    "priceRange": "₹₹",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Old Perungalathur",
-      "addressLocality": "Madurai",
-      "addressRegion": "Tamil Nadu",
-      "postalCode": "600063",
-      "addressCountry": "IN"
-    }
+const GBP_FAQS = [
+  {
+    question: "Why is Google Business Profile optimization essential for local businesses?",
+    answer: "When local customers search for services near them, Google shows the top 3 Google Business Profiles in the Local 3-Pack above regular website results. Optimizing your categories, primary services, geotagged photos, and review signals drives direct phone calls and map directions.",
   },
-  "description": "Premium Google Business Profile optimization and setup services. We resolve suspensions, write optimized descriptions, and build citations to boost map packs rankings.",
-  "offers": {
-    "@type": "AggregateOffer",
-    "priceCurrency": "INR",
-    "lowPrice": "5000",
-    "highPrice": "15000",
-    "offerCount": "2"
-  }
-};
+  {
+    question: "Why was my Google Business Profile suspended and can you reinstate it?",
+    answer: "Suspensions usually happen due to policy compliance triggers like address mismatches, keyword stuffing in business names, or virtual office citations. We audit your listing details, resolve compliance issues with official documentation, and manage the reinstatement appeal with Google support.",
+  },
+  {
+    question: "How long does verification take for a new or reclaimed listing?",
+    answer: "Verification methods include video verification, phone OTP, email, or postcard verification. Instant phone and email verifications complete within minutes, while postal verification typically takes 7 to 14 business days.",
+  },
+];
 
 export default function GoogleBusinessProfilePage() {
+  const pageGraphSchema = buildPageGraphSchema({
+    url: "https://joydigital.in/google-business-profile-optimization",
+    title: "Google Business Profile Optimization Services | Joy Digital",
+    description: "Expert Google Business Profile optimization to rank in Google Maps 3-Pack, gain local visibility, and generate phone calls with Joy Digital.",
+    breadcrumbs: [
+      { name: "Home", item: "https://joydigital.in" },
+      { name: "Google Business Profile Optimization", item: "https://joydigital.in/google-business-profile-optimization" },
+    ],
+    service: {
+      name: "Google Business Profile Optimization",
+      description: "Expert Google Business Profile audit, suspension reinstatement, category optimization, and local map pack ranking services.",
+      serviceType: "Local SEO & Google Maps Optimization",
+    },
+    faqs: GBP_FAQS,
+  });
+
   return (
     <ServicePageTemplate
       serviceName="Google Business Profile Optimization"
@@ -174,21 +176,12 @@ export default function GoogleBusinessProfilePage() {
           ctaText: "Choose Premium Plan",
         },
       ]}
-      faqs={[
-        {
-          question: "Why was my Google Business Profile suspended?",
-          answer: "Suspensions happen due to guideline violations (like keyword stuffing the name, using fake addresses, or creating multiple listings). We audit your listing details, fix compliance issues, and manage the reinstatement appeal.",
-        },
-        {
-          question: "How long does verification take?",
-          answer: "Google verifies profiles via video recording, phone, email, or postcard. Phone/email verification happens instantly. Postcards take 7 to 14 business days to arrive in Chennai.",
-        },
-      ]}
-      schemaMarkup={pageSchema}
+      faqs={GBP_FAQS}
+      schemaMarkup={pageGraphSchema}
       crossLinks={[
-        { href: "/seo-services-in-chennai", label: "SEO Services Chennai" },
-        { href: "/website-design-company-in-chennai", label: "Web Design Chennai" },
-        { href: "/website-development-company-chennai", label: "website development in Chennai" },
+        { href: "/local-seo-services", label: "Local SEO Services" },
+        { href: "/seo-services-chennai", label: "SEO Services Chennai" },
+        { href: "/website-development-company-madurai", label: "Web Development Madurai" },
       ]}
     />
   );

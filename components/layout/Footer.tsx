@@ -32,6 +32,8 @@ export default function Footer() {
     return path;
   };
 
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
+
   return (
     <footer className="bg-[#FAFAFA] text-text-primary border-t border-[#E5E7EB] pt-20 pb-8 mt-auto">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 border-b border-[#E5E7EB] pb-16">
@@ -108,7 +110,7 @@ export default function Footer() {
               <i className="fa-brands fa-linkedin-in"></i>
             </a>
             <a
-              href="mailto:saravanan061193@gmail.com"
+              href={`mailto:${contactEmail}`}
               className="w-10 h-10 rounded bg-[#E5E7EB]/50 border border-[#E5E7EB] flex items-center justify-center text-text-secondary hover:bg-accent hover:text-white transition-all duration-300"
               aria-label="Email"
               title="Send Email to Joy Digital"
@@ -143,49 +145,16 @@ export default function Footer() {
               <Link href="/website-design-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">Web Design Madurai</Link>
             </li>
             <li>
-              <Link href="/website-design-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">Website Design Madurai</Link>
-            </li>
-            <li>
-              <Link href="/web-development-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">Web Development Madurai</Link>
-            </li>
-            <li>
-              <Link href="/website-development-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">Website Dev Agency Madurai</Link>
-            </li>
-            <li>
-              <Link href="/affordable-web-design-agency-chennai" className="hover:text-accent hover:pl-1 transition-all block">Affordable Web Design Madurai</Link>
-            </li>
-            <li>
-              <Link href="/seo-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">SEO Agency Madurai</Link>
+              <Link href="/website-development-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">Web Development Madurai</Link>
             </li>
             <li>
               <Link href="/seo-services-madurai" className="hover:text-accent hover:pl-1 transition-all block">SEO Services Madurai</Link>
             </li>
             <li>
-              <Link href="/seo-services-madurai" className="hover:text-accent hover:pl-1 transition-all block">SEO Company Madurai</Link>
+              <Link href="/seo-services-chennai" className="hover:text-accent hover:pl-1 transition-all block">SEO Services Chennai</Link>
             </li>
             <li>
-              <Link href="/digital-marketing-agency-madurai" className="hover:text-accent hover:pl-1 transition-all block">Digital Marketing Madurai</Link>
-            </li>
-            <li>
-              <Link href="/website-design-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">Web Design Madurai</Link>
-            </li>
-            <li>
-              <Link href="/web-development-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">Web Development Madurai</Link>
-            </li>
-            <li>
-              <Link href="/website-development-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">Website Dev Agency Madurai</Link>
-            </li>
-            <li>
-              <Link href="/seo-company-madurai" className="hover:text-accent hover:pl-1 transition-all block">SEO Services Madurai</Link>
-            </li>
-            <li>
-              <Link href="/seo-services-madurai" className="hover:text-accent hover:pl-1 transition-all block">SEO Agency Madurai</Link>
-            </li>
-            <li>
-              <Link href="/digital-marketing-agency-madurai" className="hover:text-accent hover:pl-1 transition-all block">Digital Marketing Madurai</Link>
-            </li>
-            <li>
-              <Link href="/local-seo-madurai" className="hover:text-accent hover:pl-1 transition-all block">Local SEO Madurai</Link>
+              <Link href="/digital-marketing-agency-in-chennai" className="hover:text-accent hover:pl-1 transition-all block">Digital Marketing Chennai</Link>
             </li>
             <li>
               <Link href="/website-design-company-coimbatore" className="hover:text-accent hover:pl-1 transition-all block">Web Design Coimbatore</Link>
@@ -446,7 +415,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2">
               <span className="text-accent"><i className="fa-solid fa-envelope" /></span>
-              <a href="mailto:saravanan061193@gmail.com" className="hover:text-accent text-[#111827] font-medium transition-colors">saravanan061193@gmail.com</a>
+              <a href={`mailto:${contactEmail}`} className="hover:text-accent text-[#111827] font-medium transition-colors">{contactEmail}</a>
             </li>
           </ul>
           <div className="w-full h-44 rounded-xl overflow-hidden border border-[#E5E7EB] shadow-sm mt-1">

@@ -10,8 +10,8 @@ import { getAllPosts } from "@/lib/blog";
 import { getPersonEntity, getOrganizationEntity, SITE_URL } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Saravanan L - Technical Web Specialist & Founder | Joy Digital",
-  description: "Explore technical web development guides, SEO strategies, and custom Next.js engineering articles written by Saravanan L, Founder & Technical Web Specialist at Joy Digital.",
+  title: "Saravanan L | Web Specialist & Founder | Joy Digital",
+  description: "Technical web development and SEO guides written by Saravanan L, Founder & Technical Web Specialist at Joy Digital.",
   keywords: [
     "Saravanan L",
     "Technical Web Specialist",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: "https://joydigital.in/author/saravanan",
   },
   openGraph: {
-    title: "Saravanan L - Technical Web Specialist & Founder | Joy Digital",
+    title: "Saravanan L | Web Specialist & Founder | Joy Digital",
     description: "Technical web specialist focusing on sub-second Next.js web applications, Generative Engine Optimization (GEO), and data-driven organic search marketing.",
     url: "https://joydigital.in/author/saravanan",
   },
@@ -40,6 +40,8 @@ export default async function AuthorSaravananPage() {
         post.authorName?.toLowerCase().includes("saravanan") ||
         !post.author)
   );
+
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
 
   const profilePageSchema = {
     "@context": "https://schema.org",
@@ -109,7 +111,7 @@ export default async function AuthorSaravananPage() {
                     <i className="fa-brands fa-linkedin-in text-base" />
                   </a>
                   <a
-                    href="mailto:saravanan061193@gmail.com"
+                    href={`mailto:${contactEmail}`}
                     className="w-10 h-10 rounded-full bg-light-bg hover:bg-accent hover:text-white border border-[#E5E7EB] text-text-secondary flex items-center justify-center transition-all duration-300 shadow-sm"
                     title="Send Direct Email"
                   >

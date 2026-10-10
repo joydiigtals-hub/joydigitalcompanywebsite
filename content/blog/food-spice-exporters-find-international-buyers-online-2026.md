@@ -1,4 +1,4 @@
-Ôªø---
+---
 title: 'How Food & Spice Exporters Can Find More International Buyers Online in 2026'
 description: 'Discover how food and spice exporters can attract international buyers online in 2026. Learn key strategies for export websites, product pages, international SEO, trust signals, and lead generation.'
 date: '2026-09-07'
@@ -136,7 +136,7 @@ This also gives your website more opportunities to rank for specific Google sear
 
 Search Engine Optimization can help your website appear when potential buyers search for products and suppliers.
 
-Instead of targeting only broad keywords like **‚Äúspice exporter‚Äù**, create content around specific buyer searches such as:
+Instead of targeting only broad keywords like **ìspice exporterî**, create content around specific buyer searches such as:
 
 * Spice exporters from India
 * Bulk turmeric suppliers
@@ -233,7 +233,7 @@ Ready to transform your export company website and win more international trade 
 * **Agency Name:** Joy Digital Growth Agency
 * **Phone / Call Support:** [+91 90800 26133](tel:+919080026133)
 * **WhatsApp Chat:** [Chat on WhatsApp (+91 90800 26133)](https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20get%20more%20details%20about%20export%20website%20development.)
-* **Email:** [saravanan061193@gmail.com](mailto:saravanan061193@gmail.com)
+* **Email:** [contact@joydigital.in](mailto:contact@joydigital.in)
 * **Office Address:** Tamil Nadu, India
 * **Website & Consultation:** [Request a Free Export Website Quote](https://joydigital.in/contact?service=Website%20for%20Export%20%26%20Import)
 

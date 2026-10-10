@@ -6,21 +6,8 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://joydigital.in"),
-  title: "Next.js & Custom Web Development Agency | Joy Digital",
-  description: "Joy Digital builds sub-second Next.js web applications and custom sites for global businesses in the US, UK & UAE. Get your free website audit today!",
-  keywords: [
-    "Next.js Development Agency",
-    "Custom Web Development Company",
-    "React Web Engineering",
-    "Full-Stack Web Development",
-    "High-Converting Landing Pages",
-    "Offshore Web Development Partner",
-    "Sub-Second Fast Websites",
-    "Travel & Safari Website Platform",
-    "Headless CMS Development",
-    "WordPress to Next.js Migration",
-    "B2B Web Development"
-  ],
+  title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
+  description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
   authors: [{ name: "Joy Digital", url: "https://joydigital.in" }],
   publisher: "Joy Digital",
   robots: {
@@ -57,21 +44,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://joydigital.in",
     siteName: "Joy Digital",
-    title: "Next.js & Custom Web Development Agency | Joy Digital",
-    description: "Joy Digital builds sub-second Next.js web applications and custom sites for global businesses in the US, UK & UAE. Get your free website audit today!",
+    title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
+    description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
     images: [
       {
         url: "https://joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
-        alt: "Joy Digital - Next.js & Custom Web Development Agency",
+        alt: "Joy Digital - Next.js Development Company India",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Next.js & Custom Web Development Agency | Joy Digital",
-    description: "Joy Digital builds sub-second Next.js web applications and custom sites for global businesses in the US, UK & UAE. Get your free website audit today!",
+    title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
+    description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
     images: ["https://joydigital.in/assets/images/hero-banner.webp"],
     creator: "@joydigital",
   },
@@ -80,8 +67,8 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const homeGraph = buildPageGraphSchema({
     url: "https://joydigital.in/",
-    title: "Next.js & Custom Web Development Agency | Joy Digital",
-    description: "Joy Digital builds sub-second Next.js web applications and custom sites for global businesses in the US, UK & UAE. Get your free website audit today!",
+    title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
+    description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
     isHomepage: true,
     faqs: HOME_FAQS,
   });

@@ -27,26 +27,50 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      { source: "/affordable-web-design-agency-chennai", destination: "/", permanent: true },
-      { source: "/digital-marketing-agency-in-chennai", destination: "/", permanent: true },
-      { source: "/digital-marketing-agency-madurai", destination: "/", permanent: true },
-      { source: "/local-seo-madurai", destination: "/", permanent: true },
-      { source: "/local-seo-services", destination: "/", permanent: true },
-      { source: "/seo-company-chennai", destination: "/", permanent: true },
-      { source: "/seo-company-coimbatore", destination: "/", permanent: true },
-      { source: "/seo-company-madurai", destination: "/", permanent: true },
-      { source: "/seo-services-chennai", destination: "/", permanent: true },
-      { source: "/seo-services-in-chennai", destination: "/", permanent: true },
-      { source: "/seo-services-madurai", destination: "/", permanent: true },
-      { source: "/web-development-company-chennai", destination: "/", permanent: true },
-      { source: "/web-development-company-in-chennai", destination: "/", permanent: true },
-      { source: "/web-development-company-madurai", destination: "/", permanent: true },
-      { source: "/website-design-company-chennai", destination: "/", permanent: true },
-      { source: "/website-design-company-coimbatore", destination: "/", permanent: true },
-      { source: "/website-design-company-in-chennai", destination: "/", permanent: true },
-      { source: "/website-design-company-madurai", destination: "/", permanent: true },
-      { source: "/website-development-company-chennai", destination: "/", permanent: true },
-      { source: "/website-development-company-madurai", destination: "/", permanent: true },
+      // 1. Host-level 301 redirect: www.joydigital.in -> https://joydigital.in
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.joydigital.in",
+          },
+        ],
+        destination: "https://joydigital.in/:path*",
+        permanent: true,
+      },
+
+      // 2. Chennai SEO: keep /seo-services-chennai
+      { source: "/seo-services-in-chennai", destination: "/seo-services-chennai", permanent: true },
+      { source: "/seo-company-chennai", destination: "/seo-services-chennai", permanent: true },
+
+      // 3. Madurai Web Development: keep /website-development-company-madurai
+      { source: "/web-development-company-madurai", destination: "/website-development-company-madurai", permanent: true },
+      { source: "/web-development-company-in-madurai", destination: "/website-development-company-madurai", permanent: true },
+      { source: "/website-development-madurai", destination: "/website-development-company-madurai", permanent: true },
+
+      // 4. Madurai Web Design: keep /website-design-company-madurai
+      { source: "/website-design-company-in-madurai", destination: "/website-design-company-madurai", permanent: true },
+
+      // 5. Duplicate e-commerce landing page
+      { source: "/website-for-e-commerce-stores", destination: "/website-for-ecommerce", permanent: true },
+
+      // 6. Regional URL consolidation & legacy redirects
+      { source: "/web-development-company-in-chennai", destination: "/website-development-company-chennai", permanent: true },
+      { source: "/web-development-company-chennai", destination: "/website-development-company-chennai", permanent: true },
+      { source: "/website-development-chennai", destination: "/website-development-company-chennai", permanent: true },
+      { source: "/website-design-company-in-chennai", destination: "/website-development-company-chennai", permanent: true },
+      { source: "/affordable-web-design-agency-chennai", destination: "/website-development-company-chennai", permanent: true },
+
+      { source: "/seo-company-madurai", destination: "/seo-services-madurai", permanent: true },
+      { source: "/seo-services-in-madurai", destination: "/seo-services-madurai", permanent: true },
+      { source: "/digital-marketing-agency-in-madurai", destination: "/seo-services-madurai", permanent: true },
+      { source: "/digital-marketing-agency-madurai", destination: "/seo-services-madurai", permanent: true },
+      { source: "/local-seo-madurai", destination: "/seo-services-madurai", permanent: true },
+
+      { source: "/website-development-coimbatore", destination: "/website-design-company-coimbatore", permanent: true },
+      { source: "/web-development-company-coimbatore", destination: "/website-design-company-coimbatore", permanent: true },
+      { source: "/seo-company-coimbatore", destination: "/website-design-company-coimbatore", permanent: true },
 
       {
         source: "/free-audit",
@@ -111,51 +135,6 @@ const nextConfig: NextConfig = {
       {
         source: "/website-development-uk",
         destination: "/website-development",
-        permanent: true,
-      },
-      {
-        source: "/website-development-chennai",
-        destination: "/website-development-company-chennai",
-        permanent: true,
-      },
-      {
-        source: "/website-development-madurai",
-        destination: "/website-development-company-madurai",
-        permanent: true,
-      },
-      {
-        source: "/website-development-coimbatore",
-        destination: "/website-design-company-coimbatore",
-        permanent: true,
-      },
-      {
-        source: "/web-development-company-coimbatore",
-        destination: "/website-design-company-coimbatore",
-        permanent: true,
-      },
-      {
-        source: "/web-development-company-in-chennai",
-        destination: "/website-development-company-chennai",
-        permanent: true,
-      },
-      {
-        source: "/website-design-company-in-madurai",
-        destination: "/website-development-company-madurai",
-        permanent: true,
-      },
-      {
-        source: "/web-development-company-in-madurai",
-        destination: "/website-development-company-madurai",
-        permanent: true,
-      },
-      {
-        source: "/seo-services-in-madurai",
-        destination: "/seo-services-madurai",
-        permanent: true,
-      },
-      {
-        source: "/digital-marketing-agency-in-madurai",
-        destination: "/seo-services-madurai",
         permanent: true,
       },
       {

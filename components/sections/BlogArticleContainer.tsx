@@ -210,7 +210,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
           <div className="w-10 h-10 rounded-full bg-primary/10 border border-primary-light/20 text-primary font-bold text-sm flex items-center justify-center overflow-hidden shrink-0">
             {post.authorImage && post.authorImage.startsWith("/") || post.authorImage?.startsWith("http") ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={post.authorImage} alt={post.authorName || post.author} className="w-full h-full object-cover" />
+              <img src={post.authorImage} alt={post.authorName || post.author} width={40} height={40} className="w-full h-full object-cover" />
             ) : (
               (post.authorName || post.author || "J").charAt(0)
             )}
@@ -355,7 +355,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
               <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary-light/20 text-primary font-black text-xl flex items-center justify-center overflow-hidden shrink-0">
                 {post.authorImage && (post.authorImage.startsWith("/") || post.authorImage.startsWith("http")) ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={post.authorImage} alt={post.authorName || post.author} className="w-full h-full object-cover" />
+                  <img src={post.authorImage} alt={post.authorName || post.author} width={56} height={56} className="w-full h-full object-cover" />
                 ) : (
                   (post.authorName || post.author || "J").charAt(0)
                 )}
@@ -422,9 +422,39 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
         <section className="mt-20 border-t border-[#E9E4F2] pt-16">
-          <div className="text-left mb-10 select-none">
-            <span className="text-[10px] font-black text-primary uppercase tracking-widest block mb-2">Recommended</span>
-            <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">You May Also Like</h3>
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 select-none gap-4">
+            <div className="text-left">
+              <span className="text-[10px] font-black text-primary uppercase tracking-widest block mb-2">Related Articles</span>
+              <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">Further Reading & Case Insights</h3>
+            </div>
+            {(() => {
+              const cat = (post.category || "").toLowerCase();
+              let service = { href: "/website-development", label: "Custom Next.js Web Development" };
+              if (cat.includes("travel") || cat.includes("safari")) {
+                service = { href: "/travel-website-development", label: "Travel & Safari Web Development" };
+              } else if (cat.includes("speed") || cat.includes("migration")) {
+                service = { href: "/wordpress-to-nextjs-migration", label: "WordPress to Next.js Migration" };
+              } else if (cat.includes("local") || cat.includes("map")) {
+                service = { href: "/local-seo-services", label: "Local SEO & Google Maps Optimization" };
+              } else if (cat.includes("seo") || cat.includes("geo")) {
+                service = { href: "/seo-services", label: "Enterprise SEO & GEO Optimization" };
+              } else if (cat.includes("commerce") || cat.includes("store")) {
+                service = { href: "/website-for-ecommerce", label: "Headless Next.js E-Commerce" };
+              } else if (cat.includes("design") || cat.includes("ui")) {
+                service = { href: "/web-design-services", label: "Custom UI/UX & Web Design" };
+              } else if (cat.includes("real estate")) {
+                service = { href: "/website-for-real-estate", label: "Real Estate Web Development & SEO" };
+              }
+              return (
+                <Link
+                  href={service.href}
+                  className="text-xs font-bold text-primary hover:text-primary-light flex items-center gap-1.5 self-start sm:self-auto bg-primary/5 hover:bg-primary/10 border border-primary/15 px-4 py-2 rounded-xl transition-all"
+                >
+                  <span>Explore Service: <strong>{service.label}</strong></span>
+                  <i className="fa-solid fa-arrow-right-long text-[10px]" />
+                </Link>
+              );
+            })()}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left related-cards-grid reveal-hidden">

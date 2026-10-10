@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
   const canonicalUrl = "https://joydigital.in/contact";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
@@ -137,7 +138,7 @@ export default function ContactPage() {
 
                 {/* Email Card */}
                 <a
-                  href="mailto:saravanan061193@gmail.com"
+                  href={`mailto:${contactEmail}`}
                   className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-accent/30 transition-all duration-300"
                   title="Email Us"
                 >
@@ -148,7 +149,7 @@ export default function ContactPage() {
                     <div className="flex flex-col">
                       <span className="text-[10px] font-bold text-text-muted uppercase">Send Email</span>
                       <span className="text-sm font-bold text-primary-dark mt-0.5 group-hover:text-accent transition-colors">
-                        saravanan061193@gmail.com
+                        {contactEmail}
                       </span>
                     </div>
                   </div>

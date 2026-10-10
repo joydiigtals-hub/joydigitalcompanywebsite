@@ -10,7 +10,7 @@ export default function InvoiceGeneratorPage() {
   const canonicalUrl = "https://joydigital.in/invoice-generator";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
-    title: "Free Invoice Generator Online | Create & Print PDF Invoices | Joy Digital",
+    title: "Free Invoice Generator Online | PDF Invoices | Joy Digital",
     description: "Create professional GST invoices online for free. Download or print PDF invoices instantly with custom company details, line items, and tax calculations.",
     breadcrumbs: [
       { name: "Home", item: "https://joydigital.in" },

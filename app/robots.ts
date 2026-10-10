@@ -23,11 +23,8 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/', '/thank-you'],
       },
     ],
-    sitemap: [
-      'https://www.joydigital.in/sitemap.xml',
-      'https://joydigital.in/sitemap.xml',
-    ],
-    host: 'https://www.joydigital.in',
+    sitemap: 'https://joydigital.in/sitemap.xml',
+    host: 'https://joydigital.in',
   };
 }
 

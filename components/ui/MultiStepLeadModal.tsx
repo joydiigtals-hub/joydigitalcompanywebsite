@@ -50,6 +50,7 @@ export default function MultiStepLeadModal({
   source = "Hero Ultra-Lean Capture",
 }: MultiStepLeadModalProps) {
   const router = useRouter();
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
   const pathname = usePathname();
 
   const [step, setStep] = useState<1 | 2>(1);
@@ -157,7 +158,7 @@ export default function MultiStepLeadModal({
       router.push(`/thank-you?${params}`);
     } catch (err) {
       console.error("Modal form submit error:", err);
-      alert("Something went wrong. Please reach us at saravanan061193@gmail.com directly.");
+      alert(`Something went wrong. Please reach us at ${contactEmail} directly.`);
     } finally {
       setIsSubmitting(false);
     }

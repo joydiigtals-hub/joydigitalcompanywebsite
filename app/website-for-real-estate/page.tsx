@@ -6,7 +6,7 @@ import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Real Estate Website Design & Property Lead SEO | Joy Digital",
-  description: "High-converting website design & digital marketing for real estate developers, property brokers, luxury builders, and NRI property consultants. Features property portals, virtual 3D tour embeds, and real estate SEO.",
+  description: "Custom website design and SEO for real estate brokers and developers. Fast property listings, NRI buyer inquiry funnels, and local SEO.",
   keywords: [
     "Real Estate Website Development",
     "Real Estate Web Design",
@@ -38,7 +38,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Global Hub",
@@ -51,7 +51,7 @@ const pageSchema = {
       "description": "Custom web design for real estate developers, property agencies, luxury villa builders, and NRI investment advisories. Features property listing directories, site visit booking forms, RERA disclosures, and search optimization.",
       "offers": {
         "@type": "AggregateOffer",
-        "priceCurrency": "INR",
+        "priceCurrency": "USD",
         "lowPrice": "20000",
         "highPrice": "55000",
         "offerCount": "2"
@@ -215,7 +215,7 @@ export default async function RealEstateWebPage() {
       pricingTiers={[
         {
           name: "Broker & Agency Plan",
-          price: "₹20,000",
+          price: "$1,200",
           period: "one-time ($1,000 USD)",
           description: "Ideal for real estate brokers, property consultancy agencies, and individual property advisors.",
           features: [
@@ -232,7 +232,7 @@ export default async function RealEstateWebPage() {
         },
         {
           name: "Grand Builder & Developer Portal",
-          price: "₹55,000",
+          price: "$2,800",
           period: "one-time ($2,600 USD)",
           description: "Recommended for real estate builders, multi-project developers, and luxury property groups.",
           isPopular: true,
@@ -252,7 +252,7 @@ export default async function RealEstateWebPage() {
       faqs={[
         {
           question: "How much does a website for a real estate business cost?",
-          answer: "Our real estate website packages start from ₹20,000 ($1,000 USD) for property brokers up to ₹55,000 ($2,600 USD) for grand builder and developer project portals.",
+          answer: "Our real estate website packages start from $1,200 USD for property brokers up to $2,800 USD for grand builder and developer project portals.",
         },
         {
           question: "Can homebuyers schedule site visits or request cab pickups online?",

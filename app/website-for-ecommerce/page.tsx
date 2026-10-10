@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: "Custom E-Commerce Website Development | Joy Digital",
   description: "Fast Next.js E-commerce websites built for high conversions, payment gateway integration, and SEO. Scale your online store today with Joy Digital!",
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-ecommerce",
+    canonical: "https://joydigital.in/website-for-ecommerce",
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-ecommerce",
+    url: "https://joydigital.in/website-for-ecommerce",
     title: "Custom E-Commerce Website Development | Joy Digital",
     description: "Fast Next.js E-commerce websites built for high conversions, payment gateway integration, and SEO. Scale your online store today with Joy Digital!",
     images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Custom E-Commerce Website Development Joy Digital" }],

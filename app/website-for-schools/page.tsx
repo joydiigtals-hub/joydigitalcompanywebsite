@@ -7,20 +7,20 @@ export const metadata: Metadata = {
   title: "School Website Design & Development Services | Joy Digital",
   description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-schools",
+    canonical: "https://joydigital.in/website-for-schools",
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-schools",
+    url: "https://joydigital.in/website-for-schools",
     title: "School Website Design & Development Services | Joy Digital",
     description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "School Website Design Joy Digital" }],
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "School Website Design Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "School Website Design & Development Services | Joy Digital",
     description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -38,7 +38,7 @@ const pageSchema = {
         "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://joydigital.in",
-        "priceRange": "₹₹",
+        "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -51,7 +51,7 @@ const pageSchema = {
       "description": "Custom web design for international schools, private K-12 academies, universities, and coaching institutes. Features online admission application forms, fee schedule downloads, campus galleries, and educational SEO.",
       "offers": {
         "@type": "AggregateOffer",
-        "priceCurrency": "INR",
+        "priceCurrency": "USD",
         "lowPrice": "18000",
         "highPrice": "45000",
         "offerCount": "2"
@@ -210,7 +210,7 @@ export default function SchoolWebPage() {
       pricingTiers={[
         {
           name: "Play School & Academy Plan",
-          price: "₹18,000",
+          price: "$1,200",
           period: "one-time ($900 USD)",
           description: "Ideal for pre-schools, Montessori academies, day care centers, and specialized coaching institutes.",
           features: [
@@ -227,7 +227,7 @@ export default function SchoolWebPage() {
         },
         {
           name: "Grand International School Portal",
-          price: "₹45,000",
+          price: "$2,400",
           period: "one-time ($2,200 USD)",
           description: "Recommended for K-12 international schools, IB/IGCSE academies, and higher education institutes.",
           isPopular: true,
@@ -246,7 +246,7 @@ export default function SchoolWebPage() {
       faqs={[
         {
           question: "How much does a website for a school cost?",
-          answer: "Our school website packages start from ₹18,000 ($900 USD) for pre-schools up to ₹45,000 ($2,200 USD) for international K-12 school portals.",
+          answer: "Our school website packages start from $1,200 USD for pre-schools up to $2,800 USD for international K-12 school portals.",
         },
         {
           question: "Can parents submit admission inquiry forms and download prospectus PDFs online?",

@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import AfricaTourismClientPage from "./AfricaTourismClientPage";
 
 export const metadata: Metadata = {
-  title: "Custom Tourism Website Development for African Businesses | Joy Digital",
-  description: "Joy Digital builds modern, fast, and conversion-focused custom tourism websites for African tour operators, safari companies, lodges, hotels, and DMCs targeting international travellers worldwide.",
+  title: "Tourism Website Development Africa | Joy Digital",
+  description: "Custom tourism and safari websites for African tour operators and lodges. Fast Next.js platforms to drive direct international bookings.",
   keywords: [
     "tourism website development Africa",
     "African tourism website development",

@@ -1,59 +1,47 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
+import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Insurance Agent Website Design & Lead Generation SEO | Joy Digital",
-  description: "High-converting website design & digital marketing for insurance agents, financial advisors, and insurance brokerages. NRI insurance leads, premium calculators, and financial SEO.",
+  title: "SEO and Website for Insurance Agents in India | Joy Digital",
+  description: "Custom website design & local SEO for insurance agents in India. Rank on Google, generate policy leads, and build client trust with Joy Digital.",
   alternates: {
     canonical: "https://joydigital.in/website-for-insurance-agents",
   },
   openGraph: {
     type: "website",
     url: "https://joydigital.in/website-for-insurance-agents",
-    title: "Insurance Agent Website Design & NRI Expat Lead Generation | Joy Digital",
-    description: "Ultra-fast Next.js website design for insurance advisors, wealth consultants, and financial planners. Premium quote estimators, NRI expat health & term insurance forms, and local SEO.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Insurance Agent Website Design Joy Digital" }],
+    title: "SEO and Website for Insurance Agents in India | Joy Digital",
+    description: "Custom website design & local SEO for insurance agents in India. Rank on Google, generate policy leads, and build client trust with Joy Digital.",
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "SEO and Website for Insurance Agents in India Joy Digital" }],
   },
 };
 
-const pageSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Service",
-      "@id": "https://joydigital.in/website-for-insurance-agents#service",
-      "name": "Insurance Agent Website Design & Financial SEO",
-      "serviceType": "Insurance Web Development & Financial Advisor Marketing",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
-        "telephone": "+919080026133",
-        "url": "https://joydigital.in",
-        "priceRange": "₹₹",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Old Perungalathur",
-          "addressLocality": "Madurai",
-          "addressRegion": "Tamil Nadu",
-          "postalCode": "600063",
-          "addressCountry": "IN"
-        }
-      },
-      "description": "Custom web design for insurance agents, LIC advisors, health insurance brokers, and wealth planners. Features instant premium quote forms, NRI health/term policy pages, and search optimization.",
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "INR",
-        "lowPrice": "15000",
-        "highPrice": "38000",
-        "offerCount": "2"
-      }
-    }
-  ]
-};
+const INSURANCE_FAQS = [
+  {
+    question: "Why do insurance agents in India need a dedicated website and SEO?",
+    answer: "Most policy buyers in India search Google before purchasing health, term, or life policies. A dedicated website with local SEO establishes financial credibility, showcases your IRDAI credentials, and captures inbound leads directly instead of relying solely on cold calls or referral networks.",
+  },
+  {
+    question: "How does local SEO help insurance advisors rank on Google Maps?",
+    answer: "We optimize your Google Business Profile and local landing pages for high-intent keywords like 'Health insurance agent near me', 'LIC advisor in [City]', and 'Star Health consultant'. This puts your business directly in the Google Maps 3-Pack where local customers call you first.",
+  },
+  {
+    question: "Can prospective clients calculate policy premiums and submit quotes online?",
+    answer: "Yes. We build interactive premium quote estimators where clients select sum assured, age bracket, and policy type (health, life, motor) which delivers their inquiry directly to your phone and WhatsApp.",
+  },
+  {
+    question: "Can the website help attract NRI clients for policies in India?",
+    answer: "Yes. We engineer dedicated NRI insurance landing pages optimized for overseas searches by non-resident Indians looking for parents' health insurance, term plans, and tax savings under 80C/80D in India.",
+  },
+  {
+    question: "What is the cost of website design and SEO for insurance agents in India?",
+    answer: "Our website and SEO packages for Indian insurance advisors start from $1,200 USD for individual advisors up to $2,800 USD for multi-branch brokerages with full calculator workflows and local SEO setup.",
+  },
+];
 
 export default async function InsuranceWebPage() {
   const post1 = await getPostBySlug("insurance-agent-website-ai-lead-generation");
@@ -61,11 +49,27 @@ export default async function InsuranceWebPage() {
   const post3 = await getPostBySlug("local-seo-tips-for-small-businesses");
   const relatedBlogPosts = [post1, post2, post3].filter((p): p is NonNullable<typeof p> => p !== null);
 
+  const pageGraphSchema = buildPageGraphSchema({
+    url: "https://joydigital.in/website-for-insurance-agents",
+    title: "SEO and Website for Insurance Agents in India | Joy Digital",
+    description: "Custom website design & local SEO for insurance agents in India. Rank on Google, generate policy leads, and build client trust with Joy Digital.",
+    breadcrumbs: [
+      { name: "Home", item: "https://joydigital.in" },
+      { name: "Website for Insurance Agents", item: "https://joydigital.in/website-for-insurance-agents" },
+    ],
+    service: {
+      name: "SEO and Website for Insurance Agents in India",
+      description: "Custom website design & local SEO for insurance agents, LIC advisors, and brokers in India.",
+      serviceType: "Insurance Web Development & SEO",
+    },
+    faqs: INSURANCE_FAQS,
+  });
+
   return (
     <ServicePageTemplate
       serviceName="Website for Insurance Agents"
-      heroTitle="High-Converting Website Design & SEO for Insurance Agents & Financial Advisors"
-      heroSubtitle="Generate qualified health, term, vehicle, and NRI expat insurance leads 24/7. We engineer fast, trustworthy Next.js websites for insurance brokers, financial advisors, wealth managers, and agency teams."
+      heroTitle="SEO and Website for Insurance Agents in India"
+      heroSubtitle="Generate qualified health, term, vehicle, and NRI insurance leads across India. We engineer fast, trustworthy Next.js websites and high-ranking local SEO for insurance agents, LIC advisors, and brokerages."
       leadSource="Website for Insurance Agents Landing Page"
       heroCtaText="Get Free Insurance Web Quote"
       overviewTitle="Why Most Insurance Agent Websites Fail to Capture Quality Policy Leads (And How We Fix It)"
@@ -210,8 +214,8 @@ export default async function InsuranceWebPage() {
       pricingTiers={[
         {
           name: "Individual Advisor Plan",
-          price: "₹15,000",
-          period: "one-time ($750 USD)",
+          price: "$1,200",
+          period: "one-time ($1,200 USD)",
           description: "Ideal for individual insurance agents, LIC advisors, and independent health insurance consultants.",
           features: [
             "1-5 Custom Responsive Pages",
@@ -227,7 +231,7 @@ export default async function InsuranceWebPage() {
         },
         {
           name: "Enterprise Agency Portal",
-          price: "₹38,000",
+          price: "$1,800",
           period: "one-time ($1,800 USD)",
           description: "Recommended for insurance brokerages, financial planning firms, and NRI policy advisories.",
           isPopular: true,
@@ -244,29 +248,8 @@ export default async function InsuranceWebPage() {
           ctaText: "Choose Enterprise Agency Plan",
         },
       ]}
-      faqs={[
-        {
-          question: "How much does a website for an insurance agent cost?",
-          answer: "Our insurance agent website packages start from ₹15,000 ($750 USD) for individual advisors up to ₹38,000 ($1,800 USD) for enterprise brokerage portals.",
-        },
-        {
-          question: "Can prospective clients request policy quotes for health and term insurance online?",
-          answer: "Yes! We build custom quote request forms where clients select sum assured, age bracket, family members, and policy type sent directly to your phone and email.",
-        },
-        {
-          question: "Will the website help us generate NRI insurance leads from overseas?",
-          answer: "Yes. We design dedicated NRI insurance landing sections targeting non-resident Indians searching for parents' health insurance, term policies, and tax-saving plans in India.",
-        },
-        {
-          question: "Can we showcase multiple insurance brand tie-ups (Star Health, HDFC Ergo, LIC, TATA AIG)?",
-          answer: "Yes. We display authorized partner logos, cashless hospital counts, and claim settlement ratios for all insurers you represent.",
-        },
-        {
-          question: "Are there any monthly listing or platform fees?",
-          answer: "No. You own 100% of your website code and custom domain. There are zero recurring monthly listing fees or per-lead commissions.",
-        },
-      ]}
-      schemaMarkup={pageSchema}
+      faqs={INSURANCE_FAQS}
+      schemaMarkup={pageGraphSchema}
       crossLinks={[
         { href: "/website-development", label: "Custom Web Development" },
         { href: "/seo-services", label: "Financial SEO Services" },

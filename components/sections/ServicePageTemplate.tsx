@@ -96,7 +96,7 @@ export default function ServicePageTemplate({
   const STANDARD_FAQS = [
     {
       question: "How much does a professional website cost?",
-      answer: "Professional website cost varies based on page count and custom integrations. Joy Digital offers packages starting from $1,000 (₹15,000 in India) depending on your design specifications."
+      answer: "Professional website cost varies based on page count and custom integrations. Joy Digital offers packages starting from $1,200 USD depending on your design specifications."
     },
     {
       question: "How long does website development take?",

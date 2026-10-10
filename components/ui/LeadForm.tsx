@@ -31,6 +31,7 @@ export default function LeadForm({
   source = "General Lead Funnel",
 }: LeadFormProps) {
   const pathname = usePathname();
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@joydigital.in";
 
   // Detect current region from pathname
   const parts = pathname.split("/").filter(Boolean);
@@ -199,7 +200,7 @@ export default function LeadForm({
       setIsSuccess(true);
     } catch (err) {
       console.error(err);
-      alert("Enquiry delivery failed. Please email us at saravanan061193@gmail.com directly.");
+      alert(`Enquiry delivery failed. Please email us at ${contactEmail} directly.`);
     } finally {
       setIsLoading(false);
     }
