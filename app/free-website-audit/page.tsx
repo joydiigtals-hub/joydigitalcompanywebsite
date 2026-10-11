@@ -54,15 +54,15 @@ export default function FreeWebsiteAuditPage() {
     <>
       <JsonLd schema={graphSchema} />
       <Header />
-      <main className="pt-24 lg:pt-32">
+      <main className="pt-20 lg:pt-24">
         
         {/* Split Hero / Form Section */}
-        <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
+        <section className="pt-4 sm:pt-6 lg:pt-8 pb-12 lg:pb-16 bg-white relative overflow-hidden">
           <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
           <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
             
             {/* Left Content Column */}
             <div className="lg:col-span-7 flex flex-col items-start text-left">

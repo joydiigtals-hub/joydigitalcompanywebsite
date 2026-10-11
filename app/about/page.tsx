@@ -68,10 +68,10 @@ export default function AboutPage() {
     <>
       <JsonLd schema={graphSchema} />
       <Header />
-      <main className="pt-24 lg:pt-32">
+      <main className="pt-20 lg:pt-24">
         
         {/* Intro Hero */}
-        <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
+        <section className="pt-6 lg:pt-8 pb-16 lg:pb-20 bg-white relative overflow-hidden">
           <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
           <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
             <span className="inline-block bg-accent-glow text-accent font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full border border-accent/20 mb-6 animate-pulse-dot">

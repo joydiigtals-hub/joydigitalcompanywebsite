@@ -48,10 +48,10 @@ export default function ContactPage() {
     <>
       <JsonLd schema={graphSchema} />
       <Header />
-      <main className="pt-24 lg:pt-32">
+      <main className="pt-20 lg:pt-24">
         
         {/* Intro */}
-        <section className="py-12 bg-white relative overflow-hidden">
+        <section className="pt-6 lg:pt-8 pb-12 bg-white relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <span className="inline-block bg-accent-glow text-accent font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full border border-accent/20 mb-6">
               Connect With Us

@@ -68,10 +68,10 @@ export default function WordPressToNextjsMigrationPage() {
     <>
       <JsonLd schema={pageGraphSchema} />
       <Header />
-      <main className="pt-24 lg:pt-32 bg-[#FAF9FF] text-[#1F1B2D]">
+      <main className="bg-[#FAF9FF] text-[#1F1B2D]">
         
         {/* HERO SECTION */}
-        <section className="bg-[#171126] text-white py-16 lg:py-24 relative overflow-hidden">
+        <section className="bg-[#171126] text-white pt-24 lg:pt-32 pb-16 lg:pb-24 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
             <div className="lg:col-span-7">
               <span className="inline-block bg-[#7C3AED]/20 border border-[#7C3AED]/40 text-[#A78BFA] font-extrabold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">

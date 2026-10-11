@@ -11,17 +11,25 @@ import GoogleTranslateLoader from "@/components/GoogleTranslateLoader";
 import ClientWidgets from "@/components/ui/ClientWidgets";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import CookieConsent from "@/components/ui/CookieConsent";
+import NavigationLoadingBar from "@/components/ui/NavigationLoadingBar";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://joydigital.in"),
+  metadataBase: new URL("https://www.joydigital.in"),
   title: {
     default: "Joy Digital | Digital Agency & Next.js Web Development Chennai",
     template: "%s | Joy Digital",
   },
   description: "Joy Digital is a premier Digital Agency & Next.js Web Development company based in Chennai, India. We engineer sub-second web applications, custom software, SEO, and Generative Engine Optimization (GEO) for global brands.",
-
-  authors: [{ name: "Joy Digital", url: "https://joydigital.in" }],
+  keywords: [
+    "Next.js development company",
+    "custom web development",
+    "global B2B web agency",
+    "enterprise web apps",
+    "travel website development",
+    "full stack web engineering",
+  ],
+  authors: [{ name: "Joy Digital" }],
   publisher: "Joy Digital",
   robots: {
     index: true,
@@ -35,7 +43,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://joydigital.in",
+    canonical: "https://www.joydigital.in/",
     languages: {
       "en-IN": "https://joydigital.in",
       "en-US": "https://joydigital.in/us",
@@ -64,7 +72,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://joydigital.in",
+    url: "https://www.joydigital.in",
     siteName: "Joy Digital",
     title: "Joy Digital | Digital Agency & Next.js Web Development Chennai",
     description: "Premier Digital Agency & Next.js Web Development company based in Chennai, India. We build high-converting, sub-second web applications and generative AI search-optimized systems.",
@@ -119,6 +127,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-light-bg text-text-primary">
+        <NavigationLoadingBar />
         <FontAwesomeLoader />
         <GoogleAnalytics />
         <AnalyticsTracker />

@@ -117,7 +117,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   return (
     <>
       <Header />
-      <main className="pt-20 lg:pt-28">
+      <main className="pt-16 lg:pt-20">
         
         {/* Animated layout wrapper holding article details */}
         <BlogArticleContainer 

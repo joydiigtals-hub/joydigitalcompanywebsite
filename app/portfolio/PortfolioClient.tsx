@@ -81,9 +81,9 @@ export default function PortfolioClient() {
   return (
     <>
       <Header />
-      <main className="pt-24 lg:pt-32 bg-[#FAF9FF] text-[#1F1B2D] min-h-screen">
+      <main className="pt-20 lg:pt-24 bg-[#FAF9FF] text-[#1F1B2D] min-h-screen">
         {/* Breadcrumb & Hero Introduction */}
-        <section className="py-10 text-center relative overflow-hidden">
+        <section className="pt-4 lg:pt-6 pb-10 text-center relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-6">
             <nav
               aria-label="Breadcrumb"

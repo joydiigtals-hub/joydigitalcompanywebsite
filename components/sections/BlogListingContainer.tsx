@@ -89,7 +89,7 @@ export default function BlogListingContainer({ posts }: BlogListingContainerProp
   return (
     <div className="w-full">
       {/* Blog Hero with subtle entrance animations */}
-      <section className="py-16 bg-white text-center relative overflow-hidden border-b border-gray-100 select-none">
+      <section className="pt-6 sm:pt-8 pb-12 bg-white text-center relative overflow-hidden border-b border-gray-100 select-none">
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.015] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           

@@ -31,7 +31,7 @@ export default async function BlogIndexPage() {
   return (
     <>
       <Header />
-      <main className="pt-20 lg:pt-28 bg-[#F8FAFC]">
+      <main className="pt-16 lg:pt-20 bg-[#F8FAFC]">
         
         {/* Blog listing with active filters and animations */}
         <BlogListingContainer posts={posts} />

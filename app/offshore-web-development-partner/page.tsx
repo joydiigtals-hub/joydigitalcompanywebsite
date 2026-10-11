@@ -51,10 +51,10 @@ export default function OffshoreWebDevelopmentPartnerPage() {
     <>
       <JsonLd schema={pageGraphSchema} />
       <Header />
-      <main className="pt-24 lg:pt-32 bg-[#FAF9FF] text-[#1F1B2D]">
+      <main className="bg-[#FAF9FF] text-[#1F1B2D]">
         
         {/* HERO SECTION */}
-        <section className="bg-[#171126] text-white py-16 lg:py-24 relative overflow-hidden">
+        <section className="bg-[#171126] text-white pt-24 lg:pt-32 pb-16 lg:pb-24 relative overflow-hidden">
           {/* Subtle grid background */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#2A203F_1px,transparent_1px),linear-gradient(to_bottom,#2A203F_1px,transparent_1px)] bg-[size:32px_32px] opacity-20 pointer-events-none" />
           

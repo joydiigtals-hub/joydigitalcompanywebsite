@@ -5,10 +5,18 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://joydigital.in"),
+  metadataBase: new URL("https://www.joydigital.in"),
   title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
   description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
-  authors: [{ name: "Joy Digital", url: "https://joydigital.in" }],
+  keywords: [
+    "Next.js development company",
+    "custom web development",
+    "global B2B web agency",
+    "enterprise web apps",
+    "travel website development",
+    "full stack web engineering",
+  ],
+  authors: [{ name: "Joy Digital" }],
   publisher: "Joy Digital",
   robots: {
     index: true,
@@ -22,9 +30,9 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://joydigital.in",
+    canonical: "https://www.joydigital.in/",
     languages: {
-      "x-default": "https://joydigital.in",
+      "x-default": "https://www.joydigital.in",
       "en-us": "https://joydigital.in/us",
       "en-gb": "https://joydigital.in/uk",
       "en-ae": "https://joydigital.in/ae",
@@ -42,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://joydigital.in",
+    url: "https://www.joydigital.in",
     siteName: "Joy Digital",
     title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
     description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
@@ -66,7 +74,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const homeGraph = buildPageGraphSchema({
-    url: "https://joydigital.in/",
+    url: "https://www.joydigital.in/",
     title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
     description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
     isHomepage: true,
