@@ -181,54 +181,92 @@ export default function Header({ transparent = false }: { transparent?: boolean 
   }, []);
 
   const handleLangChange = (langCode: string) => {
+    // 1. Update React state immediately for UI feedback
+    setCurrentLang(langCode);
+    setIsLangDropdownOpen(false);
+
+    // 2. Persist to localStorage
+    if (typeof window !== "undefined") {
+      if (langCode === "en") {
+        localStorage.removeItem("joy_lang");
+      } else {
+        localStorage.setItem("joy_lang", langCode);
+      }
+    }
+
+    // 3. Clear existing cookies on all domain variations
     const domain = window.location.hostname;
     const cookieValue = `/en/${langCode}`;
-    
-    // Clear old duplicate cookies first
-    const clearCookie = (dom?: string) => {
-      const dAttr = dom ? `; domain=${dom}` : "";
-      document.cookie = `googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT${dAttr}`;
+
+    const clearCookies = () => {
+      const hostVariants = ["", domain];
+      if (domain.includes(".")) {
+        const parts = domain.split(".");
+        if (parts.length >= 2) {
+          hostVariants.push("." + parts.slice(-2).join("."));
+          hostVariants.push(parts.slice(-2).join("."));
+        }
+      }
+      hostVariants.forEach((d) => {
+        const domAttr = d ? `; domain=${d}` : "";
+        document.cookie = `googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT${domAttr}`;
+        document.cookie = `googtrans=none; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT${domAttr}`;
+      });
     };
 
-    clearCookie();
-    clearCookie(domain);
+    clearCookies();
+
+    // 4. If English, revert translation
+    if (langCode === "en") {
+      const selectElem = document.querySelector(".goog-te-combo") as HTMLSelectElement | null;
+      if (selectElem) {
+        selectElem.value = "";
+        selectElem.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+      if (window.location.hash.includes("googtrans")) {
+        window.history.replaceState(null, "", window.location.pathname + window.location.search);
+      }
+      setTimeout(() => {
+        window.location.reload();
+      }, 150);
+      return;
+    }
+
+    // 5. If Foreign Language, set cookies on root path & domain
+    document.cookie = `googtrans=${cookieValue}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+    document.cookie = `googtrans=${cookieValue}; path=/; domain=${domain}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
     if (domain.includes(".")) {
       const parts = domain.split(".");
       if (parts.length >= 2) {
         const rootDomain = "." + parts.slice(-2).join(".");
-        clearCookie(rootDomain);
+        document.cookie = `googtrans=${cookieValue}; path=/; domain=${rootDomain}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
       }
     }
-    
-    if (langCode !== "en") {
-      document.cookie = `googtrans=${cookieValue}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
-      document.cookie = `googtrans=${cookieValue}; path=/; domain=${domain}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
-      if (domain.includes(".")) {
-        const parts = domain.split(".");
-        if (parts.length >= 2) {
-          const rootDomain = "." + parts.slice(-2).join(".");
-          document.cookie = `googtrans=${cookieValue}; path=/; domain=${rootDomain}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
-        }
+
+    // 6. Trigger live translation
+    let translated = false;
+    const triggerFn = (window as any).__triggerGoogleTranslate;
+    if (typeof triggerFn === "function") {
+      translated = triggerFn(langCode);
+    } else {
+      const selectElem = document.querySelector(".goog-te-combo") as HTMLSelectElement | null;
+      if (selectElem) {
+        selectElem.value = langCode;
+        selectElem.dispatchEvent(new Event("change", { bubbles: true }));
+        selectElem.dispatchEvent(new Event("input", { bubbles: true }));
+        translated = true;
       }
     }
-    
-    if (typeof window !== "undefined") {
-      localStorage.setItem("joy_lang", langCode);
-    }
-    setCurrentLang(langCode);
-    setIsLangDropdownOpen(false);
 
-    // Try to trigger live translation on select element if present
-    const selectElem = document.querySelector(".goog-te-combo") as HTMLSelectElement | null;
-    if (selectElem) {
-      selectElem.value = langCode === "en" ? "" : langCode;
-      selectElem.dispatchEvent(new Event("change", { bubbles: true }));
-      selectElem.dispatchEvent(new Event("input", { bubbles: true }));
-    }
-
+    // 7. If the widget is not in DOM yet or didn't immediately translate, reload after a brief moment
     setTimeout(() => {
-      window.location.reload();
-    }, 150);
+      const isHtmlTranslated =
+        document.documentElement.classList.contains("translated-ltr") ||
+        document.documentElement.classList.contains("translated-rtl");
+      if (!translated || !isHtmlTranslated) {
+        window.location.reload();
+      }
+    }, 350);
   };
 
   const isActive = (path: string) => {
@@ -482,7 +520,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             </div>
 
             {/* Language Dropdown */}
-            <div className="relative" ref={desktopLangRef}>
+            <div className="relative notranslate" ref={desktopLangRef}>
               <button
                 onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
                 className="flex items-center gap-2 px-3 py-1.5 border border-[#E5E7EB] rounded-lg text-sm font-medium hover:border-accent hover:text-accent transition-colors bg-white shadow-sm"
@@ -555,7 +593,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             </div>
 
             {/* Mobile Language Switcher (Minimal) */}
-            <div className="relative" ref={mobileLangRef}>
+            <div className="relative notranslate" ref={mobileLangRef}>
               <button
                 onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
                 className="flex items-center justify-center w-8 h-8 border border-[#E5E7EB] rounded-lg text-sm bg-white shadow-sm"

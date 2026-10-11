@@ -10,6 +10,24 @@ export default function GoogleTranslateLoader() {
     const isBot = /Lighthouse|Googlebot|HeadlessChromium|Chrome-Lighthouse|PTST/i.test(navigator.userAgent);
     if (isBot) return;
 
+    // Helper to apply translation by setting .goog-te-combo value and firing change event
+    const triggerTranslation = (targetLang: string): boolean => {
+      const selectElem = document.querySelector(".goog-te-combo") as HTMLSelectElement | null;
+      if (selectElem) {
+        const val = targetLang === "en" ? "" : targetLang;
+        if (selectElem.value !== val) {
+          selectElem.value = val;
+          selectElem.dispatchEvent(new Event("change", { bubbles: true }));
+          selectElem.dispatchEvent(new Event("input", { bubbles: true }));
+        }
+        return true;
+      }
+      return false;
+    };
+
+    // Expose global helper so Header.tsx or any other component can trigger it directly
+    (window as any).__triggerGoogleTranslate = triggerTranslation;
+
     // Define global callback function for Google Translate
     (window as any).googleTranslateElementInit = function () {
       if ((window as any).google && (window as any).google.translate) {
@@ -17,33 +35,38 @@ export default function GoogleTranslateLoader() {
           {
             pageLanguage: "en",
             includedLanguages: "en,ta,hi,ar,es,de,fr,te,kn,ml,bn,mr,gu,pa,it,pt,ru,zh-CN,ja,ko,tr,nl,vi,th",
-            layout: (window as any).google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: true,
+            autoDisplay: false,
           },
           "google_translate_element"
         );
+
+        // Sync saved language right after element is initialized
+        const joyLang = localStorage.getItem("joy_lang");
+        if (joyLang && joyLang !== "en") {
+          setTimeout(() => triggerTranslation(joyLang), 100);
+        }
       }
     };
 
-    // Load Google Translate script dynamically if not already loaded
+    // Load Google Translate script dynamically immediately without idle delay
     if (!document.getElementById("google-translate-script")) {
       const script = document.createElement("script");
       script.id = "google-translate-script";
       script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
       script.async = true;
       script.defer = true;
-      
-      // Only append if we actually need it, but we always need it for the widget.
-      // Wait for idle time so it doesn't block main thread
-      if ('requestIdleCallback' in window) {
-        (window as any).requestIdleCallback(() => document.body.appendChild(script));
-      } else {
-        setTimeout(() => document.body.appendChild(script), 1500);
+      document.head.appendChild(script);
+    } else if ((window as any).google && (window as any).google.translate && (window as any).googleTranslateElementInit) {
+      // Re-initialize if script already exists (e.g. client route transitions)
+      try {
+        (window as any).googleTranslateElementInit();
+      } catch (e) {
+        // ignore
       }
     }
 
-    // Function to check and force select element to match selected language
-    const checkAndSyncLanguage = () => {
+    // Polling to ensure active language is applied once widget mounts
+    const getTargetLang = () => {
       const getCookie = (name: string) => {
         const value = `; ${document.cookie}`;
         const parts = value.split(`; ${name}=`);
@@ -52,43 +75,44 @@ export default function GoogleTranslateLoader() {
       };
 
       const joyLang = localStorage.getItem("joy_lang");
+      if (joyLang) return joyLang;
       const googtrans = getCookie("googtrans");
-      let targetLang = joyLang;
-      if (!targetLang && googtrans) {
+      if (googtrans) {
         const parts = googtrans.split("/");
-        targetLang = parts[parts.length - 1];
+        return parts[parts.length - 1];
       }
-
-      if (targetLang && targetLang !== "en") {
-        let attempts = 0;
-        // Less aggressive polling to avoid forced reflows on mobile
-        const interval = setInterval(() => {
-          attempts++;
-          const selectElem = document.querySelector(".goog-te-combo") as HTMLSelectElement | null;
-          if (selectElem) {
-            if (selectElem.value !== targetLang) {
-              selectElem.value = targetLang;
-              selectElem.dispatchEvent(new Event("change", { bubbles: true }));
-              selectElem.dispatchEvent(new Event("input", { bubbles: true }));
-            }
-            clearInterval(interval);
-          }
-          if (attempts > 20) {
-            clearInterval(interval);
-          }
-        }, 500);
-      }
+      return null;
     };
 
-    // Run sync check after a longer delay to ensure widget is loaded
-    const timer = setTimeout(checkAndSyncLanguage, 2500);
-    return () => clearTimeout(timer);
+    const targetLang = getTargetLang();
+    if (targetLang && targetLang !== "en") {
+      let attempts = 0;
+      const interval = setInterval(() => {
+        attempts++;
+        const success = triggerTranslation(targetLang);
+        if (success || attempts > 30) {
+          clearInterval(interval);
+        }
+      }, 150);
+
+      return () => clearInterval(interval);
+    }
   }, []);
 
   return (
     <div
       id="google_translate_element"
-      style={{ display: "none", position: "absolute", top: "-9999px", left: "-9999px" }}
+      className="notranslate"
+      style={{
+        position: "fixed",
+        top: "-9999px",
+        left: "-9999px",
+        width: "1px",
+        height: "1px",
+        opacity: 0,
+        pointerEvents: "none",
+        zIndex: -9999,
+      }}
       aria-hidden="true"
     />
   );

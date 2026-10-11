@@ -248,23 +248,34 @@ i[class*="fa-"] {
   animation: slideUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Hide Google Translate top banner bar */
+/* Hide Google Translate top banner bar and popups */
 .goog-te-banner-frame.skiptranslate,
 .goog-te-banner-frame,
+iframe.goog-te-banner-frame,
 .goog-te-balloon-frame,
 #goog-gt-tt,
-.goog-te-menu-frame {
+.goog-te-menu-frame,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
   display: none !important;
 }
 
+/* Prevent Google Translate from shifting the body down */
 body {
   top: 0px !important;
+  position: static !important;
 }
 
-/* Hide original Google Translate widget element */
-#google_translate_element,
-.skiptranslate iframe {
-  display: none !important;
+/* Hide original Google Translate widget off-screen while keeping it active in DOM */
+#google_translate_element {
+  position: fixed !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: -9999 !important;
 }
 
 .goog-tooltip,
