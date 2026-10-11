@@ -3,21 +3,30 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "SEO Services in Chennai | Technical & Local SEO Agency",
-  description: "Drive organic search rankings with Joy Digital's SEO services in Chennai. We run Core Web Vitals audits, Maps 3-Pack SEO, and GA4 lead tracking.",
+  title: "Best SEO Company in Chennai | Top SEO Consultant & Freelancer Services",
+  description: "Drive organic search rankings with Joy Digital, recognized as the best SEO company in Chennai. Partner with an expert SEO consultant and SEO freelancer for technical audits, local 3-Pack rankings, and dynamic website growth.",
+  keywords: [
+    "Best Seo company in chennai",
+    "SEO Consultant in chennai",
+    "SEO freelancer in chennai",
+    "Dynamic website company in chennai",
+    "SEO services in chennai",
+    "Technical SEO agency Chennai",
+    "Local SEO company Chennai",
+  ],
   alternates: {
     canonical: "https://joydigital.in/seo-services-chennai",
   },
   openGraph: {
-    title: "SEO Services in Chennai | Technical & Local SEO Agency",
-    description: "Drive organic search rankings with Joy Digital's SEO services in Chennai. We run Core Web Vitals audits, Maps 3-Pack SEO, and GA4 lead tracking.",
+    title: "Best SEO Company in Chennai | Top SEO Consultant & Freelancer Services",
+    description: "Drive organic search rankings with Joy Digital, recognized as the best SEO company in Chennai. Partner with an expert SEO consultant and SEO freelancer.",
     url: "https://joydigital.in/seo-services-chennai",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO Services in Chennai | Technical & Local SEO Agency",
-    description: "Drive organic search rankings with Joy Digital's SEO services in Chennai. We run Core Web Vitals audits, Maps 3-Pack SEO, and GA4 lead tracking.",
+    title: "Best SEO Company in Chennai | Top SEO Consultant & Freelancer Services",
+    description: "Drive organic search rankings with Joy Digital, the best SEO company in Chennai. Top SEO consultant & freelancer solutions.",
   }
 };
 
@@ -61,7 +70,7 @@ export default function SeoServicesChennai() {
       overviewContent={
         <div className="space-y-6 text-justify">
           <p>
-            For startups, professional service agencies, and corporate businesses in Chennai—competing in high-density markets like T. Nagar, Adyar, Guindy, and the OMR IT corridor—appearing on Google Page 1 is crucial for capturing qualified inbound leads. Standard business listings are often buried under national aggregators or competitors with better search strategies. Joy Digital provides results-focused <strong>SEO services in Chennai</strong>, combining deep technical code audits, high-intent keyword alignment, Google Maps Local 3-Pack dominance, and conversion event tracking.
+            For startups, professional service agencies, and corporate businesses in Chennai—competing in high-density markets like T. Nagar, Adyar, Guindy, and the OMR IT corridor—appearing on Google Page 1 is crucial for capturing qualified inbound leads. Standard business listings are often buried under national aggregators or competitors with better search strategies. Whether you are looking for the <strong>Best SEO company in chennai</strong>, a dedicated <strong>SEO Consultant in chennai</strong>, an agile <strong>SEO freelancer in chennai</strong>, or a top-tier <strong>Dynamic website company in chennai</strong>, Joy Digital provides results-focused <strong>SEO services in Chennai</strong>, combining deep technical code audits, high-intent keyword alignment, Google Maps Local 3-Pack dominance, and conversion event tracking.
           </p>
           <p>
             Unlike agencies that rely solely on surface-level keyword stuffing and generic blog posts, we engineer every layer of your website. We correct heading hierarchies, establish strict canonical structures, optimize assets for Core Web Vitals, and configure structured LocalBusiness and FAQ JSON-LD schemas so search engines index and rank your pages ahead of competitors.

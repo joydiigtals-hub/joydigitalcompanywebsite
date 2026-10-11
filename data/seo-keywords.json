@@ -1956,5 +1956,82 @@
     "status": "Active",
     "assigned_page_id": "page-website-for-tour-and-safari",
     "created_at": "2026-10-10T04:09:32.349Z"
+  },
+  {
+    "id": "kw-seo-chn-01",
+    "keyword": "Best Seo company in chennai",
+    "type": "Primary",
+    "search_intent": "Commercial",
+    "target_audience": "Businesses & Founders in Chennai",
+    "notes": "Primary regional SEO search intent for Chennai",
+    "status": "Active",
+    "assigned_page_id": "page-seo-services-chennai",
+    "created_at": "2026-10-11T14:30:46.978Z"
+  },
+  {
+    "id": "kw-seo-chn-02",
+    "keyword": "SEO Consultant in chennai",
+    "type": "Secondary",
+    "search_intent": "Commercial",
+    "target_audience": "Companies looking for high-level SEO strategy in Chennai",
+    "notes": "Consultant intent search query",
+    "status": "Active",
+    "assigned_page_id": "page-seo-services-chennai",
+    "created_at": "2026-10-11T14:30:46.979Z"
+  },
+  {
+    "id": "kw-seo-chn-03",
+    "keyword": "SEO freelancer in chennai",
+    "type": "Secondary",
+    "search_intent": "Commercial",
+    "target_audience": "Startups and SMBs looking for dedicated SEO freelancer",
+    "notes": "Freelancer intent search query",
+    "status": "Active",
+    "assigned_page_id": "page-seo-services-chennai",
+    "created_at": "2026-10-11T14:30:46.979Z"
+  },
+  {
+    "id": "kw-dyn-chn-01",
+    "keyword": "Dynamic website company in chennai",
+    "type": "Primary",
+    "search_intent": "Commercial",
+    "target_audience": "Chennai businesses requiring database-driven portals",
+    "notes": "Regional dynamic web dev agency intent",
+    "status": "Active",
+    "assigned_page_id": "page-dynamic-web-dev",
+    "created_at": "2026-10-11T14:30:46.979Z"
+  },
+  {
+    "id": "kw-dyn-web-09",
+    "keyword": "Best dynamic website company",
+    "type": "Primary",
+    "search_intent": "Commercial",
+    "target_audience": "Founders & Enterprise clients seeking top dynamic web agency",
+    "notes": "Commercial agency ranking search query",
+    "status": "Active",
+    "assigned_page_id": "page-dynamic-web-dev",
+    "created_at": "2026-10-11T14:30:46.979Z"
+  },
+  {
+    "id": "kw-web-ai-01",
+    "keyword": "website development AI",
+    "type": "Secondary",
+    "search_intent": "Informational",
+    "target_audience": "Modern businesses looking for AI-powered web engineering",
+    "notes": "AI development keyword",
+    "status": "Active",
+    "assigned_page_id": "page-dynamic-web-dev",
+    "created_at": "2026-10-11T14:30:46.979Z"
+  },
+  {
+    "id": "kw-dyn-cost-01",
+    "keyword": "Dynamic website development cost in india",
+    "type": "Long-tail",
+    "search_intent": "Commercial",
+    "target_audience": "Decision makers researching dynamic web dev pricing in India",
+    "notes": "Cost and pricing intent long-tail query",
+    "status": "Active",
+    "assigned_page_id": "page-dynamic-web-dev",
+    "created_at": "2026-10-11T14:30:46.979Z"
   }
 ]

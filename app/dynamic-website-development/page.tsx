@@ -5,7 +5,18 @@ import { generatePageSeo } from "@/lib/seoEngine";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await generatePageSeo("/dynamic-website-development");
-  return seoData.metadata;
+  return {
+    ...seoData.metadata,
+    keywords: [
+      ...(Array.isArray(seoData.metadata.keywords) ? (seoData.metadata.keywords as string[]) : []),
+      "Dynamic website company in chennai",
+      "Best dynamic website company",
+      "Dynamic website development cost in india",
+      "website development AI",
+      "dynamic website development",
+      "custom CMS development",
+    ],
+  };
 }
 
 export default async function DynamicWebDevPage() {
@@ -28,10 +39,10 @@ export default async function DynamicWebDevPage() {
         overviewContent={
           <div className="space-y-6">
             <p>
-              Modern businesses require web platforms that adapt instantly to customer interactions, inventory shifts, and content updates. As a <strong>best website company in india</strong>, Joy Digital provides specialized <strong>cms website development services</strong>, database-driven web portals, and custom web applications built with Next.js, React, Node.js, and Supabase backends.
+              Modern businesses require web platforms that adapt instantly to customer interactions, inventory shifts, and content updates. As the <strong>best dynamic website company</strong> and premier <strong>dynamic website company in chennai</strong>, Joy Digital provides specialized database-driven web portals, cutting-edge <strong>website development AI</strong> capabilities, and custom web applications built with Next.js, React, Node.js, and Supabase backends.
             </p>
             <p>
-              If you are researching the <strong>cms website meaning</strong>, a Content Management System empowers non-technical teams to publish and edit digital pages effortlessly. However, traditional, bloated <strong>cms website templates</strong> can severely degrade page load speeds. Our modern headless <strong>cms website systems</strong> decouple content administration from frontend rendering, giving you instant editor workflows alongside 95+ Core Web Vitals performance.
+              When evaluating the <strong>dynamic website development cost in india</strong>, pricing is determined by database complexity, role-based admin controls, and API integrations. Unlike bloated traditional CMS templates, our modern headless web architectures decouple content administration from frontend rendering, giving you instant editor workflows alongside 95+ Core Web Vitals performance.
             </p>
           </div>
         }
