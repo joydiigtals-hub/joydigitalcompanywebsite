@@ -25,6 +25,7 @@ interface ModernHeroSectionProps {
 }
 
 const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
+const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919080026133";
 
 const heroMainWords = ["Next.js", "&", "Custom", "Web", "Development", "Company", "for"];
 const heroGradientWords = ["Global", "Businesses"];
@@ -436,7 +437,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
 
                   <div className="flex items-center gap-2">
                     <a
-                      href="https://wa.me/919176391494?text=Hi%20Joy%20Digital,%20I'd%20like%20to%20claim%20my%20free%20proposal%20and%20strategy%20call."
+                      href={`https://wa.me/${whatsappNumber}?text=Hi%20Joy%20Digital,%20I'd%20like%20to%20claim%20my%20free%20proposal%20and%20strategy%20call.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-[1] py-3 px-2 rounded-xl bg-[#25D366] hover:bg-[#128C7E] border border-[#25D366] text-white font-bold text-[11px] shadow-lg hover:shadow-emerald-900/20 transition-all duration-300 flex flex-col items-center justify-center gap-1 cursor-pointer group"
