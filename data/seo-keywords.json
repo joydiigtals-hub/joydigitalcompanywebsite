@@ -2033,5 +2033,27 @@
     "status": "Active",
     "assigned_page_id": "page-dynamic-web-dev",
     "created_at": "2026-10-11T14:30:46.979Z"
+  },
+  {
+    "id": "kw-seo-chn-04",
+    "keyword": "seo services in chennai",
+    "type": "Primary",
+    "search_intent": "Transactional",
+    "target_audience": "Chennai companies seeking high-impact SEO services",
+    "notes": "Primary transactional search keyword for Chennai SEO services",
+    "status": "Active",
+    "assigned_page_id": "page-seo-services-chennai",
+    "created_at": "2026-10-13T20:55:00.000Z"
+  },
+  {
+    "id": "kw-seo-chn-05",
+    "keyword": "seo agency in chennai",
+    "type": "Primary",
+    "search_intent": "Commercial",
+    "target_audience": "Founders and marketing heads looking for an SEO agency in Chennai",
+    "notes": "High commercial intent agency search query",
+    "status": "Active",
+    "assigned_page_id": "page-seo-services-chennai",
+    "created_at": "2026-10-13T20:55:00.000Z"
   }
 ]

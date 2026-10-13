@@ -1,4 +1,11 @@
 import { MongoClient } from "mongodb";
+import dns from "dns";
+
+try {
+  dns.setServers(["8.8.8.8", "1.1.1.1"]);
+} catch {
+  // Ignore in restricted environments
+}
 
 if (!process.env.MONGODB_URI) {
   // Don't crash at build time if MONGODB_URI is not set.
