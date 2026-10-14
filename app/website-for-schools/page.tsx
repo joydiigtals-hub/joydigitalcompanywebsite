@@ -7,20 +7,20 @@ export const metadata: Metadata = {
   title: "School Website Design & Development Services | Joy Digital",
   description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
   alternates: {
-    canonical: "https://joydigital.in/website-for-schools",
+    canonical: "https://www.joydigital.in/website-for-schools",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-schools",
+    url: "https://www.joydigital.in/website-for-schools",
     title: "School Website Design & Development Services | Joy Digital",
     description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "School Website Design Joy Digital" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "School Website Design Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "School Website Design & Development Services | Joy Digital",
     description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -29,15 +29,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://joydigital.in/website-for-schools#service",
+      "@id": "https://www.joydigital.in/website-for-schools#service",
       "name": "School & Educational Institute Website Design",
       "serviceType": "Educational Web Development & School Admission Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://joydigital.in",
+        "url": "https://www.joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",

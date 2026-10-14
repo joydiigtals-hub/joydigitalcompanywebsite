@@ -27,7 +27,7 @@ export default async function LandingPageDevPage() {
         heroSubtitle="Turn paid ad clicks and social campaign traffic into qualified leads. We build distraction-free, sub-second landing pages optimized for Google Ads, Meta PPC, and high-ROI conversion funnels."
         leadSource="Landing Page Development Page"
         heroCtaText="Request a Landing Page Quote"
-        canonicalUrl="https://joydigital.in/landing-page-development"
+        canonicalUrl="https://www.joydigital.in/landing-page-development"
         overviewTitle="Conversion Rate Optimization (CRO) & Distraction-Free Funnel Architecture"
         overviewContent={
           <div className="space-y-6">

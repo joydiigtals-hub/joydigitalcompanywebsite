@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   title: "Small Business Website Design & SEO | Joy Digital",
   description: "Fast Next.js website design and local SEO for small businesses and startups. Rank on Google Maps, generate leads, and grow revenue.",
   alternates: {
-    canonical: "https://joydigital.in/website-for-small-business",
+    canonical: "https://www.joydigital.in/website-for-small-business",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-small-business",
+    url: "https://www.joydigital.in/website-for-small-business",
     title: "Small Business Website Design & Global Client Lead Generation | Joy Digital",
     description: "Ultra-fast Next.js website design tailored for growing small businesses, service providers, and global startups. Mobile-friendly layouts, lead quote forms, WhatsApp integration, and search engine optimization.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Small Business Website Design Joy Digital" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Small Business Website Design Joy Digital" }],
   },
 };
 
@@ -23,15 +23,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://joydigital.in/website-for-small-business#service",
+      "@id": "https://www.joydigital.in/website-for-small-business#service",
       "name": "Small Business Website Design & Digital Growth SEO",
       "serviceType": "Small Business Web Development & Growth Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://joydigital.in",
+        "url": "https://www.joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",

@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Website Design Company in Madurai | UI/UX & Web Designers",
   description: "Custom website design company in Madurai. We craft responsive, fast Next.js UI/UX designs, landing pages, and branding for growing local businesses.",
   alternates: {
-    canonical: "https://joydigital.in/website-design-company-madurai",
+    canonical: "https://www.joydigital.in/website-design-company-madurai",
   },
   openGraph: {
     title: "Website Design Company in Madurai | UI/UX & Web Designers",
     description: "Custom website design company in Madurai. We craft responsive, fast Next.js UI/UX designs, landing pages, and branding for growing local businesses.",
-    url: "https://joydigital.in/website-design-company-madurai",
+    url: "https://www.joydigital.in/website-design-company-madurai",
     type: "website",
   },
   twitter: {
@@ -29,7 +29,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -57,7 +57,7 @@ export default function WebDesignMadurai() {
       heroSubtitle="Stand out with a modern, custom website designed to attract customers. As a leading website design company in Madurai, we build premium, fast-loading layouts that drive conversions."
       leadSource="Website Design Madurai Landing Page"
       heroCtaText="Get Free Design Quote"
-      canonicalUrl="https://joydigital.in/website-design-company-madurai"
+      canonicalUrl="https://www.joydigital.in/website-design-company-madurai"
       overviewTitle="Custom Website Design & Branding Solutions in Madurai"
       overviewContent={
         <div className="space-y-6">

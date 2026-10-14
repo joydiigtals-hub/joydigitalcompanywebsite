@@ -24,7 +24,7 @@ focusKeyword: Local SEO
 secondaryKeywords: >-
   Local SEO, Joy Digital, Search Engine Optimization, SEO Strategy, 2026 Digital
   Trends
-canonicalUrl: 'https://joydigital.in/blog/local-seo-tips-for-small-businesses'
+canonicalUrl: 'https://www.joydigital.in/blog/local-seo-tips-for-small-businesses'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Google Business Profile Optimization
@@ -39,7 +39,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: 15 Local SEO Tips for Small Businesses to Get More Customers in 2026
 ogDescription: >-
@@ -122,7 +122,7 @@ Schema markup is structured code injected into your website that helps search en
     "addressCountry": "IN"
   },
   "telephone": "+919080026133",
-  "url": "https://joydigital.in"
+  "url": "https://www.joydigital.in"
 }
 ```
 

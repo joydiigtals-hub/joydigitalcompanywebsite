@@ -22,11 +22,10 @@ const SECTIONS = [
   {
     title: "Global & Regional Pages",
     links: [
-      { href: "/", label: "Global Operations" },
+      { href: "/", label: "India & Global Operations" },
       { href: "/us", label: "United States (US)" },
       { href: "/uk", label: "United Kingdom (UK)" },
       { href: "/ae", label: "United Arab Emirates (UAE)" },
-      { href: "/in", label: "India (IN)" },
       { href: "/ca", label: "Canada (CA)" },
       { href: "/au", label: "Australia (AU)" },
     ],

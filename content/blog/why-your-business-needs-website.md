@@ -25,7 +25,7 @@ metaDescription: >-
 focusKeyword: why website development is important
 secondaryKeywords: >-
   what is website design and development, website development company, Joy Digital, Business Website Guide
-canonicalUrl: 'https://joydigital.in/blog/why-your-business-needs-website'
+canonicalUrl: 'https://www.joydigital.in/blog/why-your-business-needs-website'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Custom Web Development
@@ -40,7 +40,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: 'Why Your Business Needs a Website in 2026: More Than Just Social Media'
 ogDescription: >-

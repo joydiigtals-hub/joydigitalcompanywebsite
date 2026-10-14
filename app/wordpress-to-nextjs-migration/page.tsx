@@ -12,14 +12,14 @@ export const metadata: Metadata = {
   title: "WordPress to Next.js Migration | Headless Architecture",
   description: "Migrate legacy WordPress to high-speed Next.js. Retain 100% SEO rankings, eliminate plugin security vulnerabilities, and boost Core Web Vitals. Free audit.",
   alternates: {
-    canonical: "https://joydigital.in/wordpress-to-nextjs-migration",
+    canonical: "https://www.joydigital.in/wordpress-to-nextjs-migration",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/wordpress-to-nextjs-migration",
+    url: "https://www.joydigital.in/wordpress-to-nextjs-migration",
     title: "WordPress to Next.js Migration Agency | Joy Digital",
     description: "Migrate legacy WordPress to high-speed Next.js. Retain 100% SEO rankings, eliminate plugin security vulnerabilities, and boost Core Web Vitals.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "WordPress to Next.js Migration" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "WordPress to Next.js Migration" }],
   },
 };
 
@@ -47,13 +47,13 @@ const FAQS = [
 ];
 
 export default function WordPressToNextjsMigrationPage() {
-  const canonicalUrl = "https://joydigital.in/wordpress-to-nextjs-migration";
+  const canonicalUrl = "https://www.joydigital.in/wordpress-to-nextjs-migration";
   const pageGraphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "WordPress to Next.js Migration Agency | Joy Digital",
     description: "Migrate your slow WordPress website to high-speed serverless Next.js. Pass Core Web Vitals (95+ score), prevent plugin hacks, and preserve your 100% SEO rankings.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "WordPress to Next.js Migration", item: canonicalUrl },
     ],
     service: {

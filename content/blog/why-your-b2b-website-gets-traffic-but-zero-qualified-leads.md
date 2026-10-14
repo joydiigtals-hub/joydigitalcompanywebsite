@@ -20,7 +20,7 @@ seoTitle: "Why B2B Websites Fail to Convert Traffic into Leads & How to Fix It"
 metaDescription: "High traffic with zero leads? Learn the 4 main reasons your B2B website fails to convert and discover actionable Conversion Rate Optimization (CRO) strategies."
 focusKeyword: "B2B Conversion Rate Optimization"
 secondaryKeywords: "Website Traffic but no leads, B2B Lead Generation, Website Optimization, CTA Friction, Landing Pages"
-canonicalUrl: 'https://joydigital.in/blog/why-your-b2b-website-gets-traffic-but-zero-qualified-leads'
+canonicalUrl: 'https://www.joydigital.in/blog/why-your-b2b-website-gets-traffic-but-zero-qualified-leads'
 robots: 'Index, Follow'
 internalLinks: []
 autoSuggestRelated: true
@@ -29,7 +29,7 @@ authorName: "Saravanan"
 authorRole: "Technical Web & SEO Specialist"
 authorBio: "Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth."
 authorImage: "/assets/images/logo.webp"
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: "Why B2B Websites Fail to Convert Traffic into Leads & How to Fix It"
 ogDescription: "High traffic with zero leads? Learn the 4 main reasons your B2B website fails to convert and discover actionable Conversion Rate Optimization (CRO) strategies."

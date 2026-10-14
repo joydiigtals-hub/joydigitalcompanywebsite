@@ -268,7 +268,7 @@ export default function ChatbotWidget() {
       name: contactName.trim(),
       phone: contactPhone.trim(),
       email: contactEmail.trim(),
-      pageUrl: typeof window !== "undefined" ? window.location.href : "https://joydigital.in",
+      pageUrl: typeof window !== "undefined" ? window.location.href : "https://www.joydigital.in",
       leadSource: "website_chatbot",
     };
 

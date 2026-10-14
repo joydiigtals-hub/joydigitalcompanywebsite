@@ -19,25 +19,25 @@ export const metadata: Metadata = {
     "outsource web engineering to india"
   ],
   alternates: {
-    canonical: "https://joydigital.in/offshore-web-development-partner",
+    canonical: "https://www.joydigital.in/offshore-web-development-partner",
     languages: {
-      "en-US": "https://joydigital.in/us/website-development",
-      "en-GB": "https://joydigital.in/uk/website-development",
-      "en-AE": "https://joydigital.in/ae/website-development",
-      "en-IN": "https://joydigital.in/offshore-web-development-partner",
-      "x-default": "https://joydigital.in/offshore-web-development-partner",
+      "en-US": "https://www.joydigital.in/us/website-development",
+      "en-GB": "https://www.joydigital.in/uk/website-development",
+      "en-AE": "https://www.joydigital.in/ae/website-development",
+      "en-IN": "https://www.joydigital.in/offshore-web-development-partner",
+      "x-default": "https://www.joydigital.in/offshore-web-development-partner",
     },
   },
 };
 
 export default function OffshoreWebDevelopmentPartnerPage() {
-  const canonicalUrl = "https://joydigital.in/offshore-web-development-partner";
+  const canonicalUrl = "https://www.joydigital.in/offshore-web-development-partner";
   const pageGraphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Offshore Next.js Development Partner | Joy Digital",
     description: "White-label Next.js, React, and Technical SEO engineering partner for digital agencies and SMBs in the US, UK, UAE, and APAC.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "Offshore Web Development Partner", item: canonicalUrl },
     ],
     service: {

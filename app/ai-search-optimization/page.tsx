@@ -22,16 +22,16 @@ export const metadata: Metadata = {
     "Joy Digital GEO"
   ],
   alternates: {
-    canonical: "https://joydigital.in/ai-search-optimization",
+    canonical: "https://www.joydigital.in/ai-search-optimization",
   },
   openGraph: {
     type: "website",
     title: "Generative Engine Optimization (GEO) & AI Search Services | Joy Digital",
     description: "Prepare your web presence for ChatGPT, Perplexity, Claude, and Gemini. We structure semantic schemas, clear entity graphs, and technical content for AI citations.",
-    url: "https://joydigital.in/ai-search-optimization",
+    url: "https://www.joydigital.in/ai-search-optimization",
     images: [
       {
-        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Joy Digital - Generative Engine Optimization (GEO) & AI Search",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Generative Engine Optimization (GEO) & AI Search Services | Joy Digital",
     description: "Structure semantic schemas, clear entity graphs, and technical Next.js content to win AI search citations across ChatGPT, Perplexity, and Gemini.",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -55,7 +55,7 @@ export default function AISearchOptimizationPage() {
     "provider": {
       "@type": "Organization",
       "name": "Joy Digital",
-      "url": "https://joydigital.in"
+      "url": "https://www.joydigital.in"
     },
     "description": "Comprehensive Generative Engine Optimization (GEO) helping companies structure clear web entities, semantic HTML data, and JSON-LD schema graphs for modern discovery engines.",
     "offers": {
@@ -70,7 +70,7 @@ export default function AISearchOptimizationPage() {
   return (
     <ServicePageTemplate
       serviceName="AI Search Optimization (GEO)"
-      canonicalUrl="https://joydigital.in/ai-search-optimization"
+      canonicalUrl="https://www.joydigital.in/ai-search-optimization"
       heroTitle="AI Search Optimization & Generative Engine Services"
       heroSubtitle="Transform your digital presence so modern AI discovery systems—such as Google AI Overviews, ChatGPT, Gemini, Copilot, and Perplexity—can cleanly parse, understand, and reference your business expertise."
       leadSource="AI Search Optimization (GEO) Landing Page"

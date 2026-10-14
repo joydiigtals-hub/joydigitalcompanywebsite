@@ -7,13 +7,13 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export { metadata };
 
 export default function QrCodeGeneratorPage() {
-  const canonicalUrl = "https://joydigital.in/qr-code-generator";
+  const canonicalUrl = "https://www.joydigital.in/qr-code-generator";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Free QR Code Generator Online | Joy Digital",
     description: "Generate professional QR codes for links, WhatsApp, emails, WiFi, maps, and UPI payments instantly.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "QR Code Generator", item: canonicalUrl },
     ],
     webApp: {

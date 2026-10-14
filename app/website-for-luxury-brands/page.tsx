@@ -7,20 +7,20 @@ export const metadata: Metadata = {
   title: "Premium Luxury Brand Website Design Services | Joy Digital",
   description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
   alternates: {
-    canonical: "https://joydigital.in/website-for-luxury-brands",
+    canonical: "https://www.joydigital.in/website-for-luxury-brands",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-luxury-brands",
+    url: "https://www.joydigital.in/website-for-luxury-brands",
     title: "Premium Luxury Brand Website Design Services | Joy Digital",
     description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Luxury Brand Website Design Joy Digital" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Luxury Brand Website Design Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Premium Luxury Brand Website Design Services | Joy Digital",
     description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -29,15 +29,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://joydigital.in/website-for-luxury-brands#service",
+      "@id": "https://www.joydigital.in/website-for-luxury-brands#service",
       "name": "Luxury Brand Website Design & Premium SEO Services",
       "serviceType": "Luxury Web Development & Prestige Brand Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://joydigital.in",
+        "url": "https://www.joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",

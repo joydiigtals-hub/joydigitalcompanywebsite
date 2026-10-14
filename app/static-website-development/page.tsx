@@ -28,7 +28,7 @@ export default async function StaticWebDevPage() {
         heroSubtitle="Engineer sub-second, pre-rendered static web platforms built on Next.js, React, and Edge CDNs. Unmatched Core Web Vitals, enterprise-grade security, and zero backend infrastructure overhead for global B2B brands."
         leadSource="Enterprise Jamstack Landing Page"
         customLeadForm={<JamstackLeadForm />}
-        canonicalUrl="https://joydigital.in/static-website-development"
+        canonicalUrl="https://www.joydigital.in/static-website-development"
         overviewTitle="Transitioning to High-Performance Headless Architecture"
         overviewContent={
           <div className="space-y-6">

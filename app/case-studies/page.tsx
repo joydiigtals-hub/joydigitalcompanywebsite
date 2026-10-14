@@ -11,15 +11,15 @@ export const metadata: Metadata = {
   title: "Client Case Studies & Marketing Results | Joy Digital",
   description: "Explore real success stories from Joy Digital. Read how our web design, SEO, and local maps campaigns drove appointments, sales, and ranking growth.",
   alternates: {
-    canonical: "https://joydigital.in/case-studies",
+    canonical: "https://www.joydigital.in/case-studies",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/case-studies",
+    url: "https://www.joydigital.in/case-studies",
     siteName: "Joy Digital Agency",
     title: "Client Case Studies & Marketing Results | Joy Digital",
     description: "Explore real success stories from Joy Digital. Read how our web design, SEO, and local maps campaigns drove appointments, sales, and ranking growth.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Joy Digital Case Studies" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Joy Digital Case Studies" }],
   },
 };
 
@@ -51,13 +51,13 @@ const CASE_STUDIES = [
 ];
 
 export default function CaseStudiesPage() {
-  const canonicalUrl = "https://joydigital.in/case-studies";
+  const canonicalUrl = "https://www.joydigital.in/case-studies";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Client Case Studies & Marketing Results | Joy Digital",
     description: "Explore real success stories from Joy Digital. Read how our web design, SEO, and local maps campaigns drove appointments, sales, and ranking growth.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "Case Studies", item: canonicalUrl },
     ],
   });

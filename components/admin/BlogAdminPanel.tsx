@@ -198,7 +198,7 @@ export default function BlogAdminPanel() {
   const [authorRole, setAuthorRole] = useState("Technical Web & SEO Specialist");
   const [authorBio, setAuthorBio] = useState("Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.");
   const [authorImage, setAuthorImage] = useState("/assets/images/logo.webp");
-  const [authorProfileUrl, setAuthorProfileUrl] = useState("https://joydigital.in/about");
+  const [authorProfileUrl, setAuthorProfileUrl] = useState("https://www.joydigital.in/about");
 
   // FAQ Builder State
   const [faqs, setFaqs] = useState<FaqItem[]>([]);
@@ -275,7 +275,7 @@ export default function BlogAdminPanel() {
         .substring(0, 60);
       setSlug(suggestedSlug);
       if (!seoTitle) setSeoTitle(val);
-      if (!canonicalUrl) setCanonicalUrl(`https://joydigital.in/blog/${suggestedSlug}`);
+      if (!canonicalUrl) setCanonicalUrl(`https://www.joydigital.in/blog/${suggestedSlug}`);
     }
   };
 
@@ -332,7 +332,7 @@ export default function BlogAdminPanel() {
     const kw = post.focusKeyword || deriveFocusKeyword(post.title, post.category);
     setFocusKeyword(kw);
     setSecondaryKeywords(post.secondaryKeywords || `${post.category}, Joy Digital, SEO Strategy`);
-    setCanonicalUrl(post.canonicalUrl || `https://joydigital.in/blog/${post.slug}`);
+    setCanonicalUrl(post.canonicalUrl || `https://www.joydigital.in/blog/${post.slug}`);
     setRobots(post.robots || "Index, Follow");
 
     const links = post.internalLinks && post.internalLinks.length > 0
@@ -347,7 +347,7 @@ export default function BlogAdminPanel() {
     setAuthorRole(post.authorRole || "Technical Web & SEO Specialist");
     setAuthorBio(post.authorBio || "Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.");
     setAuthorImage(post.authorImage || "/assets/images/logo.webp");
-    setAuthorProfileUrl(post.authorProfileUrl || "https://joydigital.in/about");
+    setAuthorProfileUrl(post.authorProfileUrl || "https://www.joydigital.in/about");
 
     setFaqs(post.faqs || []);
 
@@ -404,7 +404,7 @@ export default function BlogAdminPanel() {
     setAuthorRole("Technical Web & SEO Specialist");
     setAuthorBio("Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.");
     setAuthorImage("/assets/images/logo.webp");
-    setAuthorProfileUrl("https://joydigital.in/about");
+    setAuthorProfileUrl("https://www.joydigital.in/about");
 
     setFaqs([]);
 
@@ -583,7 +583,7 @@ export default function BlogAdminPanel() {
       formData.append("metaDescription", metaDescription || description);
       formData.append("focusKeyword", focusKeyword || deriveFocusKeyword(title, category));
       formData.append("secondaryKeywords", secondaryKeywords);
-      formData.append("canonicalUrl", canonicalUrl || `https://joydigital.in/blog/${slug}`);
+      formData.append("canonicalUrl", canonicalUrl || `https://www.joydigital.in/blog/${slug}`);
       formData.append("robots", robots);
 
       formData.append("internalLinks", JSON.stringify(internalLinks));
@@ -1646,7 +1646,7 @@ export default function BlogAdminPanel() {
                           type="text"
                           value={canonicalUrl}
                           onChange={(e) => setCanonicalUrl(e.target.value)}
-                          placeholder={`https://joydigital.in/blog/${slug}`}
+                          placeholder={`https://www.joydigital.in/blog/${slug}`}
                           className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 text-slate-950 rounded-xl outline-none text-xs font-mono font-semibold"
                         />
                       </div>
@@ -1705,7 +1705,7 @@ export default function BlogAdminPanel() {
                       <div className="flex items-center gap-2 mb-1 text-xs text-slate-600">
                         <span className="w-4 h-4 rounded-full bg-blue-600 text-white font-bold text-[9px] flex items-center justify-center">J</span>
                         <span className="text-[11px] font-bold text-slate-800">Joy Digital</span>
-                        <span className="text-[10px] text-slate-400">https://joydigital.in &gt; blog &gt; {slug || "slug"}</span>
+                        <span className="text-[10px] text-slate-400">https://www.joydigital.in &gt; blog &gt; {slug || "slug"}</span>
                       </div>
                       <h3 className="text-base sm:text-lg font-normal text-[#1a0dab] hover:underline cursor-pointer leading-tight mb-1 truncate">
                         {seoTitle || title || "Untitled Post Title - Joy Digital"}

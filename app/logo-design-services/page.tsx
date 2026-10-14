@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Logo Design & Corporate Branding | Joy Digital",
   description: "Joy Digital is a professional logo design company in Chennai, India. We design creative, custom vector logos, brand color boards, and corporate identity sets.",
   alternates: {
-    canonical: "https://joydigital.in/logo-design-services",
+    canonical: "https://www.joydigital.in/logo-design-services",
   },
 };
 
@@ -18,7 +18,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {

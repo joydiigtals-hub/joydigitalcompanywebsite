@@ -16,16 +16,16 @@ export const metadata: Metadata = {
     "safari tour operator website"
   ],
   alternates: {
-    canonical: "https://joydigital.in/travel-website-development",
+    canonical: "https://www.joydigital.in/travel-website-development",
   },
   openGraph: {
     type: "website",
     title: "Travel & Safari Website Development | Joy Digital",
     description: "Custom travel & safari website engineering with instant booking engines, sub-second itinerary loading, and global SEO. Book your free consultation!",
-    url: "https://joydigital.in/travel-website-development",
+    url: "https://www.joydigital.in/travel-website-development",
     images: [
       {
-        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Joy Digital - Travel & Safari Website Development",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Travel & Safari Website Development | Joy Digital",
     description: "Custom travel & safari website engineering with instant booking engines, sub-second itinerary loading, and global SEO. Book your free consultation!",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -48,7 +48,7 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133"
   },
   "description": "Joy Digital is a leading tourism website development company providing custom website development for tour operators, safari tour operator website development, and travel booking website development.",
@@ -75,7 +75,7 @@ export default async function ToursTravelsWebPage() {
       heroSubtitle="Partner with a premier tourism website development company. Build high-converting travel website development systems and tour package portals to generate global travel enquiries."
       leadSource="Travel Website Development Landing Page"
       heroCtaText="Request a Travel Website Quote"
-      canonicalUrl="https://joydigital.in/travel-website-development"
+      canonicalUrl="https://www.joydigital.in/travel-website-development"
       overviewTitle="High-Converting Websites for the Travel Industry"
       overviewContent={
         <div className="space-y-6">

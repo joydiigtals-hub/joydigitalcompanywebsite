@@ -23,7 +23,7 @@ metaDescription: >-
 focusKeyword: what is the cost of website development in india
 secondaryKeywords: >-
   website development company in india, website development services, website cost in india 2026, Joy Digital, Web Development Pricing
-canonicalUrl: 'https://joydigital.in/blog/website-cost-in-india-2026'
+canonicalUrl: 'https://www.joydigital.in/blog/website-cost-in-india-2026'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Custom Web Development
@@ -38,7 +38,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: How Much Does a Website Cost in India in 2026? A Practical Pricing Guide
 ogDescription: >-

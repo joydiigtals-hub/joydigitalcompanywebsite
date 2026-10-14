@@ -24,7 +24,7 @@ focusKeyword: Insurance Agent Website
 secondaryKeywords: >-
   SEO, Joy Digital, Search Engine Optimization, SEO Strategy, 2026 Digital
   Trends
-canonicalUrl: 'https://joydigital.in/blog/insurance-agent-website-ai-lead-generation'
+canonicalUrl: 'https://www.joydigital.in/blog/insurance-agent-website-ai-lead-generation'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: SEO Services
@@ -39,7 +39,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: 'Insurance Agent Website: How to Generate More Leads with AI & SEO in 2026'
 ogDescription: >-

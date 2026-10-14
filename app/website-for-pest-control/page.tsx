@@ -8,20 +8,20 @@ export const metadata: Metadata = {
   title: "Local SEO & Website Design for Pest Control | Joy Digital",
   description: "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
   alternates: {
-    canonical: "https://joydigital.in/website-for-pest-control",
+    canonical: "https://www.joydigital.in/website-for-pest-control",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-pest-control",
+    url: "https://www.joydigital.in/website-for-pest-control",
     title: "Local SEO & Website Design for Pest Control | Joy Digital",
     description: "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Pest Control Website Design Joy Digital" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Pest Control Website Design Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Local SEO & Website Design for Pest Control | Joy Digital",
     description: "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -30,15 +30,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://joydigital.in/website-for-pest-control#service",
+      "@id": "https://www.joydigital.in/website-for-pest-control#service",
       "name": "Pest Control Company Website Design & Exterminator SEO",
       "serviceType": "Pest Control Web Development & Digital Lead Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://joydigital.in",
+        "url": "https://www.joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
@@ -72,7 +72,7 @@ export default async function PestControlWebPage() {
       heroSubtitle="Turn urgent pest infestations into direct phone calls, instant WhatsApp bookings, and emergency inspection requests. We engineer ultra-fast, mobile-friendly Next.js websites for residential & commercial pest exterminators."
       leadSource="Website for Pest Control Landing Page"
       heroCtaText="Get Free Pest Control Web Quote"
-      canonicalUrl="https://joydigital.in/website-for-pest-control"
+      canonicalUrl="https://www.joydigital.in/website-for-pest-control"
       overviewTitle="Why Most Pest Control Websites Fail to Convert Emergency Calls (And How We Fix It)"
       overviewContent={
         <div className="space-y-6">

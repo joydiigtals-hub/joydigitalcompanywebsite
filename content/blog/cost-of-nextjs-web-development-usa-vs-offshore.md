@@ -21,7 +21,7 @@ metaDescription: >-
   Compare Next.js web development costs: US agencies ($15k-$50k) vs offshore engineering in India ($2k-$8k). Learn how to scale leads and save 60% on technical budget.
 focusKeyword: Next.js Web Development Cost USA
 secondaryKeywords: 'Offshore Web Development India, Next.js Agency USA, Headless Web Development, Web Development Pricing 2026'
-canonicalUrl: 'https://joydigital.in/blog/cost-of-nextjs-web-development-usa-vs-offshore'
+canonicalUrl: 'https://www.joydigital.in/blog/cost-of-nextjs-web-development-usa-vs-offshore'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Custom Web Development
@@ -40,7 +40,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: 'What is the average cost of building a Next.js website in the USA?'
     answer: 'In the USA, custom Next.js web development by a mid-sized digital agency typically ranges between $15,000 and $50,000 for standard corporate sites, and upwards of $75,000 for complex SaaS platforms or e-commerce storefronts.'

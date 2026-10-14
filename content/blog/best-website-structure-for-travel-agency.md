@@ -23,7 +23,7 @@ metaDescription: >-
 focusKeyword: Travel Agency Website Structure
 secondaryKeywords: >-
   Travel Agency Website, Tour Operator Website Design, Travel SEO Strategy, Destination Pages, Tour Package Architecture
-canonicalUrl: 'https://joydigital.in/blog/best-website-structure-for-travel-agency'
+canonicalUrl: 'https://www.joydigital.in/blog/best-website-structure-for-travel-agency'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Travel Website Development
@@ -37,7 +37,7 @@ authorRole: Technical Web & SEO Specialist
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth for travel agencies and global enterprises.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: "What is the most important page on a travel agency website?"
     answer: "While the homepage creates the first impression, dedicated destination pages (e.g., Dubai Tour Packages) and individual tour itinerary pages drive the highest intent search traffic and lead enquiries."
@@ -234,7 +234,7 @@ Your travel agency might launch with 20 packages today and grow to 200+ packages
 * High-ranking blog articles
 * Customer reviews & case studies
 
-A custom-built Next.js travel platform enables easy scaling without requiring a total website redesign every time your inventory expands. Explore **Joy Digital's [Travel Website Development](https://joydigital.in/website-for-tours-and-travels)** solutions engineered for speed, SEO ranking, and lead generation.
+A custom-built Next.js travel platform enables easy scaling without requiring a total website redesign every time your inventory expands. Explore **Joy Digital's [Travel Website Development](https://www.joydigital.in/website-for-tours-and-travels)** solutions engineered for speed, SEO ranking, and lead generation.
 
 ---
 
@@ -242,4 +242,4 @@ A custom-built Next.js travel platform enables easy scaling without requiring a 
 
 If you are a **travel agency owner, tour operator, or DMC** looking to build a professional, mobile-first website that ranks on Google and generates consistent lead enquiries, Joy Digital can help.
 
-**[Build your travel website with Joy Digital](https://joydigital.in/contact) and convert your online visitors into real travel enquiries.**
+**[Build your travel website with Joy Digital](https://www.joydigital.in/contact) and convert your online visitors into real travel enquiries.**

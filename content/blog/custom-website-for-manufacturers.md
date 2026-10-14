@@ -22,7 +22,7 @@ metaDescription: 'Discover how a custom manufacturing website can help manufactu
 focusKeyword: custom website for manufacturers
 secondaryKeywords: >-
   manufacturing website design, manufacturing website development, B2B manufacturing website, manufacturer website design, industrial website development, custom manufacturing website, manufacturing company website, website for manufacturing companies, B2B website development, manufacturing SEO services
-canonicalUrl: 'https://joydigital.in/blog/custom-website-for-manufacturers'
+canonicalUrl: 'https://www.joydigital.in/blog/custom-website-for-manufacturers'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Website for Manufacturing Companies
@@ -46,7 +46,7 @@ authorRole: Technical Web Specialist & Founder
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: Why do manufacturers need a custom website instead of a template?
     answer: >-
@@ -85,7 +85,7 @@ But B2B buying has changed.
 
 Today, buyers, distributors, importers, and procurement teams often research a manufacturer online before starting a conversation. They want to know what the company manufactures, whether the products match their requirements, what industries they serve, whether they have the right certifications, and how quickly they can request a quotation.
 
-This is where a **custom website can make a major difference**. Learn more about our specialized [Website Development for Manufacturing Companies](https://joydigital.in/website-for-manufacturing-companies).
+This is where a **custom website can make a major difference**. Learn more about our specialized [Website Development for Manufacturing Companies](https://www.joydigital.in/website-for-manufacturing-companies).
 
 A well-planned manufacturing website doesn't just tell people about your company. It can help your business attract the right visitors, showcase your products, generate enquiries, and create opportunities with customers from different markets across the **USA, UK, Australia, Canada, UAE, Germany, Netherlands, and Singapore**.
 
@@ -108,7 +108,7 @@ For example:
 * What certifications do you have?
 * How can I contact your sales team?
 
-The website should make finding these answers simple. Discover our full range of [Custom Website Development Services](https://joydigital.in/website-development).
+The website should make finding these answers simple. Discover our full range of [Custom Website Development Services](https://www.joydigital.in/website-development).
 
 ---
 
@@ -179,7 +179,7 @@ Instead of receiving a simple message saying "I need this product," your sales t
 
 ## 3. Reach International Buyers
 
-Manufacturers that export or want to expand internationally need more than a local online presence. Explore our [Export & Import Website Solutions](https://joydigital.in/website-for-export-and-import).
+Manufacturers that export or want to expand internationally need more than a local online presence. Explore our [Export & Import Website Solutions](https://www.joydigital.in/website-for-export-and-import).
 
 A professional website can showcase:
 
@@ -202,7 +202,7 @@ Your website can effectively become a **24/7 sales representative for your manuf
 
 Having a website doesn't automatically mean customers will find it on Google.
 
-The website needs a proper SEO structure. Read about our targeted [B2B SEO Services](https://joydigital.in/seo-services).
+The website needs a proper SEO structure. Read about our targeted [B2B SEO Services](https://www.joydigital.in/seo-services).
 
 For example, instead of targeting only a broad keyword like **Manufacturer**, you can create focused pages around searches such as:
 
@@ -306,7 +306,7 @@ As your manufacturing business grows, your website can grow with it.
 
 Search behaviour is also changing.
 
-People are increasingly using AI tools to research companies, products, suppliers, and solutions. Learn about our specialized [AI Search Optimization (GEO) Services](https://joydigital.in/ai-search-optimization).
+People are increasingly using AI tools to research companies, products, suppliers, and solutions. Learn about our specialized [AI Search Optimization (GEO) Services](https://www.joydigital.in/ai-search-optimization).
 
 A manufacturing website should therefore have clear, structured, trustworthy content that explains:
 
@@ -418,7 +418,7 @@ Ready to transform your manufacturing company website and win more B2B customers
 * **Agency Name:** Joy Digital Growth Agency
 * **Phone / Call Support:** [+91 90800 26133](tel:+919080026133)
 * **WhatsApp Chat:** [Chat on WhatsApp (+91 90800 26133)](https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20get%20more%20details%20about%20manufacturing%20website%20development.)
-* **Contact:** [Contact Us Online](https://joydigital.in/contact)
+* **Contact:** [Contact Us Online](https://www.joydigital.in/contact)
 * **Office Address:** Tamil Nadu, India
-* **Website & Consultation:** [Request a Manufacturing Website Quote](https://joydigital.in/contact?service=Website%20for%20Manufacturing%20Companies)
+* **Website & Consultation:** [Request a Manufacturing Website Quote](https://www.joydigital.in/contact?service=Website%20for%20Manufacturing%20Companies)
 

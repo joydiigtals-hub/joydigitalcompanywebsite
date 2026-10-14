@@ -28,7 +28,7 @@ metaDescription: >-
   businesses attract visitors, build trust and generate more property enquiries.
 focusKeyword: Real Estate
 secondaryKeywords: 'Web Design, Joy Digital, Search Engine Optimization, SEO Strategy'
-canonicalUrl: 'https://joydigital.in/blog/real-estate-website-design-features'
+canonicalUrl: 'https://www.joydigital.in/blog/real-estate-website-design-features'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Website Design Agency
@@ -43,7 +43,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: >-
   Real Estate Website Design: 10 Features That Convert Visitors into Property

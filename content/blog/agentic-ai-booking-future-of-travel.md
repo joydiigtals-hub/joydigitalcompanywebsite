@@ -26,7 +26,7 @@ focusKeyword: Direct Bookings
 secondaryKeywords: >-
   SEO, Joy Digital, Search Engine Optimization, SEO Strategy, 2026 Digital
   Trends
-canonicalUrl: 'https://joydigital.in/blog/agentic-ai-booking-future-of-travel'
+canonicalUrl: 'https://www.joydigital.in/blog/agentic-ai-booking-future-of-travel'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: SEO Services
@@ -41,7 +41,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: 'Agentic AI Booking: The Future of Travel Booking in 2026'
 ogDescription: >-
@@ -362,7 +362,7 @@ Their content should also be structured so that search engines and AI systems ca
 * Where it operates
 * What customers say about it
 
-This is where **SEO, AEO and GEO** become increasingly important for travel businesses. Read more about how to optimize your website for AI engines in our [AI Search Optimization (AEO/GEO) Guide](https://joydigital.in/blog/ai-search-optimization-guide-2026).
+This is where **SEO, AEO and GEO** become increasingly important for travel businesses. Read more about how to optimize your website for AI engines in our [AI Search Optimization (AEO/GEO) Guide](https://www.joydigital.in/blog/ai-search-optimization-guide-2026).
 
 A travel website should not simply be designed for humans to browse.
 
@@ -444,7 +444,7 @@ to:
 
 This doesn't mean every travel company needs a fully autonomous AI booking system today.
 
-But travel companies should start preparing their websites, content, tour data and backend systems for this direction. For agencies looking to build high-performance booking engines, check out our [Travel Website Development Services](https://joydigital.in/website-for-tours-and-travels).
+But travel companies should start preparing their websites, content, tour data and backend systems for this direction. For agencies looking to build high-performance booking engines, check out our [Travel Website Development Services](https://www.joydigital.in/website-for-tours-and-travels).
 
 The biggest change may not be that travel websites are getting smarter.
 

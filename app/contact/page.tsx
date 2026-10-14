@@ -11,35 +11,35 @@ export const metadata: Metadata = {
   title: "Contact Us | Request a Free Consultation | Joy Digital",
   description: "Get in touch with our digital specialists. Request a free SEO audit, custom website quotes, or logo design consulting from our office.",
   alternates: {
-    canonical: "https://joydigital.in/contact",
+    canonical: "https://www.joydigital.in/contact",
     languages: {
-      "x-default": "https://joydigital.in/contact",
-      "en-us": "https://joydigital.in/us/contact",
-      "en-gb": "https://joydigital.in/uk/contact",
-      "en-ae": "https://joydigital.in/ae/contact",
-      "en-in": "https://joydigital.in/in/contact",
+      "x-default": "https://www.joydigital.in/contact",
+      "en-us": "https://www.joydigital.in/us/contact",
+      "en-gb": "https://www.joydigital.in/uk/contact",
+      "en-ae": "https://www.joydigital.in/ae/contact",
+      "en-in": "https://www.joydigital.in/in/contact",
     },
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/contact",
+    url: "https://www.joydigital.in/contact",
     siteName: "Joy Digital Agency",
     title: "Contact Us | Request a Free Consultation | Joy Digital",
     description: "Get in touch with our digital specialists. Request a free SEO audit, custom website quotes, or logo design consulting from our office.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Contact Joy Digital Agency" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Contact Joy Digital Agency" }],
   },
 };
 
 export default function ContactPage() {
   const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
-  const canonicalUrl = "https://joydigital.in/contact";
+  const canonicalUrl = "https://www.joydigital.in/contact";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Contact Us | Request a Free Consultation | Joy Digital",
     description: "Get in touch with our digital specialists. Request a free SEO audit, custom website quotes, or logo design consulting from our office.",
     includeLocalBusiness: true,
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "Contact Us", item: canonicalUrl },
     ],
   });

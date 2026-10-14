@@ -24,7 +24,7 @@ focusKeyword: Custom Website
 secondaryKeywords: >-
   Web Development, Joy Digital, Search Engine Optimization, SEO Strategy,
   Chennai Web Agency
-canonicalUrl: 'https://joydigital.in/blog/how-much-does-custom-website-design-cost-in-chennai'
+canonicalUrl: 'https://www.joydigital.in/blog/how-much-does-custom-website-design-cost-in-chennai'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Custom Web Development
@@ -39,7 +39,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: How much does a custom website design cost in Chennai?
 ogDescription: >-

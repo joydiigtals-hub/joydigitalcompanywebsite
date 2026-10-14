@@ -44,10 +44,10 @@ export const metadata: Metadata = {
     canonical: "https://www.joydigital.in/",
     languages: {
       "x-default": "https://www.joydigital.in",
-      "en-us": "https://joydigital.in/us",
-      "en-gb": "https://joydigital.in/uk",
-      "en-ae": "https://joydigital.in/ae",
-      "en-in": "https://joydigital.in/in",
+      "en-us": "https://www.joydigital.in/us",
+      "en-gb": "https://www.joydigital.in/uk",
+      "en-ae": "https://www.joydigital.in/ae",
+      "en-in": "https://www.joydigital.in/in",
     },
   },
   verification: {
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
     images: [
       {
-        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Joy Digital - Next.js Development Company India",
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
     description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
     creator: "@joydigital",
   },
 };

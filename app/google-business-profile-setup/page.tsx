@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Google Business Profile Setup | Joy Digital",
   description: "Joy Digital is a professional Google Business Profile optimization agency in Chennai, India. We verify and rank your business on Google Maps pack.",
   alternates: {
-    canonical: "https://joydigital.in/google-business-profile-setup",
+    canonical: "https://www.joydigital.in/google-business-profile-setup",
   },
 };
 
@@ -18,7 +18,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {

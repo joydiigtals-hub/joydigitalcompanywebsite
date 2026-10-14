@@ -19,7 +19,7 @@ seoTitle: "How to Get Clients for Website Development: Foreign Clients & Lead Ge
 metaDescription: "Learn how to get clients for website development, find foreign clients in US & UK, generate recurring web dev leads, and scale your agency from India."
 focusKeyword: "how to get clients for website development"
 secondaryKeywords: "how to find clients for website development, how to get foreign clients for website development, how to get leads for website development, website development services"
-canonicalUrl: "https://joydigital.in/blog/how-to-get-clients-for-website-development"
+canonicalUrl: "https://www.joydigital.in/blog/how-to-get-clients-for-website-development"
 robots: "Index, Follow"
 internalLinks:
   - anchorText: Custom Website Development
@@ -36,7 +36,7 @@ authorName: "Saravanan"
 authorRole: "Technical Web & SEO Specialist"
 authorBio: "Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth."
 authorImage: "/assets/images/logo.webp"
-authorProfileUrl: "https://joydigital.in/about"
+authorProfileUrl: "https://www.joydigital.in/about"
 faqs:
   - question: "How to get clients for website development as a beginner?"
     answer: "Beginners should build 2-3 high-quality portfolio websites, offer audit-based outreach to local small businesses, optimize their LinkedIn profile, and submit targeted proposals on platforms like Upwork."

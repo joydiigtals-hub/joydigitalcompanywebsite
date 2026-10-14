@@ -10,27 +10,27 @@ export const metadata: Metadata = {
   title: "Cookie Policy | Joy Digital",
   description: "Read the official Cookie Policy for Joy Digital to understand how we use cookies and tracking technologies to optimize your browsing experience.",
   alternates: {
-    canonical: "https://joydigital.in/cookie-policy",
+    canonical: "https://www.joydigital.in/cookie-policy",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/cookie-policy",
+    url: "https://www.joydigital.in/cookie-policy",
     siteName: "Joy Digital Agency",
     title: "Cookie Policy & Data Tracking Terms | Joy Digital",
     description: "Read the Cookie Policy for Joy Digital to understand how we use cookies to improve your user experience.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Joy Digital Cookie Policy" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Joy Digital Cookie Policy" }],
   },
 };
 
 export default function CookiePolicyPage() {
   const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
-  const canonicalUrl = "https://joydigital.in/cookie-policy";
+  const canonicalUrl = "https://www.joydigital.in/cookie-policy";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Cookie Policy | Joy Digital",
     description: "Read the official Cookie Policy for Joy Digital to understand how we use cookies and tracking technologies to optimize your browsing experience.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "Cookie Policy", item: canonicalUrl },
     ],
   });

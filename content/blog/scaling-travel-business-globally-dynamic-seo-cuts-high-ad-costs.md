@@ -22,7 +22,7 @@ metaDescription: >-
   Learn how tour operators cut high PPC ad costs and scale international bookings organically with Dynamic SEO and automated landing pages.
 focusKeyword: Dynamic SEO Cuts High Ad Costs
 secondaryKeywords: 'Travel Web Development, Tour Operator SEO, Reduce CAC Travel, Dynamic Travel Websites'
-canonicalUrl: 'https://joydigital.in/blog/scaling-travel-business-globally-dynamic-seo-cuts-high-ad-costs'
+canonicalUrl: 'https://www.joydigital.in/blog/scaling-travel-business-globally-dynamic-seo-cuts-high-ad-costs'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Travel Website Development
@@ -38,7 +38,7 @@ authorRole: Technical Web & SEO Specialist
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: How does Dynamic SEO reduce Customer Acquisition Cost (CAC) for travel agencies?
     answer: Dynamic SEO automatically generates and ranks thousands of long-tail landing pages for hyper-specific travel queries. This attracts high-intent organic visitors for free, drastically lowering your dependency on expensive Google & Meta paid ads.

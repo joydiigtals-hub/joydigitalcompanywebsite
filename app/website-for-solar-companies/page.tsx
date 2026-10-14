@@ -9,20 +9,20 @@ export const metadata: Metadata = {
   title: "SEO & Website for Solar Installers India | Joy Digital",
   description: "Website design & local SEO for solar installers and EPC companies in India. Rank on Google, generate rooftop solar inquiries & C&I leads with Joy Digital.",
   alternates: {
-    canonical: "https://joydigital.in/website-for-solar-companies",
+    canonical: "https://www.joydigital.in/website-for-solar-companies",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-solar-companies",
+    url: "https://www.joydigital.in/website-for-solar-companies",
     title: "SEO & Website for Solar Installers India | Joy Digital",
     description: "Website design & local SEO for solar installers and EPC companies in India. Rank on Google, generate rooftop solar inquiries & C&I leads with Joy Digital.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "SEO & Website for Solar Installers India Joy Digital" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "SEO & Website for Solar Installers India Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "SEO & Website for Solar Installers India | Joy Digital",
     description: "Website design & local SEO for solar installers and EPC companies in India. Rank on Google, generate rooftop solar inquiries & C&I leads with Joy Digital.",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -47,12 +47,12 @@ const SOLAR_FAQS = [
 
 export default function SolarWebPage() {
   const pageGraphSchema = buildPageGraphSchema({
-    url: "https://joydigital.in/website-for-solar-companies",
+    url: "https://www.joydigital.in/website-for-solar-companies",
     title: "SEO & Website for Solar Installers India | Joy Digital",
     description: "Website design & local SEO for solar installers and EPC companies in India. Rank on Google, generate rooftop solar inquiries & C&I leads with Joy Digital.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
-      { name: "Website for Solar Companies", item: "https://joydigital.in/website-for-solar-companies" },
+      { name: "Home", item: "https://www.joydigital.in" },
+      { name: "Website for Solar Companies", item: "https://www.joydigital.in/website-for-solar-companies" },
     ],
     service: {
       name: "SEO and Website Development for Solar Installers in India",

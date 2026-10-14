@@ -22,7 +22,7 @@ metaDescription: >-
   Understand how fast-loading Next.js websites improve bounce rates and leads.
 focusKeyword: Corporate Website
 secondaryKeywords: 'Web Speed, Joy Digital, Search Engine Optimization'
-canonicalUrl: 'https://joydigital.in/blog/how-fast-should-corporate-website-load-rank-google'
+canonicalUrl: 'https://www.joydigital.in/blog/how-fast-should-corporate-website-load-rank-google'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Free Website Audit Tool
@@ -37,7 +37,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: How fast should a corporate website load to rank on Google?
 ogDescription: >-

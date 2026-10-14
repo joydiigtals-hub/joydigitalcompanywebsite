@@ -22,7 +22,7 @@ metaDescription: >-
   Discover how tour operators bypass OTA commissions and capture global bookings organically with Dynamic SEO & programmatic web architecture.
 focusKeyword: Beating the OTA Monopoly
 secondaryKeywords: 'Tour Operator Organic Growth, OTA Commission Alternatives, Travel Web Development, Dynamic Travel SEO'
-canonicalUrl: 'https://joydigital.in/blog/beating-ota-monopoly-tour-operators-guide-organic-growth'
+canonicalUrl: 'https://www.joydigital.in/blog/beating-ota-monopoly-tour-operators-guide-organic-growth'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Travel Website Development
@@ -38,7 +38,7 @@ authorRole: Technical Web & SEO Specialist
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: How much commission do Online Travel Agencies (OTAs) charge tour operators?
     answer: OTAs typically charge between 15% to 25% commission per booking. Shifting to an organic Dynamic SEO model helps operators retain 100% of their booking revenue.

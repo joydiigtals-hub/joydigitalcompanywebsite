@@ -24,7 +24,7 @@ focusKeyword: Next.js
 secondaryKeywords: >-
   Web Development, Joy Digital, Search Engine Optimization, SEO Strategy, 2026
   Digital Trends
-canonicalUrl: 'https://joydigital.in/blog/why-nextjs-is-best-for-seo-2026'
+canonicalUrl: 'https://www.joydigital.in/blog/why-nextjs-is-best-for-seo-2026'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Custom Web Development
@@ -39,7 +39,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: Why Next.js is the Best Web Framework for SEO in 2026
 ogDescription: >-
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
   title: "Custom Web Development Services | Joy Digital",
   description: "High-performance Next.js engineering.",
   alternates: {
-    canonical: "https://joydigital.in/website-development",
+    canonical: "https://www.joydigital.in/website-development",
   },
 };
 ```
@@ -116,5 +116,5 @@ A headless setup separates your frontend design (Next.js) from your content mana
 
 Building a high-performance Next.js website requires specialized development skills. At Joy Digital, we construct custom, speed-optimized Next.js web applications tailored for lead generation.
 
-* Check out our [Web Development Services](https://joydigital.in/website-development) to explore our pricing and tech stack.
-* Claim your [Free Website & SEO Audit](https://joydigital.in/free-audit) today to get a detailed page speed and visibility report.
+* Check out our [Web Development Services](https://www.joydigital.in/website-development) to explore our pricing and tech stack.
+* Claim your [Free Website & SEO Audit](https://www.joydigital.in/free-audit) today to get a detailed page speed and visibility report.

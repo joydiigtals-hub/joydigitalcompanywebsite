@@ -23,7 +23,7 @@ export default async function CustomWebDevPage() {
         heroSubtitle="A premium, results-oriented custom website development service that helps businesses across diverse industries build authority, trust, and generate qualified leads globally."
         leadSource="Custom Website Development Page"
         heroCtaText="Get a Website Quote"
-        canonicalUrl="https://joydigital.in/custom-website-development"
+        canonicalUrl="https://www.joydigital.in/custom-website-development"
         overviewTitle="Websites That Turn Visitors Into Enquiries"
         overviewContent={
           <div className="space-y-6">

@@ -22,7 +22,7 @@ metaDescription: Discover how a slow-loading website loses customers, hurts Goog
 focusKeyword: why slow website costs business customers
 secondaryKeywords: >-
   website speed optimization, Core Web Vitals, mobile website performance, website loading speed, Next.js web development, conversion rate optimization
-canonicalUrl: 'https://joydigital.in/blog/why-slow-website-costing-your-business-customers'
+canonicalUrl: 'https://www.joydigital.in/blog/why-slow-website-costing-your-business-customers'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Free Website Speed Audit Tool
@@ -43,7 +43,7 @@ authorRole: Technical Web & SEO Specialist
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: How long should a business website take to load?
     answer: >-
@@ -70,13 +70,13 @@ seoScore: 98
 
 Your website is often the first place potential customers learn about your business.
 
-Whether they find you through Google, social media, an advertisement, or a recommendation, they expect your website to load quickly and provide the information they need. Run a [Free Website Speed Audit](https://joydigital.in/free-website-audit) to check how fast your site performs.
+Whether they find you through Google, social media, an advertisement, or a recommendation, they expect your website to load quickly and provide the information they need. Run a [Free Website Speed Audit](https://www.joydigital.in/free-website-audit) to check how fast your site performs.
 
 But what happens when your website takes too long to load?
 
 A visitor may leave before seeing your services, products, contact details, or offers. In many cases, you may never know that a potential customer visited your website and left because of its poor performance.
 
-A **slow-loading website** is not just a technical problem. It can become a business problem that affects customer experience, search visibility, leads, and sales. Read our companion analysis on [How Fast Should a Corporate Website Load to Rank on Google](https://joydigital.in/blog/how-fast-should-corporate-website-load-rank-google).
+A **slow-loading website** is not just a technical problem. It can become a business problem that affects customer experience, search visibility, leads, and sales. Read our companion analysis on [How Fast Should a Corporate Website Load to Rank on Google](https://www.joydigital.in/blog/how-fast-should-corporate-website-load-rank-google).
 
 That is why website speed should be a priority for every business owner targeting customers online.
 
@@ -107,7 +107,7 @@ If pages take too long to load, the experience becomes frustrating.
 
 Website performance is one of the factors considered in Google's page experience and ranking systems.
 
-A technically strong and fast website can provide a better experience for visitors and support your overall SEO strategy. Explore our [Search Engine Optimization Services](https://joydigital.in/seo-services) to learn how speed boosts rankings.
+A technically strong and fast website can provide a better experience for visitors and support your overall SEO strategy. Explore our [Search Engine Optimization Services](https://www.joydigital.in/seo-services) to learn how speed boosts rankings.
 
 This means **website speed optimization** should not be treated separately from SEO.
 
@@ -152,7 +152,7 @@ This is particularly important for businesses such as:
 * E-commerce stores
 * Professional services
 
-A fast and well-designed website can create a more professional first impression. Discover how our [Custom Web Development Solutions](https://joydigital.in/website-development) build sub-second Next.js web applications.
+A fast and well-designed website can create a more professional first impression. Discover how our [Custom Web Development Solutions](https://www.joydigital.in/website-development) build sub-second Next.js web applications.
 
 ---
 
@@ -209,7 +209,7 @@ Your website may contain unnecessary CSS, JavaScript, plugins, libraries, or thi
 
 Review the website regularly and remove elements that are not providing real value.
 
-A cleaner website can be easier to maintain and can improve performance. Read why developers choose Next.js in [Why Next.js is Best for SEO](https://joydigital.in/blog/why-nextjs-is-best-for-seo-2026).
+A cleaner website can be easier to maintain and can improve performance. Read why developers choose Next.js in [Why Next.js is Best for SEO](https://www.joydigital.in/blog/why-nextjs-is-best-for-seo-2026).
 
 ---
 
@@ -385,7 +385,7 @@ Ready to transform your website speed and convert more online visitors into cust
 * **Agency Name:** Joy Digital Growth Agency
 * **Phone / Call Support:** [+91 90800 26133](tel:+919080026133)
 * **WhatsApp Chat:** [Chat on WhatsApp (+91 90800 26133)](https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20get%20more%20details%20about%20website%20speed%20optimization.)
-* **Contact:** [Contact Us Online](https://joydigital.in/contact)
+* **Contact:** [Contact Us Online](https://www.joydigital.in/contact)
 * **Office Address:** Tamil Nadu, India
-* **Website & Performance Audit:** [Request a Free Website Performance Review](https://joydigital.in/contact?service=Website%20Development)
+* **Website & Performance Audit:** [Request a Free Website Performance Review](https://www.joydigital.in/contact?service=Website%20Development)
 

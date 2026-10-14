@@ -21,7 +21,7 @@ metaDescription: >-
   Learn how Dubai real estate brokers capture High-Net-Worth (HNW) property buyers using Next.js portals, AI-powered search, and GEO rankings on ChatGPT and Perplexity.
 focusKeyword: Dubai Real Estate Web Design & AI SEO
 secondaryKeywords: 'Dubai Real Estate Web Development, UAE Property Portal SEO, Generative Engine Optimization, High Net Worth Lead Generation'
-canonicalUrl: 'https://joydigital.in/blog/how-dubai-real-estate-brokers-capture-hnw-buyers-ai-seo'
+canonicalUrl: 'https://www.joydigital.in/blog/how-dubai-real-estate-brokers-capture-hnw-buyers-ai-seo'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Real Estate Web Development
@@ -40,7 +40,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: 'Why is traditional real estate web design failing in Dubai in 2026?'
     answer: 'Traditional property websites fail because heavy image carousels and slow database filters delay mobile loading speeds past 4 seconds, causing luxury international buyers to drop off before contacting agents.'

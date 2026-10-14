@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     "International B2B Trade SEO Architecture"
   ],
   alternates: {
-    canonical: "https://joydigital.in/website-for-export-and-import",
+    canonical: "https://www.joydigital.in/website-for-export-and-import",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-export-and-import",
+    url: "https://www.joydigital.in/website-for-export-and-import",
     title: "Enterprise Digital Platforms for Global Export-Import Houses | Joy Digital",
     description: "Connect directly with international buyers. We build ultra-fast Next.js B2B web portals with custom RFQ engines and International B2B Trade SEO Architecture.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Export Import Business Website Design Joy Digital" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Export Import Business Website Design Joy Digital" }],
   },
 };
 
@@ -30,15 +30,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://joydigital.in/website-for-export-and-import#service",
+      "@id": "https://www.joydigital.in/website-for-export-and-import#service",
       "name": "B2B Export Web Development Services & International Trade SEO",
       "serviceType": "B2B Export Web Development Services",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://joydigital.in",
+        "url": "https://www.joydigital.in",
         "priceRange": "$$$",
         "address": {
           "@type": "PostalAddress",

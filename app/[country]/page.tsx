@@ -109,20 +109,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: data.title,
     description: data.description,
     alternates: {
-      canonical: `https://joydigital.in`,
+      canonical: `https://www.joydigital.in/${countryLower}`,
       languages: {
-        "x-default": "https://joydigital.in",
-        "en-in": "https://joydigital.in",
-        "en-us": "https://joydigital.in/us",
-        "en-gb": "https://joydigital.in/uk",
-        "en-ae": "https://joydigital.in/ae",
-        "en-ca": "https://joydigital.in/ca",
-        "en-au": "https://joydigital.in/au",
-        "en-sg": "https://joydigital.in/sg",
-        "en-my": "https://joydigital.in/my",
-        "en-za": "https://joydigital.in/za",
-        "en-ng": "https://joydigital.in/ng",
-        "en-ke": "https://joydigital.in/ke",
+        "x-default": "https://www.joydigital.in",
+        "en-in": "https://www.joydigital.in",
+        "en-us": "https://www.joydigital.in/us",
+        "en-gb": "https://www.joydigital.in/uk",
+        "en-ae": "https://www.joydigital.in/ae",
+        "en-ca": "https://www.joydigital.in/ca",
+        "en-au": "https://www.joydigital.in/au",
+        "en-sg": "https://www.joydigital.in/sg",
+        "en-my": "https://www.joydigital.in/my",
+        "en-za": "https://www.joydigital.in/za",
+        "en-ng": "https://www.joydigital.in/ng",
+        "en-ke": "https://www.joydigital.in/ke",
       },
     },
   };
@@ -136,7 +136,7 @@ export default async function CountryHomePage({ params }: PageProps) {
     description: "Joy Digital is a results-oriented global agency engineering fast Next.js sites and search marketing campaigns.",
   };
 
-  const countryUrl = `https://joydigital.in/${countryLower}`;
+  const countryUrl = `https://www.joydigital.in/${countryLower}`;
   const graphSchema = buildPageGraphSchema({
     url: countryUrl,
     title: data.title,

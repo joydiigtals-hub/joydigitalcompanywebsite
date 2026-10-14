@@ -8,14 +8,14 @@ export const metadata: Metadata = {
   title: "Textile Manufacturer Website Design | Joy Digital",
   description: "Custom B2B websites and SEO for textile manufacturers and fabric exporters. Digital fabric catalogs, RFQ forms, and global buyer leads.",
   alternates: {
-    canonical: "https://joydigital.in/website-for-textile-manufacturers",
+    canonical: "https://www.joydigital.in/website-for-textile-manufacturers",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-textile-manufacturers",
+    url: "https://www.joydigital.in/website-for-textile-manufacturers",
     title: "Global Textile Manufacturer Website Design & Export Lead Generation | Joy Digital",
     description: "Ultra-fast Next.js websites tailored for global textile mills, apparel exporters, and fabric manufacturers. Digital swatch catalogs, B2B RFQ forms, GOTS/OEKO-TEX compliance badges, and worldwide search ranking.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Global Textile Manufacturer Website Design Joy Digital" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Global Textile Manufacturer Website Design Joy Digital" }],
   },
 };
 
@@ -24,15 +24,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://joydigital.in/website-for-textile-manufacturers#service",
+      "@id": "https://www.joydigital.in/website-for-textile-manufacturers#service",
       "name": "Global Textile Manufacturer Website Design & B2B SEO",
       "serviceType": "Textile B2B Web Development & Export Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://joydigital.in",
+        "url": "https://www.joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",

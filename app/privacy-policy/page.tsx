@@ -10,27 +10,27 @@ export const metadata: Metadata = {
   title: "Privacy Policy & Data Protection Terms | Joy Digital",
   description: "Read the Privacy Policy of Joy Digital to understand how we collect, use, and protect your personal information.",
   alternates: {
-    canonical: "https://joydigital.in/privacy-policy",
+    canonical: "https://www.joydigital.in/privacy-policy",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/privacy-policy",
+    url: "https://www.joydigital.in/privacy-policy",
     siteName: "Joy Digital Agency",
     title: "Privacy Policy & Data Protection Terms | Joy Digital",
     description: "Read the Privacy Policy of Joy Digital to understand how we collect, use, and protect your personal information.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Joy Digital Privacy Policy" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Joy Digital Privacy Policy" }],
   },
 };
 
 export default function PrivacyPolicyPage() {
   const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
-  const canonicalUrl = "https://joydigital.in/privacy-policy";
+  const canonicalUrl = "https://www.joydigital.in/privacy-policy";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Privacy Policy & Data Protection Terms | Joy Digital",
     description: "Read the Privacy Policy of Joy Digital to understand how we collect, use, and protect your personal information.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "Privacy Policy", item: canonicalUrl },
     ],
   });

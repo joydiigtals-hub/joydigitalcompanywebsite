@@ -24,7 +24,7 @@ focusKeyword: Business Growth in Chennai
 secondaryKeywords: >-
   Web Development, Joy Digital, Search Engine Optimization, SEO Strategy,
   Chennai Web Agency, 2026 Digital Trends
-canonicalUrl: 'https://joydigital.in/blog/why-website-important-business-growth-chennai-2026'
+canonicalUrl: 'https://www.joydigital.in/blog/why-website-important-business-growth-chennai-2026'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Custom Web Development
@@ -39,7 +39,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: Why a Website Is Important for Business Growth in Chennai in 2026
 ogDescription: >-

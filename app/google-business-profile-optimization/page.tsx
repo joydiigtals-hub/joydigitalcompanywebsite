@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: "Google Business Profile Optimization Services | Joy Digital",
   description: "Expert Google Business Profile optimization to rank in Google Maps 3-Pack, gain local visibility, and generate phone calls with Joy Digital.",
   alternates: {
-    canonical: "https://joydigital.in/google-business-profile-optimization",
+    canonical: "https://www.joydigital.in/google-business-profile-optimization",
   },
   openGraph: {
     title: "Google Business Profile Optimization Services | Joy Digital",
     description: "Expert Google Business Profile optimization to rank in Google Maps 3-Pack, gain local visibility, and generate phone calls with Joy Digital.",
-    url: "https://joydigital.in/google-business-profile-optimization",
+    url: "https://www.joydigital.in/google-business-profile-optimization",
     type: "website",
   },
   twitter: {
@@ -39,12 +39,12 @@ const GBP_FAQS = [
 
 export default function GoogleBusinessProfilePage() {
   const pageGraphSchema = buildPageGraphSchema({
-    url: "https://joydigital.in/google-business-profile-optimization",
+    url: "https://www.joydigital.in/google-business-profile-optimization",
     title: "Google Business Profile Optimization Services | Joy Digital",
     description: "Expert Google Business Profile optimization to rank in Google Maps 3-Pack, gain local visibility, and generate phone calls with Joy Digital.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
-      { name: "Google Business Profile Optimization", item: "https://joydigital.in/google-business-profile-optimization" },
+      { name: "Home", item: "https://www.joydigital.in" },
+      { name: "Google Business Profile Optimization", item: "https://www.joydigital.in/google-business-profile-optimization" },
     ],
     service: {
       name: "Google Business Profile Optimization",
@@ -60,7 +60,7 @@ export default function GoogleBusinessProfilePage() {
       heroTitle="Google Business Profile Optimization Services"
       heroSubtitle="Claim, optimize, and rank your business listing on Google Maps. We optimize categories, manage client reviews, structure local schemas, and configure call tracking to drive direct phone calls and inquiries."
       leadSource="Google Business Profile Optimization Landing Page"
-      canonicalUrl="https://joydigital.in/google-business-profile-optimization"
+      canonicalUrl="https://www.joydigital.in/google-business-profile-optimization"
       overviewTitle="Dominating Nearby Search Queries with Google Business Profiles"
       overviewContent={
         <div className="space-y-6">

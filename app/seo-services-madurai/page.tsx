@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "SEO Services in Madurai | Google Map Rankings Optimization",
   description: "Boost your organic ranks. Joy Digital offers expert SEO services in Madurai, specializing in local search, GMB/GBP map ranking, and keyword optimization.",
   alternates: {
-    canonical: "https://joydigital.in/seo-services-madurai",
+    canonical: "https://www.joydigital.in/seo-services-madurai",
   },
   openGraph: {
     title: "SEO Services in Madurai | Google Map Rankings Optimization",
     description: "Boost your organic ranks. Joy Digital offers expert SEO services in Madurai, specializing in local search, GMB/GBP map ranking, and keyword optimization.",
-    url: "https://joydigital.in/seo-services-madurai",
+    url: "https://www.joydigital.in/seo-services-madurai",
     type: "website",
   },
   twitter: {
@@ -29,7 +29,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -56,7 +56,7 @@ export default function SeoServicesMadurai() {
       heroTitle="SEO Services in Madurai"
       heroSubtitle="Dominate Google organic search and rank top on map pack queries. As a premier provider of SEO services in Madurai, we optimize layouts, setup keywords targets, and capture active calls."
       leadSource="SEO Services Madurai Landing Page"
-      canonicalUrl="https://joydigital.in/seo-services-madurai"
+      canonicalUrl="https://www.joydigital.in/seo-services-madurai"
       overviewTitle="Organic Google Map Rankings & SEO Services in Madurai"
       overviewContent={
         <div className="space-y-6 text-justify">

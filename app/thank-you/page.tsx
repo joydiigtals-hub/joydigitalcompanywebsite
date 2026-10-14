@@ -7,13 +7,13 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export { metadata };
 
 export default function ThankYouPage() {
-  const canonicalUrl = "https://joydigital.in/thank-you";
+  const canonicalUrl = "https://www.joydigital.in/thank-you";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Thank You | Joy Digital",
     description: "Thank you for contacting Joy Digital. Your inquiry has been received.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "Thank You", item: canonicalUrl },
     ],
   });

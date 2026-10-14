@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Affordable Web Design Agency in Chennai | Joy Digital",
   description: "Looking for an affordable web design agency in Chennai? Get custom Next.js websites at a competitive website design price in Chennai.",
   alternates: {
-    canonical: "https://joydigital.in/affordable-web-design-agency-chennai",
+    canonical: "https://www.joydigital.in/affordable-web-design-agency-chennai",
   },
   openGraph: {
     title: "Affordable Web Design Agency in Chennai | Low Cost Website Development",
     description: "Looking for an affordable web design agency in Chennai? Get custom Next.js websites at a competitive website design price in Chennai.",
-    url: "https://joydigital.in/affordable-web-design-agency-chennai",
+    url: "https://www.joydigital.in/affordable-web-design-agency-chennai",
     type: "website",
   },
   twitter: {
@@ -29,7 +29,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -58,7 +58,7 @@ export default function AffordableWebDesignChennai() {
       heroTitle="Affordable Web Design Agency in Chennai"
       heroSubtitle="Get transparent, low cost website development in Chennai. As a results-driven affordable web design agency in Chennai, we build modern websites optimized for speed and rankings."
       leadSource="Affordable Web Design Chennai Landing Page"
-      canonicalUrl="https://joydigital.in/affordable-web-design-agency-chennai"
+      canonicalUrl="https://www.joydigital.in/affordable-web-design-agency-chennai"
       overviewTitle="Low Cost Website Development & Website Design Price in Chennai"
       overviewContent={
         <div className="space-y-6">

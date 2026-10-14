@@ -30,7 +30,7 @@ focusKeyword: Google Business Profile
 secondaryKeywords: >-
   Local SEO, Joy Digital, Search Engine Optimization, SEO Strategy, 2026 Digital
   Trends
-canonicalUrl: 'https://joydigital.in/blog/google-business-profile-optimization-guide'
+canonicalUrl: 'https://www.joydigital.in/blog/google-business-profile-optimization-guide'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Google Business Profile Optimization
@@ -45,7 +45,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: >-
   Google Business Profile Optimization: Complete Guide for Small Businesses in

@@ -21,12 +21,12 @@ export const metadata: Metadata = {
     "Web Engineering Expert"
   ],
   alternates: {
-    canonical: "https://joydigital.in/author/saravanan",
+    canonical: "https://www.joydigital.in/author/saravanan",
   },
   openGraph: {
     title: "Saravanan L | Web Specialist & Founder | Joy Digital",
     description: "Technical web specialist focusing on sub-second Next.js web applications, Generative Engine Optimization (GEO), and data-driven organic search marketing.",
-    url: "https://joydigital.in/author/saravanan",
+    url: "https://www.joydigital.in/author/saravanan",
   },
 };
 

@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     "website development company in chennai",
   ],
   alternates: {
-    canonical: "https://joydigital.in/seo-services-chennai",
+    canonical: "https://www.joydigital.in/seo-services-chennai",
   },
   openGraph: {
     title: "Best SEO Company in Chennai | Top SEO Agency & Services",
     description: "Drive organic search rankings with Joy Digital, the premier SEO agency and best SEO company in Chennai. We provide technical SEO services in Chennai, high-speed website development, and local Maps 3-Pack rankings.",
-    url: "https://joydigital.in/seo-services-chennai",
+    url: "https://www.joydigital.in/seo-services-chennai",
     type: "website",
   },
   twitter: {
@@ -42,7 +42,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -69,7 +69,7 @@ export default function SeoServicesChennai() {
       heroTitle="Best SEO Company & Technical SEO Services in Chennai"
       heroSubtitle="Partner with Joy Digital, a premier SEO agency in Chennai. We unify high-speed custom website development with organic search mastery to claim top spots in the Google Maps Local 3-Pack and drive qualified leads across Chennai."
       leadSource="SEO Services Chennai Landing Page"
-      canonicalUrl="https://joydigital.in/seo-services-chennai"
+      canonicalUrl="https://www.joydigital.in/seo-services-chennai"
       overviewTitle="Technical Website Audits & Full-Funnel SEO in Chennai"
       overviewContent={
         <div className="space-y-6 text-justify">

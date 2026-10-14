@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   title: "Manufacturing Website Design & B2B SEO | Joy Digital",
   description: "B2B manufacturing website design and SEO. Digital machinery catalogs, instant RFQ inquiry engines, and international buyer lead generation.",
   alternates: {
-    canonical: "https://joydigital.in/website-for-manufacturing-companies",
+    canonical: "https://www.joydigital.in/website-for-manufacturing-companies",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-manufacturing-companies",
+    url: "https://www.joydigital.in/website-for-manufacturing-companies",
     title: "Manufacturing Company Website Design & Industrial Lead Generation | Joy Digital",
     description: "High-performance Next.js web development for manufacturing plants, industrial OEMs, and precision engineering firms. Features CAD/drawing upload RFQ forms, ISO certification displays, and global B2B SEO.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Manufacturing Company Website Design Joy Digital" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Manufacturing Company Website Design Joy Digital" }],
   },
 };
 
@@ -23,15 +23,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://joydigital.in/website-for-manufacturing-companies#service",
+      "@id": "https://www.joydigital.in/website-for-manufacturing-companies#service",
       "name": "Manufacturing Company Website Design & Industrial B2B SEO",
       "serviceType": "Industrial Web Development & Manufacturing B2B Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://joydigital.in",
+        "url": "https://www.joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",

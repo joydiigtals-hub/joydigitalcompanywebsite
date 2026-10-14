@@ -18,7 +18,7 @@ export async function generatePageSeo(pagePath: string, defaultTitle?: string, d
   const pageMapping = await getSeoPageByPath(pagePath);
   const allKeywords = await getAllKeywords();
 
-  const baseUrl = "https://joydigital.in";
+  const baseUrl = "https://www.joydigital.in";
   const canonical = `${baseUrl}${pagePath === "/" ? "" : pagePath}`;
 
   let primaryKw: SeoKeyword | null = null;

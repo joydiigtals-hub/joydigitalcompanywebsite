@@ -20,7 +20,7 @@ metaDescription: >-
   Discover how AI website development in 2026 is transforming business websites into intelligent sales assistants, lead qualification systems, and automated customer engines.
 focusKeyword: which ai is best for website development
 secondaryKeywords: 'which is the best ai for website development, Web Development AI Tools, ChatGPT for Web Dev, Claude Sonnet, Cursor AI, v0.dev'
-canonicalUrl: 'https://joydigital.in/blog/ai-website-development-2026'
+canonicalUrl: 'https://www.joydigital.in/blog/ai-website-development-2026'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Custom Web Design
@@ -43,7 +43,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: 'What is AI website development?'
     answer: 'AI website development involves integrating artificial intelligence into websites or web applications to improve customer experience, automation, personalization, search, recommendations or lead generation.'

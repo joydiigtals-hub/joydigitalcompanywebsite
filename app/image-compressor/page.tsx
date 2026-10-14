@@ -7,13 +7,13 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export { metadata };
 
 export default function ImageCompressorPage() {
-  const canonicalUrl = "https://joydigital.in/image-compressor";
+  const canonicalUrl = "https://www.joydigital.in/image-compressor";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Free Online Image Compressor Tool | Joy Digital",
     description: "Compress PNG, JPEG, and WebP images quickly inside your browser without uploading to external servers.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "Image Compressor", item: canonicalUrl },
     ],
     webApp: {

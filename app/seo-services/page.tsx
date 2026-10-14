@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     "Global B2B Keyword Strategy"
   ],
   alternates: {
-    canonical: "https://joydigital.in/seo-services",
+    canonical: "https://www.joydigital.in/seo-services",
     languages: {
-      "x-default": "https://joydigital.in/seo-services",
-      "en-us": "https://joydigital.in/us/seo-services",
-      "en-gb": "https://joydigital.in/uk/seo-services",
-      "en-ae": "https://joydigital.in/ae/seo-services",
-      "en-in": "https://joydigital.in/in/seo-services",
+      "x-default": "https://www.joydigital.in/seo-services",
+      "en-us": "https://www.joydigital.in/us/seo-services",
+      "en-gb": "https://www.joydigital.in/uk/seo-services",
+      "en-ae": "https://www.joydigital.in/ae/seo-services",
+      "en-in": "https://www.joydigital.in/in/seo-services",
     },
   },
 };
@@ -32,7 +32,7 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133"
   },
   "description": "Joy Digital builds Organic Pipeline & Revenue-Driven SEO strategies, specializing in Technical SEO Architecture & Site Audits for global B2B and SaaS brands.",

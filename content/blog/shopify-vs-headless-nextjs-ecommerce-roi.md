@@ -22,7 +22,7 @@ metaDescription: >-
   Deciding between Shopify liquid themes and Headless Next.js storefronts? Discover how sub-second loading speed and custom checkout funnels increase e-commerce conversions by 25%+.
 focusKeyword: shopify vs headless nextjs ecommerce
 secondaryKeywords: 'Headless Next.js Shopify, E-commerce conversion rate speed, Custom Next.js storefront, Headless commerce ROI'
-canonicalUrl: 'https://joydigital.in/blog/shopify-vs-headless-nextjs-ecommerce-roi'
+canonicalUrl: 'https://www.joydigital.in/blog/shopify-vs-headless-nextjs-ecommerce-roi'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: E-Commerce Development
@@ -40,7 +40,7 @@ authorRole: Technical Web & SEO Specialist
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on e-commerce optimization and high-converting storefronts.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: 'What is a Headless Next.js Shopify Storefront?'
     answer: 'A Headless Next.js storefront uses Shopify strictly as a backend engine (inventory, checkout, payments) while rendering the front-end user experience using Next.js on edge servers for sub-second page loads.'

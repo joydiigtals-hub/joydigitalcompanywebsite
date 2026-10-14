@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Responsive Web Design"
   ],
   alternates: {
-    canonical: "https://joydigital.in/web-design-services",
+    canonical: "https://www.joydigital.in/web-design-services",
   },
 };
 
@@ -24,7 +24,7 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133"
   },
   "description": "Joy Digital provides custom website design, responsive web design, professional UI/UX design systems, and conversion-focused landing page architectures.",

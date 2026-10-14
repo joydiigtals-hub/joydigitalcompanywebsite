@@ -7,20 +7,20 @@ export const metadata: Metadata = {
   title: "Custom E-Commerce Website Development | Joy Digital",
   description: "Fast Next.js E-commerce websites built for high conversions, payment gateway integration, and SEO. Scale your online store today with Joy Digital!",
   alternates: {
-    canonical: "https://joydigital.in/website-for-ecommerce",
+    canonical: "https://www.joydigital.in/website-for-ecommerce",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-ecommerce",
+    url: "https://www.joydigital.in/website-for-ecommerce",
     title: "Custom E-Commerce Website Development | Joy Digital",
     description: "Fast Next.js E-commerce websites built for high conversions, payment gateway integration, and SEO. Scale your online store today with Joy Digital!",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Custom E-Commerce Website Development Joy Digital" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Custom E-Commerce Website Development Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Custom E-Commerce Website Development | Joy Digital",
     description: "Fast Next.js E-commerce websites built for high conversions, payment gateway integration, and SEO. Scale your online store today with Joy Digital!",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -29,15 +29,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://joydigital.in/website-for-ecommerce#service",
+      "@id": "https://www.joydigital.in/website-for-ecommerce#service",
       "name": "Global Headless E-Commerce Web Development",
       "serviceType": "E-Commerce Development & Cross-Border Retail Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://joydigital.in",
+        "url": "https://www.joydigital.in",
         "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",

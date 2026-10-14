@@ -24,7 +24,7 @@ metaDescription: >-
 focusKeyword: local seo and google business profile
 secondaryKeywords: >-
   Google Business Profile optimization, Local SEO 2026, Google My Business guide, local search marketing, Joy Digital
-canonicalUrl: 'https://joydigital.in/blog/how-local-seo-and-google-business-profile-help-businesses-get-found-online-in-2026'
+canonicalUrl: 'https://www.joydigital.in/blog/how-local-seo-and-google-business-profile-help-businesses-get-found-online-in-2026'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Local SEO Services
@@ -45,7 +45,7 @@ authorRole: Technical Web & SEO Specialist
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: What is Local SEO?
     answer: >-

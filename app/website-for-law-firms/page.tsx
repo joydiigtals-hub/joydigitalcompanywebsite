@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   title: "Law Firm Website Design & Legal SEO | Joy Digital",
   description: "Custom website design and SEO for law firms and attorneys. Confidential client consultation forms, attorney profiles, and top Google rankings.",
   alternates: {
-    canonical: "https://joydigital.in/website-for-law-firms",
+    canonical: "https://www.joydigital.in/website-for-law-firms",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-law-firms",
+    url: "https://www.joydigital.in/website-for-law-firms",
     title: "Law Firm Website Design & Legal Client Acquisition | Joy Digital",
     description: "Ultra-fast Next.js websites built for legal practices and corporate law attorneys. Confidential case evaluation forms, practice area showcases, attorney bio pages, and local search dominance.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Law Firm Website Design Joy Digital" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Law Firm Website Design Joy Digital" }],
   },
 };
 
@@ -23,15 +23,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://joydigital.in/website-for-law-firms#service",
+      "@id": "https://www.joydigital.in/website-for-law-firms#service",
       "name": "Law Firm Website Design & Legal SEO Services",
       "serviceType": "Legal Web Development & Attorney Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://joydigital.in",
+        "url": "https://www.joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",

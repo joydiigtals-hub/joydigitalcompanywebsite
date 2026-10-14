@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Local SEO Services in Madurai | Google Maps Ranking",
   description: "Rank #1 in Google Maps Local 3-Pack. We optimize your Google Business Profile and local citations to attract organic local leads in Madurai.",
   alternates: {
-    canonical: "https://joydigital.in/local-seo-madurai",
+    canonical: "https://www.joydigital.in/local-seo-madurai",
   },
 };
 
@@ -18,7 +18,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -46,7 +46,7 @@ export default function LocalSeoMadurai() {
       heroSubtitle="Get found by customers searching for your services nearby. We optimize your Google Maps profile, build local citations, and drive organic phone calls and visits."
       leadSource="Local SEO Madurai Landing Page"
       heroCtaText="Claim Free Maps Audit"
-      canonicalUrl="https://joydigital.in/local-seo-madurai"
+      canonicalUrl="https://www.joydigital.in/local-seo-madurai"
       overviewTitle="Google Business Profile Optimization & Near-Me Search Ranks"
       overviewContent={
         <div className="space-y-6">

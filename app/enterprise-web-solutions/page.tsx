@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   title: "Enterprise Web Solutions & Global SEO Agency | Joy Digital",
   description: "Accelerate your international growth with custom website development and generative engine optimization. Partner with a premier global SEO agency.",
   alternates: {
-    canonical: "https://joydigital.in/enterprise-web-solutions",
+    canonical: "https://www.joydigital.in/enterprise-web-solutions",
   },
 };
 
 export default function EnterpriseWebSolutions() {
   const pageGraph = buildPageGraphSchema({
-    url: "https://joydigital.in/enterprise-web-solutions",
+    url: "https://www.joydigital.in/enterprise-web-solutions",
     title: "Enterprise Web Solutions & Global SEO Agency | Joy Digital",
     description: "Accelerate your international growth with custom website development and generative engine optimization. Partner with a premier global SEO agency.",
   });

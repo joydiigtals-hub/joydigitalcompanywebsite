@@ -11,12 +11,12 @@ export const metadata: Metadata = {
     "Online Store Development"
   ],
   alternates: {
-    canonical: "https://joydigital.in/ecommerce-website-development",
+    canonical: "https://www.joydigital.in/ecommerce-website-development",
   },
   openGraph: {
     title: "Custom Ecommerce Website Development Services | Joy Digital",
     description: "Custom Next.js ecommerce development. Fast headless storefronts, B2B digital commerce apps, and high-converting checkout flows.",
-    url: "https://joydigital.in/ecommerce-website-development",
+    url: "https://www.joydigital.in/ecommerce-website-development",
     type: "website",
   },
   twitter: {
@@ -34,7 +34,7 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133"
   },
   "description": "Custom ecommerce website development services. We build high-speed Next.js headless storefronts, B2B e-commerce portals, and conversion-optimized payment funnels.",
@@ -54,7 +54,7 @@ export default function EcommerceWebDevPage() {
       heroTitle="Custom Ecommerce Website Development & Headless Storefronts"
       heroSubtitle="Convert mobile visitors into paying customers with custom ecommerce website development. We build headless Next.js storefronts, B2B e-commerce platforms, and ultra-fast checkout funnels."
       leadSource="Ecommerce Website Development Landing Page"
-      canonicalUrl="https://joydigital.in/ecommerce-website-development"
+      canonicalUrl="https://www.joydigital.in/ecommerce-website-development"
       overviewTitle="Headless E-commerce: Blazing Speeds, Zero DB Downtime & High Security"
       overviewContent={
         <div className="space-y-6">

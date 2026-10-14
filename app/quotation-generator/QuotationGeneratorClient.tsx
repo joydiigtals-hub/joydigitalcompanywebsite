@@ -346,7 +346,7 @@ export default function QuotationGeneratorClient() {
       doc.setFontSize(8);
       doc.setTextColor(150, 150, 150);
       doc.text("Created via JoyDigital.in Free Quotation Tools", 20, 280);
-      doc.text("Need a professional website? Visit https://joydigital.in", 125, 280);
+      doc.text("Need a professional website? Visit https://www.joydigital.in", 125, 280);
 
       doc.save(`quotation_${quoteNumber}.pdf`);
       trackToolUsage({ toolName: "Quotation Generator", action: "pdf_download" });

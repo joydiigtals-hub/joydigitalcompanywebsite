@@ -22,7 +22,7 @@ metaDescription: >-
   how the Google Maps ranking algorithm evaluates local business listings.
 focusKeyword: Local SEO
 secondaryKeywords: 'Local SEO, Joy Digital, Search Engine Optimization, SEO Strategy'
-canonicalUrl: 'https://joydigital.in/blog/what-is-local-seo-how-it-works'
+canonicalUrl: 'https://www.joydigital.in/blog/what-is-local-seo-how-it-works'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Google Business Profile Optimization
@@ -37,7 +37,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: What is Local SEO and How It Works? A Beginner's Guide
 ogDescription: >-

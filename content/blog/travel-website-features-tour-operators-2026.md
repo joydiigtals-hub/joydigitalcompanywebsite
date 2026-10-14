@@ -23,7 +23,7 @@ metaDescription: >-
 focusKeyword: travel website features 2026
 secondaryKeywords: >-
   travel website development, tour operator website, travel agency website design, travel website design, tourism website development, travel booking website, custom travel website, AI travel website
-canonicalUrl: 'https://joydigital.in/blog/travel-website-features-tour-operators-2026'
+canonicalUrl: 'https://www.joydigital.in/blog/travel-website-features-tour-operators-2026'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Travel Website Development
@@ -45,7 +45,7 @@ authorRole: Technical Web & SEO Specialist
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: What features should a travel website have in 2026?
     answer: >-
@@ -231,7 +231,7 @@ This creates a new opportunity:
 
 **AI Search Optimization / GEO.**
 
-Travel websites should publish useful, structured and trustworthy content that AI systems can understand and reference. Read more about how to optimize your digital assets in our [AI Search Optimization (AEO/GEO) Guide](https://joydigital.in/blog/ai-search-optimization-guide-2026).
+Travel websites should publish useful, structured and trustworthy content that AI systems can understand and reference. Read more about how to optimize your digital assets in our [AI Search Optimization (AEO/GEO) Guide](https://www.joydigital.in/blog/ai-search-optimization-guide-2026).
 
 ---
 
@@ -522,7 +522,7 @@ A custom travel website can be designed around the company's:
 
 The goal isn't simply to create a website.
 
-**The goal is to create a digital system that helps the travel company attract, convert and manage travelers.** Learn more about our specialized [Travel Website Development Services](https://joydigital.in/website-for-tours-and-travels).
+**The goal is to create a digital system that helps the travel company attract, convert and manage travelers.** Learn more about our specialized [Travel Website Development Services](https://www.joydigital.in/website-for-tours-and-travels).
 
 ---
 
@@ -615,14 +615,14 @@ For tour operators and travel companies, we can create conversion-focused websit
 
 Let's build a website designed not just to showcase your tours, but to help you generate more qualified enquiries and direct bookings.
 
-[Request a Custom Travel Website Consultation](https://joydigital.in/contact?service=Website%20for%20Tours%20and%20Travels)
+[Request a Custom Travel Website Consultation](https://www.joydigital.in/contact?service=Website%20for%20Tours%20and%20Travels)
 
 ### Related Joy Digital Services:
 
-* [Travel Website Development](https://joydigital.in/website-for-tours-and-travels)
-* [Custom Website Development](https://joydigital.in/website-development)
-* [Website Design Services](https://joydigital.in/web-design-services)
-* [SEO Services](https://joydigital.in/seo-services)
-* [Local SEO Services](https://joydigital.in/local-seo-services)
-* [Digital Marketing Services](https://joydigital.in/social-media-marketing)
-* [AI & Custom Software Development](https://joydigital.in/custom-software-development)
+* [Travel Website Development](https://www.joydigital.in/website-for-tours-and-travels)
+* [Custom Website Development](https://www.joydigital.in/website-development)
+* [Website Design Services](https://www.joydigital.in/web-design-services)
+* [SEO Services](https://www.joydigital.in/seo-services)
+* [Local SEO Services](https://www.joydigital.in/local-seo-services)
+* [Digital Marketing Services](https://www.joydigital.in/social-media-marketing)
+* [AI & Custom Software Development](https://www.joydigital.in/custom-software-development)

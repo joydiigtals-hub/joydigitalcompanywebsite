@@ -10,27 +10,27 @@ export const metadata: Metadata = {
   title: "Refund & Cancellation Policy | Joy Digital",
   description: "Read the refund policy for website development, SEO, digital marketing, and custom software services provided by Joy Digital.",
   alternates: {
-    canonical: "https://joydigital.in/refund-policy",
+    canonical: "https://www.joydigital.in/refund-policy",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/refund-policy",
+    url: "https://www.joydigital.in/refund-policy",
     siteName: "Joy Digital Agency",
     title: "Refund Policy | Joy Digital",
     description: "Read the refund policy for website development, SEO, digital marketing, and custom software services provided by Joy Digital.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Joy Digital Refund Policy" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Joy Digital Refund Policy" }],
   },
 };
 
 export default function RefundPolicyPage() {
   const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
-  const canonicalUrl = "https://joydigital.in/refund-policy";
+  const canonicalUrl = "https://www.joydigital.in/refund-policy";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Refund & Cancellation Policy | Joy Digital",
     description: "Read the refund policy for website development, SEO, digital marketing, and custom software services provided by Joy Digital.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "Refund Policy", item: canonicalUrl },
     ],
   });

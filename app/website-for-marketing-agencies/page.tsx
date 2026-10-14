@@ -7,20 +7,20 @@ export const metadata: Metadata = {
   title: "High-Converting Website Design for Agencies | Joy Digital",
   description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
   alternates: {
-    canonical: "https://joydigital.in/website-for-marketing-agencies",
+    canonical: "https://www.joydigital.in/website-for-marketing-agencies",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-marketing-agencies",
+    url: "https://www.joydigital.in/website-for-marketing-agencies",
     title: "High-Converting Website Design for Agencies | Joy Digital",
     description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Marketing Agency Website Design Joy Digital" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Marketing Agency Website Design Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "High-Converting Website Design for Agencies | Joy Digital",
     description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -29,15 +29,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://joydigital.in/website-for-marketing-agencies#service",
+      "@id": "https://www.joydigital.in/website-for-marketing-agencies#service",
       "name": "Marketing Agency Website Design & Growth SEO",
       "serviceType": "Agency Web Development & Digital Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://joydigital.in",
+        "url": "https://www.joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",

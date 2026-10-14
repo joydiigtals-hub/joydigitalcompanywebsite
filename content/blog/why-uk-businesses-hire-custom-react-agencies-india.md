@@ -21,7 +21,7 @@ metaDescription: >-
   Discover why UK businesses save 60% on custom web development by partnering with specialized React & Next.js agencies in India. High speed, GMT sync, 95+ PageSpeed.
 focusKeyword: React Agency India UK Businesses
 secondaryKeywords: 'UK Web Development Agency, Next.js Development UK, Offshore Web Engineering, Headless React Agency'
-canonicalUrl: 'https://joydigital.in/blog/why-uk-businesses-hire-custom-react-agencies-india'
+canonicalUrl: 'https://www.joydigital.in/blog/why-uk-businesses-hire-custom-react-agencies-india'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Custom Web Development
@@ -40,7 +40,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: 'Why are UK companies outsourcing web development to India in 2026?'
     answer: 'UK companies outsource to India to access world-class React and Next.js technical talent at a 60% lower cost compared to London agencies, while maintaining strict Core Web Vitals and GDPR compliance.'

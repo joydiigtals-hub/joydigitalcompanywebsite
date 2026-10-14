@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     "Real Estate SEO"
   ],
   alternates: {
-    canonical: "https://joydigital.in/website-for-real-estate",
+    canonical: "https://www.joydigital.in/website-for-real-estate",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-real-estate",
+    url: "https://www.joydigital.in/website-for-real-estate",
     title: "Real Estate Website Design & NRI Property Buyer Leads | Joy Digital",
     description: "Ultra-fast Next.js website design for real estate agencies, luxury home builders, and commercial brokers. Interactive floor plans, NRI buyer portals, site visit scheduling, and local/global property SEO.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Real Estate Website Design Joy Digital" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Real Estate Website Design Joy Digital" }],
   },
 };
 
@@ -29,15 +29,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://joydigital.in/website-for-real-estate#service",
+      "@id": "https://www.joydigital.in/website-for-real-estate#service",
       "name": "Real Estate Website Design & Property SEO",
       "serviceType": "Real Estate Web Development & Property Lead Generation",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://joydigital.in",
+        "url": "https://www.joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",

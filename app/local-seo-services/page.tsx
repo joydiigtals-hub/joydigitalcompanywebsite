@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Hyper-Local Geo-Targeted SEO"
   ],
   alternates: {
-    canonical: "https://joydigital.in/local-seo-services",
+    canonical: "https://www.joydigital.in/local-seo-services",
   },
 };
 
@@ -26,7 +26,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "$$$",
     "address": {

@@ -25,7 +25,7 @@ metaDescription: >-
 focusKeyword: Next.js
 secondaryKeywords: 'Local SEO, Joy Digital, Search Engine Optimization, SEO Strategy'
 canonicalUrl: >-
-  https://joydigital.in/blog/why-nextjs-is-better-than-traditional-wordpress-for-local-seo
+  https://www.joydigital.in/blog/why-nextjs-is-better-than-traditional-wordpress-for-local-seo
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Google Business Profile Optimization
@@ -40,7 +40,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: Why is Next.js better than traditional WordPress for local SEO?
 ogDescription: >-

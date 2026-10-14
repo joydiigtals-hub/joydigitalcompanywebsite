@@ -125,7 +125,7 @@ export async function POST(req: NextRequest) {
     const metaDescription = (formData.get("metaDescription") as string) || description || "";
     const focusKeyword = (formData.get("focusKeyword") as string) || "";
     const secondaryKeywords = (formData.get("secondaryKeywords") as string) || "";
-    const canonicalUrl = (formData.get("canonicalUrl") as string) || `https://joydigital.in/blog/${slug}`;
+    const canonicalUrl = (formData.get("canonicalUrl") as string) || `https://www.joydigital.in/blog/${slug}`;
     const robots = (formData.get("robots") as string) || "Index, Follow";
 
     const internalLinksJson = formData.get("internalLinks") as string;
@@ -153,7 +153,7 @@ export async function POST(req: NextRequest) {
     const authorRole = (formData.get("authorRole") as string) || "Technical Web Specialist";
     const authorBio = (formData.get("authorBio") as string) || "";
     const authorImage = (formData.get("authorImage") as string) || "/assets/images/logo.webp";
-    const authorProfileUrl = (formData.get("authorProfileUrl") as string) || "https://joydigital.in/about";
+    const authorProfileUrl = (formData.get("authorProfileUrl") as string) || "https://www.joydigital.in/about";
 
     const faqsJson = formData.get("faqs") as string;
     let faqs = [];

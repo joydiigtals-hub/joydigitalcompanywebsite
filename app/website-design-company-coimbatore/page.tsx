@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Website Design Company in Coimbatore | Joy Digital",
   description: "Looking for the best website design company in Coimbatore? We design custom, high-speed corporate portfolios, e-commerce stores, and coaching blogs.",
   alternates: {
-    canonical: "https://joydigital.in/website-design-company-coimbatore",
+    canonical: "https://www.joydigital.in/website-design-company-coimbatore",
   },
 };
 
@@ -18,7 +18,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -47,7 +47,7 @@ export default function WebDesignCoimbatore() {
       heroSubtitle="Get a modern, fast website designed to stand out and bring customers. As a top web design company in Coimbatore, we code custom layouts optimized for speed and leads."
       leadSource="Website Design Coimbatore Landing Page"
       heroCtaText="Get Free Design Quote"
-      canonicalUrl="https://joydigital.in/website-design-company-coimbatore"
+      canonicalUrl="https://www.joydigital.in/website-design-company-coimbatore"
       overviewTitle="Custom Website Design & Branding Solutions in Coimbatore"
       overviewContent={
         <div className="space-y-6">

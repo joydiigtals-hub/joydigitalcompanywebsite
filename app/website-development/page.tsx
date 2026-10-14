@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     "React Development"
   ],
   alternates: {
-    canonical: "https://joydigital.in/website-development",
+    canonical: "https://www.joydigital.in/website-development",
     languages: {
-      "x-default": "https://joydigital.in/website-development",
-      "en-us": "https://joydigital.in/us/website-development",
-      "en-gb": "https://joydigital.in/uk/website-development",
-      "en-ae": "https://joydigital.in/ae/website-development",
-      "en-in": "https://joydigital.in/in/website-development",
+      "x-default": "https://www.joydigital.in/website-development",
+      "en-us": "https://www.joydigital.in/us/website-development",
+      "en-gb": "https://www.joydigital.in/uk/website-development",
+      "en-ae": "https://www.joydigital.in/ae/website-development",
+      "en-in": "https://www.joydigital.in/in/website-development",
     },
   },
 };
@@ -31,7 +31,7 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133"
   },
   "description": "Joy Digital delivers full-stack custom web development services, Next.js web engineering, React applications, and scalable high-performance web systems.",

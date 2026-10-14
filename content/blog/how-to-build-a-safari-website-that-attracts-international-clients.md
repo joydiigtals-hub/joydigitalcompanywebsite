@@ -21,7 +21,7 @@ seoTitle: "How to Build a Safari Website That Attracts International Clients | J
 metaDescription: "Learn how African safari tour operators can build a professional website that attracts international clients, builds trust, showcases wildlife packages, and generates direct enquiries."
 focusKeyword: "how to build a safari website"
 secondaryKeywords: "safari website development, safari tour operator website, African safari website design, attract international safari clients, safari tour booking website"
-canonicalUrl: 'https://joydigital.in/blog/how-to-build-a-safari-website-that-attracts-international-clients'
+canonicalUrl: 'https://www.joydigital.in/blog/how-to-build-a-safari-website-that-attracts-international-clients'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: "Safari Website Development"
@@ -42,7 +42,7 @@ authorName: "Saravanan"
 authorRole: "Technical Web & SEO Specialist"
 authorBio: "Founder at Joy Digital and Next.js web specialist helping travel agencies and tour operators engineer sub-second web platforms that capture direct global inquiries."
 authorImage: "/assets/images/logo.webp"
-authorProfileUrl: 'https://joydigital.in/author/saravanan'
+authorProfileUrl: 'https://www.joydigital.in/author/saravanan'
 faqs:
   - question: "Why do international travelers hesitate to book directly on safari websites?"
     answer: "International travelers are making large financial commitments ($3,000–$10,000+) with operators located in other continents. They need reassurance through transparent pricing, verified customer reviews, clear itineraries, guide qualifications, and recognized payment gateways before sending deposits."
@@ -144,6 +144,6 @@ Looking to establish or improve your safari business online?
 
 Joy Digital provides custom website development for travel and tourism businesses, with website structures designed around your packages, destinations, and customer enquiries.
 
-Explore [Joy Digital Safari Website Development](https://joydigital.in/safari-website-development) to discuss a high-converting website for your safari business.
+Explore [Joy Digital Safari Website Development](https://www.joydigital.in/safari-website-development) to discuss a high-converting website for your safari business.
 
-**Let’s build a professional safari website that supports your international business goals.** [Contact Us](https://joydigital.in/contact) today!
+**Let’s build a professional safari website that supports your international business goals.** [Contact Us](https://www.joydigital.in/contact) today!

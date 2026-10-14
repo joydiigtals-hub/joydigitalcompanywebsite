@@ -10,26 +10,26 @@ export const metadata: Metadata = {
   title: "Website Disclaimer & Terms | Joy Digital",
   description: "Read the official website disclaimer, legal notices, and limitation of liability policy for Joy Digital web design & digital marketing services.",
   alternates: {
-    canonical: "https://joydigital.in/disclaimer",
+    canonical: "https://www.joydigital.in/disclaimer",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/disclaimer",
+    url: "https://www.joydigital.in/disclaimer",
     siteName: "Joy Digital Agency",
     title: "Disclaimer | Joy Digital",
     description: "Read the website disclaimer and limitation of liability policy for Joy Digital.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Joy Digital Disclaimer" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Joy Digital Disclaimer" }],
   },
 };
 
 export default function DisclaimerPage() {
-  const canonicalUrl = "https://joydigital.in/disclaimer";
+  const canonicalUrl = "https://www.joydigital.in/disclaimer";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Website Disclaimer & Terms | Joy Digital",
     description: "Read the official website disclaimer, legal notices, and limitation of liability policy for Joy Digital web design & digital marketing services.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "Disclaimer", item: canonicalUrl },
     ],
   });

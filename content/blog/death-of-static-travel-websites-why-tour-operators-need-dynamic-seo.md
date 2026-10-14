@@ -22,7 +22,7 @@ metaDescription: >-
   Learn why static travel websites limit growth in 2026 and how tour operators & DMCs scale bookings with Dynamic SEO and automated landing pages.
 focusKeyword: Dynamic SEO for Tour Operators
 secondaryKeywords: 'Travel Web Development, Tour Operator SEO, Dynamic Travel Websites, Next.js Travel Website'
-canonicalUrl: 'https://joydigital.in/blog/death-of-static-travel-websites-why-tour-operators-need-dynamic-seo'
+canonicalUrl: 'https://www.joydigital.in/blog/death-of-static-travel-websites-why-tour-operators-need-dynamic-seo'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Travel Website Development
@@ -38,7 +38,7 @@ authorRole: Technical Web & SEO Specialist
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: What is the difference between a static travel website and a dynamic SEO travel website?
     answer: A static travel website relies on fixed, manually coded HTML pages that are slow to update and hard to scale. A dynamic SEO website connects directly to your travel database or API, automatically generating, updating, and optimizing thousands of route-specific, real-time landing pages for search engines.

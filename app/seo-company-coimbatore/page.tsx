@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "SEO Company in Coimbatore | Google Maps Optimization Agency",
   description: "Looking for the best SEO company in Coimbatore? We rank local businesses, retail brands, and industrial suppliers on Google Page 1. Free SEO audit.",
   alternates: {
-    canonical: "https://joydigital.in/seo-company-coimbatore",
+    canonical: "https://www.joydigital.in/seo-company-coimbatore",
   },
 };
 
@@ -18,7 +18,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -47,7 +47,7 @@ export default function SeoCompanyCoimbatore() {
       heroSubtitle="Rank higher on Google and bring more customers to your business. As a top SEO agency in Coimbatore, we optimize websites to gain organic local traffic and maps visibility."
       leadSource="SEO Company Coimbatore Landing Page"
       heroCtaText="Get Free SEO Audit"
-      canonicalUrl="https://joydigital.in/seo-company-coimbatore"
+      canonicalUrl="https://www.joydigital.in/seo-company-coimbatore"
       overviewTitle="Increase Search Visibility & Rank for Keywords That Bring Leads"
       overviewContent={
         <div className="space-y-6">

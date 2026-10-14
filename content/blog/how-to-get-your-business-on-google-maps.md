@@ -28,7 +28,7 @@ metaDescription: >-
   Profile, gather reviews, and boost local map pack rankings.
 focusKeyword: Google Business Profile
 secondaryKeywords: 'Local SEO, Joy Digital, Search Engine Optimization, SEO Strategy'
-canonicalUrl: 'https://joydigital.in/blog/how-to-get-your-business-on-google-maps'
+canonicalUrl: 'https://www.joydigital.in/blog/how-to-get-your-business-on-google-maps'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Google Business Profile Optimization
@@ -43,7 +43,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: >-
   How to Get Your Business on Google Maps: Complete Google Business Profile

@@ -22,7 +22,7 @@ metaDescription: 'Learn how Chinese manufacturers of electronics, hardware, mach
 focusKeyword: chinese manufacturers generate b2b enquiries
 secondaryKeywords: >-
   chinese manufacturers website, china OEM ODM suppliers, how to get international buyers china, B2B website development china, export marketing for manufacturers
-canonicalUrl: 'https://joydigital.in/blog/chinese-manufacturers-generate-b2b-enquiries-website'
+canonicalUrl: 'https://www.joydigital.in/blog/chinese-manufacturers-generate-b2b-enquiries-website'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Custom Website Development for Manufacturers
@@ -41,7 +41,7 @@ authorRole: Technical Web Specialist & Founder
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/author/saravanan'
+authorProfileUrl: 'https://www.joydigital.in/author/saravanan'
 faqs:
   - question: How can Chinese manufacturers generate B2B enquiries directly from international buyers?
     answer: >-
@@ -72,7 +72,7 @@ However, having a good product and competitive pricing is not always enough to g
 
 Today, buyers often research manufacturers online before starting a business relationship. They compare suppliers, check product information, review company credibility, and look for reliable manufacturers through search engines and other online platforms.
 
-This is why a professional B2B website has become an important sales tool for Chinese manufacturers. Explore our specialized [Custom Website Development for Manufacturers](https://joydigital.in/custom-website-for-manufacturers).
+This is why a professional B2B website has become an important sales tool for Chinese manufacturers. Explore our specialized [Custom Website Development for Manufacturers](https://www.joydigital.in/custom-website-for-manufacturers).
 
 A well-structured website can help manufacturers showcase their products, build trust with international buyers, improve search visibility, and generate qualified B2B enquiries.
 
@@ -95,7 +95,7 @@ An international buyer searching for a supplier may search for:
 * China hardware manufacturers
 * Chinese electrical product manufacturers
 
-If your company website does not appear professionally or provide enough information, the buyer may move on to another supplier. Read our comprehensive guide on [SEO Services](https://joydigital.in/seo-services) designed for global exporters.
+If your company website does not appear professionally or provide enough information, the buyer may move on to another supplier. Read our comprehensive guide on [SEO Services](https://www.joydigital.in/seo-services) designed for global exporters.
 
 ---
 
@@ -114,7 +114,7 @@ The homepage should quickly communicate:
 * Production capacity
 * How buyers can contact you
 
-International buyers should understand your business within a few seconds of visiting your website. Discover our [Custom Website Development Services](https://joydigital.in/website-development).
+International buyers should understand your business within a few seconds of visiting your website. Discover our [Custom Website Development Services](https://www.joydigital.in/website-development).
 
 ---
 
@@ -304,7 +304,7 @@ For example:
 * How to Choose a China Electronics Supplier
 * What Certifications Are Required for Export Products?
 
-This type of content can attract search traffic and demonstrate your industry expertise. Read more technical guides on our [Blog Page](https://joydigital.in/blog).
+This type of content can attract search traffic and demonstrate your industry expertise. Read more technical guides on our [Blog Page](https://www.joydigital.in/blog).
 
 ---
 
@@ -375,7 +375,7 @@ Ready to transform your manufacturing website and win more international B2B lea
 * **Agency Name:** Joy Digital Growth Agency
 * **Phone / Call Support:** [+91 90800 26133](tel:+919080026133)
 * **WhatsApp Chat:** [Chat on WhatsApp (+91 90800 26133)](https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20get%20more%20details%20about%20manufacturing%20website%20development.)
-* **Contact:** [Contact Us Online](https://joydigital.in/contact)
+* **Contact:** [Contact Us Online](https://www.joydigital.in/contact)
 * **Office Address:** Tamil Nadu, India
-* **Website & Consultation:** [Request a Free B2B Website Quote](https://joydigital.in/contact?service=Custom%20Website%20for%20Manufacturers)
+* **Website & Consultation:** [Request a Free B2B Website Quote](https://www.joydigital.in/contact?service=Custom%20Website%20for%20Manufacturers)
 

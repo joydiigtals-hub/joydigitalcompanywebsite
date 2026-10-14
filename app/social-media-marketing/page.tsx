@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Social Media Marketing Agency | Joy Digital",
   description: "Joy Digital is a leading digital marketing agency in Chennai, India. We manage high-converting Facebook, Instagram, and LinkedIn ad campaigns to scale leads.",
   alternates: {
-    canonical: "https://joydigital.in/social-media-marketing",
+    canonical: "https://www.joydigital.in/social-media-marketing",
   },
 };
 
@@ -18,7 +18,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {

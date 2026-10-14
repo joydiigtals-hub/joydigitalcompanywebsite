@@ -7,14 +7,14 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export { metadata };
 
 export default function QuotationGeneratorPage() {
-  const canonicalUrl = "https://joydigital.in/quotation-generator";
+  const canonicalUrl = "https://www.joydigital.in/quotation-generator";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Free Quotation Generator Online | Joy Digital",
     description: "Create professional business price quotes and estimates online for free. Download PDF quotations instantly with company branding and itemized costs.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
-      { name: "Free Tools", item: "https://joydigital.in/free-tools" },
+      { name: "Home", item: "https://www.joydigital.in" },
+      { name: "Free Tools", item: "https://www.joydigital.in/free-tools" },
       { name: "Quotation Generator", item: canonicalUrl },
     ],
     webApp: {

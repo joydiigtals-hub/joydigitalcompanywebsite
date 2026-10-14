@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Website Development Company in Madurai | Custom Web Design",
   description: "Looking for the best website development company in Madurai? We code fast, mobile-friendly Next.js and React websites for local startups and growing brands.",
   alternates: {
-    canonical: "https://joydigital.in/website-development-company-madurai",
+    canonical: "https://www.joydigital.in/website-development-company-madurai",
   },
   openGraph: {
     title: "Website Development Company in Madurai | Custom Web Design",
     description: "Looking for the best website development company in Madurai? We code fast, mobile-friendly Next.js and React websites for local startups and growing brands.",
-    url: "https://joydigital.in/website-development-company-madurai",
+    url: "https://www.joydigital.in/website-development-company-madurai",
     type: "website",
   },
   twitter: {
@@ -29,7 +29,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -56,7 +56,7 @@ export default function WebDevMadurai() {
       heroTitle="Website Development Company in Madurai"
       heroSubtitle="Get dynamic, mobile-friendly React and Next.js website assets. As a premium website development company in Madurai, we build fast corporate portfolios that convert visitors into active customers."
       leadSource="Website Development Madurai Landing Page"
-      canonicalUrl="https://joydigital.in/website-development-company-madurai"
+      canonicalUrl="https://www.joydigital.in/website-development-company-madurai"
       overviewTitle="High-Performance Website Design & Development in Madurai"
       overviewContent={
         <div className="space-y-6 text-justify">

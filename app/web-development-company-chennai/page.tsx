@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Web Development Company in Chennai | Joy Digital",
   description: "Looking for a professional web development company in Chennai? We build dynamic, fast, secure Next.js/React web platforms for growing businesses.",
   alternates: {
-    canonical: "https://joydigital.in/web-development-company-chennai",
+    canonical: "https://www.joydigital.in/web-development-company-chennai",
   },
 };
 
@@ -18,7 +18,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -47,7 +47,7 @@ export default function WebDevChennai() {
       heroSubtitle="Get dynamic, mobile-friendly React and Next.js website assets. As a premium web development company in Chennai, we build fast corporate portfolios that convert visitors into active customers."
       leadSource="Web Development Chennai Landing Page"
       heroCtaText="Get Web Development Quote"
-      canonicalUrl="https://joydigital.in/web-development-company-chennai"
+      canonicalUrl="https://www.joydigital.in/web-development-company-chennai"
       overviewTitle="High-Performance Website Design & Development in Chennai"
       overviewContent={
         <div className="space-y-6">

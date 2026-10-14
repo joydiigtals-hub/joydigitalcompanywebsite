@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Website Design Company in Chennai | Custom Web Design Agency",
   description: "Looking for the best website design company in Chennai? We design custom, high-speed corporate websites, hotels, and schools in Chennai.",
   alternates: {
-    canonical: "https://joydigital.in/website-design-company-chennai",
+    canonical: "https://www.joydigital.in/website-design-company-chennai",
   },
 };
 
@@ -18,7 +18,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -47,7 +47,7 @@ export default function WebDesignChennai() {
       heroSubtitle="Get a custom, stunning website designed to attract and convert customers. As a premier website design agency in Chennai, we build fast, mobile-friendly layouts that load under 1.5s."
       leadSource="Website Design Chennai Landing Page"
       heroCtaText="Get Free Design Quote"
-      canonicalUrl="https://joydigital.in/website-design-company-chennai"
+      canonicalUrl="https://www.joydigital.in/website-design-company-chennai"
       overviewTitle="Custom Website Design & Branding Solutions in Chennai"
       overviewContent={
         <div className="space-y-6">

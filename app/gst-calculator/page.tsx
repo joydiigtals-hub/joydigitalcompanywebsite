@@ -7,13 +7,13 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export { metadata };
 
 export default function GstCalculatorPage() {
-  const canonicalUrl = "https://joydigital.in/gst-calculator";
+  const canonicalUrl = "https://www.joydigital.in/gst-calculator";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Free GST Calculator Online | CGST, SGST & IGST | Joy Digital",
     description: "Calculate GST instantly with our free online GST calculator. Supports inclusive and exclusive modes with CGST, SGST, and IGST breakdowns for Indian businesses.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "GST Calculator", item: canonicalUrl },
     ],
     webApp: {

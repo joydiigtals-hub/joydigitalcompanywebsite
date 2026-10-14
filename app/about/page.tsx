@@ -15,15 +15,15 @@ export const metadata: Metadata = {
   title: "About Our Web Agency | Joy Digital",
   description: "Learn about Joy Digital, a growth agency building custom Next.js websites, local SEO campaigns, and digital solutions for companies worldwide.",
   alternates: {
-    canonical: "https://joydigital.in/about",
+    canonical: "https://www.joydigital.in/about",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/about",
+    url: "https://www.joydigital.in/about",
     siteName: "Joy Digital Agency",
     title: "About Our Digital Marketing Agency | Joy Digital",
     description: "Learn about Joy Digital's mission, values, and how our digital marketing agency helps businesses grow through web design, SEO, and local maps marketing.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "About Joy Digital Agency" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "About Joy Digital Agency" }],
   },
 };
 
@@ -51,14 +51,14 @@ const aboutFaqs = [
 ];
 
 export default function AboutPage() {
-  const canonicalUrl = "https://joydigital.in/about";
+  const canonicalUrl = "https://www.joydigital.in/about";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "About Our Web Agency | Joy Digital",
     description: "Learn about Joy Digital, a growth agency building custom Next.js websites, local SEO campaigns, and digital solutions for companies worldwide.",
     includeLocalBusiness: true,
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "About Us", item: canonicalUrl },
     ],
     faqs: aboutFaqs,

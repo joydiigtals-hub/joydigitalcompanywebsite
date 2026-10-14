@@ -34,7 +34,7 @@ interface SitemapEntry {
 
 export async function GET() {
   try {
-    const baseUrl = 'https://joydigital.in';
+    const baseUrl = 'https://www.joydigital.in';
     const todayStr = new Date().toISOString().split('T')[0];
 
     // Target country codes for localized routes
@@ -281,7 +281,7 @@ export async function GET() {
     const fallbackXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://joydigital.in/</loc>
+    <loc>https://www.joydigital.in/</loc>
     <priority>1.0</priority>
   </url>
 </urlset>`;

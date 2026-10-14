@@ -22,7 +22,7 @@ metaDescription: >-
   Vitals, build semantic content clusters, and earn quality links.
 focusKeyword: Rank a Website
 secondaryKeywords: 'SEO Services, Joy Digital, Search Engine Optimization, 2026 Digital Trends'
-canonicalUrl: 'https://joydigital.in/blog/how-to-rank-website-google-2026'
+canonicalUrl: 'https://www.joydigital.in/blog/how-to-rank-website-google-2026'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: SEO Services
@@ -37,7 +37,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: 'How to Rank a Website on Google in 2026: The Definitive SEO Strategy'
 ogDescription: >-

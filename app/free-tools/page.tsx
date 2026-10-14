@@ -7,15 +7,15 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://joydigital.in"),
+  metadataBase: new URL("https://www.joydigital.in"),
   title: "Free Business Tools & Generators | Joy Digital",
   description: "Boost productivity with free online business tools. Calculate GST, create PDF invoices & quotes, build QR codes, and generate WhatsApp chat links.",
   alternates: {
-    canonical: "https://joydigital.in/free-tools",
+    canonical: "https://www.joydigital.in/free-tools",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/free-tools",
+    url: "https://www.joydigital.in/free-tools",
     title: "Free Business Tools & Generators | Joy Digital",
     description: "Boost your productivity with our free business tools. Calculate GST, generate professional PDF invoices & quotations, build QR codes, and create WhatsApp chat links instantly.",
   },
@@ -60,13 +60,13 @@ const TOOLS = [
 ];
 
 export default function FreeToolsLandingPage() {
-  const canonicalUrl = "https://joydigital.in/free-tools";
+  const canonicalUrl = "https://www.joydigital.in/free-tools";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Free Business Tools & Generators | Joy Digital",
     description: "Boost productivity with free online business tools. Calculate GST, create PDF invoices & quotes, build QR codes, and generate WhatsApp chat links.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "Free Tools", item: canonicalUrl },
     ],
     webApp: {

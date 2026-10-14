@@ -24,7 +24,7 @@ metaDescription: >-
 focusKeyword: AI for web development
 secondaryKeywords: >-
   AI web architecture, high-speed websites, interactive web design, Next.js AI development, 2026 web trends
-canonicalUrl: 'https://joydigital.in/blog/how-to-use-ai-for-web-development-in-2026'
+canonicalUrl: 'https://www.joydigital.in/blog/how-to-use-ai-for-web-development-in-2026'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Static Website Development
@@ -44,7 +44,7 @@ authorRole: Technical Web & SEO Specialist
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: How is AI changing web development in 2026?
     answer: >-

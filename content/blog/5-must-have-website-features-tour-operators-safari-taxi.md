@@ -25,7 +25,7 @@ metaDescription: >-
 focusKeyword: website features for tour operators safari taxi services
 secondaryKeywords: >-
   travel website features, tour operator website, safari website design, taxi service website, travel website development, tourism website development
-canonicalUrl: 'https://joydigital.in/blog/5-must-have-website-features-tour-operators-safari-taxi'
+canonicalUrl: 'https://www.joydigital.in/blog/5-must-have-website-features-tour-operators-safari-taxi'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Travel Website Development
@@ -45,7 +45,7 @@ authorRole: Technical Web & SEO Specialist
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: What features are essential for a tour operator or safari website?
     answer: >-
@@ -211,6 +211,6 @@ At **Joy Digital**, we build customised websites for businesses across different
 
 We focus on creating websites that are not only professional but also **mobile-friendly, SEO-ready, enquiry-focused, and easy for customers to use**.
 
-If you are planning a new travel website or want to improve your existing website, **[visit Joy Digital](https://joydigital.in/contact?service=Website%20for%20Tours%20and%20Travels) and let’s build a website designed around your business and your customers.**
+If you are planning a new travel website or want to improve your existing website, **[visit Joy Digital](https://www.joydigital.in/contact?service=Website%20for%20Tours%20and%20Travels) and let’s build a website designed around your business and your customers.**
 
 **Start your website journey with Joy Digital today.**

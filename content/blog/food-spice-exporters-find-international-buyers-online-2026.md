@@ -22,7 +22,7 @@ metaDescription: 'Discover how food and spice exporters can attract internationa
 focusKeyword: food and spice exporters find international buyers
 secondaryKeywords: >-
   spice exporters website, food exporter SEO, how to get international buyers for spices, bulk spice suppliers online, export website development India, Indian spice export marketing
-canonicalUrl: 'https://joydigital.in/blog/food-spice-exporters-find-international-buyers-online-2026'
+canonicalUrl: 'https://www.joydigital.in/blog/food-spice-exporters-find-international-buyers-online-2026'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Website Development for Export & Import Companies
@@ -41,7 +41,7 @@ authorRole: Technical Web Specialist & Founder
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/author/saravanan'
+authorProfileUrl: 'https://www.joydigital.in/author/saravanan'
 faqs:
   - question: How can food and spice exporters find international buyers online?
     answer: >-
@@ -70,7 +70,7 @@ The global food and spice export industry is highly competitive. Every day, inte
 
 For food and spice exporters, having a good product is no longer enough. Your business also needs to be easy to find online and professional enough to build trust with international buyers.
 
-A well-designed website, strong SEO strategy, and clear product information can help exporters reach potential buyers from different countries and generate more genuine enquiries. Explore our specialized [Website Development for Export & Import Companies](https://joydigital.in/website-for-export-and-import).
+A well-designed website, strong SEO strategy, and clear product information can help exporters reach potential buyers from different countries and generate more genuine enquiries. Explore our specialized [Website Development for Export & Import Companies](https://www.joydigital.in/website-for-export-and-import).
 
 ---
 
@@ -87,7 +87,7 @@ International buyers usually research suppliers before starting a business relat
 * Rice exporters
 * Food ingredient suppliers
 
-If your company does not appear in these searches, potential buyers may never discover your business. Read our guide on [SEO Services](https://joydigital.in/seo-services) designed to increase global organic reach.
+If your company does not appear in these searches, potential buyers may never discover your business. Read our guide on [SEO Services](https://www.joydigital.in/seo-services) designed to increase global organic reach.
 
 Your website acts as your digital business profile and can work for your company 24/7.
 
@@ -108,7 +108,7 @@ Your website should immediately tell buyers:
 
 Avoid using a basic website that only contains your company name and phone number.
 
-International buyers need enough information to understand your products and decide whether they should contact you. Discover our [Custom Website Development Services](https://joydigital.in/website-development).
+International buyers need enough information to understand your products and decide whether they should contact you. Discover our [Custom Website Development Services](https://www.joydigital.in/website-development).
 
 ---
 
@@ -194,7 +194,7 @@ For example, you could publish articles such as:
 * Bulk Spice Packaging Guide for International Buyers
 * How Food Exporters Can Reach International Buyers Online
 
-Useful content can improve your website's visibility while demonstrating your industry knowledge. Read more guides on our [Blog Page](https://joydigital.in/blog).
+Useful content can improve your website's visibility while demonstrating your industry knowledge. Read more guides on our [Blog Page](https://www.joydigital.in/blog).
 
 ---
 
@@ -233,7 +233,7 @@ Ready to transform your export company website and win more international trade 
 * **Agency Name:** Joy Digital Growth Agency
 * **Phone / Call Support:** [+91 90800 26133](tel:+919080026133)
 * **WhatsApp Chat:** [Chat on WhatsApp (+91 90800 26133)](https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20get%20more%20details%20about%20export%20website%20development.)
-* **Contact:** [Contact Us Online](https://joydigital.in/contact)
+* **Contact:** [Contact Us Online](https://www.joydigital.in/contact)
 * **Office Address:** Tamil Nadu, India
-* **Website & Consultation:** [Request a Free Export Website Quote](https://joydigital.in/contact?service=Website%20for%20Export%20%26%20Import)
+* **Website & Consultation:** [Request a Free Export Website Quote](https://www.joydigital.in/contact?service=Website%20for%20Export%20%26%20Import)
 

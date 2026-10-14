@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   title: "Logistics & Shipping Website Design | Joy Digital",
   description: "Custom website design and SEO for freight forwarders and logistics companies. Cargo tracking integrations, freight rate calculators, and B2B leads.",
   alternates: {
-    canonical: "https://joydigital.in/website-for-logistics-and-shipping",
+    canonical: "https://www.joydigital.in/website-for-logistics-and-shipping",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-logistics-and-shipping",
+    url: "https://www.joydigital.in/website-for-logistics-and-shipping",
     title: "Logistics & Shipping Website Design & Freight Lead Generation | Joy Digital",
     description: "Ultra-fast Next.js website design for freight forwarders, 3PL warehousing providers, and cargo shipping lines. Includes freight quote forms, shipment tracking widgets, and international search ranking.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Logistics & Shipping Website Design Joy Digital" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Logistics & Shipping Website Design Joy Digital" }],
   },
 };
 
@@ -23,15 +23,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://joydigital.in/website-for-logistics-and-shipping#service",
+      "@id": "https://www.joydigital.in/website-for-logistics-and-shipping#service",
       "name": "Logistics & Shipping Website Design & Freight SEO",
       "serviceType": "Logistics Web Development & Freight Forwarding Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://joydigital.in",
+        "url": "https://www.joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",

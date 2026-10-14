@@ -7,20 +7,20 @@ export const metadata: Metadata = {
   title: "Corporate Website Development for Consultants | Joy Digital",
   description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
   alternates: {
-    canonical: "https://joydigital.in/website-for-consulting-companies",
+    canonical: "https://www.joydigital.in/website-for-consulting-companies",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-consulting-companies",
+    url: "https://www.joydigital.in/website-for-consulting-companies",
     title: "Corporate Website Development for Consultants | Joy Digital",
     description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Consulting Firm Website Design Joy Digital" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Consulting Firm Website Design Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Corporate Website Development for Consultants | Joy Digital",
     description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -29,15 +29,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://joydigital.in/website-for-consulting-companies#service",
+      "@id": "https://www.joydigital.in/website-for-consulting-companies#service",
       "name": "Consulting Firm Website Design & Advisory SEO",
       "serviceType": "Consulting Web Development & Business Advisory Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://joydigital.in",
+        "url": "https://www.joydigital.in",
         "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",

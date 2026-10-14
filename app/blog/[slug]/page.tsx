@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     .trim();
   const title = `${rawTitle} | Joy Digital`;
   const description = post.metaDescription || post.description;
-  const canonical = post.canonicalUrl || `https://joydigital.in/blog/${resolvedParams.slug}`;
+  const canonical = post.canonicalUrl || `https://www.joydigital.in/blog/${resolvedParams.slug}`;
   const isNoindex = post.robots?.toLowerCase().includes("noindex");
   const isNofollow = post.robots?.toLowerCase().includes("nofollow");
 
@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: post.ogDescription || description,
       images: [
         {
-          url: post.ogImage || post.image || "https://joydigital.in/assets/images/hero-banner.webp",
+          url: post.ogImage || post.image || "https://www.joydigital.in/assets/images/hero-banner.webp",
           width: 1200,
           height: 630,
           alt: post.imageAlt || rawTitle,
@@ -64,7 +64,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title: post.twitterTitle ? (post.twitterTitle.includes("Joy Digital") ? post.twitterTitle : `${post.twitterTitle} | Joy Digital`) : title,
       description: post.twitterDescription || post.ogDescription || description,
-      images: [post.twitterImage || post.ogImage || post.image || "https://joydigital.in/assets/images/hero-banner.webp"],
+      images: [post.twitterImage || post.ogImage || post.image || "https://www.joydigital.in/assets/images/hero-banner.webp"],
     },
   };
 }

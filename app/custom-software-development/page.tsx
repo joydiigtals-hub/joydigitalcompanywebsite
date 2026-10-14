@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Custom Software Development & Web Apps | Joy Digital",
   description: "Joy Digital offers custom software development services. We build secure database applications, dashboard portals, and customized APIs.",
   alternates: {
-    canonical: "https://joydigital.in/custom-software-development",
+    canonical: "https://www.joydigital.in/custom-software-development",
   },
   openGraph: {
     title: "Custom Software Development | Web Apps & Portals - Joy Digital",
     description: "Joy Digital offers custom software development services. We build secure database applications, dashboard portals, and customized APIs.",
-    url: "https://joydigital.in/custom-software-development",
+    url: "https://www.joydigital.in/custom-software-development",
     type: "website",
   },
   twitter: {
@@ -29,7 +29,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -58,7 +58,7 @@ export default function CustomSoftwarePage() {
       heroTitle="Custom Software Development Services"
       heroSubtitle="Automate business processes, coordinate databases, and build secure admin portals. We engineer custom React and Next.js web applications, build APIs, and integrate CRM databases tailored to your goals."
       leadSource="Custom Software Development Landing Page"
-      canonicalUrl="https://joydigital.in/custom-software-development"
+      canonicalUrl="https://www.joydigital.in/custom-software-development"
       overviewTitle="Custom Web Applications & Database Systems Built for Growth"
       overviewContent={
         <div className="space-y-6">

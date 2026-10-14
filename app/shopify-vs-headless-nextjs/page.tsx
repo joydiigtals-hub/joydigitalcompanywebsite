@@ -12,18 +12,18 @@ export const metadata: Metadata = {
   title: "Shopify vs Headless Next.js E-Commerce | Joy Digital",
   description: "Compare Shopify Liquid vs Headless Next.js storefronts. Learn how sub-second load times reduce cart abandonment and boost conversions.",
   alternates: {
-    canonical: "https://joydigital.in/shopify-vs-headless-nextjs",
+    canonical: "https://www.joydigital.in/shopify-vs-headless-nextjs",
   },
 };
 
 export default function ShopifyVsHeadlessNextjsPage() {
-  const canonicalUrl = "https://joydigital.in/shopify-vs-headless-nextjs";
+  const canonicalUrl = "https://www.joydigital.in/shopify-vs-headless-nextjs";
   const pageGraphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Shopify vs Headless Next.js E-Commerce | Joy Digital",
     description: "Compare Shopify Liquid vs Headless Next.js storefronts. Learn how sub-second load times reduce cart abandonment and boost conversions.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "Shopify vs Headless Next.js", item: canonicalUrl },
     ],
     service: {

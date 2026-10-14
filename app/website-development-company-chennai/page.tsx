@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Website Development Company in Chennai | Next.js & React JS",
   description: "Looking for a Next.js website development company in Chennai? We build fast React JS platforms and corporate websites that score 95+ on Core Web Vitals.",
   alternates: {
-    canonical: "https://joydigital.in/website-development-company-chennai",
+    canonical: "https://www.joydigital.in/website-development-company-chennai",
   },
   openGraph: {
     title: "Website Development Company in Chennai | Next.js & React JS",
     description: "Looking for a Next.js website development company in Chennai? We build fast React JS platforms and corporate websites that score 95+ on Core Web Vitals.",
-    url: "https://joydigital.in/website-development-company-chennai",
+    url: "https://www.joydigital.in/website-development-company-chennai",
     type: "website",
   },
   twitter: {
@@ -29,7 +29,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -56,7 +56,7 @@ export default function WebDevChennai() {
       heroTitle="Website Development Company in Chennai"
       heroSubtitle="Get dynamic React JS web app development and launch fast loading website assets. As a leading Next.js web development company in Chennai, we build platforms that rank top on search results."
       leadSource="Next.js Web Development Chennai Landing Page"
-      canonicalUrl="https://joydigital.in/website-development-company-chennai"
+      canonicalUrl="https://www.joydigital.in/website-development-company-chennai"
       overviewTitle="High-Speed Next.js & React JS Web App Development in Chennai"
       overviewContent={
         <div className="space-y-6 text-justify">

@@ -455,7 +455,7 @@ export default function Footer() {
           <p>
             For custom web app inquiries, direct project estimation, or technical strategy calls:
             <br />
-            • <strong>Official Website:</strong> https://joydigital.in
+            • <strong>Official Website:</strong> https://www.joydigital.in
             <br />
             • <strong>Direct WhatsApp:</strong> +91 90800 26133 (https://wa.me/919080026133)
             <br />

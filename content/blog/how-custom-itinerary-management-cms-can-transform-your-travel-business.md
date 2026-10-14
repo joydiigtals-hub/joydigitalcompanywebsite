@@ -20,7 +20,7 @@ seoTitle: "Custom Itinerary Management CMS for Travel Agencies"
 metaDescription: "Learn how a Custom Itinerary Management CMS transforms travel businesses by delivering instant itineraries, increasing bookings, and scaling globally."
 focusKeyword: "custom itinerary management software"
 secondaryKeywords: "tour operator CMS, travel agency website development, automated tour booking system, custom web development for travel"
-canonicalUrl: 'https://joydigital.in/blog/how-custom-itinerary-management-cms-can-transform-your-travel-business'
+canonicalUrl: 'https://www.joydigital.in/blog/how-custom-itinerary-management-cms-can-transform-your-travel-business'
 robots: 'Index, Follow'
 internalLinks: []
 autoSuggestRelated: true
@@ -29,7 +29,7 @@ authorName: "Saravanan"
 authorRole: "Technical Web & SEO Specialist"
 authorBio: "Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth."
 authorImage: "/assets/images/logo.webp"
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: "Custom Itinerary Management CMS for Travel Agencies"
 ogDescription: "Why legacy booking tools are killing your conversion rates and how a Custom Itinerary Management CMS can scale your tour operations."

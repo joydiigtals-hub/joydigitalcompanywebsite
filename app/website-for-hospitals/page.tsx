@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   title: "Hospital Website Design & Medical SEO | Joy Digital",
   description: "Custom website design and SEO for hospitals and healthcare clinics. Doctor appointment booking, patient portals, and high Google rankings.",
   alternates: {
-    canonical: "https://joydigital.in/website-for-hospitals",
+    canonical: "https://www.joydigital.in/website-for-hospitals",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-hospitals",
+    url: "https://www.joydigital.in/website-for-hospitals",
     title: "Hospital Website Design & Global Medical Patient Acquisition | Joy Digital",
     description: "Ultra-fast Next.js website design for hospitals, specialized surgery centers, and medical tourism providers. Online doctor appointment booking, international patient visa desk, and global healthcare SEO.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Hospital Website Design Joy Digital" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Hospital Website Design Joy Digital" }],
   },
 };
 
@@ -23,15 +23,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://joydigital.in/website-for-hospitals#service",
+      "@id": "https://www.joydigital.in/website-for-hospitals#service",
       "name": "Hospital Website Design & Global Medical SEO",
       "serviceType": "Healthcare Web Development & Medical Tourism Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://joydigital.in",
+        "url": "https://www.joydigital.in",
         "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
