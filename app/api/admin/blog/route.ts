@@ -50,7 +50,7 @@ export async function GET(req: NextRequest) {
     const posts = await getAllPosts();
 
     let viewCounts: Record<string, number> = {};
-    if (process.env.MONGODB_URI) {
+    if (process.env.MONGODB_URI || process.env.MONGODB_DIRECT_URI) {
       try {
         const db = await getDb();
         const pageviewsCol = db.collection("pageviews");

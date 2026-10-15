@@ -48,7 +48,7 @@ export async function logAuditEvent(entry: Omit<AuditLogEntry, "id" | "timestamp
     ...entry,
   };
 
-  const MONGODB_URI = process.env.MONGODB_URI;
+  const MONGODB_URI = process.env.MONGODB_DIRECT_URI || process.env.MONGODB_URI;
 
   if (MONGODB_URI) {
     try {
@@ -70,7 +70,7 @@ export async function logAuditEvent(entry: Omit<AuditLogEntry, "id" | "timestamp
  * Query audit log history
  */
 export async function getAuditLogs(limit = 100): Promise<AuditLogEntry[]> {
-  const MONGODB_URI = process.env.MONGODB_URI;
+  const MONGODB_URI = process.env.MONGODB_DIRECT_URI || process.env.MONGODB_URI;
 
   if (MONGODB_URI) {
     try {
