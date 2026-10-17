@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ViewCounter from "@/components/ui/ViewCounter";
+import BlogShareButtons from "@/components/ui/BlogShareButtons";
 import { BlogPost } from "@/lib/blog";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
@@ -205,24 +206,28 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
           {post.title}
         </h1>
 
-        {/* Author Header Bar */}
-        <div className="flex items-center gap-3 border-t border-b border-[#E9E4F2] py-4 select-none">
-          <div className="w-10 h-10 rounded-full bg-primary/10 border border-primary-light/20 text-primary font-bold text-sm flex items-center justify-center overflow-hidden shrink-0">
-            {post.authorImage && post.authorImage.startsWith("/") || post.authorImage?.startsWith("http") ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={post.authorImage} alt={post.authorName || post.author} width={40} height={40} className="w-full h-full object-cover" />
-            ) : (
-              (post.authorName || post.author || "J").charAt(0)
-            )}
+        {/* Author Header Bar & Share Options */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-b border-[#E9E4F2] py-4 select-none">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-primary/10 border border-primary-light/20 text-primary font-bold text-sm flex items-center justify-center overflow-hidden shrink-0">
+              {post.authorImage && post.authorImage.startsWith("/") || post.authorImage?.startsWith("http") ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={post.authorImage} alt={post.authorName || post.author} width={40} height={40} className="w-full h-full object-cover" />
+              ) : (
+                (post.authorName || post.author || "J").charAt(0)
+              )}
+            </div>
+            <div>
+              <span className="text-xs font-black text-slate-900 block leading-none mb-1">
+                By <Link href="/author/saravanan" className="hover:text-primary transition-colors">{post.authorName || post.author}</Link>
+              </span>
+              <span className="text-[10px] text-[#64748B] font-semibold block">
+                {post.authorRole || "Technical Web & Search Marketing Specialist"}
+              </span>
+            </div>
           </div>
-          <div>
-            <span className="text-xs font-black text-slate-900 block leading-none mb-1">
-              By <Link href="/author/saravanan" className="hover:text-primary transition-colors">{post.authorName || post.author}</Link>
-            </span>
-            <span className="text-[10px] text-[#64748B] font-semibold block">
-              {post.authorRole || "Technical Web & Search Marketing Specialist"}
-            </span>
-          </div>
+
+          <BlogShareButtons title={post.title} slug={slug} variant="compact" />
         </div>
       </header>
 
@@ -271,6 +276,11 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
                 </li>
               ))}
             </ul>
+
+            {/* Quick Share in Sidebar */}
+            <div className="mt-8 pt-5 border-t border-slate-150 pl-3.5">
+              <BlogShareButtons title={post.title} slug={slug} variant="sidebar" />
+            </div>
           </aside>
         )}
 
@@ -348,6 +358,11 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
               </div>
             </div>
           )}
+
+          {/* Share Article Callout Banner */}
+          <div className="mt-12">
+            <BlogShareButtons title={post.title} slug={slug} variant="box" />
+          </div>
 
           {/* Author E-E-A-T Profile Card */}
           {post.showAuthorInfo !== false && (

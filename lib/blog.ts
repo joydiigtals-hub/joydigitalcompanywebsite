@@ -208,7 +208,9 @@ function getLocalPostBySlug(slug: string): BlogPost | null {
   }
 }
 
-function withTimeout<T>(promise: Promise<T>, timeoutMs = 1500): Promise<T> {
+const hasMongoUri = Boolean(process.env.MONGODB_DIRECT_URI || process.env.MONGODB_URI);
+
+function withTimeout<T>(promise: Promise<T>, timeoutMs = 4000): Promise<T> {
   return Promise.race([
     promise,
     new Promise<T>((_, reject) =>
@@ -223,15 +225,15 @@ export async function getAllPosts(): Promise<BlogPost[]> {
   let dbPosts: BlogPost[] = [];
   let deletedSlugs: Set<string> = new Set();
 
-  if (process.env.MONGODB_URI) {
+  if (hasMongoUri) {
     try {
-      const db = await withTimeout(getDb(), 1500);
+      const db = await withTimeout(getDb(), 4000);
       const blogsCol = db.collection("blogs");
 
-      const dbRecords = await withTimeout(blogsCol.find({ isDeleted: { $ne: true } }).toArray(), 1500);
+      const dbRecords = await withTimeout(blogsCol.find({ isDeleted: { $ne: true } }).toArray(), 4000);
       dbPosts = dbRecords.map((r) => normalizePostData(r.slug, r, r.content));
 
-      const deletedRecords = await withTimeout(blogsCol.find({ isDeleted: true }, { projection: { slug: 1 } }).toArray(), 1500);
+      const deletedRecords = await withTimeout(blogsCol.find({ isDeleted: true }, { projection: { slug: 1 } }).toArray(), 4000);
       deletedSlugs = new Set(deletedRecords.map((r) => r.slug));
     } catch (err) {
       console.error("Failed to fetch blog posts from MongoDB within timeout, falling back to local files:", err);
@@ -257,12 +259,12 @@ export async function getAllPosts(): Promise<BlogPost[]> {
 
 // GET post by slug: Check MongoDB first, fallback to local
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
-  if (process.env.MONGODB_URI) {
+  if (hasMongoUri) {
     try {
-      const db = await withTimeout(getDb(), 1500);
+      const db = await withTimeout(getDb(), 4000);
       const blogsCol = db.collection("blogs");
 
-      const dbRecord = await withTimeout(blogsCol.findOne({ slug }), 1500);
+      const dbRecord = await withTimeout(blogsCol.findOne({ slug }), 4000);
       if (dbRecord) {
         if (dbRecord.isDeleted === true) {
           return null;
