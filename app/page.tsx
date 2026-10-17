@@ -7,7 +7,7 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.joydigital.in"),
   title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
-  description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
+  description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, enterprise web architectures & SEO. Get your free audit today!",
   keywords: [
     "Next.js development company",
     "custom web development",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     url: "https://www.joydigital.in",
     siteName: "Joy Digital",
     title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
-    description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
+    description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, enterprise web architectures & SEO. Get your free audit today!",
     images: [
       {
         url: "https://www.joydigital.in/assets/images/hero-banner.webp",
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
-    description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
+    description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, enterprise web architectures & SEO. Get your free audit today!",
     images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
     creator: "@joydigital",
   },
@@ -87,7 +87,7 @@ export default function HomePage() {
   const homeGraph = buildPageGraphSchema({
     url: "https://www.joydigital.in/",
     title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
-    description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
+    description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, enterprise web architectures & SEO. Get your free audit today!",
     isHomepage: true,
     faqs: HOME_FAQS,
   });

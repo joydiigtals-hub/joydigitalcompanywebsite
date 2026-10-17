@@ -120,10 +120,10 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
           ? formData.mobile.trim()
           : `${selectedCountryCode} ${formData.mobile.trim()}`,
         Website: formData.website.trim() || "N/A",
-        Service: "15-Min Strategy Call + Free $499 Website & SEO Audit",
+        Service: "Free $499 Website & SEO Audit + Strategy Proposal",
         Source: "Hero Booking Consultation Form",
         utmParams: utm || undefined,
-        _subject: `🔥 Free Audit & Strategy Call Booking - ${formData.name.trim()} [Joy Digital]`,
+        _subject: `🔥 Free $499 Website & SEO Audit Request - ${formData.name.trim()} [Joy Digital]`,
       };
 
       const response = await fetch("/api/enquiry", {
@@ -152,7 +152,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
 
       const queryParams = new URLSearchParams({
         name: formData.name.trim(),
-        service: "15-Min Strategy Call",
+        service: "Free $499 Website & SEO Audit",
         mobile: formData.mobile.trim(),
       }).toString();
 
@@ -192,7 +192,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
           <div className="flex flex-wrap items-center gap-2">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#18132E] border border-[#2D244E] text-[#A78BFA] text-xs font-semibold shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-[#A78BFA]" />
-              <span>Global B2B &amp; Travel Website Specialists</span>
+              <span>Global B2B Web Engineering Specialists</span>
             </div>
 
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/40 text-emerald-300 text-xs font-bold shadow-sm">
@@ -218,7 +218,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
             {/* Step 3: Subtitle & Feature Bullet Points */}
           <div className="space-y-4 max-w-2xl">
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-              Custom websites that help your business grow. Enterprise Next.js &amp; full-stack web engineering built for global B2B clients, with specialized platforms for travel &amp; safari companies.
+              Custom Next.js &amp; full-stack web architecture built to scale global B2B brands and dynamic digital platforms.
             </p>
 
             <div className="space-y-2.5 pt-1">
@@ -233,14 +233,14 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                 <div className="w-5 h-5 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shrink-0">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                 </div>
-                <span>Enterprise-grade search architectures</span>
+                <span>Enterprise-grade search &amp; security architectures</span>
               </div>
 
-              <div className="flex items-center gap-2.5 text-sm text-emerald-300 font-bold">
-                <div className="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-400/50 flex items-center justify-center shrink-0">
+              <div className="flex items-center gap-2.5 text-sm text-slate-200 font-medium">
+                <div className="w-5 h-5 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shrink-0">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                 </div>
-                <span>Includes 100% Free 20+ Page Website &amp; SEO Audit Report</span>
+                <span>Zero maintenance &amp; 99.9% uptime guaranteed</span>
               </div>
             </div>
           </div>
@@ -281,10 +281,10 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                   <span>🎁 Free $499 Audit Included</span>
                 </div>
                 <h3 className="text-xl font-extrabold text-white tracking-tight">
-                  Book a 15-Min Strategy Call
+                  Get Your Free $499 Website &amp; SEO Audit
                 </h3>
-                <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-                  Fill in the details below to claim your free 20+ page Website &amp; SEO Audit report.
+                <p className="text-xs text-slate-300 mt-1.5 leading-relaxed">
+                  Fill in the details below to claim your personalized 20+ page Website &amp; SEO Audit report and custom project proposal.
                 </p>
               </div>
 
@@ -425,32 +425,34 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                     {isLoading ? (
                       <>
                         <Loader2 className="w-4 h-4 animate-spin text-white" />
-                        <span>Scheduling...</span>
+                        <span>Generating...</span>
                       </>
                     ) : (
                       <>
-                        <span>Claim My Free Proposal</span>
+                        <span>Claim My Free Audit &amp; Proposal</span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                       </>
                     )}
                   </button>
 
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2.5">
                     <a
-                      href={`https://wa.me/${whatsappNumber}?text=Hi%20Joy%20Digital,%20I'd%20like%20to%20claim%20my%20free%20proposal%20and%20strategy%20call.`}
+                      href={`https://wa.me/${whatsappNumber}?text=Hi%20Joy%20Digital,%20I'd%20like%20to%20claim%20my%20free%20$499%20Website%20&%20SEO%20Audit%20and%20project%20proposal.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-[1] py-3 px-2 rounded-xl bg-[#25D366] hover:bg-[#128C7E] border border-[#25D366] text-white font-bold text-[11px] shadow-lg hover:shadow-emerald-900/20 transition-all duration-300 flex flex-col items-center justify-center gap-1 cursor-pointer group"
+                      className="flex-1 py-3 px-3 rounded-xl bg-[#25D366] hover:bg-[#128C7E] border border-[#25D366] text-white font-bold text-xs shadow-lg hover:shadow-emerald-900/20 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer group hover:scale-[1.02] active:scale-[0.98]"
+                      aria-label="Chat on WhatsApp"
                     >
-                      <Phone className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                      <i className="fa-brands fa-whatsapp text-sm group-hover:scale-110 transition-transform duration-300" />
                       <span>WhatsApp</span>
                     </a>
 
                     <a
-                      href={`mailto:${contactEmail}`}
-                      className="flex-[1] py-3 px-2 rounded-xl bg-[#1A1433] hover:bg-[#20193B] border border-[#2D2352] text-slate-300 font-bold text-[11px] shadow-lg transition-all duration-300 flex flex-col items-center justify-center gap-1 cursor-pointer group"
+                      href={`mailto:${contactEmail}?subject=Free%20Website%20%26%20SEO%20Audit%20Inquiry`}
+                      className="flex-1 py-3 px-3 rounded-xl bg-[#1A1433] hover:bg-[#20193B] border border-[#2D2352] text-slate-200 hover:text-white font-bold text-xs shadow-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer group hover:scale-[1.02] active:scale-[0.98]"
+                      aria-label="Email Us"
                     >
-                      <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                      <Mail className="w-4 h-4 text-slate-300 group-hover:scale-110 transition-transform duration-300" />
                       <span>Email Us</span>
                     </a>
                   </div>
