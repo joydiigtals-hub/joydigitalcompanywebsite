@@ -166,7 +166,7 @@ A citation is any online mention of your business name, address, and phone numbe
 
 If your small business operates in multiple cities or has several physical branches, you should not try to rank them all on a single homepage.
 
-*   **Action Plan:** Create dedicated, optimized landing pages for each location (e.g., `website.com/seo-services-chennai` and `website.com/seo-services-chennai`). Ensure each page has unique, localized copy, specific testimonials, team photos of that office, and its unique NAP details and Map embed.
+*   **Action Plan:** Create dedicated, optimized landing pages for each location (such as our [SEO Services in Chennai](/seo-services-chennai) hub). Ensure each page has unique, localized copy, specific testimonials, team photos of that office, and its unique NAP details and Map embed.
 
 ---
 

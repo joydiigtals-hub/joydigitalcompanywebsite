@@ -67,6 +67,8 @@ interface ServicePageTemplateProps {
   heroCtaText?: string;
   relatedBlogPosts?: BlogPost[];
   customLeadForm?: React.ReactNode;
+  heroActions?: React.ReactNode;
+  customCtaBanner?: React.ReactNode;
 }
 
 export default function ServicePageTemplate({
@@ -92,6 +94,8 @@ export default function ServicePageTemplate({
   heroCtaText,
   relatedBlogPosts,
   customLeadForm,
+  heroActions,
+  customCtaBanner,
 }: ServicePageTemplateProps) {
   const STANDARD_FAQS = [
     {
@@ -202,6 +206,12 @@ export default function ServicePageTemplate({
               <p className="text-sm md:text-base text-text-secondary mb-8 max-w-xl leading-relaxed">
                 {heroSubtitle}
               </p>
+
+              {heroActions && (
+                <div className="flex flex-wrap items-center gap-3.5 mb-8 w-full">
+                  {heroActions}
+                </div>
+              )}
               
               {/* Trust markers */}
               <div className="flex items-center gap-6 mt-2 pb-6 border-b border-gray-100 w-full max-w-lg">
@@ -489,12 +499,16 @@ export default function ServicePageTemplate({
         )}
 
         {/* Dynamic CTA Banner */}
-        <CTABanner
-          title={`Take Your ${serviceName} Performance to the Next Level`}
-          description={`Get a detailed ${serviceName} roadmap customized to your target keyword goals. No commitments, just pure value.`}
-          primaryCtaText="Get My Free Audit Report"
-          source={`${serviceName} CTABanner`}
-        />
+        {customCtaBanner ? (
+          customCtaBanner
+        ) : (
+          <CTABanner
+            title={`Take Your ${serviceName} Performance to the Next Level`}
+            description={`Get a detailed ${serviceName} roadmap customized to your target keyword goals. No commitments, just pure value.`}
+            primaryCtaText="Get My Free Audit Report"
+            source={`${serviceName} CTABanner`}
+          />
+        )}
 
         {/* FAQ Section */}
         <section className="py-16 lg:py-24 bg-light-bg">
