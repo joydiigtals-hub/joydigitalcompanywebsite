@@ -1,11 +1,16 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
+        allow: ['/', '/blog/'],
+        disallow: ['/api/', '/admin/', '/thank-you'],
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: ['/', '/blog/'],
         disallow: ['/api/', '/admin/', '/thank-you'],
       },
       {
@@ -19,12 +24,11 @@ export default function robots(): MetadataRoute.Robots {
           'Applebot-Extended',
           'Meta-ExternalAgent',
         ],
-        allow: '/',
+        allow: ['/', '/blog/'],
         disallow: ['/api/', '/admin/', '/thank-you'],
       },
     ],
     sitemap: 'https://www.joydigital.in/sitemap.xml',
-    host: 'https://www.joydigital.in',
   };
 }
 
