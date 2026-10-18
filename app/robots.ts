@@ -5,12 +5,12 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: ['/', '/blog/'],
+        allow: ['/', '/blog', '/blog/'],
         disallow: ['/api/', '/admin/', '/thank-you'],
       },
       {
-        userAgent: 'Googlebot',
-        allow: ['/', '/blog/'],
+        userAgent: ['Googlebot', 'Google-InspectionTool'],
+        allow: ['/', '/blog', '/blog/'],
         disallow: ['/api/', '/admin/', '/thank-you'],
       },
       {
