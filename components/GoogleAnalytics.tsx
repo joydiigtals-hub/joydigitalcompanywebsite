@@ -4,12 +4,20 @@ import React, { useEffect, useState } from "react";
 import Script from "next/script";
 
 export default function GoogleAnalytics() {
-  const measurementId = process.env.NEXT_PUBLIC_GA_ID || "G-EPE4YHGXYF";
+  const measurementId = process.env.NEXT_PUBLIC_GA_ID || "G-HSGZ10PXTG";
   const [shouldLoad, setShouldLoad] = useState(false);
 
   useEffect(() => {
-    // Define window.trackJoyDigitalEvent globally on component mount
+    // Initialize dataLayer and gtag early so tracking calls are buffered
     if (typeof window !== "undefined") {
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      if (!(window as any).gtag) {
+        (window as any).gtag = function () {
+          (window as any).dataLayer.push(arguments);
+        };
+      }
+
+      // Define window.trackJoyDigitalEvent globally on component mount
       (window as any).trackJoyDigitalEvent = (eventName: string, params?: Record<string, any>) => {
         const payload = params || {};
         
