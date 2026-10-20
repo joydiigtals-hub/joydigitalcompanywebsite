@@ -40,18 +40,15 @@ export default function Footer() {
         
         {/* Brand Info */}
         <div className="flex flex-col gap-5 col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-1">
-          <Link href={getRegionalHref("/")} title="Joy Digital Home" className="flex items-center gap-3">
+          <Link href={getRegionalHref("/")} title="Joy Digital Home" className="inline-block flex-shrink-0">
             <Image
-              src="/assets/images/logo.webp"
+              src="/assets/images/logo.svg"
               alt="Joy Digital - Web Design & Digital Marketing Agency Logo"
               title="Joy Digital Logo"
-              width={70}
-              height={70}
-              className="object-contain"
+              width={200}
+              height={89}
+              className="h-12 md:h-14 w-auto object-contain"
             />
-            <span className="font-bold text-2xl tracking-tight text-[#111827]">
-              Joy<span className="text-accent">Digital</span>
-            </span>
           </Link>
           <div className="text-text-secondary text-xs leading-relaxed flex flex-col gap-3">
             <p className="font-bold text-[#0F172A]">Websites, SEO & Digital Marketing for Businesses Worldwide</p>

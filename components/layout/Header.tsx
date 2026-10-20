@@ -322,19 +322,16 @@ export default function Header({ transparent = false }: { transparent?: boolean 
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <Link href={getRegionalHref("/")} title="Joy Digital Home" className="flex items-center gap-3 flex-shrink-0">
+          <Link href={getRegionalHref("/")} title="Joy Digital Home" className="flex items-center flex-shrink-0">
             <Image
-              src="/assets/images/logo.webp"
+              src="/assets/images/logo.svg"
               alt="Joy Digital - Web Design, Web Development & SEO Services Worldwide"
               title="Joy Digital Logo"
-              width={50}
-              height={50}
-              className="object-contain transition-all duration-300"
+              width={180}
+              height={80}
+              className="h-10 md:h-11 w-auto object-contain transition-all duration-300"
               priority
             />
-            <span className={`font-bold text-xl tracking-tight transition-colors duration-300 ${isScrolled ? "text-primary-dark" : "text-white"}`}>
-              Joy<span className={isScrolled ? "text-accent" : "text-primary-light"}>Digital</span>
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -668,18 +665,15 @@ export default function Header({ transparent = false }: { transparent?: boolean 
       >
         {/* Mobile Drawer Header with Logo & Close Button */}
         <div className="flex items-center justify-between pb-5 mb-4 border-b border-[#E5E7EB] shrink-0">
-          <div className="flex items-center gap-2.5">
+          <Link href={getRegionalHref("/")} title="Joy Digital Home" onClick={() => setIsMobileOpen(false)} className="flex items-center">
             <Image
-              src="/assets/images/logo.webp"
+              src="/assets/images/logo.svg"
               alt="Joy Digital Logo"
-              width={34}
-              height={34}
-              className="object-contain"
+              width={150}
+              height={67}
+              className="h-9 w-auto object-contain"
             />
-            <span className="font-extrabold text-lg text-primary-dark tracking-tight">
-              Joy<span className="text-accent">Digital</span>
-            </span>
-          </div>
+          </Link>
 
           {/* Prominent Close (X) Button */}
           <button
