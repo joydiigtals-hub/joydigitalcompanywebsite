@@ -4,17 +4,65 @@ import { SESSION_COOKIE_NAME, verifySessionToken } from "@/lib/security/auth";
 
 export function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
-  const host = request.headers.get("host") || "";
+  const rawHost = request.headers.get("x-forwarded-host") || request.headers.get("host") || "";
+  const host = rawHost.split(":")[0].toLowerCase();
+  const proto = request.headers.get("x-forwarded-proto") || request.nextUrl.protocol.replace(":", "");
 
-  // 1. WWW and Vercel Domain Redirect to Canonical (https://www.joydigital.in)
-  // Removed www.joydigital.in redirect to prevent infinite redirect loop with Render's edge routing.
-  if (host === "joydigital.vercel.app") {
-    return NextResponse.redirect(`https://www.joydigital.in${pathname}${search}`, 301);
+  const isLocal = host === "localhost" || host === "127.0.0.1" || host.endsWith(".local");
+
+  // 1. Legacy Junk & Spam Cleanup (Strict 410 Gone status)
+  // Ensures Googlebot, Bingbot, and crawlers permanently purge deleted/spam URLs from search index
+  const isLegacySpamPath =
+    pathname.startsWith("/nocev") ||
+    pathname === "/fr" ||
+    pathname.startsWith("/fr/") ||
+    pathname === "/kr" ||
+    pathname.startsWith("/kr/") ||
+    pathname === "/pages" ||
+    pathname.startsWith("/pages/") ||
+    pathname.endsWith(".php") ||
+    pathname.includes("wp-admin") ||
+    pathname.includes("wp-login") ||
+    pathname.includes("wp-content") ||
+    pathname.includes("wp-includes") ||
+    pathname.includes("xmlrpc.php");
+
+  if (isLegacySpamPath) {
+    return new NextResponse("410 Gone - This resource has been permanently purged.", {
+      status: 410,
+      statusText: "Gone",
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Cache-Control": "public, max-age=604800, immutable",
+      },
+    });
+  }
+
+  // 2. Strict 301 Redirect to Canonical (https://www.joydigital.in)
+  // Forces all variants (http, https, non-www, vercel/render staging) to canonical in a single 301 hop
+  if (!isLocal) {
+    const isNonCanonicalHost =
+      host === "joydigital.in" ||
+      host === "joydigital.vercel.app" ||
+      host.endsWith(".onrender.com");
+
+    const isHttp = proto === "http";
+
+    if (isNonCanonicalHost || (host === "www.joydigital.in" && isHttp)) {
+      return NextResponse.redirect(`https://www.joydigital.in${pathname}${search}`, 301);
+    }
+
+    // Trailing slash normalization to eliminate redirect hops (skip root "/")
+    if (pathname.length > 1 && pathname.endsWith("/")) {
+      const cleanPath = pathname.replace(/\/+$/, "");
+      return NextResponse.redirect(`https://www.joydigital.in${cleanPath}${search}`, 301);
+    }
   }
 
   const response = NextResponse.next();
 
-  // 2. Production Security Headers
+  // 3. Production Security Headers
   response.headers.set("X-Frame-Options", "DENY");
   response.headers.set("X-Content-Type-Options", "nosniff");
   response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
@@ -25,14 +73,14 @@ export function proxy(request: NextRequest) {
   );
 
   // Enable Strict HSTS in Production
-  if (process.env.NODE_ENV === "production") {
+  if (process.env.NODE_ENV === "production" && !isLocal) {
     response.headers.set(
       "Strict-Transport-Security",
       "max-age=31536000; includeSubDomains; preload"
     );
   }
 
-  // 3. Protect Admin API Routes at Edge Proxy Level
+  // 4. Protect Admin API Routes at Edge Proxy Level
   const isProtectedAdminApi =
     pathname.startsWith("/api/admin/") &&
     !pathname.startsWith("/api/admin/auth/login");

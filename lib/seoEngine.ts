@@ -53,12 +53,14 @@ export async function generatePageSeo(pagePath: string, defaultTitle?: string, d
     "Next.js Agency"
   ];
 
-  const title = pageMapping?.title_template || defaultTitle || "Custom Web Development & Engineering Services | Joy Digital";
+  const rawTitle = pageMapping?.title_template || defaultTitle || "Web Development & Engineering Services";
+  const pageTitle = rawTitle.replace(/\s*\|\s*Joy Digital.*$/i, "").trim();
+  const fullTitle = `${pageTitle} | Joy Digital`;
   const description = pageMapping?.meta_description || defaultDescription || "Joy Digital engineers high-performance custom Next.js web applications, headless CMS, and full-stack digital solutions for global enterprises.";
 
   const metadata: Metadata = {
     metadataBase: new URL(baseUrl),
-    title,
+    title: pageTitle,
     description,
     keywords: keywordStrings,
     alternates: {
@@ -75,20 +77,20 @@ export async function generatePageSeo(pagePath: string, defaultTitle?: string, d
       type: "website",
       url: canonical,
       siteName: "Joy Digital Agency",
-      title,
+      title: fullTitle,
       description,
       images: [
         {
           url: `${baseUrl}/assets/images/hero-banner.webp`,
           width: 1200,
           height: 630,
-          alt: primaryKw?.keyword || title,
+          alt: primaryKw?.keyword || fullTitle,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: fullTitle,
       description,
       images: [`${baseUrl}/assets/images/hero-banner.webp`],
       creator: "@joydigital",
@@ -111,12 +113,12 @@ export async function generatePageSeo(pagePath: string, defaultTitle?: string, d
 
   const graphSchema = buildPageGraphSchema({
     url: canonical,
-    title,
+    title: fullTitle,
     description,
     isHomepage,
     includeLocalBusiness: true,
     service: {
-      name: pageMapping?.h1 || title,
+      name: pageMapping?.h1 || fullTitle,
       description: description,
       serviceType: primaryKw?.keyword || "Web Engineering",
     },

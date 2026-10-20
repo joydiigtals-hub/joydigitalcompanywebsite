@@ -8,7 +8,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Client Case Studies & Marketing Results | Joy Digital",
+  title: "Client Case Studies & Results",
   description: "Explore real success stories from Joy Digital. Read how our web design, SEO, and local maps campaigns drove appointments, sales, and ranking growth.",
   alternates: {
     canonical: "https://www.joydigital.in/case-studies",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.joydigital.in/case-studies",
     siteName: "Joy Digital Agency",
-    title: "Client Case Studies & Marketing Results | Joy Digital",
+    title: "Client Case Studies & Results | Joy Digital",
     description: "Explore real success stories from Joy Digital. Read how our web design, SEO, and local maps campaigns drove appointments, sales, and ranking growth.",
     images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Joy Digital Case Studies" }],
   },
@@ -54,7 +54,7 @@ export default function CaseStudiesPage() {
   const canonicalUrl = "https://www.joydigital.in/case-studies";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
-    title: "Client Case Studies & Marketing Results | Joy Digital",
+    title: "Client Case Studies & Results | Joy Digital",
     description: "Explore real success stories from Joy Digital. Read how our web design, SEO, and local maps campaigns drove appointments, sales, and ranking growth.",
     breadcrumbs: [
       { name: "Home", item: "https://www.joydigital.in" },

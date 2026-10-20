@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Social Media Marketing Agency | Joy Digital",
+  title: "Social Media Marketing",
   description: "Joy Digital is a leading digital marketing agency in Chennai, India. We manage high-converting Facebook, Instagram, and LinkedIn ad campaigns to scale leads.",
   alternates: {
     canonical: "https://www.joydigital.in/social-media-marketing",

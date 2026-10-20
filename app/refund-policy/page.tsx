@@ -7,7 +7,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Refund & Cancellation Policy | Joy Digital",
+  title: "Refund & Cancellation Policy",
   description: "Read the refund policy for website development, SEO, digital marketing, and custom software services provided by Joy Digital.",
   alternates: {
     canonical: "https://www.joydigital.in/refund-policy",

@@ -10,7 +10,7 @@ export default function QrCodeGeneratorPage() {
   const canonicalUrl = "https://www.joydigital.in/qr-code-generator";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
-    title: "Free QR Code Generator Online | Joy Digital",
+    title: "Free QR Code Generator",
     description: "Generate professional QR codes for links, WhatsApp, emails, WiFi, maps, and UPI payments instantly.",
     breadcrumbs: [
       { name: "Home", item: "https://www.joydigital.in" },

@@ -10,7 +10,7 @@ export default function SeoAuditToolPage() {
   const canonicalUrl = "https://www.joydigital.in/seo-audit-tool";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
-    title: "Free Website SEO Audit Tool Online | Joy Digital",
+    title: "Free SEO Audit Tool",
     description: "Scan your website for SEO ranking errors, schema tags, meta titles, image alt attributes, and Core Web Vitals speed issues instantly.",
     breadcrumbs: [
       { name: "Home", item: "https://www.joydigital.in" },

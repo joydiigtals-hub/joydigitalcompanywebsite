@@ -5,7 +5,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Enterprise Web Solutions & Global SEO Agency | Joy Digital",
+  title: "Enterprise Web Solutions",
   description: "Accelerate your international growth with custom website development and generative engine optimization. Partner with a premier global SEO agency.",
   alternates: {
     canonical: "https://www.joydigital.in/enterprise-web-solutions",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function EnterpriseWebSolutions() {
   const pageGraph = buildPageGraphSchema({
     url: "https://www.joydigital.in/enterprise-web-solutions",
-    title: "Enterprise Web Solutions & Global SEO Agency | Joy Digital",
+    title: "Enterprise Web Solutions | Joy Digital",
     description: "Accelerate your international growth with custom website development and generative engine optimization. Partner with a premier global SEO agency.",
   });
 

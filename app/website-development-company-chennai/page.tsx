@@ -3,20 +3,20 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Website Development Company in Chennai | Next.js & React JS",
+  title: "Web Development Company Chennai",
   description: "Looking for a Next.js website development company in Chennai? We build fast React JS platforms and corporate websites that score 95+ on Core Web Vitals.",
   alternates: {
     canonical: "https://www.joydigital.in/website-development-company-chennai",
   },
   openGraph: {
-    title: "Website Development Company in Chennai | Next.js & React JS",
+    title: "Web Development Company Chennai | Joy Digital",
     description: "Looking for a Next.js website development company in Chennai? We build fast React JS platforms and corporate websites that score 95+ on Core Web Vitals.",
     url: "https://www.joydigital.in/website-development-company-chennai",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development Company in Chennai | Next.js & React JS",
+    title: "Web Development Company Chennai | Joy Digital",
     description: "Looking for a Next.js website development company in Chennai? We build fast React JS platforms and corporate websites that score 95+ on Core Web Vitals.",
   }
 };

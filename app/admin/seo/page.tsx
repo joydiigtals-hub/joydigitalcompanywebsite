@@ -3,7 +3,7 @@ import SeoKeywordManager from "@/components/admin/SeoKeywordManager";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SEO Keyword Manager | Joy Digital Admin",
+  title: "SEO Keyword Manager",
   robots: {
     index: false,
     follow: false,

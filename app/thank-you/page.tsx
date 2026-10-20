@@ -10,7 +10,7 @@ export default function ThankYouPage() {
   const canonicalUrl = "https://www.joydigital.in/thank-you";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
-    title: "Thank You | Joy Digital",
+    title: "Thank You",
     description: "Thank you for contacting Joy Digital. Your inquiry has been received.",
     breadcrumbs: [
       { name: "Home", item: "https://www.joydigital.in" },

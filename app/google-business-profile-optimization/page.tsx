@@ -4,20 +4,20 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Google Business Profile Optimization Services | Joy Digital",
+  title: "GBP Optimization Services",
   description: "Expert Google Business Profile optimization to rank in Google Maps 3-Pack, gain local visibility, and generate phone calls with Joy Digital.",
   alternates: {
     canonical: "https://www.joydigital.in/google-business-profile-optimization",
   },
   openGraph: {
-    title: "Google Business Profile Optimization Services | Joy Digital",
+    title: "GBP Optimization Services | Joy Digital",
     description: "Expert Google Business Profile optimization to rank in Google Maps 3-Pack, gain local visibility, and generate phone calls with Joy Digital.",
     url: "https://www.joydigital.in/google-business-profile-optimization",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Google Business Profile Optimization Services | Joy Digital",
+    title: "GBP Optimization Services | Joy Digital",
     description: "Expert Google Business Profile optimization to rank in Google Maps 3-Pack, gain local visibility, and generate phone calls with Joy Digital.",
   },
 };
@@ -40,7 +40,7 @@ const GBP_FAQS = [
 export default function GoogleBusinessProfilePage() {
   const pageGraphSchema = buildPageGraphSchema({
     url: "https://www.joydigital.in/google-business-profile-optimization",
-    title: "Google Business Profile Optimization Services | Joy Digital",
+    title: "GBP Optimization Services | Joy Digital",
     description: "Expert Google Business Profile optimization to rank in Google Maps 3-Pack, gain local visibility, and generate phone calls with Joy Digital.",
     breadcrumbs: [
       { name: "Home", item: "https://www.joydigital.in" },

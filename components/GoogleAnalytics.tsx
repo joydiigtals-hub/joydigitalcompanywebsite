@@ -43,11 +43,11 @@ export default function GoogleAnalytics() {
     // Defer loading GA script until after main thread idle window
     const timer = setTimeout(() => {
       if ("requestIdleCallback" in window) {
-        window.requestIdleCallback(() => setShouldLoad(true));
+        (window as any).requestIdleCallback(() => setShouldLoad(true));
       } else {
         setShouldLoad(true);
       }
-    }, 2500);
+    }, 3800);
 
     return () => clearTimeout(timer);
   }, []);

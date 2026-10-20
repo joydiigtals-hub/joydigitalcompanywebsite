@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import EnterpriseSeoLeadForm from "@/components/ui/EnterpriseSeoLeadForm";
 
 export const metadata: Metadata = {
-  title: "Enterprise B2B SEO Services & GEO Optimization | Joy Digital",
+  title: "B2B SEO Services & GEO",
   description: "Enterprise B2B SEO services by Joy Digital. Technical SEO architecture, Core Web Vitals, and Generative Engine Optimization (GEO) for global brands.",
   keywords: [
     "Enterprise B2B SEO Services",

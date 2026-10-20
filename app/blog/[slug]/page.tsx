@@ -29,7 +29,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const rawTitle = (post.seoTitle || post.title || "")
     .replace(/\s*\|\s*Joy\s*Digital.*$/i, "")
     .trim();
-  const title = `${rawTitle} | Joy Digital`;
+  const title = rawTitle.length > 42 ? rawTitle.slice(0, 42).trim() : rawTitle;
+  const fullTitle = `${title} | Joy Digital`;
   const description = post.metaDescription || post.description;
   const canonical = post.canonicalUrl || `https://www.joydigital.in/blog/${resolvedParams.slug}`;
   const isNoindex = post.robots?.toLowerCase().includes("noindex");
@@ -49,7 +50,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "article",
       url: canonical,
       siteName: "Joy Digital Agency",
-      title: post.ogTitle ? (post.ogTitle.includes("Joy Digital") ? post.ogTitle : `${post.ogTitle} | Joy Digital`) : title,
+      title: post.ogTitle ? (post.ogTitle.includes("Joy Digital") ? post.ogTitle : `${post.ogTitle} | Joy Digital`) : fullTitle,
       description: post.ogDescription || description,
       images: [
         {
@@ -62,7 +63,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary_large_image",
-      title: post.twitterTitle ? (post.twitterTitle.includes("Joy Digital") ? post.twitterTitle : `${post.twitterTitle} | Joy Digital`) : title,
+      title: post.twitterTitle ? (post.twitterTitle.includes("Joy Digital") ? post.twitterTitle : `${post.twitterTitle} | Joy Digital`) : fullTitle,
       description: post.twitterDescription || post.ogDescription || description,
       images: [post.twitterImage || post.ogImage || post.image || "https://www.joydigital.in/assets/images/hero-banner.webp"],
     },

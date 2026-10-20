@@ -65,7 +65,7 @@ export default async function PortfolioWebDevPage() {
         benefits={[
           {
             icon: "fa-solid fa-[#7C3AED] fa-user-tie",
-            title: "Executive Personal Branding",
+            title: "Portfolio Web Development",
             description: "Custom typography, sleek dark/light modes, and modern layouts reflecting high professional credibility.",
           },
           {

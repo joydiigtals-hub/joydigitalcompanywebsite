@@ -5,7 +5,7 @@ import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Textile Manufacturer Website Design | Joy Digital",
+  title: "Textile Manufacturer Websites",
   description: "Custom B2B websites and SEO for textile manufacturers and fabric exporters. Digital fabric catalogs, RFQ forms, and global buyer leads.",
   alternates: {
     canonical: "https://www.joydigital.in/website-for-textile-manufacturers",

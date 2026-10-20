@@ -80,7 +80,6 @@ export async function GET() {
       '/website-design-company-madurai',
       '/seo-services-madurai',
       '/website-design-company-coimbatore',
-      '/seo-company-coimbatore',
       '/website-for-hospitals',
       '/website-for-hotels',
       '/website-for-insurance-agents',

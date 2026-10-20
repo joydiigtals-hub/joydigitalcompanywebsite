@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Agency in Madurai | Lead Gen Specialists",
+  title: "Digital Marketing Agency Madurai",
   description: "Looking for the best digital marketing agency in Madurai? We run high-converting social media ads, PPC campaigns, and Local SEO systems.",
   alternates: {
     canonical: "https://www.joydigital.in/digital-marketing-agency-madurai",
@@ -168,7 +168,7 @@ export default function DigitalMarketingMadurai() {
       schemaMarkup={pageSchema}
       crossLinks={[
         { href: "/website-design-company-madurai", label: "Web Design Madurai" },
-        { href: "/seo-company-madurai", label: "SEO Company Madurai" },
+        { href: "/seo-services-madurai", label: "SEO Company Madurai" },
         { href: "/case-studies", label: "Case Studies" },
       ]}
     />

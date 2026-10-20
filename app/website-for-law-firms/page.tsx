@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Law Firm Website Design & Legal SEO | Joy Digital",
+  title: "Law Firm Website Design & SEO",
   description: "Custom website design and SEO for law firms and attorneys. Confidential client consultation forms, attorney profiles, and top Google rankings.",
   alternates: {
     canonical: "https://www.joydigital.in/website-for-law-firms",

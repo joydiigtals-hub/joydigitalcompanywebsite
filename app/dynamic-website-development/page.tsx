@@ -51,7 +51,7 @@ export default async function DynamicWebDevPage() {
         benefits={[
           {
             icon: "fa-solid fa-[#7C3AED] fa-database",
-            title: "Relational Database Schemas",
+            title: "Dynamic Website Development",
             description: "PostgreSQL & Supabase architectures configured with parameterized queries and strict type-safety.",
           },
           {

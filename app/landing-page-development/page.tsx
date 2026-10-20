@@ -44,7 +44,7 @@ export default async function LandingPageDevPage() {
         benefits={[
           {
             icon: "fa-solid fa-[#7C3AED] fa-bullseye",
-            title: "Distraction-Free UX Design",
+            title: "Landing Page Development",
             description: "No external navigation menus or social links leaking prospects before they complete the enquiry form.",
           },
           {

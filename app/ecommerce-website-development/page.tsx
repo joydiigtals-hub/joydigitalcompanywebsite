@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Custom Ecommerce Website Development Services | Joy Digital",
+  title: "Headless Ecommerce Development",
   description: "Custom Next.js ecommerce development. Fast headless storefronts, B2B digital commerce apps, and high-converting checkout flows.",
   keywords: [
     "E-commerce Website Development",
@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     canonical: "https://www.joydigital.in/ecommerce-website-development",
   },
   openGraph: {
-    title: "Custom Ecommerce Website Development Services | Joy Digital",
+    title: "Headless Ecommerce Development | Joy Digital",
     description: "Custom Next.js ecommerce development. Fast headless storefronts, B2B digital commerce apps, and high-converting checkout flows.",
     url: "https://www.joydigital.in/ecommerce-website-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Ecommerce Website Development Services | Joy Digital",
+    title: "Headless Ecommerce Development | Joy Digital",
     description: "Custom Next.js ecommerce development. Fast headless storefronts, B2B digital commerce apps, and high-converting checkout flows.",
   }
 };

@@ -7,18 +7,18 @@ import ClientScrollObserver from "@/components/ui/ClientScrollObserver";
 import CountUpNumber from "@/components/ui/CountUpNumber";
 import TrackedLink from "@/components/ui/TrackedLink";
 import TrackedWaLink from "@/components/ui/TrackedWaLink";
-import IndustryTabs from "@/components/sections/IndustryTabs";
-import ProcessSection from "@/components/sections/ProcessSection";
-import PricingSection from "@/components/sections/PricingSection";
 import Header from "@/components/layout/Header";
-import DigitalNetworkBackground from "@/components/ui/DigitalNetworkBackground";
+import ModernHeroSection from "@/components/sections/ModernHeroSection";
 
+const DigitalNetworkBackground = dynamic(() => import("@/components/ui/DigitalNetworkBackground"));
+const IndustryTabs = dynamic(() => import("@/components/sections/IndustryTabs"));
+const ProcessSection = dynamic(() => import("@/components/sections/ProcessSection"));
+const PricingSection = dynamic(() => import("@/components/sections/PricingSection"));
+const PortfolioSection = dynamic(() => import("@/components/sections/PortfolioSection"));
 const WorldwideServiceNetwork = dynamic(() => import("@/components/ui/WorldwideServiceNetwork"));
 const Footer = dynamic(() => import("@/components/layout/Footer"));
 const LeadForm = dynamic(() => import("@/components/ui/LeadForm"));
 const Accordion = dynamic(() => import("@/components/ui/Accordion"));
-import ModernHeroSection from "@/components/sections/ModernHeroSection";
-import PortfolioSection from "@/components/sections/PortfolioSection";
 
 export const HOME_FAQS = [
   {
@@ -692,7 +692,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                   SEO Services Madurai
                 </Link>
                 <Link
-                  href="/seo-company-coimbatore"
+                  href="/website-design-company-coimbatore"
                   className="inline-flex items-center gap-1.5 bg-white border border-[#E9E4F2] text-[#6B6478] hover:text-[#7C3AED] px-4 py-2 rounded-xl text-xs font-bold transition-all"
                 >
                   SEO Company Coimbatore

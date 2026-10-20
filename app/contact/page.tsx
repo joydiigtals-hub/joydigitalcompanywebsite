@@ -8,7 +8,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Request a Free Consultation | Joy Digital",
+  title: "Contact Us & Free Consultation",
   description: "Get in touch with our digital specialists. Request a free SEO audit, custom website quotes, or logo design consulting from our office.",
   alternates: {
     canonical: "https://www.joydigital.in/contact",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.joydigital.in/contact",
     siteName: "Joy Digital Agency",
-    title: "Contact Us | Request a Free Consultation | Joy Digital",
+    title: "Contact Us & Free Consultation | Joy Digital",
     description: "Get in touch with our digital specialists. Request a free SEO audit, custom website quotes, or logo design consulting from our office.",
     images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Contact Joy Digital Agency" }],
   },
@@ -35,7 +35,7 @@ export default function ContactPage() {
   const canonicalUrl = "https://www.joydigital.in/contact";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
-    title: "Contact Us | Request a Free Consultation | Joy Digital",
+    title: "Contact Us & Free Consultation | Joy Digital",
     description: "Get in touch with our digital specialists. Request a free SEO audit, custom website quotes, or logo design consulting from our office.",
     includeLocalBusiness: true,
     breadcrumbs: [

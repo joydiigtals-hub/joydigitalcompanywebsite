@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "404 - Page Not Found | Joy Digital",
+  title: "404 - Page Not Found",
   description: "The page you are looking for does not exist or has been moved. Explore Joy Digital's Web Design, Next.js Development, and SEO services.",
   robots: {
     index: false,

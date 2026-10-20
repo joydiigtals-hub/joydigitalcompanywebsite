@@ -6,7 +6,7 @@ import { getPostBySlug } from "@/lib/blog";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "SEO and Website for Insurance Agents in India | Joy Digital",
+  title: "Websites for Insurance Agents",
   description: "Custom website design & local SEO for insurance agents in India. Rank on Google, generate policy leads, and build client trust with Joy Digital.",
   alternates: {
     canonical: "https://www.joydigital.in/website-for-insurance-agents",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.joydigital.in/website-for-insurance-agents",
-    title: "SEO and Website for Insurance Agents in India | Joy Digital",
+    title: "Websites for Insurance Agents | Joy Digital",
     description: "Custom website design & local SEO for insurance agents in India. Rank on Google, generate policy leads, and build client trust with Joy Digital.",
     images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "SEO and Website for Insurance Agents in India Joy Digital" }],
   },
@@ -51,7 +51,7 @@ export default async function InsuranceWebPage() {
 
   const pageGraphSchema = buildPageGraphSchema({
     url: "https://www.joydigital.in/website-for-insurance-agents",
-    title: "SEO and Website for Insurance Agents in India | Joy Digital",
+    title: "Websites for Insurance Agents | Joy Digital",
     description: "Custom website design & local SEO for insurance agents in India. Rank on Google, generate policy leads, and build client trust with Joy Digital.",
     breadcrumbs: [
       { name: "Home", item: "https://www.joydigital.in" },

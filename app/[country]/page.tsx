@@ -28,27 +28,27 @@ export async function generateStaticParams() {
 
 const METADATA_MAP: Record<string, { title: string; description: string }> = {
   us: {
-    title: "Next.js Web Development & SEO Agency USA | Joy Digital",
+    title: "Next.js Web Development & SEO Agency USA",
     description: "Scale organic revenue. Joy Digital is a premium digital agency serving US businesses with custom web design, headless Next.js platforms, and results-driven SEO.",
   },
   uk: {
-    title: "Professional Web Design & SEO Services UK | Joy Digital",
+    title: "Professional Web Design & SEO Services UK",
     description: "Convert search traffic into loyal buyers. Joy Digital constructs high-speed corporate sites and executes organic search engine marketing campaigns across the UK.",
   },
   ae: {
-    title: "Next.js Enterprise Web Development Dubai & UAE | Joy Digital",
+    title: "Next.js Enterprise Web Dev Dubai & UAE",
     description: "Engineer ultra-fast, sub-second Next.js web applications in Dubai & Abu Dhabi. Scale B2B enquiries with enterprise-grade SEO and AI Search Optimization.",
   },
   in: {
-    title: "Top Website Design & SEO Company India | Joy Digital",
+    title: "Top Website Design & SEO Company India",
     description: "Boost your customer conversions. Joy Digital is India's leading SEO & custom web design agency, delivering search marketing and Map pack ranking systems.",
   },
   ca: {
-    title: "Next.js Web Development & SEO Agency Canada | Joy Digital",
+    title: "Next.js Web Development & SEO Agency Canada",
     description: "Scale organic revenue. Joy Digital builds high-performance Next.js websites, headless storefronts, and SEO campaigns for Canadian enterprises and startups.",
   },
   au: {
-    title: "Custom Web Design & SEO Agency Australia | Joy Digital",
+    title: "Custom Web Design & SEO Agency Australia",
     description: "Empower your business with fast, search-compliant Next.js websites and Google ranking strategies engineered for Australian businesses.",
   },
   es: {
@@ -64,35 +64,35 @@ const METADATA_MAP: Record<string, { title: string; description: string }> = {
     description: "Développez votre entreprise avec Joy Digital. Nous créons des sites web Next.js ultra-rapides et des solutions SEO sur mesure pour le marché français.",
   },
   it: {
-    title: "Sviluppo Web Next.js e Agenzia SEO Italia | Joy Digital",
+    title: "Sviluppo Web Next.js e Agenzia SEO Italia",
     description: "Siti web ultra-veloci e posizionamento SEO per aziende in Italia. Aumenta il tuo fatturato con la presenza digitale di Joy Digital.",
   },
   sg: {
-    title: "Next.js Web Development & SEO Agency Singapore | Joy Digital",
+    title: "Next.js Web Dev & SEO Agency Singapore",
     description: "Scale organic revenue. Joy Digital builds high-performance Next.js websites and data-driven SEO campaigns for businesses in Singapore.",
   },
   mx: {
-    title: "Agencia de Desarrollo Web Next.js y SEO México | Joy Digital",
+    title: "Agencia de Desarrollo Web Next.js y SEO Méxi",
     description: "Diseño web moderno en Next.js y estrategias de SEO enfocadas en resultados para empresas en México y Latinoamérica.",
   },
   br: {
-    title: "Desenvolvimento Web Next.js e Agência de SEO Brasil | Joy Digital",
+    title: "Desenvolvimento Web Next.js e Agência de SEO",
     description: "Desenvolvimento de sites ultra-rápidos e otimização SEO para empresas no Brasil com a Joy Digital.",
   },
   my: {
-    title: "Next.js Web Development & B2B SEO Malaysia | Joy Digital",
+    title: "Next.js Web Development & B2B SEO Malaysia",
     description: "Scale your Kuala Lumpur business with high-performance Next.js web applications and organic SEO. Get 50% faster speeds and higher B2B lead conversion.",
   },
   za: {
-    title: "High-Speed Web Development & B2B SEO South Africa | Joy Digital",
+    title: "High-Speed Web Dev & B2B SEO South Africa",
     description: "Build ultra-fast Next.js websites for South African enterprises. Scale B2B leads across Johannesburg, Cape Town, and global export markets.",
   },
   ng: {
-    title: "High-Speed Web Applications & B2B Lead Gen Nigeria | Joy Digital",
+    title: "High-Speed Web Applications & B2B Lead Gen N",
     description: "Ultra-fast, low-bandwidth Next.js web apps and B2B SEO engineered for Nigerian businesses in Lagos, Abuja, and West Africa.",
   },
   ke: {
-    title: "Next.js Web Engineering & B2B SEO Growth Kenya | Joy Digital",
+    title: "Next.js Web Engineering & B2B SEO Growth Ken",
     description: "High-converting web development and search engine optimization engineered for Kenyan businesses in Nairobi and East Africa.",
   },
 };
@@ -101,7 +101,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { country } = await params;
   const countryLower = country.toLowerCase();
   const data = METADATA_MAP[countryLower] || {
-    title: `Website Design & SEO Growth Agency ${countryLower.toUpperCase()} | Joy Digital`,
+    title: `Web Design & SEO Agency ${countryLower.toUpperCase()}`,
     description: "Joy Digital is a results-oriented global agency engineering fast Next.js sites and search marketing campaigns.",
   };
 

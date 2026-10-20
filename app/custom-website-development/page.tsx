@@ -78,7 +78,7 @@ export default async function CustomWebDevPage() {
         benefits={[
           {
             icon: "fa-solid fa-cubes",
-            title: "Modular Headless Architecture",
+            title: "Custom Website Development",
             description: "Decoupled Next.js & Sanity/Strapi setups providing total editorial flexibility and zero layout locks.",
           },
           {

@@ -220,7 +220,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ke: "Kenya",
   };
   const countryName = countryNames[countryLower] || countryLower.toUpperCase();
-  const title = `Custom Next.js Web Development ${countryName} | Joy Digital`;
+  const title = `Web Development ${countryName}`;
 
   return {
     title,

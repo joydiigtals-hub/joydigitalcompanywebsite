@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "HTML Sitemap | Joy Digital Web Design & SEO Services",
+  title: "HTML Sitemap Index",
   description: "Complete list of all website pages, regional hubs, industry solutions, and free business tools on JoyDigital.in.",
 };
 
@@ -82,7 +82,6 @@ const SECTIONS = [
       { href: "/website-design-company-madurai", label: "Website Design Company Madurai" },
       { href: "/seo-services-madurai", label: "SEO Services Madurai" },
       { href: "/website-design-company-coimbatore", label: "Web Design Company Coimbatore" },
-      { href: "/seo-company-coimbatore", label: "SEO Company Coimbatore" },
     ],
   },
   {

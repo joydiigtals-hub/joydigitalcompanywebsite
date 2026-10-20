@@ -3,7 +3,7 @@
     "id": "page-custom-web-dev",
     "path": "/custom-website-development",
     "category": "Core Service",
-    "title_template": "Custom Website Development Services | Joy Digital",
+    "title_template": "Custom Website Development Services",
     "meta_description": "Enterprise custom website development services. We build high-speed Next.js & React web applications with 99+ Core Web Vitals and zero template bloat.",
     "h1": "Custom Website Development Services for Global Enterprises",
     "h2_tags": [
@@ -53,7 +53,7 @@
     "id": "page-dynamic-web-dev",
     "path": "/dynamic-website-development",
     "category": "Core Service",
-    "title_template": "Dynamic Website Development Services | Joy Digital",
+    "title_template": "Dynamic Website Development Services",
     "meta_description": "Build high-speed, database-driven dynamic websites with custom admin panels, real-time API sync, and secure PostgreSQL/Supabase backends.",
     "h1": "Dynamic Website Development Services with Custom Admin Controls",
     "h2_tags": [
@@ -109,7 +109,7 @@
     "id": "page-web-dev-services",
     "path": "/website-development",
     "category": "Core Service",
-    "title_template": "Professional Web Development Services | Joy Digital",
+    "title_template": "Professional Web Development Services",
     "meta_description": "Full-stack web development services for global startups, agencies, and enterprises. Fast Next.js, React & Node.js web applications.",
     "h1": "Full-Stack Web Development Services for Global Growth",
     "h2_tags": [
@@ -151,7 +151,7 @@
     "id": "page-ind-real-estate",
     "path": "/industries/real-estate",
     "category": "Industry Page",
-    "title_template": "Real Estate Website Development Company | Joy Digital",
+    "title_template": "Real Estate Website Development Company",
     "meta_description": "High-converting real estate website development services. Build property listing portals, interactive map filters, and WhatsApp lead capture funnels.",
     "h1": "Custom Real Estate Website Development & Property Portals",
     "h2_tags": [
@@ -188,7 +188,7 @@
     "id": "page-ind-travel-tourism",
     "path": "/industries/travel-tourism",
     "category": "Industry Page",
-    "title_template": "Custom Travel Website Development Services | Joy Digital",
+    "title_template": "Custom Travel Website Development Services",
     "meta_description": "Build high-speed travel portals, tour package booking engines, and multi-currency travel agency websites.",
     "h1": "Custom Travel Website Development & Booking Portals",
     "h2_tags": [
@@ -217,7 +217,7 @@
     "id": "page-ind-healthcare",
     "path": "/industries/healthcare",
     "category": "Industry Page",
-    "title_template": "Healthcare Website Development Services | Joy Digital",
+    "title_template": "Healthcare Website Development Services",
     "meta_description": "Secure healthcare and hospital website development. Doctor appointment scheduling, patient portals, and local SEO.",
     "h1": "Healthcare Website Development Services & Hospital Portals",
     "h2_tags": [
@@ -246,7 +246,7 @@
     "id": "page-ind-ecommerce",
     "path": "/industries/ecommerce",
     "category": "Industry Page",
-    "title_template": "Custom E-Commerce Website Development | Joy Digital",
+    "title_template": "Custom E-Commerce Website Development",
     "meta_description": "Next.js headless e-commerce store development. Sub-second mobile load times, custom checkout, and global payment sync.",
     "h1": "Custom E-Commerce Website Development & Headless Stores",
     "h2_tags": [
@@ -275,7 +275,7 @@
     "id": "page-india-seo-mkt",
     "path": "/in",
     "category": "Regional Market",
-    "title_template": "Top Digital Marketing Company in India | Joy Digital",
+    "title_template": "Top Digital Marketing Company in India",
     "meta_description": "Joy Digital is a premier digital marketing company in india & search engine optimization agency. We scale organic search rankings and lead funnels across India.",
     "h1": "Premier Digital Marketing & SEO Company in India",
     "h2_tags": [
@@ -315,7 +315,7 @@
     "id": "page-static-web-dev",
     "path": "/static-website-development",
     "category": "Core Service",
-    "title_template": "Blazing-Fast Static Website Development | Next.js & React Solutions - Joy Digital",
+    "title_template": "Fast Static Website Development",
     "meta_description": "Build high-speed, secure, and cost-effective static websites with sub-second load times, 100% serverless security, and zero database maintenance.",
     "h1": "Blazing-Fast Static Website Development Services",
     "h2_tags": [
@@ -371,7 +371,7 @@
     "id": "page-portfolio-web-dev",
     "path": "/portfolio-website-development",
     "category": "Core Service",
-    "title_template": "Portfolio Website Development & AI Design | Joy Digital",
+    "title_template": "Portfolio Website Development & AI Design",
     "meta_description": "Build custom portfolio websites for web developers, executives, & agencies. Explore portfolio templates, GitHub hosting, and AI design.",
     "h1": "Custom Portfolio Website Development & Personal Branding Architecture",
     "h2_tags": [
@@ -427,7 +427,7 @@
     "id": "page-ai-search-opt",
     "path": "/ai-search-optimization",
     "category": "Core Service",
-    "title_template": "AI Search Optimization (GEO/AIO) Services | Joy Digital",
+    "title_template": "AI Search Optimization (GEO/AIO) Services",
     "meta_description": "Learn how to optimize website for AI search. Discover AI search optimization tools, tutorials, GEO acronym meanings, and ASO strategies for AI engines.",
     "h1": "AI Search Optimization & Generative Engine Services",
     "h2_tags": [
@@ -481,9 +481,9 @@
   },
   {
     "id": "page-seo-company-chennai",
-    "path": "/seo-company-chennai",
+    "path": "/seo-services-chennai",
     "category": "Core Service",
-    "title_template": "Best SEO Website Company in Chennai & India | Joy Digital",
+    "title_template": "Best SEO Website Company in Chennai & India",
     "meta_description": "Looking for the best SEO website company in Chennai & India? Joy Digital provides expert SEO services, Google SEO checker tools, and local Map Pack optimization.",
     "h1": "Top SEO Company in Chennai & Premier SEO Website Company in India",
     "h2_tags": [
@@ -539,7 +539,7 @@
     "id": "page-website-for-schools",
     "path": "/website-for-schools",
     "category": "Industry Page",
-    "title_template": "School Website Design & Development Services | Joy Digital",
+    "title_template": "School Website Design & Development Services",
     "meta_description": "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
     "h1": "School Website Design & Development Services",
     "h2_tags": [
@@ -572,7 +572,7 @@
     "id": "page-website-for-luxury-brands",
     "path": "/website-for-luxury-brands",
     "category": "Industry Page",
-    "title_template": "Premium Luxury Brand Website Design Services | Joy Digital",
+    "title_template": "Premium Luxury Brand Website Design Services",
     "meta_description": "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
     "h1": "Premium Luxury Brand Website Design Services",
     "h2_tags": [
@@ -605,7 +605,7 @@
     "id": "page-website-for-marketing-agencies",
     "path": "/website-for-marketing-agencies",
     "category": "Industry Page",
-    "title_template": "High-Converting Website Design for Agencies | Joy Digital",
+    "title_template": "High-Converting Website Design for Agencies",
     "meta_description": "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
     "h1": "High-Converting Website Design for Agencies",
     "h2_tags": [
@@ -638,7 +638,7 @@
     "id": "page-website-for-consulting-companies",
     "path": "/website-for-consulting-companies",
     "category": "Industry Page",
-    "title_template": "Corporate Website Development for Consultants | Joy Digital",
+    "title_template": "Corporate Website Development for Consultants",
     "meta_description": "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
     "h1": "Corporate Website Development for Consultants",
     "h2_tags": [
@@ -671,7 +671,7 @@
     "id": "page-website-for-pest-control",
     "path": "/website-for-pest-control",
     "category": "Industry Page",
-    "title_template": "Local SEO & Website Design for Pest Control | Joy Digital",
+    "title_template": "Local SEO & Website Design for Pest Control",
     "meta_description": "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
     "h1": "Local SEO & Website Design for Pest Control",
     "h2_tags": [
@@ -702,9 +702,9 @@
   },
   {
     "id": "page-website-for-e-commerce-stores",
-    "path": "/website-for-e-commerce-stores",
+    "path": "/website-for-ecommerce",
     "category": "Industry Page",
-    "title_template": "Custom E-Commerce Website Development | Joy Digital",
+    "title_template": "Custom E-Commerce Website Development",
     "meta_description": "Fast Next.js E-commerce websites built for high conversions, payment gateway integration, and SEO. Scale your online store today with Joy Digital!",
     "h1": "Custom E-Commerce Website Development",
     "h2_tags": [
@@ -737,7 +737,7 @@
     "id": "page-website-for-solar-companies",
     "path": "/website-for-solar-companies",
     "category": "Industry Page",
-    "title_template": "Solar Energy Company Website Development | Joy Digital",
+    "title_template": "Solar Energy Company Website Development",
     "meta_description": "Generate high-intent residential & commercial solar leads with modern, fast-loading websites built for renewable energy companies. Get a free quote!",
     "h1": "Solar Energy Company Website Development",
     "h2_tags": [
@@ -770,7 +770,7 @@
     "id": "page-website-for-tour-and-safari",
     "path": "/website-for-tour-and-safari",
     "category": "Industry Page",
-    "title_template": "Tour & Travel Agency Website Design | Joy Digital",
+    "title_template": "Tour & Travel Agency Website Design",
     "meta_description": "Custom travel websites with itinerary builders, WhatsApp booking & multi-currency options. Boost direct travel bookings with Joy Digital!",
     "h1": "Tour & Travel Agency Website Design",
     "h2_tags": [
@@ -803,7 +803,7 @@
     "id": "page-seo-services-chennai",
     "path": "/seo-services-chennai",
     "category": "Landing Page",
-    "title_template": "Best SEO Company in Chennai | Top SEO Agency & Services",
+    "title_template": "Best SEO Company in Chennai | Top SEO Agency",
     "meta_description": "Drive organic search rankings with Joy Digital, recognized as the best SEO company and leading SEO agency in Chennai. We provide technical SEO services in Chennai and high-speed website development.",
     "h1": "Best SEO Company in Chennai | Top SEO Agency & Website Development",
     "h2_tags": [

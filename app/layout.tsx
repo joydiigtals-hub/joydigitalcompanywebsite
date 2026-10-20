@@ -17,7 +17,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.joydigital.in"),
   title: {
-    default: "Joy Digital | Digital Agency & Next.js Web Development Chennai",
+    default: "Next.js Web Development & SEO Agency | Joy Digital",
     template: "%s | Joy Digital",
   },
   description: "Joy Digital is a premier Digital Agency & Next.js Web Development company based in Chennai, India. We engineer sub-second web applications, custom software, SEO, and Generative Engine Optimization (GEO) for global brands.",
@@ -71,9 +71,15 @@ export const metadata: Metadata = {
     google: "yYfFlGYZPthQmXcw3V9yq2U2OlPPPxWBCtG7URIXDwQ",
   },
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/apple-icon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   openGraph: {
     type: "website",

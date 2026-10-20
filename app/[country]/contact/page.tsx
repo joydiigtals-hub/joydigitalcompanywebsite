@@ -222,7 +222,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ke: "Kenya",
   };
   const countryName = countryNames[countryLower] || countryLower.toUpperCase();
-  const title = `Contact Joy Digital ${countryName} | Custom Web & SEO Solutions`;
+  const title = `Contact ${countryName} Consultation Desk`;
 
   return {
     title,

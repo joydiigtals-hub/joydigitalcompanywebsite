@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Web Design Company in Chennai | Joy Digital",
+  title: "Web Design Company Chennai",
   description: "Joy Digital is a leading web design company in Chennai. We build high-speed, responsive websites & local SEO plans. Find a website developer near me.",
   alternates: {
     canonical: "https://www.joydigital.in/website-design-company-in-chennai",
@@ -198,7 +198,7 @@ export default function WebsiteDesignChennai() {
       schemaMarkup={pageSchema}
       crossLinks={[
         { href: "/website-development-company-chennai", label: "website development in Chennai" },
-        { href: "/seo-services-in-chennai", label: "SEO Services Chennai" },
+        { href: "/seo-services-chennai", label: "SEO Services Chennai" },
         { href: "/case-studies", label: "Case Studies" },
       ]}
     />

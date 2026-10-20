@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "High-Converting Website Design for Agencies | Joy Digital",
+  title: "Web Design for Marketing Agencies",
   description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
   alternates: {
     canonical: "https://www.joydigital.in/website-for-marketing-agencies",
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.joydigital.in/website-for-marketing-agencies",
-    title: "High-Converting Website Design for Agencies | Joy Digital",
+    title: "Web Design for Marketing Agencies | Joy Digital",
     description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
     images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Marketing Agency Website Design Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "High-Converting Website Design for Agencies | Joy Digital",
+    title: "Web Design for Marketing Agencies | Joy Digital",
     description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
     images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },

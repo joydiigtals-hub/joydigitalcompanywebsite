@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Affordable Web Design Agency in Chennai | Joy Digital",
+  title: "Affordable Web Design Chennai",
   description: "Looking for an affordable web design agency in Chennai? Get custom Next.js websites at a competitive website design price in Chennai.",
   alternates: {
     canonical: "https://www.joydigital.in/affordable-web-design-agency-chennai",
@@ -202,8 +202,8 @@ export default function AffordableWebDesignChennai() {
       schemaMarkup={pageSchema}
       crossLinks={[
         { href: "/website-development-company-chennai", label: "Web Development Chennai" },
-        { href: "/website-design-company-in-chennai", label: "Web Design Chennai" },
-        { href: "/seo-services-in-chennai", label: "SEO Services Chennai" },
+        { href: "/website-development-company-chennai", label: "Web Design Chennai" },
+        { href: "/seo-services-chennai", label: "SEO Services Chennai" },
       ]}
     />
   );

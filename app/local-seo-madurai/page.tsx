@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Local SEO Services in Madurai | Google Maps Ranking",
+  title: "Local SEO Services Madurai",
   description: "Rank #1 in Google Maps Local 3-Pack. We optimize your Google Business Profile and local citations to attract organic local leads in Madurai.",
   alternates: {
     canonical: "https://www.joydigital.in/local-seo-madurai",
@@ -168,7 +168,7 @@ export default function LocalSeoMadurai() {
       schemaMarkup={pageSchema}
       crossLinks={[
         { href: "/website-design-company-madurai", label: "Web Design Madurai" },
-        { href: "/seo-company-madurai", label: "SEO Company Madurai" },
+        { href: "/seo-services-madurai", label: "SEO Company Madurai" },
         { href: "/case-studies", label: "Case Studies" },
       ]}
     />

@@ -7,7 +7,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Joy Digital",
+  title: "Terms & Conditions",
   description: "Read the official Terms and Conditions of Joy Digital to understand the client agreement and rules for using our agency services and tools.",
   alternates: {
     canonical: "https://www.joydigital.in/terms-and-conditions",

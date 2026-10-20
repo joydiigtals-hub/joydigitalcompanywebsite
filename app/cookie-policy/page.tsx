@@ -7,7 +7,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Joy Digital",
+  title: "Cookie Policy",
   description: "Read the official Cookie Policy for Joy Digital to understand how we use cookies and tracking technologies to optimize your browsing experience.",
   alternates: {
     canonical: "https://www.joydigital.in/cookie-policy",

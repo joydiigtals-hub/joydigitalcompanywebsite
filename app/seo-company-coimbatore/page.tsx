@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "SEO Company in Coimbatore | Google Maps Optimization Agency",
+  title: "SEO Company Coimbatore",
   description: "Looking for the best SEO company in Coimbatore? We rank local businesses, retail brands, and industrial suppliers on Google Page 1. Free SEO audit.",
   alternates: {
     canonical: "https://www.joydigital.in/seo-company-coimbatore",

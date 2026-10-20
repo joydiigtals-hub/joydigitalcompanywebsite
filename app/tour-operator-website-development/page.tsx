@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Tour Operator Website Development Company | Booking Websites",
+  title: "Tour Operator Web Development",
   description: "Expert tour operator website development. We build custom booking portals, day-by-day itineraries, and high-converting travel websites for DMCs.",
   keywords: [
     "tour operator website development",

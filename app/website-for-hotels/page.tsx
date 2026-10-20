@@ -5,7 +5,7 @@ import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Hotel Website Design & Booking SEO | Joy Digital",
+  title: "Hotel Website Design & SEO",
   description: "Direct-booking websites and SEO for luxury hotels and resorts. Cut OTA commissions and capture international tourist bookings directly.",
   keywords: [
     "Hotel Website Design",

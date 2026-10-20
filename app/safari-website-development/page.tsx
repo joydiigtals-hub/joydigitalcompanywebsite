@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Safari Website Development Company",
+  title: "Safari Website Development",
   description: "Custom safari website engineering for safari operators and wildlife lodges. Sub-second booking portals and global SEO to capture high-ticket bookings.",
   keywords: [
     "safari website development",

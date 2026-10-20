@@ -75,7 +75,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const study = DATA[resolvedParams.slug];
   if (!study) return {};
   return {
-    title: `${study.title} | Joy Digital`,
+    title: (study.title.length > 44 ? study.title.slice(0, 44).trim() : study.title),
     description: `Read how Joy Digital delivered a ${study.metricValue} increase in ${study.metricLabel} through specialized ${study.category}.`,
     alternates: {
       canonical: `https://www.joydigital.in/case-studies/${resolvedParams.slug}`,
@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "article",
       url: `https://www.joydigital.in/case-studies/${resolvedParams.slug}`,
       siteName: "Joy Digital Agency",
-      title: `${study.title} | Joy Digital`,
+      title: (study.title.length > 44 ? study.title.slice(0, 44).trim() : study.title),
       description: `Read how Joy Digital delivered a ${study.metricValue} increase in ${study.metricLabel} through specialized ${study.category}.`,
       images: [
         {

@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Small Business Website Design & SEO | Joy Digital",
+  title: "Small Business Website Design",
   description: "Fast Next.js website design and local SEO for small businesses and startups. Rank on Google Maps, generate leads, and grow revenue.",
   alternates: {
     canonical: "https://www.joydigital.in/website-for-small-business",

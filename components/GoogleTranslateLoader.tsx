@@ -6,7 +6,7 @@ export default function GoogleTranslateLoader() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    // Check if bot / crawler
+    // Fast check if bot / crawler
     const isBot = /Lighthouse|Googlebot|HeadlessChromium|Chrome-Lighthouse|PTST/i.test(navigator.userAgent);
     if (isBot) return;
 
@@ -25,8 +25,32 @@ export default function GoogleTranslateLoader() {
       return false;
     };
 
+    // Lazy load the Google Translate script on-demand
+    const loadGoogleTranslateScript = () => {
+      if (document.getElementById("google-translate-script")) return;
+      const script = document.createElement("script");
+      script.id = "google-translate-script";
+      script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
+    };
+
     // Expose global helper so Header.tsx or any other component can trigger it directly
-    (window as any).__triggerGoogleTranslate = triggerTranslation;
+    (window as any).__triggerGoogleTranslate = (lang: string) => {
+      if (!document.getElementById("google-translate-script")) {
+        loadGoogleTranslateScript();
+        let attempts = 0;
+        const interval = setInterval(() => {
+          attempts++;
+          if (triggerTranslation(lang) || attempts > 30) {
+            clearInterval(interval);
+          }
+        }, 150);
+        return true;
+      }
+      return triggerTranslation(lang);
+    };
 
     // Define global callback function for Google Translate
     (window as any).googleTranslateElementInit = function () {
@@ -48,24 +72,7 @@ export default function GoogleTranslateLoader() {
       }
     };
 
-    // Load Google Translate script dynamically immediately without idle delay
-    if (!document.getElementById("google-translate-script")) {
-      const script = document.createElement("script");
-      script.id = "google-translate-script";
-      script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-      script.async = true;
-      script.defer = true;
-      document.head.appendChild(script);
-    } else if ((window as any).google && (window as any).google.translate && (window as any).googleTranslateElementInit) {
-      // Re-initialize if script already exists (e.g. client route transitions)
-      try {
-        (window as any).googleTranslateElementInit();
-      } catch (e) {
-        // ignore
-      }
-    }
-
-    // Polling to ensure active language is applied once widget mounts
+    // Detect if user has previously selected a non-English language
     const getTargetLang = () => {
       const getCookie = (name: string) => {
         const value = `; ${document.cookie}`;
@@ -85,7 +92,15 @@ export default function GoogleTranslateLoader() {
     };
 
     const targetLang = getTargetLang();
+    // ONLY download Google Translate scripts if the user actually requested non-English!
+    // This saves ~300 KB of third-party JS and eliminates heavy TBT on mobile page loads.
     if (targetLang && targetLang !== "en") {
+      if ("requestIdleCallback" in window) {
+        (window as any).requestIdleCallback(loadGoogleTranslateScript, { timeout: 3000 });
+      } else {
+        setTimeout(loadGoogleTranslateScript, 2000);
+      }
+
       let attempts = 0;
       const interval = setInterval(() => {
         attempts++;
@@ -93,7 +108,7 @@ export default function GoogleTranslateLoader() {
         if (success || attempts > 30) {
           clearInterval(interval);
         }
-      }, 150);
+      }, 200);
 
       return () => clearInterval(interval);
     }

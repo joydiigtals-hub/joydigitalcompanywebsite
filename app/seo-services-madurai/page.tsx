@@ -3,20 +3,20 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "SEO Services in Madurai | Google Map Rankings Optimization",
+  title: "SEO Services in Madurai",
   description: "Boost your organic ranks. Joy Digital offers expert SEO services in Madurai, specializing in local search, GMB/GBP map ranking, and keyword optimization.",
   alternates: {
     canonical: "https://www.joydigital.in/seo-services-madurai",
   },
   openGraph: {
-    title: "SEO Services in Madurai | Google Map Rankings Optimization",
+    title: "SEO Services in Madurai | Joy Digital",
     description: "Boost your organic ranks. Joy Digital offers expert SEO services in Madurai, specializing in local search, GMB/GBP map ranking, and keyword optimization.",
     url: "https://www.joydigital.in/seo-services-madurai",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO Services in Madurai | Google Map Rankings Optimization",
+    title: "SEO Services in Madurai | Joy Digital",
     description: "Boost your organic ranks. Joy Digital offers expert SEO services in Madurai, specializing in local search, GMB/GBP map ranking, and keyword optimization.",
   }
 };

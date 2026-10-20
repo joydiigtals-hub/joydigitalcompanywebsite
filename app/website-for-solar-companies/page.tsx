@@ -6,7 +6,7 @@ import SolarLeadForm from "@/components/ui/SolarLeadForm";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "SEO & Website for Solar Installers India | Joy Digital",
+  title: "Solar Company Website Design",
   description: "Website design & local SEO for solar installers and EPC companies in India. Rank on Google, generate rooftop solar inquiries & C&I leads with Joy Digital.",
   alternates: {
     canonical: "https://www.joydigital.in/website-for-solar-companies",
@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.joydigital.in/website-for-solar-companies",
-    title: "SEO & Website for Solar Installers India | Joy Digital",
+    title: "Solar Company Website Design | Joy Digital",
     description: "Website design & local SEO for solar installers and EPC companies in India. Rank on Google, generate rooftop solar inquiries & C&I leads with Joy Digital.",
     images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "SEO & Website for Solar Installers India Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO & Website for Solar Installers India | Joy Digital",
+    title: "Solar Company Website Design | Joy Digital",
     description: "Website design & local SEO for solar installers and EPC companies in India. Rank on Google, generate rooftop solar inquiries & C&I leads with Joy Digital.",
     images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
@@ -48,7 +48,7 @@ const SOLAR_FAQS = [
 export default function SolarWebPage() {
   const pageGraphSchema = buildPageGraphSchema({
     url: "https://www.joydigital.in/website-for-solar-companies",
-    title: "SEO & Website for Solar Installers India | Joy Digital",
+    title: "Solar Company Website Design | Joy Digital",
     description: "Website design & local SEO for solar installers and EPC companies in India. Rank on Google, generate rooftop solar inquiries & C&I leads with Joy Digital.",
     breadcrumbs: [
       { name: "Home", item: "https://www.joydigital.in" },

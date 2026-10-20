@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Corporate Website Development for Consultants | Joy Digital",
+  title: "Websites for Consulting Firms",
   description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
   alternates: {
     canonical: "https://www.joydigital.in/website-for-consulting-companies",
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.joydigital.in/website-for-consulting-companies",
-    title: "Corporate Website Development for Consultants | Joy Digital",
+    title: "Websites for Consulting Firms | Joy Digital",
     description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
     images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Consulting Firm Website Design Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Corporate Website Development for Consultants | Joy Digital",
+    title: "Websites for Consulting Firms | Joy Digital",
     description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
     images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Generative Engine Optimization | GEO for AI Search Engines",
+  title: "Generative Engine Optimization GEO",
   description: "Optimize your SaaS architecture for SearchGPT, Perplexity, and Claude. Win AI search citations and drive high-intent organic traffic. Book an AI audit today.",
   keywords: [
     "AI Search Optimization",

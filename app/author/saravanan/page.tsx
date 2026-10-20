@@ -10,7 +10,7 @@ import { getAllPosts } from "@/lib/blog";
 import { getPersonEntity, getOrganizationEntity, SITE_URL } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Saravanan L | Web Specialist & Founder | Joy Digital",
+  title: "Saravanan L - Web Specialist",
   description: "Technical web development and SEO guides written by Saravanan L, Founder & Technical Web Specialist at Joy Digital.",
   keywords: [
     "Saravanan L",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: "https://www.joydigital.in/author/saravanan",
   },
   openGraph: {
-    title: "Saravanan L | Web Specialist & Founder | Joy Digital",
+    title: "Saravanan L - Web Specialist | Joy Digital",
     description: "Technical web specialist focusing on sub-second Next.js web applications, Generative Engine Optimization (GEO), and data-driven organic search marketing.",
     url: "https://www.joydigital.in/author/saravanan",
   },

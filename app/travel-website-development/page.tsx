@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Travel & Safari Website Development",
+  title: "Travel Website Development",
   description: "Custom travel & safari website engineering with instant booking engines, sub-second itinerary loading, and global SEO. Book your free consultation!",
   keywords: [
     "travel website development",

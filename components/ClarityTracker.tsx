@@ -19,16 +19,17 @@ export default function ClarityTracker() {
     window.addEventListener("touchstart", triggerLoad, { once: true, passive: true });
     window.addEventListener("mousemove", triggerLoad, { once: true, passive: true });
 
+    // Defer Clarity until 4.5s idle window so it never interrupts mobile LCP / TBT
     if ("requestIdleCallback" in window) {
-      const idleId = window.requestIdleCallback(triggerLoad, { timeout: 1500 });
+      const idleId = (window as any).requestIdleCallback(triggerLoad, { timeout: 4500 });
       return () => {
         window.removeEventListener("scroll", triggerLoad);
         window.removeEventListener("touchstart", triggerLoad);
         window.removeEventListener("mousemove", triggerLoad);
-        if ("cancelIdleCallback" in window) window.cancelIdleCallback(idleId);
+        if ("cancelIdleCallback" in window) (window as any).cancelIdleCallback(idleId);
       };
     } else {
-      const timer = setTimeout(triggerLoad, 1500);
+      const timer = setTimeout(triggerLoad, 4000);
       return () => {
         window.removeEventListener("scroll", triggerLoad);
         window.removeEventListener("touchstart", triggerLoad);

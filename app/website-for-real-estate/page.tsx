@@ -5,7 +5,7 @@ import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Real Estate Website Design & Property Lead SEO | Joy Digital",
+  title: "Real Estate Website Design",
   description: "Custom website design and SEO for real estate brokers and developers. Fast property listings, NRI buyer inquiry funnels, and local SEO.",
   keywords: [
     "Real Estate Website Development",

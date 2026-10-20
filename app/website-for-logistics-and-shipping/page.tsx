@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Logistics & Shipping Website Design | Joy Digital",
+  title: "Logistics Website Design & SEO",
   description: "Custom website design and SEO for freight forwarders and logistics companies. Cargo tracking integrations, freight rate calculators, and B2B leads.",
   alternates: {
     canonical: "https://www.joydigital.in/website-for-logistics-and-shipping",

@@ -13,14 +13,14 @@ export async function generateMetadata(): Promise<Metadata> {
   );
   return {
     ...seoData.metadata,
-    title: "Blazing-Fast Static Website Development | Next.js & React Solutions - Joy Digital",
+    title: "Static Website Development",
     description: "Build high-speed, secure, and cost-effective static websites with sub-second load times, 100% serverless security, and zero database maintenance.",
     alternates: {
       canonical: "https://www.joydigital.in/static-website-development",
     },
     openGraph: {
       ...seoData.metadata.openGraph,
-      title: "Blazing-Fast Static Website Development | Next.js & React Solutions - Joy Digital",
+      title: "Static Website Development | Joy Digital",
       description: "Build high-speed, secure, and cost-effective static websites with sub-second load times, 100% serverless security, and zero database maintenance.",
       url: "https://www.joydigital.in/static-website-development",
       images: [
@@ -34,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       ...seoData.metadata.twitter,
-      title: "Blazing-Fast Static Website Development | Next.js & React Solutions - Joy Digital",
+      title: "Static Website Development | Joy Digital",
       description: "Build high-speed, secure, and cost-effective static websites with sub-second load times, 100% serverless security, and zero database maintenance.",
       images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
     },

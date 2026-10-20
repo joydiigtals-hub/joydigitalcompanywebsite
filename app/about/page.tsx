@@ -12,7 +12,7 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 const Accordion = dynamic(() => import("@/components/ui/Accordion"));
 
 export const metadata: Metadata = {
-  title: "About Our Web Agency | Joy Digital",
+  title: "About Our Web Agency",
   description: "Learn about Joy Digital, a growth agency building custom Next.js websites, local SEO campaigns, and digital solutions for companies worldwide.",
   alternates: {
     canonical: "https://www.joydigital.in/about",

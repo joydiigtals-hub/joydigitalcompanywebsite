@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import ExportLeadForm from "@/components/ui/ExportLeadForm";
 
 export const metadata: Metadata = {
-  title: "B2B Export Web Development Services | Joy Digital",
+  title: "B2B Export Web Development",
   description: "Digital B2B portals and SEO for export-import houses. International buyer sourcing platforms, digital catalogs, and global trade lead engines.",
   keywords: [
     "B2B Export Web Development Services",

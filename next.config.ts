@@ -149,37 +149,7 @@ const nextConfig: NextConfig = {
         destination: "/web-design-services",
         permanent: true,
       },
-      {
-        source: "/nocev/:path*",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/fr",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/fr/:path*",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/pages",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/pages/:path*",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/kr/:path*",
-        destination: "/",
-        permanent: true,
-      },
-    ];
+          ];
   },
   async headers() {
     return [

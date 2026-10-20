@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Premium Luxury Brand Website Design Services | Joy Digital",
+  title: "Luxury Brand Website Design",
   description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
   alternates: {
     canonical: "https://www.joydigital.in/website-for-luxury-brands",
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.joydigital.in/website-for-luxury-brands",
-    title: "Premium Luxury Brand Website Design Services | Joy Digital",
+    title: "Luxury Brand Website Design | Joy Digital",
     description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
     images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Luxury Brand Website Design Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Premium Luxury Brand Website Design Services | Joy Digital",
+    title: "Luxury Brand Website Design | Joy Digital",
     description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
     images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },

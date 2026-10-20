@@ -7,7 +7,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Website Disclaimer & Terms | Joy Digital",
+  title: "Website Disclaimer",
   description: "Read the official website disclaimer, legal notices, and limitation of liability policy for Joy Digital web design & digital marketing services.",
   alternates: {
     canonical: "https://www.joydigital.in/disclaimer",
@@ -26,7 +26,7 @@ export default function DisclaimerPage() {
   const canonicalUrl = "https://www.joydigital.in/disclaimer";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
-    title: "Website Disclaimer & Terms | Joy Digital",
+    title: "Website Disclaimer | Joy Digital",
     description: "Read the official website disclaimer, legal notices, and limitation of liability policy for Joy Digital web design & digital marketing services.",
     breadcrumbs: [
       { name: "Home", item: "https://www.joydigital.in" },

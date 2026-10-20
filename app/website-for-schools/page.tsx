@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "School Website Design & Development Services | Joy Digital",
+  title: "School Website Design & Dev",
   description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
   alternates: {
     canonical: "https://www.joydigital.in/website-for-schools",
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.joydigital.in/website-for-schools",
-    title: "School Website Design & Development Services | Joy Digital",
+    title: "School Website Design & Dev | Joy Digital",
     description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
     images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "School Website Design Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "School Website Design & Development Services | Joy Digital",
+    title: "School Website Design & Dev | Joy Digital",
     description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
     images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },

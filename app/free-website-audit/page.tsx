@@ -8,7 +8,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Claim Free Website Audit & SEO Check | Joy Digital",
+  title: "Free Website & SEO Audit",
   description: "Claim your free website audit report from Joy Digital. Discover page speed bottlenecks, mobile layout errors, and SEO ranking opportunities.",
   alternates: {
     canonical: "https://www.joydigital.in/free-website-audit",
@@ -42,7 +42,7 @@ export default function FreeWebsiteAuditPage() {
   const canonicalUrl = "https://www.joydigital.in/free-website-audit";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
-    title: "Claim Free Website Audit & SEO Check | Joy Digital",
+    title: "Free Website & SEO Audit | Joy Digital",
     description: "Claim your free website audit report from Joy Digital. Discover page speed bottlenecks, mobile layout errors, and SEO ranking opportunities.",
     breadcrumbs: [
       { name: "Home", item: "https://www.joydigital.in" },

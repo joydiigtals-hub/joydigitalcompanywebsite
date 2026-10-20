@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Manufacturing Website Design & B2B SEO | Joy Digital",
+  title: "Manufacturing Website Design",
   description: "B2B manufacturing website design and SEO. Digital machinery catalogs, instant RFQ inquiry engines, and international buyer lead generation.",
   alternates: {
     canonical: "https://www.joydigital.in/website-for-manufacturing-companies",

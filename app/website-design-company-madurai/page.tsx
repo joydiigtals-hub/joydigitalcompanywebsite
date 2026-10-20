@@ -3,20 +3,20 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Website Design Company in Madurai | UI/UX & Web Designers",
+  title: "Website Design Company Madurai",
   description: "Custom website design company in Madurai. We craft responsive, fast Next.js UI/UX designs, landing pages, and branding for growing local businesses.",
   alternates: {
     canonical: "https://www.joydigital.in/website-design-company-madurai",
   },
   openGraph: {
-    title: "Website Design Company in Madurai | UI/UX & Web Designers",
+    title: "Website Design Company Madurai | Joy Digital",
     description: "Custom website design company in Madurai. We craft responsive, fast Next.js UI/UX designs, landing pages, and branding for growing local businesses.",
     url: "https://www.joydigital.in/website-design-company-madurai",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Design Company in Madurai | UI/UX & Web Designers",
+    title: "Website Design Company Madurai | Joy Digital",
     description: "Custom website design company in Madurai. We craft responsive, fast Next.js UI/UX designs, landing pages, and branding for growing local businesses.",
   }
 };
@@ -131,7 +131,7 @@ export default function WebDesignMadurai() {
           description: "We perform speed checks, register domains, and submit sitemaps to Google Console.",
         },
       ]}
-      pricingTitle="Flat-Rate Development Packages"
+      pricingTitle="Flat-Rate Web Design & Layout Packages"
       pricingSubtitle="Clear milestone-based pricing with zero hidden monthly developer fees."
       pricingTiers={[
         {

@@ -3,20 +3,20 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Website Development Company in Madurai | Custom Web Design",
+  title: "Web Development Company Madurai",
   description: "Looking for the best website development company in Madurai? We code fast, mobile-friendly Next.js and React websites for local startups and growing brands.",
   alternates: {
     canonical: "https://www.joydigital.in/website-development-company-madurai",
   },
   openGraph: {
-    title: "Website Development Company in Madurai | Custom Web Design",
+    title: "Web Development Company Madurai | Joy Digital",
     description: "Looking for the best website development company in Madurai? We code fast, mobile-friendly Next.js and React websites for local startups and growing brands.",
     url: "https://www.joydigital.in/website-development-company-madurai",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development Company in Madurai | Custom Web Design",
+    title: "Web Development Company Madurai | Joy Digital",
     description: "Looking for the best website development company in Madurai? We code fast, mobile-friendly Next.js and React websites for local startups and growing brands.",
   }
 };
@@ -57,7 +57,7 @@ export default function WebDevMadurai() {
       heroSubtitle="Get dynamic, mobile-friendly React and Next.js website assets. As a premium website development company in Madurai, we build fast corporate portfolios that convert visitors into active customers."
       leadSource="Website Development Madurai Landing Page"
       canonicalUrl="https://www.joydigital.in/website-development-company-madurai"
-      overviewTitle="High-Performance Website Design & Development in Madurai"
+      overviewTitle="High-Performance React & Next.js Web Development in Madurai"
       overviewContent={
         <div className="space-y-6 text-justify">
           <p>

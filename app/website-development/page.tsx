@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Custom Next.js Development | High-Performance SaaS Apps",
+  title: "Custom Next.js Web Development",
   description: "Replace legacy web bloat with scalable, serverless Next.js architecture engineered for maximum conversions. Ship enterprise code faster. Audit your site today.",
   keywords: [
     "Web Development Services",

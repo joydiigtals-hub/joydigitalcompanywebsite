@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "#1 SEO Agency in Chennai | Get Free SEO Audit & More Leads",
+  title: "SEO Services Agency Chennai",
   description: "Boost your business search rankings with expert SEO services in Chennai. Get sub-second speed, technical SEO & local pack optimization. Call us today!",
   keywords: [
     "seo services in chennai",
@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     canonical: "https://www.joydigital.in/seo-services-chennai",
   },
   openGraph: {
-    title: "#1 SEO Agency in Chennai | Get Free SEO Audit & More Leads",
+    title: "SEO Services Agency Chennai | Joy Digital",
     description: "Boost your business search rankings with expert SEO services in Chennai. Get sub-second speed, technical SEO & local pack optimization. Call us today!",
     url: "https://www.joydigital.in/seo-services-chennai",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "#1 SEO Agency in Chennai | Get Free SEO Audit & More Leads",
+    title: "SEO Services Agency Chennai | Joy Digital",
     description: "Boost your business search rankings with expert SEO services in Chennai. Get sub-second speed, technical SEO & local pack optimization. Call us today!",
   }
 };

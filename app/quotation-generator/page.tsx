@@ -10,7 +10,7 @@ export default function QuotationGeneratorPage() {
   const canonicalUrl = "https://www.joydigital.in/quotation-generator";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
-    title: "Free Quotation Generator Online | Joy Digital",
+    title: "Free Quotation Generator",
     description: "Create professional business price quotes and estimates online for free. Download PDF quotations instantly with company branding and itemized costs.",
     breadcrumbs: [
       { name: "Home", item: "https://www.joydigital.in" },

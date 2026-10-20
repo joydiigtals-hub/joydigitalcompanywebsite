@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Agency in Chennai | Joy Digital",
+  title: "Digital Marketing Agency Chennai",
   description: "Joy Digital is a result-driven digital marketing agency in Chennai. We offer local SEO, social media marketing, Google Ads, and conversion-optimized websites.",
   alternates: {
     canonical: "https://www.joydigital.in/digital-marketing-agency-in-chennai",
@@ -200,9 +200,9 @@ export default function DigitalMarketingChennai() {
       ]}
       schemaMarkup={pageSchema}
       crossLinks={[
-        { href: "/website-design-company-in-chennai", label: "Web Design Chennai" },
+        { href: "/website-development-company-chennai", label: "Web Design Chennai" },
         { href: "/website-development-company-chennai", label: "website development in Chennai" },
-        { href: "/seo-services-in-chennai", label: "SEO Services Chennai" },
+        { href: "/seo-services-chennai", label: "SEO Services Chennai" },
       ]}
     />
   );

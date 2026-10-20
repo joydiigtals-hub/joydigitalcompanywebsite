@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import LocalSeoLeadForm from "@/components/ui/LocalSeoLeadForm";
 
 export const metadata: Metadata = {
-  title: "Local SEO Services & GBP Optimization | Joy Digital",
+  title: "Local SEO Services & GBP",
   description: "Enterprise Google Business Profile management and local SEO services. Dominate Google Maps 3-Pack rankings and acquire local customer calls.",
   keywords: [
     "Multi-Location Local SEO Services",

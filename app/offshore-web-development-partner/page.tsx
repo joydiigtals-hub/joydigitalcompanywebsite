@@ -9,7 +9,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Offshore Next.js Development Partner | Joy Digital",
+  title: "Offshore Next.js Partner",
   description: "Scale agency margins with a white-label Next.js & React partner in India. 100% NDA protected, EST/GMT time sync, and 95+ PageSpeed guaranteed.",
   keywords: [
     "offshore nextjs development agency",
@@ -34,7 +34,7 @@ export default function OffshoreWebDevelopmentPartnerPage() {
   const canonicalUrl = "https://www.joydigital.in/offshore-web-development-partner";
   const pageGraphSchema = buildPageGraphSchema({
     url: canonicalUrl,
-    title: "Offshore Next.js Development Partner | Joy Digital",
+    title: "Offshore Next.js Partner | Joy Digital",
     description: "White-label Next.js, React, and Technical SEO engineering partner for digital agencies and SMBs in the US, UK, UAE, and APAC.",
     breadcrumbs: [
       { name: "Home", item: "https://www.joydigital.in" },

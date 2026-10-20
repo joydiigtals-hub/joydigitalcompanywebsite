@@ -5,7 +5,7 @@ import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Local SEO & Website Design for Pest Control | Joy Digital",
+  title: "Pest Control Website Design",
   description: "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
   alternates: {
     canonical: "https://www.joydigital.in/website-for-pest-control",
@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.joydigital.in/website-for-pest-control",
-    title: "Local SEO & Website Design for Pest Control | Joy Digital",
+    title: "Pest Control Website Design | Joy Digital",
     description: "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
     images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Pest Control Website Design Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Local SEO & Website Design for Pest Control | Joy Digital",
+    title: "Pest Control Website Design | Joy Digital",
     description: "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
     images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
