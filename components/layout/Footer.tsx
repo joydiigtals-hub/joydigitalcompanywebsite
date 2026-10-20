@@ -42,11 +42,11 @@ export default function Footer() {
         <div className="flex flex-col gap-5 col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-1">
           <Link href={getRegionalHref("/")} title="Joy Digital Home" className="inline-block flex-shrink-0">
             <Image
-              src="/assets/images/logo.svg"
+              src="/assets/images/logo.webp"
               alt="Joy Digital - Web Design & Digital Marketing Agency Logo"
               title="Joy Digital Logo"
-              width={200}
-              height={89}
+              width={240}
+              height={77}
               className="h-12 md:h-14 w-auto object-contain"
             />
           </Link>
