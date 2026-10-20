@@ -2121,5 +2121,49 @@
     "status": "Active",
     "assigned_page_id": "page-landing-page-dev",
     "created_at": "2026-10-20T14:35:22.734Z"
+  },
+  {
+    "id": "kw-web-dev-chn-01",
+    "keyword": "website development company in chennai",
+    "type": "Primary",
+    "search_intent": "Transactional",
+    "target_audience": "Chennai businesses, industrial manufacturers, retail and enterprise brands",
+    "notes": "Top transactional commercial keyword for web development agency searches in Chennai.",
+    "status": "Active",
+    "assigned_page_id": "page-web-dev-chennai",
+    "created_at": "2026-10-20T15:14:05.370Z"
+  },
+  {
+    "id": "kw-web-dev-chn-02",
+    "keyword": "best website development company in chennai",
+    "type": "Primary",
+    "search_intent": "Commercial",
+    "target_audience": "Founders, CTOs, and marketing leaders seeking the best web developers in Chennai",
+    "notes": "High commercial intent keyword for top-rated web development companies in Chennai.",
+    "status": "Active",
+    "assigned_page_id": "page-web-dev-chennai",
+    "created_at": "2026-10-20T15:14:05.394Z"
+  },
+  {
+    "id": "kw-web-dev-ind-01",
+    "keyword": "top website development company in india",
+    "type": "Primary",
+    "search_intent": "Commercial",
+    "target_audience": "Global brands, startups, and Indian enterprises looking for top web engineering in India",
+    "notes": "High authority nationwide query for top-tier Next.js and React web development companies.",
+    "status": "Active",
+    "assigned_page_id": "page-web-dev-services",
+    "created_at": "2026-10-20T15:14:05.394Z"
+  },
+  {
+    "id": "kw-web-dev-seo-01",
+    "keyword": "website development and seo service",
+    "type": "Primary",
+    "search_intent": "Transactional",
+    "target_audience": "Businesses looking for combined full-stack web development and organic search optimization",
+    "notes": "High intent dual service query for website development combined with SEO services.",
+    "status": "Active",
+    "assigned_page_id": "page-web-dev-services",
+    "created_at": "2026-10-20T15:14:05.394Z"
   }
 ]

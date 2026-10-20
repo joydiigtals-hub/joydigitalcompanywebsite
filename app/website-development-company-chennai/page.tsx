@@ -3,8 +3,16 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Web Development Company Chennai",
-  description: "Looking for a Next.js website development company in Chennai? We build fast React JS platforms and corporate websites that score 95+ on Core Web Vitals.",
+  title: "Website Development Company Chennai",
+  description: "Ranked among the best website development company in Chennai. We engineer fast Next.js platforms, SEO-friendly architectures, and high-converting web apps.",
+  keywords: [
+    "website development company in chennai",
+    "best website development company in chennai",
+    "top website development company in india",
+    "website development and seo service",
+    "Next.js web development company Chennai",
+    "custom web development Chennai"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-development-company-chennai",
   },

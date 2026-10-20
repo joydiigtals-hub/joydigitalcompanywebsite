@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   },
   description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, enterprise web architectures & SEO. Get your free audit today!",
   keywords: [
+    "website development company in chennai",
+    "best website development company in chennai",
+    "top website development company in india",
+    "website development and seo service",
     "Next.js development company",
     "custom web development",
     "website development",

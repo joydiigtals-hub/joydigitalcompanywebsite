@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   },
   description: "Joy Digital is a premier Digital Agency & Next.js Web Development company based in Chennai, India. We engineer sub-second web applications, custom software, SEO, and Generative Engine Optimization (GEO) for global brands.",
   keywords: [
+    "website development company in chennai",
+    "best website development company in chennai",
+    "top website development company in india",
+    "website development and seo service",
     "Next.js development company",
     "custom web development",
     "global B2B web agency",

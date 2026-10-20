@@ -973,5 +973,49 @@
       }
     ],
     "updated_at": "2026-10-20T14:35:52.524Z"
+  },
+  {
+    "id": "page-web-dev-chennai",
+    "path": "/website-development-company-chennai",
+    "category": "Core Service",
+    "title_template": "Website Development Company in Chennai | Best Web Agency",
+    "meta_description": "Ranked among the best website development company in Chennai. We deliver custom Next.js platforms, SEO-friendly architectures, and high-converting websites. Free audit!",
+    "h1": "Best Website Development Company in Chennai & Web Engineering Agency",
+    "h2_tags": [
+      "Next.js & React Web App Development for Chennai Businesses",
+      "Why Joy Digital Is Ranked Among the Best Website Development Companies in Chennai",
+      "Integrated Website Development and SEO Service for Maximum Organic ROI"
+    ],
+    "h3_tags": [
+      "Sub-Second Mobile PageSpeed & 95+ Core Web Vitals",
+      "Direct WhatsApp & CRM Conversion Routing",
+      "Enterprise Security Without Monolithic Plugin Bloat"
+    ],
+    "primary_keyword_id": "kw-web-dev-chn-01",
+    "secondary_keyword_ids": [
+      "kw-web-dev-chn-02",
+      "kw-web-dev-ind-01",
+      "kw-web-dev-seo-01"
+    ],
+    "longtail_keyword_ids": [
+      "kw-seo-chennai-01"
+    ],
+    "faq_schema": [
+      {
+        "question": "Why is Joy Digital considered the best website development company in Chennai?",
+        "answer": "Unlike agencies using slow, outdated WordPress templates, Joy Digital builds custom Next.js web applications delivering sub-second load speeds, 95+ Core Web Vitals, and direct API-driven conversion funnels with 100% code ownership."
+      },
+      {
+        "question": "Do you offer combined website development and SEO service?",
+        "answer": "Yes! Every website we engineer includes technical SEO fundamentals built-in from day one: server-rendered HTML for Googlebot, structured JSON-LD schemas, automated XML sitemaps, and optimized Core Web Vitals."
+      }
+    ],
+    "alt_texts": [
+      {
+        "image_url": "/assets/images/hero-banner.webp",
+        "alt_text": "Best website development company in Chennai performance benchmarks"
+      }
+    ],
+    "updated_at": "2026-10-20T15:14:05.416Z"
   }
 ]
