@@ -9,8 +9,17 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "WordPress to Next.js Migration",
-  description: "Migrate legacy WordPress to high-speed Next.js. Retain 100% SEO rankings, eliminate plugin security vulnerabilities, and boost Core Web Vitals. Free audit.",
+  title: "WordPress to Next.js Migration Agency",
+  description: "Migrate legacy WordPress to high-speed Next.js. Master headless WordPress Next.js architecture and headless CMS SEO with 100% Core Web Vitals and zero ranking loss.",
+  keywords: [
+    "headless wordpress nextjs",
+    "headless cms seo",
+    "wordpress to nextjs migration",
+    "headless wordpress agency",
+    "nextjs headless cms",
+    "migrate wordpress to react",
+    "decouple wordpress nextjs"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/wordpress-to-nextjs-migration",
   },
@@ -24,6 +33,10 @@ export const metadata: Metadata = {
 };
 
 const FAQS = [
+  {
+    question: "How does headless WordPress Next.js improve headless CMS SEO rankings?",
+    answer: "Headless WordPress paired with Next.js App Router delivers server-side pre-rendered HTML and automated Incremental Static Regeneration (ISR). Search engine crawlers immediately index clean, lightweight static content with sub-100ms TTFB and perfect 100/100 Core Web Vitals, outranking bloated PHP-based WordPress sites.",
+  },
   {
     question: "Will migrating from WordPress to Next.js hurt my current Google SEO rankings?",
     answer: "No. In fact, most migrations see an organic search traffic boost. We perform a rigorous 1:1 URL mapping audit, implement exact 301 server redirects, replicate existing meta titles and descriptions, and maintain identical internal link structures while providing sub-second load speeds that drastically improve Google Core Web Vitals.",
@@ -251,7 +264,7 @@ export default function WordPressToNextjsMigrationPage() {
                   <span className="w-10 h-10 rounded-xl bg-[#7C3AED]/10 text-[#7C3AED] font-black flex items-center justify-center mb-4">02</span>
                   <h3 className="text-sm font-bold text-slate-900 mb-2">2. CMS Architecture</h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    Choose between Headless WordPress (keep WP dashboard) or modern headless CMS solutions like Sanity, Strapi, or Git Markdown.
+                    Choose between a decoupled Headless WordPress Next.js architecture (keep WP dashboard) or modern headless CMS solutions like Sanity and Strapi to maximize headless CMS SEO.
                   </p>
                 </div>
               </div>

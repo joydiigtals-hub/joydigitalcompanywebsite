@@ -841,5 +841,137 @@
     ],
     "alt_texts": [],
     "updated_at": "2026-10-13T20:55:00.000Z"
+  },
+  {
+    "id": "page-travel-website-dev",
+    "path": "/travel-website-development",
+    "category": "Core Service",
+    "title_template": "Travel Agency Website Development & Booking Portals",
+    "meta_description": "Best website for travel agency growth. Custom Next.js booking engines, instant itinerary loading, multi-currency payments, and high-converting travel agency website builder solutions.",
+    "h1": "Best Website for Travel Agency Growth & Online Booking Portals",
+    "h2_tags": [
+      "Why Custom Next.js Outperforms Any Travel Agency Website Builder",
+      "Dynamic Tour Itinerary Showcases & Instant Mobile Loading",
+      "Direct WhatsApp Booking & Multi-Currency Payment Gateways"
+    ],
+    "h3_tags": [
+      "Interactive Custom Trip Planners",
+      "Brochure & PDF Itinerary Download Leads",
+      "Automated Multi-Language Localization"
+    ],
+    "primary_keyword_id": "kw-travel-best-agency-01",
+    "secondary_keyword_ids": [
+      "kw-travel-agency-builder-02",
+      "kw-ind-travel-01",
+      "kw-ind-travel-02"
+    ],
+    "longtail_keyword_ids": [
+      "kw-ind-travel-05",
+      "kw-ind-travel-06",
+      "kw-ind-travel-07"
+    ],
+    "faq_schema": [
+      {
+        "question": "Why is custom Next.js the best website for travel agency businesses compared to generic builders?",
+        "answer": "Generic travel agency website builders use bloated plugins, slow monthly templates, and rigid layouts that fail mobile Core Web Vitals. Our custom Next.js travel websites load in under 1.2s on mobile networks worldwide, integrate seamlessly with WhatsApp and Stripe, and give you 100% code ownership with zero monthly builder lock-in."
+      },
+      {
+        "question": "Can you integrate custom itinerary builders and direct booking engines?",
+        "answer": "Yes! We build bespoke day-by-day itinerary displays, automated PDF brochure downloads, multi-currency pricing calculators, and direct WhatsApp inquiry systems."
+      }
+    ],
+    "alt_texts": [
+      {
+        "image_url": "/assets/images/hero-banner.webp",
+        "alt_text": "Best website for travel agency dashboard with instant booking and itinerary builder."
+      }
+    ],
+    "updated_at": "2026-10-20T14:35:52.512Z"
+  },
+  {
+    "id": "page-wp-to-nextjs",
+    "path": "/wordpress-to-nextjs-migration",
+    "category": "Core Service",
+    "title_template": "WordPress to Next.js Migration Agency",
+    "meta_description": "Migrate legacy WordPress to high-speed Next.js. Master headless WordPress Next.js architecture and headless CMS SEO with 100% Core Web Vitals and zero ranking loss.",
+    "h1": "Migrate WordPress to Next.js for Headless CMS SEO & 95+ PageSpeed",
+    "h2_tags": [
+      "Headless WordPress Next.js Architecture",
+      "Headless CMS SEO Advantages: Pre-rendered HTML & Sub-Second LCP",
+      "100% SEO Safety: 1:1 URL Mapping & 301 Redirect Protection"
+    ],
+    "h3_tags": [
+      "Decoupled WP GraphQL and REST APIs",
+      "Zero Static Attack Surface & No Plugin Hacks",
+      "Automated Incremental Static Regeneration (ISR)"
+    ],
+    "primary_keyword_id": "kw-headless-wp-nextjs-02",
+    "secondary_keyword_ids": [
+      "kw-headless-cms-seo-01",
+      "kw-custom-web-01"
+    ],
+    "longtail_keyword_ids": [
+      "kw-custom-web-06"
+    ],
+    "faq_schema": [
+      {
+        "question": "How does headless WordPress Next.js improve headless CMS SEO?",
+        "answer": "Headless WordPress paired with Next.js App Router delivers server-side pre-rendered HTML and automated ISR. Googlebot immediately indexes clean, lightweight static content with sub-100ms TTFB and perfect 100/100 Core Web Vitals, outranking bloated PHP-based WordPress sites."
+      },
+      {
+        "question": "Will our content authors still be able to use the WordPress Gutenberg dashboard?",
+        "answer": "Yes. In a headless WordPress Next.js architecture, your content editors keep writing in WordPress as usual. Next.js fetches data via WPGraphQL and instantly revalidates the live website."
+      }
+    ],
+    "alt_texts": [
+      {
+        "image_url": "/assets/images/hero-banner.webp",
+        "alt_text": "Headless WordPress Next.js migration benchmark and headless CMS SEO performance."
+      }
+    ],
+    "updated_at": "2026-10-20T14:35:52.524Z"
+  },
+  {
+    "id": "page-landing-page-dev",
+    "path": "/landing-page-development",
+    "category": "Core Service",
+    "title_template": "High Converting Landing Page for Google Ads & PPC",
+    "meta_description": "Maximize paid ad ROAS with a high converting landing page built for Google Ads & Meta PPC. Sub-second Next.js speed boosts Quality Score and lowers CPC.",
+    "h1": "High Converting Landing Page Development for Google Ads & PPC Campaigns",
+    "h2_tags": [
+      "High Converting Landing Page Architecture & Distraction-Free CRO Funnels",
+      "How a Sub-Second Landing Page for Google Ads Lowers CPC & Boosts Quality Score",
+      "Dual Conversion Channels: Sticky WhatsApp & Frictionless Form Submissions"
+    ],
+    "h3_tags": [
+      "Sub-800ms Mobile 4G Load Speeds",
+      "A/B Testing Ready Modular Components",
+      "Verified Social Proof & Trust Badges"
+    ],
+    "primary_keyword_id": "kw-high-converting-landing-01",
+    "secondary_keyword_ids": [
+      "kw-landing-page-google-ads-02",
+      "kw-custom-web-01"
+    ],
+    "longtail_keyword_ids": [
+      "kw-custom-web-07"
+    ],
+    "faq_schema": [
+      {
+        "question": "How does a fast landing page for Google Ads lower ad costs?",
+        "answer": "Google Ads calculates Quality Score largely based on landing page experience and mobile loading speed. A sub-second Next.js landing page achieves a 10/10 Landing Page Experience rating, directly lowering your Cost-Per-Click (CPC) and winning higher ad positions for less budget."
+      },
+      {
+        "question": "What makes a high converting landing page different from a standard web page?",
+        "answer": "Standard web pages have header links, footers, blogs, and multiple exits. A high converting landing page removes all exit distractions and focuses 100% of the visitor attention on a single compelling call-to-action (CTA)."
+      }
+    ],
+    "alt_texts": [
+      {
+        "image_url": "/assets/images/hero-banner.webp",
+        "alt_text": "High converting landing page for Google ads conversion rate optimization dashboard."
+      }
+    ],
+    "updated_at": "2026-10-20T14:35:52.524Z"
   }
 ]

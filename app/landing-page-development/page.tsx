@@ -6,10 +6,21 @@ import { generatePageSeo } from "@/lib/seoEngine";
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await generatePageSeo(
     "/landing-page-development",
-    "High-Converting Landing Page Design & Dev | Joy Digital",
-    "Maximize ad ROI with sub-second, custom landing pages built for Google & Meta PPC campaigns. High-converting UX with fast turnaround. Request a quote!"
+    "High Converting Landing Page for Google Ads & PPC | Joy Digital",
+    "Maximize ad ROAS with a high converting landing page built for Google Ads & Meta PPC. Sub-second Next.js speed boosts Quality Score and lowers CPC. Request a quote!"
   );
-  return seoData.metadata;
+  return {
+    ...seoData.metadata,
+    keywords: [
+      "high converting landing page",
+      "landing page for google ads",
+      "google ads landing page design",
+      "PPC landing page development",
+      "conversion rate optimization",
+      "high converting landing page design",
+      "Next.js landing page"
+    ]
+  };
 }
 
 export default async function LandingPageDevPage() {
@@ -37,6 +48,10 @@ export default async function LandingPageDevPage() {
             <p>
               Joy Digital specializes in high-converting <strong>landing page website design</strong>, standalone PPC landing pages, and lead acquisition funnels built with Next.js and Tailwind CSS. Featuring sub-second loading speeds, prefilled lead forms, sticky WhatsApp conversion buttons, and verified social proof sections, our landing pages maximize your Return on Ad Spend (ROAS).
             </p>
+          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">High Converting Landing Page for Google Ads: Lower CPC &amp; Higher Quality Score</h3>
+          <p>
+            Running Google Ads campaigns to a slow or cluttered page drains ad budget with high Cost-Per-Click (CPC) and low Quality Scores. A custom <strong>high converting landing page</strong> engineered specifically as a <strong>landing page for google ads</strong> achieves a 10/10 Landing Page Experience rating from Google&apos;s algorithm. Sub-800ms load speeds directly lower your required bid while converting up to 3x more paid clicks into qualified sales enquiries.
+          </p>
           </div>
         }
         benefitsTitle="Why Choose High-Converting Custom Landing Pages?"

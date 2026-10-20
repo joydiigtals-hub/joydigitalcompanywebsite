@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     "Next.js Development Company",
     "React JS Development Company",
     "Headless Web Development",
+    "headless cms seo",
+    "headless wordpress nextjs",
     "Hire Next.js Developers",
     "Custom React Web Development",
     "Serverless Web Architecture"
