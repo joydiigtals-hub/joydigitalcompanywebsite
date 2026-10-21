@@ -13,6 +13,7 @@ interface BlogPost {
   category: string;
   author: string;
   image?: string;
+  tags?: string[];
 }
 
 interface BlogListingContainerProps {
@@ -30,6 +31,19 @@ export default function BlogListingContainer({ posts }: BlogListingContainerProp
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     setPrefersReducedMotion(mediaQuery.matches);
+
+    // Support query param filter from tag links (e.g. /blog?search=Next.js or /blog?tag=Next.js)
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const queryParam = params.get("search") || params.get("tag");
+      const categoryParam = params.get("category");
+      if (queryParam) {
+        setSearchQuery(queryParam);
+      }
+      if (categoryParam && categories.includes(categoryParam)) {
+        setActiveCategory(categoryParam);
+      }
+    }
   }, []);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -39,13 +53,16 @@ export default function BlogListingContainer({ posts }: BlogListingContainerProp
     setCurrentPage(1);
   }, [activeCategory, searchQuery]);
 
-  // Filter posts based on category and search text
+  // Filter posts based on category, search text, and tags
   const filteredPosts = posts.filter((post) => {
     const matchesCategory = activeCategory === "All" || post.category === activeCategory;
+    const lowerQuery = searchQuery.toLowerCase().trim();
     const matchesSearch =
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.category.toLowerCase().includes(searchQuery.toLowerCase());
+      !lowerQuery ||
+      post.title.toLowerCase().includes(lowerQuery) ||
+      post.description.toLowerCase().includes(lowerQuery) ||
+      post.category.toLowerCase().includes(lowerQuery) ||
+      Boolean(post.tags && post.tags.some((t) => t.toLowerCase().includes(lowerQuery)));
     return matchesCategory && matchesSearch;
   });
 
@@ -148,6 +165,26 @@ export default function BlogListingContainer({ posts }: BlogListingContainerProp
                 );
               })}
             </div>
+
+            {/* Active Topic / Keyword Filter Indicator */}
+            {searchQuery && (
+              <div className="flex items-center justify-center gap-2 animate-fade-in select-none">
+                <span className="text-[11px] font-semibold text-slate-500">
+                  Filtering by topic:
+                </span>
+                <span className="inline-flex items-center gap-1.5 text-xs font-extrabold bg-primary/10 text-primary border border-primary/25 px-3 py-1 rounded-full shadow-2xs">
+                  #{searchQuery}
+                  <button
+                    onClick={() => setSearchQuery("")}
+                    className="hover:text-slate-900 cursor-pointer ml-1 text-slate-400 hover:text-slate-700 transition-colors"
+                    title="Clear filter"
+                    aria-label="Clear filter"
+                  >
+                    <i className="fa-solid fa-xmark text-[10px]" />
+                  </button>
+                </span>
+              </div>
+            )}
             
           </div>
         </div>
@@ -222,6 +259,30 @@ export default function BlogListingContainer({ posts }: BlogListingContainerProp
                             <p className="text-[11px] text-[#64748B] leading-relaxed line-clamp-3 font-semibold">
                               {post.description}
                             </p>
+
+                            {/* Topic Badges on Card */}
+                            {post.tags && post.tags.length > 0 && (
+                              <div className="flex flex-wrap items-center gap-1.5 mt-3 pt-3 border-t border-slate-100 select-none">
+                                {post.tags.slice(0, 2).map((tag, tIdx) => (
+                                  <span
+                                    key={tIdx}
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      e.stopPropagation();
+                                      setSearchQuery(tag);
+                                    }}
+                                    className="text-[9px] font-bold text-slate-600 bg-slate-100 hover:bg-primary/10 hover:text-primary border border-slate-200/60 px-2 py-0.5 rounded-full cursor-pointer transition-colors"
+                                  >
+                                    #{tag}
+                                  </span>
+                                ))}
+                                {post.tags.length > 2 && (
+                                  <span className="text-[9px] font-bold text-slate-400">
+                                    +{post.tags.length - 2}
+                                  </span>
+                                )}
+                              </div>
+                            )}
                           </div>
                         </div>
 

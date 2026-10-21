@@ -181,6 +181,17 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
           <span className="bg-primary/10 text-primary border border-primary-light/20 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
             {post.category}
           </span>
+
+          {post.tags && post.tags.slice(0, 2).map((tag, idx) => (
+            <Link
+              key={idx}
+              href={`/blog?search=${encodeURIComponent(tag)}`}
+              className="hidden sm:inline-flex items-center gap-1 bg-slate-100 hover:bg-primary/10 text-slate-650 hover:text-primary border border-slate-200/80 hover:border-primary/30 text-[10px] font-bold px-2.5 py-0.5 rounded-full transition-colors"
+            >
+              <span className="text-primary font-black">#</span>
+              <span>{tag}</span>
+            </Link>
+          ))}
           
           <span className="text-[11px] text-[#64748B] font-semibold flex items-center gap-1">
             <i className="fa-regular fa-calendar text-[10px]" />
@@ -303,6 +314,29 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
                        prose-td:border prose-td:border-[#E2E8F0] prose-td:p-3.5 prose-td:text-xs prose-td:font-semibold"
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
+
+          {/* Clean Topic Badges (Modern Semantic Tags) */}
+          {post.tags && post.tags.length > 0 && (
+            <div className="mt-10 pt-6 border-t border-slate-200 select-none">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+                <span className="text-xs font-black uppercase tracking-wider text-slate-500 flex items-center gap-1.5 shrink-0">
+                  <i className="fa-solid fa-tags text-primary text-xs" /> Related Topics:
+                </span>
+                <div className="flex flex-wrap items-center gap-2">
+                  {post.tags.slice(0, 6).map((tag, idx) => (
+                    <Link
+                      key={idx}
+                      href={`/blog?search=${encodeURIComponent(tag)}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-1.5 rounded-full bg-slate-50 hover:bg-primary/10 text-slate-700 hover:text-primary border border-slate-200 hover:border-primary/30 transition-all duration-200 shadow-2xs hover:scale-[1.02]"
+                    >
+                      <span className="text-primary font-black">#</span>
+                      <span>{tag}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Internal Links Box (Recommended Related Services & Resources) */}
           {post.internalLinks && post.internalLinks.length > 0 && (
