@@ -11,6 +11,7 @@ interface LeadFormProps {
   subtitle?: string;
   ctaText?: string;
   source?: string;
+  simplified?: boolean;
 }
 
 const COUNTRY_CODES = [
@@ -29,6 +30,7 @@ export default function LeadForm({
   subtitle = "Fill in your details below. Our experts will get back to you within 24 hours.",
   ctaText = "Get My Free Proposal →",
   source = "General Lead Funnel",
+  simplified = false,
 }: LeadFormProps) {
   const pathname = usePathname();
   const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
@@ -260,6 +262,102 @@ export default function LeadForm({
             <input type="hidden" name="utm_source" value={formData.utm_source} />
           </div>
 
+{simplified ? (
+            <>
+              {/* Full Name */}
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="name" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
+                  Full Name <span className="text-error-red">*</span>
+                </label>
+                <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-xl border px-3.5 py-3 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 ${errors.name ? "border-[#ef4444]" : "border-[#E9E4F2]"}`}>
+                  <i className={`fa-solid fa-user text-[13px] shrink-0 ${errors.name ? "text-error-red" : "text-slate-400 group-focus-within:text-[#7C3AED]"}`} />
+                  <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400" />
+                </div>
+                {errors.name && <span className="text-[10px] font-semibold text-[#ef4444]">{errors.name}</span>}
+              </div>
+
+              {/* WhatsApp / Phone - Full Width Row */}
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="mobile" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider flex items-center justify-between">
+                  <span>WhatsApp / Phone <span className="text-slate-400 font-normal">(Instant Quote &amp; Demo)</span></span>
+                  <span className="text-[10px] text-emerald-600 font-bold flex items-center gap-1">
+                    <i className="fa-brands fa-whatsapp text-xs" /> WhatsApp Enabled
+                  </span>
+                </label>
+                <div className="flex gap-2 relative">
+                  <div className="relative shrink-0" ref={countryDropdownRef}>
+                    <button
+                      type="button"
+                      onClick={() => setIsCountryOpen(!isCountryOpen)}
+                      className="h-full px-3 py-2.5 bg-[#FAF9FF] rounded-xl border border-[#E9E4F2] hover:bg-white text-left flex items-center gap-1.5 outline-none font-semibold text-primary-dark transition-all focus:border-[#7C3AED] focus:bg-white focus:ring-4 focus:ring-[#7C3AED]/10 cursor-pointer shadow-sm"
+                    >
+                      <span className="text-base">{selectedCountry.flag}</span>
+                      <span className="text-xs font-bold text-slate-700">{selectedCountry.code}</span>
+                      <i className={`fa-solid fa-chevron-down text-[8px] text-slate-400 transition-transform ${isCountryOpen ? "rotate-180" : ""}`} />
+                    </button>
+
+                    {isCountryOpen && (
+                      <div className="absolute z-30 left-0 top-[108%] w-60 max-h-60 overflow-y-auto bg-white border border-[#E9E4F2] rounded-xl shadow-xl py-1" style={{ animation: "fadeInSlideDown 0.18s ease-out forwards" }}>
+                        <div className="p-2 border-b border-[#E9E4F2] bg-[#FAF9FF] sticky top-0 z-10">
+                          <input type="text" placeholder="Search country..." value={countrySearch} onChange={(e) => setCountrySearch(e.target.value)} onClick={(e) => e.stopPropagation()} className="w-full text-xs px-2.5 py-1.5 border border-[#E9E4F2] rounded-lg focus:border-[#7C3AED] outline-none" />
+                        </div>
+                        {filteredCountries.map((c) => (
+                          <button
+                            key={`${c.name}-${c.code}`}
+                            type="button"
+                            onClick={() => { setSelectedCountryCode(c.code); setIsCountryOpen(false); setCountrySearch(""); }}
+                            className="w-full flex justify-between px-4 py-2 text-left text-xs hover:bg-[#FAF9FF] text-primary-dark"
+                          >
+                            <span className="flex items-center gap-2">
+                              <span className="text-base">{c.flag}</span>
+                              <span className="font-semibold">{c.name}</span>
+                            </span>
+                            <span className="text-slate-400 font-mono text-[11px]">{c.code}</span>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-xl border px-3.5 py-3 w-full group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 ${errors.mobile ? "border-[#ef4444]" : "border-[#E9E4F2]"}`}>
+                    <input
+                      type="tel"
+                      id="mobile"
+                      name="mobile"
+                      value={formData.mobile}
+                      onChange={handleChange}
+                      placeholder="e.g. 98765 43210"
+                      className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400"
+                    />
+                  </div>
+                </div>
+                {errors.mobile && <span className="text-[10px] font-semibold text-[#ef4444]">{errors.mobile}</span>}
+              </div>
+
+              {/* Work Email */}
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="email" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
+                  Work Email <span className="text-error-red">*</span>
+                </label>
+                <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-xl border px-3.5 py-3 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 ${errors.email ? "border-[#ef4444]" : "border-[#E9E4F2]"}`}>
+                  <i className={`fa-solid fa-envelope text-[13px] shrink-0 ${errors.email ? "text-error-red" : "text-slate-400 group-focus-within:text-[#7C3AED]"}`} />
+                  <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="john@travelagency.com" className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400" />
+                </div>
+                {errors.email && <span className="text-[10px] font-semibold text-[#ef4444]">{errors.email}</span>}
+              </div>
+
+              {/* Project Details */}
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="message" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
+                  Project Details <span className="text-slate-400 font-normal">(Destinations, Goals, or Timeline)</span>
+                </label>
+                <div className="bg-[#FAF9FF] rounded-xl border border-[#E9E4F2] p-3.5 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10">
+                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={2} placeholder="Tell us about your tour agency goals, required features, or current challenges..." className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400 resize-none" />
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
           <div className={`grid grid-cols-1 ${layout === "horizontal" ? "md:grid-cols-2" : ""} gap-4`}>
             {/* Name */}
             <div className="flex flex-col gap-1.5">
@@ -318,7 +416,7 @@ export default function LeadForm({
                         <input type="text" placeholder="Search country..." value={countrySearch} onChange={(e) => setCountrySearch(e.target.value)} onClick={(e) => e.stopPropagation()} className="w-full text-xs px-2.5 py-1.5 border border-[#E9E4F2] rounded-lg focus:border-[#7C3AED] outline-none" />
                       </div>
                       {filteredCountries.map((c) => (
-                        <button key={c.code} type="button" onClick={() => { setSelectedCountryCode(c.code); setIsCountryOpen(false); setCountrySearch(""); }} className="w-full flex justify-between px-4 py-2.5 text-left text-xs hover:bg-[#FAF9FF] text-primary-dark">
+                        <button key={`${c.name}-${c.code}`} type="button" onClick={() => { setSelectedCountryCode(c.code); setIsCountryOpen(false); setCountrySearch(""); }} className="w-full flex justify-between px-4 py-2.5 text-left text-xs hover:bg-[#FAF9FF] text-primary-dark">
                           <span className="flex items-center gap-2"><span className="text-base">{c.flag}</span> <span className="font-semibold">{c.name}</span></span>
                           <span className="text-slate-400">{c.code}</span>
                         </button>
@@ -343,6 +441,8 @@ export default function LeadForm({
               <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={3} placeholder="Tell us about your goals, timeline, or current challenges..." className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400 resize-none" />
             </div>
           </div>
+            </>
+          )}
 
           <button
             type="submit"

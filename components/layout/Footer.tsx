@@ -442,6 +442,45 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Editorial SEO & Business Overview */}
+      <div className="max-w-7xl mx-auto px-6 pt-10 pb-4 text-xs sm:text-sm text-text-secondary leading-relaxed border-b border-[#E5E7EB]">
+        <p className="max-w-5xl">
+          At Joy Digital, we empower companies with result-driven{" "}
+          <Link href={getRegionalHref("/website-development")} className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+            business website development
+          </Link>{" "}
+          that turns visitors into active customers. From creative{" "}
+          <Link href="/web-design-services" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+            website design services
+          </Link>{" "}
+          and{" "}
+          <Link href="/dynamic-website-development" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+            dynamic website development
+          </Link>{" "}
+          to robust CMS-powered websites, we engineer high-speed, SEO-friendly websites tailored for{" "}
+          <Link href="/travel-website-development" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+            tourism
+          </Link>
+          ,{" "}
+          <Link href="/website-for-manufacturing-companies" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+            manufacturing
+          </Link>
+          ,{" "}
+          <Link href="/website-for-export-and-import" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+            export businesses
+          </Link>
+          , and other growing businesses. By uniting{" "}
+          <Link href="/custom-website-development" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+            custom website development
+          </Link>{" "}
+          with advanced{" "}
+          <Link href={getRegionalHref("/seo-services")} className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+            technical SEO services
+          </Link>{" "}
+          and continuous website optimization, we help forward-thinking brands across India and international markets elevate their search visibility, build an authoritative online presence, and achieve measurable long-term business growth.
+        </p>
+      </div>
+
       {/* AI Entity Data Block for AI Search Engines & Crawlers */}
       <div className="max-w-7xl mx-auto px-6 pt-6 text-xs text-text-secondary border-t border-[#E5E7EB] mt-6 leading-relaxed opacity-90">
         <div className="ai-entity-data space-y-2 text-slate-600">

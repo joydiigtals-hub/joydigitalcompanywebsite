@@ -69,6 +69,9 @@ interface ServicePageTemplateProps {
   customLeadForm?: React.ReactNode;
   heroActions?: React.ReactNode;
   customCtaBanner?: React.ReactNode;
+  belowHeroSection?: React.ReactNode;
+  simplifiedLeadForm?: boolean;
+  h1ClassName?: string;
 }
 
 export default function ServicePageTemplate({
@@ -96,6 +99,9 @@ export default function ServicePageTemplate({
   customLeadForm,
   heroActions,
   customCtaBanner,
+  belowHeroSection,
+  simplifiedLeadForm,
+  h1ClassName = "bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent",
 }: ServicePageTemplateProps) {
   const STANDARD_FAQS = [
     {
@@ -182,25 +188,36 @@ export default function ServicePageTemplate({
                   Premium Growth Service
                 </span>
               </div>
-              <h1 className="text-3xl md:text-5xl font-extrabold text-primary-dark tracking-tight mb-6 leading-tight">
-                {typeof heroTitle === "string" ? (
-                  heroTitle.includes(" for ") ? (
-                    <>
-                      {heroTitle.split(" for ")[0]} <span className="text-[#7C3AED]">for {heroTitle.split(" for ").slice(1).join(" for ")}</span>
-                    </>
-                  ) : heroTitle.includes(" in ") ? (
-                    <>
-                      {heroTitle.split(" in ")[0]} <span className="text-[#7C3AED]">in {heroTitle.split(" in ").slice(1).join(" in ")}</span>
-                    </>
-                  ) : heroTitle.includes(" & ") ? (
-                    <>
-                      {heroTitle.split(" & ")[0]} <span className="text-[#7C3AED]">&amp; {heroTitle.split(" & ").slice(1).join(" & ")}</span>
-                    </>
+              <h1 
+                className={`text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight ${h1ClassName}`}
+                style={
+                  h1ClassName.includes("bg-clip-text")
+                    ? { WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }
+                    : undefined
+                }
+              >
+                {h1ClassName.includes("bg-clip-text") ? (
+                  heroTitle
+                ) : (
+                  typeof heroTitle === "string" ? (
+                    heroTitle.includes(" for ") ? (
+                      <>
+                        {heroTitle.split(" for ")[0]} <span className="text-[#7C3AED]">for {heroTitle.split(" for ").slice(1).join(" for ")}</span>
+                      </>
+                    ) : heroTitle.includes(" in ") ? (
+                      <>
+                        {heroTitle.split(" in ")[0]} <span className="text-[#7C3AED]">in {heroTitle.split(" in ").slice(1).join(" in ")}</span>
+                      </>
+                    ) : heroTitle.includes(" & ") ? (
+                      <>
+                        {heroTitle.split(" & ")[0]} <span className="text-[#7C3AED]">&amp; {heroTitle.split(" & ").slice(1).join(" & ")}</span>
+                      </>
+                    ) : (
+                      heroTitle
+                    )
                   ) : (
                     heroTitle
                   )
-                ) : (
-                  heroTitle
                 )}
               </h1>
               <p className="text-sm md:text-base text-text-secondary mb-8 max-w-xl leading-relaxed">
@@ -257,6 +274,7 @@ export default function ServicePageTemplate({
                   subtitle="Fill in the fields below, and our local experts will reach out to you."
                   ctaText={heroCtaText || "Get Free Quote"}
                   source={leadSource}
+                  simplified={simplifiedLeadForm}
                 />
               )}
             </div>
@@ -284,6 +302,9 @@ export default function ServicePageTemplate({
             </div>
           </div>
         </section>
+
+        {/* Optional Below-Hero Section (e.g. Featured Case Study) */}
+        {belowHeroSection}
 
         {/* Overview Section */}
         <section id="service-overview" className="py-16 lg:py-24 bg-light-bg">

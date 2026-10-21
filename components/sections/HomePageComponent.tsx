@@ -8,6 +8,7 @@ import CountUpNumber from "@/components/ui/CountUpNumber";
 import TrackedLink from "@/components/ui/TrackedLink";
 import TrackedWaLink from "@/components/ui/TrackedWaLink";
 import Header from "@/components/layout/Header";
+import { Code2, SearchCheck, Target, Smartphone, PanelsTopLeft, Globe, Headset, ArrowRight } from "lucide-react";
 import ModernHeroSection from "@/components/sections/ModernHeroSection";
 
 const DigitalNetworkBackground = dynamic(() => import("@/components/ui/DigitalNetworkBackground"));
@@ -746,45 +747,209 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
           </div>
         </section>
 
-        {/* 7. WHY JOY DIGITAL (Soft background alternates) */}
-        <section className="py-20 bg-[#FAF9FF] border-b border-[#E9E4F2]">
+                {/* 7. WHY CHOOSE JOY DIGITAL SECTION */}
+        <section id="why-choose-us" className="py-20 lg:py-24 bg-[#FAF9FF] border-b border-[#E9E4F2] relative z-10">
           <div className="max-w-7xl mx-auto px-6">
+            
+            {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
-              <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">
-                Value System
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#7C3AED]/10 border border-[#7C3AED]/20 text-[#7C3AED] text-xs font-bold uppercase tracking-wider mb-4 shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-[#7C3AED] animate-pulse" />
+                The Joy Digital Advantage
               </span>
-              <h2 className="text-3xl font-extrabold text-[#1F1B2D] mb-4">
-                Our Business-Focused Approach
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1F1B2D] tracking-tight mb-4">
+                Why Choose Joy Digital?
               </h2>
-              <p className="text-xs sm:text-sm text-[#6B6478] font-semibold">
-                We combine search exposure parameters with premium frameworks to optimize performance metrics.
+              <p className="text-sm sm:text-base text-[#6B6478] leading-relaxed font-normal">
+                We build websites that combine thoughtful design, modern technology, and SEO-friendly foundations to help businesses strengthen their online presence, attract relevant visitors, and generate valuable customer enquiries.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-              {[
-                { title: "Business-Focused Solutions", desc: "We structure interfaces to capture user actions. Every button, input, and title fits your corporate goal." },
-                { title: "Modern Technology Stack", desc: "We build layouts in Next.js and React. Your visitors do not load slow database templates, securing under 1.5s load speeds." },
-                { title: "Mobile-First Infrastructure", desc: "Every layout matches responsive standards. Viewport pickers, click targets, and code scales for phone screens." },
-                { title: "SEO-Friendly Development", desc: "We embed structured schemas, configure canon mappings, map titles, and verify search sitemaps as standard features." },
-                { title: "Direct & Clear Communication", desc: "No complex administrative interfaces. Speak with the engineers creating your site to execute amendments quickly." },
-                { title: "Ongoing Technical Support", desc: "We handle SSL configurations, domain mappings, hosting setup, security checks, and speed reports post-launch." }
-              ].map((val, idx) => (
-                <div 
-                  key={idx} 
-                  style={{ transitionDelay: `${(idx % 3) * 80}ms` }}
-                  className="bg-white border border-[#E9E4F2] p-8 rounded-[24px] shadow-sm hover:shadow-md hover:border-[#7C3AED]/20 hover:-translate-y-1 transition-all duration-300 reveal-hidden"
-                >
-                  <h3 className="text-sm font-extrabold text-[#1F1B2D] mb-3 flex items-center gap-2">
-                    <span className="w-1.5 h-6 bg-[#7C3AED] rounded-full shrink-0" />
-                    {val.title}
+            {/* Seven Core Benefits (Balanced 4 + 3 Grid) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-7 text-left">
+              
+              {/* Benefit 1: Custom-Built Websites */}
+              <div 
+                style={{ transitionDelay: "0ms" }}
+                className="lg:col-span-3 bg-white border border-[#E9E4F2] p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-md hover:border-[#7C3AED]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#FAF9FF] border border-[#E9E4F2] text-[#7C3AED] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#7C3AED]/30 group-hover:bg-[#7C3AED]/10 transition-all duration-300">
+                    <Code2 className="w-5 h-5 text-[#7C3AED]" />
+                  </div>
+                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-2.5 tracking-tight group-hover:text-[#7C3AED] transition-colors">
+                    Custom-Built Websites
                   </h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed font-semibold">
-                    {val.desc}
+                  <p className="text-xs sm:text-sm text-[#6B6478] leading-relaxed font-normal">
+                    Get a website designed around your business goals, brand identity, target audience, and specific requirements. We focus on creating{" "}
+                    <Link href="/custom-website-development" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+                      professional digital experiences
+                    </Link>{" "}
+                    rather than relying on generic designs.
                   </p>
                 </div>
-              ))}
+              </div>
+
+              {/* Benefit 2: SEO-Friendly Development */}
+              <div 
+                style={{ transitionDelay: "80ms" }}
+                className="lg:col-span-3 bg-white border border-[#E9E4F2] p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-md hover:border-[#7C3AED]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#FAF9FF] border border-[#E9E4F2] text-[#7C3AED] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#7C3AED]/30 group-hover:bg-[#7C3AED]/10 transition-all duration-300">
+                    <SearchCheck className="w-5 h-5 text-[#7C3AED]" />
+                  </div>
+                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-2.5 tracking-tight group-hover:text-[#7C3AED] transition-colors">
+                    SEO-Friendly Development
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#6B6478] leading-relaxed font-normal">
+                    We build websites with search engine-friendly structures, relevant metadata, clean page organization, and{" "}
+                    <Link href="/seo-services" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+                      technical SEO foundations
+                    </Link>{" "}
+                    to help search engines understand your content.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 3: Designed to Generate Quality Leads */}
+              <div 
+                style={{ transitionDelay: "160ms" }}
+                className="lg:col-span-3 bg-white border border-[#E9E4F2] p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-md hover:border-[#7C3AED]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#FAF9FF] border border-[#E9E4F2] text-[#7C3AED] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#7C3AED]/30 group-hover:bg-[#7C3AED]/10 transition-all duration-300">
+                    <Target className="w-5 h-5 text-[#7C3AED]" />
+                  </div>
+                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-2.5 tracking-tight group-hover:text-[#7C3AED] transition-colors">
+                    Designed to Generate Quality Leads
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#6B6478] leading-relaxed font-normal">
+                    We create conversion-focused websites with clear calls to action, enquiry forms, WhatsApp integration, and user-friendly layouts to help businesses attract relevant visitors and turn them into potential customers.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 4: Mobile-First Experience */}
+              <div 
+                style={{ transitionDelay: "240ms" }}
+                className="lg:col-span-3 bg-white border border-[#E9E4F2] p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-md hover:border-[#7C3AED]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#FAF9FF] border border-[#E9E4F2] text-[#7C3AED] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#7C3AED]/30 group-hover:bg-[#7C3AED]/10 transition-all duration-300">
+                    <Smartphone className="w-5 h-5 text-[#7C3AED]" />
+                  </div>
+                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-2.5 tracking-tight group-hover:text-[#7C3AED] transition-colors">
+                    Mobile-First Experience
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#6B6478] leading-relaxed font-normal">
+                    Our{" "}
+                    <Link href="/web-design-services" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+                      responsive website designs
+                    </Link>{" "}
+                    provide a smooth browsing experience across mobile phones, tablets, laptops, and desktop devices.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 5: Dynamic Websites and CMS Solutions */}
+              <div 
+                style={{ transitionDelay: "320ms" }}
+                className="lg:col-span-4 bg-white border border-[#E9E4F2] p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-md hover:border-[#7C3AED]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#FAF9FF] border border-[#E9E4F2] text-[#7C3AED] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#7C3AED]/30 group-hover:bg-[#7C3AED]/10 transition-all duration-300">
+                    <PanelsTopLeft className="w-5 h-5 text-[#7C3AED]" />
+                  </div>
+                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-2.5 tracking-tight group-hover:text-[#7C3AED] transition-colors">
+                    Dynamic Websites and CMS Solutions
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#6B6478] leading-relaxed font-normal">
+                    We develop{" "}
+                    <Link href="/dynamic-website-development" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+                      dynamic websites
+                    </Link>{" "}
+                    and content management solutions that help businesses manage website content, publish blogs, update information, and expand their online presence as their needs grow.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 6: Solutions for Indian and Global Businesses */}
+              <div 
+                style={{ transitionDelay: "400ms" }}
+                className="lg:col-span-4 bg-white border border-[#E9E4F2] p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-md hover:border-[#7C3AED]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#FAF9FF] border border-[#E9E4F2] text-[#7C3AED] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#7C3AED]/30 group-hover:bg-[#7C3AED]/10 transition-all duration-300">
+                    <Globe className="w-5 h-5 text-[#7C3AED]" />
+                  </div>
+                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-2.5 tracking-tight group-hover:text-[#7C3AED] transition-colors">
+                    Solutions for Indian and Global Businesses
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#6B6478] leading-relaxed font-normal">
+                    We work towards serving businesses across different industries and markets, including{" "}
+                    <Link href="/travel-website-development" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+                      tourism
+                    </Link>
+                    ,{" "}
+                    <Link href="/website-for-manufacturing-companies" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+                      manufacturing
+                    </Link>
+                    ,{" "}
+                    <Link href="/website-for-export-and-import" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+                      export businesses
+                    </Link>
+                    , and other growing companies looking for a professional online presence.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 7: Ongoing Website Support */}
+              <div 
+                style={{ transitionDelay: "480ms" }}
+                className="md:col-span-2 lg:col-span-4 bg-white border border-[#E9E4F2] p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-md hover:border-[#7C3AED]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#FAF9FF] border border-[#E9E4F2] text-[#7C3AED] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#7C3AED]/30 group-hover:bg-[#7C3AED]/10 transition-all duration-300">
+                    <Headset className="w-5 h-5 text-[#7C3AED]" />
+                  </div>
+                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-2.5 tracking-tight group-hover:text-[#7C3AED] transition-colors">
+                    Ongoing Website Support
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#6B6478] leading-relaxed font-normal">
+                    We help businesses maintain and improve their websites through content updates, technical improvements, troubleshooting, and maintenance based on the agreed project scope.
+                  </p>
+                </div>
+              </div>
+
             </div>
+
+            {/* Call-to-Action Card */}
+            <div className="mt-14 sm:mt-16 bg-white border border-[#E9E4F2] rounded-[28px] p-8 sm:p-12 shadow-sm text-center max-w-4xl mx-auto relative overflow-hidden reveal-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500" />
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1F1B2D] tracking-tight mb-3">
+                Ready to Build a Website That Grows Your Business?
+              </h3>
+              <p className="text-xs sm:text-sm text-[#6B6478] max-w-2xl mx-auto mb-8 leading-relaxed font-normal">
+                Tell us about your business goals, and let's explore the right website solution for your needs.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link
+                  href="/free-website-audit"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-sm transition-all shadow-md shadow-[#7C3AED]/20 hover:shadow-lg hover:shadow-[#7C3AED]/30 hover:-translate-y-0.5 active:translate-y-0"
+                >
+                  <span>Get a Free Website Audit</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#FAF9FF] hover:bg-white border border-[#E9E4F2] hover:border-[#7C3AED]/40 text-[#1F1B2D] font-extrabold text-sm transition-all shadow-xs hover:-translate-y-0.5 active:translate-y-0"
+                >
+                  <span>Contact Joy Digital</span>
+                </Link>
+              </div>
+            </div>
+
           </div>
         </section>
 
