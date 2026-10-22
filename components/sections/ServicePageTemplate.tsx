@@ -70,6 +70,7 @@ interface ServicePageTemplateProps {
   heroActions?: React.ReactNode;
   customCtaBanner?: React.ReactNode;
   belowHeroSection?: React.ReactNode;
+  afterBenefitsSection?: React.ReactNode;
   simplifiedLeadForm?: boolean;
   h1ClassName?: string;
 }
@@ -100,6 +101,7 @@ export default function ServicePageTemplate({
   heroActions,
   customCtaBanner,
   belowHeroSection,
+  afterBenefitsSection,
   simplifiedLeadForm,
   h1ClassName = "bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent",
 }: ServicePageTemplateProps) {
@@ -350,6 +352,9 @@ export default function ServicePageTemplate({
           </div>
         </section>
 
+        {/* Custom Section After Benefits (e.g. Comparison Table) */}
+        {afterBenefitsSection}
+
         {/* Process Section */}
         <section className="py-16 lg:py-24 bg-light-bg">
           <div className="max-w-7xl mx-auto px-6">
@@ -519,19 +524,7 @@ export default function ServicePageTemplate({
           </section>
         )}
 
-        {/* Dynamic CTA Banner */}
-        {customCtaBanner ? (
-          customCtaBanner
-        ) : (
-          <CTABanner
-            title={`Take Your ${serviceName} Performance to the Next Level`}
-            description={`Get a detailed ${serviceName} roadmap customized to your target keyword goals. No commitments, just pure value.`}
-            primaryCtaText="Get My Free Audit Report"
-            source={`${serviceName} CTABanner`}
-          />
-        )}
-
-        {/* FAQ Section */}
+        {/* FAQ Section (Positioned before final CTA) */}
         <section className="py-16 lg:py-24 bg-light-bg">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -549,6 +542,18 @@ export default function ServicePageTemplate({
             <Accordion items={combinedFaqs} />
           </div>
         </section>
+
+        {/* Dynamic Final CTA Banner */}
+        {customCtaBanner ? (
+          customCtaBanner
+        ) : (
+          <CTABanner
+            title={`Take Your ${serviceName} Performance to the Next Level`}
+            description={`Get a detailed ${serviceName} roadmap customized to your target keyword goals. No commitments, just pure value.`}
+            primaryCtaText="Get My Free Audit Report"
+            source={`${serviceName} CTABanner`}
+          />
+        )}
       </main>
       <Footer />
       <StickyWidgets />
