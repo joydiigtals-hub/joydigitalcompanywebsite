@@ -7,9 +7,9 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.joydigital.in"),
   title: {
-    absolute: "Custom Website Development Company | Joy Digital",
+    absolute: "Professional Website Development Services | Grow Fast",
   },
-  description: "Build custom business websites with modern design, SEO-friendly structure and performance-focused development. Joy Digital helps businesses reach customers worldwide.",
+  description: "Transform your business with stunning, high-converting website development services. Boost sales & dominate your market. Get a free quote!",
   authors: [{ name: "Joy Digital" }],
   publisher: "Joy Digital",
   robots: {
@@ -41,21 +41,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.joydigital.in",
     siteName: "Joy Digital",
-    title: "Custom Website Development Company | Joy Digital",
-    description: "Build custom business websites with modern design, SEO-friendly structure and performance-focused development. Joy Digital helps businesses reach customers worldwide.",
+    title: "Professional Website Development Services | Grow Fast",
+    description: "Transform your business with stunning, high-converting website development services. Boost sales & dominate your market. Get a free quote!",
     images: [
       {
         url: "https://www.joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
-        alt: "Joy Digital - Custom Website Development Company",
+        alt: "Joy Digital - Professional Website Development Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Website Development Company | Joy Digital",
-    description: "Build custom business websites with modern design, SEO-friendly structure and performance-focused development. Joy Digital helps businesses reach customers worldwide.",
+    title: "Professional Website Development Services | Grow Fast",
+    description: "Transform your business with stunning, high-converting website development services. Boost sales & dominate your market. Get a free quote!",
     images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
     creator: "@joydigital",
   },
@@ -64,8 +64,8 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const homeGraph = buildPageGraphSchema({
     url: "https://www.joydigital.in/",
-    title: "Custom Website Development Company | Joy Digital",
-    description: "Build custom business websites with modern design, SEO-friendly structure and performance-focused development. Joy Digital helps businesses reach customers worldwide.",
+    title: "Professional Website Development Services | Grow Fast",
+    description: "Transform your business with stunning, high-converting website development services. Boost sales & dominate your market. Get a free quote!",
     isHomepage: true,
     faqs: HOME_FAQS,
   });
