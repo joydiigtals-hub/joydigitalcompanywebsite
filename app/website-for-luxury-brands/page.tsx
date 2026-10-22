@@ -4,22 +4,32 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Luxury Brand Website Design",
-  description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
+  title: {
+    absolute: "Luxury Brand Website Design & Prestige SEO | Joy Digital",
+  },
+  description: "Bespoke luxury brand website design & global prestige SEO. Create high-converting Next.js portals, VIP concierge forms & lookbooks for HNWIs. Get a free audit!",
+  keywords: [
+    "luxury brand website design",
+    "bespoke website development",
+    "luxury web agency",
+    "website for luxury brands",
+    "prestige seo services",
+    "luxury ecommerce website",
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-luxury-brands",
   },
   openGraph: {
     type: "website",
     url: "https://www.joydigital.in/website-for-luxury-brands",
-    title: "Luxury Brand Website Design | Joy Digital",
-    description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Luxury Brand Website Design Joy Digital" }],
+    title: "Luxury Brand Website Design & Prestige SEO | Joy Digital",
+    description: "Bespoke luxury brand website design & global prestige SEO. Create high-converting Next.js portals, VIP concierge forms & lookbooks for HNWIs. Get a free audit!",
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Luxury Brand Website Design & Prestige SEO Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxury Brand Website Design | Joy Digital",
-    description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
+    title: "Luxury Brand Website Design & Prestige SEO | Joy Digital",
+    description: "Bespoke luxury brand website design & global prestige SEO. Create high-converting Next.js portals, VIP concierge forms & lookbooks for HNWIs. Get a free audit!",
     images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
@@ -30,7 +40,7 @@ const pageSchema = {
     {
       "@type": "Service",
       "@id": "https://www.joydigital.in/website-for-luxury-brands#service",
-      "name": "Luxury Brand Website Design & Premium SEO Services",
+      "name": "Luxury Brand Website Design & Prestige SEO Services",
       "serviceType": "Luxury Web Development & Prestige Brand Marketing",
       "provider": {
         "@type": "LocalBusiness",
@@ -38,7 +48,7 @@ const pageSchema = {
         "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://www.joydigital.in",
-        "priceRange": "$",
+        "priceRange": "$$$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -48,19 +58,163 @@ const pageSchema = {
           "addressCountry": "IN"
         }
       },
-      "description": "Custom luxury web design for high-end fashion ateliers, luxury jewelry houses, bespoke artisans, and premium lifestyle products. Features editorial digital lookbooks, private VIP appointment scheduling, and prestige SEO.",
+      "description": "Bespoke luxury web design and prestige SEO for high-end fashion ateliers, luxury jewelry houses, bespoke artisans, and premium lifestyle products. Features editorial digital lookbooks, private VIP appointment scheduling, and prestige SEO.",
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "USD",
-        "lowPrice": "30000",
-        "highPrice": "90000",
+        "lowPrice": "1500",
+        "highPrice": "4200",
         "offerCount": "2"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.joydigital.in/website-for-luxury-brands#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does bespoke web design elevate luxury brand prestige?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A luxury brand website is a digital flagship boutique. Custom Next.js portals combine high-resolution editorial design, seamless lookbook animations, and private VIP concierge booking flows to evoke exclusivity and convert high-net-worth buyers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you build private or invite-only VIP collection portals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we build password-protected digital lounges, bespoke private collection inquiry engines, and exclusive consultation booking workflows designed specifically for high-net-worth clients and collectors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you optimize global SEO for luxury and haute couture brands?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We target high-value prestige search terms, implement rich LuxuryBrand schema markup, and optimize multi-currency, international content structures so your atelier ranks top across target global regions."
+          }
+        }
+      ]
     }
   ]
 };
 
 export default function LuxuryBrandWebPage() {
+  const comparisonTable = (
+    <section className="py-16 lg:py-24 bg-[#FAF9FF] border-b border-[#E9E4F2]">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-bold uppercase tracking-wider mb-3">
+            Prestige &amp; Performance Comparison
+          </span>
+          <h2 className="text-2xl md:text-4xl font-extrabold text-primary-dark mb-4">
+            Generic Web Templates vs Joy Digital Luxury Portals
+          </h2>
+          <p className="text-sm text-text-secondary leading-relaxed font-normal">
+            Why luxury brands require custom serverless Next.js architecture over standard templates.
+          </p>
+        </div>
+
+        <div className="max-w-5xl mx-auto overflow-hidden bg-white border border-[#E5E7EB] rounded-2xl shadow-sm">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="border-b border-[#E5E7EB] bg-slate-50/80">
+                  <th className="py-4 px-6 text-xs font-extrabold text-primary-dark uppercase tracking-wider w-1/4">
+                    Features
+                  </th>
+                  <th className="py-4 px-6 text-xs font-extrabold text-slate-500 uppercase tracking-wider w-3/8">
+                    Generic Web Templates
+                  </th>
+                  <th className="py-4 px-6 text-xs font-extrabold text-accent uppercase tracking-wider w-3/8 bg-purple-50/60 border-l border-[#E5E7EB]">
+                    <div className="flex items-center gap-1.5">
+                      <span>Joy Digital Luxury Portal</span>
+                      <span className="bg-accent text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Recommended</span>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[#E5E7EB] text-xs">
+                <tr className="hover:bg-slate-50/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-primary-dark">
+                    Performance &amp; Speed
+                  </td>
+                  <td className="py-4 px-6 text-rose-500 font-medium">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
+                      <span>Slow video loading &amp; laggy mobile rendering</span>
+                    </div>
+                  </td>
+                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <span>Sub-1.5s Ultra-fast Next.js architecture</span>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-slate-50/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-primary-dark">
+                    Client Engagement
+                  </td>
+                  <td className="py-4 px-6 text-rose-500 font-medium">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
+                      <span>Standard shopping cart flow</span>
+                    </div>
+                  </td>
+                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <span>Private VIP Concierge &amp; Appointment Engine</span>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-slate-50/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-primary-dark">
+                    Visual Presentation
+                  </td>
+                  <td className="py-4 px-6 text-rose-500 font-medium">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
+                      <span>Generic catalog grids</span>
+                    </div>
+                  </td>
+                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <span>Editorial Digital Lookbooks &amp; High-Res Texture Zoom</span>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-slate-50/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-primary-dark">
+                    Global SEO &amp; Reach
+                  </td>
+                  <td className="py-4 px-6 text-rose-500 font-medium">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
+                      <span>Local metadata tags</span>
+                    </div>
+                  </td>
+                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <span>Prestige Global SEO &amp; Multi-Currency Architecture</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+
   return (
     <ServicePageTemplate
       serviceName="Website for Luxury & Premium Brands"
@@ -68,11 +222,12 @@ export default function LuxuryBrandWebPage() {
       heroSubtitle="Evoke desire, elevate brand prestige, and convert high-net-worth clientele. We engineer ultra-fast, visually stunning Next.js web portals for haute couture fashion houses, fine jewelry ateliers, luxury real estate, and bespoke lifestyle brands worldwide."
       leadSource="Website for Luxury Brands Landing Page"
       heroCtaText="Get Free Luxury Web Quote"
+      canonicalUrl="https://www.joydigital.in/website-for-luxury-brands"
       overviewTitle="Why Most Luxury Brand Websites Fail to Convert High-Net-Worth Buyers (And How We Fix It)"
       overviewContent={
         <div className="space-y-6">
           <p>
-            High-net-worth individuals (HNWIs) and luxury consumers expect an online experience that reflects the craftsmanship, exclusivity, and sophistication of a brand's physical boutique.
+            High-net-worth individuals (HNWIs) and luxury consumers expect an online experience that reflects the craftsmanship, exclusivity, and sophistication of a brand&apos;s physical boutique.
           </p>
           <p>
             Unfortunately, many luxury websites suffer from slow video loading speeds, non-responsive mobile layouts, generic e-commerce templates, and missing private VIP concierge booking or bespoke inquiry workflows.
@@ -86,7 +241,7 @@ export default function LuxuryBrandWebPage() {
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
-                <span><strong>Editorial Digital Lookbooks & Lookbooks</strong>: High-resolution zoom & video showcases</span>
+                <span><strong>Editorial Digital Lookbooks</strong>: High-resolution zoom & video showcases</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
@@ -165,6 +320,7 @@ export default function LuxuryBrandWebPage() {
           description: "Seamless support for multi-currency displays (USD, EUR, GBP, AED, INR) and white-glove global insured shipping information.",
         },
       ]}
+      afterBenefitsSection={comparisonTable}
       processTitle="Our 6-Step Luxury Web Engineering Process"
       processSubtitle="A meticulous process crafted to honor your brand's heritage."
       processSteps={[
@@ -245,6 +401,18 @@ export default function LuxuryBrandWebPage() {
         },
       ]}
       faqs={[
+        {
+          question: "How does bespoke web design elevate luxury brand prestige?",
+          answer: "A luxury brand website is a digital flagship boutique. Custom Next.js portals combine high-resolution editorial design, seamless lookbook animations, and private VIP concierge booking flows to evoke exclusivity and convert high-net-worth buyers.",
+        },
+        {
+          question: "Can you build private or invite-only VIP collection portals?",
+          answer: "Yes, we build password-protected digital lounges, bespoke private collection inquiry engines, and exclusive consultation booking workflows designed specifically for high-net-worth clients and collectors.",
+        },
+        {
+          question: "How do you optimize global SEO for luxury and haute couture brands?",
+          answer: "We target high-value prestige search terms, implement rich LuxuryBrand schema markup, and optimize multi-currency, international content structures so your atelier ranks top across target global regions.",
+        },
         {
           question: "How much does a website for a luxury brand cost?",
           answer: "Our luxury brand website packages start from $1,200 USD for boutique ateliers up to $2,800 USD for grand flagship digital portals.",
