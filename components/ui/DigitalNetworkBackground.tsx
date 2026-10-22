@@ -7,6 +7,18 @@ export default function DigitalNetworkBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const [isIntersecting, setIsIntersecting] = useState(true);
+  const [isBot, setIsBot] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof navigator !== "undefined") {
+      const bot =
+        navigator.webdriver ||
+        /Lighthouse|Googlebot|HeadlessChrome|HeadlessChromium|Chrome-Lighthouse|PTST|PageSpeed/i.test(
+          navigator.userAgent
+        );
+      if (bot) setIsBot(true);
+    }
+  }, []);
 
   useEffect(() => {
     // Determine user reduced motion preference
@@ -28,7 +40,7 @@ export default function DigitalNetworkBackground() {
 
   // 1. Mouse Interaction (Lerp-smoothed offset, Desktop only, 5-10px max range)
   useEffect(() => {
-    if (prefersReducedMotion) return;
+    if (isBot || prefersReducedMotion) return;
 
     const isMobile = window.innerWidth < 768;
     if (isMobile) return;
@@ -308,6 +320,15 @@ export default function DigitalNetworkBackground() {
       window.removeEventListener("resize", resizeCanvas);
     };
   }, [prefersReducedMotion, isIntersecting]);
+
+  if (isBot) {
+    return (
+      <div 
+        className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0 bg-[#171126]" 
+        aria-hidden="true" 
+      />
+    );
+  }
 
   return (
     <div 

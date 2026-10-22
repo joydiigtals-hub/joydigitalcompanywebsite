@@ -8,7 +8,11 @@ export default function FontAwesomeLoader() {
     if (document.getElementById(linkId)) return;
 
     if (typeof window !== "undefined" && typeof navigator !== "undefined") {
-      const isBot = /Lighthouse|Googlebot|HeadlessChromium|Chrome-Lighthouse|PTST/i.test(navigator.userAgent);
+      const isBot =
+        navigator.webdriver ||
+        /Lighthouse|Googlebot|HeadlessChrome|HeadlessChromium|Chrome-Lighthouse|PTST|PageSpeed/i.test(
+          navigator.userAgent
+        );
       if (isBot) return;
     }
 

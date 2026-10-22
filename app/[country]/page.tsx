@@ -1,6 +1,7 @@
 import React from "react";
 import HomePageComponent, { HOME_FAQS } from "@/components/sections/HomePageComponent";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
@@ -15,10 +16,15 @@ export async function generateStaticParams() {
     { country: "us" },
     { country: "uk" },
     { country: "ae" },
-    { country: "in" },
+
     { country: "ca" },
     { country: "au" },
     { country: "sg" },
+    { country: "es" },
+    { country: "de" },
+    { country: "it" },
+    { country: "mx" },
+    { country: "br" },
     { country: "my" },
     { country: "za" },
     { country: "ng" },
@@ -100,10 +106,8 @@ const METADATA_MAP: Record<string, { title: string; description: string }> = {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { country } = await params;
   const countryLower = country.toLowerCase();
-  const data = METADATA_MAP[countryLower] || {
-    title: `Web Design & SEO Agency ${countryLower.toUpperCase()}`,
-    description: "Joy Digital is a results-oriented global agency engineering fast Next.js sites and search marketing campaigns.",
-  };
+  const data = METADATA_MAP[countryLower];
+  if (!data) return {};
 
   return {
     title: data.title,
@@ -131,10 +135,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function CountryHomePage({ params }: PageProps) {
   const { country } = await params;
   const countryLower = country.toLowerCase();
-  const data = METADATA_MAP[countryLower] || {
-    title: `Website Design & SEO Growth Agency ${countryLower.toUpperCase()} | Joy Digital`,
-    description: "Joy Digital is a results-oriented global agency engineering fast Next.js sites and search marketing campaigns.",
-  };
+  const data = METADATA_MAP[countryLower];
+  if (!data) {
+    notFound();
+  }
 
   const countryUrl = `https://www.joydigital.in/${countryLower}`;
   const graphSchema = buildPageGraphSchema({

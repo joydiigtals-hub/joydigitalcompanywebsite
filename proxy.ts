@@ -18,6 +18,8 @@ export function proxy(request: NextRequest) {
     pathname.startsWith("/fr/") ||
     pathname === "/kr" ||
     pathname.startsWith("/kr/") ||
+    pathname === "/cn" ||
+    pathname.startsWith("/cn/") ||
     pathname === "/pages" ||
     pathname.startsWith("/pages/") ||
     pathname.endsWith(".php") ||

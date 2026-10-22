@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { getUtmParameters } from "@/lib/utmTracker";
 import { ALL_COUNTRY_CODES, POPULAR_COUNTRY_CODES, getFilteredCountries } from "@/lib/countryCodes";
+import GetQuoteModal from "@/components/ui/GetQuoteModal";
 
 interface ModernHeroSectionProps {
   country?: string;
@@ -123,7 +124,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
         Service: "Free $499 Website & SEO Audit + Strategy Proposal",
         Source: "Hero Booking Consultation Form",
         utmParams: utm || undefined,
-        _subject: `🔥 Free $499 Website & SEO Audit Request - ${formData.name.trim()} [Joy Digital]`,
+        _subject: `⚡ Free $499 Website & SEO Audit Request - ${formData.name.trim()} [Joy Digital]`,
       };
 
       const response = await fetch("/api/enquiry", {
@@ -197,7 +198,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
 
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/40 text-emerald-300 text-xs font-bold shadow-sm">
               <Zap className="w-3.5 h-3.5 text-emerald-400" />
-              <span>🎁 Free Website &amp; SEO Audit ($499 Value)</span>
+              <span>Free Website &amp; SEO Audit ($499 Value)</span>
             </div>
           </div>
 
@@ -247,7 +248,12 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
 
           {/* Step 4: Left CTA Button & Social Proof */}
           <div className="space-y-6 pt-2 w-full max-w-xl">
-            <div>
+            <div className="flex flex-wrap items-center gap-3">
+              <GetQuoteModal
+                triggerText="Get Free Quote"
+                source="Hero Left CTA"
+                triggerClassName="px-7 py-3.5 text-sm font-bold rounded-xl"
+              />
               <a
                 href="#case-studies"
                 onClick={handleExploreCaseStudies}
@@ -278,7 +284,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
               <div className="mb-5">
                 <div className="inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-widest text-emerald-300 bg-emerald-950/60 border border-emerald-500/40 px-2.5 py-0.5 rounded-full mb-2">
                   <Clock className="w-3 h-3 text-emerald-400" />
-                  <span>🎁 Free $499 Audit Included</span>
+                  <span>Free $499 Audit Included</span>
                 </div>
                 <h3 className="text-xl font-extrabold text-white tracking-tight">
                   Get Your Free $499 Website &amp; SEO Audit
@@ -292,7 +298,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
               <form onSubmit={handleSubmit} className="flex flex-col gap-3.5">
                 
                 {/* Hidden Honeypot & UTM */}
-                <input type="text" name="_honey" value="" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+                <input type="text" name="_honey" defaultValue="" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" readOnly />
                 <input type="hidden" name="utm_source" value={getUtmParameters()?.source || ""} />
                 
                 {/* Field 1: Full Name */}

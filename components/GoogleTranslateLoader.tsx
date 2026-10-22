@@ -1,134 +1,169 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
+
+// In-memory translation cache: translationCache[lang][text] = translatedText
+const translationCache: Record<string, Record<string, string>> = {};
+
+// WeakMap storing the pristine original English text of each DOM Text node
+const originalTextMap = new WeakMap<Node, string>();
+
+/**
+ * Fetch translation for a single text string from Google Translate GTX API
+ */
+async function fetchTranslation(text: string, targetLang: string): Promise<string> {
+  if (targetLang === "en") return text;
+
+  if (!translationCache[targetLang]) {
+    translationCache[targetLang] = {};
+  }
+
+  const cached = translationCache[targetLang][text];
+  if (cached) return cached;
+
+  try {
+    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${targetLang}&dt=t&q=${encodeURIComponent(
+      text
+    )}`;
+    const res = await fetch(url);
+    if (!res.ok) return text;
+
+    const data = await res.json();
+    const translated = (data[0] || []).map((x: any) => x[0] || "").join("");
+    if (translated) {
+      translationCache[targetLang][text] = translated;
+      return translated;
+    }
+  } catch (err) {
+    console.warn("Translation fetch error:", err);
+  }
+  return text;
+}
+
+/**
+ * Apply translation to all translatable text nodes across the entire page
+ */
+export async function applyClientTranslation(targetLang: string) {
+  if (typeof document === "undefined") return;
+
+  // 1. If English, restore all original text nodes
+  if (targetLang === "en") {
+    document.documentElement.lang = "en";
+    document.documentElement.dir = "ltr";
+    localStorage.removeItem("joy_lang");
+
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    let currentNode: Node | null;
+    while ((currentNode = walker.nextNode())) {
+      if (originalTextMap.has(currentNode)) {
+        currentNode.nodeValue = originalTextMap.get(currentNode)!;
+      }
+    }
+    return;
+  }
+
+  // 2. Set language and text direction (RTL for Arabic)
+  document.documentElement.lang = targetLang;
+  document.documentElement.dir = targetLang === "ar" ? "rtl" : "ltr";
+  localStorage.setItem("joy_lang", targetLang);
+
+  // 3. Collect translatable text nodes
+  const nodesToTranslate: Text[] = [];
+  const textQueue: string[] = [];
+
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      const parent = node.parentElement;
+      if (!parent) return NodeFilter.FILTER_REJECT;
+
+      const tag = parent.tagName.toLowerCase();
+      if (
+        [
+          "script",
+          "style",
+          "code",
+          "pre",
+          "svg",
+          "noscript",
+          "textarea",
+        ].includes(tag)
+      ) {
+        return NodeFilter.FILTER_REJECT;
+      }
+
+      if (
+        parent.closest(".notranslate") ||
+        parent.getAttribute("translate") === "no"
+      ) {
+        return NodeFilter.FILTER_REJECT;
+      }
+
+      const val = node.nodeValue?.trim() || "";
+      // Ignore empty, single characters, purely numeric, or pure punctuation strings
+      if (val.length <= 1 || /^\d+$/.test(val) || /^[\p{P}\s]+$/u.test(val)) {
+        return NodeFilter.FILTER_REJECT;
+      }
+
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  });
+
+  let node: Node | null;
+  while ((node = walker.nextNode())) {
+    const textNode = node as Text;
+    if (!originalTextMap.has(textNode)) {
+      originalTextMap.set(textNode, textNode.nodeValue || "");
+    }
+    const rawEnglish = originalTextMap.get(textNode) || textNode.nodeValue || "";
+    nodesToTranslate.push(textNode);
+    textQueue.push(rawEnglish);
+  }
+
+  // 4. Translate in parallel batches of 20 concurrent requests
+  const BATCH_SIZE = 20;
+  for (let i = 0; i < nodesToTranslate.length; i += BATCH_SIZE) {
+    const currentNodes = nodesToTranslate.slice(i, i + BATCH_SIZE);
+    const currentTexts = textQueue.slice(i, i + BATCH_SIZE);
+
+    const translatedBatch = await Promise.all(
+      currentTexts.map(async (text) => {
+        const trimmed = text.trim();
+        const translatedTrimmed = await fetchTranslation(trimmed, targetLang);
+        return text.replace(trimmed, translatedTrimmed);
+      })
+    );
+
+    currentNodes.forEach((tn, idx) => {
+      if (translatedBatch[idx]) {
+        tn.nodeValue = translatedBatch[idx];
+      }
+    });
+  }
+}
 
 export default function GoogleTranslateLoader() {
+  const isTranslatingRef = useRef(false);
+
   useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    // Fast check if bot / crawler
-    const isBot = /Lighthouse|Googlebot|HeadlessChromium|Chrome-Lighthouse|PTST/i.test(navigator.userAgent);
-    if (isBot) return;
-
-    // Helper to apply translation by setting .goog-te-combo value and firing change event
-    const triggerTranslation = (targetLang: string): boolean => {
-      const selectElem = document.querySelector(".goog-te-combo") as HTMLSelectElement | null;
-      if (selectElem) {
-        const val = targetLang === "en" ? "" : targetLang;
-        if (selectElem.value !== val) {
-          selectElem.value = val;
-          selectElem.dispatchEvent(new Event("change", { bubbles: true }));
-          selectElem.dispatchEvent(new Event("input", { bubbles: true }));
-        }
-        return true;
-      }
-      return false;
-    };
-
-    // Lazy load the Google Translate script on-demand
-    const loadGoogleTranslateScript = () => {
-      if (document.getElementById("google-translate-script")) return;
-      const script = document.createElement("script");
-      script.id = "google-translate-script";
-      script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-      script.async = true;
-      script.defer = true;
-      document.head.appendChild(script);
-    };
-
-    // Expose global helper so Header.tsx or any other component can trigger it directly
-    (window as any).__triggerGoogleTranslate = (lang: string) => {
-      if (!document.getElementById("google-translate-script")) {
-        loadGoogleTranslateScript();
-        let attempts = 0;
-        const interval = setInterval(() => {
-          attempts++;
-          if (triggerTranslation(lang) || attempts > 30) {
-            clearInterval(interval);
-          }
-        }, 150);
-        return true;
-      }
-      return triggerTranslation(lang);
-    };
-
-    // Define global callback function for Google Translate
-    (window as any).googleTranslateElementInit = function () {
-      if ((window as any).google && (window as any).google.translate) {
-        new (window as any).google.translate.TranslateElement(
-          {
-            pageLanguage: "en",
-            includedLanguages: "en,ta,hi,ar,es,de,fr,te,kn,ml,bn,mr,gu,pa,it,pt,ru,zh-CN,ja,ko,tr,nl,vi,th",
-            autoDisplay: false,
-          },
-          "google_translate_element"
-        );
-
-        // Sync saved language right after element is initialized
-        const joyLang = localStorage.getItem("joy_lang");
-        if (joyLang && joyLang !== "en") {
-          setTimeout(() => triggerTranslation(joyLang), 100);
-        }
+    // 1. Expose global trigger for Header.tsx
+    (window as any).__triggerGoogleTranslate = async (lang: string) => {
+      if (isTranslatingRef.current) return;
+      isTranslatingRef.current = true;
+      try {
+        await applyClientTranslation(lang);
+      } finally {
+        isTranslatingRef.current = false;
       }
     };
 
-    // Detect if user has previously selected a non-English language
-    const getTargetLang = () => {
-      const getCookie = (name: string) => {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop()?.split(";").shift();
-        return null;
-      };
-
-      const joyLang = localStorage.getItem("joy_lang");
-      if (joyLang) return joyLang;
-      const googtrans = getCookie("googtrans");
-      if (googtrans) {
-        const parts = googtrans.split("/");
-        return parts[parts.length - 1];
-      }
-      return null;
-    };
-
-    const targetLang = getTargetLang();
-    // ONLY download Google Translate scripts if the user actually requested non-English!
-    // This saves ~300 KB of third-party JS and eliminates heavy TBT on mobile page loads.
-    if (targetLang && targetLang !== "en") {
-      if ("requestIdleCallback" in window) {
-        (window as any).requestIdleCallback(loadGoogleTranslateScript, { timeout: 3000 });
-      } else {
-        setTimeout(loadGoogleTranslateScript, 2000);
-      }
-
-      let attempts = 0;
-      const interval = setInterval(() => {
-        attempts++;
-        const success = triggerTranslation(targetLang);
-        if (success || attempts > 30) {
-          clearInterval(interval);
-        }
-      }, 200);
-
-      return () => clearInterval(interval);
+    // 2. On initial mount, auto-apply saved language from localStorage if non-English
+    const savedLang = localStorage.getItem("joy_lang");
+    if (savedLang && savedLang !== "en") {
+      setTimeout(() => {
+        applyClientTranslation(savedLang);
+      }, 250);
     }
   }, []);
 
-  return (
-    <div
-      id="google_translate_element"
-      className="notranslate"
-      style={{
-        position: "fixed",
-        top: "-9999px",
-        left: "-9999px",
-        width: "1px",
-        height: "1px",
-        opacity: 0,
-        pointerEvents: "none",
-        zIndex: -9999,
-      }}
-      aria-hidden="true"
-    />
-  );
+  return null;
 }

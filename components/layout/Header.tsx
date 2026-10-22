@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
+import GetQuoteModal from "@/components/ui/GetQuoteModal";
 
 const SERVICES_CATEGORIES = [
   {
@@ -76,20 +77,13 @@ const REGIONS = [
 
 const LANGUAGES = [
   { code: "en", label: "English", flag: "🇬🇧" },
-  { code: "ta", label: "Tamil", flag: "🇮🇳" },
-  { code: "hi", label: "Hindi", flag: "🇮🇳" },
   { code: "ar", label: "Arabic", flag: "🇦🇪" },
+  { code: "sw", label: "Swahili", flag: "🇰🇪" },
+  { code: "af", label: "Afrikaans", flag: "🇿🇦" },
+  { code: "fr", label: "French", flag: "🇫🇷" },
   { code: "es", label: "Spanish", flag: "🇪🇸" },
   { code: "de", label: "German", flag: "🇩🇪" },
-  { code: "fr", label: "French", flag: "🇫🇷" },
-  { code: "te", label: "Telugu", flag: "🇮🇳" },
-  { code: "kn", label: "Kannada", flag: "🇮🇳" },
-  { code: "ml", label: "Malayalam", flag: "🇮🇳" },
-  { code: "bn", label: "Bengali", flag: "🇮🇳" },
-  { code: "mr", label: "Marathi", flag: "🇮🇳" },
-  { code: "gu", label: "Gujarati", flag: "🇮🇳" },
-  { code: "pa", label: "Punjabi", flag: "🇮🇳" },
-  { code: "it", label: "Italian", flag: "🇮🇹" },
+  { code: "hi", label: "Hindi", flag: "🇮🇳" },
 ];
 export default function Header({ transparent = false }: { transparent?: boolean }) {
   const [isScrolledRaw, setIsScrolledRaw] = useState(false);
@@ -185,88 +179,13 @@ export default function Header({ transparent = false }: { transparent?: boolean 
     setCurrentLang(langCode);
     setIsLangDropdownOpen(false);
 
-    // 2. Persist to localStorage
+    // 2. Delegate to GoogleTranslateLoader
     if (typeof window !== "undefined") {
-      if (langCode === "en") {
-        localStorage.removeItem("joy_lang");
-      } else {
-        localStorage.setItem("joy_lang", langCode);
+      const triggerFn = (window as any).__triggerGoogleTranslate;
+      if (typeof triggerFn === "function") {
+        triggerFn(langCode);
       }
     }
-
-    // 3. Clear existing cookies on all domain variations
-    const domain = window.location.hostname;
-    const cookieValue = `/en/${langCode}`;
-
-    const clearCookies = () => {
-      const hostVariants = ["", domain];
-      if (domain.includes(".")) {
-        const parts = domain.split(".");
-        if (parts.length >= 2) {
-          hostVariants.push("." + parts.slice(-2).join("."));
-          hostVariants.push(parts.slice(-2).join("."));
-        }
-      }
-      hostVariants.forEach((d) => {
-        const domAttr = d ? `; domain=${d}` : "";
-        document.cookie = `googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT${domAttr}`;
-        document.cookie = `googtrans=none; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT${domAttr}`;
-      });
-    };
-
-    clearCookies();
-
-    // 4. If English, revert translation
-    if (langCode === "en") {
-      const selectElem = document.querySelector(".goog-te-combo") as HTMLSelectElement | null;
-      if (selectElem) {
-        selectElem.value = "";
-        selectElem.dispatchEvent(new Event("change", { bubbles: true }));
-      }
-      if (window.location.hash.includes("googtrans")) {
-        window.history.replaceState(null, "", window.location.pathname + window.location.search);
-      }
-      setTimeout(() => {
-        window.location.reload();
-      }, 150);
-      return;
-    }
-
-    // 5. If Foreign Language, set cookies on root path & domain
-    document.cookie = `googtrans=${cookieValue}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
-    document.cookie = `googtrans=${cookieValue}; path=/; domain=${domain}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
-    if (domain.includes(".")) {
-      const parts = domain.split(".");
-      if (parts.length >= 2) {
-        const rootDomain = "." + parts.slice(-2).join(".");
-        document.cookie = `googtrans=${cookieValue}; path=/; domain=${rootDomain}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
-      }
-    }
-
-    // 6. Trigger live translation
-    let translated = false;
-    const triggerFn = (window as any).__triggerGoogleTranslate;
-    if (typeof triggerFn === "function") {
-      translated = triggerFn(langCode);
-    } else {
-      const selectElem = document.querySelector(".goog-te-combo") as HTMLSelectElement | null;
-      if (selectElem) {
-        selectElem.value = langCode;
-        selectElem.dispatchEvent(new Event("change", { bubbles: true }));
-        selectElem.dispatchEvent(new Event("input", { bubbles: true }));
-        translated = true;
-      }
-    }
-
-    // 7. If the widget is not in DOM yet or didn't immediately translate, reload after a brief moment
-    setTimeout(() => {
-      const isHtmlTranslated =
-        document.documentElement.classList.contains("translated-ltr") ||
-        document.documentElement.classList.contains("translated-rtl");
-      if (!translated || !isHtmlTranslated) {
-        window.location.reload();
-      }
-    }, 350);
   };
 
   const isActive = (path: string) => {
@@ -278,7 +197,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
   const getRegionalHref = (path: string) => {
     const localizedPaths = ["/", "/seo-services", "/website-development", "/contact"];
     if (localizedPaths.includes(path)) {
-      if (currentRegion === "") return path;
+      if (currentRegion === "" || currentRegion === "in") return path;
       return `/${currentRegion}${path === "/" ? "" : path}`;
     }
     return path;
@@ -299,11 +218,11 @@ export default function Header({ transparent = false }: { transparent?: boolean 
     
     let targetPath = "/";
     if (isPathLocalized) {
-      targetPath = regionCode === "" 
+      targetPath = (regionCode === "" || regionCode === "in") 
         ? cleanPath 
         : `/${regionCode}${cleanPath === "/" ? "" : cleanPath}`;
     } else {
-      targetPath = regionCode === "" ? "/" : `/${regionCode}`;
+      targetPath = (regionCode === "" || regionCode === "in") ? "/" : `/${regionCode}`;
     }
     
     router.push(targetPath);
@@ -549,13 +468,11 @@ export default function Header({ transparent = false }: { transparent?: boolean 
               </div>
             </div>
 
-            <Link
-              href={getRegionalHref("/contact")}
-              title="Book Free Consultation"
-              className="bg-primary hover:bg-primary-light text-white font-bold text-xs px-6 py-3 rounded-full shadow-md hover:-translate-y-0.5 transition-all duration-300 flex-shrink-0"
-            >
-              Book Free Consultation
-            </Link>
+            <GetQuoteModal
+              triggerText="Get Quote"
+              source="Header Desktop CTA"
+              triggerClassName="!py-2.5 !px-5 !text-xs !font-bold !rounded-full shadow-md shrink-0"
+            />
           </div>
 
           {/* Mobile Right Controls */}
@@ -808,10 +725,16 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             </div>
           </div>
 
+          <GetQuoteModal
+            triggerText="Get Free Quote"
+            source="Mobile Navigation Drawer"
+            triggerClassName="w-full justify-center !py-3.5 !text-sm !font-bold !rounded-xl shadow-md mt-4"
+          />
+
           <Link
             href="/free-website-audit"
             title="Free Website Audit"
-            className="bg-[#2563EB] hover:bg-[#3B82F6] text-white text-center font-bold px-6 py-3.5 rounded-full shadow-md mt-4"
+            className="bg-[#2563EB] hover:bg-[#3B82F6] text-white text-center font-bold px-6 py-3.5 rounded-full shadow-md mt-2"
           >
             Free Website Audit
           </Link>

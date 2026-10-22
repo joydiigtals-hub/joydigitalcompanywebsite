@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "en-us": "https://www.joydigital.in/us/contact",
       "en-gb": "https://www.joydigital.in/uk/contact",
       "en-ae": "https://www.joydigital.in/ae/contact",
-      "en-in": "https://www.joydigital.in/in/contact",
+      "en-in": "https://www.joydigital.in/contact",
     },
   },
   openGraph: {
@@ -77,13 +77,15 @@ export default function ContactPage() {
               
               <div className="flex flex-col gap-4">
                 {/* Location Card */}
-                <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary-glow flex items-center justify-center text-primary text-xl flex-shrink-0">
+                <div className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-all flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center text-[#7C3AED] text-xl flex-shrink-0 shadow-sm border border-purple-100">
                     <i className="fa-solid fa-map-location-dot" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-[10px] font-bold text-text-muted uppercase">Office Address</span>
-                    <span className="text-sm font-bold text-primary-dark mt-0.5">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-purple-100 text-[#6D28D9] text-[11px] font-extrabold uppercase tracking-wider w-fit mb-1">
+                      Office Address
+                    </span>
+                    <span className="text-[15px] font-bold text-slate-900 leading-snug">
                       Joy Digital Growth Agency, Madurai, Tamil Nadu, India
                     </span>
                   </div>
@@ -92,21 +94,23 @@ export default function ContactPage() {
                 {/* Call Card */}
                 <a
                   href="tel:+919080026133"
-                  className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-accent/30 transition-all duration-300"
+                  className="bg-white border border-slate-200/90 hover:border-blue-400 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md flex items-center justify-between group transition-all duration-300"
                   title="Call Us Directly"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary-glow flex items-center justify-center text-primary text-xl flex-shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 text-xl flex-shrink-0 shadow-sm border border-blue-100 group-hover:scale-105 transition-transform">
                       <i className="fa-solid fa-phone" />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-text-muted uppercase">Call Support</span>
-                      <span className="text-sm font-bold text-primary-dark mt-0.5 group-hover:text-accent transition-colors">
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-blue-100 text-blue-800 text-[11px] font-extrabold uppercase tracking-wider w-fit mb-1">
+                        Call Support
+                      </span>
+                      <span className="text-[15px] font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                         +91 90800 26133
                       </span>
                     </div>
                   </div>
-                  <span className="text-text-muted group-hover:translate-x-1 transition-transform">
+                  <span className="text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1.5 transition-all text-sm">
                     <i className="fa-solid fa-arrow-right-long" />
                   </span>
                 </a>
@@ -116,22 +120,24 @@ export default function ContactPage() {
                   href="https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20get%20more%20details%20about%20your%20services."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-whatsapp-green/30 transition-all duration-300"
+                  className="bg-white border border-slate-200/90 hover:border-emerald-400 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md flex items-center justify-between group transition-all duration-300"
                   title="WhatsApp Us"
                   data-wa-location="contact page"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-whatsapp-glow flex items-center justify-center text-whatsapp-green text-xl flex-shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-xl flex-shrink-0 shadow-sm border border-emerald-100 group-hover:scale-105 transition-transform">
                       <i className="fa-brands fa-whatsapp" />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-text-muted uppercase">WhatsApp Chat</span>
-                      <span className="text-sm font-bold text-primary-dark mt-0.5 group-hover:text-whatsapp-green transition-colors">
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-emerald-100 text-emerald-800 text-[11px] font-extrabold uppercase tracking-wider w-fit mb-1">
+                        WhatsApp Chat
+                      </span>
+                      <span className="text-[15px] font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
                         +91 90800 26133
                       </span>
                     </div>
                   </div>
-                  <span className="text-text-muted group-hover:translate-x-1 transition-transform">
+                  <span className="text-slate-400 group-hover:text-emerald-600 group-hover:translate-x-1.5 transition-all text-sm">
                     <i className="fa-solid fa-arrow-right-long" />
                   </span>
                 </a>
@@ -139,21 +145,23 @@ export default function ContactPage() {
                 {/* Email Card */}
                 <a
                   href={`mailto:${contactEmail}`}
-                  className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-accent/30 transition-all duration-300"
+                  className="bg-white border border-slate-200/90 hover:border-purple-400 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md flex items-center justify-between group transition-all duration-300"
                   title="Email Us"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary-glow flex items-center justify-center text-primary text-xl flex-shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center text-purple-600 text-xl flex-shrink-0 shadow-sm border border-purple-100 group-hover:scale-105 transition-transform">
                       <i className="fa-solid fa-envelope" />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-text-muted uppercase">Send Email</span>
-                      <span className="text-sm font-bold text-primary-dark mt-0.5 group-hover:text-accent transition-colors">
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-purple-100 text-purple-800 text-[11px] font-extrabold uppercase tracking-wider w-fit mb-1">
+                        Send Email
+                      </span>
+                      <span className="text-[15px] font-bold text-slate-900 group-hover:text-purple-600 transition-colors">
                         {contactEmail}
                       </span>
                     </div>
                   </div>
-                  <span className="text-text-muted group-hover:translate-x-1 transition-transform">
+                  <span className="text-slate-400 group-hover:text-purple-600 group-hover:translate-x-1.5 transition-all text-sm">
                     <i className="fa-solid fa-arrow-right-long" />
                   </span>
                 </a>
@@ -163,21 +171,23 @@ export default function ContactPage() {
                   href="https://share.google/BSniheS2qnzwqUKXU"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-[#4285F4]/40 transition-all duration-300"
+                  className="bg-white border border-slate-200/90 hover:border-blue-400 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md flex items-center justify-between group transition-all duration-300"
                   title="Google Business Profile & Reviews"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center text-[#4285F4] text-xl flex-shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-[#4285F4] text-xl flex-shrink-0 shadow-sm border border-blue-100 group-hover:scale-105 transition-transform">
                       <i className="fa-brands fa-google" />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-text-muted uppercase">Google Business Profile</span>
-                      <span className="text-sm font-bold text-primary-dark mt-0.5 group-hover:text-[#4285F4] transition-colors">
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-blue-100 text-blue-800 text-[11px] font-extrabold uppercase tracking-wider w-fit mb-1">
+                        Google Business Profile
+                      </span>
+                      <span className="text-[15px] font-bold text-slate-900 group-hover:text-[#4285F4] transition-colors">
                         View Profile & Customer Reviews
                       </span>
                     </div>
                   </div>
-                  <span className="text-text-muted group-hover:translate-x-1 transition-transform">
+                  <span className="text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1.5 transition-all text-sm">
                     <i className="fa-solid fa-arrow-right-long" />
                   </span>
                 </a>

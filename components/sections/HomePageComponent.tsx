@@ -703,7 +703,8 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
           </div>
         </section>
 
-        {/* 4. WHO WE HELP SECTION */}
+        {/* 4. WHO WE HELP SECTION (Hidden per request) */}
+        {/*
         <section className="py-20 bg-[#FAF9FF] border-b border-[#E9E4F2]">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-14 reveal-hidden">
@@ -721,6 +722,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
             <IndustryTabs />
           </div>
         </section>
+        */}
 
         {/* FREE ONLINE BUSINESS TOOLS SECTION */}
         
@@ -953,12 +955,14 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
           </div>
         </section>
 
-        {/* 8. GLOBAL CONNECTIONS NETWORK WIDGET (Deep Dark background #0D0B18) */}
+        {/* 8. GLOBAL CONNECTIONS NETWORK WIDGET (Deep Dark background #0D0B18) (Hidden per request) */}
+        {/*
         <section className="py-20 bg-[#0D0B18] border-b border-[#231C3D] text-white relative">
           <div className="max-w-7xl mx-auto px-6">
             <WorldwideServiceNetwork />
           </div>
         </section>
+        */}
 
         <PortfolioSection />
 
