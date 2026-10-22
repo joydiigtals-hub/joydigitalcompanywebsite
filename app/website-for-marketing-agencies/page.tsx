@@ -4,22 +4,31 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Web Design for Marketing Agencies",
-  description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
+  title: {
+    absolute: "Marketing Agency Website Design & SEO Services | Joy Digital",
+  },
+  description: "High-converting website design & SEO for digital marketing agencies, PR firms & ad studios. Show case studies, generate audit leads & win high-retainer clients!",
+  keywords: [
+    "marketing agency website design",
+    "website for digital marketing agencies",
+    "ad agency website development",
+    "marketing agency lead generation",
+    "white label web development",
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-marketing-agencies",
   },
   openGraph: {
     type: "website",
     url: "https://www.joydigital.in/website-for-marketing-agencies",
-    title: "Web Design for Marketing Agencies | Joy Digital",
-    description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Marketing Agency Website Design Joy Digital" }],
+    title: "Marketing Agency Website Design & SEO Services | Joy Digital",
+    description: "High-converting website design & SEO for digital marketing agencies, PR firms & ad studios. Show case studies, generate audit leads & win high-retainer clients!",
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Marketing Agency Website Design & SEO Services Joy Digital" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design for Marketing Agencies | Joy Digital",
-    description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
+    title: "Marketing Agency Website Design & SEO Services | Joy Digital",
+    description: "High-converting website design & SEO for digital marketing agencies, PR firms & ad studios. Show case studies, generate audit leads & win high-retainer clients!",
     images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
@@ -30,15 +39,15 @@ const pageSchema = {
     {
       "@type": "Service",
       "@id": "https://www.joydigital.in/website-for-marketing-agencies#service",
-      "name": "Marketing Agency Website Design & Growth SEO",
-      "serviceType": "Agency Web Development & Digital Marketing",
+      "name": "Marketing Agency Website Design & SEO Services",
+      "serviceType": "Agency Web Development & Digital Growth Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
         "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
         "url": "https://www.joydigital.in",
-        "priceRange": "$",
+        "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Old Perungalathur",
@@ -48,12 +57,12 @@ const pageSchema = {
           "addressCountry": "IN"
         }
       },
-      "description": "Custom website development for digital marketing agencies, performance media houses, social media firms, and PR agencies. Features portfolio showcases, audit lead capture forms, case study portals, and search optimization.",
+      "description": "High-converting website design & SEO for digital marketing agencies, PR firms & ad studios. Show case studies, generate audit leads & win high-retainer clients with custom Next.js platforms.",
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "USD",
-        "lowPrice": "18000",
-        "highPrice": "45000",
+        "lowPrice": "1200",
+        "highPrice": "2400",
         "offerCount": "2"
       }
     }
@@ -61,6 +70,138 @@ const pageSchema = {
 };
 
 export default function MarketingAgencyWebPage() {
+  const comparisonTable = (
+    <section className="py-16 lg:py-24 bg-[#FAF9FF] border-b border-[#E9E4F2]">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-bold uppercase tracking-wider mb-3">
+            Performance &amp; Retainer Comparison
+          </span>
+          <h2 className="text-2xl md:text-4xl font-extrabold text-primary-dark mb-4">
+            Generic Web Templates vs Joy Digital Agency Web Architecture
+          </h2>
+          <p className="text-sm text-text-secondary leading-relaxed font-normal">
+            Why marketing agencies require custom serverless Next.js platforms to win enterprise retainers.
+          </p>
+        </div>
+
+        <div className="max-w-5xl mx-auto overflow-hidden bg-white border border-[#E5E7EB] rounded-2xl shadow-sm">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="border-b border-[#E5E7EB] bg-slate-50/80">
+                  <th className="py-4 px-6 text-xs font-extrabold text-primary-dark uppercase tracking-wider w-1/4">
+                    Features
+                  </th>
+                  <th className="py-4 px-6 text-xs font-extrabold text-slate-500 uppercase tracking-wider w-3/8">
+                    Generic Agency Web Templates
+                  </th>
+                  <th className="py-4 px-6 text-xs font-extrabold text-accent uppercase tracking-wider w-3/8 bg-purple-50/60 border-l border-[#E5E7EB]">
+                    <div className="flex items-center gap-1.5">
+                      <span>Joy Digital Next.js Agency Portal</span>
+                      <span className="bg-accent text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Recommended</span>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[#E5E7EB] text-xs">
+                <tr className="hover:bg-slate-50/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-primary-dark">
+                    Performance &amp; Speed
+                  </td>
+                  <td className="py-4 px-6 text-rose-500 font-medium">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
+                      <span>Heavy animations &amp; slow mobile load speeds</span>
+                    </div>
+                  </td>
+                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <span>Sub-1.5s Ultra-Fast Next.js architecture</span>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-slate-50/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-primary-dark">
+                    Client Lead Capture
+                  </td>
+                  <td className="py-4 px-6 text-rose-500 font-medium">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
+                      <span>Standard &apos;Contact Us&apos; email box</span>
+                    </div>
+                  </td>
+                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <span>Automated Marketing &amp; SEO Audit Lead Generator</span>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-slate-50/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-primary-dark">
+                    Case Study Showcase
+                  </td>
+                  <td className="py-4 px-6 text-rose-500 font-medium">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
+                      <span>Static image galleries with no performance metrics</span>
+                    </div>
+                  </td>
+                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <span>Interactive Portfolio with Campaign ROAS &amp; Traffic Growth Data</span>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-slate-50/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-primary-dark">
+                    Client Scheduling
+                  </td>
+                  <td className="py-4 px-6 text-rose-500 font-medium">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
+                      <span>Manual email back-and-forth for calls</span>
+                    </div>
+                  </td>
+                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <span>Seamless Calendly / Discovery Call Calendar Integration</span>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-slate-50/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-primary-dark">
+                    Scalability
+                  </td>
+                  <td className="py-4 px-6 text-rose-500 font-medium">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
+                      <span>Unoptimized code limiting international client reach</span>
+                    </div>
+                  </td>
+                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <span>Global SEO &amp; Multi-Currency Ready Framework</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+
   return (
     <ServicePageTemplate
       serviceName="Website for Marketing Agencies"
@@ -68,6 +209,7 @@ export default function MarketingAgencyWebPage() {
       heroSubtitle="Showcase your creative genius, prove campaign ROI, and land high-retainer clients. We engineer fast, visually arresting Next.js websites for digital marketing agencies, performance media firms, PR agencies, and creative studios."
       leadSource="Website for Marketing Agencies Landing Page"
       heroCtaText="Get Free Agency Web Quote"
+      canonicalUrl="https://www.joydigital.in/website-for-marketing-agencies"
       overviewTitle="Why Most Marketing Agency Websites Fail to Convert High-Value Clients (And How We Fix It)"
       overviewContent={
         <div className="space-y-6">
@@ -165,6 +307,7 @@ export default function MarketingAgencyWebPage() {
           description: "Dedicated page for web agencies, IT firms, and freelancers seeking white-label marketing execution services.",
         },
       ]}
+      afterBenefitsSection={comparisonTable}
       processTitle="Our 6-Step Agency Web Engineering Roadmap"
       processSubtitle="A proven framework for launching a high-converting agency platform."
       processSteps={[
