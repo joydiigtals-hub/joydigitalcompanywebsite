@@ -56,15 +56,15 @@ export const HOME_FAQS = [
   },
   {
     question: "How do I choose the right custom website development company for my business?",
-    answer: "When selecting a custom website development company, look for an agency that delivers custom, high-speed, and search-optimized Next.js/React solutions rather than rigid off-the-shelf templates. At Joy Digital, we act as your dedicated web engineering team, building bespoke web platforms engineered for sub-second speeds, mobile responsiveness, and enterprise Google search visibility."
+    answer: "When selecting a custom website development company, look for an agency that delivers custom, high-speed, and search-optimized Next.js/React solutions rather than rigid off-the-shelf templates. At Joy Digital, we act as your dedicated web engineering team, building bespoke web platforms engineered for fast load speeds, mobile responsiveness, and clean search visibility."
   },
   {
     question: "Why should I hire a bespoke web development team rather than using rigid templates?",
-    answer: "Partnering with a dedicated web engineering team ensures your website is custom-engineered to achieve 95+ Core Web Vitals scores, maintain 100% code IP ownership, and capture organic leads globally."
+    answer: "Partnering with a dedicated web engineering team ensures your website is custom-engineered to achieve strong Core Web Vitals performance, maintain full code ownership, and capture organic leads."
   },
   {
     question: "Why choose Joy Digital as your web development and SEO partner?",
-    answer: "Joy Digital stands out by combining sub-second Next.js web engineering with technical SEO audits and high-converting performance marketing. We help global brands scale organic revenue."
+    answer: "Joy Digital stands out by combining modern Next.js web development with technical SEO foundations and conversion-focused design. We help businesses attract and convert qualified enquiries."
   },
   {
     question: "What should businesses look for when partnering with a digital agency?",
@@ -72,7 +72,7 @@ export const HOME_FAQS = [
   },
   {
     question: "Why is Joy Digital considered a top choice for web development services?",
-    answer: "We specialize in custom Next.js and React architecture. We engineer lightning-fast platforms designed to rank globally on search engines, load under 1.5 seconds, and generate consistent high-intent client inquiries."
+    answer: "We specialize in custom Next.js and React architecture. We engineer fast, responsive platforms designed to rank on search engines, deliver smooth user experiences on mobile and desktop, and generate consistent customer enquiries."
   },
   {
     question: "What is the difference between web design and web development?",
@@ -88,7 +88,7 @@ export const HOME_FAQS = [
   },
   {
     question: "How can businesses capture more global B2B leads?",
-    answer: "To secure B2B projects from the US, UK, or UAE, companies should combine technical SEO landing pages, targeted LinkedIn outreach, and sub-second Next.js site performance to retain international trust."
+    answer: "To secure B2B projects from the US, UK, or UAE, companies should combine technical SEO landing pages, targeted LinkedIn outreach, and fast, responsive website performance to retain visitor trust."
   },
   {
     question: "How do I start a project with Joy Digital?",
@@ -170,8 +170,8 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
     },
     {
       icon: "fa-solid fa-sliders text-[#7C3AED]",
-      title: "Custom Engineered Solutions",
-      description: "No bloated page builders. We build tailor-made Next.js and React interfaces configured to your conversion goals."
+      title: "Custom Tailored Solutions",
+      description: "Tailored design and development built around your business goals without relying on rigid, bloated templates."
     },
     {
       icon: "fa-solid fa-comments text-[#7C3AED]",
@@ -195,8 +195,8 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
     {
       icon: "fa-solid fa-[#7C3AED] fa-cubes",
       title: "Custom Website Development",
-      description: "Bespoke Next.js and React web applications engineered for sub-second page loads, enterprise security, and 100% IP code ownership.",
-      benefits: ["Sub-second Edge latency", "Zero plugin security vulnerabilities", "100% IP & code ownership"],
+      description: "Bespoke Next.js and React websites built for high performance, responsive design, and full code ownership.",
+      benefits: ["Fast performance & Core Web Vitals", "Clean and secure code architecture", "Full code and IP ownership"],
       href: "/custom-website-development",
       cta: "Explore Custom Web Dev"
     },
@@ -211,16 +211,16 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
     {
       icon: "fa-brands fa-react text-[#7C3AED]",
       title: "Next.js Development Agency",
-      description: "Premium Next.js development agency delivering highly scalable, sub-second web applications for global enterprise clients.",
-      benefits: ["Sub-second page loads", "Server-side rendering", "Headless architecture"],
+      description: "Next.js web development delivering modern, fast, and scalable web solutions for growing businesses.",
+      benefits: ["Fast page rendering", "Server-side and static optimization", "Scalable component architecture"],
       href: "/nextjs-development-agency",
       cta: "Explore Next.js Agency"
     },
     {
       icon: "fa-solid fa-arrows-rotate text-[#7C3AED]",
       title: "WordPress to Next.js Migration",
-      description: "Zero-downtime migration of slow WordPress setups to high-speed serverless Next.js with 100% SEO redirect preservation.",
-      benefits: ["Sub-second page loads", "100% SEO equity preserved", "Zero plugin exploits"],
+      description: "Smooth migration of slow WordPress sites to modern Next.js architecture with full 301 redirect mapping to protect your SEO.",
+      benefits: ["Faster loading times", "Careful SEO structure preservation", "Reduced plugin dependencies"],
       href: "/wordpress-to-nextjs-migration",
       cta: "Explore WP Migration"
     },
@@ -235,8 +235,8 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
     {
       icon: "fa-solid fa-bolt",
       title: "Static Website Development",
-      description: "Sub-second pre-rendered static sites built with Next.js & React. Zero database bottlenecks, 100% serverless security, and top Core Web Vitals.",
-      benefits: ["Sub-second page loads", "Zero database maintenance", "100% serverless security"],
+      description: "Pre-rendered static websites built with Next.js & React for fast loading, high reliability, and minimal hosting overhead.",
+      benefits: ["Fast page delivery", "Minimal server maintenance", "Secure and reliable setup"],
       href: "/static-website-development",
       cta: "Explore Static Web Dev"
     },
@@ -478,7 +478,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                     </div>
                     <div className="bg-[#211942] rounded-xl p-4 border border-[#3A2D70]">
                       <div className="text-[10px] text-slate-400 mb-1 uppercase font-bold">Mobile Speed</div>
-                      <div className="text-2xl font-extrabold text-white">0.8s</div>
+                      <div className="text-2xl font-extrabold text-white">Fast</div>
                     </div>
                   </div>
                 </div>

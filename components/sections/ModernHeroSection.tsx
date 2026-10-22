@@ -20,6 +20,7 @@ import {
 import { getUtmParameters } from "@/lib/utmTracker";
 import { ALL_COUNTRY_CODES, POPULAR_COUNTRY_CODES, getFilteredCountries } from "@/lib/countryCodes";
 import GetQuoteModal from "@/components/ui/GetQuoteModal";
+import DigitalNetworkBackground from "@/components/ui/DigitalNetworkBackground";
 
 interface ModernHeroSectionProps {
   country?: string;
@@ -28,8 +29,8 @@ interface ModernHeroSectionProps {
 const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919080026133";
 
-const heroMainWords = ["Next.js", "&", "Custom", "Web", "Development", "Company", "for"];
-const heroGradientWords = ["Global", "Businesses"];
+const heroMainWords = ["Custom", "Website", "Development", "for", "Businesses"];
+const heroGradientWords = ["Ready", "to", "Grow"];
 
 // Framer Motion Variants for Staggered Orchestration (Optimized for Mobile Speed)
 export default function ModernHeroSection({ country = "" }: ModernHeroSectionProps) {
@@ -121,10 +122,10 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
           ? formData.mobile.trim()
           : `${selectedCountryCode} ${formData.mobile.trim()}`,
         Website: formData.website.trim() || "N/A",
-        Service: "Free $499 Website & SEO Audit + Strategy Proposal",
+        Service: "Free Website Consultation & Audit + Strategy Proposal",
         Source: "Hero Booking Consultation Form",
         utmParams: utm || undefined,
-        _subject: `⚡ Free $499 Website & SEO Audit Request - ${formData.name.trim()} [Joy Digital]`,
+        _subject: `⚡ Free Website Consultation & Audit Request - ${formData.name.trim()} [Joy Digital]`,
       };
 
       const response = await fetch("/api/enquiry", {
@@ -153,7 +154,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
 
       const queryParams = new URLSearchParams({
         name: formData.name.trim(),
-        service: "Free $499 Website & SEO Audit",
+        service: "Free Website Consultation & Audit",
         mobile: formData.mobile.trim(),
       }).toString();
 
@@ -179,26 +180,19 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
   return (
     <section className="relative pt-24 lg:pt-32 pb-20 overflow-hidden bg-[#0B0914] text-white border-b border-[#1E1838] select-none">
 
-      {/* Moving Aurora Orbs (Optimized for Mobile: Hidden on small screens, desktop-only ambient lighting) */}
-      <div className="hidden md:block absolute -top-28 right-1/4 w-[600px] lg:w-[750px] h-[600px] lg:h-[750px] bg-gradient-to-tr from-purple-700/25 via-purple-600/20 to-indigo-600/15 rounded-full blur-[140px] pointer-events-none z-0 animate-aurora-1" />
-      <div className="hidden md:block absolute -bottom-24 -left-20 w-[500px] lg:w-[650px] h-[500px] lg:h-[650px] bg-gradient-to-br from-blue-700/20 via-indigo-900/25 to-purple-900/15 rounded-full blur-[130px] pointer-events-none z-0 animate-aurora-2" />
-      <div className="hidden md:block absolute top-1/3 left-1/3 w-[450px] lg:w-[550px] h-[450px] lg:h-[550px] bg-gradient-to-r from-violet-600/15 to-purple-800/10 rounded-full blur-[120px] pointer-events-none z-0 animate-aurora-3" />
+      {/* Lightweight Digital Network & Ambient Glow Background */}
+      <DigitalNetworkBackground />
 
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
         
         {/* LEFT COLUMN: Staggered Hero Copy & Actions */}
         <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6">
           
-          {/* Step 1: Top Badges */}
+          {/* Step 1: Eyebrow Badge */}
           <div className="flex flex-wrap items-center gap-2">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#18132E] border border-[#2D244E] text-[#A78BFA] text-xs font-semibold shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-[#A78BFA]" />
-              <span>Global B2B Web Engineering Specialists</span>
-            </div>
-
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/40 text-emerald-300 text-xs font-bold shadow-sm">
-              <Zap className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Free Website &amp; SEO Audit ($499 Value)</span>
+              <span>Custom Websites &amp; SEO-Friendly Solutions</span>
             </div>
           </div>
 
@@ -219,7 +213,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
             {/* Step 3: Subtitle & Feature Bullet Points */}
           <div className="space-y-4 max-w-2xl">
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-              Custom Next.js &amp; full-stack web architecture built to scale global B2B brands and dynamic digital platforms.
+              We build custom, mobile-friendly websites that help businesses showcase their services, reach more customers, and generate enquiries. From business websites to specialized travel platforms, our solutions are designed around your goals.
             </p>
 
             <div className="space-y-2.5 pt-1">
@@ -227,21 +221,21 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                 <div className="w-5 h-5 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shrink-0">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                 </div>
-                <span>Sub-second page loads (Core Web Vitals optimized)</span>
+                <span>Custom websites tailored to your business needs</span>
               </div>
 
               <div className="flex items-center gap-2.5 text-sm text-slate-200 font-medium">
                 <div className="w-5 h-5 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shrink-0">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                 </div>
-                <span>Enterprise-grade search &amp; security architectures</span>
+                <span>Mobile-friendly design and performance-focused development</span>
               </div>
 
               <div className="flex items-center gap-2.5 text-sm text-slate-200 font-medium">
                 <div className="w-5 h-5 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shrink-0">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                 </div>
-                <span>Zero maintenance &amp; 99.9% uptime guaranteed</span>
+                <span>SEO-friendly structure and clear enquiry pathways</span>
               </div>
             </div>
           </div>
@@ -250,7 +244,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
           <div className="space-y-6 pt-2 w-full max-w-xl">
             <div className="flex flex-wrap items-center gap-3">
               <GetQuoteModal
-                triggerText="Get Free Quote"
+                triggerText="Get a Free Quote"
                 source="Hero Left CTA"
                 triggerClassName="px-7 py-3.5 text-sm font-bold rounded-xl"
               />
@@ -259,7 +253,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                 onClick={handleExploreCaseStudies}
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#17122B] hover:bg-[#20193B] border border-[#2B2346] hover:border-[#7C3AED]/50 text-white text-sm font-bold transition-all shadow-lg group cursor-pointer"
               >
-                <span>Explore Case Studies</span>
+                <span>Explore Our Work</span>
                 <ArrowRight className="w-4 h-4 text-[#A78BFA] group-hover:translate-x-1 transition-transform duration-300" />
               </a>
             </div>
@@ -284,13 +278,13 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
               <div className="mb-5">
                 <div className="inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-widest text-emerald-300 bg-emerald-950/60 border border-emerald-500/40 px-2.5 py-0.5 rounded-full mb-2">
                   <Clock className="w-3 h-3 text-emerald-400" />
-                  <span>Free $499 Audit Included</span>
+                  <span>Free Project Review</span>
                 </div>
                 <h3 className="text-xl font-extrabold text-white tracking-tight">
-                  Get Your Free $499 Website &amp; SEO Audit
+                  Request a Free Project Consultation &amp; Audit
                 </h3>
                 <p className="text-xs text-slate-300 mt-1.5 leading-relaxed">
-                  Fill in the details below to claim your personalized 20+ page Website &amp; SEO Audit report and custom project proposal.
+                  Share your project requirements or existing website to receive actionable recommendations and a transparent proposal.
                 </p>
               </div>
 
@@ -435,7 +429,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                       </>
                     ) : (
                       <>
-                        <span>Claim My Free Audit &amp; Proposal</span>
+                        <span>Request Free Consultation &amp; Proposal</span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                       </>
                     )}
@@ -443,7 +437,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
 
                   <div className="flex items-center gap-2.5">
                     <a
-                      href={`https://wa.me/${whatsappNumber}?text=Hi%20Joy%20Digital,%20I'd%20like%20to%20claim%20my%20free%20$499%20Website%20&%20SEO%20Audit%20and%20project%20proposal.`}
+                      href={`https://wa.me/${whatsappNumber}?text=Hi%20Joy%20Digital,%20I'd%20like%20to%20discuss%20a%20website%20development%20project%20and%20request%20a%20free%20consultation.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 py-3 px-3 rounded-xl bg-[#25D366] hover:bg-[#128C7E] border border-[#25D366] text-white font-bold text-xs shadow-lg hover:shadow-emerald-900/20 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer group hover:scale-[1.02] active:scale-[0.98]"
@@ -454,7 +448,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                     </a>
 
                     <a
-                      href={`mailto:${contactEmail}?subject=Free%20Website%20%26%20SEO%20Audit%20Inquiry`}
+                      href={`mailto:${contactEmail}?subject=Website%20Development%20%26%20Consultation%20Inquiry`}
                       className="flex-1 py-3 px-3 rounded-xl bg-[#1A1433] hover:bg-[#20193B] border border-[#2D2352] text-slate-200 hover:text-white font-bold text-xs shadow-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer group hover:scale-[1.02] active:scale-[0.98]"
                       aria-label="Email Us"
                     >
