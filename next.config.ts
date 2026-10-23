@@ -154,6 +154,19 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/sitemap.xsl",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "text/xsl; charset=utf-8",
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
         source: "/sitemap.xml",
         headers: [
           {

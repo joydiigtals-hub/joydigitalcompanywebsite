@@ -161,7 +161,7 @@
                 <tr>
                   <td>
                     <a href="{sitemap:loc}"><xsl:value-of select="sitemap:loc"/></a>
-                    <xsl:if select="xhtml:link">
+                    <xsl:if test="xhtml:link">
                       <div class="alternates-list">
                         <span style="color: #64748b; font-weight: 500; margin-right: 4px;">Hreflang Alternates:</span>
                         <xsl:for-each select="xhtml:link">
