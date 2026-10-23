@@ -402,11 +402,21 @@ export default function Footer() {
           <h4 className="text-sm font-bold uppercase tracking-wider text-[#111827] relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-accent">
             Office Location
           </h4>
-          <div className="text-xs text-text-secondary flex flex-col gap-2">
-            <p className="font-medium text-[#111827] flex items-start gap-1.5 leading-relaxed">
+          <div className="text-xs text-text-secondary flex flex-col gap-3">
+            <div className="flex items-start gap-1.5 leading-relaxed">
               <i className="fa-solid fa-location-dot text-accent mt-0.5 shrink-0" />
-              <span>Madurai, Tamil Nadu, India</span>
-            </p>
+              <div>
+                <span className="font-bold text-[#111827] block">Madurai (HQ):</span>
+                <span>Madurai, Tamil Nadu, India</span>
+              </div>
+            </div>
+            <div className="flex items-start gap-1.5 leading-relaxed border-t border-[#E5E7EB] pt-2">
+              <i className="fa-solid fa-handshake text-accent mt-0.5 shrink-0" />
+              <div>
+                <span className="font-bold text-[#111827] block">Chennai (Our Partners):</span>
+                <span>11, Jothi nagar 5th street, Murugappa polytechnic nearby, Avadi, Chennai 600053</span>
+              </div>
+            </div>
           </div>
           <ul className="flex flex-col gap-2.5 text-xs text-text-secondary border-t border-[#E5E7EB] pt-3">
             <li className="flex items-center gap-2">

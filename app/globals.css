@@ -170,8 +170,8 @@ i[class*="fa-"] {
   }
 }
 
-/* Blog article text links underlines */
-.prose a {
+/* Blog article text links underlines (exclude buttons, not-prose and colored buttons) */
+.prose a:not([class*="bg-"]):not([class*="btn"]):not([class*="text-white"]):not(.not-prose *) {
   position: relative;
   text-decoration: none !important;
   color: #7C3AED !important;
@@ -179,7 +179,7 @@ i[class*="fa-"] {
   transition: color 0.2s ease;
 }
 
-.prose a::after {
+.prose a:not([class*="bg-"]):not([class*="btn"]):not([class*="text-white"]):not(.not-prose *)::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -192,8 +192,22 @@ i[class*="fa-"] {
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.prose a:hover::after {
+.prose a:not([class*="bg-"]):not([class*="btn"]):not([class*="text-white"]):not(.not-prose *):hover::after {
   transform: scaleX(1);
+}
+
+/* Ensure button links inside prose or not-prose always preserve explicit white font */
+.prose a[class*="text-white"],
+.prose a[class*="bg-"],
+.not-prose a[class*="text-white"],
+.not-prose a[class*="bg-"] {
+  color: #FFFFFF !important;
+}
+.prose a[class*="text-white"] *,
+.prose a[class*="bg-"] *,
+.not-prose a[class*="text-white"] *,
+.not-prose a[class*="bg-"] * {
+  color: #FFFFFF !important;
 }
 
 /* Sidebar Table of Contents active trackers */
