@@ -1,10 +1,11 @@
 import { getAllPosts } from '@/lib/blog';
 
-// Force dynamic execution so new blog posts or updates appear dynamically in sitemap.xml
-export const revalidate = 86400; // Revalidate daily
+// Force dynamic execution with daily ISR revalidation so newly published blogs appear dynamically
+export const dynamic = 'force-dynamic';
+export const revalidate = 86400;
 
 function escapeXml(unsafe: string): string {
-  return unsafe.replace(/[<>&'"]/g, (c) => {
+  return String(unsafe).replace(/[<>&'"]/g, (c) => {
     switch (c) {
       case '<':
         return '&lt;';
@@ -43,7 +44,7 @@ export async function GET() {
     // Localized route paths
     const localizedPaths = ['', '/seo-services', '/website-development', '/contact'];
 
-    // Global static routes (unified, non-country specific)
+    // Global static routes (canonical, non-country specific)
     const unifiedStaticPaths = [
       '/about',
       '/ai-search-optimization',
@@ -76,6 +77,8 @@ export async function GET() {
       '/local-seo-services',
       '/seo-services-chennai',
       '/digital-marketing-agency-in-chennai',
+      '/website-development-company-chennai',
+      '/website-design-company-chennai',
       '/website-development-company-madurai',
       '/website-design-company-madurai',
       '/seo-services-madurai',
@@ -222,25 +225,24 @@ export async function GET() {
 
       indexablePosts.forEach((post) => {
         const postDate = post.lastUpdatedDate || post.date || todayStr;
-        // Format to YYYY-MM-DD if ISO string
         const formattedDate = postDate.includes('T') ? postDate.split('T')[0] : postDate;
 
         entries.push({
           url: `${baseUrl}/blog/${post.slug}`,
           lastmod: formattedDate,
           changefreq: 'weekly',
-          priority: 0.6,
+          priority: 0.7,
         });
       });
     } catch (err) {
       console.error('Error fetching blog posts for sitemap.xml:', err);
     }
 
-    // Generate XML Output
+    // Build standard XML Output with proper formatting and namespaces
     let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
     xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
 
-    entries.forEach((entry) => {
+    for (const entry of entries) {
       xml += `  <url>\n`;
       xml += `    <loc>${escapeXml(entry.url)}</loc>\n`;
       if (entry.lastmod) {
@@ -253,45 +255,35 @@ export async function GET() {
         xml += `    <priority>${entry.priority.toFixed(1)}</priority>\n`;
       }
       if (entry.alternates) {
-        Object.entries(entry.alternates).forEach(([lang, href]) => {
+        for (const [lang, href] of Object.entries(entry.alternates)) {
           xml += `    <xhtml:link rel="alternate" hreflang="${escapeXml(lang)}" href="${escapeXml(href)}"/>\n`;
-        });
+        }
       }
       xml += `  </url>\n`;
-    });
+    }
 
     xml += `</urlset>`;
 
-    const xmlBuffer = Buffer.from(xml, 'utf-8');
-
-    return new Response(xmlBuffer, {
+    return new Response(xml, {
       status: 200,
       headers: {
-        'Content-Type': 'application/xml; charset=utf-8',
-        'Content-Length': xmlBuffer.length.toString(),
+        'Content-Type': 'text/xml; charset=utf-8',
         'Cache-Control': 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=43200',
+        'X-Content-Type-Options': 'nosniff',
       },
     });
   } catch (error) {
     console.error('Critical error generating dynamic sitemap.xml:', error);
-    
-    // Fallback minimal XML to prevent crashing and 500 errors
-    const fallbackXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.joydigital.in/</loc>
-    <priority>1.0</priority>
-  </url>
-</urlset>`;
 
-    const fallbackBuffer = Buffer.from(fallbackXml, 'utf-8');
+    // Fallback minimal XML to ensure a valid XML response is always returned
+    const fallbackXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>https://www.joydigital.in/</loc>\n    <priority>1.0</priority>\n  </url>\n</urlset>`;
 
-    return new Response(fallbackBuffer, {
+    return new Response(fallbackXml, {
       status: 200,
       headers: {
-        'Content-Type': 'application/xml; charset=utf-8',
-        'Content-Length': fallbackBuffer.length.toString(),
+        'Content-Type': 'text/xml; charset=utf-8',
         'Cache-Control': 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=1800',
+        'X-Content-Type-Options': 'nosniff',
       },
     });
   }

@@ -14,8 +14,10 @@ const genericImages = [
 function getRelatedImage(title, slug) {
   const text = (title + ' ' + slug).toLowerCase();
   
-  if (text.includes('travel') || text.includes('safari') || text.includes('ota') || text.includes('tour') || text.includes('resort')) {
+  if (text.includes('travel') || text.includes('safari') || text.includes('ota') || text.includes('tour') || text.includes('resort') || text.includes('tourism')) {
     const travelImages = [
+      '/assets/images/blog/essential-tourism-website-features.webp',
+      '/assets/images/blog/tourism-business-website.webp',
       '/assets/images/blog/travel-ai-trip-planner.png',
       '/assets/images/blog/travel-direct-booking.png',
       '/assets/images/blog/travel-website-features-hero.png'
