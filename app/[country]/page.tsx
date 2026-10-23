@@ -58,15 +58,15 @@ const METADATA_MAP: Record<string, { title: string; description: string }> = {
     description: "Empower your business with fast, search-compliant Next.js websites and Google ranking strategies engineered for Australian businesses.",
   },
   es: {
-    title: "Agencia de Desarrollo Web Next.js y SEO | Joy Digital España",
+    title: "Agencia de Desarrollo Web Next.js y SEO España",
     description: "Impulsa tu negocio con Joy Digital. Diseñamos sitios web rápidos en Next.js y estrategias SEO orientadas a resultados para clientes en España y Latinoamérica.",
   },
   de: {
-    title: "Webdesign & Next.js Entwicklung Agentur | Joy Digital Deutschland",
+    title: "Webdesign & Next.js Entwicklung Agentur Deutschland",
     description: "Wachsen Sie online mit Joy Digital. Wir entwickeln erstklassige Next.js Websites und datengesteuerte SEO-Lösungen für Unternehmen in Deutschland.",
   },
   fr: {
-    title: "Agence de Création Web Next.js & Référencement SEO | Joy Digital France",
+    title: "Agence de Création Web Next.js & Référencement SEO France",
     description: "Développez votre entreprise avec Joy Digital. Nous créons des sites web Next.js ultra-rapides et des solutions SEO sur mesure pour le marché français.",
   },
   it: {

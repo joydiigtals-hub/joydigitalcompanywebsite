@@ -4,7 +4,7 @@ import Link from "next/link";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "SEO Services in Madurai | Top SEO Company & Agency - Joy Digital",
+  title: "SEO Services in Madurai | Top SEO Company & Agency",
   description: "Drive qualified local leads and Google Maps 3-Pack rankings with expert SEO services in Madurai. Joy Digital delivers technical SEO, speed audits & citation growth.",
   keywords: [
     "seo services in madurai",

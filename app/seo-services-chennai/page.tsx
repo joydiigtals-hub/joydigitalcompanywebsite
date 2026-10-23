@@ -5,7 +5,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "SEO Services in Chennai | SEO Company & Agency - Joy Digital",
+  title: "SEO Services in Chennai | SEO Company & Agency",
   description: "Drive qualified business leads with expert SEO services in Chennai. Joy Digital delivers technical SEO audits, Google Maps 3-Pack rankings & high-speed web architecture.",
   keywords: [
     "seo services in chennai",

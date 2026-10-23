@@ -4,7 +4,7 @@ import Link from "next/link";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Best Website Development Company in Madurai | Joy Digital",
+  title: "Best Website Development Company in Madurai",
   description: "Build sub-second, custom websites with Joy Digital, a leading website development company in Madurai. Expert Next.js, React & high-converting business portals.",
   keywords: [
     "best website development company in madurai",

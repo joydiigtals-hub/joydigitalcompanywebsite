@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Sparkles, ArrowLeft, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Get Quote Modal Demo | Joy Digital",
+  title: "Get Quote Modal Demo",
   description: "Interactive demo and test sandbox for GetQuoteModal component.",
   robots: {
     index: false,
