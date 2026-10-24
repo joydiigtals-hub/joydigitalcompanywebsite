@@ -2,8 +2,20 @@ const { MongoClient } = require('mongodb');
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
+const dns = require('dns');
+
+if (process.platform === 'win32') {
+  try {
+    dns.setServers(['8.8.8.8', '1.1.1.1']);
+  } catch (e) {
+    console.warn('DNS server setting warning:', e.message);
+  }
+}
 
 const slugsToSync = [
+  'commercial-solar-epc-business-plan',
+  'maximize-solar-profit-margins',
+  'digital-marketing-for-solar-companies',
   'why-tourism-business-needs-website',
   'essential-tourism-website-features'
 ];
