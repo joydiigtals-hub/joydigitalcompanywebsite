@@ -149,7 +149,7 @@ const nextConfig: NextConfig = {
         destination: "/web-design-services",
         permanent: true,
       },
-          ];
+    ];
   },
   async headers() {
     return [
@@ -172,6 +172,32 @@ const nextConfig: NextConfig = {
           {
             key: "Content-Type",
             value: "text/xml; charset=utf-8",
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, s-maxage=86400, stale-while-revalidate=43200",
+          },
+        ],
+      },
+      {
+        source: "/llms.txt",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "text/plain; charset=utf-8",
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, s-maxage=86400, stale-while-revalidate=43200",
+          },
+        ],
+      },
+      {
+        source: "/llms-full.txt",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "text/plain; charset=utf-8",
           },
           {
             key: "Cache-Control",

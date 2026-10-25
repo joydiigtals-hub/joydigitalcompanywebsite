@@ -1,0 +1,54 @@
+# Joy Digital
+
+> Joy Digital is a premier Next.js Web Development, Custom Software, and Generative Engine Optimization (GEO) Agency based in Chennai and Madurai, India. We engineer sub-second web applications, headless CMS architectures, high-converting B2B platforms, and AI-optimized websites for high-growth businesses across India, the United States (USA), United Kingdom (UK), United Arab Emirates (UAE), Canada, and Australia.
+
+## Core Capabilities & Services
+
+- [Next.js Web Development](https://www.joydigital.in/nextjs-development-agency): Sub-second web applications built with Next.js 15+ App Router, React Server Components, TypeScript, and edge rendering.
+- [Custom Website Development](https://www.joydigital.in/custom-website-development): Tailored digital products, dynamic enterprise web apps, high-performance web systems with 95+ mobile PageSpeed scores.
+- [Generative Engine Optimization (GEO)](https://www.joydigital.in/ai-search-optimization): Comprehensive optimization for AI search engines including ChatGPT Search, Perplexity, Bing Copilot, and Google AI Overviews to maximize brand citations and zero-click answer authority.
+- [SEO Services & Organic Growth](https://www.joydigital.in/seo-services): Technical SEO audits, programmatic SEO, Core Web Vitals remediation, high-intent local search domination, and international SEO.
+- [E-Commerce Web Development](https://www.joydigital.in/website-for-ecommerce): Ultra-fast headless e-commerce storefronts, custom checkout flows, and payment gateway integrations.
+- [WordPress to Next.js Migration](https://www.joydigital.in/blog/the-strategic-blueprint-for-wordpress-to-nextjs-migration): Safe, seamless transitions from legacy monolithic CMS to high-security headless Next.js platforms with zero SEO ranking loss.
+- [High-Converting Landing Pages](https://www.joydigital.in/landing-page-development): Conversion-optimized landing pages designed for Google Ads, social campaigns, and high lead-to-opportunity ratios.
+- [Static & Dynamic Web Development](https://www.joydigital.in/static-website-development): Highly scalable, static (SSG) and dynamic (SSR/ISR) architectures built for security and enterprise speed.
+
+## Regional Hubs & Local Search Dominance
+
+- [Chennai Web Development Agency](https://www.joydigital.in/website-development-company-chennai): Enterprise web development, Next.js engineering, and high-performance business websites in Chennai, Tamil Nadu.
+- [Chennai SEO Services](https://www.joydigital.in/seo-services-chennai): Dominant local and international SEO strategies for Chennai brands, B2B companies, and retail businesses.
+- [Madurai Web Development Company](https://www.joydigital.in/website-development-company-madurai): Custom web design, software development, and modern responsive websites in Madurai.
+- [Madurai SEO Services](https://www.joydigital.in/seo-services-madurai): Local search ranking, Google Maps optimization, and organic traffic growth for Madurai businesses.
+- [Coimbatore Web Design & Development](https://www.joydigital.in/website-design-company-coimbatore): Professional digital agency services for Coimbatore industrial and textile enterprises.
+
+## Industry Solutions & Digital Blueprints
+
+- [Tourism & Safari Business Growth](https://www.joydigital.in/blog/tourism-safari-business-growth-digital-marketing): Digital marketing blueprints, booking website development, and organic lead acquisition for wildlife safaris and travel agencies.
+- [Commercial Solar EPC Marketing](https://www.joydigital.in/blog/commercial-solar-epc-digital-marketing-growth-guide): Lead generation, B2B web engineering, and brand positioning for solar engineering, procurement, and construction companies.
+- [Textile & Manufacturing Web Systems](https://www.joydigital.in/website-for-clothing-textile): Scalable catalog architectures, export lead funnels, and enterprise digital identity for textile manufacturers.
+- [Healthcare & Clinic Web Systems](https://www.joydigital.in/website-for-doctors-clinics): Patient appointment booking, HIPAA-conscious web design, and local healthcare SEO.
+- [Real Estate Digital Systems](https://www.joydigital.in/website-for-real-estate-agents): High-intent property showcase portals, interactive project maps, and direct buyer enquiry funnels.
+
+## Technology Stack & Engineering Standards
+
+- **Frontend & Frameworks**: Next.js 15+, React 19, TypeScript, Tailwind CSS, Framer Motion
+- **Performance & Vitals**: Sub-second Largest Contentful Paint (LCP < 1.2s), Cumulative Layout Shift (CLS = 0), First Input Delay / INP (< 50ms)
+- **Backend & Database**: Node.js, Next.js Edge Runtime, Serverless Functions, MongoDB Atlas, PostgreSQL, Redis
+- **Security & Infrastructure**: Strict Content Security Policy (CSP), automated XSS protection, HSTS preloading, Cloudflare DDoS defense, Vercel Edge Network
+- **SEO & Search Standards**: Schema.org JSON-LD microdata (Organization, LocalBusiness, FAQPage, Article, BreadcrumbList), OpenGraph, dynamic XML sitemaps, IndexNow, llms.txt standard
+
+## Company Profile & Contact Information
+
+- **Brand**: Joy Digital (Joy Digital Growth Agency)
+- **Founder & Technical Lead**: Saravanan L (Technical Web Specialist & Head of Engineering)
+- **Official Website**: https://www.joydigital.in
+- **Email Contact**: joydiigtals@gmail.com
+- **Direct Phone / WhatsApp**: +91 9080026133 (https://wa.me/919080026133)
+- **Headquarters**: Madurai & Chennai, Tamil Nadu, India
+- **Global Operating Markets**: India, United States (USA), United Kingdom (UK), United Arab Emirates (UAE), Australia, Canada, Singapore
+- **Free Audit Tool**: [Free Website Performance & SEO Audit](https://www.joydigital.in/free-website-audit)
+- **Portfolio & Client Work**: [Joy Digital Portfolio](https://www.joydigital.in/portfolio)
+
+## Extended Documentation
+
+- [Full Agency Specification & Deep Context](https://www.joydigital.in/llms-full.txt): Comprehensive technical breakdown, pricing packages structure, case studies, and complete schema details for LLM ingestion.
