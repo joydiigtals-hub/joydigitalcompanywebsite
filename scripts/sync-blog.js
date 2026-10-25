@@ -13,6 +13,9 @@ if (process.platform === 'win32') {
 }
 
 const slugsToSync = [
+  'tourism-business-plan',
+  'increase-profit-tourism-business',
+  'digital-marketing-tourism-africa',
   'commercial-solar-epc-business-plan',
   'maximize-solar-profit-margins',
   'digital-marketing-for-solar-companies',
