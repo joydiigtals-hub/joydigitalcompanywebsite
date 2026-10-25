@@ -51,6 +51,39 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
   const wordCount = cleanText ? cleanText.split(/\s+/).filter(Boolean).length : 0;
   const readingTime = Math.max(1, Math.ceil(wordCount / 200));
 
+  // Split htmlContent at 2nd or 3rd H2 for High-Converting Mid-Article Conversion Callout
+  const { beforeHtml, afterHtml } = React.useMemo(() => {
+    if (!htmlContent) return { beforeHtml: "", afterHtml: "" };
+    const h2Regex = /<h2[^>]*>/gi;
+    const matches: number[] = [];
+    let match;
+    while ((match = h2Regex.exec(htmlContent)) !== null) {
+      matches.push(match.index);
+    }
+    // Prefer splitting before 3rd H2 if available, or 2nd H2
+    if (matches.length >= 2) {
+      const splitAt = matches.length >= 3 ? matches[2] : matches[1];
+      return {
+        beforeHtml: htmlContent.slice(0, splitAt),
+        afterHtml: htmlContent.slice(splitAt),
+      };
+    }
+    // Fallback: split after 3rd paragraph </p>
+    const pRegex = /<\/p>/gi;
+    const pMatches: number[] = [];
+    while ((match = pRegex.exec(htmlContent)) !== null) {
+      pMatches.push(match.index + 4);
+    }
+    if (pMatches.length >= 3) {
+      const splitAt = pMatches[2];
+      return {
+        beforeHtml: htmlContent.slice(0, splitAt),
+        afterHtml: htmlContent.slice(splitAt),
+      };
+    }
+    return { beforeHtml: htmlContent, afterHtml: "" };
+  }, [htmlContent]);
+
   // Parse Headings to generate Table of Contents (TOC)
   useEffect(() => {
     const contentArea = document.querySelector(".prose-content");
@@ -292,6 +325,34 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
             <div className="mt-8 pt-5 border-t border-slate-150 pl-3.5">
               <BlogShareButtons title={post.title} slug={slug} variant="sidebar" />
             </div>
+
+            {/* Sticky Lead Generation Widget in Desktop Sidebar */}
+            <div className="mt-8 p-5 bg-gradient-to-br from-slate-900 to-purple-950 text-white rounded-2xl shadow-md border border-purple-500/25">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-[10px] uppercase font-black tracking-widest text-emerald-400">Ready to Consult</span>
+              </div>
+              <h4 className="text-xs font-black leading-snug mb-1.5 text-white">
+                Want a Website That Generates Real Inbound Leads?
+              </h4>
+              <p className="text-[11px] text-slate-300 leading-relaxed mb-4 font-medium">
+                Custom sub-second Next.js web systems built with built-in Google &amp; AI Search (GEO) rankings.
+              </p>
+              <a
+                href={`https://wa.me/919080026133?text=${encodeURIComponent(`Hi Joy Digital, I was reading "${post.title}" and would like to discuss building a high-converting website.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-2.5 px-3 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xs rounded-xl flex items-center justify-center gap-2 shadow-md transition-all hover:scale-[1.02] mb-2"
+              >
+                <i className="fa-brands fa-whatsapp text-sm" /> Chat on WhatsApp
+              </a>
+              <Link
+                href="/free-website-audit"
+                className="w-full py-2 px-3 bg-white/10 hover:bg-white/20 text-white font-bold text-[11px] rounded-xl flex items-center justify-center gap-1.5 transition-all text-center border border-white/10"
+              >
+                <i className="fa-solid fa-gauge-high text-[10px] text-purple-300" /> Free Performance Audit
+              </Link>
+            </div>
           </aside>
         )}
 
@@ -312,8 +373,75 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
                        prose-table:w-full prose-table:border-collapse prose-table:my-6
                        prose-th:bg-slate-50 prose-th:border prose-th:border-[#E2E8F0] prose-th:p-3.5 prose-th:text-xs prose-th:font-extrabold prose-th:text-slate-900
                        prose-td:border prose-td:border-[#E2E8F0] prose-td:p-3.5 prose-td:text-xs prose-td:font-semibold"
-            dangerouslySetInnerHTML={{ __html: htmlContent }}
-          />
+          >
+            {afterHtml ? (
+              <>
+                <div dangerouslySetInnerHTML={{ __html: beforeHtml }} />
+
+                {/* High-Converting Mid-Article Conversion Callout Box */}
+                <div className="my-10 p-6 sm:p-8 bg-gradient-to-br from-slate-950 via-slate-900 to-purple-950 text-white rounded-3xl border border-purple-500/30 shadow-xl relative overflow-hidden not-prose select-none">
+                  <div className="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
+                  <div className="relative z-10">
+                    <div className="flex flex-wrap items-center gap-2 mb-3">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        Turn Search Traffic into Inbound Leads
+                      </span>
+                      <span className="text-[10px] text-slate-400 font-bold hidden sm:inline">&bull; Joy Digital Growth Architecture</span>
+                    </div>
+
+                    <h3 className="text-lg sm:text-2xl font-black text-white tracking-tight leading-snug mb-2.5">
+                      Need a Website That Converts Visitors into Direct Paying Clients?
+                    </h3>
+
+                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium mb-6 max-w-2xl">
+                      Most websites fail to generate sales because they are slow and lack conversion funnels. 
+                      <strong className="text-white font-bold"> Joy Digital</strong> builds custom, sub-second Next.js web applications with 95+ PageSpeed, built-in SEO, and frictionless 1-click WhatsApp lead captures.
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6 text-xs text-slate-200 font-semibold">
+                      <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl p-2.5">
+                        <i className="fa-solid fa-bolt text-yellow-400 text-sm" />
+                        <span>Sub-second Load (&lt;800ms)</span>
+                      </div>
+                      <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl p-2.5">
+                        <i className="fa-solid fa-comments text-emerald-400 text-sm" />
+                        <span>1-Click WhatsApp Funnel</span>
+                      </div>
+                      <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl p-2.5">
+                        <i className="fa-solid fa-chart-line text-purple-400 text-sm" />
+                        <span>Built-in Google &amp; GEO Rank</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                      <a
+                        href={`https://wa.me/919080026133?text=${encodeURIComponent(`Hi Joy Digital, I was reading your article "${post.title}" and would like to consult on my website project.`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xs sm:text-sm shadow-lg shadow-emerald-500/20 hover:scale-[1.02] transition-all"
+                      >
+                        <i className="fa-brands fa-whatsapp text-base" />
+                        <span>Chat on WhatsApp (Instant Reply)</span>
+                      </a>
+
+                      <Link
+                        href="/free-website-audit"
+                        className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/15 transition-all text-center"
+                      >
+                        <i className="fa-solid fa-magnifying-glass-chart text-xs text-purple-300" />
+                        <span>Get Free 20-Point Audit</span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
+                <div dangerouslySetInnerHTML={{ __html: afterHtml }} />
+              </>
+            ) : (
+              <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+            )}
+          </div>
 
           {/* Clean Topic Badges (Modern Semantic Tags) */}
           {post.tags && post.tags.length > 0 && (
@@ -437,33 +565,44 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
       </div>
 
       {/* Conversion CTA */}
-      <section className="mt-16 bg-slate-950 border border-slate-900 text-white rounded-[32px] p-8 sm:p-12 relative overflow-hidden select-none reveal-hidden blog-card-reveal text-center">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.015] pointer-events-none" />
-        <div className="relative z-10 max-w-xl mx-auto">
-          <span className="bg-orange-500/10 text-orange-400 border border-orange-500/25 text-[9px] font-black tracking-widest px-3 py-1 rounded-full uppercase mb-4 inline-block">
-            Scale Your Business
+      <section className="mt-16 bg-gradient-to-br from-slate-950 via-slate-900 to-purple-950 border border-purple-500/30 text-white rounded-[32px] p-8 sm:p-12 relative overflow-hidden select-none reveal-hidden blog-card-reveal text-center shadow-2xl">
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
+        <div className="relative z-10 max-w-2xl mx-auto">
+          <span className="bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-[10px] font-black tracking-widest px-3.5 py-1 rounded-full uppercase mb-4 inline-flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            Direct Founder Consultation
           </span>
-          <h3 className="text-xl sm:text-2xl font-black mb-4 tracking-tight leading-snug">
-            Need Help Growing Your Business Online?
+          <h3 className="text-2xl sm:text-3xl font-black mb-4 tracking-tight leading-snug">
+            Ready to Build a Website That Actually Brings High-Ticket Clients?
           </h3>
-          <p className="text-xs text-slate-400 leading-relaxed font-semibold mb-8">
-            Leverage fast-loading Next.js web systems and proximity ranking optimizations to secure steady inbound channels.
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium mb-8">
+            Don&apos;t let another month pass with zero organic inquiries. Talk directly with Joy Digital to engineer a sub-second Next.js platform optimized for Google Page 1 and Generative AI search.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/contact"
-              className="bg-primary hover:bg-[#6D28D9] text-white font-bold text-xs px-6 py-3.5 rounded-xl shadow-md transition-all hover:scale-[1.025]"
-            >
-              Talk to Joy Digital
-            </Link>
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <a
-              href="https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20discuss%20our%20project."
+              href={`https://wa.me/919080026133?text=${encodeURIComponent(`Hello Saravanan (Joy Digital), I was reading your blog "${post.title}" and want to discuss a new website project.`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#10b981] hover:bg-[#059669] text-white font-bold text-xs px-6 py-3.5 rounded-xl shadow-md transition-all hover:scale-[1.025] flex items-center gap-1.5"
+              className="bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-500/25 transition-all hover:scale-[1.025] flex items-center gap-2"
             >
-              <i className="fa-brands fa-whatsapp" /> WhatsApp Sync
+              <i className="fa-brands fa-whatsapp text-base" /> Chat on WhatsApp Directly
             </a>
+            <Link
+              href="/free-website-audit"
+              className="bg-primary hover:bg-[#6D28D9] text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md transition-all hover:scale-[1.025] flex items-center gap-2"
+            >
+              <i className="fa-solid fa-gauge-high text-xs text-purple-200" /> Get Free 20-Point Audit
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-white/10 hover:bg-white/15 text-white font-bold text-xs sm:text-sm px-5 py-3.5 rounded-xl border border-white/15 transition-all"
+            >
+              Request Custom Quote
+            </Link>
+          </div>
+          <div className="mt-6 flex items-center justify-center gap-6 text-[11px] text-slate-400 font-semibold">
+            <span className="flex items-center gap-1.5"><i className="fa-solid fa-check text-emerald-400 text-xs" /> Response within 2 hours</span>
+            <span className="flex items-center gap-1.5"><i className="fa-solid fa-check text-emerald-400 text-xs" /> No pushy sales pitch</span>
           </div>
         </div>
       </section>
