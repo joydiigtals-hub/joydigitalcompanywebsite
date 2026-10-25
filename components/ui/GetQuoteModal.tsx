@@ -50,6 +50,10 @@ export interface GetQuoteModalProps {
   source?: string;
   /** Pre-selected service option */
   defaultService?: QuoteServiceType;
+  /** Pre-filled project notes or tier description */
+  initialNotes?: string;
+  /** Optional specific package / tier name */
+  packageName?: string;
 }
 
 export interface QuoteFormData {
@@ -70,6 +74,8 @@ export default function GetQuoteModal({
   triggerClassName = "",
   source = "Get Quote Modal",
   defaultService = "Custom Next.js Development",
+  initialNotes = "",
+  packageName = "",
 }: GetQuoteModalProps) {
   // Support both uncontrolled (internal trigger) and controlled modes
   const isControlled = controlledIsOpen !== undefined;
@@ -83,9 +89,20 @@ export default function GetQuoteModal({
     phone: "",
     email: "",
     service: defaultService,
-    notes: "",
+    notes: initialNotes,
     _honey: "",
   });
+
+  // Keep notes & service synced when modal opens or props change
+  useEffect(() => {
+    if (isModalOpen) {
+      setFormData((prev) => ({
+        ...prev,
+        service: defaultService || prev.service,
+        notes: initialNotes !== undefined && initialNotes !== "" ? initialNotes : prev.notes,
+      }));
+    }
+  }, [isModalOpen, initialNotes, defaultService]);
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -423,7 +440,7 @@ export default function GetQuoteModal({
                       id={titleId}
                       className="text-xl sm:text-2xl font-bold text-white tracking-tight"
                     >
-                      Request a Project Quote
+                      {packageName ? `Get Quote: ${packageName}` : "Request a Project Quote"}
                     </h2>
                     <p
                       id={descId}

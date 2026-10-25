@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
@@ -15,6 +15,21 @@ const StickyWidgets = dynamic(() => import("@/components/ui/StickyWidgets"));
 const LeadForm = dynamic(() => import("@/components/ui/LeadForm"));
 const Accordion = dynamic(() => import("@/components/ui/Accordion"));
 const CTABanner = dynamic(() => import("@/components/CTABanner"));
+const GetQuoteModal = dynamic(() => import("@/components/ui/GetQuoteModal"));
+
+function getQuoteServiceCategory(name: string): "Custom Next.js Development" | "Travel & Safari Portal" | "SEO & AI Search (GEO)" | "Web Design & Landing Page" | "Other" {
+  const lower = name.toLowerCase();
+  if (lower.includes("travel") || lower.includes("safari") || lower.includes("tour")) {
+    return "Travel & Safari Portal";
+  }
+  if (lower.includes("seo") || lower.includes("search") || lower.includes("google") || lower.includes("ranking")) {
+    return "SEO & AI Search (GEO)";
+  }
+  if (lower.includes("design") || lower.includes("landing page") || lower.includes("logo")) {
+    return "Web Design & Landing Page";
+  }
+  return "Custom Next.js Development";
+}
 
 interface Benefit {
   icon: string;
@@ -31,7 +46,7 @@ interface ProcessStep {
 
 interface PricingTier {
   name: string;
-  price: string;
+  price?: string;
   period?: string;
   description: string;
   features: string[];
@@ -69,6 +84,7 @@ interface ServicePageTemplateProps {
   customLeadForm?: React.ReactNode;
   heroActions?: React.ReactNode;
   customCtaBanner?: React.ReactNode;
+  customPricingSection?: React.ReactNode;
   belowHeroSection?: React.ReactNode;
   afterBenefitsSection?: React.ReactNode;
   simplifiedLeadForm?: boolean;
@@ -100,15 +116,19 @@ export default function ServicePageTemplate({
   customLeadForm,
   heroActions,
   customCtaBanner,
+  customPricingSection,
   belowHeroSection,
   afterBenefitsSection,
   simplifiedLeadForm,
   h1ClassName = "bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent",
 }: ServicePageTemplateProps) {
+  const [isQuoteOpen, setIsQuoteOpen] = useState(false);
+  const [selectedTier, setSelectedTier] = useState<PricingTier | null>(null);
+
   const STANDARD_FAQS = [
     {
       question: "How much does a professional website cost?",
-      answer: "Professional website cost varies based on page count and custom integrations. Joy Digital offers packages starting from $1,200 USD depending on your design specifications."
+      answer: "Professional website development costs depend on your project scope, page count, and custom integrations. Joy Digital provides transparent, tailored proposals based on your exact business needs. Request a quote to receive a customized estimate and technical roadmap."
     },
     {
       question: "How long does website development take?",
@@ -394,17 +414,20 @@ export default function ServicePageTemplate({
         </section>
 
         {/* Pricing Section */}
+        {customPricingSection ? (
+          customPricingSection
+        ) : (
         <section className="py-16 lg:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-xs font-bold text-accent uppercase tracking-widest block mb-3">
-                Service Pricing
+                Packages &amp; Deliverables
               </span>
               <h2 className="text-2xl md:text-4xl font-extrabold text-primary-dark mb-4">
-                {pricingTitle}
+                {pricingTitle ? pricingTitle.replace(/pricing/gi, "Packages").replace(/plans/gi, "Packages") : "Tailored Packages & Deliverables"}
               </h2>
-              <p className="text-sm text-text-secondary">
-                {pricingSubtitle}
+              <p className="text-sm text-text-secondary max-w-2xl mx-auto">
+                {pricingSubtitle || "Select the package aligned with your business goals. Request a custom quote to receive an exact technical roadmap and transparent proposal."}
               </p>
             </div>
 
@@ -419,42 +442,65 @@ export default function ServicePageTemplate({
                   }`}
                 >
                   {tier.isPopular && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white font-bold text-[10px] uppercase tracking-widest px-3.5 py-1 rounded-full">
-                      Most Popular
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white font-bold text-[10px] uppercase tracking-widest px-4 py-1 rounded-full shadow-sm">
+                      Most Recommended
                     </span>
                   )}
-                  <h3 className="text-lg font-bold text-primary-dark mb-2">{tier.name}</h3>
-                  <p className="text-xs text-text-secondary mb-6">{tier.description}</p>
-                  <div className="flex items-baseline gap-1 mb-6">
-                    <span className="text-3xl font-extrabold text-primary-dark">{tier.price}</span>
-                    {tier.period && <span className="text-xs text-text-secondary">{tier.period}</span>}
+                  <h3 className="text-xl font-bold text-primary-dark mb-2 tracking-tight">{tier.name}</h3>
+                  <p className="text-xs text-text-secondary mb-5 leading-relaxed min-h-[36px]">{tier.description}</p>
+                  
+                  {/* Scope & Quotation Badge (No hardcoded prices) */}
+                  <div className="mb-6 p-3 rounded-xl bg-purple-50/60 border border-purple-100/80 flex items-center justify-between">
+                    <div className="flex items-center gap-2 text-xs font-bold text-primary-dark">
+                      <span className="w-2 h-2 rounded-full bg-[#7C3AED] animate-pulse" />
+                      <span>Scope-Based Proposal</span>
+                    </div>
+                    <span className="text-[10px] font-bold text-[#7C3AED] uppercase tracking-wider bg-white px-2.5 py-0.5 rounded-md border border-purple-100">
+                      Custom Quote
+                    </span>
                   </div>
                   
-                  {/* Features List */}
-                  <ul className="flex flex-col gap-3.5 mb-8 text-xs text-text-primary flex-grow border-t border-[#E5E7EB] pt-6">
-                    {tier.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5">
-                        <span className="text-emerald-500 text-sm mt-0.5"><i className="fa-solid fa-circle-check" /></span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Features & Deliverables List */}
+                  <div className="flex-grow border-t border-[#E5E7EB] pt-5 mb-8">
+                    <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-3.5 flex items-center gap-1.5">
+                      <i className="fa-solid fa-layer-group text-[#7C3AED]" />
+                      <span>Included Features &amp; Deliverables:</span>
+                    </p>
+                    <ul className="flex flex-col gap-3 text-xs text-text-primary">
+                      {tier.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2.5 leading-snug">
+                          <span className="text-emerald-500 text-sm mt-0.5 shrink-0">
+                            <i className="fa-solid fa-circle-check" />
+                          </span>
+                          <span className="leading-relaxed font-medium text-slate-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                  <Link
-                    href={`/contact?service=${encodeURIComponent(serviceName)}&tier=${encodeURIComponent(tier.name)}`}
-                    className={`w-full text-center font-bold text-xs py-3.5 rounded-full transition-all duration-300 ${
+                  {/* High-Converting Get Quote Trigger */}
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSelectedTier(tier);
+                      setIsQuoteOpen(true);
+                    }}
+                    className={`w-full text-center font-bold text-xs py-3.5 px-4 rounded-xl transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 ${
                       tier.isPopular
-                        ? "bg-primary hover:bg-primary-light text-white shadow-md hover:shadow-lg"
-                        : "bg-light-bg hover:bg-gray-200 text-primary border border-[#E5E7EB]"
+                        ? "bg-primary hover:bg-primary-light text-white shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                        : "bg-light-bg hover:bg-purple-50 hover:text-primary hover:border-primary/40 text-primary border border-[#E5E7EB] hover:-translate-y-0.5"
                     }`}
                   >
-                    {tier.ctaText || "Get Quote"}
-                  </Link>
+                    <span>{tier.ctaText || "Get Custom Quote"}</span>
+                    <i className="fa-solid fa-arrow-right text-[11px]" />
+                  </button>
                 </div>
               ))}
             </div>
           </div>
         </section>
+
+        )}
 
         {/* Related Blog Posts Section */}
         {relatedBlogPosts && relatedBlogPosts.length > 0 && (
@@ -555,6 +601,19 @@ export default function ServicePageTemplate({
           />
         )}
       </main>
+      <GetQuoteModal
+        isOpen={isQuoteOpen}
+        onClose={() => setIsQuoteOpen(false)}
+        showTrigger={false}
+        source={`${serviceName} - ${selectedTier?.name || "Service Package"}`}
+        defaultService={getQuoteServiceCategory(serviceName)}
+        packageName={selectedTier?.name}
+        initialNotes={
+          selectedTier
+            ? `Interested in the "${selectedTier.name}" package for ${serviceName}. Please share custom quotation and timeline.`
+            : `Interested in custom quote for ${serviceName}.`
+        }
+      />
       <Footer />
       <StickyWidgets />
     </>

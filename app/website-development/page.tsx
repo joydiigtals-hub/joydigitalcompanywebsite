@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
+import IndustryPackagesSection from "@/components/sections/IndustryPackagesSection";
 
 export const metadata: Metadata = {
   title: "Custom Next.js Web Development",
@@ -56,6 +57,7 @@ export default function WebDevPage() {
       heroSubtitle="Full-stack custom web development services powered by Next.js, React, and Node.js. Build scalable web apps and high-performance web platforms engineered for speed."
       leadSource="Website Development Landing Page"
       heroCtaText="Get My Website Quote"
+      customPricingSection={<IndustryPackagesSection />}
       overviewTitle="Professional Services from a Top Website Development Agency"
       overviewContent={
         <div className="space-y-6">
@@ -151,56 +153,47 @@ export default function WebDevPage() {
       pricingTiers={[
         {
           name: "Starter Website",
-          price: "₹25,000",
-          description: "Perfect for new local service businesses wanting to establish professional authority online.",
+          description: "Essential online presence engineered for speed, credibility, and direct customer contact.",
           features: [
-            "Custom responsive website",
-            "Mobile optimization",
-            "WhatsApp integration",
-            "Lead Contact form",
-            "Basic SEO setup",
-            "Google Search Console sync",
-            "XML Sitemap generated",
-            "Google Analytics integration",
+            "Custom responsive website layout",
+            "Mobile-first speed optimization",
+            "Direct WhatsApp & click-to-call triggers",
+            "Lead contact & inquiry routing form",
+            "Basic On-page SEO setup",
+            "Google Search Console & sitemap sync",
+            "Zero database security vulnerabilities",
           ],
-          ctaText: "Get Started",
+          ctaText: "Enquire Now",
         },
         {
           name: "Business Growth Website",
-          price: "₹45,000",
-          description: "Recommended for growing companies targeting local search rankings and active online client acquisition.",
+          description: "High-converting architecture designed to attract local and global inquiries and drive measurable sales.",
           isPopular: true,
           features: [
-            "Custom website layout",
-            "Conversion-focused UI/UX",
-            "SEO-ready architecture",
-            "Advanced contact forms",
-            "WhatsApp leads sync",
-            "Search Console configuration",
-            "Google Analytics event tracking",
-            "Core Web Vitals speed tuning",
-            "Basic content copywriting check",
-            "Admin panel / CMS option",
+            "Up to 15 custom pages designed for conversions",
+            "Conversion-focused UI/UX with high-contrast CTAs",
+            "Advanced multi-field lead capture forms",
+            "WhatsApp leads notification sync",
+            "Search Console & Analytics event tracking",
+            "Core Web Vitals speed tuning (< 1.2s load)",
+            "On-page technical SEO & rich schema markup",
+            "Admin panel / headless CMS option",
           ],
-          ctaText: "Request a Quote",
+          ctaText: "Enquire Now",
         },
         {
-          name: "Website + SEO Growth",
-          price: "Custom Quote",
-          description: "Perfect for companies seeking persistent ranking growth, organic pipelines, and local lead dominance.",
+          name: "Custom Business Website",
+          description: "Bespoke web platform engineered with headless CMS, custom workflows, and deep integrations.",
           features: [
-            "Custom website layout",
-            "Technical SEO code audits",
-            "Advanced On-page SEO setup",
-            "High-intent keyword research",
-            "Local SEO & maps optimizations",
-            "Google Business Profile setups",
-            "Comprehensive content strategy",
-            "Monthly SEO retainer campaigns",
-            "Index monitoring & audit fixes",
-            "Google Search Console reporting",
+            "Scalable Next.js enterprise architecture",
+            "Complex database schema & headless CMS",
+            "Third-party CRM, ERP or payment gateway sync",
+            "Multi-region global Edge CDN routing",
+            "Continuous automated CI/CD pipelines",
+            "Dedicated developer support & SLA",
+            "100% code ownership & IP handover",
           ],
-          ctaText: "Talk to an SEO Expert",
+          ctaText: "Enquire Now",
         },
       ]}
       faqs={[

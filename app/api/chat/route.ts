@@ -202,11 +202,9 @@ export async function POST(request: Request) {
         - Politely ask for their Mobile Phone number and Email address so Saravanan (the agency head) can contact them directly.
         - Once they share their phone/mobile number, confirm you have logged it and say: "Great! I have registered your callback request in our system. Saravanan from our tech team will call you shortly!"
         
-        Agency Pricing Packages:
-        - Corporate Websites: Starting from ₹25,000 (Built with Next.js/Tailwind).
-        - Headless E-commerce Stores: Starting from ₹45,000.
-        - Custom Apps/Dashboards: Starting from ₹60,000.
-        - SEO Optimization: Keyword ranking and search audits.
+        Agency Pricing Policy:
+        - We provide tailored scope-based quotes rather than fixed flat prices, because every website is custom engineered to the client's exact requirements.
+        - Guide the visitor to share their name, email, and mobile/WhatsApp number so our technical lead Saravanan can provide an accurate quotation and project roadmap.
         - Location: Chennai, Tamil Nadu, India.
         
         Rules:
@@ -256,7 +254,7 @@ export async function POST(request: Request) {
       if (hasPhone) {
         botReply = `Awesome! I have logged your number. Saravanan from our tech team will reach out to you within 2 hours. Have a wonderful day! 👍`;
       } else if (lastUserTextLower.includes("web packages") || lastUserTextLower.includes("web design") || lastUserTextLower.includes("price") || lastUserTextLower.includes("package")) {
-        botReply = "Sure! We offer Next.js corporate design packages starting at ₹25,000, and E-commerce stores at ₹45,000. May I know your name and mobile number to WhatsApp you our full brochure?";
+        botReply = "Our solutions are 100% custom-tailored to your project scope and features. May I know your name and mobile number? Saravanan from our tech team will connect with you directly to share an accurate quote!";
       } else if (lastUserTextLower.includes("seo") || lastUserTextLower.includes("google seo") || lastUserTextLower.includes("rank")) {
         botReply = "We specialize in keyword audits and Google Business ranking to get you Page 1 traffic. May I know your name and mobile number to discuss an audit report?";
       } else if (lastUserTextLower.includes("who runs") || lastUserTextLower.includes("founder") || lastUserTextLower.includes("saravanan") || lastUserTextLower.includes("agency")) {

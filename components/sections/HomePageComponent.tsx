@@ -1099,13 +1099,13 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
               <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">
-                Transparent Pricing
+                Tailored Packages
               </span>
               <h2 className="text-3xl font-extrabold text-[#1F1B2D] mb-4">
-                Startup-Friendly Pricing Packages
+                Website Development Packages
               </h2>
               <p className="text-xs sm:text-sm text-[#6B6478] font-semibold">
-                Sleek, transparent rates. No surprise setup fees, no complex monthly models.
+                Engineered for speed, brand authority, and consistent lead generation. Zero hidden fees.
               </p>
             </div>
 
