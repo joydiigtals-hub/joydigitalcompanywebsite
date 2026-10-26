@@ -97,12 +97,12 @@ export default function Footer() {
               <i className="fa-brands fa-youtube"></i>
             </a>
             <a
-              href="https://www.linkedin.com/in/saravanan-l-34a861154/"
+              href="https://www.linkedin.com/company/joydigital-solution/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded bg-[#E5E7EB]/50 border border-[#E5E7EB] flex items-center justify-center text-text-secondary hover:bg-accent hover:text-white transition-all duration-300"
               aria-label="LinkedIn"
-              title="Connect with Saravanan L on LinkedIn"
+              title="Follow Joy Digital on LinkedIn"
             >
               <i className="fa-brands fa-linkedin-in"></i>
             </a>
