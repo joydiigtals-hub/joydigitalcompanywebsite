@@ -265,7 +265,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
             </div>
           </div>
         </div>
-        <div className="lg:col-span-5 flex justify-center lg:justify-end w-full">
+        <div id="enquiry-section" className="lg:col-span-5 flex justify-center lg:justify-end w-full scroll-mt-28">
           <div className="w-full max-w-md relative rounded-2xl p-[1px] overflow-hidden group">
             
             {/* Animated Conic Glowing Border Beam */}

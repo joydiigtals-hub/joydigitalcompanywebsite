@@ -19,6 +19,7 @@ const PortfolioSection = dynamic(() => import("@/components/sections/PortfolioSe
 const WorldwideServiceNetwork = dynamic(() => import("@/components/ui/WorldwideServiceNetwork"));
 const Footer = dynamic(() => import("@/components/layout/Footer"));
 const LeadForm = dynamic(() => import("@/components/ui/LeadForm"));
+const GetQuoteModal = dynamic(() => import("@/components/ui/GetQuoteModal"));
 const Accordion = dynamic(() => import("@/components/ui/Accordion"));
 
 export const HOME_FAQS = [
@@ -1084,12 +1085,13 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
               <p className="text-xs text-[#6B6478] font-semibold leading-relaxed mb-4">
                 We work closely with startup founders and local operators worldwide. Start a campaign with us and share your review when we deploy!
               </p>
-              <a
-                href="#enquiry-section"
-                className="text-xs font-bold text-[#7C3AED] hover:text-[#A78BFA]"
-              >
-                Inquire About a Project Now &rarr;
-              </a>
+              <GetQuoteModal
+                triggerText="Inquire About a Project Now →"
+                source="Success Story Review Inquire CTA"
+                triggerClassName="text-xs font-bold text-[#7C3AED] hover:text-[#A78BFA] cursor-pointer inline-flex items-center justify-center transition-colors"
+                replaceClassName
+                hideIcons
+              />
             </div>
           </div>
         </section>
@@ -1318,13 +1320,14 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                   </p>
                 </div>
                 <div className="md:col-span-4 flex flex-col gap-3 justify-end">
-                  <TrackedLink
-                    href="#enquiry-section"
-                    eventName="Free Tools Lead Consultation"
-                    className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-center font-bold text-xs py-3.5 px-6 rounded-xl shadow-sm hover:scale-[1.01] transition-all cursor-pointer"
-                  >
-                    Get a Free Consultation
-                  </TrackedLink>
+                  <GetQuoteModal
+                    triggerText="Get a Free Consultation"
+                    source="Free Tools Lead Consultation"
+                    defaultService="Web Design & Landing Page"
+                    triggerClassName="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-center font-bold text-xs py-3.5 px-6 rounded-xl shadow-sm hover:scale-[1.01] transition-all cursor-pointer inline-flex items-center justify-center"
+                    replaceClassName
+                    hideIcons
+                  />
                   <TrackedWaLink
                     href="https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I%20saw%20your%20free%20business%20tools%20and%20I'd%20like%2520to%2520get%2520a%2520free%2520consultation%2520for%2520my%2520business."
                     location="free_tools_cta"

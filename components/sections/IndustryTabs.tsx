@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import TrackedLink from "@/components/ui/TrackedLink";
 import TrackedWaLink from "@/components/ui/TrackedWaLink";
+import GetQuoteModal, { QUOTE_SERVICES, type QuoteServiceType } from "@/components/ui/GetQuoteModal";
 
 const INDUSTRIES = [
   {
@@ -105,13 +106,18 @@ export default function IndustryTabs() {
               Explore {selectedIndustry} Blueprint &rarr;
             </TrackedLink>
           )}
-          <TrackedLink
-            href="#enquiry-section"
-            eventName={`Start ${selectedIndustry} Project`}
-            className="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs px-6 py-3 rounded-lg border border-slate-200 transition-colors"
-          >
-            Request Proposal
-          </TrackedLink>
+          <GetQuoteModal
+            triggerText="Request Proposal"
+            source={`Industry Blueprint - ${selectedIndustry}`}
+            defaultService={
+              (QUOTE_SERVICES.includes(selectedIndustry as any)
+                ? selectedIndustry
+                : "Custom Next.js Development") as QuoteServiceType
+            }
+            triggerClassName="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs px-6 py-3 rounded-lg border border-slate-200 transition-colors inline-flex items-center justify-center cursor-pointer shadow-none"
+            replaceClassName
+            hideIcons
+          />
           <TrackedWaLink
             href="https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20discuss%20our%20project."
             location="who_we_help"

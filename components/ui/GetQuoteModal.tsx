@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useId } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   X,
@@ -46,6 +47,12 @@ export interface GetQuoteModalProps {
   triggerText?: string;
   /** Extra Tailwind classes for trigger button */
   triggerClassName?: string;
+  /** If true, triggerClassName completely replaces the default button classes */
+  replaceClassName?: boolean;
+  /** Whether to hide default sparkles and arrow icons in trigger */
+  hideIcons?: boolean;
+  /** Custom trigger children */
+  children?: React.ReactNode;
   /** Source name for tracking and attribution */
   source?: string;
   /** Pre-selected service option */
@@ -72,11 +79,20 @@ export default function GetQuoteModal({
   showTrigger,
   triggerText = "Get Quote",
   triggerClassName = "",
+  replaceClassName = false,
+  hideIcons = false,
+  children,
   source = "Get Quote Modal",
   defaultService = "Custom Next.js Development",
   initialNotes = "",
   packageName = "",
 }: GetQuoteModalProps) {
+  // Mount state for safe client-side Portal rendering
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // Support both uncontrolled (internal trigger) and controlled modes
   const isControlled = controlledIsOpen !== undefined;
   const [internalIsOpen, setInternalIsOpen] = useState(false);
@@ -313,62 +329,57 @@ export default function GetQuoteModal({
   const shouldRenderTrigger =
     showTrigger ?? (controlledIsOpen === undefined);
 
-  return (
-    <>
-      {/* 1. Prominent Trigger Button */}
-      {shouldRenderTrigger && (
-        <button
-          type="button"
-          onClick={handleOpenModal}
-          aria-haspopup="dialog"
-          aria-expanded={isModalOpen}
-          className={`inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] hover:from-[#8B5CF6] hover:to-[#7C3AED] shadow-lg shadow-[#7C3AED]/25 hover:shadow-xl hover:shadow-[#7C3AED]/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/50 focus:ring-offset-2 ${triggerClassName}`}
+  const defaultTriggerClasses =
+    "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] hover:from-[#8B5CF6] hover:to-[#7C3AED] shadow-lg shadow-[#7C3AED]/25 hover:shadow-xl hover:shadow-[#7C3AED]/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/50 focus:ring-offset-2";
+
+  const triggerClasses = replaceClassName
+    ? triggerClassName
+    : `${defaultTriggerClasses} ${triggerClassName}`;
+
+  const modalDialogMarkup = (
+    <AnimatePresence>
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 z-[99999] flex items-center justify-center p-3 sm:p-4 md:p-6 overflow-y-auto"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby={titleId}
+          aria-describedby={descId}
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              handleCloseModal();
+            }
+          }}
         >
-          <Sparkles className="w-4 h-4 text-[#C4B5FD] animate-pulse" />
-          <span>{triggerText}</span>
-          <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-        </button>
-      )}
+          {/* Dark Backdrop Blur */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            onClick={handleCloseModal}
+            className="fixed inset-0 bg-black/80 backdrop-blur-md cursor-pointer -z-10"
+            aria-hidden="true"
+          />
 
-      {/* 2. Modal Overlay & Dialog */}
-      <AnimatePresence>
-        {isModalOpen && (
-          <div
-            className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-4 md:p-6 overflow-y-auto"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby={titleId}
-            aria-describedby={descId}
+          {/* Modal Container Card */}
+          <motion.div
+            ref={modalRef}
+            initial={{ opacity: 0, scale: 0.95, y: 15 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 15 }}
+            transition={{ type: "spring", stiffness: 350, damping: 28 }}
+            className="relative w-full max-w-lg bg-[#110E20] border border-[#2B2347] rounded-2xl shadow-2xl text-white overflow-hidden z-20 my-auto"
           >
-            {/* Dark Backdrop Blur */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
+            {/* Close Button (X) */}
+            <button
+              type="button"
               onClick={handleCloseModal}
-              className="fixed inset-0 bg-black/75 backdrop-blur-md cursor-pointer"
-              aria-hidden="true"
-            />
-
-            {/* Modal Container Card */}
-            <motion.div
-              ref={modalRef}
-              initial={{ opacity: 0, scale: 0.95, y: 15 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 15 }}
-              transition={{ type: "spring", stiffness: 350, damping: 28 }}
-              className="relative w-full max-w-lg bg-[#110E20] border border-[#2B2347] rounded-2xl shadow-2xl text-white overflow-hidden z-10 my-auto"
+              aria-label="Close quote modal"
+              className="absolute top-4 right-4 w-9 h-9 rounded-full bg-[#1D1833] hover:bg-[#2B244D] text-slate-300 hover:text-white flex items-center justify-center border border-[#352B5C] transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#7C3AED] z-20"
             >
-              {/* Close Button (X) */}
-              <button
-                type="button"
-                onClick={handleCloseModal}
-                aria-label="Close quote modal"
-                className="absolute top-4 right-4 w-9 h-9 rounded-full bg-[#1D1833] hover:bg-[#2B244D] text-slate-300 hover:text-white flex items-center justify-center border border-[#352B5C] transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#7C3AED] z-20"
-              >
-                <X className="w-4 h-4" />
-              </button>
+              <X className="w-4 h-4" />
+            </button>
 
               {/* Success View */}
               {isSuccess ? (
@@ -781,6 +792,37 @@ export default function GetQuoteModal({
           </div>
         )}
       </AnimatePresence>
-    </>
-  );
-}
+    );
+
+    return (
+      <>
+        {/* 1. Prominent Trigger Button */}
+        {shouldRenderTrigger && (
+          <button
+            type="button"
+            onClick={handleOpenModal}
+            aria-haspopup="dialog"
+            aria-expanded={isModalOpen}
+            className={triggerClasses}
+          >
+            {children ? (
+              children
+            ) : hideIcons ? (
+              <span>{triggerText}</span>
+            ) : (
+              <>
+                <Sparkles className="w-4 h-4 text-[#C4B5FD] animate-pulse" />
+                <span>{triggerText}</span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+              </>
+            )}
+          </button>
+        )}
+
+        {/* 2. Modal Overlay & Dialog via Portal directly to body */}
+        {mounted && typeof document !== "undefined"
+          ? createPortal(modalDialogMarkup, document.body)
+          : null}
+      </>
+    );
+  }
