@@ -278,7 +278,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
       {/* Featured Cover Image */}
       {post.showFeaturedImage !== false && post.image && (
         <div className="mb-12 max-w-4xl text-left select-none">
-          <div className="relative w-full h-64 sm:h-96 rounded-[28px] overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50">
+          <div className="relative w-full aspect-video max-h-[500px] rounded-[28px] overflow-hidden border border-slate-200/80 shadow-sm bg-slate-100">
             <Image
               src={post.image}
               alt={post.imageAlt || post.title}
@@ -286,6 +286,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
               priority
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 896px"
+              unoptimized
             />
           </div>
           {post.imageCaption && (
@@ -653,7 +654,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
                 className="bg-white border border-[#E2E8F0] rounded-[24px] overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="relative w-full h-40 bg-slate-50 border-b border-[#E9E4F2] overflow-hidden">
+                  <div className="relative w-full aspect-video bg-slate-100 border-b border-[#E9E4F2] overflow-hidden">
                     <Image
                       src={rPost.image || getThumbnail(rPost.category)}
                       alt={`${rPost.title} preview`}
@@ -661,6 +662,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                       loading="lazy"
+                      unoptimized
                     />
                     <div className="absolute top-4 left-4 z-10">
                       <span className="bg-primary text-white font-extrabold text-[8px] uppercase tracking-wider px-2 py-0.5 rounded-md shadow-sm border border-primary-light/20">

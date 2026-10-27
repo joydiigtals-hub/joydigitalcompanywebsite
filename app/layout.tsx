@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.joydigital.in"),
   title: {
     default: "Next.js Web Development & SEO Agency | Joy Digital",
-    template: "%s | Joy Digital",
+    template: "%s",
   },
   description: "Joy Digital is a premier Digital Agency & Next.js Web Development company based in Chennai, India. We engineer sub-second web applications, custom software, SEO, and Generative Engine Optimization (GEO) for global brands.",
   keywords: [

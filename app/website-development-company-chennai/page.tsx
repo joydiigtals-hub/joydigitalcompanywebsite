@@ -6,7 +6,9 @@ import ChennaiClientProofCard from "@/components/sections/ChennaiClientProofCard
 import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Website Development Company in Chennai | Joy Digital",
+  title: {
+    absolute: "Website Development Company in Chennai | Joy Digital",
+  },
   description:
     "Custom Next.js website development in Chennai. Fast, SEO-ready websites that bring leads via WhatsApp and forms. Free quote.",
   alternates: {

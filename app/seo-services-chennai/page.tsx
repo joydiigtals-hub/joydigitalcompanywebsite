@@ -6,7 +6,9 @@ import ChennaiClientProofCard from "@/components/sections/ChennaiClientProofCard
 import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "SEO Services in Chennai | Get More Leads | Joy Digital",
+  title: {
+    absolute: "SEO Services in Chennai | Get More Leads | Joy Digital",
+  },
   description:
     "Affordable SEO services in Chennai: technical SEO, on-page, local SEO and content. See our case studies and get a free SEO audit.",
   alternates: {

@@ -221,7 +221,7 @@ export default function BlogListingContainer({ posts }: BlogListingContainerProp
                       >
                         <div>
                           {/* Thumbnail representation */}
-                          <div className="relative w-full h-48 bg-slate-50 overflow-hidden border-b border-[#E2E8F0]">
+                          <div className="relative w-full aspect-video bg-slate-100 overflow-hidden border-b border-[#E2E8F0]">
                             <Image
                               src={post.image || getThumbnail(post.category)}
                               alt={`${post.title} preview`}
@@ -229,6 +229,7 @@ export default function BlogListingContainer({ posts }: BlogListingContainerProp
                               sizes="(max-w-768px) 100vw, 33vw"
                               className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                               loading="lazy"
+                              unoptimized
                             />
                             <div className="absolute top-4 left-4 z-10">
                               <span className="bg-primary text-white font-extrabold text-[9px] uppercase tracking-wider px-3 py-1 rounded-md shadow-sm border border-primary-light/20 group-hover:bg-[#171126] group-hover:border-slate-800 transition-colors duration-300">

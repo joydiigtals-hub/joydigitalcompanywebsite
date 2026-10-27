@@ -535,13 +535,14 @@ export default function ServicePageTemplate({
                     className="bg-white border border-[#E5E7EB] rounded-[24px] overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group"
                   >
                     <div>
-                      <div className="relative w-full h-44 bg-slate-50 border-b border-[#E9E4F2] overflow-hidden">
+                      <div className="relative w-full aspect-video bg-slate-100 border-b border-[#E9E4F2] overflow-hidden">
                         <Image
                           src={post.image || "/assets/images/hero-banner.webp"}
                           alt={post.imageAlt || post.title}
                           fill
                           sizes="(max-width: 768px) 100vw, 33vw"
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          unoptimized
                         />
                         <div className="absolute top-4 left-4 z-10">
                           <span className="bg-primary text-white font-extrabold text-[9px] uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">
