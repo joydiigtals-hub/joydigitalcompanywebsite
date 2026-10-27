@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "SEO Company Coimbatore",
+  title: {
+    absolute: "SEO Company in Coimbatore | Top SEO Agency | Joy Digital",
+  },
   description: "Looking for the best SEO company in Coimbatore? We rank local businesses, retail brands, and industrial suppliers on Google Page 1. Free SEO audit.",
   alternates: {
     canonical: "https://www.joydigital.in/seo-company-coimbatore",
@@ -23,10 +25,15 @@ const pageSchema = {
     "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Coimbatore",
+      "streetAddress": "4/162, Melakkal Main Road, Kochadai",
+      "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
-      "postalCode": "641001",
+      "postalCode": "625016",
       "addressCountry": "IN"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Coimbatore"
     }
   },
   "description": "Joy Digital is a result-oriented SEO company in Coimbatore, helping businesses drive traffic, rank high for local terms, and optimize search CTRs.",
