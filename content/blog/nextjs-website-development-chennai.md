@@ -29,10 +29,14 @@ robots: 'Index, Follow'
 internalLinks:
   - anchorText: Website Development Services
     targetUrl: /website-development
-  - anchorText: Web Development Company in Chennai
-    targetUrl: /web-development-company-chennai
+  - anchorText: Website Development Company in Chennai
+    targetUrl: /website-development-company-chennai
+  - anchorText: Custom Website Development
+    targetUrl: /custom-website-development
   - anchorText: SEO Services in Chennai
     targetUrl: /seo-services-chennai
+  - anchorText: You & Me Voyage Case Study
+    targetUrl: /case-studies/you-and-me-voyage
   - anchorText: Next.js Development Agency
     targetUrl: /nextjs-development-agency
   - anchorText: Website Design Company Chennai
@@ -80,7 +84,7 @@ Today, having a website is not enough for a business. Your website should load q
 
 For businesses in Chennai, choosing the right website technology can make a profound difference in online visibility and customer experience. **Next.js** is a modern web development framework that helps businesses build fast, flexible, and search-friendly websites.
 
-Whether you run an industrial manufacturing firm in Guindy, a healthcare clinic in Greams Road, an export house in Parrys, or an IT startup along the OMR tech corridor, understanding why **[Next.js website development in Chennai](/web-development-company-chennai)** is becoming the gold standard will help you make the right digital investment.
+Whether you run an industrial manufacturing firm in Guindy, a healthcare clinic in Greams Road, an export house in Parrys, or an IT startup along the OMR tech corridor, understanding why **[Next.js website development in Chennai](/website-development-company-chennai)** is becoming the gold standard will help you make the right digital investment.
 
 ---
 
@@ -104,7 +108,7 @@ Unlike choosing a technology simply because it is trending, businesses should se
 
 Website speed directly dictates how visitors perceive your business. If a mobile page takes longer than 3 seconds to load on local 4G or 5G networks, more than **50% of potential buyers abandon the site** before ever reading about your services.
 
-Next.js is engineered from the ground up for sub-second performance. By pre-rendering HTML and automatically splitting JavaScript bundles, visitors download only the exact code needed for each view. When implemented by an experienced **[Next.js development company in Chennai](/web-development-company-chennai)**, your pages load almost instantaneously.
+Next.js is engineered from the ground up for sub-second performance. By pre-rendering HTML and automatically splitting JavaScript bundles, visitors download only the exact code needed for each view. When implemented by an experienced **[Next.js development company in Chennai](/website-development-company-chennai)**, your pages load almost instantaneously.
 
 ### 2. SEO-Friendly Website Architecture
 
@@ -179,7 +183,7 @@ When evaluating a web development partner in Chennai, look for a team that:
 
 At **Joy Digital**, we specialize in engineering high-performance web systems that bridge the gap between cutting-edge technology, user experience, and search engine visibility.
 
-Explore our dedicated **[Website Development Services](/website-development)** and **[Web Development Company in Chennai](/web-development-company-chennai)** solutions to learn how we can help your business thrive online.
+Explore our dedicated **[Custom Website Development](/custom-website-development)** and **[Website Development Company in Chennai](/website-development-company-chennai)** solutions (starting from Rs 25,000 one-time) or review our **[You & Me Voyage Case Study](/case-studies/you-and-me-voyage)** to see real client results.
 
 ---
 

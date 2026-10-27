@@ -688,13 +688,20 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                   SEO Services in Chennai
                 </Link>
                 <Link
+                  href="/website-development-company-chennai"
+                  className="inline-flex items-center gap-1.5 bg-white border border-[#7C3AED]/30 text-[#7C3AED] hover:bg-[#7C3AED] hover:text-white px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm"
+                >
+                  <i className="fa-solid fa-code text-xs" />
+                  Web Development Chennai
+                </Link>
+                <Link
                   href="/seo-services-madurai"
                   className="inline-flex items-center gap-1.5 bg-white border border-[#E9E4F2] text-[#6B6478] hover:text-[#7C3AED] px-4 py-2 rounded-xl text-xs font-bold transition-all"
                 >
                   SEO Services Madurai
                 </Link>
                 <Link
-                  href="/website-design-company-coimbatore"
+                  href="/seo-company-coimbatore"
                   className="inline-flex items-center gap-1.5 bg-white border border-[#E9E4F2] text-[#6B6478] hover:text-[#7C3AED] px-4 py-2 rounded-xl text-xs font-bold transition-all"
                 >
                   SEO Company Coimbatore

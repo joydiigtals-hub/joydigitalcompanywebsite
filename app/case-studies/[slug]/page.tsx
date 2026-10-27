@@ -20,6 +20,18 @@ interface CaseStudyData {
 }
 
 const DATA: Record<string, CaseStudyData> = {
+  "you-and-me-voyage": {
+    category: "Custom Next.js & Travel Platform",
+    title: "You & Me Voyage Travel Booking Platform",
+    metricValue: "Live",
+    metricLabel: "Bespoke Platform",
+    challenge: "You & Me - Independent Voyage, an international tour operator based in Adyar, Chennai, was held back by a slow, rigid WordPress theme that caused visitor drop-offs before tour inquiries were submitted.",
+    strategy: "Joy Digital engineered a bespoke serverless Next.js website with an interactive 3-step tour planner, instant WhatsApp inquiry routing, and sub-second edge deployment.",
+    results: "Launched a fast, custom web application with direct mobile WhatsApp routing. The client reported: 'Joy Digital built our website completely custom. It looks great, it is fast, and we are getting leads from it.'",
+    clientQuote: "Joy Digital built our website completely custom. It looks great, it is fast, and we are getting leads from it.",
+    clientAuthor: "[OWNER_NAME]",
+    clientRole: "Owner, You & Me - Independent Voyage, Chennai",
+  },
   "chennai-clinic-leads": {
     category: "Local SEO & GBP Optimization",
     title: "Chennai Dental Clinic Patient Growth",

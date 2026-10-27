@@ -85,6 +85,8 @@ interface ServicePageTemplateProps {
   heroActions?: React.ReactNode;
   customCtaBanner?: React.ReactNode;
   customPricingSection?: React.ReactNode;
+  pricingNote?: string;
+  chennaiProofSection?: React.ReactNode;
   belowHeroSection?: React.ReactNode;
   afterBenefitsSection?: React.ReactNode;
   simplifiedLeadForm?: boolean;
@@ -107,6 +109,8 @@ export default function ServicePageTemplate({
   pricingTitle,
   pricingSubtitle,
   pricingTiers,
+  pricingNote,
+  chennaiProofSection,
   faqs,
   schemaMarkup,
   crossLinks,
@@ -252,19 +256,19 @@ export default function ServicePageTemplate({
                 </div>
               )}
               
-              {/* Trust markers */}
+              {/* Trust markers - Accurate engineering facts, no unproven claims */}
               <div className="flex items-center gap-6 mt-2 pb-6 border-b border-gray-100 w-full max-w-lg">
                 <div className="flex flex-col">
-                  <span className="text-xl font-extrabold text-primary-dark">100%</span>
-                  <span className="text-[10px] font-semibold text-text-muted uppercase">Clean Code</span>
+                  <span className="text-xl font-extrabold text-primary-dark">&lt; 1.5s</span>
+                  <span className="text-[10px] font-semibold text-text-muted uppercase">Page Load Speed</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-xl font-extrabold text-primary-dark">Top #1</span>
-                  <span className="text-[10px] font-semibold text-text-muted uppercase">SEO Target</span>
+                  <span className="text-xl font-extrabold text-primary-dark">Next.js</span>
+                  <span className="text-[10px] font-semibold text-text-muted uppercase">React Architecture</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-xl font-extrabold text-primary-dark">24/7</span>
-                  <span className="text-[10px] font-semibold text-text-muted uppercase">Direct Support</span>
+                  <span className="text-xl font-extrabold text-primary-dark">Direct</span>
+                  <span className="text-[10px] font-semibold text-text-muted uppercase">Developer Access</span>
                 </div>
               </div>
 
@@ -449,14 +453,14 @@ export default function ServicePageTemplate({
                   <h3 className="text-xl font-bold text-primary-dark mb-2 tracking-tight">{tier.name}</h3>
                   <p className="text-xs text-text-secondary mb-5 leading-relaxed min-h-[36px]">{tier.description}</p>
                   
-                  {/* Scope & Quotation Badge (No hardcoded prices) */}
+                  {/* Scope & Quotation Badge */}
                   <div className="mb-6 p-3 rounded-xl bg-purple-50/60 border border-purple-100/80 flex items-center justify-between">
                     <div className="flex items-center gap-2 text-xs font-bold text-primary-dark">
                       <span className="w-2 h-2 rounded-full bg-[#7C3AED] animate-pulse" />
-                      <span>Scope-Based Proposal</span>
+                      <span>{tier.price || "Scope-Based Proposal"}</span>
                     </div>
                     <span className="text-[10px] font-bold text-[#7C3AED] uppercase tracking-wider bg-white px-2.5 py-0.5 rounded-md border border-purple-100">
-                      Custom Quote
+                      {tier.period || (tier.price ? "Package Rate" : "Custom Quote")}
                     </span>
                   </div>
                   
@@ -497,6 +501,12 @@ export default function ServicePageTemplate({
                 </div>
               ))}
             </div>
+
+            {pricingNote && (
+              <p className="text-xs text-center text-slate-500 mt-8 max-w-2xl mx-auto font-medium">
+                {pricingNote}
+              </p>
+            )}
           </div>
         </section>
 
@@ -566,6 +576,15 @@ export default function ServicePageTemplate({
                   </div>
                 ))}
               </div>
+            </div>
+          </section>
+        )}
+
+        {/* Optional Chennai Client Proof Section */}
+        {chennaiProofSection && (
+          <section className="py-8 bg-white border-b border-gray-100">
+            <div className="max-w-7xl mx-auto px-6">
+              {chennaiProofSection}
             </div>
           </section>
         )}

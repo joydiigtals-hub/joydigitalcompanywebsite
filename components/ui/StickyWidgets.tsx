@@ -29,7 +29,21 @@ export default function StickyWidgets() {
   return (
     <>
       {/* Sticky Mobile Banner (Bottom-pinned for conversions, hidden on desktop) */}
-      <div className="lg:hidden fixed bottom-0 left-0 w-full bg-white border-t border-slate-100 shadow-xl p-2.5 z-40 grid grid-cols-2 gap-2.5">
+      <div className="lg:hidden fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-2xl p-2 z-40 grid grid-cols-3 gap-2">
+        <a
+          href="tel:+919080026133"
+          title="Call Joy Digital directly"
+          aria-label="Call Joy Digital directly"
+          onClick={() => {
+            const tracker = (window as any).trackJoyDigitalEvent;
+            if (typeof tracker === "function") {
+              tracker("call_click", { location: "mobile sticky bar" });
+            }
+          }}
+          className="bg-primary hover:bg-primary-dark text-white font-extrabold text-[11px] py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-all cursor-pointer"
+        >
+          <i className="fa-solid fa-phone text-xs" /> Call
+        </a>
         <a
           href="https://wa.me/919080026133?text=Hi%20Joy%20Digital,%20I'd%20like%20to%20get%20a%20free%20consultation%20and%20pricing%20quote%20for%20a%20project."
           target="_blank"
@@ -42,9 +56,9 @@ export default function StickyWidgets() {
               tracker("whatsapp_click", { location: "mobile sticky bar" });
             }
           }}
-          className="bg-[#10b981] hover:bg-[#059669] text-white font-extrabold text-xs py-3 rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-all cursor-pointer"
+          className="bg-[#10b981] hover:bg-[#059669] text-white font-extrabold text-[11px] py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-all cursor-pointer"
         >
-          <i className="fa-brands fa-whatsapp text-sm" /> Chat WhatsApp
+          <i className="fa-brands fa-whatsapp text-sm" /> WhatsApp
         </a>
         <Link
           href="/free-website-audit"
@@ -56,9 +70,9 @@ export default function StickyWidgets() {
               tracker("cta_click", { button_text: "Get Quote", location: "mobile sticky bar" });
             }
           }}
-          className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-xs py-3 rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-all cursor-pointer"
+          className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-[11px] py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-all cursor-pointer"
         >
-          <i className="fa-solid fa-file-invoice text-xs" /> Get Quote
+          <i className="fa-solid fa-file-invoice text-xs" /> Free Quote
         </Link>
       </div>
 

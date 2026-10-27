@@ -25,6 +25,14 @@ export const metadata: Metadata = {
 
 const CASE_STUDIES = [
   {
+    slug: "you-and-me-voyage",
+    category: "Custom Next.js & Travel Portal",
+    title: "You & Me Voyage: Custom Next.js Platform & WhatsApp Lead Routing",
+    metricValue: "Live",
+    metricLabel: "Bespoke Platform",
+    description: "Custom serverless Next.js website built for an Adyar, Chennai travel company with a 3-step inquiry planner and instant WhatsApp lead routing.",
+  },
+  {
     slug: "chennai-clinic-leads",
     category: "Local SEO & GBP Optimization",
     title: "How a Chennai Dental Clinic Increased Patient Appointments by 240%",

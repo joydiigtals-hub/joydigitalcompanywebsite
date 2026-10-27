@@ -210,7 +210,7 @@ export default function PortfolioClient() {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                  <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-2">
                     <a
                       href="https://www.youandmevoyage.com"
                       target="_blank"
@@ -220,6 +220,14 @@ export default function PortfolioClient() {
                       <span>Visit Live Website</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
+
+                    <Link
+                      href="/case-studies/you-and-me-voyage"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-purple-50 hover:bg-purple-100 border border-purple-200 text-[#7C3AED] text-xs font-extrabold transition-all hover:-translate-y-0.5"
+                    >
+                      <span>Read Case Study</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
 
                     <TrackedWaLink
                       href="https://wa.me/919080026133?text=Hi%20Joy%20Digital,%20I%20saw%20your%20You%20and%20Me%20Voyage%20portfolio%20and%20want%20a%20similar%20website."
