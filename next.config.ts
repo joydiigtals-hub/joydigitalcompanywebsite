@@ -51,15 +51,17 @@ const nextConfig: NextConfig = {
       // 4. Madurai Web Design: keep /website-design-company-madurai
       { source: "/website-design-company-in-madurai", destination: "/website-design-company-madurai", permanent: true },
 
-      // 5. Duplicate e-commerce landing page
+      // 5. Duplicate e-commerce & travel landing pages
       { source: "/website-for-e-commerce-stores", destination: "/website-for-ecommerce", permanent: true },
+      { source: "/website-for-tours-and-travels", destination: "/travel-website-development", permanent: true },
+      { source: "/tools", destination: "/free-tools", permanent: true },
 
       // 6. Regional URL consolidation & legacy redirects
       { source: "/web-development-company-in-chennai", destination: "/website-development-company-chennai", permanent: true },
       { source: "/web-development-company-chennai", destination: "/website-development-company-chennai", permanent: true },
       { source: "/website-development-chennai", destination: "/website-development-company-chennai", permanent: true },
-      { source: "/website-design-company-in-chennai", destination: "/website-development-company-chennai", permanent: true },
-      { source: "/affordable-web-design-agency-chennai", destination: "/website-development-company-chennai", permanent: true },
+      { source: "/website-design-company-in-chennai", destination: "/website-design-company-chennai", permanent: true },
+      { source: "/affordable-web-design-agency-chennai", destination: "/website-design-company-chennai", permanent: true },
 
       { source: "/seo-company-madurai", destination: "/seo-services-madurai", permanent: true },
       { source: "/seo-services-in-madurai", destination: "/seo-services-madurai", permanent: true },

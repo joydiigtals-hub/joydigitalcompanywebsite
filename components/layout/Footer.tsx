@@ -177,6 +177,9 @@ export default function Footer() {
               <Link href="/website-development-company-chennai" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Web Development Chennai</Link>
             </li>
             <li>
+              <Link href="/website-design-company-chennai" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Web Design Chennai</Link>
+            </li>
+            <li>
               <Link href="/digital-marketing-agency-in-chennai" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Digital Marketing Chennai</Link>
             </li>
             <li>

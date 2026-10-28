@@ -65,7 +65,7 @@ const SECTIONS = [
       { href: "/website-for-hotels", label: "Website for Hotels" },
       { href: "/website-for-hospitals", label: "Website for Hospitals" },
       { href: "/website-for-real-estate", label: "Website for Real Estate" },
-      { href: "/website-for-tours-and-travels", label: "Website for Tours & Travels" },
+      { href: "/travel-website-development", label: "Website for Tours & Travels" },
       { href: "/africa/tourism-website-development", label: "Africa Tourism Website Development" },
       { href: "/website-for-schools", label: "Website for Schools" },
       { href: "/website-for-small-business", label: "Website for Small Business" },
@@ -85,11 +85,14 @@ const SECTIONS = [
     title: "Regional Landing Pages (Tamil Nadu)",
     links: [
       { href: "/seo-services-chennai", label: "SEO Services Chennai" },
+      { href: "/website-development-company-chennai", label: "Website Development Company Chennai" },
+      { href: "/website-design-company-chennai", label: "Website Design Company Chennai" },
       { href: "/digital-marketing-agency-in-chennai", label: "Digital Marketing Agency Chennai" },
       { href: "/website-development-company-madurai", label: "Website Development Company Madurai" },
       { href: "/website-design-company-madurai", label: "Website Design Company Madurai" },
       { href: "/seo-services-madurai", label: "SEO Services Madurai" },
       { href: "/website-design-company-coimbatore", label: "Web Design Company Coimbatore" },
+      { href: "/seo-company-coimbatore", label: "SEO Company Coimbatore" },
     ],
   },
   {
