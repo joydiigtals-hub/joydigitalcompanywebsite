@@ -12,10 +12,11 @@ import ClientWidgets from "@/components/ui/ClientWidgets";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import CookieConsent from "@/components/ui/CookieConsent";
 import NavigationLoadingBar from "@/components/ui/NavigationLoadingBar";
+import { SITE_URL } from "@/lib/siteConfig";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.joydigital.in"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Next.js Web Development & SEO Agency | Joy Digital",
     template: "%s",
@@ -60,21 +61,20 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.joydigital.in/",
     languages: {
-      "en-IN": "https://www.joydigital.in",
-      "en-US": "https://www.joydigital.in/us",
-      "en-GB": "https://www.joydigital.in/uk",
-      "en-AE": "https://www.joydigital.in/ae",
-      "en-CA": "https://www.joydigital.in/ca",
-      "en-AU": "https://www.joydigital.in/au",
-      "es-ES": "https://www.joydigital.in/es",
-      "de-DE": "https://www.joydigital.in/de",
-      "it-IT": "https://www.joydigital.in/it",
-      "en-SG": "https://www.joydigital.in/sg",
-      "es-MX": "https://www.joydigital.in/mx",
-      "pt-BR": "https://www.joydigital.in/br",
-      "x-default": "https://www.joydigital.in",
+      "en-IN": SITE_URL,
+      "en-US": `${SITE_URL}/us`,
+      "en-GB": `${SITE_URL}/uk`,
+      "en-AE": `${SITE_URL}/ae`,
+      "en-CA": `${SITE_URL}/ca`,
+      "en-AU": `${SITE_URL}/au`,
+      "es-ES": `${SITE_URL}/es`,
+      "de-DE": `${SITE_URL}/de`,
+      "it-IT": `${SITE_URL}/it`,
+      "en-SG": `${SITE_URL}/sg`,
+      "es-MX": `${SITE_URL}/mx`,
+      "pt-BR": `${SITE_URL}/br`,
+      "x-default": SITE_URL,
     },
   },
   verification: {
@@ -94,13 +94,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.joydigital.in",
+    url: SITE_URL,
     siteName: "Joy Digital",
     title: "Joy Digital | Digital Agency & Next.js Web Development Chennai",
     description: "Premier Digital Agency & Next.js Web Development company based in Chennai, India. We build high-converting, sub-second web applications and generative AI search-optimized systems.",
     images: [
       {
-        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
+        url: `${SITE_URL}/assets/images/hero-banner.webp`,
         width: 1200,
         height: 630,
         alt: "Joy Digital - Digital Agency & Next.js Web Development Chennai",
@@ -111,7 +111,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Joy Digital | Digital Agency & Next.js Web Development Chennai",
     description: "Premier Digital Agency & Next.js Web Development company based in Chennai, India. High-performance Next.js apps, SEO, and Generative Engine Optimization (GEO).",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    images: [`${SITE_URL}/assets/images/hero-banner.webp`],
     creator: "@joydigital",
   },
 };

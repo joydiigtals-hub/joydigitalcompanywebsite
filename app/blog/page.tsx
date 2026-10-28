@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/siteConfig";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import StickyWidgets from "@/components/ui/StickyWidgets";
@@ -13,15 +14,15 @@ export const metadata: Metadata = {
   title: "Web Development & SEO Blog",
   description: "Stay ahead of competitors with the latest search marketing checklists, SEO audit guidelines, conversion optimization practices, and next-gen web speed updates.",
   alternates: {
-    canonical: "https://www.joydigital.in/blog",
+    canonical: `${SITE_URL}/blog`,
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/blog",
+    url: `${SITE_URL}/blog`,
     siteName: "Joy Digital Agency",
     title: "Web Development & SEO Blog | Joy Digital",
     description: "Stay ahead of competitors with the latest search marketing checklists, SEO audit guidelines, conversion optimization practices, and next-gen web speed updates.",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Joy Digital Agency Blog" }],
+    images: [{ url: `${SITE_URL}/assets/images/hero-banner.webp`, width: 1200, height: 630, alt: "Joy Digital Agency Blog" }],
   },
 };
 

@@ -1,4 +1,5 @@
-export const SITE_URL = "https://www.joydigital.in";
+import { SITE_URL, siteConfig } from "@/lib/siteConfig";
+export { SITE_URL };
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 export const LOCALBUSINESS_ID = `${SITE_URL}/#localbusiness`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
@@ -41,7 +42,6 @@ export const BUSINESS_INFO = {
   ],
   sameAs: [
     "https://www.linkedin.com/company/joydigital-solution/",
-    "https://www.linkedin.com/in/saravanan-l-34a861154/",
     "https://share.google/BSniheS2qnzwqUKXU",
     "https://www.youtube.com/@Joydigital2026",
     "https://www.facebook.com/profile.php?id=61590372457559",

@@ -27,6 +27,18 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // 0. Non-www to www Canonical 301 Redirect
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "joydigital.in",
+          },
+        ],
+        destination: "https://www.joydigital.in/:path*",
+        permanent: true,
+      },
       // 1. Chennai SEO: keep /seo-services-chennai
       { source: "/seo-services-in-chennai", destination: "/seo-services-chennai", permanent: true },
       { source: "/seo-company-chennai", destination: "/seo-services-chennai", permanent: true },

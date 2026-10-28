@@ -1,4 +1,5 @@
 import { getAllPosts } from '@/lib/blog';
+import { SITE_URL } from '@/lib/siteConfig';
 
 // Force dynamic execution with daily ISR revalidation so newly published blogs appear dynamically
 export const dynamic = 'force-dynamic';
@@ -35,7 +36,7 @@ interface SitemapEntry {
 
 export async function GET() {
   try {
-    const baseUrl = 'https://www.joydigital.in';
+    const baseUrl = SITE_URL;
     const todayStr = new Date().toISOString().split('T')[0];
 
     // Target country codes for localized routes

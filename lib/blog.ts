@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { getDb } from "./mongodb";
+import { SITE_URL } from "@/lib/siteConfig";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 
@@ -121,8 +122,8 @@ function normalizePostData(slug: string, data: any, content: string): BlogPost {
     focusKeyword: data.focusKeyword || "",
     secondaryKeywords: data.secondaryKeywords || "",
     canonicalUrl: data.canonicalUrl
-      ? data.canonicalUrl.replace(/https?:\/\/(?!www\.)joydigital\.in/g, "https://www.joydigital.in")
-      : `https://www.joydigital.in/blog/${slug}`,
+      ? data.canonicalUrl.replace(/https?:\/\/(?!www\.)joydigital\.in/g, SITE_URL)
+      : `${SITE_URL}/blog/${slug}`,
     robots: data.robots || "Index, Follow",
 
     internalLinks,
@@ -134,8 +135,8 @@ function normalizePostData(slug: string, data: any, content: string): BlogPost {
     authorBio: data.authorBio || "Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.",
     authorImage: data.authorImage || "/assets/images/logo.webp",
     authorProfileUrl: data.authorProfileUrl
-      ? data.authorProfileUrl.replace(/https?:\/\/(?!www\.)joydigital\.in/g, "https://www.joydigital.in")
-      : "https://www.joydigital.in/about",
+      ? data.authorProfileUrl.replace(/https?:\/\/(?!www\.)joydigital\.in/g, SITE_URL)
+      : `${SITE_URL}/about`,
 
     faqs,
 

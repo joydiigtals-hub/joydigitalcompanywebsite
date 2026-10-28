@@ -1,10 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
+import { SITE_URL } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "HTML Sitemap Index",
   description: "Complete list of all website pages, regional hubs, industry solutions, and free business tools on JoyDigital.in.",
+  alternates: {
+    canonical: `${SITE_URL}/sitemap`,
+  },
 };
 
 const SECTIONS = [

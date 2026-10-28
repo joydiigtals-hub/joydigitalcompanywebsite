@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/siteConfig";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import StickyWidgets from "@/components/ui/StickyWidgets";
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const title = rawTitle.length > 42 ? rawTitle.slice(0, 42).trim() : rawTitle;
   const fullTitle = `${title} | Joy Digital`;
   const description = post.metaDescription || post.description;
-  const canonical = post.canonicalUrl || `https://www.joydigital.in/blog/${resolvedParams.slug}`;
+  const canonical = post.canonicalUrl ? post.canonicalUrl.replace(/https?:\/\/(?!www\.)joydigital\.in/g, SITE_URL) : `${SITE_URL}/blog/${resolvedParams.slug}`;
   const isNoindex = post.robots?.toLowerCase().includes("noindex");
   const isNofollow = post.robots?.toLowerCase().includes("nofollow");
 
@@ -54,7 +55,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: post.ogDescription || description,
       images: [
         {
-          url: post.ogImage || post.image || "https://www.joydigital.in/assets/images/hero-banner.webp",
+          url: post.ogImage || post.image || `${SITE_URL}/assets/images/hero-banner.webp`,
           width: 1200,
           height: 630,
           alt: post.imageAlt || rawTitle,
@@ -65,7 +66,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title: post.twitterTitle ? (post.twitterTitle.includes("Joy Digital") ? post.twitterTitle : `${post.twitterTitle} | Joy Digital`) : fullTitle,
       description: post.twitterDescription || post.ogDescription || description,
-      images: [post.twitterImage || post.ogImage || post.image || "https://www.joydigital.in/assets/images/hero-banner.webp"],
+      images: [post.twitterImage || post.ogImage || post.image || `${SITE_URL}/assets/images/hero-banner.webp`],
     },
   };
 }
