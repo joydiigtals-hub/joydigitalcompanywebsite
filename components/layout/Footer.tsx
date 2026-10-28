@@ -149,7 +149,7 @@ export default function Footer() {
             {REGIONAL_SITES.map((site) => (
               <li key={site.code}>
                 <Link
-                  href={site.code === "" ? "/" : `/${site.code}`}
+                  href={site.code === "" || site.code === "in" ? "/" : `/${site.code}`}
                   title={`Joy Digital ${site.label} Regional Page`}
                   className="flex items-center gap-2 hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200"
                 >

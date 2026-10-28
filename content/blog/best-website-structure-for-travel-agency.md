@@ -27,7 +27,7 @@ canonicalUrl: 'https://www.joydigital.in/blog/best-website-structure-for-travel-
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Travel Website Development
-    targetUrl: /website-for-tours-and-travels
+    targetUrl: /travel-website-development
   - anchorText: Next.js Web Engineering
     targetUrl: /website-development
 autoSuggestRelated: true
@@ -234,7 +234,7 @@ Your travel agency might launch with 20 packages today and grow to 200+ packages
 * High-ranking blog articles
 * Customer reviews & case studies
 
-A custom-built Next.js travel platform enables easy scaling without requiring a total website redesign every time your inventory expands. Explore **Joy Digital's [Travel Website Development](https://www.joydigital.in/website-for-tours-and-travels)** solutions engineered for speed, SEO ranking, and lead generation.
+A custom-built Next.js travel platform enables easy scaling without requiring a total website redesign every time your inventory expands. Explore **Joy Digital's [Travel Website Development](https://www.joydigital.in/travel-website-development)** solutions engineered for speed, SEO ranking, and lead generation.
 
 ---
 

@@ -140,7 +140,7 @@ export default async function DynamicWebDevPage() {
         crossLinks={[
           { href: "/custom-website-development", label: "Custom Web Dev" },
           { href: "/website-development", label: "Web Services" },
-          { href: "/industries/real-estate", label: "Real Estate Portals" },
+          { href: "/website-for-real-estate", label: "Real Estate Portals" },
         ]}
       />
     </>

@@ -1141,7 +1141,7 @@ export default function AfricaTourismClientPage() {
                   </ul>
                 </div>
                 <Link
-                  href="/website-for-tours-and-travels"
+                  href="/travel-website-development"
                   className="text-xs font-bold text-accent hover:text-accent-dark flex items-center gap-1.5"
                 >
                   Explore Tour Operator Solutions &rarr;

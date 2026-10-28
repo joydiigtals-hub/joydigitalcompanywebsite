@@ -1264,7 +1264,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                     <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">Free Audit</span>
                     <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">SEO Tool</span>
                   </div>
-                  <Link href="/free-tools" className="text-xs font-bold text-[#7C3AED] flex items-center gap-1.5 group-hover:text-[#A78BFA] transition-colors">
+                  <Link href="/seo-audit-tool" className="text-xs font-bold text-[#7C3AED] flex items-center gap-1.5 group-hover:text-[#A78BFA] transition-colors">
                     Check SEO &rarr;
                   </Link>
                 </div>
@@ -1289,7 +1289,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                     <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">JPG / PNG</span>
                     <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">Compress Online</span>
                   </div>
-                  <Link href="/free-tools" className="text-xs font-bold text-[#7C3AED] flex items-center gap-1.5 group-hover:text-[#A78BFA] transition-colors">
+                  <Link href="/image-compressor" className="text-xs font-bold text-[#7C3AED] flex items-center gap-1.5 group-hover:text-[#A78BFA] transition-colors">
                     Compress Image &rarr;
                   </Link>
                 </div>

@@ -498,7 +498,7 @@ AI can assist with:
 * Guest support
 * Local recommendations
 
-### [Tours & Travel](/website-for-tours-and-travels)
+### [Tours & Travel](/travel-website-development)
 
 AI can help customers explore:
 

@@ -26,7 +26,7 @@ canonicalUrl: 'https://www.joydigital.in/blog/chinese-manufacturers-generate-b2b
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Custom Website Development for Manufacturers
-    targetUrl: /custom-website-for-manufacturers
+    targetUrl: /website-for-manufacturing-companies
   - anchorText: Custom Website Development
     targetUrl: /website-development
   - anchorText: International SEO Services
@@ -72,7 +72,7 @@ However, having a good product and competitive pricing is not always enough to g
 
 Today, buyers often research manufacturers online before starting a business relationship. They compare suppliers, check product information, review company credibility, and look for reliable manufacturers through search engines and other online platforms.
 
-This is why a professional B2B website has become an important sales tool for Chinese manufacturers. Explore our specialized [Custom Website Development for Manufacturers](https://www.joydigital.in/custom-website-for-manufacturers).
+This is why a professional B2B website has become an important sales tool for Chinese manufacturers. Explore our specialized [Custom Website Development for Manufacturers](https://www.joydigital.in/website-for-manufacturing-companies).
 
 A well-structured website can help manufacturers showcase their products, build trust with international buyers, improve search visibility, and generate qualified B2B enquiries.
 

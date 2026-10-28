@@ -26,7 +26,7 @@ canonicalUrl: 'https://www.joydigital.in/blog/death-of-static-travel-websites-wh
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Travel Website Development
-    targetUrl: /website-for-tours-and-travels
+    targetUrl: /travel-website-development
   - anchorText: Dynamic Web Development
     targetUrl: /dynamic-website-development
   - anchorText: B2B SEO Services
@@ -104,4 +104,4 @@ The global tourism industry is moving at a lightning-fast pace. International tr
 
 By adopting a powerful Dynamic SEO framework, tour operators can stop wasting money on endless ad clicks, outsmart big OTAs through automated long-tail targeting, and scale their B2B travel business globally on autopilot.
 
-Ready to upgrade your travel tech stack and turn organic search into your primary booking channel? Explore advanced web engineering and SEO optimization solutions tailored for travel enterprises at [Joy Digital Travel Web Solutions](/website-for-tours-and-travels).
+Ready to upgrade your travel tech stack and turn organic search into your primary booking channel? Explore advanced web engineering and SEO optimization solutions tailored for travel enterprises at [Joy Digital Travel Web Solutions](/travel-website-development).

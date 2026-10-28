@@ -27,7 +27,7 @@ canonicalUrl: 'https://www.joydigital.in/blog/travel-website-features-tour-opera
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Travel Website Development
-    targetUrl: /website-for-tours-and-travels
+    targetUrl: /travel-website-development
   - anchorText: Custom Website Development
     targetUrl: /website-development
   - anchorText: Website Design Services
@@ -522,7 +522,7 @@ A custom travel website can be designed around the company's:
 
 The goal isn't simply to create a website.
 
-**The goal is to create a digital system that helps the travel company attract, convert and manage travelers.** Learn more about our specialized [Travel Website Development Services](https://www.joydigital.in/website-for-tours-and-travels).
+**The goal is to create a digital system that helps the travel company attract, convert and manage travelers.** Learn more about our specialized [Travel Website Development Services](https://www.joydigital.in/travel-website-development).
 
 ---
 
@@ -619,7 +619,7 @@ Let's build a website designed not just to showcase your tours, but to help you 
 
 ### Related Joy Digital Services:
 
-* [Travel Website Development](https://www.joydigital.in/website-for-tours-and-travels)
+* [Travel Website Development](https://www.joydigital.in/travel-website-development)
 * [Custom Website Development](https://www.joydigital.in/website-development)
 * [Website Design Services](https://www.joydigital.in/web-design-services)
 * [SEO Services](https://www.joydigital.in/seo-services)

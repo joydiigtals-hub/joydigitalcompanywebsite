@@ -26,7 +26,7 @@ canonicalUrl: 'https://www.joydigital.in/blog/how-safari-operators-attract-inter
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Travel Website Development
-    targetUrl: /website-for-tours-and-travels
+    targetUrl: /travel-website-development
   - anchorText: Why Safari Businesses Need a Professional Website
     targetUrl: /blog/why-safari-business-needs-professional-website
   - anchorText: Web Development Services
@@ -76,7 +76,7 @@ For safari operators targeting international travellers, this creates a major op
 
 Your safari business may offer an excellent experience, but if potential customers cannot easily find your company online or understand what you offer, they may choose another operator.
 
-A **professional safari website** can help you present your destinations, packages, experiences and expertise while making it easier for international travellers to contact your business. Learn more in our specialized [Travel Website Development Services](https://www.joydigital.in/website-for-tours-and-travels) guide.
+A **professional safari website** can help you present your destinations, packages, experiences and expertise while making it easier for international travellers to contact your business. Learn more in our specialized [Travel Website Development Services](https://www.joydigital.in/travel-website-development) guide.
 
 Whether you operate in **Kenya, Tanzania, Namibia, Botswana, South Africa, Uganda, Rwanda or other African safari destinations**, your online presence can play an important role in attracting international customers. Read our companion article on [Why Every Safari Business Needs a Professional Website](https://www.joydigital.in/blog/why-safari-business-needs-professional-website).
 

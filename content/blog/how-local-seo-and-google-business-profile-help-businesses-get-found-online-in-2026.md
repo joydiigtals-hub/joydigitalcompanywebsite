@@ -34,7 +34,7 @@ internalLinks:
   - anchorText: Google Business Profile Audit
     targetUrl: /google-business-profile-optimization
   - anchorText: Local SEO Madurai
-    targetUrl: /local-seo-madurai
+    targetUrl: /seo-services-madurai
 autoSuggestRelated: true
 manualRelatedSlugs:
   - google-business-profile-optimization-guide

@@ -26,7 +26,7 @@ canonicalUrl: 'https://www.joydigital.in/blog/scaling-travel-business-globally-d
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Travel Website Development
-    targetUrl: /website-for-tours-and-travels
+    targetUrl: /travel-website-development
   - anchorText: Dynamic Web Development
     targetUrl: /dynamic-website-development
   - anchorText: B2B SEO Services
@@ -104,4 +104,4 @@ Scaling your travel business globally shouldn't mean blowing your entire revenue
 
 By integrating a powerful Dynamic SEO strategy, you can slash your high ad costs, dominate international search engine result pages (SERPs), and secure consistent bookings worldwide.
 
-Ready to cut your ad spend and turn organic search into your most profitable global acquisition channel? Explore advanced web engineering, programmatic SEO, and enterprise digital solutions tailored for travel operators at [Joy Digital Travel Web Solutions](/website-for-tours-and-travels).
+Ready to cut your ad spend and turn organic search into your most profitable global acquisition channel? Explore advanced web engineering, programmatic SEO, and enterprise digital solutions tailored for travel operators at [Joy Digital Travel Web Solutions](/travel-website-development).

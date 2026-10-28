@@ -16,7 +16,6 @@ export async function generateStaticParams() {
     { country: "us" },
     { country: "uk" },
     { country: "ae" },
-    { country: "in" },
     { country: "ca" },
     { country: "au" },
     { country: "es" },

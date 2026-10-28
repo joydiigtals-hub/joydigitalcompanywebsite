@@ -30,7 +30,7 @@ internalLinks:
   - anchorText: Custom Web Development Services
     targetUrl: /website-development
   - anchorText: Travel Website Development
-    targetUrl: /website-for-tours-and-travels
+    targetUrl: /travel-website-development
   - anchorText: Pest Control Website Development
     targetUrl: /website-for-pest-control
 autoSuggestRelated: true
@@ -78,7 +78,7 @@ The problem is simple: **customers want quick communication.**
 
 For many businesses, WhatsApp has become one of the easiest ways to communicate with potential customers. Instead of making visitors fill out a long form, businesses can allow them to start a conversation directly through WhatsApp.
 
-With the right website setup, a visitor can move from **website ? WhatsApp inquiry ? sales conversation** in just a few clicks. Learn more in our specialized [Travel Website Development Services](https://www.joydigital.in/website-for-tours-and-travels).
+With the right website setup, a visitor can move from **website ? WhatsApp inquiry ? sales conversation** in just a few clicks. Learn more in our specialized [Travel Website Development Services](https://www.joydigital.in/travel-website-development).
 
 This can make the sales process faster, simpler, and more convenient for both the customer and the business.
 

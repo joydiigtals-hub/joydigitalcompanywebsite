@@ -275,7 +275,7 @@ export default async function HotelWebPage() {
       crossLinks={[
         { href: "/website-development", label: "Custom Web Development" },
         { href: "/seo-services", label: "Hotel SEO Services" },
-        { href: "/website-for-tours-and-travels", label: "Tours & Travels Web Dev" },
+        { href: "/travel-website-development", label: "Tours & Travels Web Dev" },
         { href: "/local-seo-services", label: "Local Map SEO" },
         { href: "/case-studies", label: "Case Studies" },
         { href: "/contact", label: "Contact Front Desk" },

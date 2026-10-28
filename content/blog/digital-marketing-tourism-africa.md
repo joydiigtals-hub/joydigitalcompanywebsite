@@ -32,7 +32,7 @@ internalLinks:
   - anchorText: "Website for Tour and Safari"
     targetUrl: "/website-for-tour-and-safari"
   - anchorText: "Africa Regional Web Solutions"
-    targetUrl: "/africa"
+    targetUrl: "/africa/tourism-website-development"
   - anchorText: "Custom Website Development"
     targetUrl: "/custom-website-development"
   - anchorText: "SEO Services"
@@ -264,5 +264,5 @@ Explore our dedicated travel solutions:
 * **[Travel Website Development Services](/travel-website-development)**
 * **[Tour Operator Website Architecture](/tour-operator-website-development)**
 * **[Website Design for Safari & Tour Outfitters](/website-for-tour-and-safari)**
-* **[African Tourism Web Solutions](/africa)**
+* **[African Tourism Web Solutions](/africa/tourism-website-development)**
 * **[Contact Our Travel Marketing Specialists Today](/contact)**

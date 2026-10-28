@@ -29,7 +29,7 @@ canonicalUrl: 'https://www.joydigital.in/blog/5-must-have-website-features-tour-
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Travel Website Development
-    targetUrl: /website-for-tours-and-travels
+    targetUrl: /travel-website-development
   - anchorText: Custom Website Development
     targetUrl: /website-development
   - anchorText: Web Design Services
