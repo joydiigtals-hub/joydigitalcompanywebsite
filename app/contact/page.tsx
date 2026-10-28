@@ -15,10 +15,12 @@ export const metadata: Metadata = {
     canonical: `${SITE_URL}/contact`,
     languages: {
       "x-default": `${SITE_URL}/contact`,
-      "en-us": `${SITE_URL}/us/contact`,
-      "en-gb": `${SITE_URL}/uk/contact`,
-      "en-ae": `${SITE_URL}/ae/contact`,
-      "en-in": `${SITE_URL}/contact`,
+      "en-IN": `${SITE_URL}/contact`,
+      "en-US": `${SITE_URL}/us/contact`,
+      "en-GB": `${SITE_URL}/uk/contact`,
+      "en-AE": `${SITE_URL}/ae/contact`,
+      "en-CA": `${SITE_URL}/ca/contact`,
+      "en-AU": `${SITE_URL}/au/contact`,
     },
   },
   openGraph: {

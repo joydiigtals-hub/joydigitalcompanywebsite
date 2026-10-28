@@ -7,7 +7,6 @@ import ClarityTracker from "@/components/ClarityTracker";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 import { getRootLayoutSchema } from "@/lib/seo/schema";
-import GoogleTranslateLoader from "@/components/GoogleTranslateLoader";
 import ClientWidgets from "@/components/ui/ClientWidgets";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import CookieConsent from "@/components/ui/CookieConsent";
@@ -123,8 +122,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         <AnalyticsTracker />
         <ClarityTracker />
-        <GoogleTranslateLoader />
-        {children}
+                {children}
         <ClientWidgets />
         <StickyMobileCTA />
         <CookieConsent />

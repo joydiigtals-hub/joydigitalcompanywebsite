@@ -77,13 +77,6 @@ const REGIONS = [
 
 const LANGUAGES = [
   { code: "en", label: "English", flag: "🇬🇧" },
-  { code: "ar", label: "Arabic", flag: "🇦🇪" },
-  { code: "sw", label: "Swahili", flag: "🇰🇪" },
-  { code: "af", label: "Afrikaans", flag: "🇿🇦" },
-  { code: "fr", label: "French", flag: "🇫🇷" },
-  { code: "es", label: "Spanish", flag: "🇪🇸" },
-  { code: "de", label: "German", flag: "🇩🇪" },
-  { code: "hi", label: "Hindi", flag: "🇮🇳" },
 ];
 export default function Header({ transparent = false }: { transparent?: boolean }) {
   const [isScrolledRaw, setIsScrolledRaw] = useState(false);

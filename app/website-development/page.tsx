@@ -10,10 +10,12 @@ export const metadata: Metadata = {
     canonical: "https://www.joydigital.in/website-development",
     languages: {
       "x-default": "https://www.joydigital.in/website-development",
-      "en-us": "https://www.joydigital.in/us/website-development",
-      "en-gb": "https://www.joydigital.in/uk/website-development",
-      "en-ae": "https://www.joydigital.in/ae/website-development",
-      "en-in": "https://www.joydigital.in/in/website-development",
+      "en-IN": "https://www.joydigital.in/website-development",
+      "en-US": "https://www.joydigital.in/us/website-development",
+      "en-GB": "https://www.joydigital.in/uk/website-development",
+      "en-AE": "https://www.joydigital.in/ae/website-development",
+      "en-CA": "https://www.joydigital.in/ca/website-development",
+      "en-AU": "https://www.joydigital.in/au/website-development",
     },
   },
 };
