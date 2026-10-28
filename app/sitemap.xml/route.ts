@@ -48,6 +48,10 @@ export async function GET() {
     const unifiedStaticPaths = [
       '/about',
       '/ai-search-optimization',
+      '/website-seo',
+      '/technical-seo',
+      '/on-page-seo',
+      '/seo-content',
       '/author/saravanan',
       '/portfolio',
       '/portfolio-website-development',

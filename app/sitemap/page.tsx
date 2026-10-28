@@ -34,7 +34,11 @@ const SECTIONS = [
     title: "Core Web & SEO Services",
     links: [
       { href: "/website-development", label: "Website Development" },
-      { href: "/seo-services", label: "SEO Services" },
+      { href: "/seo-services", label: "Enterprise B2B SEO Services" },
+      { href: "/website-seo", label: "Website SEO Services" },
+      { href: "/technical-seo", label: "Technical SEO Services" },
+      { href: "/on-page-seo", label: "On-Page SEO Services" },
+      { href: "/seo-content", label: "SEO Content Strategy" },
       { href: "/web-design-services", label: "Web Design Services" },
       { href: "/local-seo-services", label: "Local SEO Services" },
       { href: "/google-business-profile-setup", label: "Google Business Profile Setup" },

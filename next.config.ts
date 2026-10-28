@@ -148,6 +148,46 @@ const nextConfig: NextConfig = {
         destination: "/web-design-services",
         permanent: true,
       },
+      {
+        source: "/technical-seo-services",
+        destination: "/technical-seo",
+        permanent: true,
+      },
+      {
+        source: "/on-page-seo-services",
+        destination: "/on-page-seo",
+        permanent: true,
+      },
+      {
+        source: "/seo-content-services",
+        destination: "/seo-content",
+        permanent: true,
+      },
+      {
+        source: "/website-seo-services",
+        destination: "/website-seo",
+        permanent: true,
+      },
+      {
+        source: "/technical_seo",
+        destination: "/technical-seo",
+        permanent: true,
+      },
+      {
+        source: "/on_page_seo",
+        destination: "/on-page-seo",
+        permanent: true,
+      },
+      {
+        source: "/seo_content",
+        destination: "/seo-content",
+        permanent: true,
+      },
+      {
+        source: "/website_seo",
+        destination: "/website-seo",
+        permanent: true,
+      },
     ];
   },
   async headers() {

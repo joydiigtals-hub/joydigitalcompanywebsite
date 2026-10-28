@@ -34,7 +34,7 @@ const SERVICES_CATEGORIES = [
     localized: false,
     subServices: [
       { href: "/travel-website-development", label: "Travel Agency Websites", localized: false },
-      { href: "/travel-website-development", label: "Tour Operator Websites", localized: false },
+      { href: "/tour-operator-website-development", label: "Tour Operator Websites", localized: false },
       { href: "/safari-website-development", label: "Safari Websites", localized: false },
       { href: "/travel-website-development", label: "Tourism Websites", localized: false },
       { href: "/travel-website-development", label: "DMC Websites", localized: false },
@@ -45,10 +45,10 @@ const SERVICES_CATEGORIES = [
     href: "/seo-services",
     localized: true,
     subServices: [
-      { href: "/seo-services", label: "Website SEO", localized: true },
-      { href: "/seo-services", label: "Technical SEO", localized: true },
-      { href: "/seo-services", label: "On-Page SEO", localized: true },
-      { href: "/seo-services", label: "SEO Content", localized: true },
+      { href: "/website-seo", label: "Website SEO", localized: false },
+      { href: "/technical-seo", label: "Technical SEO", localized: false },
+      { href: "/on-page-seo", label: "On-Page SEO", localized: false },
+      { href: "/seo-content", label: "SEO Content", localized: false },
     ]
   },
   {
@@ -282,7 +282,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                 className={`font-semibold text-sm flex items-center gap-1 transition-colors nav-link-underline cursor-pointer ${
                   isScrolled ? "hover:text-accent" : "hover:text-primary-light"
                 } ${
-                  pathname.includes("-services") || pathname.includes("-development") || pathname.includes("-setup") || pathname.includes("marketing")
+                  pathname.includes("-services") || pathname.includes("-development") || pathname.includes("-setup") || pathname.includes("marketing") || pathname.includes("-seo") || pathname.includes("seo-") || pathname.includes("ai-search")
                     ? (isScrolled ? "text-accent" : "text-primary-light")
                     : (isScrolled ? "text-text-primary" : "text-slate-100")
                 }`}
