@@ -6,40 +6,41 @@ import StickyWidgets from "@/components/ui/StickyWidgets";
 import LeadForm from "@/components/ui/LeadForm";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
+import { SITE_URL, siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "Contact Us & Free Consultation",
   description: "Get in touch with our digital specialists. Request a free SEO audit, custom website quotes, or logo design consulting from our office.",
   alternates: {
-    canonical: "https://www.joydigital.in/contact",
+    canonical: `${SITE_URL}/contact`,
     languages: {
-      "x-default": "https://www.joydigital.in/contact",
-      "en-us": "https://www.joydigital.in/us/contact",
-      "en-gb": "https://www.joydigital.in/uk/contact",
-      "en-ae": "https://www.joydigital.in/ae/contact",
-      "en-in": "https://www.joydigital.in/contact",
+      "x-default": `${SITE_URL}/contact`,
+      "en-us": `${SITE_URL}/us/contact`,
+      "en-gb": `${SITE_URL}/uk/contact`,
+      "en-ae": `${SITE_URL}/ae/contact`,
+      "en-in": `${SITE_URL}/contact`,
     },
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/contact",
+    url: `${SITE_URL}/contact`,
     siteName: "Joy Digital Agency",
     title: "Contact Us & Free Consultation | Joy Digital",
     description: "Get in touch with our digital specialists. Request a free SEO audit, custom website quotes, or logo design consulting from our office.",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Contact Joy Digital Agency" }],
+    images: [{ url: `${SITE_URL}/assets/images/hero-banner.webp`, width: 1200, height: 630, alt: "Contact Joy Digital Agency" }],
   },
 };
 
 export default function ContactPage() {
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
-  const canonicalUrl = "https://www.joydigital.in/contact";
+  const contactEmail = siteConfig.email;
+  const canonicalUrl = `${SITE_URL}/contact`;
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Contact Us & Free Consultation | Joy Digital",
     description: "Get in touch with our digital specialists. Request a free SEO audit, custom website quotes, or logo design consulting from our office.",
     includeLocalBusiness: true,
     breadcrumbs: [
-      { name: "Home", item: "https://www.joydigital.in" },
+      { name: "Home", item: SITE_URL },
       { name: "Contact Us", item: canonicalUrl },
     ],
   });
@@ -76,17 +77,32 @@ export default function ContactPage() {
               </h2>
               
               <div className="flex flex-col gap-4">
-                {/* Location Card */}
+                {/* Office Address (HQ) */}
                 <div className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-all flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center text-[#7C3AED] text-xl flex-shrink-0 shadow-sm border border-purple-100">
                     <i className="fa-solid fa-map-location-dot" />
                   </div>
                   <div className="flex flex-col">
                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-purple-100 text-[#6D28D9] text-[11px] font-extrabold uppercase tracking-wider w-fit mb-1">
-                      Office Address
+                      HQ Office
                     </span>
                     <span className="text-[15px] font-bold text-slate-900 leading-snug">
                       Joy Digital Growth Agency, Madurai, Tamil Nadu, India
+                    </span>
+                  </div>
+                </div>
+
+                {/* Chennai Partner Office */}
+                <div className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-all flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-slate-600 text-xl flex-shrink-0 shadow-sm border border-slate-200">
+                    <i className="fa-solid fa-handshake" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[11px] font-extrabold uppercase tracking-wider w-fit mb-1">
+                      Chennai (Partner Office)
+                    </span>
+                    <span className="text-[13px] text-slate-700 leading-snug">
+                      11, Jothi nagar 5th street, Murugappa polytechnic nearby, Avadi, Chennai 600053
                     </span>
                   </div>
                 </div>

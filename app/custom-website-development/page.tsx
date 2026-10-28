@@ -111,7 +111,6 @@ export default async function CustomWebsiteDevelopmentPage() {
         ],
         "sameAs": [
           "https://www.linkedin.com/company/joydigital-solution/",
-          "https://www.linkedin.com/in/saravanan-l-34a861154/",
           "https://share.google/BSniheS2qnzwqUKXU",
           "https://www.youtube.com/@Joydigital2026",
           "https://www.facebook.com/profile.php?id=61590372457559"

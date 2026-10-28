@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import CompanyProfileDownload from "@/components/ui/CompanyProfileDownload";
+import { siteConfig } from "@/lib/siteConfig";
 
 const REGIONAL_SITES = [
   { code: "", label: "Global (USD)", flag: "🌐" },
@@ -32,7 +33,7 @@ export default function Footer() {
     return path;
   };
 
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
+  const contactEmail = siteConfig.email;
 
   return (
     <footer className="bg-[#F8FAFC] dark:bg-[#0F172A] text-slate-800 dark:text-slate-200 border-t border-slate-200 dark:border-slate-800 pt-16 pb-24 lg:pb-12 mt-auto transition-colors duration-200">
@@ -457,20 +458,13 @@ export default function Footer() {
               <i className="fa-solid fa-location-dot text-[#7C3AED] mt-0.5 shrink-0" />
               <div>
                 <span className="font-semibold text-[#0F172A] dark:text-white block">Madurai (HQ):</span>
-                <span>Madurai, Tamil Nadu, India</span>
-              </div>
-            </div>
-            <div className="flex items-start gap-2 leading-relaxed border-t border-slate-200 dark:border-slate-800 pt-2.5">
-              <i className="fa-solid fa-handshake text-[#7C3AED] mt-0.5 shrink-0" />
-              <div>
-                <span className="font-semibold text-[#0F172A] dark:text-white block">Chennai (Our Partners):</span>
-                <span>11, Jothi nagar 5th street, Murugappa polytechnic nearby, Avadi, Chennai 600053</span>
+                <span>{siteConfig.hq}</span>
               </div>
             </div>
             <ul className="flex flex-col space-y-2 text-xs border-t border-slate-200 dark:border-slate-800 pt-2.5">
               <li className="flex items-center gap-2">
                 <span>🇮🇳</span>
-                <span><strong className="text-[#0F172A] dark:text-white">India &amp; WA:</strong> <a href="tel:+919080026133" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 font-medium">+91 90800 26133</a></span>
+                <span><strong className="text-[#0F172A] dark:text-white">India &amp; WA:</strong> <a href={`tel:${siteConfig.phoneRaw}`} className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 font-medium">{siteConfig.phone}</a></span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-[#7C3AED]"><i className="fa-solid fa-envelope" /></span>
