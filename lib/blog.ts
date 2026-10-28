@@ -82,9 +82,27 @@ function normalizePostData(slug: string, data: any, content: string): BlogPost {
     tags = data.tags.split(",").map((t: string) => t.trim());
   }
 
+  // Normalize legacy URLs in content
+  let normalizedContent = (content || "")
+    .replace(/\]\(\/website-for-tours-and-travels\)/g, "](/travel-website-development)")
+    .replace(/href=["']\/website-for-tours-and-travels["']/g, 'href="/travel-website-development"')
+    .replace(/\]\(\/local-seo-madurai\)/g, "](/seo-services-madurai)")
+    .replace(/href=["']\/local-seo-madurai["']/g, 'href="/seo-services-madurai"')
+    .replace(/\]\(\/africa\)/g, "](/africa/tourism-website-development)")
+    .replace(/href=["']\/africa["']/g, 'href="/africa/tourism-website-development"');
+
   let internalLinks: InternalLinkItem[] = [];
   if (Array.isArray(data.internalLinks)) {
-    internalLinks = data.internalLinks;
+    internalLinks = data.internalLinks.map((item: any) => ({
+      anchorText: item.anchorText || "",
+      targetUrl: item.targetUrl === "/website-for-tours-and-travels"
+        ? "/travel-website-development"
+        : item.targetUrl === "/local-seo-madurai"
+        ? "/seo-services-madurai"
+        : item.targetUrl === "/africa"
+        ? "/africa/tourism-website-development"
+        : item.targetUrl || "",
+    }));
   }
 
   let faqs: FaqItem[] = [];
@@ -111,7 +129,7 @@ function normalizePostData(slug: string, data: any, content: string): BlogPost {
     imageAlt: data.imageAlt || data.title || "",
     imageCaption: data.imageCaption || "",
     tags,
-    content,
+    content: normalizedContent,
 
     showTableOfContents: data.showTableOfContents !== false,
     showAuthorInfo: data.showAuthorInfo !== false,
