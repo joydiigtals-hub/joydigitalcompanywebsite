@@ -6,9 +6,7 @@ import { generatePageSeo } from "@/lib/seoEngine";
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await generatePageSeo("/dynamic-website-development");
   return {
-    ...seoData.metadata,
-    keywords: [
-      ...(Array.isArray(seoData.metadata.keywords) ? (seoData.metadata.keywords as string[]) : []),
+    ...seoData.metadata,) : []),
       "Dynamic website company in chennai",
       "Best dynamic website company",
       "Dynamic website development cost in india",

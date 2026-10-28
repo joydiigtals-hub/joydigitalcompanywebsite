@@ -5,22 +5,6 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Generative Engine Optimization GEO",
   description: "Optimize your SaaS architecture for SearchGPT, Perplexity, and Claude. Win AI search citations and drive high-intent organic traffic. Book an AI audit today.",
-  keywords: [
-    "AI Search Optimization",
-    "ai search optimization tool",
-    "optimize website for ai search",
-    "ai search optimization course",
-    "ai search optimization certification",
-    "ai search optimization tutorial",
-    "ai search optimization aso",
-    "what is ai search optimization called",
-    "ai search optimization acronym",
-    "Generative Engine Optimization",
-    "GEO Services",
-    "Entity SEO",
-    "Semantic SEO",
-    "Joy Digital GEO"
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/ai-search-optimization",
   },

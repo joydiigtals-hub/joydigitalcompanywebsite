@@ -5,11 +5,6 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Headless Ecommerce Development",
   description: "Custom Next.js ecommerce development. Fast headless storefronts, B2B digital commerce apps, and high-converting checkout flows.",
-  keywords: [
-    "E-commerce Website Development",
-    "Custom E-commerce Development",
-    "Online Store Development"
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/ecommerce-website-development",
   },

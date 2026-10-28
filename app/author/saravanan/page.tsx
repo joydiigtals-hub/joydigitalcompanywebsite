@@ -12,14 +12,6 @@ import { getPersonEntity, getOrganizationEntity, SITE_URL } from "@/lib/seo/sche
 export const metadata: Metadata = {
   title: "Saravanan L - Web Specialist",
   description: "Technical web development and SEO guides written by Saravanan L, Founder & Technical Web Specialist at Joy Digital.",
-  keywords: [
-    "Saravanan L",
-    "Technical Web Specialist",
-    "Joy Digital Founder",
-    "Next.js Developer Chennai",
-    "SEO Specialist India",
-    "Web Engineering Expert"
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/author/saravanan",
   },

@@ -6,16 +6,6 @@ export const metadata: Metadata = {
   title: "Technical SEO Services & Core Web Vitals Optimization",
   description:
     "Expert Technical SEO services by Joy Digital. JavaScript SEO, Next.js architecture, Core Web Vitals (LCP, INP, CLS), crawl budget, dynamic XML sitemaps, and rich JSON-LD schemas.",
-  keywords: [
-    "Technical SEO Services",
-    "Core Web Vitals Optimization",
-    "JavaScript SEO Next.js",
-    "Crawl Budget Optimization",
-    "Structured Data Schema Markup",
-    "Site Speed Optimization",
-    "Technical SEO Audit",
-    "Indexing & Crawlability Fixes"
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/technical-seo",
   },

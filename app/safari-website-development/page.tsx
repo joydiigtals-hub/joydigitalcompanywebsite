@@ -5,14 +5,6 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Safari Website Development",
   description: "Custom safari website engineering for safari operators and wildlife lodges. Sub-second booking portals and global SEO to capture high-ticket bookings.",
-  keywords: [
-    "safari website development",
-    "safari operator website design",
-    "wildlife tourism website development",
-    "african safari website design",
-    "safari lodge website development",
-    "travel & safari web platforms"
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/safari-website-development",
   },

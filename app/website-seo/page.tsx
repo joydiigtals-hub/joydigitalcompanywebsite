@@ -6,16 +6,6 @@ export const metadata: Metadata = {
   title: "Website SEO Services | Complete Search Engine Optimization",
   description:
     "End-to-end website SEO services by Joy Digital. Increase organic Google rankings, improve website visibility, drive qualified search traffic, and generate continuous business leads.",
-  keywords: [
-    "Website SEO Services",
-    "Search Engine Optimization for Websites",
-    "Complete SEO Services",
-    "Website Ranking Improvement",
-    "Organic Search Traffic",
-    "Website SEO Audit",
-    "Google Ranking Services",
-    "Full-Service SEO Company"
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-seo",
   },

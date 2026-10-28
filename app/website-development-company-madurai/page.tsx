@@ -6,15 +6,6 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Best Website Development Company in Madurai",
   description: "Build sub-second, custom websites with Joy Digital, a leading website development company in Madurai. Expert Next.js, React & high-converting business portals.",
-  keywords: [
-    "best website development company in madurai",
-    "website development company in madurai",
-    "web development services in madurai",
-    "custom website development in madurai",
-    "web development company in madurai",
-    "nextjs development madurai",
-    "react web developers madurai",
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-development-company-madurai",
   },

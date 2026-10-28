@@ -5,12 +5,6 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Website Design Services",
   description: "Joy Digital offers custom website design services. We craft responsive web design, conversion-focused UI/UX layouts, and intuitive brand design systems.",
-  keywords: [
-    "Web Design Services",
-    "Website Design Agency",
-    "Custom Website Design",
-    "Responsive Web Design"
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/web-design-services",
   },

@@ -6,15 +6,6 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Best Website Design Company in Madurai",
   description: "Partner with a leading website design company in Madurai. Joy Digital crafts modern, responsive website designs and UI/UX layouts that turn visitors into customers.",
-  keywords: [
-    "best website design company in madurai",
-    "website design company in madurai",
-    "website designers in madurai",
-    "responsive website design in madurai",
-    "web design services in madurai",
-    "ui ux design madurai",
-    "web designers in madurai",
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-design-company-madurai",
   },

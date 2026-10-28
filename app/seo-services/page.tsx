@@ -6,12 +6,6 @@ import EnterpriseSeoLeadForm from "@/components/ui/EnterpriseSeoLeadForm";
 export const metadata: Metadata = {
   title: "B2B SEO Services & GEO",
   description: "Enterprise B2B SEO services by Joy Digital. Technical SEO architecture, Core Web Vitals, and Generative Engine Optimization (GEO) for global brands.",
-  keywords: [
-    "Enterprise B2B SEO Services",
-    "Generative Engine Optimization",
-    "Technical SEO Architecture",
-    "Global B2B Keyword Strategy"
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/seo-services",
     languages: {

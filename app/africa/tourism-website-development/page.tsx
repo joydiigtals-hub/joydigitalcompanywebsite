@@ -5,20 +5,6 @@ import AfricaTourismClientPage from "./AfricaTourismClientPage";
 export const metadata: Metadata = {
   title: "Tourism Web Development Africa",
   description: "Custom tourism and safari websites for African tour operators and lodges. Fast Next.js platforms to drive direct international bookings.",
-  keywords: [
-    "tourism website development Africa",
-    "African tourism website development",
-    "safari website development",
-    "tour operator website development",
-    "tourism website design Africa",
-    "travel website development Africa",
-    "safari website design",
-    "African tour operator website",
-    "custom tourism website development",
-    "safari tour operator website design",
-    "lodge and safari camp website development",
-    "Joy Digital Africa Tourism"
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/africa/tourism-website-development",
   },

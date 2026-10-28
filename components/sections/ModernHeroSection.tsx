@@ -231,14 +231,18 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
           {/* Step 2: Main Headline with Staggered Word Reveal */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.14] flex flex-wrap gap-x-[0.28em] gap-y-1 sm:gap-y-2 select-none">
             {heroMainWords.map((word, idx) => (
-              <span key={`main-w-${idx}`} className="inline-block">
-                {word}
-              </span>
+              <React.Fragment key={`main-w-${idx}`}>
+                <span className="inline-block">{word}</span>
+                {" "}
+              </React.Fragment>
             ))}
             {heroGradientWords.map((word, idx) => (
-              <span key={`grad-w-${idx}`} className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-300 animate-gradient-shimmer">
-                {word}
-              </span>
+              <React.Fragment key={`grad-w-${idx}`}>
+                <span className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-300 animate-gradient-shimmer">
+                  {word}
+                </span>
+                {idx < heroGradientWords.length - 1 ? " " : ""}
+              </React.Fragment>
             ))}
           </h1>
 

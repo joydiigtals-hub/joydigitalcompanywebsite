@@ -11,15 +11,6 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   title: "WordPress to Next.js Migration Agency",
   description: "Migrate legacy WordPress to high-speed Next.js. Master headless WordPress Next.js architecture and headless CMS SEO with 100% Core Web Vitals and zero ranking loss.",
-  keywords: [
-    "headless wordpress nextjs",
-    "headless cms seo",
-    "wordpress to nextjs migration",
-    "headless wordpress agency",
-    "nextjs headless cms",
-    "migrate wordpress to react",
-    "decouple wordpress nextjs"
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/wordpress-to-nextjs-migration",
   },

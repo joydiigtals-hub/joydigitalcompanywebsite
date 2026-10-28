@@ -3,13 +3,17 @@ import HomePageComponent, { HOME_FAQS } from "@/components/sections/HomePageComp
 import type { Metadata } from "next";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
+import { SITE_URL } from "@/lib/siteConfig";
+
+const PAGE_TITLE = "Custom Next.js Website Development & SEO Agency | Joy Digital";
+const PAGE_DESC = "Joy Digital engineers custom Next.js websites and high-impact SEO strategies to help ambitious businesses capture organic search traffic and generate sales leads.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.joydigital.in"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    absolute: "Professional Website Development Services | Grow Fast",
+    absolute: PAGE_TITLE,
   },
-  description: "Transform your business with stunning, high-converting website development services. Boost sales & dominate your market. Get a free quote!",
+  description: PAGE_DESC,
   authors: [{ name: "Joy Digital" }],
   publisher: "Joy Digital",
   robots: {
@@ -24,13 +28,15 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.joydigital.in/",
+    canonical: SITE_URL,
     languages: {
-      "x-default": "https://www.joydigital.in",
-      "en-us": "https://www.joydigital.in/us",
-      "en-gb": "https://www.joydigital.in/uk",
-      "en-ae": "https://www.joydigital.in/ae",
-      "en-in": "https://www.joydigital.in/in",
+      "x-default": SITE_URL,
+      "en-us": `${SITE_URL}/us`,
+      "en-gb": `${SITE_URL}/uk`,
+      "en-ae": `${SITE_URL}/ae`,
+      "en-in": SITE_URL,
+      "en-ca": `${SITE_URL}/ca`,
+      "en-au": `${SITE_URL}/au`,
     },
   },
   verification: {
@@ -39,33 +45,33 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.joydigital.in",
+    url: SITE_URL,
     siteName: "Joy Digital",
-    title: "Professional Website Development Services | Grow Fast",
-    description: "Transform your business with stunning, high-converting website development services. Boost sales & dominate your market. Get a free quote!",
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
     images: [
       {
-        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
+        url: `${SITE_URL}/assets/images/hero-banner.webp`,
         width: 1200,
         height: 630,
-        alt: "Joy Digital - Professional Website Development Services",
+        alt: "Joy Digital - Custom Next.js Website Development & SEO Agency",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional Website Development Services | Grow Fast",
-    description: "Transform your business with stunning, high-converting website development services. Boost sales & dominate your market. Get a free quote!",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+    images: [`${SITE_URL}/assets/images/hero-banner.webp`],
     creator: "@joydigital",
   },
 };
 
 export default function HomePage() {
   const homeGraph = buildPageGraphSchema({
-    url: "https://www.joydigital.in/",
-    title: "Professional Website Development Services | Grow Fast",
-    description: "Transform your business with stunning, high-converting website development services. Boost sales & dominate your market. Get a free quote!",
+    url: SITE_URL,
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
     isHomepage: true,
     faqs: HOME_FAQS,
   });

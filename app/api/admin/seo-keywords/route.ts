@@ -20,8 +20,7 @@ export async function GET(req: NextRequest) {
     const keywords = await getAllKeywords();
     return NextResponse.json({ success: true, keywords, count: keywords.length });
   } catch (error) {
-    console.error("Error in GET /api/admin/seo-keywords:", error);
-    return NextResponse.json({ success: false, error: "Failed to fetch SEO keywords" }, { status: 500 });
+    console.error("Error in GET /api/admin/seo-Failed to fetch SEO keywords" }, { status: 500 });
   }
 }
 
@@ -48,8 +47,7 @@ export async function POST(req: NextRequest) {
     const saved = await saveKeyword(keywordData);
     return NextResponse.json({ success: true, keyword: saved });
   } catch (error) {
-    console.error("Error in POST /api/admin/seo-keywords:", error);
-    return NextResponse.json({ success: false, error: "Failed to save SEO keyword" }, { status: 500 });
+    console.error("Error in POST /api/admin/seo-Failed to save SEO keyword" }, { status: 500 });
   }
 }
 
@@ -65,7 +63,6 @@ export async function DELETE(req: NextRequest) {
     await deleteKeyword(id);
     return NextResponse.json({ success: true, message: "Keyword deleted successfully" });
   } catch (error) {
-    console.error("Error in DELETE /api/admin/seo-keywords:", error);
-    return NextResponse.json({ success: false, error: "Failed to delete SEO keyword" }, { status: 500 });
+    console.error("Error in DELETE /api/admin/seo-Failed to delete SEO keyword" }, { status: 500 });
   }
 }

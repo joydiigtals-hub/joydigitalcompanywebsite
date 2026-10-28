@@ -11,15 +11,6 @@ export async function generateMetadata(): Promise<Metadata> {
   );
   return {
     ...seoData.metadata,
-    keywords: [
-      "high converting landing page",
-      "landing page for google ads",
-      "google ads landing page design",
-      "PPC landing page development",
-      "conversion rate optimization",
-      "high converting landing page design",
-      "Next.js landing page"
-    ]
   };
 }
 

@@ -8,14 +8,6 @@ export const metadata: Metadata = {
     absolute: "Luxury Brand Website Design & Prestige SEO | Joy Digital",
   },
   description: "Bespoke luxury brand website design & global prestige SEO. Create high-converting Next.js portals, VIP concierge forms & lookbooks for HNWIs. Get a free audit!",
-  keywords: [
-    "luxury brand website design",
-    "bespoke website development",
-    "luxury web agency",
-    "website for luxury brands",
-    "prestige seo services",
-    "luxury ecommerce website",
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-luxury-brands",
   },

@@ -6,13 +6,6 @@ import LocalSeoLeadForm from "@/components/ui/LocalSeoLeadForm";
 export const metadata: Metadata = {
   title: "Local SEO Services & GBP",
   description: "Enterprise Google Business Profile management and local SEO services. Dominate Google Maps 3-Pack rankings and acquire local customer calls.",
-  keywords: [
-    "Multi-Location Local SEO Services",
-    "Enterprise Google Business Profile Management",
-    "Global Maps 3-Pack Optimization",
-    "Franchise Local Search Strategy",
-    "Hyper-Local Geo-Targeted SEO"
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/local-seo-services",
   },

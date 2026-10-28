@@ -5,17 +5,6 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Next.js Development Agency",
   description: "Hire expert Next.js & React developers. We engineer scalable, sub-second web apps, headless systems, and serverless platforms. Get a free proposal!",
-  keywords: [
-    "Next.js Development Agency",
-    "Next.js Development Company",
-    "React JS Development Company",
-    "Headless Web Development",
-    "headless cms seo",
-    "headless wordpress nextjs",
-    "Hire Next.js Developers",
-    "Custom React Web Development",
-    "Serverless Web Architecture"
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/nextjs-development-agency",
   },

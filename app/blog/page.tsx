@@ -10,19 +10,31 @@ import BlogListingContainer from "@/components/sections/BlogListingContainer";
 
 export const revalidate = 60;
 
+const BLOG_TITLE = "Web Development & SEO Blog | Joy Digital Insights";
+const BLOG_DESC = "Explore actionable web development guides, technical SEO audit frameworks, and Core Web Vitals optimization techniques to grow your search traffic.";
+
 export const metadata: Metadata = {
-  title: "Web Development & SEO Blog",
-  description: "Stay ahead of competitors with the latest search marketing checklists, SEO audit guidelines, conversion optimization practices, and next-gen web speed updates.",
+  title: {
+    absolute: BLOG_TITLE,
+  },
+  description: BLOG_DESC,
   alternates: {
     canonical: `${SITE_URL}/blog`,
   },
   openGraph: {
     type: "website",
     url: `${SITE_URL}/blog`,
-    siteName: "Joy Digital Agency",
-    title: "Web Development & SEO Blog | Joy Digital",
-    description: "Stay ahead of competitors with the latest search marketing checklists, SEO audit guidelines, conversion optimization practices, and next-gen web speed updates.",
-    images: [{ url: `${SITE_URL}/assets/images/hero-banner.webp`, width: 1200, height: 630, alt: "Joy Digital Agency Blog" }],
+    siteName: "Joy Digital",
+    title: BLOG_TITLE,
+    description: BLOG_DESC,
+    images: [{ url: `${SITE_URL}/assets/images/hero-banner.webp`, width: 1200, height: 630, alt: "Joy Digital Web Development & SEO Blog" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: BLOG_TITLE,
+    description: BLOG_DESC,
+    images: [`${SITE_URL}/assets/images/hero-banner.webp`],
+    creator: "@joydigital",
   },
 };
 

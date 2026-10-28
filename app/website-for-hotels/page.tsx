@@ -7,11 +7,6 @@ import { getPostBySlug } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Hotel Website Design & SEO",
   description: "Direct-booking websites and SEO for luxury hotels and resorts. Cut OTA commissions and capture international tourist bookings directly.",
-  keywords: [
-    "Hotel Website Design",
-    "Hotel Website Development",
-    "Hotel SEO"
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-hotels",
   },

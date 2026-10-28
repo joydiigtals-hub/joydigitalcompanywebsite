@@ -6,16 +6,6 @@ import IndustryPackagesSection from "@/components/sections/IndustryPackagesSecti
 export const metadata: Metadata = {
   title: "Custom Next.js Web Development",
   description: "Replace legacy web bloat with scalable, serverless Next.js architecture engineered for maximum conversions. Ship enterprise code faster. Audit your site today.",
-  keywords: [
-    "website development company in chennai",
-    "best website development company in chennai",
-    "top website development company in india",
-    "website development and seo service",
-    "Web Development Services",
-    "Custom Web Development",
-    "Next.js Development",
-    "React Development"
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-development",
     languages: {

@@ -6,16 +6,6 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "SEO Services in Madurai | Top SEO Company & Agency",
   description: "Drive qualified local leads and Google Maps 3-Pack rankings with expert SEO services in Madurai. Joy Digital delivers technical SEO, speed audits & citation growth.",
-  keywords: [
-    "seo services in madurai",
-    "seo service in madurai",
-    "seo company in madurai",
-    "seo agency in madurai",
-    "local seo services in madurai",
-    "google maps seo madurai",
-    "technical seo madurai",
-    "seo audit madurai",
-  ],
   alternates: {
     canonical: "https://www.joydigital.in/seo-services-madurai",
   },
