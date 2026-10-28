@@ -1327,14 +1327,12 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                   </p>
                 </div>
                 <div className="md:col-span-4 flex flex-col gap-3 justify-end">
-                  <GetQuoteModal
-                    triggerText="Get a Free Consultation"
-                    source="Free Tools Lead Consultation"
-                    defaultService="Web Design & Landing Page"
-                    triggerClassName="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-center font-bold text-xs py-3.5 px-6 rounded-xl shadow-sm hover:scale-[1.01] transition-all cursor-pointer inline-flex items-center justify-center"
-                    replaceClassName
-                    hideIcons
-                  />
+                  <Link
+                    href="/free-website-audit"
+                    className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-center font-bold text-xs py-3.5 px-6 rounded-xl shadow-sm hover:scale-[1.01] transition-all cursor-pointer inline-flex items-center justify-center"
+                  >
+                    Get a Free Website Audit
+                  </Link>
                   <TrackedWaLink
                     href="https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I%20saw%20your%20free%20business%20tools%20and%20I'd%20like%2520to%2520get%2520a%2520free%2520consultation%2520for%2520my%2520business."
                     location="free_tools_cta"

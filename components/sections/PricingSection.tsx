@@ -46,13 +46,13 @@ export default function PricingSection({ country = "in" }: PricingSectionProps) 
               Perfect for new local service businesses wanting to establish professional authority online.
             </p>
 
-            {/* Scope Badge (No Price Displayed) */}
+            {/* Pricing Badge */}
             <div className="mb-6 p-3 rounded-xl bg-purple-50/70 border border-purple-100 flex items-center justify-between">
-              <div className="flex items-center gap-2 text-xs font-bold text-primary-dark">
-                <span className="w-2 h-2 rounded-full bg-[#7C3AED] animate-pulse" />
-                <span>Essential Presence</span>
+              <div className="flex flex-col">
+                <span className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">Starting from</span>
+                <span className="text-sm font-extrabold text-[#7C3AED]">$1,200</span>
               </div>
-              <span className="text-[10px] font-bold text-[#7C3AED] uppercase tracking-wider bg-white px-2 py-0.5 rounded border border-purple-100">
+              <span className="text-[10px] font-bold text-[#7C3AED] uppercase tracking-wider bg-white px-2.5 py-1 rounded-md border border-purple-100 shadow-xs">
                 Custom Quote
               </span>
             </div>
@@ -101,13 +101,13 @@ export default function PricingSection({ country = "in" }: PricingSectionProps) 
               Recommended for companies targeting local search rankings and active online client acquisition.
             </p>
 
-            {/* Scope Badge (No Price Displayed) */}
+            {/* Pricing Badge */}
             <div className="mb-6 p-3 rounded-xl bg-purple-50/70 border border-purple-100 flex items-center justify-between">
-              <div className="flex items-center gap-2 text-xs font-bold text-primary-dark">
-                <span className="w-2 h-2 rounded-full bg-[#7C3AED] animate-pulse" />
-                <span>Growth &amp; Conversion</span>
+              <div className="flex flex-col">
+                <span className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">Starting from</span>
+                <span className="text-sm font-extrabold text-[#7C3AED]">$1,200</span>
               </div>
-              <span className="text-[10px] font-bold text-[#7C3AED] uppercase tracking-wider bg-white px-2 py-0.5 rounded border border-purple-100">
+              <span className="text-[10px] font-bold text-[#7C3AED] uppercase tracking-wider bg-white px-2.5 py-1 rounded-md border border-purple-100 shadow-xs">
                 Custom Quote
               </span>
             </div>
@@ -151,13 +151,13 @@ export default function PricingSection({ country = "in" }: PricingSectionProps) 
               Perfect for companies seeking persistent ranking growth, custom workflows, and high-scale architecture.
             </p>
 
-            {/* Scope Badge (No Price Displayed) */}
+            {/* Pricing Badge */}
             <div className="mb-6 p-3 rounded-xl bg-purple-50/70 border border-purple-100 flex items-center justify-between">
-              <div className="flex items-center gap-2 text-xs font-bold text-primary-dark">
-                <span className="w-2 h-2 rounded-full bg-[#7C3AED] animate-pulse" />
-                <span>Bespoke Engineering</span>
+              <div className="flex flex-col">
+                <span className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">Starting from</span>
+                <span className="text-sm font-extrabold text-[#7C3AED]">$1,200</span>
               </div>
-              <span className="text-[10px] font-bold text-[#7C3AED] uppercase tracking-wider bg-white px-2 py-0.5 rounded border border-purple-100">
+              <span className="text-[10px] font-bold text-[#7C3AED] uppercase tracking-wider bg-white px-2.5 py-1 rounded-md border border-purple-100 shadow-xs">
                 Custom Quote
               </span>
             </div>

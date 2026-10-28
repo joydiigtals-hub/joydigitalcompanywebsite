@@ -461,11 +461,13 @@ export default function Header({ transparent = false }: { transparent?: boolean 
               </div>
             </div>
 
-            <GetQuoteModal
-              triggerText="Get Quote"
-              source="Header Desktop CTA"
-              triggerClassName="!py-2.5 !px-5 !text-xs !font-bold !rounded-full shadow-md shrink-0"
-            />
+            <Link
+              href="/free-website-audit"
+              title="Get a Free Website Audit"
+              className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white !py-2.5 !px-5 !text-xs !font-bold !rounded-full shadow-md shrink-0 transition-all hover:scale-105 active:scale-95 flex items-center justify-center text-center"
+            >
+              Get a Free Website Audit
+            </Link>
           </div>
 
           {/* Mobile Right Controls */}
@@ -718,18 +720,13 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             </div>
           </div>
 
-          <GetQuoteModal
-            triggerText="Get Free Quote"
-            source="Mobile Navigation Drawer"
-            triggerClassName="w-full justify-center !py-3.5 !text-sm !font-bold !rounded-xl shadow-md mt-4"
-          />
-
           <Link
             href="/free-website-audit"
-            title="Free Website Audit"
-            className="bg-[#2563EB] hover:bg-[#3B82F6] text-white text-center font-bold px-6 py-3.5 rounded-full shadow-md mt-2"
+            title="Get a Free Website Audit"
+            onClick={() => setIsMobileOpen(false)}
+            className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-center font-bold text-sm py-3.5 px-6 rounded-xl shadow-md mt-4 transition-all block"
           >
-            Free Website Audit
+            Get a Free Website Audit
           </Link>
         </nav>
       </aside>

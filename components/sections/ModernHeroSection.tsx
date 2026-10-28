@@ -494,7 +494,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                       </>
                     ) : (
                       <>
-                        <span>Request Free Consultation &amp; Proposal</span>
+                        <span>Get a Free Website Audit</span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                       </>
                     )}
