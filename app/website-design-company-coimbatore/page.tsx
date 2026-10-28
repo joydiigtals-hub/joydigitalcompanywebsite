@@ -158,11 +158,11 @@ export default function WebDesignCoimbatore() {
       ]}
       faqs={[
         {
-          question: "Can you help update photos or text after the site goes live?",
+          question: "Can you help update photos or text for our Coimbatore business after launch?",
           answer: "Yes! We offer 30 days of free support for post-launch adjustments. We also build custom admin dashboards to make edits simple.",
         },
         {
-          question: "How do we coordinate design reviews?",
+          question: "How do we coordinate design reviews for our Coimbatore project?",
           answer: "We send active staging URLs where you can inspect design layouts on your phone. Feedback rounds are managed easily via WhatsApp.",
         },
       ]}
