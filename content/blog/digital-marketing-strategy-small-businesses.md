@@ -7,7 +7,7 @@ date: '2026-05-28'
 lastUpdatedDate: '2026-05-28'
 category: Digital Marketing
 author: Saravanan
-image: "/assets/images/hero-banner.webp"
+image: "/assets/images/blog/gbp-showcase.webp"
 imageAlt: 'Digital Marketing Strategy for Small Businesses: A Practical Roadmap'
 imageCaption: ''
 tags:
@@ -43,12 +43,12 @@ ogTitle: 'Digital Marketing Strategy for Small Businesses: A Practical Roadmap'
 ogDescription: >-
   Follow this practical digital marketing roadmap designed specifically for
   small businesses in India to scale lead generation and build brand visibility.
-ogImage: "/assets/images/hero-banner.webp"
+ogImage: "/assets/images/blog/gbp-showcase.webp"
 twitterTitle: 'Digital Marketing Strategy for Small Businesses: A Practical Roadmap'
 twitterDescription: >-
   Follow this practical digital marketing roadmap designed specifically for
   small businesses in India to scale lead generation and build brand visibility.
-twitterImage: "/assets/images/hero-banner.webp"
+twitterImage: "/assets/images/blog/gbp-showcase.webp"
 status: Published
 seoScore: 96
 ---

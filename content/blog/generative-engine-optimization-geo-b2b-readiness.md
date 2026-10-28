@@ -6,7 +6,7 @@ date: '2026-10-19'
 lastUpdatedDate: '2026-10-19'
 category: SEO
 author: Joy Digital Team
-image: '/assets/images/hero-banner.webp'
+image: '/assets/images/blog/wordpress-to-nextjs-migration-blueprint.webp'
 imageAlt: 'Generative Engine Optimization (GEO) for B2B Websites'
 imageCaption: 'Preparing Enterprise Platforms for AI-Driven Search'
 tags:
@@ -58,11 +58,11 @@ faqs:
 ogTitle: 'Generative Engine Optimization (GEO) for B2B | Joy Digital'
 ogDescription: >-
   Discover how Generative Engine Optimization (GEO) future-proofs your B2B enterprise. Optimize schema markup, SSR HTML, and entity citations for ChatGPT & Perplexity.
-ogImage: '/assets/images/hero-banner.webp'
+ogImage: '/assets/images/blog/wordpress-to-nextjs-migration-blueprint.webp'
 twitterTitle: 'Generative Engine Optimization (GEO) for B2B | Joy Digital'
 twitterDescription: >-
   Discover how Generative Engine Optimization (GEO) future-proofs your B2B enterprise. Optimize schema markup, SSR HTML, and entity citations for ChatGPT & Perplexity.
-twitterImage: '/assets/images/hero-banner.webp'
+twitterImage: '/assets/images/blog/wordpress-to-nextjs-migration-blueprint.webp'
 status: Published
 seoScore: 98
 ---

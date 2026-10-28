@@ -8,6 +8,7 @@ import BlogShareButtons from "@/components/ui/BlogShareButtons";
 import { BlogPost } from "@/lib/blog";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
+import { SITE_URL } from "@/lib/siteConfig";
 
 interface BlogArticleContainerProps {
   post: BlogPost;
@@ -168,21 +169,21 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
   };
 
   // Structured Data (JSON-LD)
-  const canonicalUrl = post.canonicalUrl || `https://www.joydigital.in/blog/${slug}`;
+  const canonicalUrl = post.canonicalUrl || `${SITE_URL}/blog/${slug}`;
   const articleGraph = buildPageGraphSchema({
     url: canonicalUrl,
     title: post.seoTitle || post.title,
     description: post.metaDescription || post.description,
     breadcrumbs: [
-      { name: "Home", item: "https://www.joydigital.in" },
-      { name: "Blog", item: "https://www.joydigital.in/blog" },
-      { name: post.category || "General", item: `https://www.joydigital.in/blog?category=${encodeURIComponent(post.category || "General")}` },
+      { name: "Home", item: "${SITE_URL}" },
+      { name: "Blog", item: "${SITE_URL}/blog" },
+      { name: post.category || "General", item: `${SITE_URL}/blog?category=${encodeURIComponent(post.category || "General")}` },
       { name: post.title, item: canonicalUrl },
     ],
     blogPosting: {
       headline: post.seoTitle || post.title,
       description: post.metaDescription || post.description,
-      image: post.ogImage || post.image || "https://www.joydigital.in/assets/images/hero-banner.webp",
+      image: post.ogImage || post.image || "${SITE_URL}/assets/images/hero-banner.webp",
       datePublished: post.date,
       dateModified: post.lastUpdatedDate || post.date,
       authorName: post.authorName || post.author,
@@ -468,27 +469,59 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
           )}
 
           {/* Internal Links Box (Recommended Related Services & Resources) */}
-          {post.internalLinks && post.internalLinks.length > 0 && (
-            <div className="mt-10 p-6 bg-gradient-to-br from-slate-50 to-purple-50/40 border border-primary/20 rounded-2xl select-none shadow-sm">
-              <h4 className="text-xs font-extrabold uppercase tracking-wider text-slate-900 mb-3 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <i className="fa-solid fa-compass text-primary" /> Recommended Services &amp; Solutions
-              </h4>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs font-bold">
-                {post.internalLinks.map((link, idx) => (
-                  <li key={idx}>
-                    <Link
-                      href={link.targetUrl}
-                      className="text-slate-800 hover:text-primary flex items-center justify-between p-3 bg-white rounded-xl border border-slate-200/90 shadow-xs hover:border-primary/40 hover:shadow-md transition-all duration-200 group"
-                    >
-                      <span className="truncate pr-2 font-bold">{link.anchorText}</span>
-                      <i className="fa-solid fa-arrow-right text-[10px] text-primary group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          {(() => {
+            const getFallbackServiceLinks = () => {
+              const text = `${post.category || ""} ${post.title || ""}`.toLowerCase();
+              if (text.includes("travel") || text.includes("safari") || text.includes("tour")) {
+                return [
+                  { anchorText: "Travel Website Development", targetUrl: "/travel-website-development" },
+                  { anchorText: "Tour Operator Web Solutions", targetUrl: "/tour-operator-website-development" },
+                ];
+              }
+              if (text.includes("seo") || text.includes("google") || text.includes("ranking") || text.includes("search")) {
+                return [
+                  { anchorText: "Professional SEO Services", targetUrl: "/seo-services" },
+                  { anchorText: "Technical SEO & Speed Tuning", targetUrl: "/technical-seo" },
+                ];
+              }
+              if (text.includes("design") || text.includes("ui") || text.includes("landing")) {
+                return [
+                  { anchorText: "Web Design Services", targetUrl: "/web-design-services" },
+                  { anchorText: "Landing Page Development", targetUrl: "/landing-page-development" },
+                ];
+              }
+              return [
+                { anchorText: "Custom Next.js Web Development", targetUrl: "/website-development" },
+                { anchorText: "Full-Stack Web Engineering", targetUrl: "/custom-website-development" },
+              ];
+            };
+
+            const linksToRender = (post.internalLinks && post.internalLinks.length > 0)
+              ? post.internalLinks
+              : getFallbackServiceLinks();
+
+            return (
+              <div className="mt-10 p-6 bg-gradient-to-br from-slate-50 to-purple-50/40 border border-primary/20 rounded-2xl select-none shadow-sm">
+                <h4 className="text-xs font-extrabold uppercase tracking-wider text-slate-900 mb-3 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                  <i className="fa-solid fa-compass text-primary" /> Recommended Services &amp; Solutions
+                </h4>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs font-bold">
+                  {linksToRender.map((link, idx) => (
+                    <li key={idx}>
+                      <Link
+                        href={link.targetUrl}
+                        className="text-slate-800 hover:text-primary flex items-center justify-between p-3 bg-white rounded-xl border border-slate-200/90 shadow-xs hover:border-primary/40 hover:shadow-md transition-all duration-200 group"
+                      >
+                        <span className="truncate pr-2 font-bold">{link.anchorText}</span>
+                        <i className="fa-solid fa-arrow-right text-[10px] text-primary group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })()}
 
           {/* FAQ Accordion Section (if present) */}
           {post.faqs && post.faqs.length > 0 && (

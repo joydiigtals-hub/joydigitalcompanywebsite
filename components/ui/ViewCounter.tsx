@@ -42,11 +42,7 @@ export default function ViewCounter({ slug, increment = false, className = "" }:
   }, [slug, increment]);
 
   if (views === null) {
-    return (
-      <span className={`inline-flex items-center gap-1 text-[10px] text-text-muted font-semibold ${className}`}>
-        <i className="fa-solid fa-eye animate-pulse" /> ... views
-      </span>
-    );
+    return null;
   }
 
   return (

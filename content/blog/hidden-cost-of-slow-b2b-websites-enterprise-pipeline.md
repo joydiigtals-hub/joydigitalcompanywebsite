@@ -6,7 +6,7 @@ date: '2026-10-19'
 lastUpdatedDate: '2026-10-19'
 category: Web Speed
 author: Joy Digital Team
-image: '/assets/images/hero-banner.webp'
+image: '/assets/images/blog/gsc-performance-dashboard.webp'
 imageAlt: 'The Hidden Cost of Slow B2B Websites'
 imageCaption: 'Website Performance vs Enterprise Pipeline Growth'
 tags:
@@ -58,11 +58,11 @@ faqs:
 ogTitle: 'The Hidden Cost of Slow B2B Websites | Joy Digital'
 ogDescription: >-
   Discover how website speed impacts enterprise pipelines. Compare bounce rates, Core Web Vitals, and form completions between slow legacy CMS and custom Next.js builds.
-ogImage: '/assets/images/hero-banner.webp'
+ogImage: '/assets/images/blog/gsc-performance-dashboard.webp'
 twitterTitle: 'The Hidden Cost of Slow B2B Websites | Joy Digital'
 twitterDescription: >-
   Discover how website speed impacts enterprise pipelines. Compare bounce rates, Core Web Vitals, and form completions between slow legacy CMS and custom Next.js builds.
-twitterImage: '/assets/images/hero-banner.webp'
+twitterImage: '/assets/images/blog/gsc-performance-dashboard.webp'
 status: Published
 seoScore: 98
 ---

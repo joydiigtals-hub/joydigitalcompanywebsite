@@ -8,7 +8,7 @@ date: '2026-08-04'
 lastUpdatedDate: '2026-08-04'
 category: Local SEO
 author: Joy Digital Team
-image: "/assets/images/hero-banner.webp"
+image: "/assets/images/blog/migrate-wordpress-to-nextjs-guide.webp"
 imageAlt: Why is Next.js better than traditional WordPress for local SEO?
 imageCaption: ''
 tags:
@@ -47,13 +47,13 @@ ogDescription: >-
   Compare Next.js vs WordPress for local search engine optimization,
   highlighting speed, security, Core Web Vitals, and local Google Map pack
   ranking factors.
-ogImage: "/assets/images/hero-banner.webp"
+ogImage: "/assets/images/blog/migrate-wordpress-to-nextjs-guide.webp"
 twitterTitle: Why is Next.js better than traditional WordPress for local SEO?
 twitterDescription: >-
   Compare Next.js vs WordPress for local search engine optimization,
   highlighting speed, security, Core Web Vitals, and local Google Map pack
   ranking factors.
-twitterImage: "/assets/images/hero-banner.webp"
+twitterImage: "/assets/images/blog/migrate-wordpress-to-nextjs-guide.webp"
 status: Published
 seoScore: 90
 ---

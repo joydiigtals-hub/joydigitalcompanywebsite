@@ -7,7 +7,7 @@ date: '2026-10-11'
 lastUpdatedDate: '2026-10-11'
 category: Web Development
 author: Saravanan
-image: '/assets/images/hero-banner.webp'
+image: '/assets/images/blog/nextjs-website-development-chennai.webp'
 imageAlt: 'A Complete 7-Step Guide to the Website Development Process'
 imageCaption: 'The Joy Digital 7-Step Website Development Process'
 tags:
@@ -63,12 +63,12 @@ ogTitle: 'A Complete 7-Step Guide to the Website Development Process'
 ogDescription: >-
   Explore our complete 7-step website development process. Learn how discovery,
   wireframing, UI/UX design, Next.js engineering, testing, and deployment drive ROI.
-ogImage: '/assets/images/hero-banner.webp'
+ogImage: '/assets/images/blog/nextjs-website-development-chennai.webp'
 twitterTitle: 'A Complete 7-Step Guide to the Website Development Process'
 twitterDescription: >-
   Explore our complete 7-step website development process. Learn how discovery,
   wireframing, UI/UX design, Next.js engineering, testing, and deployment drive ROI.
-twitterImage: '/assets/images/hero-banner.webp'
+twitterImage: '/assets/images/blog/nextjs-website-development-chennai.webp'
 status: Published
 seoScore: 98
 ---

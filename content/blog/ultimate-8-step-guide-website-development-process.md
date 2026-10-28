@@ -7,7 +7,7 @@ date: '2026-10-11'
 lastUpdatedDate: '2026-10-11'
 category: Web Development
 author: Saravanan
-image: '/assets/images/hero-banner.webp'
+image: '/assets/images/blog/nextjs-website-development-chennai.webp'
 imageAlt: 'The Ultimate 8-Step Guide to the Website Development Process'
 imageCaption: 'The Joy Digital 8-Step Custom Web Development Framework'
 tags:
@@ -63,12 +63,12 @@ ogTitle: 'The Ultimate 8-Step Guide to the Website Development Process'
 ogDescription: >-
   Master the complete 8-step website development process. Learn how discovery,
   IA, wireframing, UI/UX, Next.js coding, testing, and deployment maximize business ROI.
-ogImage: '/assets/images/hero-banner.webp'
+ogImage: '/assets/images/blog/nextjs-website-development-chennai.webp'
 twitterTitle: 'The Ultimate 8-Step Guide to the Website Development Process'
 twitterDescription: >-
   Master the complete 8-step website development process. Learn how discovery,
   IA, wireframing, UI/UX, Next.js coding, testing, and deployment maximize business ROI.
-twitterImage: '/assets/images/hero-banner.webp'
+twitterImage: '/assets/images/blog/nextjs-website-development-chennai.webp'
 status: Published
 seoScore: 98
 ---

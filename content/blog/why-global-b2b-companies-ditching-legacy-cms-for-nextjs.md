@@ -6,7 +6,7 @@ date: '2026-10-19'
 lastUpdatedDate: '2026-10-19'
 category: Web Development
 author: Joy Digital Team
-image: '/assets/images/hero-banner.webp'
+image: '/assets/images/blog/wordpress-to-nextjs-migration-blueprint.webp'
 imageAlt: 'Why Global B2B Companies Are Ditching Legacy CMS for Next.js'
 imageCaption: 'Legacy CMS vs Next.js Enterprise Architecture Comparison'
 tags:
@@ -58,11 +58,11 @@ faqs:
 ogTitle: 'Why Global B2B Companies Are Ditching Legacy CMS for Next.js | Joy Digital'
 ogDescription: >-
   Discover why global enterprise B2B brands are migrating from monolithic legacy CMS systems to custom Next.js architecture to slash load times and drive 3x conversion rates.
-ogImage: '/assets/images/hero-banner.webp'
+ogImage: '/assets/images/blog/wordpress-to-nextjs-migration-blueprint.webp'
 twitterTitle: 'Why Global B2B Companies Are Ditching Legacy CMS for Next.js | Joy Digital'
 twitterDescription: >-
   Discover why global enterprise B2B brands are migrating from monolithic legacy CMS systems to custom Next.js architecture to slash load times and drive 3x conversion rates.
-twitterImage: '/assets/images/hero-banner.webp'
+twitterImage: '/assets/images/blog/wordpress-to-nextjs-migration-blueprint.webp'
 status: Published
 seoScore: 98
 ---
