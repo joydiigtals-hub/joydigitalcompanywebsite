@@ -66,6 +66,7 @@ export default function LeadForm({
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   // Dropdown States
   const [isCountryOpen, setIsCountryOpen] = useState(false);
@@ -108,20 +109,25 @@ export default function LeadForm({
       tempErrors.name = "Full Name is required.";
     }
 
-    if (!formData.email.trim()) {
-      tempErrors.email = "Work Email is required.";
-    } else {
+    const emailTrim = formData.email.trim();
+    const mobileTrim = formData.mobile.trim();
+
+    if (!emailTrim && !mobileTrim) {
+      tempErrors.email = "Please provide an email or phone number.";
+      tempErrors.mobile = "Please provide a phone number or email.";
+    }
+
+    if (emailTrim) {
       const emailReg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-      if (!emailReg.test(formData.email.trim())) {
+      if (!emailReg.test(emailTrim)) {
         tempErrors.email = "Please enter a valid email address.";
       }
     }
 
-    const mobileVal = formData.mobile.trim();
-    if (mobileVal) {
-      const numbersOnly = mobileVal.replace(/\D/g, "");
-      if (numbersOnly.length > 0 && numbersOnly.length < 7) {
-        tempErrors.mobile = "Please enter a valid phone number.";
+    if (mobileTrim) {
+      const numbersOnly = mobileTrim.replace(/\D/g, "");
+      if (numbersOnly.length < 7) {
+        tempErrors.mobile = "Please enter a valid phone number (at least 7 digits).";
       }
     }
 
@@ -135,6 +141,10 @@ export default function LeadForm({
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
     }
+    if ((name === "email" || name === "mobile") && (errors.email || errors.mobile)) {
+      setErrors((prev) => ({ ...prev, email: "", mobile: "" }));
+    }
+    if (submitError) setSubmitError("");
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -149,6 +159,7 @@ export default function LeadForm({
     }
 
     setIsLoading(true);
+    setSubmitError("");
     try {
       const utm = getUtmParameters();
       const payload = {
@@ -175,8 +186,9 @@ export default function LeadForm({
         body: JSON.stringify(payload),
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to submit form");
+      const resData = await response.json();
+      if (!response.ok || !resData.success) {
+        throw new Error(resData.error || "Failed to submit form");
       }
 
       // Unified Conversion Tracking

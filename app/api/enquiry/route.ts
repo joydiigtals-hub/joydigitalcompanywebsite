@@ -34,14 +34,46 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: true, id: crypto.randomUUID() });
     }
 
-    // 2. Server-side validation
-    const name = body.Name || body.name;
-    const email = body.Email || body.email;
-    if (!name || !email) {
+    // 2. Server-side validation: Name AND (Email OR Phone/Mobile)
+    const name = (body.Name || body.name || "").toString().trim();
+    const email = (body.Email || body.email || "").toString().trim();
+    const mobile = (body.Mobile || body.mobile || "").toString().trim();
+
+    if (!name) {
       return NextResponse.json(
-        { error: "Name and Work Email are required fields." },
+        { success: false, error: "Full Name is required." },
         { status: 400 }
       );
+    }
+
+    const hasValidEmail = email && email !== "N/A";
+    const hasValidMobile = mobile && mobile !== "N/A";
+
+    if (!hasValidEmail && !hasValidMobile) {
+      return NextResponse.json(
+        { success: false, error: "Please provide either a valid Work Email or Phone number to contact you." },
+        { status: 400 }
+      );
+    }
+
+    if (hasValidEmail) {
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
+      if (!emailRegex.test(email)) {
+        return NextResponse.json(
+          { success: false, error: "Please provide a valid email address format (e.g. name@domain.com)." },
+          { status: 400 }
+        );
+      }
+    }
+
+    if (hasValidMobile) {
+      const digitsOnly = mobile.replace(/\D/g, "");
+      if (digitsOnly.length < 7) {
+        return NextResponse.json(
+          { success: false, error: "Please enter a valid phone number with country/area digits (at least 7 digits)." },
+          { status: 400 }
+        );
+      }
     }
     
     // Construct new lead record

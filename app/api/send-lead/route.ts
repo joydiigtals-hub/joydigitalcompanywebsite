@@ -7,9 +7,9 @@ export async function POST(request: Request) {
     const { name, mobile, email, service, website, message, source, subject, companyName, budget } = body;
 
     // Validate inputs
-    if (!name || !mobile || !email || !service) {
+    if (!name || (!mobile && !email)) {
       return NextResponse.json(
-        { success: false, error: "Missing required fields (Name, Mobile, Email, Service)." },
+        { success: false, error: "Missing required fields. Name and at least one contact channel (Email or Mobile) are required." },
         { status: 400 }
       );
     }
