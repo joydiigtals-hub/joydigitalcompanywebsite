@@ -5,7 +5,7 @@ date: '2026-11-07'
 lastUpdatedDate: '2026-11-07'
 category: Web Design & SEO
 author: Joy Digital Team
-image: /assets/images/blog/5-website-mistakes-killing-business-growth.webp
+image: "https://res.cloudinary.com/hkfw0tt7/image/upload/v1794057255/joydigital/blog/5-website-mistakes-killing-business-growth-v2.webp"
 imageAlt: 5 Website Mistakes Killing Your Business Growth and Conversion Optimization
 imageCaption: Strategic business website audit and common conversion pitfalls
 tags:
@@ -53,10 +53,10 @@ faqs:
     answer: Growing businesses should perform a technical and conversion audit every 6 months. High-volume B2B lead generation portals and e-commerce websites should continuously monitor Core Web Vitals, user session drop-offs, and form funnel conversion analytics quarterly.
 ogTitle: 5 Website Mistakes Killing Business Growth & How to Fix Them
 ogDescription: Is your website failing to generate leads? Discover the 5 critical web design and conversion mistakes slowing your growth and learn how to fix them.
-ogImage: /assets/images/blog/5-website-mistakes-killing-business-growth.webp
+ogImage: "https://res.cloudinary.com/hkfw0tt7/image/upload/v1794057255/joydigital/blog/5-website-mistakes-killing-business-growth-v2.webp"
 twitterTitle: 5 Website Mistakes Killing Business Growth & How to Fix Them
 twitterDescription: Is your website failing to generate leads? Discover the 5 critical web design and conversion mistakes slowing your growth and learn how to fix them.
-twitterImage: /assets/images/blog/5-website-mistakes-killing-business-growth.webp
+twitterImage: "https://res.cloudinary.com/hkfw0tt7/image/upload/v1794057255/joydigital/blog/5-website-mistakes-killing-business-growth-v2.webp"
 status: Published
 seoScore: 98
 ---

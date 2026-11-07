@@ -5,7 +5,7 @@ date: '2026-11-07'
 lastUpdatedDate: '2026-11-07'
 category: Technical SEO & Performance
 author: Joy Digital Team
-image: /assets/images/blog/is-slow-website-costing-you-sales.webp
+image: "https://res.cloudinary.com/hkfw0tt7/image/upload/v1794057257/joydigital/blog/is-slow-website-costing-you-sales-v2.webp"
 imageAlt: Website speed optimization impact on revenue and Core Web Vitals performance
 imageCaption: Real-time web performance metrics and conversion rate correlation
 tags:
@@ -53,10 +53,10 @@ faqs:
     answer: "An optimized commercial website should achieve an initial server response (TTFB) under 200ms and display its main interactive above-the-fold content within 0.8 to 1.5 seconds on standard mobile 4G/5G connections."
 ogTitle: Is a Slow Website Costing You Sales? Web Speed & Revenue Guide
 ogDescription: Slow load times kill rankings and revenue. Discover how 1-second delays cost you sales and get a free website speed optimization audit today.
-ogImage: /assets/images/blog/is-slow-website-costing-you-sales.webp
+ogImage: "https://res.cloudinary.com/hkfw0tt7/image/upload/v1794057257/joydigital/blog/is-slow-website-costing-you-sales-v2.webp"
 twitterTitle: Is a Slow Website Costing You Sales? Web Speed & Revenue Guide
 twitterDescription: Slow load times kill rankings and revenue. Discover how 1-second delays cost you sales and get a free website speed optimization audit today.
-twitterImage: /assets/images/blog/is-slow-website-costing-you-sales.webp
+twitterImage: "https://res.cloudinary.com/hkfw0tt7/image/upload/v1794057257/joydigital/blog/is-slow-website-costing-you-sales-v2.webp"
 status: Published
 seoScore: 98
 ---
