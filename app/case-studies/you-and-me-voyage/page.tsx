@@ -110,10 +110,10 @@ export default function YouAndMeVoyageCaseStudyPage() {
           "telephone": "+919080026133",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Madurai",
+            "streetAddress": "4/166 T, Thinamani Nagar",
             "addressLocality": "Madurai",
             "addressRegion": "Tamil Nadu",
-            "postalCode": "625001",
+            "postalCode": "625018",
             "addressCountry": "IN"
           }
         },

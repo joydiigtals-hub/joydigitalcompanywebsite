@@ -92,10 +92,10 @@ export default async function WebsiteDevelopmentCompanyChennai() {
         "description": "Custom Next.js website development in Chennai. Fast, SEO-ready websites that bring leads via WhatsApp and forms. Starting from Rs 25,000.",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Madurai",
+          "streetAddress": "4/166 T, Thinamani Nagar",
           "addressLocality": "Madurai",
           "addressRegion": "Tamil Nadu",
-          "postalCode": "625001",
+          "postalCode": "625018",
           "addressCountry": "IN"
         },
         "geo": {

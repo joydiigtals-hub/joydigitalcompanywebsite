@@ -10,7 +10,7 @@
 - **Tagline**: Engineering High-Performance Next.js Websites & Generative Search Growth
 - **Core Focus**: Sub-second web applications, headless architectures, technical SEO, and Generative Engine Optimization (GEO).
 - **Founder & Head of Engineering**: Saravanan L
-- **Headquarters**: Tamil Nadu, India (Operating hubs in Chennai and Madurai)
+- **Headquarters**: 4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India (Regional Hub: Chennai)
 - **Primary Website**: https://www.joydigital.in
 - **Direct Communication**:
   - Email: joydiigtals@gmail.com

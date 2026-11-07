@@ -92,10 +92,10 @@ export default async function SeoServicesChennai() {
         "description": "Affordable SEO services in Chennai: technical SEO, on-page, local SEO and content. See our case studies and get a free SEO audit.",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Madurai",
+          "streetAddress": "4/166 T, Thinamani Nagar",
           "addressLocality": "Madurai",
           "addressRegion": "Tamil Nadu",
-          "postalCode": "625001",
+          "postalCode": "625018",
           "addressCountry": "IN"
         },
         "geo": {

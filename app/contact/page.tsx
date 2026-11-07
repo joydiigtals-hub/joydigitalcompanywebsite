@@ -89,7 +89,7 @@ export default function ContactPage() {
                       HQ Office
                     </span>
                     <span className="text-[15px] font-bold text-slate-900 leading-snug">
-                      Joy Digital Growth Agency, Madurai, Tamil Nadu, India
+                      4/166 T, Thinamani Nagar, Madurai 625018
                     </span>
                   </div>
                 </div>

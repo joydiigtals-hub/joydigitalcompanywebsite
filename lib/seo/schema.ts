@@ -15,10 +15,10 @@ export const BUSINESS_INFO = {
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com",
   address: {
     "@type": "PostalAddress",
-    "streetAddress": "Madurai",
+    "streetAddress": "4/166 T, Thinamani Nagar",
     "addressLocality": "Madurai",
     "addressRegion": "Tamil Nadu",
-    "postalCode": "625001",
+    "postalCode": "625018",
     "addressCountry": "IN"
   },
   geo: {

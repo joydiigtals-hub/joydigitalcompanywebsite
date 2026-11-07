@@ -92,10 +92,10 @@ export default async function CustomWebsiteDevelopmentPage() {
         "description": "Custom website design and development built for speed and leads. Serving Chennai businesses and global enterprises. Starting from Rs 25,000.",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Madurai",
+          "streetAddress": "4/166 T, Thinamani Nagar",
           "addressLocality": "Madurai",
           "addressRegion": "Tamil Nadu",
-          "postalCode": "625001",
+          "postalCode": "625018",
           "addressCountry": "IN"
         },
         "geo": {

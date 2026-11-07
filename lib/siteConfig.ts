@@ -13,12 +13,12 @@ export const siteConfig = {
   phoneRaw: "+919080026133",
   telephone: "+91-9080026133",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com",
-  hq: "Madurai, Tamil Nadu, India",
+  hq: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
   address: {
-    streetAddress: "Madurai",
+    streetAddress: "4/166 T, Thinamani Nagar",
     addressLocality: "Madurai",
     addressRegion: "Tamil Nadu",
-    postalCode: "625001",
+    postalCode: "625018",
     addressCountry: "IN",
   },
   geo: {
