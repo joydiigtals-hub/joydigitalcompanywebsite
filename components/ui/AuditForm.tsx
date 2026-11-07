@@ -191,7 +191,8 @@ export default function AuditForm() {
       }
 
       // Redirect to thank you page
-      router.push("/thank-you");
+      const thankYouUrl = `/thank-you?name=${encodeURIComponent(formData.name.trim())}&service=${encodeURIComponent("Free Website & SEO Audit")}`;
+      router.push(thankYouUrl);
     } catch (err) {
       console.error(err);
       alert("Audit request submission failed. Please WhatsApp us directly.");

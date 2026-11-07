@@ -5,8 +5,104 @@ import { usePathname } from "next/navigation";
 import { INITIAL_WELCOME_STEP, CHAT_STEPS_MAP, generateWhatsAppUrl } from "@/lib/chat/flows";
 import { ChatStep, ChatLeadData, MessageItem, ChatOption } from "@/lib/chat/types";
 
+interface PageContextConfig {
+  badge: string;
+  title: string;
+  body: string;
+  ctaText: string;
+  quickStepId: string;
+  defaultService: string;
+}
+
+function getPageContext(pathname: string | null): PageContextConfig {
+  const path = (pathname || "").toLowerCase();
+
+  // 1. Tour, Safari, Travel & Africa
+  if (path.includes("travel") || path.includes("safari") || path.includes("africa") || path.includes("tour") || path.includes("resort") || path.includes("voyage")) {
+    return {
+      badge: "🦁 Direct Booking Specialist",
+      title: "Building a Travel or Safari Website?",
+      body: "Stop paying 25% commissions to OTAs. We build direct itinerary booking platforms with instant WhatsApp inquiries.",
+      ctaText: "🌴 Tour & Safari Solutions",
+      quickStepId: "travel_quick_start",
+      defaultService: "Travel & Safari Booking Website",
+    };
+  }
+
+  // 2. Speed Optimization, Next.js & WordPress Migration
+  if (path.includes("wordpress") || path.includes("speed") || path.includes("slow") || path.includes("nextjs") || path.includes("technical-seo") || path.includes("core-web-vitals")) {
+    return {
+      badge: "⚡ Sub-Second Performance",
+      title: "Is Your Website Taking >3s to Load?",
+      body: "Every 1-second delay cuts conversions by 7%. Upgrade to sub-second Next.js architecture and pass Core Web Vitals.",
+      ctaText: "⚡ Speed Diagnostic & Migration",
+      quickStepId: "speed_quick_start",
+      defaultService: "WordPress to Next.js Migration",
+    };
+  }
+
+  // 3. Export, Manufacturing, Logistics & Textiles
+  if (path.includes("export") || path.includes("import") || path.includes("logistics") || path.includes("shipping") || path.includes("manufactur") || path.includes("textile") || path.includes("b2b")) {
+    return {
+      badge: "🌐 Global B2B Specialist",
+      title: "Targeting Overseas B2B Buyers?",
+      body: "Generate high-value RFQ inquiries across USA, UAE, and Europe with a global SEO architecture.",
+      ctaText: "🚢 Global B2B Web Portal",
+      quickStepId: "export_quick_start",
+      defaultService: "B2B Export Web Development",
+    };
+  }
+
+  // 4. Local SEO & City Pages
+  if (path.includes("chennai") || path.includes("madurai") || path.includes("coimbatore") || path.includes("local-seo") || path.includes("google-business")) {
+    return {
+      badge: "📍 Google Maps 3-Pack",
+      title: "Want #1 Rank on Google Maps?",
+      body: "Dominate the 3-Pack and capture high-intent local customer phone calls and store visits daily.",
+      ctaText: "📈 Free Local SEO Audit",
+      quickStepId: "local_seo_quick_start",
+      defaultService: "Local SEO & Google Maps Ranking",
+    };
+  }
+
+  // 5. E-Commerce & Online Stores
+  if (path.includes("ecommerce") || path.includes("shopify") || path.includes("store")) {
+    return {
+      badge: "🛍️ E-Commerce Architect",
+      title: "Launching a High-Speed Online Store?",
+      body: "Experience sub-second product browsing, instant cart checkout, payment gateways, and WhatsApp orders.",
+      ctaText: "🛍️ E-Commerce Architecture",
+      quickStepId: "ecommerce_quick_start",
+      defaultService: "E-commerce Website",
+    };
+  }
+
+  // 6. Free Website Audit & SEO Audit Pages
+  if (path.includes("audit") || path.includes("seo-audit-tool")) {
+    return {
+      badge: "🔍 Instant Technical Audit",
+      title: "Need an Instant Website Audit?",
+      body: "Share your website URL in chat and Priya will analyze your speed bottlenecks in 30 seconds.",
+      ctaText: "💬 Quick Audit Chat",
+      quickStepId: "speed_quick_start",
+      defaultService: "Free Website Audit",
+    };
+  }
+
+  // Default fallback
+  return {
+    badge: "🎯 Client Support Lead",
+    title: "Planning a High-Converting Website?",
+    body: "Get a tailored project proposal, speed diagnosis, or chat directly with our tech lead Saravanan.",
+    ctaText: "🎯 Get Custom Proposal",
+    quickStepId: "calc_project_type",
+    defaultService: "Custom Project Proposal",
+  };
+}
+
 export default function ChatbotWidget() {
   const pathname = usePathname();
+  const pageContext = React.useMemo(() => getPageContext(pathname), [pathname]);
 
   // Lifecycle & Display states
   const [shouldRender, setShouldRender] = useState(false);
@@ -49,7 +145,7 @@ export default function ChatbotWidget() {
     return () => clearTimeout(timer);
   }, []);
 
-  // 2. Initialize session and proactive tooltip
+  // 2. Initialize session
   useEffect(() => {
     if (!shouldRender) return;
 
@@ -70,18 +166,28 @@ export default function ChatbotWidget() {
       stepId: INITIAL_WELCOME_STEP.id,
     };
     setMessages([welcomeMsg]);
-
-    // Show proactive tooltip after 8 seconds if chat not opened
-    const tooltipDismissed = localStorage.getItem("jd_tooltip_dismissed");
-    if (!tooltipDismissed) {
-      const tooltipTimer = setTimeout(() => {
-        setShowTooltip(true);
-      }, 8000);
-      return () => clearTimeout(tooltipTimer);
-    }
   }, [shouldRender]);
 
-  // 3. Scroll to bottom on new messages
+  // 3. Proactive Tooltip Trigger on page change / dwell time
+  useEffect(() => {
+    if (!shouldRender || isOpen) return;
+
+    const pageKey = (pathname || "/").replace(/[^a-zA-Z0-9]/g, "_");
+    const dismissedTime = sessionStorage.getItem(`jd_tooltip_dismissed_${pageKey}`);
+    const now = Date.now();
+
+    // Re-show after 15 minutes if dismissed, or show if not dismissed on this page
+    if (!dismissedTime || now - parseInt(dismissedTime, 10) > 15 * 60 * 1000) {
+      const tooltipTimer = setTimeout(() => {
+        if (!isOpen) {
+          setShowTooltip(true);
+        }
+      }, 7000);
+      return () => clearTimeout(tooltipTimer);
+    }
+  }, [shouldRender, pathname, isOpen]);
+
+  // 4. Scroll to bottom on new messages
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isTyping, currentStep]);
@@ -101,13 +207,44 @@ export default function ChatbotWidget() {
     setIsOpen(true);
     setHasUnread(false);
     setShowTooltip(false);
-    localStorage.setItem("jd_tooltip_dismissed", "true");
+    const pageKey = (pathname || "/").replace(/[^a-zA-Z0-9]/g, "_");
+    sessionStorage.setItem(`jd_tooltip_dismissed_${pageKey}`, Date.now().toString());
     trackEvent("chat_opened", { sessionId });
+  };
+
+  const handleOpenContextualChat = () => {
+    setIsOpen(true);
+    setHasUnread(false);
+    setShowTooltip(false);
+
+    const pageKey = (pathname || "/").replace(/[^a-zA-Z0-9]/g, "_");
+    sessionStorage.setItem(`jd_tooltip_dismissed_${pageKey}`, Date.now().toString());
+
+    trackEvent("chat_opened_contextual", { pathname, service: pageContext.defaultService });
+
+    // Transition chat to the contextual quick start step
+    const step = CHAT_STEPS_MAP[pageContext.quickStepId] || INITIAL_WELCOME_STEP;
+    setLeadData((prev) => ({
+      ...prev,
+      service: pageContext.defaultService,
+    }));
+    setCurrentStep(step);
+
+    const contextualMsg: MessageItem = {
+      id: "msg_" + Math.random().toString(36).substring(2, 9),
+      role: "assistant",
+      text: step.question,
+      timestamp: new Date().toISOString(),
+      options: step.options,
+      stepId: step.id,
+    };
+    setMessages([contextualMsg]);
   };
 
   const handleCloseTooltip = () => {
     setShowTooltip(false);
-    localStorage.setItem("jd_tooltip_dismissed", "true");
+    const pageKey = (pathname || "/").replace(/[^a-zA-Z0-9]/g, "_");
+    sessionStorage.setItem(`jd_tooltip_dismissed_${pageKey}`, Date.now().toString());
   };
 
   // Helper to add assistant typing delay
@@ -448,37 +585,48 @@ export default function ChatbotWidget() {
 
   return (
     <div className="fixed bottom-22 left-4 sm:bottom-6 sm:left-6 z-[999] font-sans select-none">
-      {/* 1. Proactive Tooltip (Shows after 8s) */}
+      {/* 1. Proactive Context-Aware Tooltip (Shows after 7s based on current page) */}
       {!isOpen && showTooltip && (
-        <div className="absolute bottom-16 left-0 mb-2 w-76 bg-white dark:bg-[#160E28] border border-purple-200/80 dark:border-purple-800/40 p-3.5 rounded-2xl shadow-[0_10px_35px_-5px_rgba(30,17,58,0.25)] animate-fade-in text-xs z-[999]">
-          <div className="flex justify-between items-start">
-            <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping"></span>
-              <p className="font-bold text-slate-900 dark:text-white">Planning a new website?</p>
-            </div>
+        <div className="absolute bottom-16 left-0 mb-2 w-80 sm:w-88 bg-white/95 dark:bg-[#130B24]/95 backdrop-blur-md border border-purple-300/80 dark:border-purple-600/40 p-4 rounded-2xl shadow-[0_15px_40px_-5px_rgba(22,13,46,0.35)] animate-fade-in text-xs z-[999] transition-all duration-300">
+          {/* Header pill & close */}
+          <div className="flex justify-between items-start gap-2 mb-2">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/40">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              {pageContext.badge}
+            </span>
             <button
               onClick={handleCloseTooltip}
-              className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer p-0.5"
-              aria-label="Close tooltip"
+              className="text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 cursor-pointer p-0.5 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              aria-label="Close message"
             >
               <i className="fa-solid fa-xmark text-xs" />
             </button>
           </div>
-          <p className="text-[11.5px] text-slate-600 dark:text-slate-300 mt-1 leading-normal">
-            Get a tailored proposal & roadmap for your industry, or chat with our tech lead!
+
+          {/* Heading */}
+          <div className="flex items-center gap-2 mb-1.5">
+            <h4 className="font-black text-[13px] text-slate-900 dark:text-white leading-snug">
+              {pageContext.title}
+            </h4>
+          </div>
+
+          <p className="text-[11.5px] text-slate-600 dark:text-slate-300 leading-relaxed font-medium mb-3.5">
+            {pageContext.body}
           </p>
-          <div className="flex gap-2 mt-3">
+
+          <div className="flex items-center gap-2 pt-1 border-t border-slate-100 dark:border-purple-900/30">
             <button
-              onClick={handleOpenChat}
-              className="px-3.5 py-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-lg font-bold text-[11px] shadow-sm hover:shadow-md cursor-pointer transition-all"
+              onClick={handleOpenContextualChat}
+              className="flex-1 px-3.5 py-2 bg-gradient-to-r from-purple-600 via-[#7C3AED] to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-xl font-bold text-[11px] shadow-sm hover:shadow-md cursor-pointer transition-all flex items-center justify-center gap-1.5"
             >
-              🎯 Get Custom Proposal
+              <span>{pageContext.ctaText}</span>
+              <i className="fa-solid fa-arrow-right text-[10px]" />
             </button>
             <button
               onClick={handleCloseTooltip}
-              className="px-2.5 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-lg font-semibold text-[11px] cursor-pointer"
+              className="px-2.5 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/80 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-xl font-semibold text-[11px] cursor-pointer transition-colors"
             >
-              Not now
+              Later
             </button>
           </div>
         </div>

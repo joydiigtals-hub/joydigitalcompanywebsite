@@ -473,6 +473,73 @@ export const CHAT_STEPS_MAP: Record<string, ChatStep> = {
     question: "Where should we contact you?",
     type: "contact_form",
   },
+
+  // --- CONTEXTUAL SPRINT 1 FLOWS (Proactive AI SDR) ---
+  travel_quick_start: {
+    id: "travel_quick_start",
+    flowId: "welcome",
+    question: "🌴 Tour & Safari Web Development\n\nWe build direct-booking websites for safari operators & tour agencies that eliminate 25% OTA commissions.\n\nWhat kind of travel solution are you looking for?",
+    type: "options",
+    fieldKey: "websiteType",
+    options: [
+      { label: "🦁 Tour & Safari Booking Portal", value: "Safari Booking Portal", nextStepId: "calc_scope" },
+      { label: "📲 Direct WhatsApp Itinerary Booking", value: "WhatsApp Itinerary Booking", nextStepId: "calc_scope" },
+      { label: "🔄 Redesign Existing Travel Site", value: "Travel Site Redesign", nextStepId: "redesign_improve" },
+      { label: "💬 Chat Directly on WhatsApp", value: "WhatsApp Direct", nextStepId: "calc_contact" },
+    ],
+  },
+  speed_quick_start: {
+    id: "speed_quick_start",
+    flowId: "welcome",
+    question: "⚡ Sub-Second Next.js Performance\n\nEvery 1-second delay in page load time cuts conversions by 7%. We engineer websites that achieve 95+ PageSpeed scores on mobile.\n\nHow can we help your web performance today?",
+    type: "options",
+    fieldKey: "improvements",
+    options: [
+      { label: "🚀 Migrate WordPress/Wix to Next.js", value: "WordPress to Next.js Migration", nextStepId: "calc_scope" },
+      { label: "🔍 Audit My Core Web Vitals (LCP/INP)", value: "Core Web Vitals Audit", nextStepId: "redesign_url" },
+      { label: "⚡ Build New Sub-Second Platform", value: "Sub-Second Next.js Platform", nextStepId: "calc_project_type" },
+      { label: "💬 Chat Directly on WhatsApp", value: "WhatsApp Direct", nextStepId: "calc_contact" },
+    ],
+  },
+  export_quick_start: {
+    id: "export_quick_start",
+    flowId: "welcome",
+    question: "🌐 Global B2B Export & Manufacturing Web Architecture\n\nWe help manufacturers and exporters generate verified RFQ inquiries across the USA, UAE, and Europe.\n\nWhat is your primary export goal?",
+    type: "options",
+    fieldKey: "websiteType",
+    options: [
+      { label: "🚢 Multi-Region Export Web Portal", value: "Export Web Portal", nextStepId: "calc_scope" },
+      { label: "🌍 Global SEO & International Strategy", value: "Global SEO", nextStepId: "seo_type" },
+      { label: "📑 Custom B2B RFQ Funnel", value: "Custom RFQ Funnel", nextStepId: "calc_scope" },
+      { label: "💬 Chat Directly on WhatsApp", value: "WhatsApp Direct", nextStepId: "calc_contact" },
+    ],
+  },
+  local_seo_quick_start: {
+    id: "local_seo_quick_start",
+    flowId: "welcome",
+    question: "📍 Local SEO & Google Maps 3-Pack Growth\n\nWant to dominate local search results and receive daily customer phone calls and store visits?\n\nWhat local service do you need?",
+    type: "options",
+    fieldKey: "service",
+    options: [
+      { label: "🗺️ Google Maps 3-Pack Optimization", value: "Google Maps 3-Pack", nextStepId: "seo_location" },
+      { label: "📞 High-Converting Local Website", value: "Local Business Website", nextStepId: "calc_project_type" },
+      { label: "🔍 Free Local SEO Audit", value: "Local SEO Audit", nextStepId: "seo_url" },
+      { label: "💬 Chat Directly on WhatsApp", value: "WhatsApp Direct", nextStepId: "calc_contact" },
+    ],
+  },
+  ecommerce_quick_start: {
+    id: "ecommerce_quick_start",
+    flowId: "welcome",
+    question: "🛍️ High-Conversion E-Commerce Architecture\n\nWe build lightning-fast online stores with instant cart checkout, payment gateways, and automated WhatsApp order alerts.\n\nWhat are you planning to sell?",
+    type: "options",
+    fieldKey: "websiteType",
+    options: [
+      { label: "⚡ Custom Next.js Online Store", value: "Custom Next.js Store", nextStepId: "calc_scope" },
+      { label: "📲 WhatsApp Direct Order Store", value: "WhatsApp Store", nextStepId: "calc_scope" },
+      { label: "🔄 Redesign / Speed Up Existing Store", value: "E-Commerce Redesign", nextStepId: "redesign_improve" },
+      { label: "💬 Chat Directly on WhatsApp", value: "WhatsApp Direct", nextStepId: "calc_contact" },
+    ],
+  },
 };
 
 // WhatsApp URL builder helper
