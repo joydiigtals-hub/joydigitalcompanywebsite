@@ -82,6 +82,34 @@ export default function FreeWebsiteAuditPage() {
                 Find out what&apos;s stopping your website from getting more traffic, enquiries, and customers. Enter your details, and our technical developers and SEO strategists will compile a custom diagnostic report.
               </p>
 
+              {/* Instant AI Scan Callout Card */}
+              <div className="w-full max-w-xl mb-8 p-4 sm:p-5 rounded-2xl bg-[#160D2E] text-white border border-purple-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-600/20 rounded-full blur-2xl pointer-events-none" />
+                <div className="flex items-center gap-3.5 relative z-10 text-left">
+                  <div className="w-11 h-11 rounded-xl bg-purple-500/20 border border-purple-400/30 flex items-center justify-center text-amber-300 text-lg shrink-0">
+                    <i className="fa-solid fa-bolt" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2 mb-0.5">
+                      <span className="text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+                        ⚡ Instant AI Scanner
+                      </span>
+                      <span className="text-xs font-black text-white">15-Sec Live Diagnostic</span>
+                    </div>
+                    <p className="text-[11.5px] text-purple-200/90 font-medium">
+                      Want instant results? Test server latency, SEO & mobile score live right now.
+                    </p>
+                  </div>
+                </div>
+                <Link
+                  href="/seo-audit-tool"
+                  className="relative z-10 px-4 py-2.5 bg-gradient-to-r from-[#7C3AED] to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-xl font-bold text-xs shrink-0 text-center shadow-md transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5"
+                >
+                  <span>Scan Live</span>
+                  <i className="fa-solid fa-arrow-right text-[10px]" />
+                </Link>
+              </div>
+
               {/* Checklist list */}
               <div className="flex flex-col gap-6 w-full max-w-lg mt-2">
                 {AUDIT_CHECKLIST.map((item, index) => (
@@ -99,25 +127,7 @@ export default function FreeWebsiteAuditPage() {
             </div>
 
             {/* Right Form Column */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              
-              <div className="w-full max-w-lg mb-6 p-4 rounded-3xl bg-gradient-to-br from-[#160D2E] to-[#251547] text-white border border-purple-500/30 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
-                <div className="flex items-center gap-3 text-left">
-                  <span className="w-10 h-10 rounded-2xl bg-purple-500/20 border border-purple-400/30 flex items-center justify-center text-amber-300 text-base shrink-0">
-                    <i className="fa-solid fa-bolt" />
-                  </span>
-                  <div>
-                    <h4 className="text-xs font-black text-white">Need An Instant 15-Sec AI Scan?</h4>
-                    <p className="text-[11px] text-purple-200/90 font-medium">Test server latency, SEO & mobile score live.</p>
-                  </div>
-                </div>
-                <Link
-                  href="/seo-audit-tool"
-                  className="w-full sm:w-auto px-4 py-2.5 bg-gradient-to-r from-[#7C3AED] to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-xl font-bold text-xs shrink-0 text-center shadow-md transition-all hover:scale-105 active:scale-95"
-                >
-                  Scan Live ➔
-                </Link>
-              </div>
+            <div className="lg:col-span-5 flex justify-center lg:justify-end w-full">
               <AuditForm />
             </div>
 
