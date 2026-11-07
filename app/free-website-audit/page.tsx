@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import StickyWidgets from "@/components/ui/StickyWidgets";
@@ -99,6 +100,24 @@ export default function FreeWebsiteAuditPage() {
 
             {/* Right Form Column */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
+              
+              <div className="w-full max-w-lg mb-6 p-4 rounded-3xl bg-gradient-to-br from-[#160D2E] to-[#251547] text-white border border-purple-500/30 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+                <div className="flex items-center gap-3 text-left">
+                  <span className="w-10 h-10 rounded-2xl bg-purple-500/20 border border-purple-400/30 flex items-center justify-center text-amber-300 text-base shrink-0">
+                    <i className="fa-solid fa-bolt" />
+                  </span>
+                  <div>
+                    <h4 className="text-xs font-black text-white">Need An Instant 15-Sec AI Scan?</h4>
+                    <p className="text-[11px] text-purple-200/90 font-medium">Test server latency, SEO & mobile score live.</p>
+                  </div>
+                </div>
+                <Link
+                  href="/seo-audit-tool"
+                  className="w-full sm:w-auto px-4 py-2.5 bg-gradient-to-r from-[#7C3AED] to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-xl font-bold text-xs shrink-0 text-center shadow-md transition-all hover:scale-105 active:scale-95"
+                >
+                  Scan Live ➔
+                </Link>
+              </div>
               <AuditForm />
             </div>
 
