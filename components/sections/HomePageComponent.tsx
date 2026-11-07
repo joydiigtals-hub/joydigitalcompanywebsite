@@ -10,6 +10,7 @@ import TrackedWaLink from "@/components/ui/TrackedWaLink";
 import Header from "@/components/layout/Header";
 import { Code2, SearchCheck, Target, Smartphone, PanelsTopLeft, Globe, Headset, ArrowRight } from "lucide-react";
 import ModernHeroSection from "@/components/sections/ModernHeroSection";
+import IndustrySpecializationSection from "@/components/sections/IndustrySpecializationSection";
 
 const DigitalNetworkBackground = dynamic(() => import("@/components/ui/DigitalNetworkBackground"));
 const IndustryTabs = dynamic(() => import("@/components/sections/IndustryTabs"));
@@ -414,80 +415,10 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
         {/* 1. MODERNIZED INTERNATIONAL HERO SECTION */}
         <ModernHeroSection country={country} />
         
-        {/* TRAVEL, TOURISM & SAFARI SECTION */}
-        <section className="py-20 bg-white border-b border-[#E9E4F2] relative z-10 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="reveal-hidden">
-              <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">
-                Industry Specialization
-              </span>
-              <h2 className="text-3xl lg:text-4xl font-extrabold text-[#1F1B2D] mb-6 leading-tight">
-                High-Converting Websites for Travel, Tourism &amp; Safari
-              </h2>
-              <p className="text-sm text-[#6B6478] font-semibold leading-relaxed mb-8">
-                We build custom, high-speed websites tailored specifically for Travel Agencies, Tour Operators, DMCs, and Safari Operators worldwide. Generate more qualified tour enquiries with layouts designed for the tourism industry.
-              </p>
-              
-              <ul className="space-y-4 mb-10 text-sm font-bold text-[#1F1B2D]">
-                <li className="flex items-start gap-3">
-                  <i className="fa-solid fa-circle-check text-emerald-500 mt-1" />
-                  <span>Dynamic Tour Package &amp; Itinerary Management (CMS)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <i className="fa-solid fa-circle-check text-emerald-500 mt-1" />
-                  <span>Direct WhatsApp Enquiry &amp; Booking Integration</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <i className="fa-solid fa-circle-check text-emerald-500 mt-1" />
-                  <span>Mobile-First Design for Global Travelers on the go</span>
-                </li>
-              </ul>
-              
-              <div className="flex flex-wrap gap-4">
-                <Link href="/travel-website-development" className="inline-flex items-center gap-2 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-xs px-6 py-3.5 rounded-xl shadow-md transition-all hover:-translate-y-0.5">
-                  Explore Travel Web Dev <i className="fa-solid fa-arrow-right" />
-                </Link>
-                <Link href="/safari-website-development" className="inline-flex items-center gap-2 bg-[#FAF9FF] hover:bg-[#F3F0FF] border border-[#E9E4F2] hover:border-[#7C3AED]/40 text-[#1F1B2D] font-bold text-xs px-6 py-3.5 rounded-xl transition-all hover:-translate-y-0.5">
-                  Safari Web Dev <i className="fa-solid fa-compass text-[#7C3AED]" />
-                </Link>
-              </div>
-            </div>
-            
-            <div className="relative reveal-hidden">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#7C3AED]/20 to-emerald-500/10 rounded-[32px] blur-3xl transform -rotate-6" />
-              <div className="relative bg-[#1A1433] rounded-[32px] p-8 border border-[#2D244E] shadow-2xl overflow-hidden">
-                <div className="flex items-center justify-between border-b border-[#2D244E] pb-4 mb-6">
-                  <div className="flex gap-1.5">
-                    <div className="w-3 h-3 rounded-full bg-rose-500" />
-                    <div className="w-3 h-3 rounded-full bg-amber-500" />
-                    <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                  </div>
-                  <div className="text-[10px] font-bold text-slate-400 font-mono">Safari Operator Dashboard</div>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex gap-4 items-center">
-                    <div className="w-16 h-16 rounded-xl bg-slate-800 shrink-0" />
-                    <div className="space-y-2 flex-1">
-                      <div className="h-3 bg-slate-700 rounded-full w-3/4" />
-                      <div className="h-2 bg-slate-800 rounded-full w-1/2" />
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-[#2D244E]">
-                    <div className="bg-[#211942] rounded-xl p-4 border border-[#3A2D70]">
-                      <div className="text-[10px] text-slate-400 mb-1 uppercase font-bold">New Leads</div>
-                      <div className="text-2xl font-extrabold text-emerald-400">+42%</div>
-                    </div>
-                    <div className="bg-[#211942] rounded-xl p-4 border border-[#3A2D70]">
-                      <div className="text-[10px] text-slate-400 mb-1 uppercase font-bold">Mobile Speed</div>
-                      <div className="text-2xl font-extrabold text-white">Fast</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* 2. TRUST / VALUE SECTION WITH SCROLL REVEALS (Soft background alternates) */}
+        {/* 2. INDUSTRY SPECIALIZATION SECTION (MULTI-INDUSTRY TABBED SELECTOR) */}
+        <IndustrySpecializationSection />
+        
+        {/* 3. TRUST / VALUE SECTION WITH SCROLL REVEALS (Soft background alternates) */}
         <section id="value-proposition" className="py-20 bg-white border-b border-[#E9E4F2] relative z-10">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">

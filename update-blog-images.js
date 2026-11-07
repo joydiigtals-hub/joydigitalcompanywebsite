@@ -15,6 +15,7 @@ function getRelatedImage(title, slug) {
   const text = (title + ' ' + slug).toLowerCase();
 
   if (slug === 'tourism-business-plan') return '/assets/images/blog/tourism-business-plan.webp';
+  if (slug === 'website-development-company-in-madurai') return '/assets/images/blog/website-development-company-in-madurai.webp';
   if (slug === 'increase-profit-tourism-business') return '/assets/images/blog/increase-profit-tourism-business.webp';
   if (slug === 'digital-marketing-tourism-africa') return '/assets/images/blog/digital-marketing-tourism-africa.webp';
   if (slug === 'commercial-solar-epc-business-plan') return '/assets/images/blog/commercial-solar-epc-business-plan.webp';

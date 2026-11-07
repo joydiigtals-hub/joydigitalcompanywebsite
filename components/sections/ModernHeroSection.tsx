@@ -210,7 +210,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
   };
 
   return (
-    <section className="relative pt-24 lg:pt-32 pb-20 overflow-hidden bg-[#0B0914] text-white border-b border-[#1E1838] select-none">
+    <section className="relative pt-24 lg:pt-32 pb-12 overflow-hidden bg-[#0B0914] text-white select-none">
 
       {/* Lightweight Digital Network & Ambient Glow Background */}
       <DigitalNetworkBackground />
@@ -543,7 +543,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
           <button
             type="button"
             onClick={() => {
-              const target = document.getElementById("trust-overview") || document.getElementById("case-studies");
+              const target = document.getElementById("industry-specialization") || document.getElementById("trust-overview") || document.getElementById("case-studies");
               if (target) {
                 target.scrollIntoView({ behavior: "smooth" });
               } else {

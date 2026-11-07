@@ -3,20 +3,110 @@ import { ChatStep, FlowId } from "./types";
 export const INITIAL_WELCOME_STEP: ChatStep = {
   id: "welcome_start",
   flowId: "welcome",
-  question: "Hi 👋 Welcome to Joy Digital!\n\nHow can we help your business today?",
+  question: "Hi 👋 Welcome to Joy Digital!\n\nHow can we help your business today? Choose an option below or ask any question.",
   type: "options",
   options: [
+    { label: "🎯 Custom Project Proposal", value: "cost_estimator", nextStepId: "calc_project_type" },
     { label: "🌐 I need a new website", value: "new_website", nextStepId: "web_type" },
-    { label: "🔄 I need a website redesign", value: "redesign", nextStepId: "redesign_improve" },
-    { label: "📈 I need SEO / Local SEO", value: "seo", nextStepId: "seo_type" },
-    { label: "🤖 I want AI Search Optimization", value: "ai_search", nextStepId: "ai_info" },
-    { label: "📢 I need Digital Marketing", value: "digital_marketing", nextStepId: "dm_service" },
+    { label: "🔄 Website redesign", value: "redesign", nextStepId: "redesign_improve" },
+    { label: "📈 SEO & Google Ranking", value: "seo", nextStepId: "seo_type" },
+    { label: "🤖 AI Search Optimization", value: "ai_search", nextStepId: "ai_info" },
+    { label: "📢 Digital Marketing", value: "digital_marketing", nextStepId: "dm_service" },
     { label: "💰 I want a quotation", value: "quotation", nextStepId: "quote_service" },
-    { label: "💬 I have a question", value: "general_question", nextStepId: "gq_topic" },
+    { label: "💬 Ask a question", value: "general_question", nextStepId: "gq_topic" },
   ],
 };
 
 export const CHAT_STEPS_MAP: Record<string, ChatStep> = {
+  // --- FLOW 0: CUSTOM PROJECT PROPOSAL ---
+  calc_project_type: {
+    id: "calc_project_type",
+    flowId: "cost_estimator",
+    question: "🎯 Custom Project Proposal\n\nWhat kind of website or digital solution does your business need?",
+    type: "options",
+    fieldKey: "websiteType",
+    nextStepId: "calc_industry",
+    options: [
+      { label: "🏢 Business / Corporate Site", value: "Business Website" },
+      { label: "🛍️ E-Commerce / Online Store", value: "E-commerce Website" },
+      { label: "🚀 High-Converting Landing Page", value: "Landing Page" },
+      { label: "⚙️ Custom Web App / SaaS Portal", value: "Custom Web Application" },
+      { label: "🔄 Redesign Existing Site", value: "Website Redesign" },
+    ],
+  },
+  calc_industry: {
+    id: "calc_industry",
+    flowId: "cost_estimator",
+    question: "What is your business industry or sector?",
+    type: "options",
+    fieldKey: "industry",
+    nextStepId: "calc_scope",
+    options: [
+      { label: "🏢 Corporate / B2B Services", value: "Corporate / B2B" },
+      { label: "🛍️ Retail / E-commerce / D2C", value: "Retail / E-commerce" },
+      { label: "🏥 Healthcare / Clinic / Hospital", value: "Healthcare" },
+      { label: "🏗️ Real Estate / Construction", value: "Real Estate" },
+      { label: "🎓 Education / Academy", value: "Education" },
+      { label: "⚙️ Tech / SaaS / Software", value: "Technology" },
+      { label: "✨ Other Industry", value: "Other Industry" },
+    ],
+  },
+  calc_scope: {
+    id: "calc_scope",
+    flowId: "cost_estimator",
+    question: "What is your expected project scope or size?",
+    type: "options",
+    fieldKey: "businessSize",
+    nextStepId: "calc_priority",
+    options: [
+      { label: "1 – 5 Pages (Starter / Fast Launch)", value: "1-5 Pages (Starter)" },
+      { label: "5 – 15 Pages (Standard Business)", value: "5-15 Pages (Standard)" },
+      { label: "15 – 30 Pages (Growth Business)", value: "15-30 Pages (Growth)" },
+      { label: "30+ Pages / Custom Portal", value: "Enterprise Scope" },
+    ],
+  },
+  calc_priority: {
+    id: "calc_priority",
+    flowId: "cost_estimator",
+    question: "What is your top technical priority?",
+    type: "options",
+    fieldKey: "improvements",
+    nextStepId: "calc_result",
+    options: [
+      { label: "⚡ 95+ Google PageSpeed & Next.js 16", value: "Ultra-Fast Speed" },
+      { label: "📈 High Google Search / Local SEO Rank", value: "Google SEO" },
+      { label: "💳 Payment Gateway & WhatsApp Checkout", value: "E-Commerce Checkout" },
+      { label: "🎨 Premium Modern UI/UX Design", value: "Premium UI/UX" },
+    ],
+  },
+  calc_result: {
+    id: "calc_result",
+    flowId: "cost_estimator",
+    question: "🎯 Project Scope Configured!\n\nWebsite pricing & delivery timeline vary based on your specific industry, business size, and required features.\n\nOur technical lead (Saravanan) will review your project and prepare a tailored roadmap and transparent proposal.\n\nWhere should we send your customized quote?",
+    type: "options",
+    fieldKey: "requirement",
+    options: [
+      { label: "📋 Continue & Send My Proposal", value: "Request Proposal", nextStepId: "calc_business" },
+      { label: "💬 Chat Directly on WhatsApp", value: "WhatsApp Direct", nextStepId: "calc_contact" },
+      { label: "🔄 Recalculate / Other Service", value: "Restart", nextStepId: "welcome_start" },
+    ],
+  },
+  calc_business: {
+    id: "calc_business",
+    flowId: "cost_estimator",
+    question: "What's your business name or brand name?",
+    type: "text",
+    fieldKey: "businessName",
+    placeholder: "e.g. Acme Tech or Personal Name",
+    nextStepId: "calc_contact",
+  },
+  calc_contact: {
+    id: "calc_contact",
+    flowId: "cost_estimator",
+    question: "Where should Saravanan send the customized quote & timeline?",
+    type: "contact_form",
+  },
+
   // --- FLOW 1: NEW WEBSITE ---
   web_type: {
     id: "web_type",
@@ -24,7 +114,7 @@ export const CHAT_STEPS_MAP: Record<string, ChatStep> = {
     question: "Great! What type of website are you looking for?",
     type: "options",
     fieldKey: "websiteType",
-    nextStepId: "web_budget",
+    nextStepId: "web_business_size",
     options: [
       { label: "Business Website", value: "Business Website" },
       { label: "E-commerce Website", value: "E-commerce Website" },
@@ -34,19 +124,19 @@ export const CHAT_STEPS_MAP: Record<string, ChatStep> = {
       { label: "Not sure", value: "Not sure" },
     ],
   },
-  web_budget: {
-    id: "web_budget",
+  web_business_size: {
+    id: "web_business_size",
     flowId: "new_website",
-    question: "What is your approximate budget?",
+    question: "What is your business size or stage?",
     type: "options",
-    fieldKey: "budget",
+    fieldKey: "businessSize",
     nextStepId: "web_timeline",
     options: [
-      { label: "Under ₹15,000", value: "Under ₹15,000" },
-      { label: "₹15,000 – ₹30,000", value: "₹15,000 – ₹30,000" },
-      { label: "₹30,000 – ₹75,000", value: "₹30,000 – ₹75,000" },
-      { label: "₹75,000+", value: "₹75,000+" },
-      { label: "I'm not sure", value: "I'm not sure" },
+      { label: "🌱 Startup / Early Stage", value: "Startup" },
+      { label: "🏢 Growing Business / SMB", value: "Growing SMB" },
+      { label: "🏛️ Established Corporate / Enterprise", value: "Enterprise" },
+      { label: "🛍️ E-Commerce / Online Brand", value: "E-Commerce" },
+      { label: "👤 Professional / Individual", value: "Individual" },
     ],
   },
   web_timeline: {
@@ -57,7 +147,7 @@ export const CHAT_STEPS_MAP: Record<string, ChatStep> = {
     fieldKey: "timeline",
     nextStepId: "web_business",
     options: [
-      { label: "ASAP", value: "ASAP" },
+      { label: "ASAP (Within 1 week)", value: "ASAP" },
       { label: "Within 2 weeks", value: "Within 2 weeks" },
       { label: "Within 1 month", value: "Within 1 month" },
       { label: "Just exploring", value: "Just exploring" },
@@ -75,7 +165,7 @@ export const CHAT_STEPS_MAP: Record<string, ChatStep> = {
   web_contact: {
     id: "web_contact",
     flowId: "new_website",
-    question: "How can we contact you?",
+    question: "Where should we send your customized quote & proposal?",
     type: "contact_form",
   },
 
@@ -118,7 +208,7 @@ export const CHAT_STEPS_MAP: Record<string, ChatStep> = {
   redesign_contact: {
     id: "redesign_contact",
     flowId: "redesign",
-    question: "How can we contact you?",
+    question: "Where should we send the free audit & proposal?",
     type: "contact_form",
   },
 
@@ -175,7 +265,7 @@ export const CHAT_STEPS_MAP: Record<string, ChatStep> = {
   seo_contact: {
     id: "seo_contact",
     flowId: "seo",
-    question: "Where should we contact you?",
+    question: "Where should we send your custom SEO roadmap?",
     type: "contact_form",
   },
 
@@ -183,7 +273,7 @@ export const CHAT_STEPS_MAP: Record<string, ChatStep> = {
   ai_info: {
     id: "ai_info",
     flowId: "ai_search",
-    question: "AI Search Optimization helps your business become more visible when potential customers search through AI platforms such as ChatGPT, Gemini and other AI search experiences.\n\nDo you already have a website?",
+    question: "AI Search Optimization helps your business become more visible when potential customers search through AI platforms such as ChatGPT, Gemini and Perplexity.\n\nDo you already have a website?",
     type: "options",
     fieldKey: "hasWebsite",
     options: [
@@ -238,7 +328,7 @@ export const CHAT_STEPS_MAP: Record<string, ChatStep> = {
     question: "What service are you interested in?",
     type: "options",
     fieldKey: "marketingService",
-    nextStepId: "dm_budget",
+    nextStepId: "dm_stage",
     options: [
       { label: "Social Media Marketing", value: "Social Media Marketing" },
       { label: "Google Ads", value: "Google Ads" },
@@ -249,19 +339,18 @@ export const CHAT_STEPS_MAP: Record<string, ChatStep> = {
       { label: "Not sure", value: "Not sure" },
     ],
   },
-  dm_budget: {
-    id: "dm_budget",
+  dm_stage: {
+    id: "dm_stage",
     flowId: "digital_marketing",
-    question: "What is your monthly marketing budget?",
+    question: "What is your current business marketing goal?",
     type: "options",
-    fieldKey: "monthlyBudget",
+    fieldKey: "businessSize",
     nextStepId: "dm_business",
     options: [
-      { label: "Under ₹10K", value: "Under ₹10K" },
-      { label: "₹10K – ₹25K", value: "₹10K – ₹25K" },
-      { label: "₹25K – ₹50K", value: "₹25K – ₹50K" },
-      { label: "₹50K+", value: "₹50K+" },
-      { label: "Not sure", value: "Not sure" },
+      { label: "🚀 Immediate Lead Generation", value: "Lead Generation" },
+      { label: "📈 Brand Awareness & Growth", value: "Brand Awareness" },
+      { label: "🛍️ E-Commerce Sales & ROAS", value: "E-Commerce Sales" },
+      { label: "🌟 Local Footfall & Inquiries", value: "Local Footfall" },
     ],
   },
   dm_business: {
@@ -276,7 +365,7 @@ export const CHAT_STEPS_MAP: Record<string, ChatStep> = {
   dm_contact: {
     id: "dm_contact",
     flowId: "digital_marketing",
-    question: "How can we contact you?",
+    question: "Where should we send your customized marketing proposal?",
     type: "contact_form",
   },
 
@@ -289,28 +378,28 @@ export const CHAT_STEPS_MAP: Record<string, ChatStep> = {
     fieldKey: "quotationService",
     nextStepId: "quote_detail",
     options: [
-      { label: "Website", value: "Website" },
-      { label: "E-commerce", value: "E-commerce" },
-      { label: "SEO", value: "SEO" },
-      { label: "Local SEO", value: "Local SEO" },
+      { label: "Next.js Website", value: "Website" },
+      { label: "E-commerce Store", value: "E-commerce" },
+      { label: "SEO & Google Ranking", value: "SEO" },
+      { label: "Local SEO / Google Maps", value: "Local SEO" },
       { label: "AI Search Optimization", value: "AI Search Optimization" },
       { label: "Digital Marketing", value: "Digital Marketing" },
-      { label: "Custom Requirement", value: "Custom Requirement" },
+      { label: "Custom Project Requirement", value: "Custom Requirement" },
     ],
   },
   quote_detail: {
     id: "quote_detail",
     flowId: "quotation",
-    question: "Tell us briefly about your requirement.",
+    question: "Tell us briefly about your business and requirement.",
     type: "textarea",
     fieldKey: "requirement",
-    placeholder: "e.g. Looking for a 10-page company website with WhatsApp integration and blog...",
+    placeholder: "e.g. We are a clinic/consultancy needing a 10-page modern website with booking and WhatsApp integration...",
     nextStepId: "quote_business",
   },
   quote_business: {
     id: "quote_business",
     flowId: "quotation",
-    question: "What's your business name?",
+    question: "What's your business or company name?",
     type: "text",
     fieldKey: "businessName",
     placeholder: "e.g. Elite Consultancy",
@@ -319,11 +408,11 @@ export const CHAT_STEPS_MAP: Record<string, ChatStep> = {
   quote_contact: {
     id: "quote_contact",
     flowId: "quotation",
-    question: "How can we contact you?",
+    question: "Where should Saravanan send the customized quotation?",
     type: "contact_form",
   },
 
-  // --- FLOW 7: GENERAL QUESTION ---
+  // --- FLOW 7: GENERAL QUESTION (Always converts to lead) ---
   gq_topic: {
     id: "gq_topic",
     flowId: "general_question",
@@ -331,19 +420,48 @@ export const CHAT_STEPS_MAP: Record<string, ChatStep> = {
     type: "options",
     fieldKey: "questionCategory",
     options: [
-      { label: "Website pricing", value: "Website pricing", nextStepId: "gq_contact" },
-      { label: "Website development time", value: "Website development time", nextStepId: "gq_contact" },
-      { label: "SEO pricing", value: "SEO pricing", nextStepId: "gq_contact" },
-      { label: "Services", value: "Services", nextStepId: "gq_contact" },
-      { label: "Maintenance", value: "Maintenance", nextStepId: "gq_contact" },
-      { label: "Talk to a person", value: "Talk to a person", nextStepId: "gq_contact" },
-      { label: "Other", value: "Other", nextStepId: "gq_detail" },
+      { label: "Website pricing", value: "Website pricing", nextStepId: "gq_pricing" },
+      { label: "Website development time", value: "Website development time", nextStepId: "gq_timeline" },
+      { label: "SEO pricing", value: "SEO pricing", nextStepId: "gq_seo_pricing" },
+      { label: "Our Core Services", value: "Services", nextStepId: "gq_services" },
+      { label: "Talk to Saravanan directly", value: "Talk to a person", nextStepId: "gq_talk_person" },
+      { label: "Other Question", value: "Other", nextStepId: "gq_detail" },
     ],
+  },
+  gq_pricing: {
+    id: "gq_pricing",
+    flowId: "general_question",
+    question: "Website investment is completely custom-tailored based on your industry, business size, and required features (pages, custom design, SEO, integrations).\n\nTo share a tailored quotation for your business, where should Saravanan send the proposal?",
+    type: "contact_form",
+  },
+  gq_timeline: {
+    id: "gq_timeline",
+    flowId: "general_question",
+    question: "Landing pages take 3–5 business days, and complete corporate business sites take 7–12 days from design approval to live deployment ⏱️\n\nWhere can Saravanan send an exact project schedule and proposal?",
+    type: "contact_form",
+  },
+  gq_seo_pricing: {
+    id: "gq_seo_pricing",
+    flowId: "general_question",
+    question: "SEO pricing varies depending on your target market (Local Chennai/Madurai, All-India, or Global) and competition level.\n\nTo share a customized SEO roadmap and quotation for your brand, where should Saravanan send the details?",
+    type: "contact_form",
+  },
+  gq_services: {
+    id: "gq_services",
+    flowId: "general_question",
+    question: "We engineer Next.js 16 websites, High-Speed E-commerce, Technical SEO, Google Business Profile ranking, and AI Search Optimization ⚡\n\nWhere can we reach you to discuss your project requirements?",
+    type: "contact_form",
+  },
+  gq_talk_person: {
+    id: "gq_talk_person",
+    flowId: "general_question",
+    question: "Saravanan from our technical leadership team is ready to connect with you directly 👍\n\nPlease share your contact details and we'll reach out shortly:",
+    type: "contact_form",
   },
   gq_detail: {
     id: "gq_detail",
     flowId: "general_question",
-    question: "Please share your question details.",
+    question: "Please share your question or requirement details.",
     type: "textarea",
     fieldKey: "requirement",
     placeholder: "Type your question here...",
@@ -364,6 +482,8 @@ export function generateWhatsAppUrl(
     service: string;
     businessName?: string;
     subService?: string;
+    industry?: string;
+    businessSize?: string;
     budget?: string;
     timeline?: string;
     name: string;
@@ -377,8 +497,8 @@ export function generateWhatsAppUrl(
 I would like to enquire about your ${leadData.service || "Web Services"}.
 
 Business Name: ${leadData.businessName || "N/A"}
+Industry/Scale: ${leadData.industry || leadData.businessSize || "Custom"}
 Requirement: ${leadData.subService || leadData.service || "Website Development"}
-Budget: ${leadData.budget || "N/A"}
 Timeline: ${leadData.timeline || "N/A"}
 
 Name: ${leadData.name}

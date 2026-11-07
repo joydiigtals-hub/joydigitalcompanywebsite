@@ -27,7 +27,7 @@ export default function ChatbotWidget() {
   const [submittedLeadId, setSubmittedLeadId] = useState<string | null>(null);
   const [submitError, setSubmitError] = useState(false);
 
-  // Input fields state for step inputs
+  // Input fields state
   const [textInput, setTextInput] = useState("");
   const [contactName, setContactName] = useState("");
   const [contactPhone, setContactPhone] = useState("");
@@ -36,7 +36,7 @@ export default function ChatbotWidget() {
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // 1. Defer rendering for PageSpeed optimization
+  // 1. Defer rendering for Core Web Vitals optimization
   useEffect(() => {
     if (typeof window !== "undefined" && typeof navigator !== "undefined") {
       const isBot = /Lighthouse|Googlebot|HeadlessChromium|Chrome-Lighthouse|PTST/i.test(navigator.userAgent);
@@ -45,7 +45,7 @@ export default function ChatbotWidget() {
 
     const timer = setTimeout(() => {
       setShouldRender(true);
-    }, 2000);
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -71,12 +71,12 @@ export default function ChatbotWidget() {
     };
     setMessages([welcomeMsg]);
 
-    // Show proactive tooltip after 10 seconds if chat not opened
+    // Show proactive tooltip after 8 seconds if chat not opened
     const tooltipDismissed = localStorage.getItem("jd_tooltip_dismissed");
     if (!tooltipDismissed) {
       const tooltipTimer = setTimeout(() => {
         setShowTooltip(true);
-      }, 10000);
+      }, 8000);
       return () => clearTimeout(tooltipTimer);
     }
   }, [shouldRender]);
@@ -111,7 +111,7 @@ export default function ChatbotWidget() {
   };
 
   // Helper to add assistant typing delay
-  const pushAssistantMessage = (step: ChatStep, newHistoryMsg?: MessageItem) => {
+  const pushAssistantMessage = (step: ChatStep, newHistoryMsg?: MessageItem, customQuestionText?: string) => {
     setIsTyping(true);
     setTimeout(() => {
       setIsTyping(false);
@@ -120,14 +120,14 @@ export default function ChatbotWidget() {
       const assistantMsg: MessageItem = {
         id: "msg_" + Math.random().toString(36).substring(2, 9),
         role: "assistant",
-        text: step.question,
+        text: customQuestionText || step.question,
         timestamp: new Date().toISOString(),
         options: step.options,
         stepId: step.id,
       };
 
       setMessages((prev) => (newHistoryMsg ? [...prev, newHistoryMsg, assistantMsg] : [...prev, assistantMsg]));
-    }, 450);
+    }, 400);
   };
 
   // Handle Option Click
@@ -147,9 +147,23 @@ export default function ChatbotWidget() {
     }
 
     if (currentStep.id === "welcome_start") {
-      updatedLeadData.service = option.label.replace(/^[\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF]/g, "").trim();
+      updatedLeadData.service = option.label
+        .replace(/^[\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF]/g, "")
+        .trim();
       setLeadData(updatedLeadData);
       trackEvent("service_selected", { service: option.value });
+    }
+
+    // Direct WhatsApp Option Handler
+    if (option.value === "WhatsApp Direct") {
+      handleWhatsAppRedirect();
+      return;
+    }
+
+    // Restart Option Handler
+    if (option.value === "Restart") {
+      handleRestartChat();
+      return;
     }
 
     // Record step history for Back button
@@ -157,13 +171,90 @@ export default function ChatbotWidget() {
 
     const nextStepId = option.nextStepId || currentStep.nextStepId;
     if (nextStepId && CHAT_STEPS_MAP[nextStepId]) {
-      pushAssistantMessage(CHAT_STEPS_MAP[nextStepId], userMsg);
+      const nextStep = CHAT_STEPS_MAP[nextStepId];
+
+      // Dynamic summary for Proposal result (No hardcoded prices - industry & size specific lead flow)
+      let dynamicQuestion: string | undefined = undefined;
+      if (nextStepId === "calc_result") {
+        const type = updatedLeadData.websiteType || "Custom Solution";
+        const ind = updatedLeadData.industry || "General Industry";
+        const scope = updatedLeadData.businessSize || "Standard Scope";
+
+        dynamicQuestion = `🎯 **Project Scope Configured:**\n\n📌 **Solution:** ${type}\n🏢 **Industry:** ${ind}\n📐 **Expected Scope:** ${scope}\n⚡ **Core Stack:** Next.js 16 + 95+ PageSpeed + Clean SEO Architecture\n\n*Website development investment varies according to your specific industry, business size, and required integrations. Where should Saravanan send your personalized proposal & itemized quote?*`;
+      }
+
+      pushAssistantMessage(nextStep, userMsg, dynamicQuestion);
     }
   };
 
-  // Handle Text/Textarea Submit
-  const handleTextSubmit = (e?: React.FormEvent) => {
-    if (e) e.preventDefault();
+  // Handle Free-Form Chat (AI / Knowledge Base Q&A)
+  const handleFreeFormMessage = async (queryText: string) => {
+    if (!queryText.trim()) return;
+
+    const val = queryText.trim();
+    setTextInput("");
+
+    const userMsg: MessageItem = {
+      id: "msg_" + Math.random().toString(36).substring(2, 9),
+      role: "user",
+      text: val,
+      timestamp: new Date().toISOString(),
+    };
+
+    setMessages((prev) => [...prev, userMsg]);
+    setIsTyping(true);
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sessionId,
+          messages: [...messages, userMsg].map((m) => ({ role: m.role, text: m.text })),
+        }),
+      });
+
+      const data = await res.json();
+      setIsTyping(false);
+
+      if (data && data.reply) {
+        const botMsg: MessageItem = {
+          id: "msg_" + Math.random().toString(36).substring(2, 9),
+          role: "assistant",
+          text: data.reply,
+          timestamp: new Date().toISOString(),
+        };
+        setMessages((prev) => [...prev, botMsg]);
+
+        // Auto prompt contact capture if phone was not yet provided
+        const phoneRegex = /(\+?91[\-\s]?)?[6789]\d{9}/;
+        if (!phoneRegex.test(val)) {
+          // Keep active input available
+        }
+      } else {
+        const fallbackMsg: MessageItem = {
+          id: "msg_fallback",
+          role: "assistant",
+          text: "Thanks for your question! To give you accurate details for your industry & business size, please share your Name and WhatsApp number below:",
+          timestamp: new Date().toISOString(),
+        };
+        setMessages((prev) => [...prev, fallbackMsg]);
+      }
+    } catch (e) {
+      setIsTyping(false);
+      const errReply: MessageItem = {
+        id: "msg_err",
+        role: "assistant",
+        text: "Thanks for asking! Would you like to connect directly with our technical lead Saravanan on WhatsApp?",
+        timestamp: new Date().toISOString(),
+      };
+      setMessages((prev) => [...prev, errReply]);
+    }
+  };
+
+  // Handle Single-Line & Multi-Line Text Inputs
+  const handleStepInputSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
     if (!textInput.trim()) return;
 
     const val = textInput.trim();
@@ -190,39 +281,31 @@ export default function ChatbotWidget() {
     }
   };
 
-  // Handle Back Button
+  // Handle Going Back 1 Step
   const handleGoBack = () => {
     if (stepHistory.length === 0) return;
-    const prevHistory = [...stepHistory];
-    const lastStepId = prevHistory.pop()!;
-    setStepHistory(prevHistory);
 
-    const prevStep = CHAT_STEPS_MAP[lastStepId] || INITIAL_WELCOME_STEP;
-    setCurrentStep(prevStep);
+    const lastStepId = stepHistory[stepHistory.length - 1];
+    setStepHistory((prev) => prev.slice(0, -1));
 
-    // Rollback last messages
-    setMessages((prev) => {
-      if (prev.length >= 2) return prev.slice(0, prev.length - 2);
-      return prev;
-    });
+    if (lastStepId === "welcome_start") {
+      setCurrentStep(INITIAL_WELCOME_STEP);
+    } else if (CHAT_STEPS_MAP[lastStepId]) {
+      setCurrentStep(CHAT_STEPS_MAP[lastStepId]);
+    }
   };
 
-  // Handle Start Over
+  // Restart Chat
   const handleRestartChat = () => {
     setShowResetModal(false);
     setStepHistory([]);
     setLeadData({});
     setIsCompleted(false);
     setSubmitError(false);
-    setSubmittedLeadId(null);
     setCurrentStep(INITIAL_WELCOME_STEP);
 
-    const freshSessionId = "jd_sess_" + Math.random().toString(36).substring(2, 12);
-    localStorage.setItem("jd_chat_session_id", freshSessionId);
-    setSessionId(freshSessionId);
-
     const welcomeMsg: MessageItem = {
-      id: "msg_welcome_new",
+      id: "msg_welcome_" + Date.now(),
       role: "assistant",
       text: INITIAL_WELCOME_STEP.question,
       timestamp: new Date().toISOString(),
@@ -232,7 +315,7 @@ export default function ChatbotWidget() {
     setMessages([welcomeMsg]);
   };
 
-  // Handle Final Contact Form Submission
+  // Submit Contact Form
   const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormError("");
@@ -241,19 +324,24 @@ export default function ChatbotWidget() {
       setFormError("Please enter your name.");
       return;
     }
-    if (!contactPhone.trim()) {
-      setFormError("Please enter your WhatsApp / mobile number.");
+
+    const cleanedPhone = contactPhone.replace(/[\s\-\(\)]/g, "");
+    const phoneRegex = /^(\+?\d{1,3})?[6789]\d{9}$/;
+    if (!phoneRegex.test(cleanedPhone) && cleanedPhone.length < 10) {
+      setFormError("Please enter a valid 10-digit mobile or WhatsApp number.");
       return;
     }
 
     setIsSubmitting(true);
 
     const finalLeadPayload: ChatLeadData = {
-      service: leadData.service || "Website & Digital Services",
-      subService: leadData.subService || leadData.websiteType || leadData.marketingService || leadData.quotationService || "N/A",
+      service: leadData.service || "Website Development",
+      subService: leadData.subService || leadData.websiteType || "Custom Next.js Web Solution",
       websiteType: leadData.websiteType,
+      industry: leadData.industry,
+      businessSize: leadData.businessSize,
       improvements: leadData.improvements,
-      budget: leadData.budget || leadData.monthlyBudget,
+      budget: leadData.budget || leadData.monthlyBudget || "Custom Proposal Requested",
       timeline: leadData.timeline,
       websiteUrl: leadData.websiteUrl,
       targetLocation: leadData.targetLocation,
@@ -275,7 +363,9 @@ export default function ChatbotWidget() {
     const userMsg: MessageItem = {
       id: "msg_contact_user",
       role: "user",
-      text: `Name: ${finalLeadPayload.name}\nWhatsApp: ${finalLeadPayload.phone}${finalLeadPayload.email ? `\nEmail: ${finalLeadPayload.email}` : ""}`,
+      text: `👤 Name: ${finalLeadPayload.name}\n📱 WhatsApp: ${finalLeadPayload.phone}${
+        finalLeadPayload.email ? `\n✉️ Email: ${finalLeadPayload.email}` : ""
+      }`,
       timestamp: new Date().toISOString(),
     };
 
@@ -306,7 +396,7 @@ export default function ChatbotWidget() {
         const confirmMsg: MessageItem = {
           id: "msg_confirm",
           role: "assistant",
-          text: `Thanks, ${finalLeadPayload.name}! 🎉\n\nWe've received your requirement.\nOur team will review it and contact you shortly.`,
+          text: `Thanks, ${finalLeadPayload.name}! 🎉\n\nWe have registered your project requirements.\nOur technical lead Saravanan will analyze your industry scope and contact you with a customized proposal within 2 hours.`,
           timestamp: new Date().toISOString(),
         };
         setMessages((prev) => [...prev, confirmMsg]);
@@ -339,6 +429,8 @@ export default function ChatbotWidget() {
     const waUrl = generateWhatsAppUrl(contactPhone || leadData.phone || "", {
       service: leadData.service || "Web Services",
       businessName: leadData.businessName,
+      industry: leadData.industry,
+      businessSize: leadData.businessSize,
       subService: leadData.subService || leadData.websiteType,
       budget: leadData.budget || leadData.monthlyBudget,
       timeline: leadData.timeline,
@@ -355,35 +447,36 @@ export default function ChatbotWidget() {
   }
 
   return (
-    <div className="fixed bottom-20 left-4 sm:bottom-6 sm:left-6 z-50 font-sans select-none">
-      {/* 1. Proactive Tooltip (Shows after 10s) */}
+    <div className="fixed bottom-22 left-4 sm:bottom-6 sm:left-6 z-[999] font-sans select-none">
+      {/* 1. Proactive Tooltip (Shows after 8s) */}
       {!isOpen && showTooltip && (
-        <div className="absolute bottom-16 left-0 mb-2 w-64 bg-white dark:bg-slate-900 border border-purple-100 dark:border-slate-800 p-3.5 rounded-2xl shadow-2xl animate-fade-in text-xs z-50">
+        <div className="absolute bottom-16 left-0 mb-2 w-76 bg-white dark:bg-[#160E28] border border-purple-200/80 dark:border-purple-800/40 p-3.5 rounded-2xl shadow-[0_10px_35px_-5px_rgba(30,17,58,0.25)] animate-fade-in text-xs z-[999]">
           <div className="flex justify-between items-start">
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></span>
-              <p className="font-bold text-slate-800 dark:text-white">Need help choosing?</p>
+              <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping"></span>
+              <p className="font-bold text-slate-900 dark:text-white">Planning a new website?</p>
             </div>
             <button
               onClick={handleCloseTooltip}
-              className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer"
+              className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer p-0.5"
+              aria-label="Close tooltip"
             >
               <i className="fa-solid fa-xmark text-xs" />
             </button>
           </div>
-          <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 leading-normal">
-            Chat with us to find the right website or SEO solution for your business!
+          <p className="text-[11.5px] text-slate-600 dark:text-slate-300 mt-1 leading-normal">
+            Get a tailored proposal & roadmap for your industry, or chat with our tech lead!
           </p>
           <div className="flex gap-2 mt-3">
             <button
               onClick={handleOpenChat}
-              className="px-3 py-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg font-bold text-[10.5px] hover:shadow-md cursor-pointer transition-all"
+              className="px-3.5 py-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-lg font-bold text-[11px] shadow-sm hover:shadow-md cursor-pointer transition-all"
             >
-              Chat with us
+              🎯 Get Custom Proposal
             </button>
             <button
               onClick={handleCloseTooltip}
-              className="px-2.5 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-lg font-semibold text-[10.5px] cursor-pointer"
+              className="px-2.5 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-lg font-semibold text-[11px] cursor-pointer"
             >
               Not now
             </button>
@@ -391,23 +484,16 @@ export default function ChatbotWidget() {
         </div>
       )}
 
-      {/* 2. Floating Circular Chat Button */}
+      {/* 2. Floating Circular Chat Button (Icon kept as requested) */}
       {!isOpen && (
         <button
           onClick={handleOpenChat}
-          aria-label="Open Joy Digital Chat"
-          className="relative w-13 h-13 sm:w-14 sm:h-14 bg-gradient-to-tr from-purple-600 to-indigo-650 hover:from-purple-700 hover:to-indigo-700 text-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-all hover:scale-105 cursor-pointer border border-purple-400/20 active:scale-95 animate-bounce-subtle"
+          aria-label="Open Joy Digital AI Assistant"
+          className="relative w-13 h-13 sm:w-14 sm:h-14 bg-gradient-to-tr from-[#7C3AED] via-purple-600 to-indigo-600 hover:scale-105 active:scale-95 text-white rounded-full flex items-center justify-center shadow-[0_10px_25px_-5px_rgba(124,58,237,0.5)] hover:shadow-[0_15px_35px_-5px_rgba(124,58,237,0.7)] transition-all duration-300 cursor-pointer border border-purple-400/40 animate-bounce-subtle"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-            />
-          </svg>
+          <i className="fa-solid fa-comments text-xl sm:text-2xl" />
 
-          {/* Unread badge */}
+          {/* Unread badge with pulse */}
           {hasUnread && (
             <span className="absolute -top-1 -right-1 flex h-4 w-4">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -421,29 +507,54 @@ export default function ChatbotWidget() {
 
       {/* 3. Main Chat Window Panel */}
       {isOpen && (
-        <div className="fixed inset-0 sm:inset-auto sm:bottom-24 sm:left-6 w-full sm:w-[380px] h-full sm:h-[600px] bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-none sm:rounded-[24px] shadow-2xl flex flex-col overflow-hidden animate-fade-in transition-all z-50">
-          {/* Header */}
-          <div className="bg-gradient-to-r from-purple-600 to-indigo-650 p-4 text-white flex items-center justify-between shrink-0 shadow-md">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-white/15 rounded-xl flex items-center justify-center relative shadow-inner border border-white/20">
-                <span className="font-black text-xs tracking-tighter">JD</span>
-                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-purple-600"></span>
+        <div className="fixed inset-x-3 bottom-4 sm:inset-auto sm:bottom-24 sm:left-6 w-auto sm:w-[395px] h-[85vh] sm:h-[610px] max-h-[660px] bg-white dark:bg-[#110B22] border border-slate-200/90 dark:border-purple-900/50 rounded-[24px] shadow-[0_20px_60px_-15px_rgba(15,10,35,0.4)] flex flex-col overflow-hidden animate-fade-in transition-all z-[999]">
+          
+          {/* Header - Solid Deep Obsidian/Amethyst Theme (NO white wash gradient!) */}
+          <div className="bg-[#160D2E] text-white p-3.5 sm:p-4 flex items-center justify-between shrink-0 border-b border-purple-500/20 relative overflow-hidden">
+            {/* Ambient subtle decorative glow */}
+            <div className="absolute -top-10 -right-10 w-28 h-28 bg-purple-600/30 rounded-full blur-2xl pointer-events-none" />
+            <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-indigo-600/20 rounded-full blur-xl pointer-events-none" />
+
+            <div className="flex items-center gap-2.5 sm:gap-3 relative z-10">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-tr from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center relative shadow-md border border-white/20 shrink-0">
+                <span className="font-black text-xs text-white tracking-wider">JD</span>
+                <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 rounded-full border-2 border-[#160D2E] flex items-center justify-center">
+                  <span className="w-1 h-1 bg-white rounded-full"></span>
+                </span>
               </div>
               <div className="text-left">
-                <h4 className="text-xs font-extrabold tracking-wide leading-none">Joy Digital</h4>
-                <span className="text-[9.5px] text-purple-100 font-medium mt-1 inline-block">
-                  Let's find the right solution for your business.
-                </span>
+                <div className="flex items-center gap-1.5">
+                  <h4 className="text-xs sm:text-[13px] font-black tracking-wide text-white leading-none">
+                    Joy Digital AI
+                  </h4>
+                  <span className="text-[9px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-1.5 py-0.5 rounded-full font-bold">
+                    Online
+                  </span>
+                </div>
+                <p className="text-[10px] text-purple-200/90 font-medium mt-1 leading-none">
+                  Next.js Agency • Chennai & Madurai
+                </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1.5 relative z-10">
+              {/* Direct WhatsApp Action */}
+              <button
+                onClick={handleWhatsAppRedirect}
+                className="w-7.5 h-7.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/35 border border-emerald-500/35 text-emerald-300 hover:text-white flex items-center justify-center cursor-pointer transition-all active:scale-95"
+                title="Chat on WhatsApp"
+                aria-label="Chat on WhatsApp"
+              >
+                <i className="fa-brands fa-whatsapp text-sm" />
+              </button>
+
               {/* Back button */}
               {stepHistory.length > 0 && !isCompleted && (
                 <button
                   onClick={handleGoBack}
-                  className="w-7 h-7 rounded-lg hover:bg-white/15 text-white/80 hover:text-white flex items-center justify-center cursor-pointer transition-colors"
+                  className="w-7.5 h-7.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 text-white/90 hover:text-white flex items-center justify-center cursor-pointer transition-all active:scale-95"
                   title="Go Back 1 Step"
+                  aria-label="Back"
                 >
                   <i className="fa-solid fa-chevron-left text-xs" />
                 </button>
@@ -452,8 +563,9 @@ export default function ChatbotWidget() {
               {/* Start Over button */}
               <button
                 onClick={() => setShowResetModal(true)}
-                className="w-7 h-7 rounded-lg hover:bg-white/15 text-white/80 hover:text-white flex items-center justify-center cursor-pointer transition-colors"
+                className="w-7.5 h-7.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 text-white/90 hover:text-white flex items-center justify-center cursor-pointer transition-all active:scale-95"
                 title="Start Over"
+                aria-label="Start Over"
               >
                 <i className="fa-solid fa-rotate-right text-xs" />
               </button>
@@ -461,8 +573,9 @@ export default function ChatbotWidget() {
               {/* Minimize/Close */}
               <button
                 onClick={() => setIsOpen(false)}
-                className="w-7 h-7 rounded-lg hover:bg-white/15 text-white/80 hover:text-white flex items-center justify-center cursor-pointer transition-colors ml-1"
+                className="w-7.5 h-7.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 text-white/90 hover:text-white flex items-center justify-center cursor-pointer transition-all active:scale-95 ml-0.5"
                 title="Close chat"
+                aria-label="Close"
               >
                 <i className="fa-solid fa-xmark text-sm" />
               </button>
@@ -470,22 +583,22 @@ export default function ChatbotWidget() {
           </div>
 
           {/* Messages Scroll Area */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 text-xs text-left bg-slate-50/60 dark:bg-slate-950/30">
+          <div className="flex-1 overflow-y-auto p-4 space-y-3.5 text-xs text-left bg-[#F8F9FD] dark:bg-[#0D0819]">
             {messages.map((msg, idx) => {
               const isBot = msg.role === "assistant";
               return (
                 <div key={msg.id || idx} className={`flex ${isBot ? "justify-start" : "justify-end"} gap-2`}>
                   {isBot && (
-                    <div className="w-6.5 h-6.5 bg-purple-600 text-white rounded-lg flex items-center justify-center font-bold text-[9px] shrink-0 self-end shadow-xs">
+                    <div className="w-6.5 h-6.5 bg-gradient-to-tr from-purple-700 to-indigo-600 text-white rounded-lg flex items-center justify-center font-bold text-[9px] shrink-0 self-end shadow-xs">
                       JD
                     </div>
                   )}
 
                   <div
-                    className={`max-w-[82%] p-3.5 rounded-2xl leading-relaxed whitespace-pre-wrap shadow-xs border ${
+                    className={`max-w-[85%] p-3.5 rounded-2xl leading-relaxed whitespace-pre-wrap shadow-xs ${
                       isBot
-                        ? "bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 border-slate-200/60 dark:border-slate-700/60 rounded-bl-xs"
-                        : "bg-purple-600 text-white border-purple-600 rounded-br-xs font-medium"
+                        ? "bg-white dark:bg-[#1A1230] text-slate-800 dark:text-slate-100 border border-slate-200/80 dark:border-purple-900/40 rounded-bl-xs"
+                        : "bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-br-xs font-medium shadow-purple-600/15"
                     }`}
                   >
                     {msg.text}
@@ -497,11 +610,13 @@ export default function ChatbotWidget() {
             {/* Assistant Typing Indicator */}
             {isTyping && (
               <div className="flex justify-start gap-2">
-                <div className="w-6.5 h-6.5 bg-purple-600 text-white rounded-lg flex items-center justify-center font-bold text-[9px] shrink-0 self-end shadow-xs">
+                <div className="w-6.5 h-6.5 bg-gradient-to-tr from-purple-700 to-indigo-600 text-white rounded-lg flex items-center justify-center font-bold text-[9px] shrink-0 self-end shadow-xs">
                   JD
                 </div>
-                <div className="bg-white dark:bg-slate-800 text-slate-400 border border-slate-200/60 dark:border-slate-700/60 px-4 py-3 rounded-2xl rounded-bl-xs flex items-center gap-1">
-                  <span className="text-[10px] font-semibold text-purple-600 dark:text-purple-400 mr-1">Joy Digital is typing</span>
+                <div className="bg-white dark:bg-[#1A1230] text-slate-400 border border-slate-200/80 dark:border-purple-900/40 px-3.5 py-2.5 rounded-2xl rounded-bl-xs flex items-center gap-1.5 shadow-xs">
+                  <span className="text-[10.5px] font-semibold text-purple-600 dark:text-purple-400 mr-1">
+                    Joy Digital is typing
+                  </span>
                   <span className="w-1.5 h-1.5 bg-purple-600 rounded-full animate-bounce"></span>
                   <span className="w-1.5 h-1.5 bg-purple-600 rounded-full animate-bounce [animation-delay:0.2s]"></span>
                   <span className="w-1.5 h-1.5 bg-purple-600 rounded-full animate-bounce [animation-delay:0.4s]"></span>
@@ -511,23 +626,23 @@ export default function ChatbotWidget() {
 
             {/* Final Completed Screen with WhatsApp CTA */}
             {isCompleted && (
-              <div className="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/60 rounded-2xl p-4 space-y-3 animate-fade-in text-left">
+              <div className="bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/80 rounded-2xl p-4 space-y-3 animate-fade-in text-left">
                 {!submitError ? (
                   <>
-                    <div className="flex items-center gap-2 text-emerald-700 dark:text-emerald-400 font-extrabold text-xs">
+                    <div className="flex items-center gap-2 text-emerald-700 dark:text-emerald-400 font-black text-xs">
                       <i className="fa-solid fa-circle-check text-sm" />
-                      <span>Requirement Captured!</span>
+                      <span>Requirements Successfully Received!</span>
                     </div>
-                    <p className="text-[11px] text-slate-600 dark:text-slate-300">
-                      Want a faster response? Continue directly with our lead engineer on WhatsApp.
+                    <p className="text-[11.5px] text-slate-600 dark:text-slate-300 leading-normal">
+                      Saravanan and our tech team will review your project and prepare a tailored proposal. Want an instant discussion? Continue on WhatsApp!
                     </p>
                     <div className="flex flex-col gap-2 pt-1">
                       <button
                         onClick={handleWhatsAppRedirect}
-                        className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-extrabold text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer transition-all active:scale-98"
+                        className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-black text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer transition-all active:scale-98"
                       >
                         <i className="fa-brands fa-whatsapp text-sm" />
-                        <span>Continue on WhatsApp</span>
+                        <span>Discuss on WhatsApp</span>
                       </button>
                       <button
                         onClick={() => setIsOpen(false)}
@@ -541,10 +656,10 @@ export default function ChatbotWidget() {
                   <>
                     <div className="flex items-center gap-2 text-amber-700 dark:text-amber-400 font-extrabold text-xs">
                       <i className="fa-solid fa-triangle-exclamation text-sm" />
-                      <span>Network Connection Issue</span>
+                      <span>Connection Delay</span>
                     </div>
                     <p className="text-[11px] text-slate-600 dark:text-slate-300">
-                      Sorry, we couldn't submit your enquiry right now. Please continue directly on WhatsApp.
+                      Please connect with us directly on WhatsApp to receive your proposal without delay!
                     </p>
                     <button
                       onClick={handleWhatsAppRedirect}
@@ -562,73 +677,74 @@ export default function ChatbotWidget() {
           </div>
 
           {/* Quick-Reply Options & Active Input Panel */}
-          {!isCompleted && !isTyping && (
-            <div className="p-3 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 shrink-0">
-              {/* 1. Quick Reply Options */}
-              {currentStep.type === "options" && currentStep.options && (
-                <div className="flex flex-wrap gap-1.5 max-h-44 overflow-y-auto pr-1">
+          {!isCompleted && (
+            <div className="p-3 bg-white dark:bg-[#120B24] border-t border-slate-200/80 dark:border-purple-900/40 shrink-0 space-y-2.5">
+              
+              {/* 1. Quick Reply Options (when options exist) */}
+              {currentStep.type === "options" && currentStep.options && !isTyping && (
+                <div className="flex flex-wrap gap-1.5 max-h-36 overflow-y-auto pr-1">
                   {currentStep.options.map((opt, idx) => (
                     <button
                       key={idx}
                       onClick={() => handleSelectOption(opt)}
-                      className="text-[11px] font-bold bg-slate-100 dark:bg-slate-800 hover:bg-purple-600 dark:hover:bg-purple-600 text-slate-700 dark:text-slate-200 hover:text-white border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-full cursor-pointer transition-all shadow-xs active:scale-95 text-left"
+                      className="text-[11.5px] font-semibold bg-slate-50 dark:bg-[#1C1436] hover:bg-purple-50 dark:hover:bg-purple-950/50 text-slate-800 dark:text-slate-200 hover:text-purple-700 dark:hover:text-purple-300 border border-slate-200 dark:border-purple-900/50 hover:border-purple-300 dark:hover:border-purple-600 px-3 py-1.5 rounded-xl cursor-pointer transition-all shadow-2xs hover:shadow-xs active:scale-95 text-left flex items-center gap-1.5"
                     >
-                      {opt.label}
+                      <span>{opt.label}</span>
                     </button>
                   ))}
                 </div>
               )}
 
-              {/* 2. Text Input */}
+              {/* 2. Step Text Input (Single line) */}
               {currentStep.type === "text" && (
-                <form onSubmit={handleTextSubmit} className="flex gap-2 items-center">
+                <form onSubmit={handleStepInputSubmit} className="flex gap-2 items-center">
                   <input
                     type="text"
                     value={textInput}
                     onChange={(e) => setTextInput(e.target.value)}
                     placeholder={currentStep.placeholder || "Type your answer..."}
-                    className="flex-1 text-xs px-3.5 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl outline-none focus:border-purple-600 text-slate-900 dark:text-white"
+                    className="flex-1 text-xs px-3.5 py-2.5 bg-slate-50 dark:bg-[#1A1133] border border-slate-200 dark:border-purple-900/50 rounded-xl outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600/20 text-slate-900 dark:text-white transition-colors"
                   />
                   <button
                     type="submit"
                     disabled={!textInput.trim()}
-                    className="w-9 h-9 bg-purple-600 hover:bg-purple-700 text-white rounded-xl flex items-center justify-center shadow-md disabled:opacity-40 cursor-pointer"
+                    className="w-9 h-9 bg-purple-600 hover:bg-purple-700 text-white rounded-xl flex items-center justify-center shadow-md disabled:opacity-40 cursor-pointer shrink-0 transition-transform active:scale-95"
                   >
                     <i className="fa-solid fa-paper-plane text-xs" />
                   </button>
                 </form>
               )}
 
-              {/* 3. Textarea Input */}
+              {/* 3. Step Textarea Input */}
               {currentStep.type === "textarea" && (
-                <form onSubmit={handleTextSubmit} className="flex flex-col gap-2">
+                <form onSubmit={handleStepInputSubmit} className="flex flex-col gap-2">
                   <textarea
-                    rows={3}
+                    rows={2}
                     value={textInput}
                     onChange={(e) => setTextInput(e.target.value)}
                     placeholder={currentStep.placeholder || "Type your requirement here..."}
-                    className="w-full text-xs p-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl outline-none focus:border-purple-600 text-slate-900 dark:text-white resize-none"
+                    className="w-full text-xs p-3 bg-slate-50 dark:bg-[#1A1133] border border-slate-200 dark:border-purple-900/50 rounded-xl outline-none focus:border-purple-600 text-slate-900 dark:text-white resize-none"
                   />
                   <button
                     type="submit"
                     disabled={!textInput.trim()}
-                    className="w-full py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-bold text-xs shadow-md disabled:opacity-40 cursor-pointer"
+                    className="w-full py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-bold text-xs shadow-md disabled:opacity-40 cursor-pointer"
                   >
-                    Submit Details
+                    Submit Requirement
                   </button>
                 </form>
               )}
 
-              {/* 4. Contact Form Input */}
+              {/* 4. Contact Form Input (Lead Capture) */}
               {currentStep.type === "contact_form" && (
-                <form onSubmit={handleContactSubmit} className="space-y-2.5 text-left text-xs">
+                <form onSubmit={handleContactSubmit} className="space-y-2 text-left text-xs bg-slate-50/70 dark:bg-[#181030] p-3 rounded-2xl border border-slate-200/80 dark:border-purple-900/40">
                   {formError && (
-                    <p className="text-[10px] text-red-500 font-bold bg-red-50 dark:bg-red-950/40 p-1.5 rounded-lg">
+                    <p className="text-[10.5px] text-red-500 font-bold bg-red-50 dark:bg-red-950/40 p-1.5 rounded-lg">
                       {formError}
                     </p>
                   )}
-                  <div className="flex flex-col gap-1">
-                    <label className="text-[10.5px] font-bold text-slate-600 dark:text-slate-300">
+                  <div className="flex flex-col gap-0.5">
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300">
                       Your Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -636,14 +752,14 @@ export default function ChatbotWidget() {
                       required
                       value={contactName}
                       onChange={(e) => setContactName(e.target.value)}
-                      placeholder="John Doe"
-                      className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg outline-none focus:border-purple-600 text-slate-900 dark:text-white"
+                      placeholder="e.g. Ramesh Kumar"
+                      className="w-full px-3 py-2 bg-white dark:bg-[#100922] border border-slate-200 dark:border-purple-900/50 rounded-xl outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600/20 text-slate-900 dark:text-white text-xs"
                     />
                   </div>
 
-                  <div className="flex flex-col gap-1">
-                    <label className="text-[10.5px] font-bold text-slate-600 dark:text-slate-300">
-                      WhatsApp / Phone <span className="text-red-500">*</span>
+                  <div className="flex flex-col gap-0.5">
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300">
+                      WhatsApp / Mobile <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="tel"
@@ -651,29 +767,57 @@ export default function ChatbotWidget() {
                       value={contactPhone}
                       onChange={(e) => setContactPhone(e.target.value)}
                       placeholder="+91 98765 43210"
-                      className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg outline-none focus:border-purple-600 text-slate-900 dark:text-white"
+                      className="w-full px-3 py-2 bg-white dark:bg-[#100922] border border-slate-200 dark:border-purple-900/50 rounded-xl outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600/20 text-slate-900 dark:text-white text-xs"
                     />
                   </div>
 
-                  <div className="flex flex-col gap-1">
-                    <label className="text-[10.5px] font-bold text-slate-500 dark:text-slate-400">
-                      Email Address <span className="text-slate-400">(Optional)</span>
+                  <div className="flex flex-col gap-0.5">
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                      Email Address <span className="text-slate-400 font-normal">(Optional)</span>
                     </label>
                     <input
                       type="email"
                       value={contactEmail}
                       onChange={(e) => setContactEmail(e.target.value)}
-                      placeholder="john@example.com"
-                      className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg outline-none focus:border-purple-600 text-slate-900 dark:text-white"
+                      placeholder="name@business.com"
+                      className="w-full px-3 py-2 bg-white dark:bg-[#100922] border border-slate-200 dark:border-purple-900/50 rounded-xl outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600/20 text-slate-900 dark:text-white text-xs"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-2.5 bg-gradient-to-r from-purple-600 to-indigo-650 hover:from-purple-700 hover:to-indigo-700 text-white font-extrabold rounded-xl shadow-md cursor-pointer disabled:opacity-40 transition-all mt-1"
+                    className="w-full py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold rounded-xl shadow-md shadow-purple-600/25 cursor-pointer disabled:opacity-40 transition-all active:scale-[0.98] mt-1 text-xs flex items-center justify-center gap-2"
                   >
-                    {isSubmitting ? "Submitting..." : "Complete & Contact Me"}
+                    <i className="fa-solid fa-paper-plane text-xs" />
+                    <span>{isSubmitting ? "Submitting..." : "Get My Custom Proposal"}</span>
+                  </button>
+                </form>
+              )}
+
+              {/* 5. Hybrid Free-Form Input (Always available during options step for typing any question) */}
+              {currentStep.type === "options" && (
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    handleFreeFormMessage(textInput);
+                  }}
+                  className="flex gap-2 items-center pt-1 border-t border-slate-100 dark:border-purple-900/30"
+                >
+                  <input
+                    type="text"
+                    value={textInput}
+                    onChange={(e) => setTextInput(e.target.value)}
+                    placeholder="Ask any question (English / தமிழ்)..."
+                    className="flex-1 text-[11px] px-3.5 py-2 bg-slate-50 dark:bg-[#1A1133] border border-slate-200 dark:border-purple-900/50 rounded-xl outline-none focus:border-purple-600 text-slate-900 dark:text-white"
+                  />
+                  <button
+                    type="submit"
+                    disabled={!textInput.trim() || isTyping}
+                    className="w-8 h-8 bg-purple-600 hover:bg-purple-700 active:scale-90 text-white rounded-xl flex items-center justify-center shadow-xs disabled:opacity-40 cursor-pointer shrink-0 transition-transform"
+                    title="Send message"
+                  >
+                    <i className="fa-solid fa-paper-plane text-[10px]" />
                   </button>
                 </form>
               )}
@@ -684,11 +828,11 @@ export default function ChatbotWidget() {
 
       {/* Reset Confirmation Modal */}
       {showResetModal && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 max-w-xs w-full shadow-2xl text-left space-y-3">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-xs z-[1000] flex items-center justify-center p-4">
+          <div className="bg-white dark:bg-[#160E28] border border-slate-200 dark:border-purple-800/40 rounded-2xl p-5 max-w-xs w-full shadow-2xl text-left space-y-3">
             <h4 className="font-extrabold text-sm text-slate-900 dark:text-white">Start a new conversation?</h4>
             <p className="text-xs text-slate-500 dark:text-slate-400 leading-normal">
-              Are you sure you want to start over? Your current selections will be cleared.
+              Are you sure? Your current selections will be cleared.
             </p>
             <div className="flex justify-end gap-2 pt-2">
               <button
@@ -708,7 +852,7 @@ export default function ChatbotWidget() {
         </div>
       )}
 
-      {/* Keyframes injection */}
+      {/* Bounce-subtle custom css keyframe injection */}
       <style
         dangerouslySetInnerHTML={{
           __html: `

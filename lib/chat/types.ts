@@ -1,5 +1,6 @@
 export type FlowId =
   | "welcome"
+  | "cost_estimator"
   | "new_website"
   | "redesign"
   | "seo"
@@ -42,6 +43,8 @@ export interface ChatLeadData {
   service: string;
   subService?: string;
   websiteType?: string;
+  industry?: string;
+  businessSize?: string;
   improvements?: string;
   budget?: string;
   timeline?: string;

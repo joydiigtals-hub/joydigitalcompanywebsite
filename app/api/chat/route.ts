@@ -203,9 +203,9 @@ export async function POST(request: Request) {
         - Once they share their phone/mobile number, confirm you have logged it and say: "Great! I have registered your callback request in our system. Saravanan from our tech team will call you shortly!"
         
         Agency Pricing Policy:
-        - We provide tailored scope-based quotes rather than fixed flat prices, because every website is custom engineered to the client's exact requirements.
-        - Guide the visitor to share their name, email, and mobile/WhatsApp number so our technical lead Saravanan can provide an accurate quotation and project roadmap.
-        - Location: Chennai, Tamil Nadu, India.
+        - NEVER quote fixed flat prices or price ranges in chat. Website investment is completely customized based on the visitor's industry, business size, scope of pages, and technical features.
+        - Explain that every business is unique, and guide the visitor to share their name, business name, and mobile/WhatsApp number so our technical lead Saravanan can analyze their specific requirements and share a tailored proposal & exact quote.
+        - Location: Chennai & Madurai, Tamil Nadu, India.
         
         Rules:
         - Never state you are an AI or language model. If asked, say you are Priya from the Joy Digital client support desk.
@@ -245,31 +245,103 @@ export async function POST(request: Request) {
         botReply = "I am temporarily offline. Please use the 'Request Callback' quick reply button above to leave your contact info!";
       }
     } else {
-      // 4. MOCK HUMAN DECISION CONVERSATION FLOW (Offline Fallback for development review)
+      // 4. INTELLIGENT CONVERSATIONAL DECISION ENGINE (Full Joy Digital Knowledge Base + Tanglish & Tamil Support)
       const lastUserText = userMsgs[userMsgs.length - 1]?.content || userMsgs[userMsgs.length - 1]?.text || "";
       const lastUserTextLower = lastUserText.toLowerCase().trim();
       const assistantMsgs = (messages || []).filter((m: any) => m.role === "assistant");
       const hasPhone = phoneRegex.test(lastUserText);
 
+      // Check if user is asking in Tamil or Tanglish
+      const isTamilOrTanglish = /(evlo|evvalavu|ennaku|enga|irukinga|pannunga|panna|venum|sollunga|eppadi|epdi|theriyuma|aagum|naal|ungalukku|namma)/i.test(lastUserTextLower);
+
       if (hasPhone) {
-        botReply = `Awesome! I have logged your number. Saravanan from our tech team will reach out to you within 2 hours. Have a wonderful day! 👍`;
-      } else if (lastUserTextLower.includes("web packages") || lastUserTextLower.includes("web design") || lastUserTextLower.includes("price") || lastUserTextLower.includes("package")) {
-        botReply = "Our solutions are 100% custom-tailored to your project scope and features. May I know your name and mobile number? Saravanan from our tech team will connect with you directly to share an accurate quote!";
-      } else if (lastUserTextLower.includes("seo") || lastUserTextLower.includes("google seo") || lastUserTextLower.includes("rank")) {
-        botReply = "We specialize in keyword audits and Google Business ranking to get you Page 1 traffic. May I know your name and mobile number to discuss an audit report?";
-      } else if (lastUserTextLower.includes("who runs") || lastUserTextLower.includes("founder") || lastUserTextLower.includes("saravanan") || lastUserTextLower.includes("agency")) {
-        botReply = "Joy Digital is founded by Saravanan L and based out of Chennai, serving global clients. We design ultra-fast Next.js websites. May I know your name and what project you are planning?";
+        if (isTamilOrTanglish) {
+          botReply = `Super! Unga number note pannikitom 👍 Namma technical lead Saravanan sir ungaluku shortly call panni discuss pannuvanga. Or neenga direct-ah WhatsApp-layum pesalam!`;
+        } else {
+          botReply = `Awesome! I have securely recorded your number 👍 Saravanan from our technical leadership team will connect with you shortly to share the exact proposal. Have a wonderful day!`;
+        }
+      } else if (
+        lastUserTextLower.includes("price") ||
+        lastUserTextLower.includes("pricing") ||
+        lastUserTextLower.includes("cost") ||
+        lastUserTextLower.includes("rate") ||
+        lastUserTextLower.includes("package") ||
+        lastUserTextLower.includes("budget") ||
+        lastUserTextLower.includes("evlo") ||
+        lastUserTextLower.includes("evvalavu")
+      ) {
+        if (isTamilOrTanglish) {
+          botReply = `Website pricing unga industry, business size, matrum required features (Pages, SEO, animations, integrations) poruthu marupadum. Unga business-ku custom proposal & transparent quote anuppa unga Name, Business name & WhatsApp number share pannunga! Namma technical lead Saravanan sir ungaluku direct-ah send pannuvanga 🚀`;
+        } else {
+          botReply = `Website pricing is completely tailored based on your industry, business size, and specific feature scope (number of pages, custom design, SEO, integrations). To provide an accurate proposal tailored to your business, could you share your Name, Business name, and WhatsApp number? Our technical lead Saravanan will connect with you directly with a detailed proposal 🚀`;
+        }
+      } else if (
+        lastUserTextLower.includes("time") ||
+        lastUserTextLower.includes("timeline") ||
+        lastUserTextLower.includes("duration") ||
+        lastUserTextLower.includes("how long") ||
+        lastUserTextLower.includes("naal") ||
+        lastUserTextLower.includes("days")
+      ) {
+        if (isTamilOrTanglish) {
+          botReply = `Landing pages 3 to 5 days-layum, full business websites 7 to 12 days-layum complete panni delivery panrom ⏱️ Unga project launch eppo irukanum? Unga mobile number share pannunga, pesalam!`;
+        } else {
+          botReply = `Landing pages take 3–5 business days, and complete corporate business sites take 7–12 days from design approval to live deployment ⏱️ When are you looking to launch? Please share your phone number so we can schedule it!`;
+        }
+      } else if (
+        lastUserTextLower.includes("seo") ||
+        lastUserTextLower.includes("google") ||
+        lastUserTextLower.includes("rank") ||
+        lastUserTextLower.includes("traffic")
+      ) {
+        if (isTamilOrTanglish) {
+          botReply = `Kandippa! Namma Technical SEO, Local SEO & Google Business Profile ranking-la Google Page 1 traffic generate panni tharrom 📈 Unga existing website URL & WhatsApp number kudunga, free audit pannalam!`;
+        } else {
+          botReply = `We specialize in Technical SEO, Core Web Vitals optimization, and Google Local Ranking to get your brand to Page 1 📈 Share your website URL and WhatsApp number for a complimentary audit report!`;
+        }
+      } else if (
+        lastUserTextLower.includes("who runs") ||
+        lastUserTextLower.includes("founder") ||
+        lastUserTextLower.includes("saravanan") ||
+        lastUserTextLower.includes("owner") ||
+        lastUserTextLower.includes("team")
+      ) {
+        botReply = "Joy Digital was founded by Saravanan L, a senior web architect based out of Chennai, serving clients across India, USA, UK, UAE, and Australia 🌐 May I know your name and what project you're planning?";
+      } else if (
+        lastUserTextLower.includes("location") ||
+        lastUserTextLower.includes("address") ||
+        lastUserTextLower.includes("chennai") ||
+        lastUserTextLower.includes("madurai") ||
+        lastUserTextLower.includes("office") ||
+        lastUserTextLower.includes("enga")
+      ) {
+        botReply = "Joy Digital is headquartered in Chennai with operations in Madurai, Tamil Nadu, serving businesses worldwide 📍 You can visit us or connect directly via WhatsApp/Call at +91 90800 26133!";
+      } else if (
+        lastUserTextLower.includes("next.js") ||
+        lastUserTextLower.includes("tech") ||
+        lastUserTextLower.includes("wordpress") ||
+        lastUserTextLower.includes("react")
+      ) {
+        botReply = "We engineer modern Next.js 16 websites that score 95+ on Google PageSpeed, load under 1 second, and outperform WordPress in security and organic SEO ⚡ Would you like to see a live demo?";
       } else {
         const askedName = assistantMsgs.some((m: any) => (m.content || m.text || "").toLowerCase().includes("your name") || (m.content || m.text || "").toLowerCase().includes("who i'm chatting"));
         const askedPhone = assistantMsgs.some((m: any) => (m.content || m.text || "").toLowerCase().includes("phone") || (m.content || m.text || "").toLowerCase().includes("mobile") || (m.content || m.text || "").toLowerCase().includes("number"));
-        
+
         if (!askedName) {
-          botReply = "I'd love to help you with that! Before we discuss, may I know your name first? 😊";
+          if (isTamilOrTanglish) {
+            botReply = "Kandippa help panren! Unga Name therinjukalama? 😊";
+          } else {
+            botReply = "I'd love to help you with that! May I know your name first? 😊";
+          }
         } else if (!askedPhone) {
-          const userName = lastUserText.replace(/my name is|i am|i'm/gi, "").trim();
-          botReply = `Nice to meet you, ${userName || "there"}! 👋 Could you share your mobile number? I'll have our expert call you directly to discuss your requirements.`;
+          const userName = lastUserText.replace(/my name is|i am|i'm|peru|name is/gi, "").trim();
+          if (isTamilOrTanglish) {
+            botReply = `Vanakkam ${userName || "there"}! 👋 Unga requirement pathi pesi accurate quotation anuppa unga WhatsApp / Mobile number share pannunga!`;
+          } else {
+            botReply = `Great to meet you, ${userName || "there"}! 👋 Could you share your WhatsApp or mobile number? Saravanan from our engineering desk will connect with you directly.`;
+          }
         } else {
-          botReply = "Got it! Please share your 10-digit mobile number so we can call you back to discuss the packages.";
+          botReply = "Got it! Please share your 10-digit WhatsApp or mobile number so we can reach out with the project details.";
         }
       }
     }
