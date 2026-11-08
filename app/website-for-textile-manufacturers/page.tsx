@@ -44,10 +44,10 @@ const pageSchema = {
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Old Perungalathur",
+          "streetAddress": "4/166 T, Thinamani Nagar",
           "addressLocality": "Madurai",
           "addressRegion": "Tamil Nadu",
-          "postalCode": "600063",
+          "postalCode": "625018",
           "addressCountry": "IN"
         }
       },
@@ -94,9 +94,9 @@ const pageSchema = {
 };
 
 export default async function TextileWebPage() {
-  const post1 = await getPostBySlug("textile-manufacturing-website-features-2026");
-  const post2 = await getPostBySlug("custom-website-development-requirements-guide");
-  const post3 = await getPostBySlug("why-ai-built-websites-fail-b2b-web-architecture");
+  const post1 = await getPostBySlug("textile-exporters-website-uk-us-buyers-2026");
+  const post2 = await getPostBySlug("how-global-buyers-find-textile-suppliers-india");
+  const post3 = await getPostBySlug("textile-manufacturing-website-features-2026");
   const relatedBlogPosts = [post1, post2, post3].filter((p): p is NonNullable<typeof p> => p !== null);
 
   const comparisonTable = (
