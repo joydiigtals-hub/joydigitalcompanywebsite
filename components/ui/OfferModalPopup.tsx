@@ -51,13 +51,16 @@ export default function OfferModalPopup() {
       if (isBot) return;
     }
 
-    // Auto open after 12s for human visitors if not dismissed in current session
+    // Auto open after 2 minutes (120,000ms) for human visitors, only once per visitor
     const timer = setTimeout(() => {
-      const dismissed = sessionStorage.getItem("joydigital_offer_popup_dismissed");
-      if (!dismissed) {
+      const alreadySeen = typeof window !== "undefined" && (localStorage.getItem("joydigital_offer_popup_seen") || sessionStorage.getItem("joydigital_offer_popup_dismissed"));
+      if (!alreadySeen) {
         setIsOpen(true);
+        if (typeof window !== "undefined") {
+          localStorage.setItem("joydigital_offer_popup_seen", "true");
+        }
       }
-    }, 12000);
+    }, 120000); // 2 minutes (120,000ms)
 
     return () => clearTimeout(timer);
   }, []);
@@ -75,6 +78,10 @@ export default function OfferModalPopup() {
 
   const handleClose = () => {
     setIsOpen(false);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("joydigital_offer_popup_seen", "true");
+      localStorage.setItem("joydigital_offer_popup_dismissed", "true");
+    }
     sessionStorage.setItem("joydigital_offer_popup_dismissed", "true");
   };
 
