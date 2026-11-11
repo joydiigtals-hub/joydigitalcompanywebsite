@@ -5,8 +5,8 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 import { SITE_URL } from "@/lib/siteConfig";
 
-const PAGE_TITLE = "Custom Next.js Website Development & SEO Agency | Joy Digital";
-const PAGE_DESC = "Joy Digital engineers custom Next.js websites and high-impact SEO strategies to help ambitious businesses capture organic search traffic and generate sales leads.";
+const PAGE_TITLE = "Custom Web Development & SEO Agency Services | Joy Digital";
+const PAGE_DESC = "Joy Digital provides expert Web Development & SEO Services. We build high-performing custom Next.js platforms to drive organic traffic & leads.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/assets/images/hero-banner.webp`,
         width: 1200,
         height: 630,
-        alt: "Joy Digital - Custom Next.js Website Development & SEO Agency",
+        alt: "Joy Digital - Custom Web Development & SEO Agency Services",
       },
     ],
   },
