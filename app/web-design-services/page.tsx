@@ -47,14 +47,14 @@ export default function WebDesignPage() {
           <p>
             At Joy Digital, a global web design agency, our design process starts with understanding your customer&apos;s pain points. We deliver full-scope custom website design services and specialized custom website redesign solutions for brands seeking to modernize outdated websites. We conduct visual research, build wireframe navigation structures, map out user flows, and construct interactive mockups in Figma. This comprehensive approach ensures that every pixel, typography setting, and spacing variable is optimized to drive conversions and generate leads globally.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Mobile-First UI/UX & Visual Hierarchy</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Mobile-First UI/UX & Visual Hierarchy</h3>
           <p>
             With more than half of global web traffic originating from mobile devices, desktop-only layouts are no longer sufficient. We design layouts using a mobile-first philosophy. This ensures that headers remain compact, text is readable without zooming, buttons are easy to tap, and sections stack logically on smaller viewports. Our designs adapt to various device viewports, providing a seamless browsing experience.
           </p>
           <p>
             Additionally, we build clear visual hierarchies. We draw attention to your primary offers using high-contrast colors, open whitespace, and clear headings. Our designs balance aesthetics with performance, ensuring your brand stands out while maintaining fast load speeds. We deliver designs that convey professional trust across international markets.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">The Importance of User-Centric Design in Digital Branding</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">The Importance of User-Centric Design in Digital Branding</h3>
           <p>
             Many websites fail because they are designed for business owners rather than the business&apos;s users. We focus heavily on user intent and accessibility. By structuring layout hierarchies, maintaining color contrasts, and placing intuitive navigation elements, we ensure users can easily find information, leading to longer dwell times and higher conversion rates.
           </p>

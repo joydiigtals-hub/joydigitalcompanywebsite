@@ -71,8 +71,8 @@ export default function BlogShareButtons({
   if (variant === "compact") {
     return (
       <div className={`flex items-center gap-2 select-none ${className}`}>
-        <span className="text-[11px] font-bold text-slate-500 flex items-center gap-1.5 mr-0.5">
-          <svg className="w-3.5 h-3.5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <span className="text-[11px] font-bold text-[#D9CCF5] flex items-center gap-1.5 mr-0.5">
+          <svg className="w-3.5 h-3.5 text-[#C9F600]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="18" cy="5" r="3" />
             <circle cx="6" cy="12" r="3" />
             <circle cx="18" cy="19" r="3" />
@@ -175,8 +175,8 @@ export default function BlogShareButtons({
   if (variant === "sidebar") {
     return (
       <div className={`select-none ${className}`}>
-        <h4 className="text-[11px] font-black uppercase tracking-wider text-slate-800 mb-2.5 flex items-center gap-1.5">
-          <svg className="w-3.5 h-3.5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <h4 className="text-[11px] font-black uppercase tracking-wider text-white mb-2.5 flex items-center gap-1.5">
+          <svg className="w-3.5 h-3.5 text-[#C9F600]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="18" cy="5" r="3" />
             <circle cx="6" cy="12" r="3" />
             <circle cx="18" cy="19" r="3" />

@@ -56,14 +56,14 @@ export default function SMMPage() {
           <p>
             At Joy Digital, a leading <strong>social media marketing company chennai</strong>, we focus on helping regional businesses grow their online brand. We design custom visual assets, plan content calendars, and build targeted ad campaigns on Facebook and Instagram. Our goal is to ensure your social media spending drives actual customer leads, phone calls, and sales conversions.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Paid Ads, Retargeting & Audience Matching</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Paid Ads, Retargeting & Audience Matching</h3>
           <p>
             While organic posts build community trust over time, paid ads are key for reaching new customers immediately. We build Meta ad campaigns that target specific demographics, interests, and location radiuses. We also set up lead-capture ads that make it easy for users to send inquiries directly within the app, reducing checkout friction.
           </p>
           <p>
             Additionally, we configure retargeting campaigns (using Meta pixel and conversion APIs) to re-engage website visitors, showing relevant ads that help move them toward booking a service or making a purchase. We track performance metrics like click-through rates, reach, and cost-per-lead to optimize your campaign ROI in India.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Creative Copywriting & Content Scheduling</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Creative Copywriting & Content Scheduling</h3>
           <p>
             Social media is a fast-paced environment. To grab attention, your posts must pair striking graphics with engaging captions. Our copywriters craft hooks and call-to-actions tailored to your local market. We coordinate and schedule posts in advance, ensuring your brand maintains an active online presence that builds credibility.
           </p>

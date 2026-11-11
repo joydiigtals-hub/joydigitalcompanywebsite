@@ -161,32 +161,32 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
   // 2. TRUST / VALUE ITEMS (Purple themed icons)
   const VALUE_ITEMS = [
     {
-      icon: "fa-solid fa-earth-americas text-[#7C3AED]",
+      icon: "fa-solid fa-earth-americas text-[#C9F600]",
       title: "Global Service Support",
       description: "Collaborating remotely with startups and corporate teams worldwide, backed by our efficient development base in India."
     },
     {
-      icon: "fa-solid fa-tags text-[#7C3AED]",
+      icon: "fa-solid fa-tags text-[#C9F600]",
       title: "Transparent Flat Pricing",
       description: country === "in" ? "Get detailed, flat-rate proposals starting from ₹25,000. Absolute clarity on hosting setup and maintainer retainers." : "Get detailed, flat-rate proposals starting from $1,200 USD. Absolute clarity on hosting setup and maintainer retainers."
     },
     {
-      icon: "fa-solid fa-sliders text-[#7C3AED]",
+      icon: "fa-solid fa-sliders text-[#C9F600]",
       title: "Custom Tailored Solutions",
       description: "Tailored design and development built around your business goals without relying on rigid, bloated templates."
     },
     {
-      icon: "fa-solid fa-comments text-[#7C3AED]",
+      icon: "fa-solid fa-comments text-[#C9F600]",
       title: "Direct Specialist Sync",
       description: "No administrative filters. Communicate directly with the system developers and search specialists executing your project."
     },
     {
-      icon: "fa-solid fa-bolt text-[#7C3AED]",
+      icon: "fa-solid fa-bolt text-[#C9F600]",
       title: "Fast Iterative Launching",
       description: "Agile delivery sprints. We launch standard multipage company profiles and lead funnels within 7 to 14 business days."
     },
     {
-      icon: "fa-solid fa-headset text-[#7C3AED]",
+      icon: "fa-solid fa-headset text-[#C9F600]",
       title: "Long-Term Technical Care",
       description: "Post-launch maintenance covering server deployment, security configurations, index monitoring, and speed tuning."
     }
@@ -195,7 +195,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
   // 3. SERVICES LIST
   const SERVICES = [
     {
-      icon: "fa-solid fa-[#7C3AED] fa-cubes",
+      icon: "fa-solid  fa-cubes",
       title: "Custom Website Development",
       description: "Bespoke Next.js and React websites built for high performance, responsive design, and full code ownership.",
       benefits: ["Fast performance & Core Web Vitals", "Clean and secure code architecture", "Full code and IP ownership"],
@@ -211,7 +211,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
       cta: "Explore Web Design"
     },
     {
-      icon: "fa-brands fa-react text-[#7C3AED]",
+      icon: "fa-brands fa-react text-[#C9F600]",
       title: "Next.js Development Agency",
       description: "Next.js web development delivering modern, fast, and scalable web solutions for growing businesses.",
       benefits: ["Fast page rendering", "Server-side and static optimization", "Scalable component architecture"],
@@ -219,7 +219,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
       cta: "Explore Next.js Agency"
     },
     {
-      icon: "fa-solid fa-arrows-rotate text-[#7C3AED]",
+      icon: "fa-solid fa-arrows-rotate text-[#C9F600]",
       title: "WordPress to Next.js Migration",
       description: "Smooth migration of slow WordPress sites to modern Next.js architecture with full 301 redirect mapping to protect your SEO.",
       benefits: ["Faster loading times", "Careful SEO structure preservation", "Reduced plugin dependencies"],
@@ -227,7 +227,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
       cta: "Explore WP Migration"
     },
     {
-      icon: "fa-solid fa-brain text-[#7C3AED]",
+      icon: "fa-solid fa-brain text-[#C9F600]",
       title: "AI Search Optimization (GEO)",
       description: "Generative Engine Optimization (GEO) to get your business cited across ChatGPT Search, Perplexity, Google Gemini, and Claude.",
       benefits: ["LLM entity citation", "AI search authority", "Knowledge graph sync"],
@@ -251,7 +251,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
       cta: "Explore Portfolio Web Dev"
     },
     {
-      icon: "fa-solid fa-[#7C3AED] fa-bullseye",
+      icon: "fa-solid  fa-bullseye",
       title: "Landing Page Development",
       description: "Distraction-free PPC & campaign landing pages engineered to convert Google/Meta ad clicks into qualified leads.",
       benefits: ["High ROAS conversion funnels", "Frictionless form fields", "A/B test ready layouts"],
@@ -267,7 +267,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
       cta: "Explore Web Dev"
     },
     {
-      icon: "fa-solid fa-plane-departure text-[#7C3AED]",
+      icon: "fa-solid fa-plane-departure text-[#C9F600]",
       title: "Tour Operator Website Dev",
       description: "Custom booking portals and high-converting websites specifically designed for global Tour Operators and DMCs.",
       benefits: ["Dynamic day-by-day itineraries", "Direct WhatsApp booking", "Seasonal pricing CMS"],
@@ -410,7 +410,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
       <ClientScrollObserver />
       <Header transparent={true} />
       
-      <main className="bg-[#FAF9FF] text-[#1F1B2D] min-h-screen overflow-hidden">
+      <main className="bg-[#3B1580] text-[#FFFFFF] min-h-screen overflow-hidden">
         
         {/* 1. MODERNIZED INTERNATIONAL HERO SECTION */}
         <ModernHeroSection country={country} />
@@ -419,16 +419,16 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
         <IndustrySpecializationSection />
         
         {/* 3. TRUST / VALUE SECTION WITH SCROLL REVEALS (Soft background alternates) */}
-        <section id="value-proposition" className="py-20 bg-white border-b border-[#E9E4F2] relative z-10">
+        <section id="value-proposition" className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15 relative z-10">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
-              <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">
+              <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
                 Value Proposition
               </span>
-              <h2 className="text-3xl font-extrabold text-[#1F1B2D] mb-4">
+              <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
                 Designed for Growing Businesses Worldwide
               </h2>
-              <p className="text-xs sm:text-sm text-[#6B6478] font-semibold">
+              <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-medium">
                 Transparent processes, specialized technical engineers, and conversion-first workflows. No fake claims.
               </p>
             </div>
@@ -439,13 +439,13 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                 <div 
                   key={index}
                   style={{ transitionDelay: `${index * 80}ms` }}
-                  className="p-8 bg-[#FAF9FF] border border-[#E9E4F2] rounded-[24px] shadow-sm hover:shadow-md hover:border-[#7C3AED]/20 hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-start text-left reveal-hidden group"
+                  className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-start text-left reveal-hidden group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-white border border-[#E9E4F2] flex items-center justify-center text-xl mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 flex items-center justify-center text-xl mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300 text-[#C9F600]">
                     <i className={item.icon} />
                   </div>
-                  <h3 className="text-sm font-bold text-[#1F1B2D] mb-3">{item.title}</h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed font-semibold">{item.description}</p>
+                  <h3 className="text-sm font-bold text-[#FFFFFF] mb-3">{item.title}</h3>
+                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-medium">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -453,84 +453,84 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
         </section>
 
         {/* 3. BUSINESS PROBLEMS SECTION */}
-        <section className="py-20 bg-[#FAF9FF] border-b border-[#E9E4F2] relative z-10">
+        <section className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15 relative z-10">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
-              <span className="text-xs font-bold text-rose-500 uppercase tracking-widest block mb-3">
+              <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
                 Common Bottlenecks
               </span>
-              <h2 className="text-3xl font-extrabold text-[#1F1B2D] mb-4">
+              <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
                 Is Your Website Actually Generating Leads?
               </h2>
-              <p className="text-xs sm:text-sm text-[#6B6478] font-semibold">
+              <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-semibold">
                 Most websites look decent but fail to achieve actual business results. Here are the core problems holding your online visibility back.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Problem 1 */}
-              <div className="p-8 bg-white border border-[#E9E4F2] rounded-[24px] shadow-sm hover:shadow-md hover:border-rose-200 transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
-                <div className="w-12 h-12 rounded-xl bg-rose-50 text-rose-500 flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
+                <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
                   <i className="fa-solid fa-eye-slash" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-[#1F1B2D] mb-2">Low Google Visibility</h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed font-semibold">Your site is buried on Page 2 or 3 of Google search results for key buying keywords, causing you to lose traffic to local competitors.</p>
+                  <h3 className="text-sm font-bold text-[#FFFFFF] mb-2">Low Google Visibility</h3>
+                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-medium">Your site is buried on Page 2 or 3 of Google search results for key buying keywords, causing you to lose traffic to local competitors.</p>
                 </div>
               </div>
 
               {/* Problem 2 */}
-              <div className="p-8 bg-white border border-[#E9E4F2] rounded-[24px] shadow-sm hover:shadow-md hover:border-rose-200 transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
-                <div className="w-12 h-12 rounded-xl bg-rose-50 text-rose-500 flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
+                <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
                   <i className="fa-solid fa-palette" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-[#1F1B2D] mb-2">Poor Website Design</h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed font-semibold">Outdated layouts or generic agency templates that look unprofessional and fail to establish trust within the first 3 seconds.</p>
+                  <h3 className="text-sm font-bold text-[#FFFFFF] mb-2">Poor Website Design</h3>
+                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-semibold">Outdated layouts or generic agency templates that look unprofessional and fail to establish trust within the first 3 seconds.</p>
                 </div>
               </div>
 
               {/* Problem 3 */}
-              <div className="p-8 bg-white border border-[#E9E4F2] rounded-[24px] shadow-sm hover:shadow-md hover:border-rose-200 transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
-                <div className="w-12 h-12 rounded-xl bg-rose-50 text-rose-500 flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
+                <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
                   <i className="fa-solid fa-circle-question" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-[#1F1B2D] mb-2">Low Enquiries</h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed font-semibold">Visitors click onto your site, browse around, but leave without filling out forms, sending emails, or making phone calls.</p>
+                  <h3 className="text-sm font-bold text-[#FFFFFF] mb-2">Low Enquiries</h3>
+                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-semibold">Visitors click onto your site, browse around, but leave without filling out forms, sending emails, or making phone calls.</p>
                 </div>
               </div>
 
               {/* Problem 4 */}
-              <div className="p-8 bg-white border border-[#E9E4F2] rounded-[24px] shadow-sm hover:shadow-md hover:border-rose-200 transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
-                <div className="w-12 h-12 rounded-xl bg-rose-50 text-rose-500 flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
+                <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
                   <i className="fa-brands fa-whatsapp" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-[#1F1B2D] mb-2">No WhatsApp Conversion</h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed font-semibold">Absence of direct WhatsApp click-to-chat widgets makes it difficult for mobile users to quickly ask about your pricing and services.</p>
+                  <h3 className="text-sm font-bold text-[#FFFFFF] mb-2">No WhatsApp Conversion</h3>
+                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-semibold">Absence of direct WhatsApp click-to-chat widgets makes it difficult for mobile users to quickly ask about your pricing and services.</p>
                 </div>
               </div>
 
               {/* Problem 5 */}
-              <div className="p-8 bg-white border border-[#E9E4F2] rounded-[24px] shadow-sm hover:shadow-md hover:border-rose-200 transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
-                <div className="w-12 h-12 rounded-xl bg-rose-50 text-rose-500 flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
+                <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
                   <i className="fa-solid fa-gauge-simple" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-[#1F1B2D] mb-2">Slow Website</h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed font-semibold">Bloated page builders take 5+ seconds to load, triggering high bounce rates and causing search engines to devalue your page rank.</p>
+                  <h3 className="text-sm font-bold text-[#FFFFFF] mb-2">Slow Website</h3>
+                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-semibold">Bloated page builders take 5+ seconds to load, triggering high bounce rates and causing search engines to devalue your page rank.</p>
                 </div>
               </div>
 
               {/* Problem 6 */}
-              <div className="p-8 bg-white border border-[#E9E4F2] rounded-[24px] shadow-sm hover:shadow-md hover:border-rose-200 transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
-                <div className="w-12 h-12 rounded-xl bg-rose-50 text-rose-500 flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
+                <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
                   <i className="fa-solid fa-mobile-screen-button" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-[#1F1B2D] mb-2">Poor Mobile Experience</h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed font-semibold">Cluttered mobile layouts, microscopic buttons, and poorly aligned input fields block smartphone users from converting.</p>
+                  <h3 className="text-sm font-bold text-[#FFFFFF] mb-2">Poor Mobile Experience</h3>
+                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-semibold">Cluttered mobile layouts, microscopic buttons, and poorly aligned input fields block smartphone users from converting.</p>
                 </div>
               </div>
             </div>
@@ -538,7 +538,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
             <div className="text-center mt-12">
               <Link 
                 href="/free-website-audit"
-                className="inline-flex items-center gap-2 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-xs px-8 py-4 rounded-xl shadow-md transition-all duration-200 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 bg-[#C9F600] text-[#3B1580] hover:opacity-90 font-bold text-xs px-8 py-4 rounded-xl shadow-md transition-all duration-200 hover:-translate-y-0.5"
               >
                 Find Out Your Website Bottlenecks Now
                 <i className="fa-solid fa-arrow-right" />
@@ -548,16 +548,16 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
         </section>
 
         {/* 4. SERVICES SECTION WITH PREMIUM HOVER STATES */}
-        <section className="py-20 bg-white border-b border-[#E9E4F2]">
+        <section className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
-              <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">
+              <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
                 Our Services
               </span>
-              <h2 className="text-3xl font-extrabold text-[#1F1B2D] mb-4">
+              <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
                 Modern Services Built to Generate Qualified Leads
               </h2>
-              <p className="text-xs sm:text-sm text-[#6B6478] font-semibold">
+              <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-semibold">
                 Custom layouts designed for search engine exposure, mobile responsive compatibility, and client actions.
               </p>
             </div>
@@ -568,26 +568,26 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                 <article
                   key={idx}
                   style={{ transitionDelay: `${(idx % 4) * 80}ms` }}
-                  className="bg-[#FAF9FF] border border-[#E9E4F2] rounded-[24px] p-7 shadow-sm hover:shadow-lg hover:border-[#7C3AED]/40 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group overflow-hidden relative reveal-hidden"
+                  className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] p-7 shadow-sm hover:shadow-xl hover:border-[#C9F600] hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group overflow-hidden relative reveal-hidden"
                 >
-                  <div className="absolute top-0 left-0 w-full h-1 bg-[#7C3AED] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute top-0 left-0 w-full h-1 bg-[#C9F600] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
                   <div>
-                    <div className="w-10 h-10 rounded-xl bg-[#7C3AED]/10 flex items-center justify-center text-[#7C3AED] text-lg mb-5 group-hover:scale-110 group-hover:bg-[#7C3AED] group-hover:text-white transition-all duration-300">
+                    <div className="w-10 h-10 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 flex items-center justify-center text-[#C9F600] text-lg mb-5 group-hover:scale-110 group-hover:bg-[#C9F600] group-hover:text-[#3B1580] transition-all duration-300">
                       <i className={s.icon} />
                     </div>
-                    <h3 className="text-xs font-bold text-[#1F1B2D] mb-3 uppercase tracking-wider group-hover:text-[#7C3AED] transition-colors">
+                    <h3 className="text-xs font-bold text-[#FFFFFF] mb-3 uppercase tracking-wider transition-colors">
                       {s.title}
                     </h3>
-                    <p className="text-[11px] text-[#6B6478] leading-relaxed mb-6 font-semibold">
+                    <p className="text-[11px] text-[#FFFFFF]/80 leading-relaxed mb-6 font-medium">
                       {s.description}
                     </p>
                     
                     {/* Benefits list */}
-                    <ul className="flex flex-col gap-2.5 mb-6 text-[10px] text-[#6B6478] font-bold border-t border-[#E9E4F2] pt-4">
+                    <ul className="flex flex-col gap-2.5 mb-6 text-[10px] text-[#FFFFFF]/90 font-medium border-t border-[#FFFFFF]/15 pt-4">
                       {s.benefits.map((b, i) => (
                         <li key={i} className="flex items-center gap-1.5">
-                          <i className="fa-solid fa-circle-check text-emerald-500 text-[11px]" />
+                          <i className="fa-solid fa-circle-check text-[#C9F600] text-[11px]" />
                           <span>{b}</span>
                         </li>
                       ))}
@@ -596,7 +596,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
 
                   <Link
                     href={s.href}
-                    className="text-xs font-bold text-[#7C3AED] flex items-center gap-1.5 mt-2 transition-colors hover:text-[#A78BFA] border-t border-[#E9E4F2] pt-3"
+                    className="text-xs font-bold text-[#C9F600] flex items-center gap-1.5 mt-2 transition-colors hover:underline border-t border-[#FFFFFF]/15 pt-3"
                   >
                     {s.cta} <i className="fa-solid fa-chevron-right text-[9px] group-hover:translate-x-1.5 transition-transform" />
                   </Link>
@@ -605,35 +605,35 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
             </div>
 
             {/* Regional Local SEO Quick Links */}
-            <div className="mt-12 p-6 bg-[#FAF9FF] border border-[#E9E4F2] rounded-2xl flex flex-wrap items-center justify-between gap-4 text-left">
+            <div className="mt-12 p-6 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl flex flex-wrap items-center justify-between gap-4 text-left">
               <div>
-                <span className="text-xs font-extrabold text-[#1F1B2D] block mb-1">Looking for Local SEO &amp; Google Maps Rankings?</span>
-                <p className="text-[11px] text-[#6B6478]">Dominate search results and local pack queries in Chennai with our sub-second Next.js optimization.</p>
+                <span className="text-xs font-extrabold text-[#FFFFFF] block mb-1">Looking for Local SEO &amp; Google Maps Rankings?</span>
+                <p className="text-[11px] text-[#FFFFFF]/80">Dominate search results and local pack queries in Chennai with our sub-second Next.js optimization.</p>
               </div>
               <div className="flex flex-wrap items-center gap-3">
                 <Link
                   href="/seo-services-chennai"
-                  className="inline-flex items-center gap-1.5 bg-white border border-[#7C3AED]/30 text-[#7C3AED] hover:bg-[#7C3AED] hover:text-white px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm"
+                  className="inline-flex items-center gap-1.5 bg-[#3B1580] border border-[#FFFFFF]/25 text-[#C9F600] hover:border-[#C9F600] hover:text-[#C9F600] px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm"
                 >
                   <i className="fa-solid fa-location-dot text-xs" />
                   SEO Services in Chennai
                 </Link>
                 <Link
                   href="/website-development-company-chennai"
-                  className="inline-flex items-center gap-1.5 bg-white border border-[#7C3AED]/30 text-[#7C3AED] hover:bg-[#7C3AED] hover:text-white px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm"
+                  className="inline-flex items-center gap-1.5 bg-[#3B1580] border border-[#FFFFFF]/25 text-[#C9F600] hover:border-[#C9F600] hover:text-[#C9F600] px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm"
                 >
                   <i className="fa-solid fa-code text-xs" />
                   Web Development Chennai
                 </Link>
                 <Link
                   href="/seo-services-madurai"
-                  className="inline-flex items-center gap-1.5 bg-white border border-[#E9E4F2] text-[#6B6478] hover:text-[#7C3AED] px-4 py-2 rounded-xl text-xs font-bold transition-all"
+                  className="inline-flex items-center gap-1.5 bg-[#3B1580] border border-[#FFFFFF]/20 text-[#FFFFFF]/80 hover:text-[#C9F600] px-4 py-2 rounded-xl text-xs font-bold transition-all"
                 >
                   SEO Services Madurai
                 </Link>
                 <Link
                   href="/seo-company-coimbatore"
-                  className="inline-flex items-center gap-1.5 bg-white border border-[#E9E4F2] text-[#6B6478] hover:text-[#7C3AED] px-4 py-2 rounded-xl text-xs font-bold transition-all"
+                  className="inline-flex items-center gap-1.5 bg-[#3B1580] border border-[#FFFFFF]/20 text-[#FFFFFF]/80 hover:text-[#C9F600] px-4 py-2 rounded-xl text-xs font-bold transition-all"
                 >
                   SEO Company Coimbatore
                 </Link>
@@ -644,16 +644,16 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
 
         {/* 4. WHO WE HELP SECTION (Hidden per request) */}
         {/*
-        <section className="py-20 bg-[#FAF9FF] border-b border-[#E9E4F2]">
+        <section className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/20">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-14 reveal-hidden">
-              <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">
+              <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
                 Target Industries
               </span>
-              <h2 className="text-3xl font-extrabold text-[#1F1B2D] mb-4">
+              <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
                 Who We Help Globally
               </h2>
-              <p className="text-xs sm:text-sm text-[#6B6478] font-semibold">
+              <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-semibold">
                 We craft specialized, fast-loading interfaces for startups and small business sectors across the globe.
               </p>
             </div>
@@ -670,16 +670,16 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
 
 
         {/* 6. HOW WE WORK PROCESS WITH AN ANIMATED CONNECTING LINE */}
-        <section id="process-section" className="py-20 bg-white border-b border-[#E9E4F2]">
+        <section id="process-section" className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
-              <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">
+              <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
                 Process Workflow
               </span>
-              <h2 className="text-3xl font-extrabold text-[#1F1B2D] mb-4">
+              <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
                 Our Simple 5-Step Process
               </h2>
-              <p className="text-xs sm:text-sm text-[#6B6478] font-semibold">
+              <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-semibold">
                 How we take project parameters from discovery draft into search engine launch.
               </p>
             </div>
@@ -689,19 +689,19 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
         </section>
 
                 {/* 7. WHY CHOOSE JOY DIGITAL SECTION */}
-        <section id="why-choose-us" className="py-20 lg:py-24 bg-[#FAF9FF] border-b border-[#E9E4F2] relative z-10">
+        <section id="why-choose-us" className="py-20 lg:py-24 bg-[#3B1580] border-b border-[#FFFFFF]/15 relative z-10">
           <div className="max-w-7xl mx-auto px-6">
             
             {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#7C3AED]/10 border border-[#7C3AED]/20 text-[#7C3AED] text-xs font-bold uppercase tracking-wider mb-4 shadow-xs">
-                <span className="w-2 h-2 rounded-full bg-[#7C3AED] animate-pulse" />
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#7C3AED]/10 border border-[#7C3AED]/20 text-[#C9F600] text-xs font-bold uppercase tracking-wider mb-4 shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-[#C9F600] animate-pulse" />
                 The Joy Digital Advantage
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1F1B2D] tracking-tight mb-4">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#FFFFFF] tracking-tight mb-4">
                 Why Choose Joy Digital?
               </h2>
-              <p className="text-sm sm:text-base text-[#6B6478] leading-relaxed font-normal">
+              <p className="text-sm sm:text-base text-[#FFFFFF]/80 leading-relaxed font-normal">
                 We build websites that combine thoughtful design, modern technology, and SEO-friendly foundations to help businesses strengthen their online presence, attract relevant visitors, and generate valuable customer enquiries.
               </p>
             </div>
@@ -712,18 +712,18 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
               {/* Benefit 1: Custom-Built Websites */}
               <div 
                 style={{ transitionDelay: "0ms" }}
-                className="lg:col-span-3 bg-white border border-[#E9E4F2] p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-md hover:border-[#7C3AED]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
+                className="lg:col-span-3 bg-[#3B1580] border border-[#FFFFFF]/20 p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-xl hover:border-[#C9F600] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#FAF9FF] border border-[#E9E4F2] text-[#7C3AED] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#7C3AED]/30 group-hover:bg-[#7C3AED]/10 transition-all duration-300">
-                    <Code2 className="w-5 h-5 text-[#7C3AED]" />
+                  <div className="w-12 h-12 rounded-2xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#C9F600] group-hover:bg-[#C9F600]/15 transition-all duration-300">
+                    <Code2 className="w-5 h-5 text-[#C9F600]" />
                   </div>
-                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-2.5 tracking-tight group-hover:text-[#7C3AED] transition-colors">
+                  <h3 className="text-base font-extrabold text-[#FFFFFF] mb-2.5 tracking-tight group-hover:text-[#C9F600] transition-colors">
                     Custom-Built Websites
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#6B6478] leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-[#FFFFFF]/80 leading-relaxed font-normal">
                     Get a website designed around your business goals, brand identity, target audience, and specific requirements. We focus on creating{" "}
-                    <Link href="/custom-website-development" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+                    <Link href="/custom-website-development" className="text-[#C9F600] font-medium hover:underline transition-colors">
                       professional digital experiences
                     </Link>{" "}
                     rather than relying on generic designs.
@@ -734,18 +734,18 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
               {/* Benefit 2: SEO-Friendly Development */}
               <div 
                 style={{ transitionDelay: "80ms" }}
-                className="lg:col-span-3 bg-white border border-[#E9E4F2] p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-md hover:border-[#7C3AED]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
+                className="lg:col-span-3 bg-[#3B1580] border border-[#FFFFFF]/20 p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-xl hover:border-[#C9F600] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#FAF9FF] border border-[#E9E4F2] text-[#7C3AED] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#7C3AED]/30 group-hover:bg-[#7C3AED]/10 transition-all duration-300">
-                    <SearchCheck className="w-5 h-5 text-[#7C3AED]" />
+                  <div className="w-12 h-12 rounded-2xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#C9F600] group-hover:bg-[#C9F600]/15 transition-all duration-300">
+                    <SearchCheck className="w-5 h-5 text-[#C9F600]" />
                   </div>
-                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-2.5 tracking-tight group-hover:text-[#7C3AED] transition-colors">
+                  <h3 className="text-base font-extrabold text-[#FFFFFF] mb-2.5 tracking-tight group-hover:text-[#C9F600] transition-colors">
                     SEO-Friendly Development
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#6B6478] leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-[#FFFFFF]/80 leading-relaxed font-normal">
                     We build websites with search engine-friendly structures, relevant metadata, clean page organization, and{" "}
-                    <Link href="/seo-services" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+                    <Link href="/seo-services" className="text-[#C9F600] font-medium hover:underline transition-colors">
                       technical SEO foundations
                     </Link>{" "}
                     to help search engines understand your content.
@@ -756,16 +756,16 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
               {/* Benefit 3: Designed to Generate Quality Leads */}
               <div 
                 style={{ transitionDelay: "160ms" }}
-                className="lg:col-span-3 bg-white border border-[#E9E4F2] p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-md hover:border-[#7C3AED]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
+                className="lg:col-span-3 bg-[#3B1580] border border-[#FFFFFF]/20 p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-xl hover:border-[#C9F600] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#FAF9FF] border border-[#E9E4F2] text-[#7C3AED] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#7C3AED]/30 group-hover:bg-[#7C3AED]/10 transition-all duration-300">
-                    <Target className="w-5 h-5 text-[#7C3AED]" />
+                  <div className="w-12 h-12 rounded-2xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#C9F600] group-hover:bg-[#C9F600]/15 transition-all duration-300">
+                    <Target className="w-5 h-5 text-[#C9F600]" />
                   </div>
-                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-2.5 tracking-tight group-hover:text-[#7C3AED] transition-colors">
+                  <h3 className="text-base font-extrabold text-[#FFFFFF] mb-2.5 tracking-tight group-hover:text-[#C9F600] transition-colors">
                     Designed to Generate Quality Leads
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#6B6478] leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-[#FFFFFF]/80 leading-relaxed font-normal">
                     We create conversion-focused websites with clear calls to action, enquiry forms, WhatsApp integration, and user-friendly layouts to help businesses attract relevant visitors and turn them into potential customers.
                   </p>
                 </div>
@@ -774,18 +774,18 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
               {/* Benefit 4: Mobile-First Experience */}
               <div 
                 style={{ transitionDelay: "240ms" }}
-                className="lg:col-span-3 bg-white border border-[#E9E4F2] p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-md hover:border-[#7C3AED]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
+                className="lg:col-span-3 bg-[#3B1580] border border-[#FFFFFF]/20 p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-xl hover:border-[#C9F600] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#FAF9FF] border border-[#E9E4F2] text-[#7C3AED] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#7C3AED]/30 group-hover:bg-[#7C3AED]/10 transition-all duration-300">
-                    <Smartphone className="w-5 h-5 text-[#7C3AED]" />
+                  <div className="w-12 h-12 rounded-2xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#C9F600] group-hover:bg-[#C9F600]/15 transition-all duration-300">
+                    <Smartphone className="w-5 h-5 text-[#C9F600]" />
                   </div>
-                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-2.5 tracking-tight group-hover:text-[#7C3AED] transition-colors">
+                  <h3 className="text-base font-extrabold text-[#FFFFFF] mb-2.5 tracking-tight group-hover:text-[#C9F600] transition-colors">
                     Mobile-First Experience
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#6B6478] leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-[#FFFFFF]/80 leading-relaxed font-normal">
                     Our{" "}
-                    <Link href="/web-design-services" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+                    <Link href="/web-design-services" className="text-[#C9F600] font-medium hover:underline transition-colors">
                       responsive website designs
                     </Link>{" "}
                     provide a smooth browsing experience across mobile phones, tablets, laptops, and desktop devices.
@@ -796,18 +796,18 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
               {/* Benefit 5: Dynamic Websites and CMS Solutions */}
               <div 
                 style={{ transitionDelay: "320ms" }}
-                className="lg:col-span-4 bg-white border border-[#E9E4F2] p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-md hover:border-[#7C3AED]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
+                className="lg:col-span-4 bg-[#3B1580] border border-[#FFFFFF]/20 p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-xl hover:border-[#C9F600] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#FAF9FF] border border-[#E9E4F2] text-[#7C3AED] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#7C3AED]/30 group-hover:bg-[#7C3AED]/10 transition-all duration-300">
-                    <PanelsTopLeft className="w-5 h-5 text-[#7C3AED]" />
+                  <div className="w-12 h-12 rounded-2xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#C9F600] group-hover:bg-[#C9F600]/15 transition-all duration-300">
+                    <PanelsTopLeft className="w-5 h-5 text-[#C9F600]" />
                   </div>
-                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-2.5 tracking-tight group-hover:text-[#7C3AED] transition-colors">
+                  <h3 className="text-base font-extrabold text-[#FFFFFF] mb-2.5 tracking-tight group-hover:text-[#C9F600] transition-colors">
                     Dynamic Websites and CMS Solutions
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#6B6478] leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-[#FFFFFF]/80 leading-relaxed font-normal">
                     We develop{" "}
-                    <Link href="/dynamic-website-development" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+                    <Link href="/dynamic-website-development" className="text-[#C9F600] font-medium hover:underline transition-colors">
                       dynamic websites
                     </Link>{" "}
                     and content management solutions that help businesses manage website content, publish blogs, update information, and expand their online presence as their needs grow.
@@ -818,26 +818,26 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
               {/* Benefit 6: Solutions for Indian and Global Businesses */}
               <div 
                 style={{ transitionDelay: "400ms" }}
-                className="lg:col-span-4 bg-white border border-[#E9E4F2] p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-md hover:border-[#7C3AED]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
+                className="lg:col-span-4 bg-[#3B1580] border border-[#FFFFFF]/20 p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-xl hover:border-[#C9F600] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#FAF9FF] border border-[#E9E4F2] text-[#7C3AED] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#7C3AED]/30 group-hover:bg-[#7C3AED]/10 transition-all duration-300">
-                    <Globe className="w-5 h-5 text-[#7C3AED]" />
+                  <div className="w-12 h-12 rounded-2xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#C9F600] group-hover:bg-[#C9F600]/15 transition-all duration-300">
+                    <Globe className="w-5 h-5 text-[#C9F600]" />
                   </div>
-                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-2.5 tracking-tight group-hover:text-[#7C3AED] transition-colors">
+                  <h3 className="text-base font-extrabold text-[#FFFFFF] mb-2.5 tracking-tight group-hover:text-[#C9F600] transition-colors">
                     Solutions for Indian and Global Businesses
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#6B6478] leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-[#FFFFFF]/80 leading-relaxed font-normal">
                     We work towards serving businesses across different industries and markets, including{" "}
-                    <Link href="/travel-website-development" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+                    <Link href="/travel-website-development" className="text-[#C9F600] font-medium hover:underline transition-colors">
                       tourism
                     </Link>
                     ,{" "}
-                    <Link href="/website-for-manufacturing-companies" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+                    <Link href="/website-for-manufacturing-companies" className="text-[#C9F600] font-medium hover:underline transition-colors">
                       manufacturing
                     </Link>
                     ,{" "}
-                    <Link href="/website-for-export-and-import" className="text-primary-dark font-medium hover:text-accent transition-colors underline decoration-slate-300 underline-offset-2">
+                    <Link href="/website-for-export-and-import" className="text-[#C9F600] font-medium hover:underline transition-colors">
                       export businesses
                     </Link>
                     , and other growing companies looking for a professional online presence.
@@ -848,16 +848,16 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
               {/* Benefit 7: Ongoing Website Support */}
               <div 
                 style={{ transitionDelay: "480ms" }}
-                className="md:col-span-2 lg:col-span-4 bg-white border border-[#E9E4F2] p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-md hover:border-[#7C3AED]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
+                className="md:col-span-2 lg:col-span-4 bg-[#3B1580] border border-[#FFFFFF]/20 p-6 sm:p-7 rounded-[24px] shadow-xs hover:shadow-xl hover:border-[#C9F600] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group reveal-hidden"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#FAF9FF] border border-[#E9E4F2] text-[#7C3AED] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#7C3AED]/30 group-hover:bg-[#7C3AED]/10 transition-all duration-300">
-                    <Headset className="w-5 h-5 text-[#7C3AED]" />
+                  <div className="w-12 h-12 rounded-2xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center mb-5 shrink-0 group-hover:scale-105 group-hover:border-[#C9F600] group-hover:bg-[#C9F600]/15 transition-all duration-300">
+                    <Headset className="w-5 h-5 text-[#C9F600]" />
                   </div>
-                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-2.5 tracking-tight group-hover:text-[#7C3AED] transition-colors">
+                  <h3 className="text-base font-extrabold text-[#FFFFFF] mb-2.5 tracking-tight group-hover:text-[#C9F600] transition-colors">
                     Ongoing Website Support
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#6B6478] leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-[#FFFFFF]/80 leading-relaxed font-normal">
                     We help businesses maintain and improve their websites through content updates, technical improvements, troubleshooting, and maintenance based on the agreed project scope.
                   </p>
                 </div>
@@ -866,25 +866,25 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
             </div>
 
             {/* Call-to-Action Card */}
-            <div className="mt-14 sm:mt-16 bg-white border border-[#E9E4F2] rounded-[28px] p-8 sm:p-12 shadow-sm text-center max-w-4xl mx-auto relative overflow-hidden reveal-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500" />
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1F1B2D] tracking-tight mb-3">
+            <div className="mt-14 sm:mt-16 bg-[#3B1580] border border-[#FFFFFF]/25 rounded-[28px] p-8 sm:p-12 shadow-xl text-center max-w-4xl mx-auto relative overflow-hidden reveal-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-[#C9F600]" />
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#FFFFFF] tracking-tight mb-3">
                 Ready to Build a Website That Grows Your Business?
               </h3>
-              <p className="text-xs sm:text-sm text-[#6B6478] max-w-2xl mx-auto mb-8 leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm text-[#FFFFFF]/80 max-w-2xl mx-auto mb-8 leading-relaxed font-normal">
                 Tell us about your business goals, and let's explore the right website solution for your needs.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
                   href="/free-website-audit"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-sm transition-all shadow-md shadow-[#7C3AED]/20 hover:shadow-lg hover:shadow-[#7C3AED]/30 hover:-translate-y-0.5 active:translate-y-0"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#C9F600] hover:opacity-90 text-[#3B1580] font-extrabold text-sm transition-all shadow-md hover:-translate-y-0.5 active:translate-y-0"
                 >
                   <span>Get a Free Website Audit</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#FAF9FF] hover:bg-white border border-[#E9E4F2] hover:border-[#7C3AED]/40 text-[#1F1B2D] font-extrabold text-sm transition-all shadow-xs hover:-translate-y-0.5 active:translate-y-0"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#3B1580] hover:bg-[#3B1580]/80 border border-[#FFFFFF]/30 hover:border-[#C9F600] text-[#FFFFFF] hover:text-[#C9F600] font-extrabold text-sm transition-all hover:-translate-y-0.5 active:translate-y-0"
                 >
                   <span>Contact Joy Digital</span>
                 </Link>
@@ -906,16 +906,16 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
         <PortfolioSection />
 
         {/* 9. CASE STUDIES WITH COUNT-UP NUMERICAL COUNTERS */}
-        <section id="case-studies" className="py-20 bg-white border-b border-[#E9E4F2]">
+        <section id="case-studies" className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
-              <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">
+              <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
                 Verified Outcomes
               </span>
-              <h2 className="text-3xl font-extrabold text-[#1F1B2D] mb-4">
+              <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
                 Real Problems. Real Solutions. Real Results.
               </h2>
-              <p className="text-xs sm:text-sm text-[#6B6478] font-semibold">
+              <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-semibold">
                 Technical diagnostics and outcomes from genuine client partnerships. No manufactured stats.
               </p>
             </div>
@@ -925,40 +925,40 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                 <div 
                   key={idx}
                   style={{ transitionDelay: `${idx * 100}ms` }}
-                  className="bg-[#FAF9FF] border border-[#E9E4F2] rounded-[24px] p-8 flex flex-col justify-between text-left hover:shadow-md hover:border-[#7C3AED]/15 transition-all duration-300 reveal-hidden group"
+                  className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] p-8 flex flex-col justify-between text-left hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 reveal-hidden group"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-3 mb-6">
-                      <span className="text-[10px] font-extrabold text-[#7C3AED] uppercase tracking-wider bg-white border border-[#7C3AED]/25 px-3 py-1 rounded-full">
+                      <span className="text-[10px] font-extrabold text-[#C9F600] uppercase tracking-wider bg-[#3B1580] border border-[#FFFFFF]/25 px-3 py-1 rounded-full">
                         {study.category}
                       </span>
-                      <span className="text-sm font-black text-emerald-600 flex items-center gap-1">
+                      <span className="text-sm font-black text-[#C9F600] flex items-center gap-1">
                         <i className="fa-solid fa-arrow-trend-up text-xs animate-bounce" />
                         <CountUpNumber target={study.targetNum} suffix="%" />
                       </span>
                     </div>
 
-                    <h3 className="text-base font-black text-[#1F1B2D] mb-4 leading-tight group-hover:text-[#7C3AED] transition-colors">
+                    <h3 className="text-base font-black text-[#FFFFFF] mb-4 leading-tight group-hover:text-[#C9F600] transition-colors">
                       {study.title}
                     </h3>
                     
-                    <div className="flex flex-col gap-4 text-xs font-semibold text-[#6B6478]">
+                    <div className="flex flex-col gap-4 text-xs font-medium text-[#FFFFFF]/80">
                       <p>
-                        <strong className="text-[#1F1B2D] block mb-1">Challenge:</strong> {study.problem}
+                        <strong className="text-[#FFFFFF] block mb-1">Challenge:</strong> {study.problem}
                       </p>
                       <p>
-                        <strong className="text-[#1F1B2D] block mb-1">Execution:</strong> {study.solution}
+                        <strong className="text-[#FFFFFF] block mb-1">Execution:</strong> {study.solution}
                       </p>
                       <p>
-                        <strong className="text-emerald-700 block mb-1">Result:</strong> {study.result}
+                        <strong className="text-[#C9F600] block mb-1">Result:</strong> {study.result}
                       </p>
                     </div>
                   </div>
 
-                  <div className="mt-8 pt-4 border-t border-[#E9E4F2]">
+                  <div className="mt-8 pt-4 border-t border-[#FFFFFF]/20">
                     <Link
                       href={`/case-studies`}
-                      className="text-xs font-bold text-[#7C3AED] hover:text-[#A78BFA] flex items-center gap-1.5 group/case"
+                      className="text-xs font-bold text-[#C9F600] hover:underline flex items-center gap-1.5 group/case"
                     >
                       Read Case Narrative <i className="fa-solid fa-chevron-right text-[8px] group-hover/case:translate-x-1 transition-transform" />
                     </Link>
@@ -970,16 +970,16 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
         </section>
 
         {/* 10. TESTIMONIALS */}
-        <section className="py-20 bg-white border-b border-[#E9E4F2]">
+        <section className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
-              <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">
+              <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
                 Client Reviews
               </span>
-              <h2 className="text-3xl font-extrabold text-[#1F1B2D] mb-4">
+              <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
                 What Our Clients Say
               </h2>
-              <p className="text-xs sm:text-sm text-[#6B6478] font-semibold">
+              <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-semibold">
                 Feedback from local financial advisors, store directors, and corporate partners.
               </p>
             </div>
@@ -989,28 +989,28 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                 <div 
                   key={idx} 
                   style={{ transitionDelay: `${idx * 100}ms` }}
-                  className="bg-[#FAF9FF] border border-[#E9E4F2] p-8 rounded-[20px] shadow-sm flex flex-col justify-between text-left hover:shadow-md hover:border-[#7C3AED]/15 transition-all duration-300 reveal-hidden"
+                  className="bg-[#3B1580] border border-[#FFFFFF]/20 p-8 rounded-[20px] shadow-sm flex flex-col justify-between text-left hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 reveal-hidden"
                 >
                   <div>
-                    <div className="flex gap-1 text-[#7C3AED] mb-4 text-xs">
+                    <div className="flex gap-1 text-[#C9F600] mb-4 text-xs">
                       <i className="fa-solid fa-star" />
                       <i className="fa-solid fa-star" />
                       <i className="fa-solid fa-star" />
                       <i className="fa-solid fa-star" />
                       <i className="fa-solid fa-star" />
                     </div>
-                    <p className="text-xs text-[#6B6478] italic leading-relaxed mb-6 font-semibold">
+                    <p className="text-xs text-[#FFFFFF]/90 italic leading-relaxed mb-6 font-medium">
                       &ldquo;{t.quote}&rdquo;
                     </p>
                   </div>
                   
-                  <div className="flex items-center gap-3 border-t border-[#E9E4F2] pt-4 mt-2">
-                    <div className="w-9 h-9 rounded-full bg-[#7C3AED]/10 border border-[#7C3AED]/20 text-[#7C3AED] flex items-center justify-center font-bold text-xs flex-shrink-0">
+                  <div className="flex items-center gap-3 border-t border-[#FFFFFF]/15 pt-4 mt-2">
+                    <div className="w-9 h-9 rounded-full bg-[#7C3AED]/10 border border-[#7C3AED]/20 text-[#C9F600] flex items-center justify-center font-bold text-xs flex-shrink-0">
                       {t.initials}
                     </div>
                     <div className="flex-grow">
-                      <span className="text-xs font-bold text-[#1F1B2D] block leading-tight">{t.name}</span>
-                      <span className="text-[10px] text-[#6B6478] block mt-0.5 font-bold">{t.role} — {t.company}</span>
+                      <span className="text-xs font-bold text-[#FFFFFF] block leading-tight">{t.name}</span>
+                      <span className="text-[10px] text-[#FFFFFF]/70 block mt-0.5 font-medium">{t.role} — {t.company}</span>
                     </div>
                   </div>
                 </div>
@@ -1018,15 +1018,15 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
             </div>
 
             {/* Promotion card inviting new reviews */}
-            <div className="bg-white border border-[#E9E4F2] p-8 rounded-[24px] shadow-sm max-w-xl mx-auto text-center reveal-hidden">
-              <h3 className="text-sm font-extrabold text-[#1F1B2D] uppercase tracking-wider mb-2">Are you our next success story?</h3>
-              <p className="text-xs text-[#6B6478] font-semibold leading-relaxed mb-4">
+            <div className="bg-[#3B1580] border border-[#FFFFFF]/20 p-8 rounded-[24px] shadow-sm max-w-xl mx-auto text-center reveal-hidden">
+              <h3 className="text-sm font-extrabold text-[#FFFFFF] uppercase tracking-wider mb-2">Are you our next success story?</h3>
+              <p className="text-xs text-[#FFFFFF]/80 font-medium leading-relaxed mb-4">
                 We work closely with startup founders and local operators worldwide. Start a campaign with us and share your review when we deploy!
               </p>
               <GetQuoteModal
                 triggerText="Inquire About a Project Now →"
                 source="Success Story Review Inquire CTA"
-                triggerClassName="text-xs font-bold text-[#7C3AED] hover:text-[#A78BFA] cursor-pointer inline-flex items-center justify-center transition-colors"
+                triggerClassName="text-xs font-bold text-[#C9F600] hover:underline cursor-pointer inline-flex items-center justify-center transition-colors"
                 replaceClassName
                 hideIcons
               />
@@ -1035,40 +1035,40 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
         </section>
 
         {/* 11. PRICING SECTION */}
-        <section className="py-20 bg-white border-b border-[#E9E4F2]">
+        <section className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
-              <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">
+              <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
                 Tailored Packages
               </span>
-              <h2 className="text-3xl font-extrabold text-[#1F1B2D] mb-4">
+              <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
                 Website Development Packages
               </h2>
-              <p className="text-xs sm:text-sm text-[#6B6478] font-semibold">
+              <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-semibold">
                 Engineered for speed, brand authority, and consistent lead generation. Zero hidden fees.
               </p>
             </div>
 
             <PricingSection country={country} />
             
-            <p className="text-[10px] text-[#6B6478] font-bold uppercase tracking-wider text-center mt-8">
-              Need a custom layout or dedicated corporate contract? <a href="https://wa.me/919080026133" className="text-[#7C3AED] underline hover:text-[#A78BFA]">Chat with our engineers</a>.
+            <p className="text-[10px] text-[#FFFFFF]/70 font-medium uppercase tracking-wider text-center mt-8">
+              Need a custom layout or dedicated corporate contract? <a href="https://wa.me/919080026133" className="text-[#C9F600] underline hover:underline">Chat with our engineers</a>.
             </p>
           </div>
         </section>
 
-        <section className="py-20 bg-white border-b border-[#E9E4F2] relative z-10">
+        <section className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15 relative z-10">
           <div className="max-w-7xl mx-auto px-6">
             
             {/* Heading area */}
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
-              <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">
+              <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
                 Free Resources
               </span>
-              <h2 className="text-3xl font-extrabold text-[#1F1B2D] mb-4">
+              <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
                 Free Online Business Tools & Calculators
               </h2>
-              <p className="text-xs sm:text-sm text-[#6B6478] font-semibold leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-semibold leading-relaxed">
                 Free, fast and easy-to-use online tools for businesses, freelancers, students and professionals. Calculate GST, create invoices and quotations, generate QR codes, improve website SEO and simplify everyday business tasks — completely online.
               </p>
             </div>
@@ -1077,150 +1077,150 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               
               {/* GST Calculator */}
-              <div className="p-8 bg-[#FAF9FF] border border-[#E9E4F2] rounded-[24px] shadow-sm hover:shadow-md hover:border-[#7C3AED]/20 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between text-left reveal-hidden group">
+              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between text-left reveal-hidden group">
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-white border border-[#E9E4F2] flex items-center justify-center text-[#7C3AED] text-xl mb-6 shadow-sm group-hover:scale-110 group-hover:bg-[#7C3AED] group-hover:text-white transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 flex items-center justify-center text-[#C9F600] text-xl mb-6 shadow-sm group-hover:scale-110 group-hover:bg-[#C9F600] group-hover:text-[#3B1580] transition-all duration-300">
                     <i className="fa-solid fa-calculator" />
                   </div>
-                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-3 group-hover:text-[#7C3AED] transition-colors">
+                  <h3 className="text-base font-extrabold text-[#FFFFFF] mb-3 group-hover:text-[#C9F600] transition-colors">
                     GST Calculator
                   </h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed font-semibold mb-6">
+                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-medium mb-6">
                     Calculate GST inclusive and exclusive prices instantly with our free GST calculator.
                   </p>
                 </div>
-                <div className="border-t border-[#E9E4F2] pt-4 mt-2 flex flex-col gap-3">
+                <div className="border-t border-[#FFFFFF]/15 pt-4 mt-2 flex flex-col gap-3">
                   <div className="flex flex-wrap gap-1">
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">GST Calculator</span>
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">GST Online</span>
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">India</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">GST Calculator</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">GST Online</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">India</span>
                   </div>
-                  <Link href="/gst-calculator" className="text-xs font-bold text-[#7C3AED] flex items-center gap-1.5 group-hover:text-[#A78BFA] transition-colors">
+                  <Link href="/gst-calculator" className="text-xs font-bold text-[#C9F600] flex items-center gap-1.5 group-hover:underline transition-colors">
                     Use GST Calculator &rarr;
                   </Link>
                 </div>
               </div>
 
               {/* Invoice Generator */}
-              <div className="p-8 bg-[#FAF9FF] border border-[#E9E4F2] rounded-[24px] shadow-sm hover:shadow-md hover:border-[#7C3AED]/20 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between text-left reveal-hidden group">
+              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between text-left reveal-hidden group">
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-white border border-[#E9E4F2] flex items-center justify-center text-[#7C3AED] text-xl mb-6 shadow-sm group-hover:scale-110 group-hover:bg-[#7C3AED] group-hover:text-white transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 flex items-center justify-center text-[#C9F600] text-xl mb-6 shadow-sm group-hover:scale-110 group-hover:bg-[#C9F600] group-hover:text-[#3B1580] transition-all duration-300">
                     <i className="fa-solid fa-file-invoice-dollar" />
                   </div>
-                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-3 group-hover:text-[#7C3AED] transition-colors">
+                  <h3 className="text-base font-extrabold text-[#FFFFFF] mb-3 group-hover:text-[#C9F600] transition-colors">
                     Invoice Generator
                   </h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed font-semibold mb-6">
+                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-medium mb-6">
                     Create professional invoices online quickly and easily.
                   </p>
                 </div>
-                <div className="border-t border-[#E9E4F2] pt-4 mt-2 flex flex-col gap-3">
+                <div className="border-t border-[#FFFFFF]/15 pt-4 mt-2 flex flex-col gap-3">
                   <div className="flex flex-wrap gap-1">
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">Invoice Generator</span>
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">Free Maker</span>
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">GST Invoice</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">Invoice Generator</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">Free Maker</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">GST Invoice</span>
                   </div>
-                  <Link href="/invoice-generator" className="text-xs font-bold text-[#7C3AED] flex items-center gap-1.5 group-hover:text-[#A78BFA] transition-colors">
+                  <Link href="/invoice-generator" className="text-xs font-bold text-[#C9F600] flex items-center gap-1.5 group-hover:underline transition-colors">
                     Create Invoice &rarr;
                   </Link>
                 </div>
               </div>
 
               {/* Quotation Generator */}
-              <div className="p-8 bg-[#FAF9FF] border border-[#E9E4F2] rounded-[24px] shadow-sm hover:shadow-md hover:border-[#7C3AED]/20 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between text-left reveal-hidden group">
+              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between text-left reveal-hidden group">
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-white border border-[#E9E4F2] flex items-center justify-center text-[#7C3AED] text-xl mb-6 shadow-sm group-hover:scale-110 group-hover:bg-[#7C3AED] group-hover:text-white transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 flex items-center justify-center text-[#C9F600] text-xl mb-6 shadow-sm group-hover:scale-110 group-hover:bg-[#C9F600] group-hover:text-[#3B1580] transition-all duration-300">
                     <i className="fa-solid fa-file-signature" />
                   </div>
-                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-3 group-hover:text-[#7C3AED] transition-colors">
+                  <h3 className="text-base font-extrabold text-[#FFFFFF] mb-3 group-hover:text-[#C9F600] transition-colors">
                     Quotation Generator
                   </h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed font-semibold mb-6">
+                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-medium mb-6">
                     Create professional business quotations online in minutes.
                   </p>
                 </div>
-                <div className="border-t border-[#E9E4F2] pt-4 mt-2 flex flex-col gap-3">
+                <div className="border-t border-[#FFFFFF]/15 pt-4 mt-2 flex flex-col gap-3">
                   <div className="flex flex-wrap gap-1">
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">Quotation Generator</span>
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">Quotation Maker</span>
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">Online</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">Quotation Generator</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">Quotation Maker</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">Online</span>
                   </div>
-                  <Link href="/quotation-generator" className="text-xs font-bold text-[#7C3AED] flex items-center gap-1.5 group-hover:text-[#A78BFA] transition-colors">
+                  <Link href="/quotation-generator" className="text-xs font-bold text-[#C9F600] flex items-center gap-1.5 group-hover:underline transition-colors">
                     Create Quotation &rarr;
                   </Link>
                 </div>
               </div>
 
               {/* QR Code Generator */}
-              <div className="p-8 bg-[#FAF9FF] border border-[#E9E4F2] rounded-[24px] shadow-sm hover:shadow-md hover:border-[#7C3AED]/20 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between text-left reveal-hidden group">
+              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between text-left reveal-hidden group">
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-white border border-[#E9E4F2] flex items-center justify-center text-[#7C3AED] text-xl mb-6 shadow-sm group-hover:scale-110 group-hover:bg-[#7C3AED] group-hover:text-white transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 flex items-center justify-center text-[#C9F600] text-xl mb-6 shadow-sm group-hover:scale-110 group-hover:bg-[#C9F600] group-hover:text-[#3B1580] transition-all duration-300">
                     <i className="fa-solid fa-qrcode" />
                   </div>
-                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-3 group-hover:text-[#7C3AED] transition-colors">
+                  <h3 className="text-base font-extrabold text-[#FFFFFF] mb-3 group-hover:text-[#C9F600] transition-colors">
                     QR Code Generator
                   </h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed font-semibold mb-6">
+                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-medium mb-6">
                     Generate free QR codes for websites, WhatsApp, contact details and business use.
                   </p>
                 </div>
-                <div className="border-t border-[#E9E4F2] pt-4 mt-2 flex flex-col gap-3">
+                <div className="border-t border-[#FFFFFF]/15 pt-4 mt-2 flex flex-col gap-3">
                   <div className="flex flex-wrap gap-1">
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">QR Code Generator</span>
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">Free QR</span>
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">WhatsApp QR</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">QR Code Generator</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">Free QR</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">WhatsApp QR</span>
                   </div>
-                  <Link href="/qr-code-generator" className="text-xs font-bold text-[#7C3AED] flex items-center gap-1.5 group-hover:text-[#A78BFA] transition-colors">
+                  <Link href="/qr-code-generator" className="text-xs font-bold text-[#C9F600] flex items-center gap-1.5 group-hover:underline transition-colors">
                     Generate QR Code &rarr;
                   </Link>
                 </div>
               </div>
 
               {/* SEO Audit Tool */}
-              <div className="p-8 bg-[#FAF9FF] border border-[#E9E4F2] rounded-[24px] shadow-sm hover:shadow-md hover:border-[#7C3AED]/20 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between text-left reveal-hidden group">
+              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between text-left reveal-hidden group">
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-white border border-[#E9E4F2] flex items-center justify-center text-[#7C3AED] text-xl mb-6 shadow-sm group-hover:scale-110 group-hover:bg-[#7C3AED] group-hover:text-white transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 flex items-center justify-center text-[#C9F600] text-xl mb-6 shadow-sm group-hover:scale-110 group-hover:bg-[#C9F600] group-hover:text-[#3B1580] transition-all duration-300">
                     <i className="fa-solid fa-chart-line" />
                   </div>
-                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-3 group-hover:text-[#7C3AED] transition-colors">
+                  <h3 className="text-base font-extrabold text-[#FFFFFF] mb-3 group-hover:text-[#C9F600] transition-colors">
                     SEO Audit Tool
                   </h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed font-semibold mb-6">
+                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-medium mb-6">
                     Check your website&apos;s basic SEO performance and discover opportunities to improve search visibility.
                   </p>
                 </div>
-                <div className="border-t border-[#E9E4F2] pt-4 mt-2 flex flex-col gap-3">
+                <div className="border-t border-[#FFFFFF]/15 pt-4 mt-2 flex flex-col gap-3">
                   <div className="flex flex-wrap gap-1">
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">SEO Checker</span>
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">Free Audit</span>
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">SEO Tool</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">SEO Checker</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">Free Audit</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">SEO Tool</span>
                   </div>
-                  <Link href="/seo-audit-tool" className="text-xs font-bold text-[#7C3AED] flex items-center gap-1.5 group-hover:text-[#A78BFA] transition-colors">
+                  <Link href="/seo-audit-tool" className="text-xs font-bold text-[#C9F600] flex items-center gap-1.5 group-hover:underline transition-colors">
                     Check SEO &rarr;
                   </Link>
                 </div>
               </div>
 
               {/* Image Compressor */}
-              <div className="p-8 bg-[#FAF9FF] border border-[#E9E4F2] rounded-[24px] shadow-sm hover:shadow-md hover:border-[#7C3AED]/20 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between text-left reveal-hidden group">
+              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between text-left reveal-hidden group">
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-white border border-[#E9E4F2] flex items-center justify-center text-[#7C3AED] text-xl mb-6 shadow-sm group-hover:scale-110 group-hover:bg-[#7C3AED] group-hover:text-white transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 flex items-center justify-center text-[#C9F600] text-xl mb-6 shadow-sm group-hover:scale-110 group-hover:bg-[#C9F600] group-hover:text-[#3B1580] transition-all duration-300">
                     <i className="fa-solid fa-file-image" />
                   </div>
-                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-3 group-hover:text-[#7C3AED] transition-colors">
+                  <h3 className="text-base font-extrabold text-[#FFFFFF] mb-3 group-hover:text-[#C9F600] transition-colors">
                     Image Compressor
                   </h3>
-                  <p className="text-xs text-[#6B6478] leading-relaxed font-semibold mb-6">
+                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-medium mb-6">
                     Compress images online and reduce file size while maintaining good image quality.
                   </p>
                 </div>
-                <div className="border-t border-[#E9E4F2] pt-4 mt-2 flex flex-col gap-3">
+                <div className="border-t border-[#FFFFFF]/15 pt-4 mt-2 flex flex-col gap-3">
                   <div className="flex flex-wrap gap-1">
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">Compress Image</span>
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">JPG / PNG</span>
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded">Compress Online</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">Compress Image</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">JPG / PNG</span>
+                    <span className="text-[9px] font-medium text-[#FFFFFF]/70 bg-[#3B1580] border border-[#FFFFFF]/20 px-2 py-0.5 rounded">Compress Online</span>
                   </div>
-                  <Link href="/image-compressor" className="text-xs font-bold text-[#7C3AED] flex items-center gap-1.5 group-hover:text-[#A78BFA] transition-colors">
+                  <Link href="/image-compressor" className="text-xs font-bold text-[#C9F600] flex items-center gap-1.5 group-hover:underline transition-colors">
                     Compress Image &rarr;
                   </Link>
                 </div>
@@ -1232,16 +1232,16 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
             <div className="text-center mb-16 reveal-hidden">
               <Link
                 href="/free-tools"
-                className="inline-flex items-center gap-2 bg-[#171126] hover:bg-slate-800 hover:scale-[1.025] text-white font-bold text-xs px-8 py-4 rounded-xl transition-all group"
+                className="inline-flex items-center gap-2 bg-[#C9F600] hover:opacity-90 text-[#3B1580] font-bold text-xs px-8 py-4 rounded-xl shadow-md transition-all group"
               >
                 Explore All Free Tools <i className="fa-solid fa-arrow-right-long text-xs group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
             {/* Homepage SEO Paragraph Content block */}
-            <div className="max-w-4xl mx-auto border-t border-[#E9E4F2] pt-12 pb-6 text-left reveal-hidden">
-              <h3 className="text-sm font-bold text-[#1F1B2D] uppercase tracking-wider mb-3">Free Online Tools for Businesses</h3>
-              <p className="text-xs text-[#6B6478] leading-relaxed font-semibold">
+            <div className="max-w-4xl mx-auto border-t border-[#FFFFFF]/20 pt-12 pb-6 text-left reveal-hidden">
+              <h3 className="text-sm font-bold text-[#FFFFFF] uppercase tracking-wider mb-3">Free Online Tools for Businesses</h3>
+              <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-semibold">
                 Joy Digital provides a growing collection of free online business tools designed to make everyday tasks faster and easier. Use our GST calculator, invoice generator, quotation generator, QR code generator, SEO audit tool and image compressor directly from your browser. These tools are designed for businesses, freelancers, professionals and individuals who want simple solutions without complicated software.
               </p>
             </div>
@@ -1249,25 +1249,25 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
             
 
             {/* Lead Gen block */}
-            <div className="bg-[#FAF9FF] border border-[#E9E4F2] p-8 sm:p-12 rounded-[24px] shadow-sm text-left flex flex-col justify-between hover:border-[#7C3AED]/15 transition-colors max-w-5xl mx-auto mt-8 reveal-hidden">
+            <div className="bg-[#3B1580] border border-[#FFFFFF]/25 p-8 sm:p-12 rounded-[24px] shadow-xl text-left flex flex-col justify-between hover:border-[#C9F600] transition-colors max-w-5xl mx-auto mt-8 reveal-hidden">
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 <div className="md:col-span-8">
-                  <h3 className="text-lg sm:text-xl font-black text-[#1F1B2D] mb-3">Need a Website or Digital Solution for Your Business?</h3>
-                  <p className="text-xs sm:text-sm text-[#6B6478] leading-relaxed font-semibold">
+                  <h3 className="text-lg sm:text-xl font-black text-[#FFFFFF] mb-3">Need a Website or Digital Solution for Your Business?</h3>
+                  <p className="text-xs sm:text-sm text-[#FFFFFF]/80 leading-relaxed font-medium">
                     From professional websites and e-commerce solutions to SEO and digital marketing, Joy Digital helps businesses build a stronger online presence.
                   </p>
                 </div>
                 <div className="md:col-span-4 flex flex-col gap-3 justify-end">
                   <Link
                     href="/free-website-audit"
-                    className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-center font-bold text-xs py-3.5 px-6 rounded-xl shadow-sm hover:scale-[1.01] transition-all cursor-pointer inline-flex items-center justify-center"
+                    className="w-full bg-[#C9F600] text-[#3B1580] hover:opacity-90 text-center font-bold text-xs py-3.5 px-6 rounded-xl shadow-md transition-all cursor-pointer inline-flex items-center justify-center"
                   >
                     Get a Free Website Audit
                   </Link>
                   <TrackedWaLink
                     href="https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I%20saw%20your%20free%20business%20tools%20and%20I'd%20like%2520to%2520get%2520a%2520free%2520consultation%2520for%2520my%2520business."
                     location="free_tools_cta"
-                    className="bg-[#10b981] hover:bg-[#059669] text-white text-center font-bold text-xs py-3.5 px-6 rounded-xl shadow-sm hover:scale-[1.01] transition-all cursor-pointer flex items-center justify-center gap-1.5"
+                    className="bg-[#3B1580] hover:bg-[#3B1580]/80 border border-[#FFFFFF]/30 hover:border-[#C9F600] text-[#FFFFFF] hover:text-[#C9F600] text-center font-bold text-xs py-3.5 px-6 rounded-xl shadow-md transition-all cursor-pointer flex items-center justify-center gap-1.5"
                   >
                     <i className="fa-brands fa-whatsapp text-sm" /> Chat on WhatsApp
                   </TrackedWaLink>
@@ -1279,16 +1279,16 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
         </section>
 
         {/* 12. FAQ SECTION */}
-        <section className="py-20 bg-[#FAF9FF]">
+        <section className="py-20 bg-[#3B1580] border-t border-[#FFFFFF]/15">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
-              <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">
+              <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
                 FAQ
               </span>
-              <h2 className="text-3xl font-extrabold text-[#1F1B2D] mb-4">
+              <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
                 Frequently Asked Questions
               </h2>
-              <p className="text-xs sm:text-sm text-[#6B6478] font-semibold">
+              <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-semibold">
                 Quick answers regarding site pricing plans, delivery timelines, maps optimizations, and global services.
               </p>
             </div>
@@ -1299,19 +1299,19 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
           </div>
         </section>
 
-        {/* 13. FINAL CTA WITH MICRO INTERACTIONS (Deep Purple background #171126) */}
-        <section className="relative py-20 bg-[#171126] border-t border-[#2A203F] overflow-hidden text-center">
+        {/* 13. FINAL CTA WITH MICRO INTERACTIONS (Deep Dark Purple gradient) */}
+        <section className="relative py-20 bg-[#3B1580] border-t border-[#FFFFFF]/20 overflow-hidden text-center">
           <div className="absolute inset-0 bg-grid-pattern opacity-[0.015] pointer-events-none" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#7C3AED]/10 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C9F600]/10 rounded-full blur-[120px] pointer-events-none" />
           
           <div className="max-w-4xl mx-auto px-6 relative z-10 max-w-3xl mx-auto flex flex-col items-center reveal-hidden">
-            <span className="inline-block bg-[#7C3AED]/10 text-[#A78BFA] font-extrabold text-[10px] uppercase tracking-widest px-4 py-1.5 rounded-full border border-[#7C3AED]/35 mb-6">
+            <span className="inline-block bg-[#C9F600]/15 text-[#C9F600] font-extrabold text-[10px] uppercase tracking-widest px-4 py-1.5 rounded-full border border-[#C9F600]/30 mb-6">
               Start Scaling Today
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-5 leading-tight">
               Ready to Grow Your Business Online?
             </h2>
-            <p className="text-sm md:text-base text-[#D8D2E6] max-w-xl mx-auto mb-10 leading-relaxed font-semibold">
+            <p className="text-sm md:text-base text-[#FFFFFF]/80 max-w-xl mx-auto mb-10 leading-relaxed font-normal">
               Let&apos;s build a website and digital strategy designed around your business goals.
             </p>
             
@@ -1319,7 +1319,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
               <TrackedLink
                 href="/free-website-audit"
                 eventName="Get Free Website Audit - Final"
-                className="w-full sm:w-auto bg-[#7C3AED] hover:bg-[#6D28D9] hover:scale-[1.025] hover:shadow-lg transition-all text-white font-bold text-xs px-8 py-4 rounded-xl shadow-md flex items-center justify-center gap-1.5 group"
+                className="w-full sm:w-auto bg-[#C9F600] hover:opacity-90 hover:scale-[1.025] hover:shadow-lg transition-all text-[#3B1580] font-bold text-xs px-8 py-4 rounded-xl shadow-md flex items-center justify-center gap-1.5 group"
               >
                 Get Free Website Audit
                 <i className="fa-solid fa-arrow-right group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -1328,7 +1328,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
               <TrackedWaLink
                 href="https://wa.me/919080026133?text=Hi%20Joy%20Digital,%20I%20need%20a%20website%20for%20my%20business.%20I%20would%20like%20to%20know%20the%20pricing%20and%20process."
                 location="final_cta"
-                className="w-full sm:w-auto bg-[#10b981] hover:bg-[#059669] hover:scale-[1.025] hover:shadow-lg transition-all text-white font-bold text-xs px-8 py-4 rounded-xl shadow-md flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto bg-[#3B1580] hover:bg-[#3B1580]/80 border border-[#FFFFFF]/30 hover:border-[#C9F600] text-[#FFFFFF] hover:text-[#C9F600] hover:scale-[1.025] hover:shadow-lg transition-all font-bold text-xs px-8 py-4 rounded-xl shadow-md flex items-center justify-center gap-2 cursor-pointer"
               >
                 <i className="fa-brands fa-whatsapp text-lg animate-pulse" />
                 Chat with an Expert

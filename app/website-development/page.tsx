@@ -56,23 +56,23 @@ export default function WebDevPage() {
           <p>
             In today&apos;s digital economy, partnering with an experienced web engineering agency is essential to scale your online presence. Joy Digital provides end-to-end web development services, custom React/Next.js architecture, and technical search engine optimization designed to generate recurring client inquiries globally.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">What is Website Design and Development?</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">What is Website Design and Development?</h3>
           <p>
             Web design handles the visual and user experience (UI/UX) layout of your site, while web development covers the underlying front-end and back-end code engineering (HTML, CSS, JavaScript, Next.js) that makes the platform responsive, interactive, and fast.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Why Website Development is Important for Business Growth</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Why Website Development is Important for Business Growth</h3>
           <p>
             Your website serves as your 24/7 digital storefront. Without a fast, modern, mobile-friendly platform, potential clients will choose your competitors. High-quality web development improves Google search indexing, satisfies Core Web Vitals, reduces bounce rates, and turns passive traffic into paying customers.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">What is the Cost of Website Development in India?</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">What is the Cost of Website Development in India?</h3>
           <p>
             Custom web platforms scale based on complexity. Starter setups begin at $1,200, while advanced enterprise SaaS or headless e-commerce structures require bespoke milestone proposals. Joy Digital offers transparent flat-rate pricing with no hidden maintenance fees for our global clients.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Which Language and AI Tools are Best for Website Development?</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Which Language and AI Tools are Best for Website Development?</h3>
           <p>
             JavaScript and TypeScript paired with Next.js/React are the industry standard for modern architecture due to server-side rendering, SEO efficiency, and blazing speed. We leverage these advanced frameworks alongside AI code-assist tools to accelerate delivery without compromising quality.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">How to Find Clients and Leads for Website Development</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">How to Find Clients and Leads for Website Development</h3>
           <p>
             To capture global B2B projects, companies must combine high-speed technical SEO landing pages, targeted direct outreach, and robust digital trust signals. We build the exact infrastructure you need to support these acquisition strategies.
           </p>

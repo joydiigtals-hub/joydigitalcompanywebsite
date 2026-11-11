@@ -121,144 +121,144 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
   return (
     <>
       <Header />
-      <main className="pt-24 lg:pt-32">
+      <main className="pt-24 lg:pt-32 bg-[#3B1580] text-[#FFFFFF]">
         
         {/* Detail Hero */}
-        <section className="py-16 bg-white relative overflow-hidden border-b border-gray-100">
-          <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
+        <section className="py-16 bg-[#3B1580] relative overflow-hidden border-b border-[#FFFFFF]/15 text-[#FFFFFF]">
+          <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
           <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <span className="inline-block bg-accent-glow text-accent font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full border border-accent/20 mb-6">
+            <span className="inline-block bg-[#C9F600]/15 text-[#C9F600] font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full border border-[#C9F600]/30 mb-6">
               {study.category}
             </span>
-            <h1 className="text-2xl sm:text-4xl font-extrabold text-primary-dark tracking-tight mb-8 leading-tight">
+            <h1 className="text-2xl sm:text-4xl font-extrabold text-[#FFFFFF] tracking-tight mb-8 leading-tight">
               {study.title}
             </h1>
             
             {/* Metric Banner */}
-            <div className="bg-primary-dark border border-accent/20 max-w-sm mx-auto p-6 rounded-2xl text-white shadow-md">
-              <div className="text-4xl font-extrabold text-accent mb-1">{study.metricValue}</div>
-              <div className="text-[10px] font-bold text-text-muted uppercase tracking-wider">{study.metricLabel}</div>
+            <div className="bg-[#260B5E] border border-[#C9F600]/30 max-w-sm mx-auto p-6 rounded-2xl text-[#FFFFFF] shadow-md">
+              <div className="text-4xl font-extrabold text-[#C9F600] mb-1">{study.metricValue}</div>
+              <div className="text-[10px] font-bold text-[#FFFFFF]/70 uppercase tracking-wider">{study.metricLabel}</div>
             </div>
           </div>
         </section>
 
         {/* Narrative details */}
-        <section className="py-16 bg-light-bg">
+        <section className="py-16 bg-[#260B5E] border-b border-[#FFFFFF]/15 text-[#FFFFFF]">
           <div className="max-w-3xl mx-auto px-6 flex flex-col gap-12">
             
             {/* Challenge */}
-            <div className="bg-white border border-gray-100 p-8 sm:p-10 rounded-2xl shadow-sm text-left">
-              <h2 className="text-lg font-bold text-primary-dark mb-4 flex items-center gap-2">
-                <span className="text-accent text-sm"><i className="fa-solid fa-triangle-exclamation" /></span>
+            <div className="bg-[#3B1580] border border-[#FFFFFF]/20 p-8 sm:p-10 rounded-2xl shadow-sm text-left text-[#FFFFFF]">
+              <h2 className="text-lg font-bold text-[#FFFFFF] mb-4 flex items-center gap-2">
+                <span className="text-[#C9F600] text-sm"><i className="fa-solid fa-triangle-exclamation" /></span>
                 The Challenge
               </h2>
-              <p className="text-sm text-text-secondary leading-relaxed">
+              <p className="text-sm text-[#FFFFFF]/85 leading-relaxed">
                 {study.challenge}
               </p>
             </div>
 
             {/* Strategy */}
-            <div className="bg-white border border-gray-100 p-8 sm:p-10 rounded-2xl shadow-sm text-left">
-              <h2 className="text-lg font-bold text-primary-dark mb-4 flex items-center gap-2">
-                <span className="text-accent text-sm"><i className="fa-solid fa-compass" /></span>
+            <div className="bg-[#3B1580] border border-[#FFFFFF]/20 p-8 sm:p-10 rounded-2xl shadow-sm text-left text-[#FFFFFF]">
+              <h2 className="text-lg font-bold text-[#FFFFFF] mb-4 flex items-center gap-2">
+                <span className="text-[#C9F600] text-sm"><i className="fa-solid fa-compass" /></span>
                 The Strategy & Action
               </h2>
-              <p className="text-sm text-text-secondary leading-relaxed">
+              <p className="text-sm text-[#FFFFFF]/85 leading-relaxed">
                 {study.strategy}
               </p>
             </div>
 
             {/* Results */}
-            <div className="bg-white border border-gray-100 p-8 sm:p-10 rounded-2xl shadow-sm text-left">
-              <h2 className="text-lg font-bold text-primary-dark mb-4 flex items-center gap-2">
+            <div className="bg-[#3B1580] border border-[#FFFFFF]/20 p-8 sm:p-10 rounded-2xl shadow-sm text-left text-[#FFFFFF]">
+              <h2 className="text-lg font-bold text-[#FFFFFF] mb-4 flex items-center gap-2">
                 <span className="text-success-green text-sm"><i className="fa-solid fa-chart-line" /></span>
                 The Results & ROI
               </h2>
-              <p className="text-sm text-text-secondary leading-relaxed mb-6">
+              <p className="text-sm text-[#FFFFFF]/85 leading-relaxed mb-6">
                 {study.results}
               </p>
 
               {/* Verified Performance Data Table */}
-              <div className="mt-6 border border-gray-100 rounded-xl overflow-hidden shadow-inner">
-                <div className="bg-gray-50 px-4 py-3 border-b border-gray-100">
-                  <h3 className="text-xs font-bold text-primary-dark uppercase tracking-wider flex items-center gap-1.5">
-                    <i className="fa-solid fa-square-poll-vertical text-accent text-[10px]" /> Verified Performance Metrics (Month-over-Month)
+              <div className="mt-6 border border-[#FFFFFF]/20 rounded-xl overflow-hidden shadow-inner bg-[#260B5E] not-prose">
+                <div className="bg-[#260B5E] px-4 py-3 border-b border-[#FFFFFF]/20">
+                  <h3 className="text-xs font-bold text-[#FFFFFF] uppercase tracking-wider flex items-center gap-1.5">
+                    <i className="fa-solid fa-square-poll-vertical text-[#C9F600] text-[10px]" /> Verified Performance Metrics (Month-over-Month)
                   </h3>
                 </div>
                 <div className="overflow-x-auto">
-                  <table className="w-full text-left border-collapse text-xs">
+                  <table className="w-full text-left border-collapse text-xs text-[#FFFFFF]">
                     <thead>
-                      <tr className="border-b border-gray-100 bg-gray-50/50 text-[10px] font-bold text-text-muted uppercase">
+                      <tr className="border-b border-[#FFFFFF]/20 bg-[#3B1580] text-[10px] font-bold text-[#FFFFFF]/70 uppercase">
                         <th className="px-4 py-3">Performance Indicator</th>
                         <th className="px-4 py-3">Before Campaign</th>
-                        <th className="px-4 py-3 text-primary font-extrabold">After Campaign</th>
-                        <th className="px-4 py-3 text-accent font-extrabold">Net Growth</th>
+                        <th className="px-4 py-3 text-[#FFFFFF] font-extrabold">After Campaign</th>
+                        <th className="px-4 py-3 text-[#C9F600] font-extrabold">Net Growth</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-gray-50 font-medium text-text-secondary">
+                    <tbody className="divide-y divide-[#FFFFFF]/15 font-medium text-[#FFFFFF]/85">
                       {resolvedParams.slug === "chennai-clinic-leads" && (
                         <>
                           <tr>
-                            <td className="px-4 py-3 font-semibold text-primary-dark">Monthly Google Maps Impressions</td>
+                            <td className="px-4 py-3 font-semibold text-[#FFFFFF]">Monthly Google Maps Impressions</td>
                             <td className="px-4 py-3">1,200</td>
-                            <td className="px-4 py-3 text-primary font-bold">4,800</td>
-                            <td className="px-4 py-3 text-accent font-extrabold">+300%</td>
+                            <td className="px-4 py-3 text-[#FFFFFF] font-bold">4,800</td>
+                            <td className="px-4 py-3 text-[#C9F600] font-extrabold">+300%</td>
                           </tr>
                           <tr>
-                            <td className="px-4 py-3 font-semibold text-primary-dark">Direct Click-to-Call Actions</td>
+                            <td className="px-4 py-3 font-semibold text-[#FFFFFF]">Direct Click-to-Call Actions</td>
                             <td className="px-4 py-3">45 / mo</td>
-                            <td className="px-4 py-3 text-primary font-bold">153 / mo</td>
-                            <td className="px-4 py-3 text-accent font-extrabold">+240%</td>
+                            <td className="px-4 py-3 text-[#FFFFFF] font-bold">153 / mo</td>
+                            <td className="px-4 py-3 text-[#C9F600] font-extrabold">+240%</td>
                           </tr>
                           <tr>
-                            <td className="px-4 py-3 font-semibold text-primary-dark">Maps Proximity Directions Requests</td>
+                            <td className="px-4 py-3 font-semibold text-[#FFFFFF]">Maps Proximity Directions Requests</td>
                             <td className="px-4 py-3">60 / mo</td>
-                            <td className="px-4 py-3 text-primary font-bold">210 / mo</td>
-                            <td className="px-4 py-3 text-accent font-extrabold">+250%</td>
+                            <td className="px-4 py-3 text-[#FFFFFF] font-bold">210 / mo</td>
+                            <td className="px-4 py-3 text-[#C9F600] font-extrabold">+250%</td>
                           </tr>
                         </>
                       )}
                       {resolvedParams.slug === "ecommerce-sales-increase" && (
                         <>
                           <tr>
-                            <td className="px-4 py-3 font-semibold text-primary-dark">LCP Page Load Speed</td>
+                            <td className="px-4 py-3 font-semibold text-[#FFFFFF]">LCP Page Load Speed</td>
                             <td className="px-4 py-3">5.5 seconds</td>
-                            <td className="px-4 py-3 text-primary font-bold">1.3 seconds</td>
-                            <td className="px-4 py-3 text-accent font-extrabold">-76% (Faster)</td>
+                            <td className="px-4 py-3 text-[#FFFFFF] font-bold">1.3 seconds</td>
+                            <td className="px-4 py-3 text-[#C9F600] font-extrabold">-76% (Faster)</td>
                           </tr>
                           <tr>
-                            <td className="px-4 py-3 font-semibold text-primary-dark">Cart Abandonment Rate</td>
+                            <td className="px-4 py-3 font-semibold text-[#FFFFFF]">Cart Abandonment Rate</td>
                             <td className="px-4 py-3">68%</td>
-                            <td className="px-4 py-3 text-primary font-bold">41%</td>
-                            <td className="px-4 py-3 text-accent font-extrabold">-40% Drop</td>
+                            <td className="px-4 py-3 text-[#FFFFFF] font-bold">41%</td>
+                            <td className="px-4 py-3 text-[#C9F600] font-extrabold">-40% Drop</td>
                           </tr>
                           <tr>
-                            <td className="px-4 py-3 font-semibold text-primary-dark">Completed Checkout Orders</td>
+                            <td className="px-4 py-3 font-semibold text-[#FFFFFF]">Completed Checkout Orders</td>
                             <td className="px-4 py-3">120 / mo</td>
-                            <td className="px-4 py-3 text-primary font-bold">168 / mo</td>
-                            <td className="px-4 py-3 text-accent font-extrabold">+40%</td>
+                            <td className="px-4 py-3 text-[#FFFFFF] font-bold">168 / mo</td>
+                            <td className="px-4 py-3 text-[#C9F600] font-extrabold">+40%</td>
                           </tr>
                         </>
                       )}
                       {resolvedParams.slug === "saas-landing-optimization" && (
                         <>
                           <tr>
-                            <td className="px-4 py-3 font-semibold text-primary-dark">Lead Capture Funnel CTR</td>
+                            <td className="px-4 py-3 font-semibold text-[#FFFFFF]">Lead Capture Funnel CTR</td>
                             <td className="px-4 py-3">1.8%</td>
-                            <td className="px-4 py-3 text-primary font-bold">3.2%</td>
-                            <td className="px-4 py-3 text-accent font-extrabold">+77%</td>
+                            <td className="px-4 py-3 text-[#FFFFFF] font-bold">3.2%</td>
+                            <td className="px-4 py-3 text-[#C9F600] font-extrabold">+77%</td>
                           </tr>
                           <tr>
-                            <td className="px-4 py-3 font-semibold text-primary-dark">Demo Request Form Signups</td>
+                            <td className="px-4 py-3 font-semibold text-[#FFFFFF]">Demo Request Form Signups</td>
                             <td className="px-4 py-3">80 / mo</td>
-                            <td className="px-4 py-3 text-primary font-bold">224 / mo</td>
-                            <td className="px-4 py-3 text-accent font-extrabold">+180%</td>
+                            <td className="px-4 py-3 text-[#FFFFFF] font-bold">224 / mo</td>
+                            <td className="px-4 py-3 text-[#C9F600] font-extrabold">+180%</td>
                           </tr>
                           <tr>
-                            <td className="px-4 py-3 font-semibold text-primary-dark">Average Customer Acquisition CPL</td>
+                            <td className="px-4 py-3 font-semibold text-[#FFFFFF]">Average Customer Acquisition CPL</td>
                             <td className="px-4 py-3">$15.50</td>
-                            <td className="px-4 py-3 text-primary font-bold">$6.20</td>
-                            <td className="px-4 py-3 text-accent font-extrabold">-60% (Savings)</td>
+                            <td className="px-4 py-3 text-[#FFFFFF] font-bold">$6.20</td>
+                            <td className="px-4 py-3 text-[#C9F600] font-extrabold">-60% (Savings)</td>
                           </tr>
                         </>
                       )}
@@ -270,13 +270,13 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
             </div>
 
             {/* Testimonial Quote */}
-            <div className="border-l-4 border-accent bg-accent/5 p-8 rounded-r-2xl text-left">
-              <p className="text-sm italic text-text-primary mb-4 leading-relaxed">
+            <div className="border-l-4 border-[#C9F600] bg-[#3B1580] p-8 rounded-r-2xl text-left border-y border-r border-[#FFFFFF]/15">
+              <p className="text-sm italic text-[#FFFFFF] mb-4 leading-relaxed">
                 &ldquo;{study.clientQuote}&rdquo;
               </p>
               <div className="flex flex-col">
-                <strong className="text-sm text-primary-dark">{study.clientAuthor}</strong>
-                <span className="text-xs text-text-secondary">{study.clientRole}</span>
+                <strong className="text-sm text-[#C9F600]">{study.clientAuthor}</strong>
+                <span className="text-xs text-[#FFFFFF]/70">{study.clientRole}</span>
               </div>
             </div>
 
@@ -284,7 +284,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
             <div className="text-center mt-4">
               <Link
                 href="/case-studies"
-                className="text-xs font-bold text-primary hover:text-accent flex items-center justify-center gap-2"
+                className="text-xs font-bold text-[#C9F600] hover:text-white flex items-center justify-center gap-2"
               >
                 <i className="fa-solid fa-arrow-left-long" /> Back to All Case Studies
               </Link>

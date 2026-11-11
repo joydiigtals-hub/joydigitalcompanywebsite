@@ -56,14 +56,14 @@ export default function GBPPage() {
           <p>
             At Joy Digital, our specialized <strong>google business profile optimization chennai</strong> services focus on helping regional businesses optimize their Google Maps presence. We handle Google Business Profile verification, select target primary and secondary business categories, write search-optimized description bios, and list your core services. This structured approach helps your profile stand out to local searchers in Chennai and across India.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Optimizing Google Maps for Mobile Calls & Directions</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Optimizing Google Maps for Mobile Calls & Directions</h3>
           <p>
             An optimized Google Maps listing makes it easy for customers to contact your business. We set up direct action buttons for mobile call clicks, website visits, and driving directions. We also help configure messaging options and set up automated FAQ prompts to handle customer inquiries instantly, improving response times.
           </p>
           <p>
             We also audit your directory listings to correct name, address, and phone (NAP) inconsistencies across Sulekha, Justdial, and GMB records. This consistency builds search engine trust, helping support your map rankings and grow your local leads.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">The Impact of Geotagged Media and Regular Updates</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">The Impact of Geotagged Media and Regular Updates</h3>
           <p>
             Google&apos;s local algorithm monitors profile activity to gauge relevancy. Regularly uploading photos from your physical location with metadata signals (geotagging) alerts the algorithm that your business is active and physically present in Chennai. We schedule weekly updates, geotag your service images, and publish profile posts that highlight special offers and services.
           </p>

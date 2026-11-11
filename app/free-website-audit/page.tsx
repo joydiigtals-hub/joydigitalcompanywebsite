@@ -55,55 +55,55 @@ export default function FreeWebsiteAuditPage() {
     <>
       <JsonLd schema={graphSchema} />
       <Header />
-      <main className="pt-20 lg:pt-24">
+      <main className="pt-20 lg:pt-24 bg-[#3B1580] text-[#FFFFFF]">
         
         {/* Split Hero / Form Section */}
-        <section className="pt-4 sm:pt-6 lg:pt-8 pb-12 lg:pb-16 bg-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
-          <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+        <section className="pt-4 sm:pt-6 lg:pt-8 pb-12 lg:pb-16 bg-[#3B1580] relative overflow-hidden text-[#FFFFFF]">
+          <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
+          <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-[#C9F600]/5 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-[#C9F600]/5 rounded-full blur-[100px] pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
             
             {/* Left Content Column */}
             <div className="lg:col-span-7 flex flex-col items-start text-left">
-              <span className="inline-flex items-center gap-2 bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-4 py-1.5 rounded-full mb-6">
-                <span className="w-2 h-2 bg-[#7C3AED] rounded-full animate-pulse" />
-                <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-wider">
+              <span className="inline-flex items-center gap-2 bg-[#C9F600]/15 border border-[#C9F600]/30 px-4 py-1.5 rounded-full mb-6">
+                <span className="w-2 h-2 bg-[#C9F600] rounded-full animate-pulse" />
+                <span className="text-xs font-bold text-[#C9F600] uppercase tracking-wider">
                   No Cost • No Obligations • 100% Free
                 </span>
               </span>
               
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary-dark tracking-tight mb-6 leading-tight">
-                Get Your Free <span className="text-gradient">Website Growth Report</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#FFFFFF] tracking-tight mb-6 leading-tight">
+                Get Your Free <span className="text-[#C9F600]">Website Growth Report</span>
               </h1>
               
-              <p className="text-sm md:text-base text-text-secondary mb-8 max-w-xl leading-relaxed">
+              <p className="text-sm md:text-base text-[#FFFFFF]/80 mb-8 max-w-xl leading-relaxed">
                 Find out what&apos;s stopping your website from getting more traffic, enquiries, and customers. Enter your details, and our technical developers and SEO strategists will compile a custom diagnostic report.
               </p>
 
               {/* Instant AI Scan Callout Card */}
-              <div className="w-full max-w-xl mb-8 p-4 sm:p-5 rounded-2xl bg-[#160D2E] text-white border border-purple-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-600/20 rounded-full blur-2xl pointer-events-none" />
+              <div className="w-full max-w-xl mb-8 p-4 sm:p-5 rounded-2xl bg-[#260B5E] text-[#FFFFFF] border border-[#FFFFFF]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#C9F600]/10 rounded-full blur-2xl pointer-events-none" />
                 <div className="flex items-center gap-3.5 relative z-10 text-left">
-                  <div className="w-11 h-11 rounded-xl bg-purple-500/20 border border-purple-400/30 flex items-center justify-center text-amber-300 text-lg shrink-0">
+                  <div className="w-11 h-11 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 flex items-center justify-center text-[#C9F600] text-lg shrink-0">
                     <i className="fa-solid fa-bolt" />
                   </div>
                   <div>
                     <div className="flex items-center gap-2 mb-0.5">
-                      <span className="text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+                      <span className="text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#C9F600]/20 text-[#C9F600] border border-[#C9F600]/30">
                         ⚡ Instant AI Scanner
                       </span>
-                      <span className="text-xs font-black text-white">15-Sec Live Diagnostic</span>
+                      <span className="text-xs font-black text-[#FFFFFF]">15-Sec Live Diagnostic</span>
                     </div>
-                    <p className="text-[11.5px] text-purple-200/90 font-medium">
-                      Want instant results? Test server latency, SEO & mobile score live right now.
+                    <p className="text-[11.5px] text-[#FFFFFF]/80 font-medium">
+                      Want instant results? Test server latency, SEO &amp; mobile score live right now.
                     </p>
                   </div>
                 </div>
                 <Link
                   href="/seo-audit-tool"
-                  className="relative z-10 px-4 py-2.5 bg-gradient-to-r from-[#7C3AED] to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-xl font-bold text-xs shrink-0 text-center shadow-md transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5"
+                  className="relative z-10 px-4 py-2.5 bg-[#C9F600] hover:bg-[#A9D100] text-[#3B1580] rounded-xl font-bold text-xs shrink-0 text-center shadow-md transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5"
                 >
                   <span>Scan Live</span>
                   <i className="fa-solid fa-arrow-right text-[10px]" />
@@ -114,12 +114,12 @@ export default function FreeWebsiteAuditPage() {
               <div className="flex flex-col gap-6 w-full max-w-lg mt-2">
                 {AUDIT_CHECKLIST.map((item, index) => (
                   <div key={index} className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-xl bg-[#7C3AED]/10 flex items-center justify-center text-[#7C3AED] text-sm flex-shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-[#260B5E] border border-[#FFFFFF]/20 flex items-center justify-center text-[#C9F600] text-sm flex-shrink-0">
                       <i className={item.icon} />
                     </div>
                     <div className="flex flex-col">
-                      <h3 className="text-xs font-extrabold text-primary-dark uppercase tracking-wider">{item.title}</h3>
-                      <p className="text-[11px] sm:text-xs text-text-secondary mt-1 leading-relaxed">{item.description}</p>
+                      <h3 className="text-xs font-extrabold text-[#FFFFFF] uppercase tracking-wider">{item.title}</h3>
+                      <p className="text-[11px] sm:text-xs text-[#FFFFFF]/80 mt-1 leading-relaxed">{item.description}</p>
                     </div>
                   </div>
                 ))}
@@ -135,12 +135,12 @@ export default function FreeWebsiteAuditPage() {
         </section>
 
         {/* Informative / Trust Section */}
-        <section className="py-20 bg-light-bg border-t border-[#E9E4F2]">
+        <section className="py-20 bg-[#260B5E] border-t border-[#FFFFFF]/15 text-[#FFFFFF]">
           <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-primary-dark text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-[#FFFFFF] text-center mb-8">
               Why We Provide This Free Website Review
             </h2>
-            <div className="prose prose-blue max-w-none text-xs sm:text-sm text-text-secondary space-y-6 leading-relaxed font-semibold">
+            <div className="prose prose-invert max-w-none text-xs sm:text-sm text-[#FFFFFF]/85 space-y-6 leading-relaxed font-semibold">
               <p>
                 Many businesses invest heavily in online ads or digital campaigns without understanding why their site fails to rank or convert visitors. They waste advertising budget pointing traffic to slow-loading pages, bloated templates, or broken forms.
               </p>

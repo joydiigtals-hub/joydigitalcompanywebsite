@@ -16,16 +16,16 @@ export default function PortfolioSection() {
   ];
 
   return (
-    <section id="featured-work" className="py-24 bg-[#0B0914] text-white border-b border-[#1E1838]">
+    <section id="featured-work" className="py-24 bg-[#3B1580] text-[#FFFFFF] border-b border-[#FFFFFF]/15">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16 reveal-hidden text-center max-w-3xl mx-auto">
-          <span className="text-xs font-bold text-[#A78BFA] uppercase tracking-widest block mb-3">
+          <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
             Our Portfolio
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
             Recent Global Launch
           </h2>
-          <p className="text-slate-300 text-lg">
+          <p className="text-[#FFFFFF]/80 text-lg">
             We build high-performance platforms for forward-thinking brands worldwide.
           </p>
         </div>
@@ -34,39 +34,39 @@ export default function PortfolioSection() {
           {/* LEFT: Project Details */}
           <div className="flex flex-col space-y-8 reveal-hidden lg:sticky lg:top-32">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-950/40 border border-indigo-500/30 text-indigo-300 text-xs font-bold mb-6">
-                <i className="fa-solid fa-sparkles text-indigo-400" /> Featured Travel Portal
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/30 text-[#C9F600] text-xs font-bold mb-6">
+                <i className="fa-solid fa-sparkles text-[#C9F600]" /> Featured Travel Portal
               </div>
               <h3 className="text-3xl sm:text-4xl font-extrabold mb-4 text-white">
                 You & Me Voyage
               </h3>
-              <p className="text-xl text-slate-300 font-medium leading-relaxed">
+              <p className="text-xl text-[#FFFFFF]/80 font-medium leading-relaxed">
                 High-performance, mobile-responsive travel booking platform focused on Europe tours for couples and families.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h4 className="text-lg font-bold text-white mb-2 border-b border-[#1E1838] pb-2">Key Features Delivered</h4>
+              <h4 className="text-lg font-bold text-white mb-2 border-b border-[#FFFFFF]/15 pb-2 text-[#FFFFFF]">Key Features Delivered</h4>
               {features.map((feature, idx) => (
-                <div key={idx} className="flex items-start gap-3 text-sm text-slate-300 font-medium">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                <div key={idx} className="flex items-start gap-3 text-sm text-[#FFFFFF]/80 font-medium">
+                  <CheckCircle2 className="w-5 h-5 text-[#C9F600] shrink-0 mt-0.5" />
                   <span className="leading-relaxed">{feature}</span>
                 </div>
               ))}
             </div>
 
-            <div className="bg-[#130E26] border border-[#2B2346] rounded-2xl p-6 relative">
-              <i className="fa-solid fa-quote-left text-3xl text-[#7C3AED]/20 absolute top-4 right-4" />
-              <p className="text-sm italic text-slate-300 relative z-10 leading-relaxed mb-4">
+            <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 relative">
+              <i className="fa-solid fa-quote-left text-3xl text-[#C9F600]/20 absolute top-4 right-4" />
+              <p className="text-sm italic text-[#FFFFFF]/80 relative z-10 leading-relaxed mb-4">
                 "Joy Digital did an amazing job. The website looks premium, loads super fast, and we are getting great organic leads!"
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#7C3AED]/20 border border-[#7C3AED]/30 flex items-center justify-center font-bold text-[#A78BFA]">
+                <div className="w-10 h-10 rounded-full bg-[#3B1580] border border-[#FFFFFF]/30 flex items-center justify-center font-bold text-[#C9F600]">
                   YM
                 </div>
                 <div>
                   <span className="block text-sm font-bold text-white">Founder</span>
-                  <span className="block text-[10px] font-bold text-slate-400">You & Me Voyage</span>
+                  <span className="block text-[10px] font-bold text-[#FFFFFF]/60">You & Me Voyage</span>
                 </div>
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function PortfolioSection() {
                 href="https://www.youandmevoyage.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-sm font-bold transition-all shadow-lg shadow-purple-900/20 group"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#C9F600] hover:opacity-90 text-[#3B1580] text-sm font-bold transition-all shadow-md group"
               >
                 <span>Visit Live Website</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -84,7 +84,7 @@ export default function PortfolioSection() {
 
               <Link
                 href="/portfolio"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-purple-950/40 hover:bg-purple-900/60 border border-purple-500/30 text-purple-200 text-sm font-bold transition-all group"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#3B1580] hover:bg-[#3B1580]/80 border border-[#FFFFFF]/30 hover:border-[#C9F600] text-[#FFFFFF] hover:text-[#C9F600] text-sm font-bold transition-all group"
               >
                 <span>View Full Portfolio</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -92,9 +92,9 @@ export default function PortfolioSection() {
               
               <TrackedWaLink
                 href="https://wa.me/919080026133?text=Hi%20Joy%20Digital,%20I%20want%20a%20website%20like%20You%20and%20Me%20Voyage." location="portfolio_cta"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#17122B] hover:bg-[#20193B] border border-[#2B2346] hover:border-emerald-500/50 text-white text-sm font-bold transition-all group"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#3B1580] hover:bg-[#3B1580]/80 border border-[#FFFFFF]/30 hover:border-[#C9F600] text-[#FFFFFF] hover:text-[#C9F600] text-sm font-bold transition-all group"
               >
-                <i className="fa-brands fa-whatsapp text-emerald-400 text-lg group-hover:scale-110 transition-transform" />
+                <i className="fa-brands fa-whatsapp text-[#C9F600] text-lg group-hover:scale-110 transition-transform" />
                 <span>I Want a Website Like This</span>
               </TrackedWaLink>
             </div>
@@ -102,7 +102,7 @@ export default function PortfolioSection() {
 
           {/* RIGHT: Images Grid */}
           <div className="flex flex-col gap-6 reveal-hidden">
-            <div className="w-full rounded-2xl overflow-hidden border border-[#2B2346] shadow-2xl relative group bg-[#130E26]">
+            <div className="w-full rounded-2xl overflow-hidden border border-[#FFFFFF]/20 shadow-2xl relative group bg-[#3B1580]">
               <div className="absolute inset-0 bg-[#7C3AED]/10 opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none" />
               <Image 
                 src="/assets/images/portfolio/you-and-me-voyage-1.png" 
@@ -114,7 +114,7 @@ export default function PortfolioSection() {
             </div>
 
             <div className="grid grid-cols-2 gap-6">
-              <div className="w-full rounded-2xl overflow-hidden border border-[#2B2346] shadow-lg relative group bg-[#130E26]">
+              <div className="w-full rounded-2xl overflow-hidden border border-[#FFFFFF]/20 shadow-lg relative group bg-[#3B1580]">
                 <Image 
                   src="/assets/images/portfolio/you-and-me-voyage-2.png" 
                   alt="Tour Packages List" 
@@ -123,7 +123,7 @@ export default function PortfolioSection() {
                   className="w-full h-auto object-cover transform group-hover:scale-[1.03] transition-transform duration-500" 
                 />
               </div>
-              <div className="w-full rounded-2xl overflow-hidden border border-[#2B2346] shadow-lg relative group bg-[#130E26]">
+              <div className="w-full rounded-2xl overflow-hidden border border-[#FFFFFF]/20 shadow-lg relative group bg-[#3B1580]">
                 <Image 
                   src="/assets/images/portfolio/you-and-me-voyage-3.png" 
                   alt="Tour Itinerary Details" 
@@ -132,7 +132,7 @@ export default function PortfolioSection() {
                   className="w-full h-auto object-cover transform group-hover:scale-[1.03] transition-transform duration-500" 
                 />
               </div>
-              <div className="w-full rounded-2xl overflow-hidden border border-[#2B2346] shadow-lg relative group bg-[#130E26]">
+              <div className="w-full rounded-2xl overflow-hidden border border-[#FFFFFF]/20 shadow-lg relative group bg-[#3B1580]">
                 <Image 
                   src="/assets/images/portfolio/you-and-me-voyage-4.png" 
                   alt="Blog and Articles" 
@@ -141,7 +141,7 @@ export default function PortfolioSection() {
                   className="w-full h-auto object-cover transform group-hover:scale-[1.03] transition-transform duration-500" 
                 />
               </div>
-              <div className="w-full rounded-2xl overflow-hidden border border-[#2B2346] shadow-lg relative group bg-[#130E26]">
+              <div className="w-full rounded-2xl overflow-hidden border border-[#FFFFFF]/20 shadow-lg relative group bg-[#3B1580]">
                 <Image 
                   src="/assets/images/portfolio/you-and-me-voyage-5.png" 
                   alt="Footer and Map Integration" 

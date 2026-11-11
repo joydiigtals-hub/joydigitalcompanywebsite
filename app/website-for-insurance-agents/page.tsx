@@ -81,37 +81,37 @@ export default async function InsuranceWebPage() {
           <p>
             Unfortunately, many insurance agent websites look untrustworthy, load slowly, hide policy benefits, and lack interactive premium quote forms or instant WhatsApp inquiry buttons.
           </p>
-          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
-            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Insurance Agent Websites</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting Insurance Agent Websites</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Instant Policy Premium Quote Estimator</strong>: Health, life & vehicle inputs</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>NRI & Expat Insurance Portal</strong>: Specialized term & health policy advisories</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Policy Comparison Matrix</strong>: Coverage, sum assured & rider options</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Local & Global Financial SEO Strategy</strong>: Rank for high-value policy keywords</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Advisor WhatsApp Routing</strong>: Instant client policy consultation</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we combine financial branding with <Link href="/website-development" className="text-primary font-bold hover:underline">custom web engineering</Link>, <Link href="/seo-services" className="text-primary font-bold hover:underline">insurance search optimization</Link>, and <Link href="/google-business-profile-setup" className="text-primary font-bold hover:underline">Google Business Profile setup</Link> to help agents scale policy sales.
+            At Joy Digital, we combine financial branding with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">custom web engineering</Link>, <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">insurance search optimization</Link>, and <Link href="/google-business-profile-setup" className="text-[#C9F600] font-bold hover:underline">Google Business Profile setup</Link> to help agents scale policy sales.
           </p>
         </div>
       }

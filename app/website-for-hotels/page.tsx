@@ -77,37 +77,37 @@ export default async function HotelWebPage() {
           <p>
             However, most hotel websites suffer from slow room gallery rendering, broken reservation widgets, missing multi-currency prices, and complex checkout steps—forcing guests right back to OTA booking platforms.
           </p>
-          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
-            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Drives Commission-Free Direct Hotel Bookings</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Drives Commission-Free Direct Hotel Bookings</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Commission-Free Direct Booking Engine</strong>: Instant check-in/check-out reservation widget</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Multi-Currency Pricing</strong>: Automated USD, EUR, GBP, AED & INR display</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>360° Virtual Room & Resort Tour</strong>: High-resolution room suite showcases</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Global Travel SEO Strategy</strong>: Rank for high-value destination keywords</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Front Desk WhatsApp Link</strong>: Instant direct guest inquiry connection</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we combine hospitality design elegance with <Link href="/website-development" className="text-primary font-bold hover:underline">custom web engineering</Link>, <Link href="/seo-services" className="text-primary font-bold hover:underline">hotel search optimization</Link>, and <Link href="/google-business-profile-setup" className="text-primary font-bold hover:underline">Google Hotel Ads integration</Link> to maximize direct profit margins.
+            At Joy Digital, we combine hospitality design elegance with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">custom web engineering</Link>, <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">hotel search optimization</Link>, and <Link href="/google-business-profile-setup" className="text-[#C9F600] font-bold hover:underline">Google Hotel Ads integration</Link> to maximize direct profit margins.
           </p>
         </div>
       }

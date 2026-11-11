@@ -69,7 +69,7 @@ export default function SafariWebPage() {
           <p>
             Joy Digital is the expert custom website development partner for Safari operators, wildlife tourism businesses, and lodges. We build premium, immersive, and high-trust websites designed to convert global safari enquiries.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Features Every Safari Website Needs</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Features Every Safari Website Needs</h3>
           <p>
             Unlike standard travel agencies, safari operators require unique digital features: beautiful day-by-day visual itineraries, detailed accommodation and camp showcases, easy-to-update seasonal rate tables, and immersive wildlife photo galleries. 
           </p>

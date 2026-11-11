@@ -54,13 +54,13 @@ export const INDUSTRIES_DATA: IndustryItem[] = [
         title: "New Tour Enquiry",
         subtitle: "Serengeti 7-Day Safari • WhatsApp",
         icon: "fa-brands fa-whatsapp",
-        badgeColor: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
+        badgeColor: "bg-[#C9F600]/15 text-[#C9F600] border-[#C9F600]/30",
       },
       {
         title: "Mobile PageSpeed",
         subtitle: "99/100 Core Web Vitals",
         icon: "fa-solid fa-bolt",
-        badgeColor: "bg-amber-500/20 text-amber-400 border-amber-500/30",
+        badgeColor: "bg-[#C9F600]/15 text-[#C9F600] border-[#C9F600]/30",
       },
     ],
   },
@@ -83,13 +83,13 @@ export const INDUSTRIES_DATA: IndustryItem[] = [
         title: "Appointment Booked",
         subtitle: "Dr. Consultation • Today 11:30 AM",
         icon: "fa-solid fa-circle-check",
-        badgeColor: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
+        badgeColor: "bg-[#C9F600]/15 text-[#C9F600] border-[#C9F600]/30",
       },
       {
         title: "Patient Trust Score",
         subtitle: "4.9★ Google Reviews (380+)",
         icon: "fa-solid fa-star",
-        badgeColor: "bg-purple-500/20 text-purple-300 border-purple-500/30",
+        badgeColor: "bg-[#C9F600]/15 text-[#C9F600] border-[#C9F600]/30",
       },
     ],
   },
@@ -112,13 +112,13 @@ export const INDUSTRIES_DATA: IndustryItem[] = [
         title: "Brochure Downloaded",
         subtitle: "Luxury 3BHK Villa • Phone Verified",
         icon: "fa-solid fa-download",
-        badgeColor: "bg-purple-500/20 text-purple-300 border-purple-500/30",
+        badgeColor: "bg-[#C9F600]/15 text-[#C9F600] border-[#C9F600]/30",
       },
       {
         title: "3D Virtual Tour",
         subtitle: "Active Immersive Walkthrough",
         icon: "fa-solid fa-eye",
-        badgeColor: "bg-blue-500/20 text-blue-400 border-blue-500/30",
+        badgeColor: "bg-[#C9F600]/15 text-[#C9F600] border-[#C9F600]/30",
       },
     ],
   },
@@ -141,13 +141,13 @@ export const INDUSTRIES_DATA: IndustryItem[] = [
         title: "New Admission Application",
         subtitle: "Batch 2026-27 • Verification Done",
         icon: "fa-solid fa-user-plus",
-        badgeColor: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
+        badgeColor: "bg-[#C9F600]/15 text-[#C9F600] border-[#C9F600]/30",
       },
       {
         title: "Curriculum Downloads",
         subtitle: "1,240+ Prospective Parents",
         icon: "fa-solid fa-file-pdf",
-        badgeColor: "bg-amber-500/20 text-amber-400 border-amber-500/30",
+        badgeColor: "bg-[#C9F600]/15 text-[#C9F600] border-[#C9F600]/30",
       },
     ],
   },
@@ -170,13 +170,13 @@ export const INDUSTRIES_DATA: IndustryItem[] = [
         title: "Order Confirmed",
         subtitle: "₹4,890 • Instant UPI Payment",
         icon: "fa-solid fa-bag-shopping",
-        badgeColor: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
+        badgeColor: "bg-[#C9F600]/15 text-[#C9F600] border-[#C9F600]/30",
       },
       {
         title: "Cart Recovery Engine",
         subtitle: "+28% Automated Recoveries",
         icon: "fa-solid fa-rotate-left",
-        badgeColor: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
+        badgeColor: "bg-[#C9F600]/15 text-[#C9F600] border-[#C9F600]/30",
       },
     ],
   },
@@ -199,13 +199,13 @@ export const INDUSTRIES_DATA: IndustryItem[] = [
         title: "Table Reserved",
         subtitle: "Party of 4 • Tonight 7:30 PM",
         icon: "fa-solid fa-utensils",
-        badgeColor: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
+        badgeColor: "bg-[#C9F600]/15 text-[#C9F600] border-[#C9F600]/30",
       },
       {
         title: "Google Maps Footfall",
         subtitle: "#1 Local Dining Rank • +45% Visits",
         icon: "fa-solid fa-location-arrow",
-        badgeColor: "bg-amber-500/20 text-amber-400 border-amber-500/30",
+        badgeColor: "bg-[#C9F600]/15 text-[#C9F600] border-[#C9F600]/30",
       },
     ],
   },
@@ -271,20 +271,20 @@ export default function IndustrySpecializationSection() {
   return (
     <section
       id="industry-specialization"
-      className="py-16 lg:py-20 bg-white border-b border-[#E9E4F2] relative z-10 overflow-hidden"
+      className="py-16 lg:py-20 bg-[#3B1580] text-[#FFFFFF] border-b border-[#FFFFFF]/15 relative z-10 overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="max-w-3xl mb-12 lg:mb-16 text-left">
-          <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">
+          <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
             INDUSTRY SPECIALIZATION
           </span>
-          <h2 className="text-3xl lg:text-4xl font-extrabold text-[#1F1B2D] mb-4 leading-tight tracking-tight">
+          <h2 className="text-3xl lg:text-4xl font-extrabold text-[#FFFFFF] mb-4 leading-tight tracking-tight">
             Websites Built for How Your Industry Converts
           </h2>
-          <p className="text-sm sm:text-base text-[#6B6478] font-medium leading-relaxed max-w-2xl">
+          <p className="text-sm sm:text-base text-[#FFFFFF]/80 font-medium leading-relaxed max-w-2xl">
             Every industry has different customers and different conversion triggers. We design websites around how your buyers actually decide.
           </p>
         </div>
@@ -317,16 +317,16 @@ export default function IndustrySpecializationSection() {
                     onKeyDown={(e) => handleKeyDown(e, idx)}
                     className={`group shrink-0 snap-start flex items-center justify-between text-left px-4 py-3 sm:py-3.5 rounded-2xl font-bold text-xs sm:text-sm transition-all duration-200 cursor-pointer border ${
                       isActive
-                        ? "bg-[#7C3AED] text-white border-[#7C3AED] shadow-lg shadow-purple-600/20 translate-x-0 lg:translate-x-1"
-                        : "bg-[#FAF9FF] hover:bg-[#F3F0FF] text-[#1F1B2D] border-[#E9E4F2] hover:border-[#7C3AED]/30"
+                        ? "bg-[#C9F600] text-[#3B1580] border-[#C9F600] shadow-lg shadow-[#C9F600]/25 translate-x-0 lg:translate-x-1"
+                        : "bg-[#3B1580] hover:bg-[#3B1580]/80 text-[#FFFFFF] border-[#FFFFFF]/20 hover:border-[#C9F600] hover:text-[#C9F600]"
                     }`}
                   >
                     <div className="flex items-center gap-3">
                       <div
                         className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 text-sm transition-colors ${
                           isActive
-                            ? "bg-white/20 text-white"
-                            : "bg-white text-[#7C3AED] border border-[#E9E4F2] group-hover:border-[#7C3AED]/40"
+                            ? "bg-[#3B1580] text-[#C9F600]"
+                            : "bg-[#3B1580] text-[#FFFFFF] border border-[#FFFFFF]/20 group-hover:border-[#C9F600] group-hover:text-[#C9F600]"
                         }`}
                       >
                         <i className={ind.iconClass} />
@@ -337,7 +337,7 @@ export default function IndustrySpecializationSection() {
                     {/* Active accent chevron (Desktop only) */}
                     <i
                       className={`fa-solid fa-chevron-right text-xs transition-transform hidden lg:block ${
-                        isActive ? "opacity-100 translate-x-0 text-white" : "opacity-0 -translate-x-1 text-slate-400"
+                        isActive ? "opacity-100 translate-x-0 text-[#3B1580]" : "opacity-0 -translate-x-1 text-[#FFFFFF]/30"
                       }`}
                     />
                   </button>
@@ -359,10 +359,10 @@ export default function IndustrySpecializationSection() {
               {/* Feature Bullets & CTAs */}
               <div className="md:col-span-6 space-y-6 text-left">
                 <div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#7C3AED] block mb-1">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#C9F600] block mb-1">
                     Industry Feature Focus
                   </span>
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-[#1F1B2D] leading-snug">
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-[#FFFFFF] leading-snug">
                     {currentIndustry.name} Conversion Blueprint
                   </h3>
                 </div>
@@ -372,12 +372,12 @@ export default function IndustrySpecializationSection() {
                   {currentIndustry.bullets.map((bullet, bIdx) => (
                     <li
                       key={bIdx}
-                      className="flex items-center gap-3.5 bg-[#FAF9FF] border border-[#E9E4F2] p-3 sm:p-3.5 rounded-2xl hover:border-[#7C3AED]/40 transition-colors shadow-2xs"
+                      className="flex items-center gap-3.5 bg-[#3B1580] border border-[#FFFFFF]/20 p-3 sm:p-3.5 rounded-2xl hover:border-[#C9F600] transition-colors"
                     >
-                      <div className="w-8 h-8 rounded-xl bg-purple-100/80 text-[#7C3AED] flex items-center justify-center shrink-0 text-xs shadow-2xs">
+                      <div className="w-8 h-8 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center shrink-0 text-xs">
                         <i className={bullet.icon} />
                       </div>
-                      <span className="text-xs sm:text-[13px] font-bold text-[#1F1B2D] leading-tight">
+                      <span className="text-xs sm:text-[13px] font-bold text-[#FFFFFF] leading-tight">
                         {bullet.text}
                       </span>
                     </li>
@@ -388,7 +388,7 @@ export default function IndustrySpecializationSection() {
                 <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                   <Link
                     href={`/web-design-for-${currentIndustry.slug}`}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md shadow-purple-600/20 transition-all hover:-translate-y-0.5 active:scale-95 text-center"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#C9F600] hover:opacity-90 text-[#3B1580] font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md transition-all hover:-translate-y-0.5 active:scale-95 text-center"
                   >
                     <span>See {currentIndustry.name} Websites We Built</span>
                     <ArrowRight className="w-4 h-4 shrink-0" />
@@ -396,7 +396,7 @@ export default function IndustrySpecializationSection() {
 
                   <Link
                     href="/contact?service=audit"
-                    className="inline-flex items-center justify-center gap-1.5 text-xs sm:text-sm font-bold text-[#7C3AED] hover:text-[#6D28D9] hover:underline px-2 py-2 text-center transition-colors cursor-pointer"
+                    className="inline-flex items-center justify-center gap-1.5 text-xs sm:text-sm font-bold text-[#C9F600] hover:underline px-2 py-2 text-center transition-colors cursor-pointer"
                   >
                     <span>Get a Free Website Audit</span>
                     <i className="fa-solid fa-arrow-up-right-from-square text-[10px]" />
@@ -407,18 +407,18 @@ export default function IndustrySpecializationSection() {
               {/* Dynamic Preview Card (Navy to Purple Gradient, 24px radius, soft shadow, subtle glow) */}
               <div className="md:col-span-6 relative">
                 {/* Subtle Ambient Glow */}
-                <div className="absolute -top-12 -right-12 w-48 h-48 bg-[#7C3AED]/25 rounded-full blur-3xl pointer-events-none" />
+                
 
-                <div className="relative bg-gradient-to-br from-[#160E2E] via-[#1E143E] to-[#120B24] rounded-[24px] p-6 sm:p-7 border border-[#352562]/70 shadow-2xl overflow-hidden text-left text-white">
+                <div className="relative bg-[#3B1580] rounded-[24px] p-6 sm:p-7 border border-[#FFFFFF]/25 shadow-2xl overflow-hidden text-left text-[#FFFFFF]">
                   
                   {/* Card Window Header */}
                   <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
                     <div className="flex gap-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#FFFFFF]/40" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#FFFFFF]/40" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#FFFFFF]/40" />
                     </div>
-                    <div className="text-[10px] font-mono font-bold tracking-wider text-purple-300/80 uppercase">
+                    <div className="text-[10px] font-mono font-bold tracking-wider text-[#FFFFFF]/70 uppercase">
                       {currentIndustry.name} Engine
                     </div>
                   </div>
@@ -426,20 +426,20 @@ export default function IndustrySpecializationSection() {
                   {/* Large Icon & Headline Metric */}
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center gap-3.5">
-                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#7C3AED] to-indigo-600 flex items-center justify-center text-white text-xl shadow-lg shadow-purple-900/50 border border-white/20 shrink-0">
+                      <div className="w-12 h-12 rounded-2xl bg-[#3B1580] border border-[#FFFFFF]/25 flex items-center justify-center text-[#C9F600] text-xl shadow-lg shrink-0">
                         <i className={currentIndustry.iconClass} />
                       </div>
                       <div>
-                        <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-100 to-emerald-400 tracking-tight leading-none">
+                        <div className="text-3xl sm:text-4xl font-black text-[#C9F600] tracking-tight leading-none">
                           {currentIndustry.headlineMetric}
                         </div>
-                        <span className="text-[11px] font-bold text-slate-300 uppercase tracking-wider block mt-1">
+                        <span className="text-[11px] font-bold text-[#FFFFFF]/80 uppercase tracking-wider block mt-1">
                           {currentIndustry.metricLabel}
                         </span>
                       </div>
                     </div>
 
-                    <p className="text-xs sm:text-[12.5px] text-slate-300 font-medium leading-relaxed">
+                    <p className="text-xs sm:text-[12.5px] text-[#FFFFFF]/90 font-medium leading-relaxed">
                       {currentIndustry.resultDescription}
                     </p>
                   </div>
@@ -449,17 +449,17 @@ export default function IndustrySpecializationSection() {
                     {currentIndustry.miniCards.map((mini, mIdx) => (
                       <div
                         key={mIdx}
-                        className="bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 rounded-2xl p-3 sm:p-3.5 transition-colors backdrop-blur-xs flex flex-col justify-between"
+                        className="bg-[#3B1580] hover:bg-[#3B1580]/80 border border-[#FFFFFF]/20 rounded-2xl p-3 sm:p-3.5 transition-colors flex flex-col justify-between"
                       >
                         <div className="flex items-center justify-between gap-2 mb-2">
-                          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                          <span className="text-[10px] font-bold text-[#FFFFFF]/70 uppercase tracking-wider">
                             {mini.title}
                           </span>
                           <span className={`w-6 h-6 rounded-lg flex items-center justify-center text-[10px] border ${mini.badgeColor}`}>
                             <i className={mini.icon} />
                           </span>
                         </div>
-                        <div className="text-xs font-bold text-white tracking-tight leading-snug">
+                        <div className="text-xs font-bold text-[#FFFFFF] tracking-tight leading-snug">
                           {mini.subtitle}
                         </div>
                       </div>

@@ -387,7 +387,7 @@ export default function AfricaTourismClientPage() {
 
       <main className="pt-20 lg:pt-24">
         {/* HERO SECTION */}
-        <section className="relative pt-4 sm:pt-6 lg:pt-8 pb-12 lg:pb-16 overflow-hidden bg-white">
+        <section className="relative pt-4 sm:pt-6 lg:pt-8 pb-12 lg:pb-16 overflow-hidden bg-primary">
           <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
           <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
@@ -398,9 +398,9 @@ export default function AfricaTourismClientPage() {
               {/* Breadcrumb navigation */}
               <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-[10px] font-bold text-text-muted mb-4 uppercase tracking-widest">
                 <Link href="/" className="hover:text-accent transition-colors">Home</Link>
-                <span className="text-gray-300">/</span>
+                <span className="text-secondary">/</span>
                 <span className="text-text-muted">Africa</span>
-                <span className="text-gray-300">/</span>
+                <span className="text-secondary">/</span>
                 <span className="text-primary-dark">Tourism Website Development</span>
               </nav>
 
@@ -442,7 +442,7 @@ export default function AfricaTourismClientPage() {
                       target.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
-                  className="w-full sm:w-auto bg-light-bg hover:bg-gray-200 text-primary-dark font-bold text-xs px-8 py-4 rounded-full border border-[#E5E7EB] shadow-sm hover:-translate-y-0.5 transition-all duration-300 text-center cursor-pointer"
+                  className="w-full sm:w-auto bg-light-bg hover:bg-[#260B5E] text-primary-dark font-bold text-xs px-8 py-4 rounded-full border border-white/[0.18] shadow-sm hover:-translate-y-0.5 transition-all duration-300 text-center cursor-pointer"
                 >
                   Get Free Website Audit
                 </button>
@@ -460,24 +460,24 @@ export default function AfricaTourismClientPage() {
               </div>
 
               {/* Target Markets */}
-              <div className="pt-6 border-t border-gray-100 w-full">
+              <div className="pt-6 border-t border-white/[0.12] w-full">
                 <span className="text-[11px] font-extrabold text-primary-dark uppercase tracking-wider block mb-2">
                   Target International Audiences:
                 </span>
                 <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-text-secondary">
-                  <span className="bg-slate-100 text-primary-dark px-3 py-1 rounded-full border border-slate-200">🇪🇺 Europe</span>
-                  <span className="bg-slate-100 text-primary-dark px-3 py-1 rounded-full border border-slate-200">🇬🇧 UK</span>
-                  <span className="bg-slate-100 text-primary-dark px-3 py-1 rounded-full border border-slate-200">🇺🇸 USA</span>
-                  <span className="bg-slate-100 text-primary-dark px-3 py-1 rounded-full border border-slate-200">🇨🇦 Canada</span>
-                  <span className="bg-slate-100 text-primary-dark px-3 py-1 rounded-full border border-slate-200">🇦🇺 Australia</span>
-                  <span className="bg-slate-100 text-primary-dark px-3 py-1 rounded-full border border-slate-200">🌍 Global Travellers</span>
+                  <span className="bg-primary-dark text-primary-dark px-3 py-1 rounded-full border border-white/[0.18]">🇪🇺 Europe</span>
+                  <span className="bg-primary-dark text-primary-dark px-3 py-1 rounded-full border border-white/[0.18]">🇬🇧 UK</span>
+                  <span className="bg-primary-dark text-primary-dark px-3 py-1 rounded-full border border-white/[0.18]">🇺🇸 USA</span>
+                  <span className="bg-primary-dark text-primary-dark px-3 py-1 rounded-full border border-white/[0.18]">🇨🇦 Canada</span>
+                  <span className="bg-primary-dark text-primary-dark px-3 py-1 rounded-full border border-white/[0.18]">🇦🇺 Australia</span>
+                  <span className="bg-primary-dark text-primary-dark px-3 py-1 rounded-full border border-white/[0.18]">🌍 Global Travellers</span>
                 </div>
               </div>
             </div>
 
             {/* Hero Visual Container */}
             <div className="lg:col-span-5 flex flex-col items-center">
-              <div className="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-[#E5E7EB] bg-slate-900 group">
+              <div className="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-white/[0.18] bg-slate-900 group">
                 <div className="relative h-[380px] sm:h-[440px] w-full">
                   <Image
                     src="/assets/images/african-safari-hero.png"
@@ -491,12 +491,12 @@ export default function AfricaTourismClientPage() {
                 </div>
 
                 {/* Floating Badge overlays */}
-                <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/40 shadow-lg flex items-center gap-2">
+                <div className="absolute top-4 right-4 bg-primary/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/40 shadow-lg flex items-center gap-2">
                   <span className="w-2 h-2 bg-emerald-500 rounded-full animate-ping" />
                   <span className="text-[11px] font-extrabold text-primary-dark uppercase">Sub-1.2s Page Speed</span>
                 </div>
 
-                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-xl flex items-center justify-between">
+                <div className="absolute bottom-4 left-4 right-4 bg-primary/95 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-xl flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-lg">
                       <i className="fa-solid fa-paw" />
@@ -516,16 +516,16 @@ export default function AfricaTourismClientPage() {
         </section>
 
         {/* INTRODUCTION SECTION */}
-        <section className="py-16 lg:py-24 bg-light-bg">
+        <section className="py-16 lg:py-24 bg-[#260B5E] border-y border-[#FFFFFF]/15 text-[#FFFFFF]">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <span className="text-xs font-bold text-accent uppercase tracking-widest block mb-3">
               Conversion Engineering & SEO Growth
             </span>
-            <h2 className="text-2xl md:text-4xl font-extrabold text-primary-dark mb-6">
+            <h2 className="text-2xl md:text-4xl font-extrabold text-[#FFFFFF] mb-6">
               Build a Tourism Website That Converts Visitors Into Enquiries
             </h2>
-            <div className="prose prose-blue max-w-none text-base text-text-secondary leading-relaxed space-y-6 text-left sm:text-center">
-              <p className="text-base sm:text-lg font-medium text-primary-dark">
+            <div className="prose prose-invert max-w-none text-base text-[#FFFFFF]/85 leading-relaxed space-y-6 text-left sm:text-center">
+              <p className="text-base sm:text-lg font-medium text-[#FFFFFF]">
                 Your tourism website should do more than showcase beautiful destinations.
               </p>
               <p>
@@ -534,8 +534,8 @@ export default function AfricaTourismClientPage() {
               <p>
                 Joy Digital creates <strong>custom tourism website development</strong> and modern <strong>tourism website design Africa</strong> solutions designed specifically for African tourism businesses serving international travellers.
               </p>
-              <div className="bg-white border border-[#E5E7EB] p-6 rounded-2xl shadow-sm text-xs sm:text-sm text-text-secondary leading-relaxed mt-6">
-                <p className="font-semibold text-primary-dark mb-2">
+              <div className="bg-[#3B1580] border border-[#FFFFFF]/20 p-6 rounded-2xl shadow-sm text-xs sm:text-sm text-[#FFFFFF]/85 leading-relaxed mt-6 not-prose">
+                <p className="font-semibold text-[#FFFFFF] mb-2">
                   Leading Partner for <strong>Tourism Website Development Africa</strong> & <strong>Travel Website Development Africa</strong>
                 </p>
                 <p>
@@ -547,7 +547,7 @@ export default function AfricaTourismClientPage() {
         </section>
 
         {/* TOURISM BUSINESS TYPES */}
-        <section className="py-16 lg:py-24 bg-white">
+        <section className="py-16 lg:py-24 bg-primary">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-xs font-bold text-accent uppercase tracking-widest block mb-3">
@@ -565,14 +565,14 @@ export default function AfricaTourismClientPage() {
               {TOURISM_BUSINESS_TYPES.map((biz, idx) => (
                 <div
                   key={idx}
-                  className="bg-white border border-[#E5E7EB] rounded-2xl p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+                  className="bg-primary border border-white/[0.18] rounded-2xl p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-6">
                       <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-xl group-hover:bg-accent group-hover:text-white transition-colors duration-300">
                         <i className={biz.icon} />
                       </div>
-                      <span className="text-[10px] font-extrabold bg-slate-100 text-primary-dark px-3 py-1 rounded-full uppercase tracking-wider">
+                      <span className="text-[10px] font-extrabold bg-primary-dark text-primary-dark px-3 py-1 rounded-full uppercase tracking-wider">
                         {biz.tag}
                       </span>
                     </div>
@@ -583,7 +583,7 @@ export default function AfricaTourismClientPage() {
                       {biz.description}
                     </p>
                   </div>
-                  <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                  <div className="mt-6 pt-4 border-t border-white/[0.12] flex items-center justify-between">
                     <span className="text-xs font-bold text-accent group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                       Learn More &rarr;
                     </span>
@@ -613,7 +613,7 @@ export default function AfricaTourismClientPage() {
               {TOURISM_FEATURES.map((feat, idx) => (
                 <div
                   key={idx}
-                  className="bg-white border border-[#E5E7EB] rounded-xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+                  className="bg-primary border border-white/[0.18] rounded-xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
                 >
                   <div>
                     <div className="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center text-lg mb-4">
@@ -629,7 +629,7 @@ export default function AfricaTourismClientPage() {
         </section>
 
         {/* ADMIN PANEL SECTION */}
-        <section className="py-16 lg:py-24 bg-white">
+        <section className="py-16 lg:py-24 bg-primary">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-6 flex flex-col items-start">
@@ -645,7 +645,7 @@ export default function AfricaTourismClientPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                   {ADMIN_FUNCTIONS.map((fn, idx) => (
-                    <div key={idx} className="flex items-start gap-3 bg-light-bg p-3.5 rounded-xl border border-[#E5E7EB]">
+                    <div key={idx} className="flex items-start gap-3 bg-light-bg p-3.5 rounded-xl border border-white/[0.18]">
                       <div className="w-7 h-7 rounded-lg bg-accent/10 text-accent flex items-center justify-center text-xs shrink-0 mt-0.5">
                         <i className={fn.icon} />
                       </div>
@@ -740,20 +740,20 @@ export default function AfricaTourismClientPage() {
             </div>
 
             {/* Target Countries Ribbon */}
-            <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm mb-12 flex flex-wrap items-center justify-center gap-4 text-center">
+            <div className="bg-primary border border-white/[0.18] rounded-2xl p-6 shadow-sm mb-12 flex flex-wrap items-center justify-center gap-4 text-center">
               <span className="text-xs font-extrabold text-primary-dark uppercase tracking-wider">Target Geographies:</span>
-              <span className="bg-slate-100 text-primary-dark font-extrabold text-xs px-4 py-2 rounded-full border border-slate-200">Europe</span>
-              <span className="bg-slate-100 text-primary-dark font-extrabold text-xs px-4 py-2 rounded-full border border-slate-200">UK</span>
-              <span className="bg-slate-100 text-primary-dark font-extrabold text-xs px-4 py-2 rounded-full border border-slate-200">USA</span>
-              <span className="bg-slate-100 text-primary-dark font-extrabold text-xs px-4 py-2 rounded-full border border-slate-200">Canada</span>
-              <span className="bg-slate-100 text-primary-dark font-extrabold text-xs px-4 py-2 rounded-full border border-slate-200">Australia</span>
+              <span className="bg-primary-dark text-primary-dark font-extrabold text-xs px-4 py-2 rounded-full border border-white/[0.18]">Europe</span>
+              <span className="bg-primary-dark text-primary-dark font-extrabold text-xs px-4 py-2 rounded-full border border-white/[0.18]">UK</span>
+              <span className="bg-primary-dark text-primary-dark font-extrabold text-xs px-4 py-2 rounded-full border border-white/[0.18]">USA</span>
+              <span className="bg-primary-dark text-primary-dark font-extrabold text-xs px-4 py-2 rounded-full border border-white/[0.18]">Canada</span>
+              <span className="bg-primary-dark text-primary-dark font-extrabold text-xs px-4 py-2 rounded-full border border-white/[0.18]">Australia</span>
               <span className="bg-accent/10 text-accent-dark font-extrabold text-xs px-4 py-2 rounded-full border border-accent/20">International Travellers</span>
             </div>
 
             {/* Highlights Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               {INTERNATIONAL_HIGHLIGHTS.map((hl, idx) => (
-                <div key={idx} className="bg-white border border-[#E5E7EB] rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div key={idx} className="bg-primary border border-white/[0.18] rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                   <div>
                     <div className="w-8 h-8 rounded-lg bg-accent/10 text-accent flex items-center justify-center text-sm mb-3 font-bold">
                       {idx + 1}
@@ -768,7 +768,7 @@ export default function AfricaTourismClientPage() {
         </section>
 
         {/* AFRICA COUNTRIES */}
-        <section className="py-16 lg:py-24 bg-white">
+        <section className="py-16 lg:py-24 bg-primary">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-xs font-bold text-accent uppercase tracking-widest block mb-3">
@@ -786,7 +786,7 @@ export default function AfricaTourismClientPage() {
               {AFRICA_COUNTRIES.map((country, idx) => (
                 <div
                   key={idx}
-                  className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex items-center gap-4 group"
+                  className="bg-primary border border-white/[0.18] rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex items-center gap-4 group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl shrink-0 group-hover:bg-accent group-hover:text-white transition-colors">
                     <i className={country.icon} />
@@ -823,7 +823,7 @@ export default function AfricaTourismClientPage() {
               {WHY_JOY_DIGITAL.map((item, idx) => (
                 <div
                   key={idx}
-                  className="bg-white border border-[#E5E7EB] rounded-2xl p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                  className="bg-primary border border-white/[0.18] rounded-2xl p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col"
                 >
                   <div className="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl mb-6">
                     <i className={item.icon} />
@@ -837,7 +837,7 @@ export default function AfricaTourismClientPage() {
         </section>
 
         {/* PROCESS */}
-        <section className="py-16 lg:py-24 bg-white">
+        <section className="py-16 lg:py-24 bg-primary">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-xs font-bold text-accent uppercase tracking-widest block mb-3">
@@ -853,7 +853,7 @@ export default function AfricaTourismClientPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {PROCESS_STEPS.map((step, idx) => (
-                <div key={idx} className="bg-white border border-[#E5E7EB] rounded-2xl p-8 shadow-sm hover:shadow-md transition-all relative flex flex-col justify-between">
+                <div key={idx} className="bg-primary border border-white/[0.18] rounded-2xl p-8 shadow-sm hover:shadow-md transition-all relative flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-6">
                       <div className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center text-xl font-bold">
@@ -887,7 +887,7 @@ export default function AfricaTourismClientPage() {
                 </p>
 
                 <div className="space-y-4 w-full">
-                  <div className="flex items-start gap-3 bg-white p-4 rounded-xl border border-[#E5E7EB] shadow-sm">
+                  <div className="flex items-start gap-3 bg-primary p-4 rounded-xl border border-white/[0.18] shadow-sm">
                     <span className="text-emerald-500 text-lg mt-0.5"><i className="fa-solid fa-circle-check" /></span>
                     <div>
                       <h4 className="text-xs font-extrabold text-primary-dark">Mobile Experience & Speed Audit</h4>
@@ -895,7 +895,7 @@ export default function AfricaTourismClientPage() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 bg-white p-4 rounded-xl border border-[#E5E7EB] shadow-sm">
+                  <div className="flex items-start gap-3 bg-primary p-4 rounded-xl border border-white/[0.18] shadow-sm">
                     <span className="text-emerald-500 text-lg mt-0.5"><i className="fa-solid fa-circle-check" /></span>
                     <div>
                       <h4 className="text-xs font-extrabold text-primary-dark">Enquiry Conversion Review</h4>
@@ -903,7 +903,7 @@ export default function AfricaTourismClientPage() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 bg-white p-4 rounded-xl border border-[#E5E7EB] shadow-sm">
+                  <div className="flex items-start gap-3 bg-primary p-4 rounded-xl border border-white/[0.18] shadow-sm">
                     <span className="text-emerald-500 text-lg mt-0.5"><i className="fa-solid fa-circle-check" /></span>
                     <div>
                       <h4 className="text-xs font-extrabold text-primary-dark">Google SEO & Search Visibility</h4>
@@ -915,7 +915,7 @@ export default function AfricaTourismClientPage() {
 
               {/* Form Container */}
               <div className="lg:col-span-7 flex justify-center">
-                <div className="bg-white border border-[#E9E4F2] p-6 sm:p-8 rounded-3xl shadow-2xl w-full max-w-xl relative overflow-hidden">
+                <div className="bg-primary border border-[#E9E4F2] p-6 sm:p-8 rounded-3xl shadow-2xl w-full max-w-xl relative overflow-hidden">
                   <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#7C3AED] via-[#A78BFA] to-[#F97316]" />
 
                   <h3 className="text-xl font-extrabold text-primary-dark mb-1">Request Free Website Audit</h3>
@@ -1099,7 +1099,7 @@ export default function AfricaTourismClientPage() {
         </section>
 
         {/* PORTFOLIO SECTION */}
-        <section className="py-16 lg:py-24 bg-white">
+        <section className="py-16 lg:py-24 bg-primary">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-xs font-bold text-accent uppercase tracking-widest block mb-3">
@@ -1114,7 +1114,7 @@ export default function AfricaTourismClientPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              <div className="bg-white border border-[#E5E7EB] rounded-2xl p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+              <div className="bg-primary border border-white/[0.18] rounded-2xl p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                 <div>
                   <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 font-extrabold text-[10px] uppercase px-3 py-1 rounded-full mb-4">
                     <span>Safari Tour Platform Architecture</span>
@@ -1148,7 +1148,7 @@ export default function AfricaTourismClientPage() {
                 </Link>
               </div>
 
-              <div className="bg-white border border-[#E5E7EB] rounded-2xl p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+              <div className="bg-primary border border-white/[0.18] rounded-2xl p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                 <div>
                   <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 font-extrabold text-[10px] uppercase px-3 py-1 rounded-full mb-4">
                     <span>Lodge & Resort Platform Architecture</span>
@@ -1205,7 +1205,7 @@ export default function AfricaTourismClientPage() {
         </section>
 
         {/* FINAL CTA SECTION */}
-        <section className="relative py-20 bg-white border border-[#E5E7EB] overflow-hidden rounded-[24px] mx-6 lg:mx-12 my-16 shadow-md">
+        <section className="relative py-20 bg-primary border border-white/[0.18] overflow-hidden rounded-[24px] mx-6 lg:mx-12 my-16 shadow-md">
           <div className="absolute inset-0 bg-grid-pattern opacity-[0.04] pointer-events-none" />
 
           <div className="relative max-w-4xl mx-auto px-6 text-center z-10">
@@ -1246,29 +1246,29 @@ export default function AfricaTourismClientPage() {
         </section>
 
         {/* INTERNAL LINKING FOOTER RIBBON */}
-        <section className="py-12 bg-light-bg border-t border-gray-200">
+        <section className="py-12 bg-[#3B1580] border-t border-[#FFFFFF]/15 text-[#FFFFFF]">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-wrap items-center justify-center gap-3 text-xs">
-              <span className="font-extrabold text-primary-dark mr-2">Explore Joy Digital Services:</span>
-              <Link href="/web-design-services" className="text-text-secondary hover:text-accent border border-gray-200 bg-white px-3 py-1 rounded-full transition-colors">
+              <span className="font-extrabold text-[#FFFFFF] mr-2">Explore Joy Digital Services:</span>
+              <Link href="/web-design-services" className="text-[#FFFFFF] hover:text-[#3B1580] hover:bg-[#C9F600] hover:border-[#C9F600] border border-[#FFFFFF]/20 bg-[#260B5E] px-3 py-1 rounded-full transition-colors">
                 Website Design
               </Link>
-              <Link href="/website-development" className="text-text-secondary hover:text-accent border border-gray-200 bg-white px-3 py-1 rounded-full transition-colors">
+              <Link href="/website-development" className="text-[#FFFFFF] hover:text-[#3B1580] hover:bg-[#C9F600] hover:border-[#C9F600] border border-[#FFFFFF]/20 bg-[#260B5E] px-3 py-1 rounded-full transition-colors">
                 Web Development
               </Link>
-              <Link href="/seo-services" className="text-text-secondary hover:text-accent border border-gray-200 bg-white px-3 py-1 rounded-full transition-colors">
+              <Link href="/seo-services" className="text-[#FFFFFF] hover:text-[#3B1580] hover:bg-[#C9F600] hover:border-[#C9F600] border border-[#FFFFFF]/20 bg-[#260B5E] px-3 py-1 rounded-full transition-colors">
                 SEO Services
               </Link>
-              <Link href="/digital-marketing-agency-in-chennai" className="text-text-secondary hover:text-accent border border-gray-200 bg-white px-3 py-1 rounded-full transition-colors">
+              <Link href="/digital-marketing-agency-in-chennai" className="text-[#FFFFFF] hover:text-[#3B1580] hover:bg-[#C9F600] hover:border-[#C9F600] border border-[#FFFFFF]/20 bg-[#260B5E] px-3 py-1 rounded-full transition-colors">
                 Digital Marketing
               </Link>
-              <Link href="/portfolio" className="text-text-secondary hover:text-accent border border-gray-200 bg-white px-3 py-1 rounded-full transition-colors">
+              <Link href="/portfolio" className="text-[#FFFFFF] hover:text-[#3B1580] hover:bg-[#C9F600] hover:border-[#C9F600] border border-[#FFFFFF]/20 bg-[#260B5E] px-3 py-1 rounded-full transition-colors">
                 Portfolio
               </Link>
-              <Link href="/blog" className="text-text-secondary hover:text-accent border border-gray-200 bg-white px-3 py-1 rounded-full transition-colors">
+              <Link href="/blog" className="text-[#FFFFFF] hover:text-[#3B1580] hover:bg-[#C9F600] hover:border-[#C9F600] border border-[#FFFFFF]/20 bg-[#260B5E] px-3 py-1 rounded-full transition-colors">
                 Blog
               </Link>
-              <Link href="/contact" className="text-text-secondary hover:text-accent border border-gray-200 bg-white px-3 py-1 rounded-full transition-colors">
+              <Link href="/contact" className="text-[#FFFFFF] hover:text-[#3B1580] hover:bg-[#C9F600] hover:border-[#C9F600] border border-[#FFFFFF]/20 bg-[#260B5E] px-3 py-1 rounded-full transition-colors">
                 Contact
               </Link>
             </div>

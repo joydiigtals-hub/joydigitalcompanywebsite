@@ -71,37 +71,37 @@ export default function LawFirmWebPage() {
           <p>
             However, many legal websites look sterile, load slowly on mobile devices, display outdated attorney bios, and lack clear confidential case submission forms or instant phone/WhatsApp routing.
           </p>
-          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
-            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Law Firm Websites</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting Law Firm Websites</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Confidential Case Evaluation Forms</strong>: Encrypted client intake workflow</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Practice Area Hubs</strong>: Dedicated landing pages for corporate, IP, litigation & tax</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Attorney & Partner Bio Profiles</strong>: Education, bar admissions & trial victories</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Local Legal SEO Strategy</strong>: Rank for high-value attorney search queries</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Legal Advisory Schema Markup</strong>: Rich Google Search snippet enhancement</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we combine sophisticated legal branding with <Link href="/website-development" className="text-primary font-bold hover:underline">high-speed Next.js web development</Link>, <Link href="/seo-services" className="text-primary font-bold hover:underline">legal SEO strategies</Link>, and <Link href="/local-seo-services" className="text-primary font-bold hover:underline">Google Business Profile optimization</Link> to position your practice at the forefront of your legal market.
+            At Joy Digital, we combine sophisticated legal branding with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">high-speed Next.js web development</Link>, <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">legal SEO strategies</Link>, and <Link href="/local-seo-services" className="text-[#C9F600] font-bold hover:underline">Google Business Profile optimization</Link> to position your practice at the forefront of your legal market.
           </p>
         </div>
       }

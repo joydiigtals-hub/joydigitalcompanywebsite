@@ -226,7 +226,7 @@ export default async function CustomWebsiteDevelopmentPage() {
             </p>
 
             {/* Architecture Comparison Table */}
-            <h3 className="text-xl font-extrabold text-primary-dark mt-8 mb-4">
+            <h3 className="text-xl font-extrabold text-[#FFFFFF] mt-8 mb-4">
               Custom Next.js &amp; React Build vs. Generic WordPress / Wix Templates
             </h3>
             <div className="overflow-x-auto my-6 not-prose">
@@ -265,7 +265,7 @@ export default async function CustomWebsiteDevelopmentPage() {
 
             {/* Dedicated Chennai Section (as required) */}
             <div className="my-10 p-8 bg-gradient-to-br from-purple-50 via-white to-indigo-50 border-2 border-[#7C3AED]/20 rounded-3xl not-prose text-left">
-              <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#7C3AED] bg-purple-100 px-3 py-1 rounded-full inline-block mb-3">
+              <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#5B21B6] bg-purple-100/90 border border-purple-200 px-3 py-1 rounded-full font-black inline-block mb-3">
                 Serving Chennai Enterprises
               </span>
               <h2 className="text-2xl font-extrabold text-[#1F1B2D] mb-4">
@@ -278,15 +278,15 @@ export default async function CustomWebsiteDevelopmentPage() {
                 <p>
                   We build custom, high-speed websites tailored specifically to Chennai&apos;s commercial landscape:
                 </p>
-                <ul className="list-disc pl-5 space-y-2 text-slate-700">
+                <ul className="list-disc pl-5 space-y-2.5 text-[#4A3E5D]">
                   <li>
-                    <strong>B2B Manufacturing &amp; Industrial Exporters:</strong> Structured product catalogs, technical documentation downloads, and RFQ inquiry funnels built for global procurement officers.
+                    <strong className="text-[#1F1B2D] font-bold">B2B Manufacturing &amp; Industrial Exporters:</strong> Structured product catalogs, technical documentation downloads, and RFQ inquiry funnels built for global procurement officers.
                   </li>
                   <li>
-                    <strong>Healthcare &amp; Diagnostic Clinics:</strong> Proximity-optimized patient appointment systems and local schema integrations that drive daily patient calls.
+                    <strong className="text-[#1F1B2D] font-bold">Healthcare &amp; Diagnostic Clinics:</strong> Proximity-optimized patient appointment systems and local schema integrations that drive daily patient calls.
                   </li>
                   <li>
-                    <strong>Travel &amp; Hospitality Portals:</strong> Interactive multi-step tour planners with instant WhatsApp booking routing, as proven by our work with Adyar-based agency <em>You &amp; Me Voyage</em>.
+                    <strong className="text-[#1F1B2D] font-bold">Travel &amp; Hospitality Portals:</strong> Interactive multi-step tour planners with instant WhatsApp booking routing, as proven by our work with Adyar-based agency <em>You &amp; Me Voyage</em>.
                   </li>
                 </ul>
                 <p className="pt-2">
@@ -295,7 +295,7 @@ export default async function CustomWebsiteDevelopmentPage() {
               </div>
             </div>
 
-            <h3 className="text-xl font-bold text-primary-dark mt-8 mb-4">
+            <h3 className="text-xl font-bold text-[#FFFFFF] mt-8 mb-4">
               Serverless Edge Execution &amp; Global Performance
             </h3>
             <p>

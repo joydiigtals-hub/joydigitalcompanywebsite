@@ -64,7 +64,7 @@ export default async function ToursTravelsWebPage() {
     <ServicePageTemplate
       serviceName="Travel Website Development"
       heroTitle="Custom Travel Agency Website Development Powered by Next.js Travel Engine"
-      h1ClassName="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent"
+
       heroSubtitle="Partner with Joy Digital to build high-converting travel booking systems, bespoke tour package portals, and an intuitive Tour Operator Admin Panel that scales direct tourist inquiries worldwide."
       leadSource="Travel Website Development Landing Page"
       heroCtaText="Request a Travel Website Quote"
@@ -78,35 +78,35 @@ export default async function ToursTravelsWebPage() {
             In the competitive travel and hospitality market, partnering with an experienced development agency is crucial to capturing direct tourist bookings. Joy Digital delivers full-stack <strong>Custom Travel Agency Website Development</strong>, high-converting layouts, and modern <strong>Next.js Travel Engine</strong> web applications tailored for global travel brands.
           </p>
 
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">
             Next.js Travel Engine: Sub-Second Load Times for Global Bookings
           </h3>
           <p>
             If you are searching for the <strong>best website for travel agency</strong> lead generation, off-the-shelf templates and generic <strong>travel agency website builder</strong> software will severely limit your organic visibility. Subscription-based site builders rely on slow, monolithic databases and heavy plugins that trigger slow mobile load times for international travelers. Our custom <strong>Next.js Travel Engine</strong> gives you sub-second edge loading, zero plugin lock-in, and automated itinerary routing that turns international website traffic into paid bookings.
           </p>
 
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">
             Tour Operator Admin Panel: Total Control Over Packages, Pricing &amp; Departures
           </h3>
           <p>
             Tired of contacting developers every time you add a seasonal tour or adjust package rates? Our bespoke <strong>Tour Operator Admin Panel</strong> empowers your operations team to create, edit, and publish rich multi-day itineraries, manage departure schedules, and update high-resolution photo galleries in seconds—all without writing a single line of code.
           </p>
 
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">
             Custom Travel Agency Website Development for Tour Operators &amp; Safari Organizers
           </h3>
           <p>
             Whether you manage domestic package tours or international wildlife expeditions, our custom web portals allow you to showcase day-by-day itineraries, high-resolution destination galleries, inclusions, and downloadable travel guides with dedicated schema for rich Google search snippets.
           </p>
 
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">
             Travel Booking Website Development &amp; WhatsApp Lead Routing
           </h3>
           <p>
             Our travel booking solutions feature direct WhatsApp click-to-chat links, interactive query forms, and automated itinerary downloads. We build specialized engines designed to load in under 1.2s on mobile networks, eliminating the bounce rate common to legacy agency sites.
           </p>
 
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">
             Looking for a Professional Travel Agency Website Redesign?
           </h3>
           <p>

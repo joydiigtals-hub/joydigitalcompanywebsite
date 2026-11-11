@@ -36,23 +36,24 @@ export default function Footer() {
   const contactEmail = siteConfig.email;
 
   return (
-    <footer className="bg-[#F8FAFC] dark:bg-[#0F172A] text-slate-800 dark:text-slate-200 border-t border-slate-200 dark:border-slate-800 pt-16 pb-24 lg:pb-12 mt-auto transition-colors duration-200">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10 border-b border-slate-200 dark:border-slate-800 pb-16">
+    <footer className="bg-[#3B1580] text-[#FFFFFF] border-t border-[#FFFFFF]/20 pt-16 pb-24 lg:pb-12 mt-auto transition-colors duration-200">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10 border-b border-[#FFFFFF]/15 pb-16">
         
         {/* Brand Info */}
         <div className="flex flex-col gap-5 col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-1">
           <Link href={getRegionalHref("/")} title="Joy Digital Home" className="inline-block flex-shrink-0">
             <Image
-              src="/assets/images/logo.webp"
+              src="/assets/images/joydigital-lime-logo.webp"
               alt="Joy Digital - Web Design & Digital Marketing Agency Logo"
               title="Joy Digital Logo"
               width={240}
               height={77}
               className="h-12 md:h-14 w-auto object-contain"
+              unoptimized
             />
           </Link>
-          <div className="text-[#4B5563] dark:text-[#9CA3AF] text-xs leading-relaxed flex flex-col gap-3">
-            <p className="font-bold text-[#0F172A] dark:text-white">Websites, SEO &amp; Digital Marketing for Businesses Worldwide</p>
+          <div className="text-[#FFFFFF]/80 text-xs leading-relaxed flex flex-col gap-3">
+            <p className="font-bold text-[#FFFFFF]">Websites, SEO &amp; Digital Marketing for Businesses Worldwide</p>
             <p>Based in India, serving startups, small businesses, and growing companies globally. Delivering premium web solutions and conversion-focused search optimizations through direct remote collaboration.</p>
           </div>
           <div className="flex items-center gap-3">
@@ -60,7 +61,7 @@ export default function Footer() {
               href="https://wa.me/919080026133"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xs flex items-center justify-center hover:border-[#25D366] hover:bg-[#25D366]/10 hover:scale-110 transition-all duration-200"
+              className="w-10 h-10 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/25 shadow-xs flex items-center justify-center hover:border-[#C9F600] hover:scale-110 transition-all duration-200"
               aria-label="WhatsApp"
               title="Chat with Joy Digital on WhatsApp"
               data-wa-location="footer"
@@ -74,7 +75,7 @@ export default function Footer() {
               href="https://share.google/BSniheS2qnzwqUKXU"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xs flex items-center justify-center hover:border-[#4285F4] hover:bg-[#4285F4]/10 hover:scale-110 transition-all duration-200"
+              className="w-10 h-10 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/25 shadow-xs flex items-center justify-center hover:border-[#C9F600] hover:scale-110 transition-all duration-200"
               aria-label="Google Business Profile"
               title="Joy Digital Google Business Profile &amp; Reviews"
             >
@@ -89,7 +90,7 @@ export default function Footer() {
               href="https://www.facebook.com/profile.php?id=61590372457559"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xs flex items-center justify-center hover:border-[#1877F2] hover:bg-[#1877F2]/10 hover:scale-110 transition-all duration-200"
+              className="w-10 h-10 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/25 shadow-xs flex items-center justify-center hover:border-[#C9F600] hover:scale-110 transition-all duration-200"
               aria-label="Facebook"
               title="Visit Joy Digital Facebook Page"
             >
@@ -102,7 +103,7 @@ export default function Footer() {
               href="https://www.youtube.com/@Joydigital2026"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xs flex items-center justify-center hover:border-[#FF0000] hover:bg-[#FF0000]/10 hover:scale-110 transition-all duration-200"
+              className="w-10 h-10 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/25 shadow-xs flex items-center justify-center hover:border-[#C9F600] hover:scale-110 transition-all duration-200"
               aria-label="YouTube"
               title="Subscribe to Joy Digital YouTube Channel"
             >
@@ -115,7 +116,7 @@ export default function Footer() {
               href="https://www.linkedin.com/company/joydigital-solution/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xs flex items-center justify-center hover:border-[#0A66C2] hover:bg-[#0A66C2]/10 hover:scale-110 transition-all duration-200"
+              className="w-10 h-10 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/25 shadow-xs flex items-center justify-center hover:border-[#C9F600] hover:scale-110 transition-all duration-200"
               aria-label="LinkedIn"
               title="Follow Joy Digital on LinkedIn"
             >
@@ -126,7 +127,7 @@ export default function Footer() {
             </a>
             <a
               href={`mailto:${contactEmail}`}
-              className="w-10 h-10 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xs flex items-center justify-center hover:border-[#EA4335] hover:bg-[#EA4335]/10 hover:scale-110 transition-all duration-200"
+              className="w-10 h-10 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/25 shadow-xs flex items-center justify-center hover:border-[#C9F600] hover:scale-110 transition-all duration-200"
               aria-label="Email"
               title="Send Email to Joy Digital"
             >
@@ -143,338 +144,338 @@ export default function Footer() {
 
         {/* Global & Regional Column */}
         <div className="flex flex-col">
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-[#0F172A] dark:text-white mb-4">
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-[#FFFFFF] mb-4">
             Global &amp; Regional
           </h4>
-          <ul className="flex flex-col space-y-2.5 text-xs text-[#4B5563] dark:text-[#9CA3AF]">
+          <ul className="flex flex-col space-y-2.5 text-xs text-[#FFFFFF]/80">
             {REGIONAL_SITES.map((site) => (
               <li key={site.code}>
                 <Link
                   href={site.code === "" || site.code === "in" ? "/" : `/${site.code}`}
                   title={`Joy Digital ${site.label} Regional Page`}
-                  className="flex items-center gap-2 hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200"
+                  className="flex items-center gap-2 hover:text-[#C9F600] transition-colors duration-200"
                 >
                   <span className="text-sm">{site.flag}</span>
                   <span>{site.label}</span>
                 </Link>
               </li>
             ))}
-            <li className="text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200 pt-3 border-t border-slate-200 dark:border-slate-800 mt-2">
+            <li className="text-xs font-semibold uppercase tracking-wider text-[#C9F600] pt-3 border-t border-[#FFFFFF]/15 mt-2">
               Regional Hubs (Tamil Nadu)
             </li>
             <li>
-              <Link href="/website-design-company-madurai" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Web Design Madurai</Link>
+              <Link href="/website-design-company-madurai" className="hover:text-[#C9F600] transition-colors duration-200 block">Web Design Madurai</Link>
             </li>
             <li>
-              <Link href="/website-development-company-madurai" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Web Development Madurai</Link>
+              <Link href="/website-development-company-madurai" className="hover:text-[#C9F600] transition-colors duration-200 block">Web Development Madurai</Link>
             </li>
             <li>
-              <Link href="/seo-services-madurai" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">SEO Services Madurai</Link>
+              <Link href="/seo-services-madurai" className="hover:text-[#C9F600] transition-colors duration-200 block">SEO Services Madurai</Link>
             </li>
             <li>
-              <Link href="/seo-services-chennai" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">SEO Services in Chennai</Link>
+              <Link href="/seo-services-chennai" className="hover:text-[#C9F600] transition-colors duration-200 block">SEO Services in Chennai</Link>
             </li>
             <li>
-              <Link href="/website-development-company-chennai" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Web Development Chennai</Link>
+              <Link href="/website-development-company-chennai" className="hover:text-[#C9F600] transition-colors duration-200 block">Web Development Chennai</Link>
             </li>
             <li>
-              <Link href="/website-design-company-chennai" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Web Design Chennai</Link>
+              <Link href="/website-design-company-chennai" className="hover:text-[#C9F600] transition-colors duration-200 block">Web Design Chennai</Link>
             </li>
             <li>
-              <Link href="/digital-marketing-agency-in-chennai" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Digital Marketing Chennai</Link>
+              <Link href="/digital-marketing-agency-in-chennai" className="hover:text-[#C9F600] transition-colors duration-200 block">Digital Marketing Chennai</Link>
             </li>
             <li>
-              <Link href="/website-design-company-coimbatore" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Web Design Coimbatore</Link>
+              <Link href="/website-design-company-coimbatore" className="hover:text-[#C9F600] transition-colors duration-200 block">Web Design Coimbatore</Link>
             </li>
             <li>
-              <Link href="/seo-company-coimbatore" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">SEO Company Coimbatore</Link>
+              <Link href="/seo-company-coimbatore" className="hover:text-[#C9F600] transition-colors duration-200 block">SEO Company Coimbatore</Link>
             </li>
           </ul>
         </div>
 
         {/* Featured Services Column */}
         <div className="flex flex-col">
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-[#0F172A] dark:text-white mb-4">
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-[#FFFFFF] mb-4">
             Featured Services
           </h4>
-          <ul className="flex flex-col space-y-2.5 text-xs text-[#4B5563] dark:text-[#9CA3AF]">
+          <ul className="flex flex-col space-y-2.5 text-xs text-[#FFFFFF]/80">
             <li>
-              <Link href={getRegionalHref("/website-development")} className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href={getRegionalHref("/website-development")} className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Next.js Web Development
               </Link>
             </li>
             <li>
-              <Link href="/enterprise-web-solutions" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/enterprise-web-solutions" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Enterprise Web Solutions
               </Link>
             </li>
             <li>
-              <Link href="/ai-search-optimization" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/ai-search-optimization" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 AI Search Optimization (GEO)
               </Link>
             </li>
             <li>
-              <Link href="/seo-services" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/seo-services" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Enterprise B2B SEO
               </Link>
             </li>
             <li>
-              <Link href="/website-seo" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/website-seo" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Website SEO Services
               </Link>
             </li>
             <li>
-              <Link href="/technical-seo" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/technical-seo" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Technical SEO Services
               </Link>
             </li>
             <li>
-              <Link href="/on-page-seo" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/on-page-seo" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 On-Page SEO Services
               </Link>
             </li>
             <li>
-              <Link href="/seo-content" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/seo-content" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 SEO Content Strategy
               </Link>
             </li>
             <li>
-              <Link href="/web-design-services" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/web-design-services" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Website Design Services
               </Link>
             </li>
             <li>
-              <Link href="/local-seo-services" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/local-seo-services" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Local SEO Services
               </Link>
             </li>
             <li>
-              <Link href="/google-business-profile-setup" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/google-business-profile-setup" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Google Business Profile Setup
               </Link>
             </li>
             <li>
-              <Link href="/google-business-profile-optimization" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/google-business-profile-optimization" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Google Business Profile Audit
               </Link>
             </li>
             <li>
-              <Link href="/social-media-marketing" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/social-media-marketing" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Social Media Marketing
               </Link>
             </li>
             <li>
-              <Link href="/logo-design-services" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/logo-design-services" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Logo &amp; Branding Design
               </Link>
             </li>
             <li>
-              <Link href="/ecommerce-website-development" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/ecommerce-website-development" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Headless E-commerce Web Dev
               </Link>
             </li>
             <li>
-              <Link href="/custom-software-development" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/custom-software-development" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Custom Software Development
               </Link>
             </li>
             <li>
-              <Link href="/custom-website-development" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/custom-website-development" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Custom Next.js Web Systems
               </Link>
             </li>
             <li>
-              <Link href="/dynamic-website-development" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/dynamic-website-development" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Dynamic Web Applications
               </Link>
             </li>
             <li>
-              <Link href="/static-website-development" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/static-website-development" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Static Website Development
               </Link>
             </li>
             <li>
-              <Link href="/portfolio-website-development" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/portfolio-website-development" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Portfolio Website Development
               </Link>
             </li>
             <li>
-              <Link href="/landing-page-development" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/landing-page-development" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Landing Page Development
               </Link>
             </li>
             <li>
-              <Link href="/wordpress-to-nextjs-migration" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/wordpress-to-nextjs-migration" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 WordPress to Next.js Migration
               </Link>
             </li>
             <li>
-              <Link href="/shopify-vs-headless-nextjs" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/shopify-vs-headless-nextjs" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Shopify vs Headless Next.js
               </Link>
             </li>
             <li>
-              <Link href="/offshore-web-development-partner" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">
+              <Link href="/offshore-web-development-partner" className="hover:text-[#C9F600] transition-colors duration-200 block">
                 Offshore Web Dev Partner
               </Link>
             </li>
-            <li className="text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200 pt-3 border-t border-slate-200 dark:border-slate-800 mt-2">
+            <li className="text-xs font-semibold uppercase tracking-wider text-[#C9F600] pt-3 border-t border-[#FFFFFF]/15 mt-2">
               Industry Solutions
             </li>
             <li>
-              <Link href="/website-for-insurance-agents" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Insurance Agents</Link>
+              <Link href="/website-for-insurance-agents" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Insurance Agents</Link>
             </li>
             <li>
-              <Link href="/website-for-hotels" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Hotels</Link>
+              <Link href="/website-for-hotels" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Hotels</Link>
             </li>
             <li>
-              <Link href="/website-for-hospitals" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Hospitals</Link>
+              <Link href="/website-for-hospitals" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Hospitals</Link>
             </li>
             <li>
-              <Link href="/website-for-real-estate" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Real Estate</Link>
+              <Link href="/website-for-real-estate" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Real Estate</Link>
             </li>
             <li>
-              <Link href="/travel-website-development" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Tours &amp; Travels</Link>
+              <Link href="/travel-website-development" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Tours &amp; Travels</Link>
             </li>
             <li>
-              <Link href="/website-for-schools" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Schools</Link>
+              <Link href="/website-for-schools" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Schools</Link>
             </li>
             <li>
-              <Link href="/website-for-small-business" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Small Business</Link>
+              <Link href="/website-for-small-business" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Small Business</Link>
             </li>
             <li>
-              <Link href="/website-for-ecommerce" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for E-commerce Stores</Link>
+              <Link href="/website-for-ecommerce" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for E-commerce Stores</Link>
             </li>
             <li>
-              <Link href="/website-for-solar-companies" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Solar Companies</Link>
+              <Link href="/website-for-solar-companies" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Solar Companies</Link>
             </li>
             <li>
-              <Link href="/website-for-textile-manufacturers" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Textile Manufacturers</Link>
+              <Link href="/website-for-textile-manufacturers" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Textile Manufacturers</Link>
             </li>
             <li>
-              <Link href="/website-for-manufacturing-companies" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Manufacturing</Link>
+              <Link href="/website-for-manufacturing-companies" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Manufacturing</Link>
             </li>
             <li>
-              <Link href="/website-for-law-firms" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Law Firms</Link>
+              <Link href="/website-for-law-firms" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Law Firms</Link>
             </li>
             <li>
-              <Link href="/website-for-consulting-companies" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Consulting</Link>
+              <Link href="/website-for-consulting-companies" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Consulting</Link>
             </li>
             <li>
-              <Link href="/website-for-logistics-and-shipping" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Logistics &amp; Shipping</Link>
+              <Link href="/website-for-logistics-and-shipping" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Logistics &amp; Shipping</Link>
             </li>
             <li>
-              <Link href="/website-for-export-and-import" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Export &amp; Import</Link>
+              <Link href="/website-for-export-and-import" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Export &amp; Import</Link>
             </li>
             <li>
-              <Link href="/website-for-marketing-agencies" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Marketing Agencies</Link>
+              <Link href="/website-for-marketing-agencies" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Marketing Agencies</Link>
             </li>
             <li>
-              <Link href="/website-for-luxury-brands" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Luxury Brands</Link>
+              <Link href="/website-for-luxury-brands" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Luxury Brands</Link>
             </li>
             <li>
-              <Link href="/website-for-pest-control" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Website for Pest Control</Link>
+              <Link href="/website-for-pest-control" className="hover:text-[#C9F600] transition-colors duration-200 block">Website for Pest Control</Link>
             </li>
           </ul>
         </div>
 
         {/* Tools & Company Column */}
         <div className="flex flex-col">
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-[#0F172A] dark:text-white mb-4">
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-[#FFFFFF] mb-4">
             Tools &amp; Company
           </h4>
-          <ul className="flex flex-col space-y-2.5 text-xs text-[#4B5563] dark:text-[#9CA3AF]">
+          <ul className="flex flex-col space-y-2.5 text-xs text-[#FFFFFF]/80">
             <li>
-              <Link href="/about" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">About Our Agency</Link>
+              <Link href="/about" className="hover:text-[#C9F600] transition-colors duration-200 block">About Our Agency</Link>
             </li>
             <li>
-              <Link href="/author/saravanan" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Author: Saravanan L</Link>
+              <Link href="/author/saravanan" className="hover:text-[#C9F600] transition-colors duration-200 block">Author: Saravanan L</Link>
             </li>
             <li>
-              <Link href={getRegionalHref("/contact")} className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Contact Us</Link>
+              <Link href={getRegionalHref("/contact")} className="hover:text-[#C9F600] transition-colors duration-200 block">Contact Us</Link>
             </li>
             <li>
-              <Link href="/portfolio" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Portfolio</Link>
+              <Link href="/portfolio" className="hover:text-[#C9F600] transition-colors duration-200 block">Portfolio</Link>
             </li>
             <li>
-              <Link href="/case-studies" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Case Studies</Link>
+              <Link href="/case-studies" className="hover:text-[#C9F600] transition-colors duration-200 block">Case Studies</Link>
             </li>
             <CompanyProfileDownload />
             <li>
-              <Link href="/privacy-policy" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Privacy Policy</Link>
+              <Link href="/privacy-policy" className="hover:text-[#C9F600] transition-colors duration-200 block">Privacy Policy</Link>
             </li>
             <li>
-              <Link href="/terms-and-conditions" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Terms &amp; Conditions</Link>
+              <Link href="/terms-and-conditions" className="hover:text-[#C9F600] transition-colors duration-200 block">Terms &amp; Conditions</Link>
             </li>
             <li>
-              <Link href="/disclaimer" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Disclaimer</Link>
+              <Link href="/disclaimer" className="hover:text-[#C9F600] transition-colors duration-200 block">Disclaimer</Link>
             </li>
             <li>
-              <Link href="/refund-policy" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Refund Policy</Link>
+              <Link href="/refund-policy" className="hover:text-[#C9F600] transition-colors duration-200 block">Refund Policy</Link>
             </li>
             <li>
-              <Link href="/cookie-policy" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Cookie Policy</Link>
+              <Link href="/cookie-policy" className="hover:text-[#C9F600] transition-colors duration-200 block">Cookie Policy</Link>
             </li>
-            <li className="text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200 pt-3 border-t border-slate-200 dark:border-slate-800 mt-2">
+            <li className="text-xs font-semibold uppercase tracking-wider text-[#C9F600] pt-3 border-t border-[#FFFFFF]/15 mt-2">
               Free Online Tools
             </li>
             <li>
-              <Link href="/free-tools" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">All Free Business Tools</Link>
+              <Link href="/free-tools" className="hover:text-[#C9F600] transition-colors duration-200 block">All Free Business Tools</Link>
             </li>
             <li>
-              <Link href="/gst-calculator" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">GST Calculator</Link>
+              <Link href="/gst-calculator" className="hover:text-[#C9F600] transition-colors duration-200 block">GST Calculator</Link>
             </li>
             <li>
-              <Link href="/invoice-generator" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Invoice Generator</Link>
+              <Link href="/invoice-generator" className="hover:text-[#C9F600] transition-colors duration-200 block">Invoice Generator</Link>
             </li>
             <li>
-              <Link href="/quotation-generator" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Quotation Generator</Link>
+              <Link href="/quotation-generator" className="hover:text-[#C9F600] transition-colors duration-200 block">Quotation Generator</Link>
             </li>
             <li>
-              <Link href="/qr-code-generator" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">QR Code Generator</Link>
+              <Link href="/qr-code-generator" className="hover:text-[#C9F600] transition-colors duration-200 block">QR Code Generator</Link>
             </li>
             <li>
-              <Link href="/whatsapp-link-generator" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">WhatsApp Link Generator</Link>
+              <Link href="/whatsapp-link-generator" className="hover:text-[#C9F600] transition-colors duration-200 block">WhatsApp Link Generator</Link>
             </li>
             <li>
-              <Link href="/seo-audit-tool" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Free SEO Audit Tool</Link>
+              <Link href="/seo-audit-tool" className="hover:text-[#C9F600] transition-colors duration-200 block">Free SEO Audit Tool</Link>
             </li>
             <li>
-              <Link href="/image-compressor" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Free Image Compressor</Link>
+              <Link href="/image-compressor" className="hover:text-[#C9F600] transition-colors duration-200 block">Free Image Compressor</Link>
             </li>
             <li>
-              <Link href="/free-website-audit" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 block">Claim Free Website Audit</Link>
+              <Link href="/free-website-audit" className="hover:text-[#C9F600] transition-colors duration-200 block">Claim Free Website Audit</Link>
             </li>
           </ul>
         </div>
 
         {/* Global Support & Office Location Column */}
         <div className="flex flex-col">
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-[#0F172A] dark:text-white mb-4">
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-[#FFFFFF] mb-4">
             Office Location
           </h4>
-          <div className="text-xs text-[#4B5563] dark:text-[#9CA3AF] flex flex-col space-y-3 mb-4">
+          <div className="text-xs text-[#FFFFFF]/80 flex flex-col space-y-3 mb-4">
             <div className="flex items-start gap-2 leading-relaxed">
-              <i className="fa-solid fa-location-dot text-[#7C3AED] mt-0.5 shrink-0" />
+              <i className="fa-solid fa-location-dot text-[#C9F600] mt-0.5 shrink-0" />
               <div>
-                <span className="font-semibold text-[#0F172A] dark:text-white block">Madurai (HQ):</span>
+                <span className="font-semibold text-[#FFFFFF] block">Madurai (HQ):</span>
                 <span>{siteConfig.hq}</span>
               </div>
             </div>
-            <ul className="flex flex-col space-y-2 text-xs border-t border-slate-200 dark:border-slate-800 pt-2.5">
+            <ul className="flex flex-col space-y-2 text-xs border-t border-[#FFFFFF]/15 pt-2.5">
               <li className="flex items-center gap-2">
                 <span>🇮🇳</span>
-                <span><strong className="text-[#0F172A] dark:text-white">India &amp; WA:</strong> <a href={`tel:${siteConfig.phoneRaw}`} className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 font-medium">{siteConfig.phone}</a></span>
+                <span><strong className="text-[#FFFFFF]">India &amp; WA:</strong> <a href={`tel:${siteConfig.phoneRaw}`} className="hover:text-[#C9F600] transition-colors duration-200 font-medium">{siteConfig.phone}</a></span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#7C3AED]"><i className="fa-solid fa-envelope" /></span>
-                <a href={`mailto:${contactEmail}`} className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 font-medium">{contactEmail}</a>
+                <span className="text-[#C9F600]"><i className="fa-solid fa-envelope" /></span>
+                <a href={`mailto:${contactEmail}`} className="hover:text-[#C9F600] transition-colors duration-200 font-medium">{contactEmail}</a>
               </li>
             </ul>
           </div>
           
           {/* Map in a stylish card container */}
-          <div className="w-full h-44 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-sm mt-1">
+          <div className="w-full h-44 rounded-xl overflow-hidden border border-[#FFFFFF]/20 shadow-sm mt-1">
             <iframe
               src="https://maps.google.com/maps?q=Madurai,%20Tamil%20Nadu,%20India&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
@@ -491,7 +492,7 @@ export default function Footer() {
             href="https://share.google/BSniheS2qnzwqUKXU"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-3 mt-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-semibold text-[#0F172A] dark:text-white hover:border-[#4285F4] hover:text-[#4285F4] transition-all duration-200 shadow-xs"
+            className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-3 mt-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-semibold text-[#FFFFFF] hover:border-[#4285F4] hover:text-[#4285F4] transition-all duration-200 shadow-xs"
           >
             <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
@@ -505,38 +506,38 @@ export default function Footer() {
       </div>
 
       {/* Editorial SEO & Business Overview */}
-      <div className="max-w-7xl mx-auto px-6 pt-10 pb-4 text-xs sm:text-sm text-[#4B5563] dark:text-[#9CA3AF] leading-relaxed border-b border-slate-200 dark:border-slate-800">
+      <div className="max-w-7xl mx-auto px-6 pt-10 pb-4 text-xs sm:text-sm text-[#FFFFFF]/80 leading-relaxed border-b border-[#FFFFFF]/15">
         <p className="max-w-5xl">
           At Joy Digital, we empower companies with result-driven{" "}
-          <Link href={getRegionalHref("/website-development")} className="text-[#0F172A] dark:text-white font-medium hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
+          <Link href={getRegionalHref("/website-development")} className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
             business website development
           </Link>{" "}
           that turns visitors into active customers. From creative{" "}
-          <Link href="/web-design-services" className="text-[#0F172A] dark:text-white font-medium hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
+          <Link href="/web-design-services" className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
             website design services
           </Link>{" "}
           and{" "}
-          <Link href="/dynamic-website-development" className="text-[#0F172A] dark:text-white font-medium hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
+          <Link href="/dynamic-website-development" className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
             dynamic website development
           </Link>{" "}
           to robust CMS-powered websites, we engineer high-speed, SEO-friendly websites tailored for{" "}
-          <Link href="/travel-website-development" className="text-[#0F172A] dark:text-white font-medium hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
+          <Link href="/travel-website-development" className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
             tourism
           </Link>
           ,{" "}
-          <Link href="/website-for-manufacturing-companies" className="text-[#0F172A] dark:text-white font-medium hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
+          <Link href="/website-for-manufacturing-companies" className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
             manufacturing
           </Link>
           ,{" "}
-          <Link href="/website-for-export-and-import" className="text-[#0F172A] dark:text-white font-medium hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
+          <Link href="/website-for-export-and-import" className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
             export businesses
           </Link>
           , and other growing businesses. By uniting{" "}
-          <Link href="/custom-website-development" className="text-[#0F172A] dark:text-white font-medium hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
+          <Link href="/custom-website-development" className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
             custom website development
           </Link>{" "}
           with advanced{" "}
-          <Link href={getRegionalHref("/seo-services")} className="text-[#0F172A] dark:text-white font-medium hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
+          <Link href={getRegionalHref("/seo-services")} className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
             technical SEO services
           </Link>{" "}
           and continuous website optimization, we help forward-thinking brands across India and international markets elevate their search visibility, build an authoritative online presence, and achieve measurable long-term business growth.
@@ -544,10 +545,10 @@ export default function Footer() {
       </div>
 
       {/* AI Entity Data Block for AI Search Engines & Crawlers */}
-      <div className="max-w-7xl mx-auto px-6 pt-6 text-xs text-[#4B5563] dark:text-[#9CA3AF] border-t border-slate-200 dark:border-slate-800 mt-6 leading-relaxed opacity-90">
-        <div className="ai-entity-data space-y-2 text-slate-600 dark:text-slate-400">
+      <div className="max-w-7xl mx-auto px-6 pt-6 text-xs text-[#FFFFFF]/80 border-t border-[#FFFFFF]/15 mt-6 leading-relaxed opacity-90">
+        <div className="ai-entity-data space-y-2 text-[#FFFFFF]/80">
           <p>
-            <strong className="text-[#0F172A] dark:text-white">Joy Digital</strong> is an enterprise custom Next.js web application engineering agency based in Madurai, Tamil Nadu, India. 
+            <strong className="text-[#FFFFFF]">Joy Digital</strong> is an enterprise custom Next.js web application engineering agency based in Madurai, Tamil Nadu, India. 
             Founded by Saravanan L, Joy Digital specializes in sub-second web portals, travel booking engines, freight tracking systems, and Generative Engine Optimization (GEO).
           </p>
           <p>
@@ -563,8 +564,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom Copyright & Legal Bar */}
-      <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-slate-200 dark:border-slate-800 mt-8 flex flex-col gap-6 text-center text-xs text-[#4B5563] dark:text-[#9CA3AF]">
-        <p className="font-medium text-slate-600 dark:text-slate-400">
+      <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-[#FFFFFF]/15 mt-8 flex flex-col gap-6 text-center text-xs text-[#FFFFFF]/80">
+        <p className="font-medium text-[#FFFFFF]/80">
           Joy Digital – Premium Web Design, High-Speed Next.js Web Development &amp; Search Engine Optimization (SEO) for Businesses Worldwide.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
@@ -572,9 +573,9 @@ export default function Footer() {
             Copyright &copy; {new Date().getFullYear()} Joy Digital Growth Agency. All Rights Reserved.
           </p>
           <div className="flex gap-6 flex-wrap justify-center">
-            <Link href="/sitemap" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200 font-medium">HTML Sitemap</Link>
-            <Link href="/privacy-policy" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200">Privacy Policy</Link>
-            <Link href="/terms-and-conditions" className="hover:text-[#7C3AED] dark:hover:text-[#A78BFA] transition-colors duration-200">Terms of Service</Link>
+            <Link href="/sitemap" className="hover:text-[#C9F600] transition-colors duration-200 font-medium">HTML Sitemap</Link>
+            <Link href="/privacy-policy" className="hover:text-[#C9F600] transition-colors duration-200">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" className="hover:text-[#C9F600] transition-colors duration-200">Terms of Service</Link>
           </div>
         </div>
       </div>

@@ -74,37 +74,37 @@ export default function WebsiteSEOPage() {
             At <strong>Joy Digital</strong>, our comprehensive <strong>Website SEO Services</strong> are built for businesses that demand measurable ROI. We don't focus on vanity metrics or random rankings for irrelevant terms. We identify the high-intent keywords that your ideal customers search when they are ready to buy, and we engineer your entire website to claim the top spots.
           </p>
 
-          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
-            <h3 className="text-lg font-bold text-primary-dark">What Complete Website SEO Covers</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+            <h3 className="text-lg font-bold text-[#FFFFFF]">What Complete Website SEO Covers</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Technical Foundation:</strong> Core Web Vitals, crawlability, and indexation</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>On-Page Alignment:</strong> Semantic headings, meta tags, and internal link trees</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Keyword Intent Mapping:</strong> Targeting commercial &amp; transactional buyer terms</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Authoritative Digital PR:</strong> High-DA backlinks that build true domain trust</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Conversion Rate Optimization:</strong> Turning organic traffic into leads &amp; sales</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Transparent Reporting:</strong> Clear Google Search Console &amp; ROI metrics</span>
               </li>
             </ul>
           </div>
 
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">A Sustainable, White-Hat Methodology</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">A Sustainable, White-Hat Methodology</h3>
           <p>
             We strictly adhere to Google Search Essentials and Webmaster Guidelines. We never use spammy automated link farms or deceptive tactics that risk algorithmic penalties. Everything we build is designed to protect and increase your domain equity for years to come.
           </p>

@@ -69,7 +69,7 @@ export default function NextjsAgencyPage() {
           <p>
             As a specialized <strong>Next.js development agency</strong>, Joy Digital builds decoupled frontend architectures. By separating your UI from your backend systems (Headless CMS, CRMs, APIs), we create platforms that are infinitely scalable and completely unhackable.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Core Web Vitals Obsession</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Core Web Vitals Obsession</h3>
           <p>
             Google now ranks websites heavily based on Core Web Vitals. Our Next.js engineering guarantees a 95+ score on mobile through static site generation (SSG), advanced image optimization, and server-side rendering (SSR) delivered via global CDNs.
           </p>

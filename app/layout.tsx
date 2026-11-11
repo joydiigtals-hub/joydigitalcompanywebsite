@@ -84,7 +84,7 @@ export const metadata: Metadata = {
   },
 };
 
-import { Inter } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -93,13 +93,20 @@ const inter = Inter({
   weight: ["400", "600", "700", "800"],
 });
 
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-display",
+  weight: ["600", "700", "800"],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${inter.className} h-full antialiased font-sans`}>
+    <html lang="en" className={`${inter.variable} ${plusJakarta.variable} ${inter.className} h-full antialiased font-sans`}>
       <head>
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />

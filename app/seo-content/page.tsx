@@ -74,37 +74,37 @@ export default function SEOContentPage() {
             At <strong>Joy Digital</strong>, our SEO content service is built on topical authority mapping. We map out full pillar-and-cluster architectures that exhaustively answer every question your potential buyers search for across their decision journey. From top-of-funnel educational guides to bottom-of-funnel comparison pages, our content turns search engines into compounding customer acquisition engines.
           </p>
 
-          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
-            <h3 className="text-lg font-bold text-primary-dark">What Our SEO Content Engine Delivers</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+            <h3 className="text-lg font-bold text-[#FFFFFF]">What Our SEO Content Engine Delivers</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Topical Pillar &amp; Cluster Maps:</strong> Exhaustive keyword coverage in your niche</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Commercial Intent Mapping:</strong> Targeting queries that drive pipeline revenue</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Generative Engine Optimization (GEO):</strong> Structured for AI search citations</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>E-E-A-T Author Credentials:</strong> Factual backing, data tables, and expert quotes</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>High-Converting CRO CTAs:</strong> Seamless bridges from reader to sales inquiry</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Original Graphics &amp; Visual Tables:</strong> Built for featured snippet acquisition</span>
               </li>
             </ul>
           </div>
 
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Content Crafted for Humans, Search Bots, and AI Models</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Content Crafted for Humans, Search Bots, and AI Models</h3>
           <p>
             With the rise of Google AI Overviews, SearchGPT, and Perplexity, your content must be clearly structured for machine extraction. We format key definitions, concise lists, and structured comparison matrices that LLMs extract when generating answers for prospective buyers.
           </p>

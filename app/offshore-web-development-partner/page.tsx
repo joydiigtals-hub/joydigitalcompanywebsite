@@ -116,16 +116,16 @@ export default function OffshoreWebDevelopmentPartnerPage() {
         </section>
 
         {/* COMPARISON TABLE SECTION */}
-        <section className="py-20 bg-white border-b border-[#E9E4F2]">
+        <section className="py-20 bg-primary border-b border-[#E9E4F2]">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">Cost &amp; Quality Comparison</span>
             <h2 className="text-3xl font-extrabold text-[#1F1B2D] mb-4">Local US/UK Agencies vs. Joy Digital Offshore Desk</h2>
-            <p className="text-sm text-slate-600 max-w-2xl mx-auto mb-12">
+            <p className="text-sm text-secondary max-w-2xl mx-auto mb-12">
               Why pay inflated local rates for slow legacy web setups when you can deploy high-speed Next.js engineering at a fraction of the cost?
             </p>
 
             <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+              <table className="w-full text-left border-collapse rounded-2xl overflow-hidden shadow-sm border border-white/[0.18]">
                 <thead>
                   <tr className="bg-[#171126] text-white text-xs uppercase tracking-wider">
                     <th className="p-4 md:p-6 font-extrabold">Feature / Metric</th>
@@ -133,35 +133,35 @@ export default function OffshoreWebDevelopmentPartnerPage() {
                     <th className="p-4 md:p-6 font-extrabold text-[#A78BFA]">Joy Digital Offshore Desk</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-200 text-xs md:text-sm bg-white">
+                <tbody className="divide-y divide-slate-200 text-xs md:text-sm bg-primary">
                   <tr>
-                    <td className="p-4 md:p-6 font-bold text-slate-900">Hourly Developer Cost</td>
+                    <td className="p-4 md:p-6 font-bold text-white">Hourly Developer Cost</td>
                     <td className="p-4 md:p-6 text-red-600 font-semibold">$120 – $200 / hr</td>
                     <td className="p-4 md:p-6 text-emerald-600 font-bold bg-[#7C3AED]/5">$25 – $35 / hr (Save 60-70%)</td>
                   </tr>
                   <tr>
-                    <td className="p-4 md:p-6 font-bold text-slate-900">Onboarding &amp; Setup Time</td>
-                    <td className="p-4 md:p-6 text-slate-600">3 to 6 weeks recruitment delay</td>
+                    <td className="p-4 md:p-6 font-bold text-white">Onboarding &amp; Setup Time</td>
+                    <td className="p-4 md:p-6 text-secondary">3 to 6 weeks recruitment delay</td>
                     <td className="p-4 md:p-6 text-emerald-600 font-bold bg-[#7C3AED]/5">Deploy developers within 48 hours</td>
                   </tr>
                   <tr>
-                    <td className="p-4 md:p-6 font-bold text-slate-900">Tech Stack Standard</td>
-                    <td className="p-4 md:p-6 text-slate-600">Often bloated legacy WordPress themes</td>
+                    <td className="p-4 md:p-6 font-bold text-white">Tech Stack Standard</td>
+                    <td className="p-4 md:p-6 text-secondary">Often bloated legacy WordPress themes</td>
                     <td className="p-4 md:p-6 text-emerald-600 font-bold bg-[#7C3AED]/5">Modern Next.js 15, React 19, TypeScript</td>
                   </tr>
                   <tr>
-                    <td className="p-4 md:p-6 font-bold text-slate-900">Non-Disclosure &amp; IP Protection</td>
-                    <td className="p-4 md:p-6 text-slate-600">Standard contract terms</td>
+                    <td className="p-4 md:p-6 font-bold text-white">Non-Disclosure &amp; IP Protection</td>
+                    <td className="p-4 md:p-6 text-secondary">Standard contract terms</td>
                     <td className="p-4 md:p-6 text-emerald-600 font-bold bg-[#7C3AED]/5">100% Strict NDA &amp; Instant IP Transfer</td>
                   </tr>
                   <tr>
-                    <td className="p-4 md:p-6 font-bold text-slate-900">Time-Zone Sync</td>
-                    <td className="p-4 md:p-6 text-slate-600">Local business hours only</td>
+                    <td className="p-4 md:p-6 font-bold text-white">Time-Zone Sync</td>
+                    <td className="p-4 md:p-6 text-secondary">Local business hours only</td>
                     <td className="p-4 md:p-6 text-emerald-600 font-bold bg-[#7C3AED]/5">Daily EST/PST &amp; GMT Overlapping Standups</td>
                   </tr>
                   <tr>
-                    <td className="p-4 md:p-6 font-bold text-slate-900">PageSpeed Performance SLA</td>
-                    <td className="p-4 md:p-6 text-slate-600">Unpredictable (50-70 scores)</td>
+                    <td className="p-4 md:p-6 font-bold text-white">PageSpeed Performance SLA</td>
+                    <td className="p-4 md:p-6 text-secondary">Unpredictable (50-70 scores)</td>
                     <td className="p-4 md:p-6 text-emerald-600 font-bold bg-[#7C3AED]/5">Guaranteed 95+ Core Web Vitals</td>
                   </tr>
                 </tbody>
@@ -180,51 +180,51 @@ export default function OffshoreWebDevelopmentPartnerPage() {
         </section>
 
         {/* CORE SERVICES OFFERINGS */}
-        <section className="py-20 bg-white border-y border-[#E9E4F2]">
+        <section className="py-20 bg-primary border-y border-[#E9E4F2]">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">Our Offshore Capabilities</span>
             <h2 className="text-3xl font-extrabold text-[#1F1B2D] mb-12">Tailored Offshore Solutions for Global Scale</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-              <div className="p-8 bg-[#FAF9FF] border border-slate-200 rounded-3xl shadow-sm hover:shadow-md transition-all">
+              <div className="p-8 bg-[#FAF9FF] border border-white/[0.18] rounded-3xl shadow-sm hover:shadow-md transition-all">
                 <div className="w-12 h-12 rounded-2xl bg-[#7C3AED]/10 text-[#7C3AED] flex items-center justify-center font-bold mb-6 text-xl">
                   <i className="fa-solid fa-user-shield" />
                 </div>
-                <h3 className="text-lg font-extrabold text-slate-900 mb-3">White-Label Agency Subcontracting</h3>
-                <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                <h3 className="text-lg font-extrabold text-white mb-3">White-Label Agency Subcontracting</h3>
+                <p className="text-xs text-secondary leading-relaxed mb-4">
                   Scale your agency deliverables seamlessly. We operate silently under strict Non-Disclosure Agreements as your transparent engineering division.
                 </p>
-                <ul className="text-xs text-slate-700 space-y-2 font-medium">
+                <ul className="text-xs text-secondary space-y-2 font-medium">
                   <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Complete White-Label Privacy</li>
                   <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Direct Jira / Slack Integration</li>
                   <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Dedicated QA Governance</li>
                 </ul>
               </div>
 
-              <div className="p-8 bg-[#FAF9FF] border border-slate-200 rounded-3xl shadow-sm hover:shadow-md transition-all">
+              <div className="p-8 bg-[#FAF9FF] border border-white/[0.18] rounded-3xl shadow-sm hover:shadow-md transition-all">
                 <div className="w-12 h-12 rounded-2xl bg-[#7C3AED]/10 text-[#7C3AED] flex items-center justify-center font-bold mb-6 text-xl">
                   <i className="fa-solid fa-code" />
                 </div>
-                <h3 className="text-lg font-extrabold text-slate-900 mb-3">Custom Next.js &amp; React Development</h3>
-                <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                <h3 className="text-lg font-extrabold text-white mb-3">Custom Next.js &amp; React Development</h3>
+                <p className="text-xs text-secondary leading-relaxed mb-4">
                   Sub-second loading web applications, Shopify Headless commerce, and WordPress-to-Next.js migrations engineered for maximum conversion.
                 </p>
-                <ul className="text-xs text-slate-700 space-y-2 font-medium">
+                <ul className="text-xs text-secondary space-y-2 font-medium">
                   <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Clean TypeScript &amp; Tailwind CSS</li>
                   <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Sub-1s Page Load Times</li>
                   <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Headless CMS (Sanity / Strapi)</li>
                 </ul>
               </div>
 
-              <div className="p-8 bg-[#FAF9FF] border border-slate-200 rounded-3xl shadow-sm hover:shadow-md transition-all">
+              <div className="p-8 bg-[#FAF9FF] border border-white/[0.18] rounded-3xl shadow-sm hover:shadow-md transition-all">
                 <div className="w-12 h-12 rounded-2xl bg-[#7C3AED]/10 text-[#7C3AED] flex items-center justify-center font-bold mb-6 text-xl">
                   <i className="fa-solid fa-chart-line" />
                 </div>
-                <h3 className="text-lg font-extrabold text-slate-900 mb-3">Global Technical &amp; B2B SEO</h3>
-                <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                <h3 className="text-lg font-extrabold text-white mb-3">Global Technical &amp; B2B SEO</h3>
+                <p className="text-xs text-secondary leading-relaxed mb-4">
                   Data-driven SEO strategies targeting search engine visibility across North America, Europe, and the Middle East.
                 </p>
-                <ul className="text-xs text-slate-700 space-y-2 font-medium">
+                <ul className="text-xs text-secondary space-y-2 font-medium">
                   <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> Multi-Country Hreflang Tags</li>
                   <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> JSON-LD Schema Architecture</li>
                   <li className="flex items-center gap-2"><i className="fa-solid fa-check text-emerald-500" /> High-Intent Keyword Optimization</li>

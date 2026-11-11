@@ -71,37 +71,37 @@ export default function HospitalWebPage() {
           <p>
             Unfortunately, many hospital websites have confused navigation, slow mobile load speeds, buried doctor profiles, and lack direct medical opinion request forms or WhatsApp international patient desks.
           </p>
-          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
-            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Hospital Portals</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting Hospital Portals</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>International Medical Opinion & Inquiry Form</strong>: Medical report upload workflow</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Doctor & Specialist Directory</strong>: Searchable qualifications, experience & schedules</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Specialty Department Pages</strong>: Cardiology, Oncology, Orthopedics & IVF hubs</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Global Medical Tourism SEO Strategy</strong>: Rank for high-value treatment keywords</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Medical Desk WhatsApp Routing</strong>: Instant patient care connection</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we merge healthcare domain knowledge with <Link href="/website-development" className="text-primary font-bold hover:underline">high-speed Next.js web development</Link>, <Link href="/seo-services" className="text-primary font-bold hover:underline">medical SEO strategies</Link>, and <Link href="/local-seo-services" className="text-primary font-bold hover:underline">Google Business Profile setup</Link> to help medical centers scale patient admissions.
+            At Joy Digital, we merge healthcare domain knowledge with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">high-speed Next.js web development</Link>, <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">medical SEO strategies</Link>, and <Link href="/local-seo-services" className="text-[#C9F600] font-bold hover:underline">Google Business Profile setup</Link> to help medical centers scale patient admissions.
           </p>
         </div>
       }

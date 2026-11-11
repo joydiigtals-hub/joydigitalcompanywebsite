@@ -59,37 +59,37 @@ export default function SEOPage() {
             At Joy Digital, we provide premium <strong>Enterprise B2B SEO Services</strong> designed specifically for complex sales cycles. We don't just chase traffic volume; we deploy <strong>Global B2B Keyword Strategy & Content Clusters</strong> to target specific commercial intent, moving C-suite prospects smoothly from top-of-funnel discovery to bottom-of-funnel enterprise conversion.
           </p>
           
-          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
-            <h3 className="text-lg font-bold text-primary-dark">Our Core Enterprise SEO Capabilities</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+            <h3 className="text-lg font-bold text-[#FFFFFF]">Our Core Enterprise SEO Capabilities</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Technical Code & Core Web Vitals</strong> (Next.js/Headless)</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>B2B Intent Keyword Mapping</strong> (Commercial vs Informational)</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>AI Search Overviews</strong> (ChatGPT & Google AI Visibility)</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>High-Authority Digital PR & Backlink Acquisition</strong></span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>WordPress to Next.js SSG SEO Migration</strong></span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Global Multi-Market Scaling & Subdirectory SEO</strong></span>
               </li>
             </ul>
           </div>
 
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Pioneering Generative Engine Optimization (GEO)</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Pioneering Generative Engine Optimization (GEO)</h3>
           <p>
             The search landscape has evolved beyond ten blue links. With the rise of AI Overviews, ChatGPT search integrations, and Generative Engine Optimization (GEO), global B2B brands must optimize for LLM context, not just traditional web crawlers. We structure your digital assets using advanced semantic HTML, rich schema, and entity-based content models, ensuring your brand is cited authoritatively by leading AI engines.
           </p>

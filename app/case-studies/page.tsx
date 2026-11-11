@@ -74,53 +74,53 @@ export default function CaseStudiesPage() {
     <>
       <JsonLd schema={graphSchema} />
       <Header />
-      <main className="pt-20 lg:pt-24">
+      <main className="pt-20 lg:pt-24 bg-[#3B1580] text-[#FFFFFF]">
         
         {/* Intro */}
-        <section className="pt-6 lg:pt-8 pb-12 bg-white text-center relative overflow-hidden">
+        <section className="pt-6 lg:pt-8 pb-12 bg-[#3B1580] text-center relative overflow-hidden border-b border-[#FFFFFF]/15">
           <div className="max-w-7xl mx-auto px-6">
-            <span className="inline-block bg-accent-glow text-accent font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full border border-accent/20 mb-6">
+            <span className="inline-block bg-[#C9F600]/15 text-[#C9F600] font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full border border-[#C9F600]/30 mb-6">
               Our Results
             </span>
-            <h1 className="text-3xl md:text-5xl font-extrabold text-primary-dark tracking-tight mb-4">
-              Client Success <span className="text-gradient">Case Studies</span>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-[#FFFFFF] tracking-tight mb-4">
+              Client Success <span className="text-[#C9F600]">Case Studies</span>
             </h1>
-            <p className="text-sm text-text-secondary max-w-xl mx-auto leading-relaxed">
+            <p className="text-sm text-[#FFFFFF]/80 max-w-xl mx-auto leading-relaxed">
               We focus on delivering commercial results. Explore our success stories to see how our campaigns support business growth.
             </p>
           </div>
         </section>
 
         {/* Case Studies List */}
-        <section className="py-16 bg-light-bg">
+        <section className="py-16 bg-[#260B5E] border-b border-[#FFFFFF]/15 text-[#FFFFFF]">
           <div className="max-w-5xl mx-auto px-6 flex flex-col gap-12">
             {CASE_STUDIES.map((study, index) => (
               <article
                 key={index}
-                className="bg-white border border-gray-100 rounded-3xl p-8 sm:p-12 shadow-sm hover:shadow-md transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+                className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-3xl p-8 sm:p-12 shadow-sm hover:border-[#C9F600]/50 hover:shadow-lg transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center text-[#FFFFFF]"
               >
                 {/* Metric Box */}
-                <div className="lg:col-span-4 bg-primary-dark text-white p-8 rounded-2xl text-center flex flex-col justify-center items-center h-full min-h-[180px] border border-accent/20 shadow-inner relative overflow-hidden">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-accent/10 rounded-full blur-2xl pointer-events-none" />
-                  <span className="text-5xl font-extrabold text-accent mb-2 relative z-10">{study.metricValue}</span>
-                  <span className="text-[10px] font-bold text-text-muted uppercase tracking-wider relative z-10">{study.metricLabel}</span>
+                <div className="lg:col-span-4 bg-[#260B5E] text-[#FFFFFF] p-8 rounded-2xl text-center flex flex-col justify-center items-center h-full min-h-[180px] border border-[#C9F600]/30 shadow-inner relative overflow-hidden">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-[#C9F600]/10 rounded-full blur-2xl pointer-events-none" />
+                  <span className="text-5xl font-extrabold text-[#C9F600] mb-2 relative z-10">{study.metricValue}</span>
+                  <span className="text-[10px] font-bold text-[#FFFFFF]/70 uppercase tracking-wider relative z-10">{study.metricLabel}</span>
                 </div>
 
                 {/* Content */}
                 <div className="lg:col-span-8 flex flex-col items-start text-left">
-                  <span className="text-[10px] font-bold text-accent uppercase tracking-wider block mb-2">
+                  <span className="text-[10px] font-bold text-[#C9F600] uppercase tracking-wider block mb-2">
                     {study.category}
                   </span>
-                  <h2 className="text-xl sm:text-2xl font-bold text-primary-dark mb-4 leading-tight">
+                  <h2 className="text-xl sm:text-2xl font-bold text-[#FFFFFF] mb-4 leading-tight">
                     {study.title}
                   </h2>
-                  <p className="text-sm text-text-secondary leading-relaxed mb-6">
+                  <p className="text-sm text-[#FFFFFF]/85 leading-relaxed mb-6">
                     {study.description}
                   </p>
                   
                   <Link
                     href={`/case-studies/${study.slug}`}
-                    className="bg-light-bg hover:bg-gray-200 text-primary-dark font-bold text-xs px-6 py-3 rounded-lg transition-all"
+                    className="bg-[#260B5E] hover:bg-[#C9F600] hover:text-[#3B1580] text-[#FFFFFF] border border-[#FFFFFF]/20 font-bold text-xs px-6 py-3 rounded-lg transition-all"
                   >
                     Read Full Case Study
                   </Link>

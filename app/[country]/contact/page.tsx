@@ -250,42 +250,42 @@ export default async function CountryContactPage({ params }: PageProps) {
   return (
     <>
       <Header />
-      <main className="pt-24 lg:pt-32">
+      <main className="pt-24 lg:pt-32 bg-[#3B1580] text-[#FFFFFF]">
         
         {/* Intro Section */}
-        <section className="py-12 bg-white relative overflow-hidden">
+        <section className="py-12 bg-[#3B1580] relative overflow-hidden border-b border-[#FFFFFF]/15 text-[#FFFFFF]">
           <div className="max-w-7xl mx-auto px-6 text-center animate-fade-in">
-            <span className="inline-block bg-accent-glow text-accent font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full border border-accent/20 mb-6">
+            <span className="inline-block bg-[#C9F600]/15 text-[#C9F600] font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full border border-[#C9F600]/30 mb-6">
               {config.marketName} Desk
             </span>
-            <h1 className="text-3xl md:text-5xl font-extrabold text-primary-dark tracking-tight mb-4">
-              Let&apos;s Grow Your <span className="text-gradient">Digital Pipeline</span>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-[#FFFFFF] tracking-tight mb-4">
+              Let&apos;s Grow Your <span className="text-[#C9F600]">Digital Pipeline</span>
             </h1>
-            <p className="text-sm text-text-secondary max-w-xl mx-auto leading-relaxed">
+            <p className="text-sm text-[#FFFFFF]/80 max-w-xl mx-auto leading-relaxed">
               {config.description}
             </p>
           </div>
         </section>
 
         {/* Contact split section */}
-        <section className="py-12 bg-light-bg">
+        <section className="py-12 bg-[#260B5E] text-[#FFFFFF]">
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
             {/* Left Info Columns */}
             <div className="lg:col-span-5 flex flex-col gap-8">
-              <h2 className="text-2xl font-bold text-primary-dark relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-accent">
+              <h2 className="text-2xl font-bold text-[#FFFFFF] relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-[#C9F600]">
                 Direct Contact Channels
               </h2>
               
               <div className="flex flex-col gap-4">
                 {/* Location Card */}
-                <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary-glow flex items-center justify-center text-primary text-xl flex-shrink-0">
+                <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-xl p-6 shadow-sm flex items-center gap-4 text-[#FFFFFF]">
+                  <div className="w-12 h-12 rounded-lg bg-[#260B5E] border border-[#FFFFFF]/20 flex items-center justify-center text-[#C9F600] text-xl flex-shrink-0">
                     <i className="fa-solid fa-map-location-dot" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-[10px] font-bold text-text-muted uppercase">Office Address</span>
-                    <span className="text-sm font-bold text-primary-dark mt-0.5">
+                    <span className="text-[10px] font-bold text-[#FFFFFF]/60 uppercase">Office Address</span>
+                    <span className="text-sm font-bold text-[#FFFFFF] mt-0.5">
                       {config.address}
                     </span>
                   </div>
@@ -294,21 +294,21 @@ export default async function CountryContactPage({ params }: PageProps) {
                 {/* Call Card */}
                 <a
                   href={`tel:${config.phone}`}
-                  className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-accent/30 transition-all duration-300"
+                  className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-[#C9F600]/50 transition-all duration-300 text-[#FFFFFF]"
                   title="Call Us Directly"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary-glow flex items-center justify-center text-primary text-xl flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-[#260B5E] border border-[#FFFFFF]/20 flex items-center justify-center text-[#C9F600] text-xl flex-shrink-0">
                       <i className="fa-solid fa-phone" />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-text-muted uppercase">Call Support</span>
-                      <span className="text-sm font-bold text-primary-dark mt-0.5 group-hover:text-accent transition-colors">
+                      <span className="text-[10px] font-bold text-[#FFFFFF]/60 uppercase">Call Support</span>
+                      <span className="text-sm font-bold text-[#FFFFFF] mt-0.5 group-hover:text-[#C9F600] transition-colors">
                         {config.phoneFormatted}
                       </span>
                     </div>
                   </div>
-                  <span className="text-text-muted group-hover:translate-x-1 transition-transform">
+                  <span className="text-[#FFFFFF]/60 group-hover:translate-x-1 group-hover:text-[#C9F600] transition-all">
                     <i className="fa-solid fa-arrow-right-long" />
                   </span>
                 </a>
@@ -318,22 +318,22 @@ export default async function CountryContactPage({ params }: PageProps) {
                   href="https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20get%20more%20details%20about%20your%20services."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-whatsapp-green/30 transition-all duration-300"
+                  className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-emerald-400 transition-all duration-300 text-[#FFFFFF]"
                   title="WhatsApp Us"
                   data-wa-location="contact page"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-whatsapp-glow flex items-center justify-center text-whatsapp-green text-xl flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-[#260B5E] border border-[#FFFFFF]/20 flex items-center justify-center text-emerald-400 text-xl flex-shrink-0">
                       <i className="fa-brands fa-whatsapp" />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-text-muted uppercase">WhatsApp Chat</span>
-                      <span className="text-sm font-bold text-primary-dark mt-0.5 group-hover:text-whatsapp-green transition-colors">
+                      <span className="text-[10px] font-bold text-[#FFFFFF]/60 uppercase">WhatsApp Chat</span>
+                      <span className="text-sm font-bold text-[#FFFFFF] mt-0.5 group-hover:text-emerald-400 transition-colors">
                         +91 90800 26133
                       </span>
                     </div>
                   </div>
-                  <span className="text-text-muted group-hover:translate-x-1 transition-transform">
+                  <span className="text-[#FFFFFF]/60 group-hover:translate-x-1 group-hover:text-emerald-400 transition-all">
                     <i className="fa-solid fa-arrow-right-long" />
                   </span>
                 </a>
@@ -341,21 +341,21 @@ export default async function CountryContactPage({ params }: PageProps) {
                 {/* Email Card */}
                 <a
                   href={`mailto:${contactEmail}`}
-                  className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-accent/30 transition-all duration-300"
+                  className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-[#C9F600]/50 transition-all duration-300 text-[#FFFFFF]"
                   title="Email Us"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary-glow flex items-center justify-center text-primary text-xl flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-[#260B5E] border border-[#FFFFFF]/20 flex items-center justify-center text-[#C9F600] text-xl flex-shrink-0">
                       <i className="fa-solid fa-envelope" />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-text-muted uppercase">Send Email</span>
-                      <span className="text-sm font-bold text-primary-dark mt-0.5 group-hover:text-accent transition-colors">
+                      <span className="text-[10px] font-bold text-[#FFFFFF]/60 uppercase">Send Email</span>
+                      <span className="text-sm font-bold text-[#FFFFFF] mt-0.5 group-hover:text-[#C9F600] transition-colors">
                         {contactEmail}
                       </span>
                     </div>
                   </div>
-                  <span className="text-text-muted group-hover:translate-x-1 transition-transform">
+                  <span className="text-[#FFFFFF]/60 group-hover:translate-x-1 group-hover:text-[#C9F600] transition-all">
                     <i className="fa-solid fa-arrow-right-long" />
                   </span>
                 </a>
@@ -365,21 +365,21 @@ export default async function CountryContactPage({ params }: PageProps) {
                   href="https://share.google/BSniheS2qnzwqUKXU"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-[#4285F4]/40 transition-all duration-300"
+                  className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-[#4285F4]/60 transition-all duration-300 text-[#FFFFFF]"
                   title="Google Business Profile & Reviews"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center text-[#4285F4] text-xl flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-[#260B5E] border border-[#FFFFFF]/20 flex items-center justify-center text-[#4285F4] text-xl flex-shrink-0">
                       <i className="fa-brands fa-google" />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-text-muted uppercase">Google Business Profile</span>
-                      <span className="text-sm font-bold text-primary-dark mt-0.5 group-hover:text-[#4285F4] transition-colors">
+                      <span className="text-[10px] font-bold text-[#FFFFFF]/60 uppercase">Google Business Profile</span>
+                      <span className="text-sm font-bold text-[#FFFFFF] mt-0.5 group-hover:text-[#4285F4] transition-colors">
                         View Profile & Customer Reviews
                       </span>
                     </div>
                   </div>
-                  <span className="text-text-muted group-hover:translate-x-1 transition-transform">
+                  <span className="text-[#FFFFFF]/60 group-hover:translate-x-1 group-hover:text-[#4285F4] transition-all">
                     <i className="fa-solid fa-arrow-right-long" />
                   </span>
                 </a>
@@ -387,7 +387,7 @@ export default async function CountryContactPage({ params }: PageProps) {
 
               {/* Map Embed Card (India headquarters only) */}
               {config.showMap && (
-                <div className="w-full rounded-xl overflow-hidden shadow-sm border border-gray-100 mt-2">
+                <div className="w-full rounded-xl overflow-hidden shadow-sm border border-[#FFFFFF]/20 mt-2">
                   <iframe
                     src="https://maps.google.com/maps?q=Madurai,%20Tamil%20Nadu,%20India&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     width="100%"

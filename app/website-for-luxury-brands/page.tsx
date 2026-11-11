@@ -94,107 +94,107 @@ const pageSchema = {
 
 export default function LuxuryBrandWebPage() {
   const comparisonTable = (
-    <section className="py-16 lg:py-24 bg-[#FAF9FF] border-b border-[#E9E4F2]">
+    <section className="py-16 lg:py-24 bg-[#260B5E] border-b border-[#FFFFFF]/15 text-[#FFFFFF]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-bold uppercase tracking-wider mb-3">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/30 text-[#C9F600] text-xs font-bold uppercase tracking-wider mb-3">
             Prestige &amp; Performance Comparison
           </span>
-          <h2 className="text-2xl md:text-4xl font-extrabold text-primary-dark mb-4">
+          <h2 className="text-2xl md:text-4xl font-extrabold text-[#FFFFFF] mb-4">
             Generic Web Templates vs Joy Digital Luxury Portals
           </h2>
-          <p className="text-sm text-text-secondary leading-relaxed font-normal">
+          <p className="text-sm text-[#FFFFFF]/80 leading-relaxed font-normal">
             Why luxury brands require custom serverless Next.js architecture over standard templates.
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto overflow-hidden bg-white border border-[#E5E7EB] rounded-2xl shadow-sm">
+        <div className="max-w-5xl mx-auto overflow-hidden bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl shadow-md not-prose">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="border-b border-[#E5E7EB] bg-slate-50/80">
+                <tr className="border-b border-[#FFFFFF]/20 bg-[#260B5E]">
                   <th className="py-4 px-6 text-xs font-extrabold text-primary-dark uppercase tracking-wider w-1/4">
                     Features
                   </th>
-                  <th className="py-4 px-6 text-xs font-extrabold text-slate-500 uppercase tracking-wider w-3/8">
+                  <th className="py-4 px-6 text-xs font-extrabold text-[#FFFFFF]/70 uppercase tracking-wider w-3/8">
                     Generic Web Templates
                   </th>
-                  <th className="py-4 px-6 text-xs font-extrabold text-accent uppercase tracking-wider w-3/8 bg-purple-50/60 border-l border-[#E5E7EB]">
+                  <th className="py-4 px-6 text-xs font-extrabold text-[#C9F600] uppercase tracking-wider w-3/8 bg-[#3B1580]/80 border-l border-[#FFFFFF]/20">
                     <div className="flex items-center gap-1.5">
                       <span>Joy Digital Luxury Portal</span>
-                      <span className="bg-accent text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Recommended</span>
+                      <span className="bg-[#C9F600] text-[#3B1580] text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Recommended</span>
                     </div>
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#E5E7EB] text-xs">
-                <tr className="hover:bg-slate-50/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-primary-dark">
+              <tbody className="divide-y divide-[#FFFFFF]/15 text-xs text-[#FFFFFF]">
+                <tr className="hover:bg-[#260B5E]/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
                     Performance &amp; Speed
                   </td>
-                  <td className="py-4 px-6 text-rose-500 font-medium">
+                  <td className="py-4 px-6 text-rose-400 font-medium">
                     <div className="flex items-center gap-2">
                       <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
                       <span>Slow video loading &amp; laggy mobile rendering</span>
                     </div>
                   </td>
-                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
                     <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
                       <span>Sub-1.5s Ultra-fast Next.js architecture</span>
                     </div>
                   </td>
                 </tr>
 
-                <tr className="hover:bg-slate-50/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-primary-dark">
+                <tr className="hover:bg-[#260B5E]/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
                     Client Engagement
                   </td>
-                  <td className="py-4 px-6 text-rose-500 font-medium">
+                  <td className="py-4 px-6 text-rose-400 font-medium">
                     <div className="flex items-center gap-2">
                       <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
                       <span>Standard shopping cart flow</span>
                     </div>
                   </td>
-                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
                     <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
                       <span>Private VIP Concierge &amp; Appointment Engine</span>
                     </div>
                   </td>
                 </tr>
 
-                <tr className="hover:bg-slate-50/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-primary-dark">
+                <tr className="hover:bg-[#260B5E]/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
                     Visual Presentation
                   </td>
-                  <td className="py-4 px-6 text-rose-500 font-medium">
+                  <td className="py-4 px-6 text-rose-400 font-medium">
                     <div className="flex items-center gap-2">
                       <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
                       <span>Generic catalog grids</span>
                     </div>
                   </td>
-                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
                     <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
                       <span>Editorial Digital Lookbooks &amp; High-Res Texture Zoom</span>
                     </div>
                   </td>
                 </tr>
 
-                <tr className="hover:bg-slate-50/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-primary-dark">
+                <tr className="hover:bg-[#260B5E]/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
                     Global SEO &amp; Reach
                   </td>
-                  <td className="py-4 px-6 text-rose-500 font-medium">
+                  <td className="py-4 px-6 text-rose-400 font-medium">
                     <div className="flex items-center gap-2">
                       <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
                       <span>Local metadata tags</span>
                     </div>
                   </td>
-                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
                     <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
                       <span>Prestige Global SEO &amp; Multi-Currency Architecture</span>
                     </div>
                   </td>
@@ -224,37 +224,37 @@ export default function LuxuryBrandWebPage() {
           <p>
             Unfortunately, many luxury websites suffer from slow video loading speeds, non-responsive mobile layouts, generic e-commerce templates, and missing private VIP concierge booking or bespoke inquiry workflows.
           </p>
-          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
-            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Prestige Luxury Websites</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Prestige Luxury Websites</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Private VIP Concierge & Appointment Booking</strong>: Exclusive client consultation form</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Editorial Digital Lookbooks</strong>: High-resolution zoom & video showcases</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Bespoke Craftsmanship Storytelling</strong>: Artisanal heritage & material provenance</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Prestige Global SEO Strategy</strong>: Rank for high-value luxury search queries</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Concierge Desk WhatsApp Integration</strong>: Direct connection with private client advisors</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we combine editorial design mastery with <Link href="/website-development" className="text-primary font-bold hover:underline">high-speed Next.js web development</Link> and <Link href="/seo-services" className="text-primary font-bold hover:underline">prestige search optimization</Link> to help luxury brands scale global allure.
+            At Joy Digital, we combine editorial design mastery with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">high-speed Next.js web development</Link> and <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">prestige search optimization</Link> to help luxury brands scale global allure.
           </p>
         </div>
       }

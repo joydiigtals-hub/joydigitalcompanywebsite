@@ -75,28 +75,28 @@ export default function WebDesignMadurai() {
             As specialized <strong>website designers in Madurai</strong>, we avoid sluggish drag-and-drop builders that produce bloated code. We design clean, conversion-centered wireframes and transform them into pixel-perfect, mobile-friendly websites. By pairing human-centered UI/UX principles with modern design aesthetics, our layouts guide visitors naturally toward submitting inquiries, booking consultations, or messaging your team directly on WhatsApp.
           </p>
 
-          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">
+          <h3 className="text-xl font-bold text-white mt-8 mb-4">
             Bespoke UI/UX Design Tailored to Your Brand
           </h3>
           <p>
             Every business has a unique story and value proposition. We do not use cookie-cutter templates. Our design process begins with understanding your brand identity, color palette, typography, and target customer psychology. We design intuitive navigation menus, clean typography scales, and high-impact hero banners that communicate professionalism and trustworthiness from the very first second.
           </p>
 
-          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">
+          <h3 className="text-xl font-bold text-white mt-8 mb-4">
             Mobile-First Responsive Web Design for Local Buyers
           </h3>
           <p>
             More than 70% of potential buyers in Madurai browse websites on smartphones while on the go. If a website forces users to pinch-to-zoom, hides key phone numbers, or shifts visually during scrolling, bounce rates skyrocket. We craft <strong>responsive website design in Madurai</strong> tested meticulously across modern screen resolutions—ensuring seamless navigation, readable text, and tap-friendly buttons on mobile, tablet, and desktop viewports.
           </p>
 
-          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">
+          <h3 className="text-xl font-bold text-white mt-8 mb-4">
             High-Speed Design That Loads in Under 1.5 Seconds
           </h3>
           <p>
             Beautiful design should never come at the expense of page speed. Bloated graphics, uncompressed banners, and heavy font libraries slow down user experience and hurt Google rankings. We optimize every graphic asset with modern WebP compression, lazy-load below-the-fold media, and code lightweight layouts that load under 1.5 seconds even on standard mobile data connections.
           </p>
 
-          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">
+          <h3 className="text-xl font-bold text-white mt-8 mb-4">
             Conversion-Focused Pathways & Direct Lead Capture
           </h3>
           <p>

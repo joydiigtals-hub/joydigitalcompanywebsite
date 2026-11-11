@@ -71,37 +71,37 @@ export default function ManufacturingWebPage() {
           <p>
             Unfortunately, most manufacturing websites look outdated, take over 5 seconds to load, hide machinery specs in clunky PDFs, and lack direct CAD file upload forms or instant WhatsApp inquiry options.
           </p>
-          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
-            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Performing Industrial Manufacturing Websites</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Performing Industrial Manufacturing Websites</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>B2B RFQ with CAD/STEP File Upload</strong>: Direct drawing attachment for engineering quotes</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Interactive Equipment & Machinery Catalog</strong>: CNC, VMC, laser cutting & press capacity</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>ISO & Quality Badge Wall</strong>: ISO 9001, IATF 16949, AS9100, CE & RoHS showcase</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Industrial Search SEO Strategy</strong>: Rank for OEM manufacturing terms locally & globally</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speed Architecture</strong>: Edge-powered Next.js build</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sales Engineering WhatsApp Routing</strong>: Instant connection with factory estimators</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we merge technical industrial domain understanding with <Link href="/website-development" className="text-primary font-bold hover:underline">high-speed Next.js web development</Link> and <Link href="/seo-services" className="text-primary font-bold hover:underline">industrial B2B search optimization</Link> to help manufacturing businesses scale contract volume.
+            At Joy Digital, we merge technical industrial domain understanding with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">high-speed Next.js web development</Link> and <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">industrial B2B search optimization</Link> to help manufacturing businesses scale contract volume.
           </p>
         </div>
       }

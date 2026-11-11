@@ -140,7 +140,7 @@ export default function YouAndMeVoyageCaseStudyPage() {
       <Header />
       <main className="pt-24 lg:pt-32 bg-[#FAF9FF] text-[#1F1B2D]">
         {/* Breadcrumb & Hero */}
-        <section className="py-12 lg:py-16 bg-white border-b border-[#E9E4F2] relative overflow-hidden">
+        <section className="py-12 lg:py-16 bg-primary border-b border-[#E9E4F2] relative overflow-hidden">
           <div className="max-w-6xl mx-auto px-6">
             <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-semibold text-[#6B6478] mb-6">
               <Link href="/" className="hover:text-[#7C3AED] transition-colors">Home</Link>
@@ -154,7 +154,7 @@ export default function YouAndMeVoyageCaseStudyPage() {
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#7C3AED]/10 text-[#7C3AED] text-xs font-bold uppercase tracking-wider border border-[#7C3AED]/20">
                 <Sparkles className="w-3.5 h-3.5" /> Chennai Client Success Story
               </span>
-              <span className="text-xs text-slate-500 font-semibold">
+              <span className="text-xs text-muted font-semibold">
                 Client Location: Adyar, Chennai
               </span>
             </div>
@@ -179,7 +179,7 @@ export default function YouAndMeVoyageCaseStudyPage() {
               </a>
               <Link
                 href="/website-development-company-chennai"
-                className="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-[#1F1B2D] font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl border border-slate-200 transition-all"
+                className="inline-flex items-center gap-2 bg-primary-dark hover:bg-slate-200 text-[#1F1B2D] font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl border border-white/[0.18] transition-all"
               >
                 <span>Explore Chennai Web Development Services</span>
                 <ArrowRight className="w-4 h-4" />
@@ -191,12 +191,12 @@ export default function YouAndMeVoyageCaseStudyPage() {
         {/* Client Testimonial Callout Banner */}
         <section className="py-12 bg-gradient-to-r from-purple-50 via-indigo-50 to-purple-50 border-b border-purple-100">
           <div className="max-w-4xl mx-auto px-6">
-            <div className="bg-white border-2 border-[#7C3AED]/30 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
+            <div className="bg-primary border-2 border-[#7C3AED]/30 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
               <div className="flex items-center gap-1.5 text-amber-500 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-base font-bold">★</span>
                 ))}
-                <span className="text-xs font-bold text-slate-600 ml-2">Verified Client Testimonial</span>
+                <span className="text-xs font-bold text-secondary ml-2">Verified Client Testimonial</span>
               </div>
               <blockquote className="text-base sm:text-lg italic text-[#1F1B2D] font-medium leading-relaxed mb-4">
                 &ldquo;Joy Digital built our website completely custom. It looks great, it is fast, and we are getting leads from it.&rdquo;
@@ -204,9 +204,9 @@ export default function YouAndMeVoyageCaseStudyPage() {
               <div className="border-t border-slate-100 pt-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-xs">
                 <div>
                   <strong className="text-sm font-bold text-[#1F1B2D] block">[OWNER_NAME]</strong>
-                  <span className="text-slate-500">Owner, You &amp; Me - Independent Voyage</span>
+                  <span className="text-muted">Owner, You &amp; Me - Independent Voyage</span>
                 </div>
-                <span className="text-slate-500 font-medium">Location: Adyar, Chennai, Tamil Nadu</span>
+                <span className="text-muted font-medium">Location: Adyar, Chennai, Tamil Nadu</span>
               </div>
             </div>
           </div>
@@ -217,7 +217,7 @@ export default function YouAndMeVoyageCaseStudyPage() {
           <div className="max-w-4xl mx-auto px-6 space-y-12">
             
             {/* The Client & Challenge */}
-            <div className="bg-white border border-[#E9E4F2] p-8 sm:p-10 rounded-2xl shadow-sm text-left">
+            <div className="bg-primary border border-[#E9E4F2] p-8 sm:p-10 rounded-2xl shadow-sm text-left">
               <div className="inline-flex items-center gap-2 text-xs font-bold text-rose-600 bg-rose-50 px-3 py-1 rounded-full mb-4">
                 <span>The Challenge</span>
               </div>
@@ -238,7 +238,7 @@ export default function YouAndMeVoyageCaseStudyPage() {
             </div>
 
             {/* The Solution */}
-            <div className="bg-white border border-[#E9E4F2] p-8 sm:p-10 rounded-2xl shadow-sm text-left">
+            <div className="bg-primary border border-[#E9E4F2] p-8 sm:p-10 rounded-2xl shadow-sm text-left">
               <div className="inline-flex items-center gap-2 text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full mb-4">
                 <span>The Engineering Solution</span>
               </div>
@@ -250,35 +250,35 @@ export default function YouAndMeVoyageCaseStudyPage() {
                   Joy Digital developed an entirely custom platform engineered on <strong>Next.js 15, React, and TypeScript</strong> with zero reliance on rigid, slow CMS themes:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                  <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                  <div className="p-4 bg-primary-dark border border-white/[0.18] rounded-xl">
                     <h3 className="font-bold text-sm text-[#1F1B2D] mb-1 flex items-center gap-1.5">
                       <Zap className="w-4 h-4 text-[#7C3AED]" /> Sub-Second Edge Speed
                     </h3>
-                    <p className="text-xs text-slate-600 leading-normal">
+                    <p className="text-xs text-secondary leading-normal">
                       Deployed on Vercel&apos;s global CDN with automated WebP image optimization and server-side static generation (SSG) for instant mobile loading.
                     </p>
                   </div>
-                  <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                  <div className="p-4 bg-primary-dark border border-white/[0.18] rounded-xl">
                     <h3 className="font-bold text-sm text-[#1F1B2D] mb-1 flex items-center gap-1.5">
                       <MessageCircle className="w-4 h-4 text-[#10b981]" /> 3-Step Enquiry Planner
                     </h3>
-                    <p className="text-xs text-slate-600 leading-normal">
+                    <p className="text-xs text-secondary leading-normal">
                       Built an interactive 3-step itinerary selector where travelers choose destinations, dates, and group size with zero friction.
                     </p>
                   </div>
-                  <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                  <div className="p-4 bg-primary-dark border border-white/[0.18] rounded-xl">
                     <h3 className="font-bold text-sm text-[#1F1B2D] mb-1 flex items-center gap-1.5">
                       <CheckCircle2 className="w-4 h-4 text-[#7C3AED]" /> Direct WhatsApp Routing
                     </h3>
-                    <p className="text-xs text-slate-600 leading-normal">
+                    <p className="text-xs text-secondary leading-normal">
                       Inquiries automatically format into pre-filled WhatsApp messages, allowing travelers to begin a direct conversation with the Adyar desk in 1 tap.
                     </p>
                   </div>
-                  <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                  <div className="p-4 bg-primary-dark border border-white/[0.18] rounded-xl">
                     <h3 className="font-bold text-sm text-[#1F1B2D] mb-1 flex items-center gap-1.5">
                       <ShieldCheck className="w-4 h-4 text-[#10b981]" /> Travel Schema &amp; Local SEO
                     </h3>
-                    <p className="text-xs text-slate-600 leading-normal">
+                    <p className="text-xs text-secondary leading-normal">
                       Injected Tour, Itinerary, and LocalBusiness schema markup geotargeted for Chennai travel searches.
                     </p>
                   </div>
@@ -287,15 +287,15 @@ export default function YouAndMeVoyageCaseStudyPage() {
             </div>
 
             {/* Tools & Tech Stack */}
-            <div className="bg-white border border-[#E9E4F2] p-8 sm:p-10 rounded-2xl shadow-sm text-left">
+            <div className="bg-primary border border-[#E9E4F2] p-8 sm:p-10 rounded-2xl shadow-sm text-left">
               <h2 className="text-2xl font-extrabold text-[#1F1B2D] mb-6">
                 Tools &amp; Technologies Used
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {TECH_STACK.map((item, idx) => (
-                  <div key={idx} className="p-4 rounded-xl border border-slate-200/80 bg-slate-50/50">
+                  <div key={idx} className="p-4 rounded-xl border border-white/[0.18]/80 bg-primary-dark/50">
                     <h3 className="text-sm font-bold text-[#1F1B2D] mb-1">{item.name}</h3>
-                    <p className="text-xs text-slate-600">{item.purpose}</p>
+                    <p className="text-xs text-secondary">{item.purpose}</p>
                   </div>
                 ))}
               </div>
@@ -314,7 +314,7 @@ export default function YouAndMeVoyageCaseStudyPage() {
 
               <div className="space-y-8">
                 {SCREENSHOTS.map((item, idx) => (
-                  <div key={idx} className="bg-white border border-[#E9E4F2] rounded-2xl overflow-hidden shadow-sm">
+                  <div key={idx} className="bg-primary border border-[#E9E4F2] rounded-2xl overflow-hidden shadow-sm">
                     <div className="relative w-full aspect-[16/9] bg-slate-900">
                       <Image
                         src={item.src}
@@ -327,7 +327,7 @@ export default function YouAndMeVoyageCaseStudyPage() {
                     </div>
                     <div className="p-5 text-left border-t border-slate-100">
                       <h3 className="text-base font-bold text-[#1F1B2D] mb-1">{item.title}</h3>
-                      <p className="text-xs text-slate-600">{item.desc}</p>
+                      <p className="text-xs text-secondary">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -335,7 +335,7 @@ export default function YouAndMeVoyageCaseStudyPage() {
             </div>
 
             {/* Results / Deliverables */}
-            <div className="bg-white border border-[#E9E4F2] p-8 sm:p-10 rounded-2xl shadow-sm text-left">
+            <div className="bg-primary border border-[#E9E4F2] p-8 sm:p-10 rounded-2xl shadow-sm text-left">
               <h2 className="text-2xl font-extrabold text-[#1F1B2D] mb-4">
                 The Result: Fast, Custom Platform Generating Continuous Leads
               </h2>
@@ -346,7 +346,7 @@ export default function YouAndMeVoyageCaseStudyPage() {
                 <p>
                   As the client stated:
                 </p>
-                <div className="p-5 bg-purple-50 border-l-4 border-[#7C3AED] rounded-r-xl font-medium text-slate-800 italic">
+                <div className="p-5 bg-purple-50 border-l-4 border-[#7C3AED] rounded-r-xl font-medium text-white italic">
                   &ldquo;Joy Digital built our website completely custom. It looks great, it is fast, and we are getting leads from it.&rdquo;
                 </div>
                 <p>
@@ -356,29 +356,29 @@ export default function YouAndMeVoyageCaseStudyPage() {
             </div>
 
             {/* Related Service Links */}
-            <div className="bg-slate-50 border border-slate-200 p-8 rounded-2xl text-left">
+            <div className="bg-primary-dark border border-white/[0.18] p-8 rounded-2xl text-left">
               <h3 className="text-base font-bold text-[#1F1B2D] mb-3">
                 Need a Custom Website or SEO for Your Chennai Business?
               </h3>
-              <p className="text-xs text-slate-600 mb-6">
+              <p className="text-xs text-secondary mb-6">
                 Explore our specialized services tailored for enterprises across Chennai:
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/website-development-company-chennai"
-                  className="bg-white border border-slate-200 hover:border-[#7C3AED] px-4 py-2.5 rounded-xl text-xs font-bold text-[#1F1B2D] hover:text-[#7C3AED] transition-colors"
+                  className="bg-primary border border-white/[0.18] hover:border-[#7C3AED] px-4 py-2.5 rounded-xl text-xs font-bold text-[#1F1B2D] hover:text-[#7C3AED] transition-colors"
                 >
                   Website Development Company in Chennai &rarr;
                 </Link>
                 <Link
                   href="/seo-services-chennai"
-                  className="bg-white border border-slate-200 hover:border-[#7C3AED] px-4 py-2.5 rounded-xl text-xs font-bold text-[#1F1B2D] hover:text-[#7C3AED] transition-colors"
+                  className="bg-primary border border-white/[0.18] hover:border-[#7C3AED] px-4 py-2.5 rounded-xl text-xs font-bold text-[#1F1B2D] hover:text-[#7C3AED] transition-colors"
                 >
                   SEO Services in Chennai &rarr;
                 </Link>
                 <Link
                   href="/custom-website-development"
-                  className="bg-white border border-slate-200 hover:border-[#7C3AED] px-4 py-2.5 rounded-xl text-xs font-bold text-[#1F1B2D] hover:text-[#7C3AED] transition-colors"
+                  className="bg-primary border border-white/[0.18] hover:border-[#7C3AED] px-4 py-2.5 rounded-xl text-xs font-bold text-[#1F1B2D] hover:text-[#7C3AED] transition-colors"
                 >
                   Custom Website Development &rarr;
                 </Link>

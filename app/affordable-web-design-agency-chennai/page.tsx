@@ -68,7 +68,7 @@ export default function AffordableWebDesignChennai() {
           <p>
             Our <strong>low cost website development in Chennai</strong> uses optimized, serverless architectures. This gives you a fast-loading business website that ranks high on search results, loads in under 1.5 seconds, and delivers actual conversions.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Transparent Website Design Price in Chennai</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Transparent Website Design Price in Chennai</h3>
           <p>
             Whether you want a simple portfolio or a structured business directory, we structure our deliverables into three flexible packages. You get complete ownership of the code, sitemaps, domain integration support, and developer review sprints without high pricing.
           </p>

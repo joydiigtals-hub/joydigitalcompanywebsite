@@ -74,37 +74,37 @@ export default function OnPageSEOPage() {
             At <strong>Joy Digital</strong>, our on-page SEO methodology blends data-driven keyword intent modeling with compelling copywriting and CRO (conversion rate optimization). We ensure that every landing page and blog post not only ranks at the top of the search engine results page (SERP) but also drives qualified inquiries and customer conversions.
           </p>
 
-          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
-            <h3 className="text-lg font-bold text-primary-dark">Comprehensive On-Page Optimization Checklist</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+            <h3 className="text-lg font-bold text-[#FFFFFF]">Comprehensive On-Page Optimization Checklist</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>High-CTR Title &amp; Meta Descriptions:</strong> Crafted to maximize click-through rates</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Semantic Heading Architecture:</strong> Structured H1, H2, and H3 tag hierarchies</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Internal Link Equity Sculpting:</strong> Contextual hubs that pass authority efficiently</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Keyword Intent &amp; Cannibalization Fixes:</strong> Clear commercial vs informational separation</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Media &amp; Image Alt Tag Optimization:</strong> Descriptive alt attributes &amp; next-gen formats</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Featured Snippet &amp; Q&amp;A Targeting:</strong> Formatted tables, lists, and direct answers</span>
               </li>
             </ul>
           </div>
 
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Eliminating Keyword Cannibalization &amp; Thin Content</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Eliminating Keyword Cannibalization &amp; Thin Content</h3>
           <p>
             When multiple pages on your website target similar search phrases, search engines become confused about which URL to display, dampening the ranking potential of both. We conduct exhaustive content gap audits to consolidate duplicate pages, resolve cannibalization issues, and ensure every page holds distinct topical authority.
           </p>

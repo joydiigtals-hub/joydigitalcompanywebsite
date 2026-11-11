@@ -46,8 +46,8 @@ export default function ViewCounter({ slug, increment = false, className = "" }:
   }
 
   return (
-    <span className={`inline-flex items-center gap-1 text-[10px] text-text-muted font-semibold ${className}`} title={`${views} page views`}>
-      <i className="fa-solid fa-eye" /> {views.toLocaleString()} views
+    <span className={`inline-flex items-center gap-1 text-[10px] text-[#D9CCF5]/90 font-semibold ${className}`} title={`${views} page views`}>
+      <i className="fa-solid fa-eye text-[#C9F600]" /> {views.toLocaleString()} views
     </span>
   );
 }

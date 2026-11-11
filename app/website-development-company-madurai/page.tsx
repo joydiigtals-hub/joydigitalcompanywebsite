@@ -75,28 +75,28 @@ export default function WebDevMadurai() {
             Many businesses struggle with outdated templates, bloated page builders, and vulnerable WordPress plugins that slow down loading speeds and compromise security. When you partner with Joy Digital for <strong>custom website development in Madurai</strong>, your platform is coded from the ground up using clean, semantic architecture. We eliminate database bottlenecks, achieve 95+ Core Web Vitals scores, and integrate seamless conversion pathways that connect website visitors directly with your sales desk.
           </p>
 
-          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">
+          <h3 className="text-xl font-bold text-white mt-8 mb-4">
             Why Custom Next.js Engineering Outperforms Legacy WordPress
           </h3>
           <p>
             Traditional content management systems rely on heavy server databases that query information on every single page load, creating frustrating delays. Our custom Next.js builds pre-render HTML pages and distribute them across lightning-fast global Content Delivery Networks (CDNs). This ensures instant Time to First Byte (TTFB), complete protection against database injection attacks, and the ability to handle traffic spikes effortlessly without crashing your server.
           </p>
 
-          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">
+          <h3 className="text-xl font-bold text-white mt-8 mb-4">
             Sub-1.5 Second Speeds & Mobile-First Architecture
           </h3>
           <p>
             Over 75% of online searches in Tamil Nadu originate on smartphones. If your website exhibits visual layout shifts (CLS), overlapping elements, or slow-rendering images, visitors leave within seconds. As an engineering-driven provider of <strong>web development services in Madurai</strong>, we build mobile-first responsive interfaces using Tailwind CSS. Every button, navigation bar, and contact form is thoroughly tested for intuitive touch interactions across all screen sizes.
           </p>
 
-          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">
+          <h3 className="text-xl font-bold text-white mt-8 mb-4">
             Built-in Technical SEO & Local Schema Integration
           </h3>
           <p>
             A high-performance website must be easily discoverable on Google. We bake technical SEO best practices into the core code: setting clean canonical tags, generating automated XML sitemaps, configuring OpenGraph social cards, and injecting structured LocalBusiness and Service JSON-LD schemas. This helps search engines recognize your location authority in Madurai and index your service pages faster.
           </p>
 
-          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">
+          <h3 className="text-xl font-bold text-white mt-8 mb-4">
             Direct WhatsApp Lead Capture & Higher Conversion Rates
           </h3>
           <p>

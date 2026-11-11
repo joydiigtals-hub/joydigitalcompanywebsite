@@ -283,7 +283,7 @@ export default async function CountrySEOPage({ params }: PageProps) {
           <p>
             At Joy Digital, our strategist team avoids shortcuts, black-hat tricks, and spam networks that trigger search penalties. We align our campaigns around technical crawlability fixes, commercial search intent audits, engaging copywriting, and outreach to secure authoritative digital brand mentions in {config.targetMarket} and globally.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">A Holistic Approach to SEO Performance</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">A Holistic Approach to SEO Performance</h3>
           <p>
             Search visibility requires continuous attention to technical site architecture, page speeds, indexing structures, and clean semantic tag hierarchies. We clean up metadata fields, configure XML sitemaps, optimize redirect pathways, and map out extensive content clusters. This helps search crawlers easily read your layout value.
           </p>

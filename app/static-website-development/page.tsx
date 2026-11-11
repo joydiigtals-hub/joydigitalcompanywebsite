@@ -62,7 +62,7 @@ export default async function StaticWebDevPage() {
       </a>
       <Link
         href="/free-website-audit"
-        className="inline-flex items-center gap-2 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+        className="inline-flex items-center gap-2 bg-[#C9F600] hover:opacity-90 text-[#3B1580] font-extrabold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
       >
         <span>Book Free Web Audit</span>
         <i className="fa-solid fa-arrow-right text-xs" />
@@ -71,18 +71,18 @@ export default async function StaticWebDevPage() {
   );
 
   const bottomCta = (
-    <section className="relative py-16 sm:py-20 bg-[#171126] border border-[#2A203F] overflow-hidden rounded-[24px] mx-6 lg:mx-12 my-16 shadow-xl text-center text-white">
+    <section className="relative py-16 sm:py-20 bg-[#260B5E] border border-[#FFFFFF]/25 overflow-hidden rounded-[24px] mx-6 lg:mx-12 my-16 shadow-2xl text-center text-[#FFFFFF]">
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#7C3AED]/15 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C9F600]/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-4xl mx-auto px-6 z-10 flex flex-col items-center">
-        <span className="inline-block bg-[#7C3AED]/20 text-[#A78BFA] font-extrabold text-[10px] uppercase tracking-widest px-4 py-1.5 rounded-full border border-[#7C3AED]/40 mb-6">
+        <span className="inline-block bg-[#C9F600]/15 text-[#C9F600] font-extrabold text-[10px] uppercase tracking-widest px-4 py-1.5 rounded-full border border-[#C9F600]/30 mb-6">
           Zero Database Maintenance • 100% Serverless Speed
         </span>
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4 leading-tight text-white max-w-2xl">
           Ready to Upgrade to a Blazing-Fast Static Website?
         </h2>
-        <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+        <p className="text-sm sm:text-base text-[#FFFFFF]/80 max-w-2xl mx-auto mb-8 leading-relaxed">
           Eliminate WordPress plugin vulnerabilities, prevent costly database downtime, and give your customers instant sub-second page loads on every mobile and desktop device worldwide.
         </p>
 
@@ -99,22 +99,22 @@ export default async function StaticWebDevPage() {
           </a>
           <Link
             href="/free-website-audit"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-xs sm:text-sm px-8 py-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#C9F600] hover:opacity-90 text-[#3B1580] font-extrabold text-xs sm:text-sm px-8 py-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200"
           >
             <span>Book Free Web Audit</span>
             <i className="fa-solid fa-arrow-right text-xs" />
           </Link>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-6 mt-8 pt-8 border-t border-white/10 text-xs text-slate-400 font-semibold">
+        <div className="flex flex-wrap items-center justify-center gap-6 mt-8 pt-8 border-t border-[#FFFFFF]/15 text-xs text-[#FFFFFF]/70 font-semibold">
           <span className="flex items-center gap-1.5">
-            <i className="fa-solid fa-bolt text-emerald-400" /> 100/100 Core Web Vitals
+            <i className="fa-solid fa-bolt text-[#C9F600]" /> 100/100 Core Web Vitals
           </span>
           <span className="flex items-center gap-1.5">
-            <i className="fa-solid fa-shield-halved text-emerald-400" /> 100% Serverless Security
+            <i className="fa-solid fa-shield-halved text-[#C9F600]" /> 100% Serverless Security
           </span>
           <span className="flex items-center gap-1.5">
-            <i className="fa-solid fa-comments text-emerald-400" /> Direct Senior Developer Support
+            <i className="fa-solid fa-comments text-[#C9F600]" /> Direct Senior Developer Support
           </span>
         </div>
       </div>
@@ -147,173 +147,173 @@ export default async function StaticWebDevPage() {
             {/* 3. STATIC VS TRADITIONAL WORDPRESS COMPARISON TABLE */}
             <div className="my-8 pt-4">
               <div className="text-center max-w-2xl mx-auto mb-6">
-                <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-1">
+                <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-1">
                   Architecture Comparison
                 </span>
-                <h3 className="text-xl sm:text-2xl font-extrabold text-primary-dark">
+                <h3 className="text-xl sm:text-2xl font-extrabold text-[#FFFFFF]">
                   Static / Next.js vs. Traditional WordPress
                 </h3>
-                <p className="text-xs sm:text-sm text-text-secondary mt-1">
+                <p className="text-xs sm:text-sm text-[#FFFFFF]/80 mt-1">
                   See why forward-thinking businesses are migrating from legacy CMS bloat to modern static builds.
                 </p>
               </div>
 
-              <div className="overflow-x-auto rounded-2xl border border-[#E5E7EB] shadow-sm bg-white not-prose">
-                <table className="w-full text-left border-collapse text-xs sm:text-sm">
+              <div className="overflow-x-auto rounded-2xl border border-[#FFFFFF]/20 shadow-md bg-[#260B5E] not-prose">
+                <table className="w-full text-left border-collapse text-xs sm:text-sm text-[#FFFFFF]">
                   <thead>
-                    <tr className="border-b border-[#E5E7EB] bg-slate-50/80">
-                      <th className="py-4 px-5 font-extrabold text-primary-dark text-xs uppercase tracking-wider w-1/3">
+                    <tr className="border-b border-[#FFFFFF]/20 bg-[#3B1580]">
+                      <th className="py-4 px-5 font-extrabold text-[#FFFFFF] text-xs uppercase tracking-wider w-1/3">
                         Key Metric / Feature
                       </th>
-                      <th className="py-4 px-5 font-extrabold text-[#7C3AED] bg-[#7C3AED]/10 text-xs uppercase tracking-wider w-1/3 border-x border-[#E5E7EB]">
+                      <th className="py-4 px-5 font-extrabold text-[#C9F600] bg-[#C9F600]/10 text-xs uppercase tracking-wider w-1/3 border-x border-[#FFFFFF]/20">
                         <div className="flex items-center gap-1.5">
                           <span>Next.js Static Build</span>
-                          <span className="bg-[#7C3AED] text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase">
+                          <span className="bg-[#C9F600] text-[#3B1580] text-[9px] font-bold px-2 py-0.5 rounded-full uppercase">
                             Joy Digital
                           </span>
                         </div>
                       </th>
-                      <th className="py-4 px-5 font-extrabold text-rose-700 bg-rose-50/60 text-xs uppercase tracking-wider w-1/3">
+                      <th className="py-4 px-5 font-extrabold text-rose-300 bg-rose-950/40 text-xs uppercase tracking-wider w-1/3">
                         Traditional WordPress
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#E5E7EB] font-medium text-slate-700">
+                  <tbody className="divide-y divide-[#FFFFFF]/15 font-medium text-[#FFFFFF]">
                     {/* Speed Row */}
-                    <tr className="hover:bg-slate-50/50 transition-colors">
-                      <td className="py-4 px-5 font-bold text-primary-dark">
+                    <tr className="hover:bg-[#3B1580]/40 transition-colors">
+                      <td className="py-4 px-5 font-bold text-[#FFFFFF]">
                         <div className="flex items-center gap-2">
-                          <i className="fa-solid fa-gauge-high text-[#7C3AED]" />
+                          <i className="fa-solid fa-gauge-high text-[#C9F600]" />
                           <span>Speed</span>
                         </div>
                       </td>
-                      <td className="py-4 px-5 text-emerald-700 font-bold bg-[#7C3AED]/5 border-x border-[#E5E7EB]">
+                      <td className="py-4 px-5 text-[#C9F600] font-bold bg-[#C9F600]/5 border-x border-[#FFFFFF]/20">
                         <div className="flex items-start gap-2">
-                          <i className="fa-solid fa-circle-check text-emerald-500 mt-1 shrink-0" />
+                          <i className="fa-solid fa-circle-check text-[#C9F600] mt-1 shrink-0" />
                           <div>
-                            <span className="font-extrabold block text-emerald-800">100/100 Core Web Vitals</span>
-                            <span className="text-[11px] text-emerald-600 font-normal">Sub-second load times (&lt; 0.8s) from Global Edge CDNs</span>
+                            <span className="font-extrabold block text-[#C9F600]">100/100 Core Web Vitals</span>
+                            <span className="text-[11px] text-[#FFFFFF]/80 font-normal">Sub-second load times (&lt; 0.8s) from Global Edge CDNs</span>
                           </div>
                         </div>
                       </td>
-                      <td className="py-4 px-5 text-rose-700 bg-rose-50/20">
+                      <td className="py-4 px-5 text-rose-300 bg-rose-950/20">
                         <div className="flex items-start gap-2">
-                          <i className="fa-solid fa-circle-xmark text-rose-500 mt-1 shrink-0" />
+                          <i className="fa-solid fa-circle-xmark text-rose-400 mt-1 shrink-0" />
                           <div>
-                            <span className="font-bold block text-rose-800">Slow / Plugin Overhead</span>
-                            <span className="text-[11px] text-rose-600 font-normal">3.5s to 7+ seconds delay caused by heavy database queries</span>
+                            <span className="font-bold block text-rose-300">Slow / Plugin Overhead</span>
+                            <span className="text-[11px] text-rose-200/70 font-normal">3.5s to 7+ seconds delay caused by heavy database queries</span>
                           </div>
                         </div>
                       </td>
                     </tr>
 
                     {/* Security Row */}
-                    <tr className="hover:bg-slate-50/50 transition-colors">
-                      <td className="py-4 px-5 font-bold text-primary-dark">
+                    <tr className="hover:bg-[#3B1580]/40 transition-colors">
+                      <td className="py-4 px-5 font-bold text-[#FFFFFF]">
                         <div className="flex items-center gap-2">
-                          <i className="fa-solid fa-shield-halved text-[#7C3AED]" />
+                          <i className="fa-solid fa-shield-halved text-[#C9F600]" />
                           <span>Security</span>
                         </div>
                       </td>
-                      <td className="py-4 px-5 text-emerald-700 font-bold bg-[#7C3AED]/5 border-x border-[#E5E7EB]">
+                      <td className="py-4 px-5 text-[#C9F600] font-bold bg-[#C9F600]/5 border-x border-[#FFFFFF]/20">
                         <div className="flex items-start gap-2">
-                          <i className="fa-solid fa-circle-check text-emerald-500 mt-1 shrink-0" />
+                          <i className="fa-solid fa-circle-check text-[#C9F600] mt-1 shrink-0" />
                           <div>
-                            <span className="font-extrabold block text-emerald-800">100% Serverless &amp; Hacker-proof</span>
-                            <span className="text-[11px] text-emerald-600 font-normal">Zero database or unpatched plugin attack surfaces</span>
+                            <span className="font-extrabold block text-[#C9F600]">100% Serverless &amp; Hacker-proof</span>
+                            <span className="text-[11px] text-[#FFFFFF]/80 font-normal">Zero database or unpatched plugin attack surfaces</span>
                           </div>
                         </div>
                       </td>
-                      <td className="py-4 px-5 text-rose-700 bg-rose-50/20">
+                      <td className="py-4 px-5 text-rose-300 bg-rose-950/20">
                         <div className="flex items-start gap-2">
-                          <i className="fa-solid fa-circle-xmark text-rose-500 mt-1 shrink-0" />
+                          <i className="fa-solid fa-circle-xmark text-rose-400 mt-1 shrink-0" />
                           <div>
-                            <span className="font-bold block text-rose-800">Vulnerable to Database Hacks</span>
-                            <span className="text-[11px] text-rose-600 font-normal">Frequent SQL injections, brute-force logins &amp; plugin exploits</span>
+                            <span className="font-bold block text-rose-300">Vulnerable to Database Hacks</span>
+                            <span className="text-[11px] text-rose-200/70 font-normal">Frequent SQL injections, brute-force logins &amp; plugin exploits</span>
                           </div>
                         </div>
                       </td>
                     </tr>
 
                     {/* Maintenance Row */}
-                    <tr className="hover:bg-slate-50/50 transition-colors">
-                      <td className="py-4 px-5 font-bold text-primary-dark">
+                    <tr className="hover:bg-[#3B1580]/40 transition-colors">
+                      <td className="py-4 px-5 font-bold text-[#FFFFFF]">
                         <div className="flex items-center gap-2">
-                          <i className="fa-solid fa-screwdriver-wrench text-[#7C3AED]" />
+                          <i className="fa-solid fa-screwdriver-wrench text-[#C9F600]" />
                           <span>Maintenance</span>
                         </div>
                       </td>
-                      <td className="py-4 px-5 text-emerald-700 font-bold bg-[#7C3AED]/5 border-x border-[#E5E7EB]">
+                      <td className="py-4 px-5 text-[#C9F600] font-bold bg-[#C9F600]/5 border-x border-[#FFFFFF]/20">
                         <div className="flex items-start gap-2">
-                          <i className="fa-solid fa-circle-check text-emerald-500 mt-1 shrink-0" />
+                          <i className="fa-solid fa-circle-check text-[#C9F600] mt-1 shrink-0" />
                           <div>
-                            <span className="font-extrabold block text-emerald-800">Zero Database Maintenance</span>
-                            <span className="text-[11px] text-emerald-600 font-normal">No database crashes, PHP errors, or weekly patch panics</span>
+                            <span className="font-extrabold block text-[#C9F600]">Zero Database Maintenance</span>
+                            <span className="text-[11px] text-[#FFFFFF]/80 font-normal">No database crashes, PHP errors, or weekly patch panics</span>
                           </div>
                         </div>
                       </td>
-                      <td className="py-4 px-5 text-rose-700 bg-rose-50/20">
+                      <td className="py-4 px-5 text-rose-300 bg-rose-950/20">
                         <div className="flex items-start gap-2">
-                          <i className="fa-solid fa-circle-xmark text-rose-500 mt-1 shrink-0" />
+                          <i className="fa-solid fa-circle-xmark text-rose-400 mt-1 shrink-0" />
                           <div>
-                            <span className="font-bold block text-rose-800">High Monthly Upkeep &amp; Updates</span>
-                            <span className="text-[11px] text-rose-600 font-normal">Constant plugin updates break site designs, requiring active IT repair</span>
+                            <span className="font-bold block text-rose-300">High Monthly Upkeep &amp; Updates</span>
+                            <span className="text-[11px] text-rose-200/70 font-normal">Constant plugin updates break site designs, requiring active IT repair</span>
                           </div>
                         </div>
                       </td>
                     </tr>
 
                     {/* Hosting Cost Row */}
-                    <tr className="hover:bg-slate-50/50 transition-colors">
-                      <td className="py-4 px-5 font-bold text-primary-dark">
+                    <tr className="hover:bg-[#3B1580]/40 transition-colors">
+                      <td className="py-4 px-5 font-bold text-[#FFFFFF]">
                         <div className="flex items-center gap-2">
-                          <i className="fa-solid fa-wallet text-[#7C3AED]" />
+                          <i className="fa-solid fa-wallet text-[#C9F600]" />
                           <span>Hosting Cost</span>
                         </div>
                       </td>
-                      <td className="py-4 px-5 text-emerald-700 font-bold bg-[#7C3AED]/5 border-x border-[#E5E7EB]">
+                      <td className="py-4 px-5 text-[#C9F600] font-bold bg-[#C9F600]/5 border-x border-[#FFFFFF]/20">
                         <div className="flex items-start gap-2">
-                          <i className="fa-solid fa-circle-check text-emerald-500 mt-1 shrink-0" />
+                          <i className="fa-solid fa-circle-check text-[#C9F600] mt-1 shrink-0" />
                           <div>
-                            <span className="font-extrabold block text-emerald-800">Highly Cost-Effective</span>
-                            <span className="text-[11px] text-emerald-600 font-normal">Served on global Edge CDNs for minimal hosting costs</span>
+                            <span className="font-extrabold block text-[#C9F600]">Highly Cost-Effective</span>
+                            <span className="text-[11px] text-[#FFFFFF]/80 font-normal">Served on global Edge CDNs for minimal hosting costs</span>
                           </div>
                         </div>
                       </td>
-                      <td className="py-4 px-5 text-rose-700 bg-rose-50/20">
+                      <td className="py-4 px-5 text-rose-300 bg-rose-950/20">
                         <div className="flex items-start gap-2">
-                          <i className="fa-solid fa-circle-xmark text-rose-500 mt-1 shrink-0" />
+                          <i className="fa-solid fa-circle-xmark text-rose-400 mt-1 shrink-0" />
                           <div>
-                            <span className="font-bold block text-rose-800">Expensive Dedicated Servers Needed</span>
-                            <span className="text-[11px] text-rose-600 font-normal">High RAM/CPU server specs needed to avoid downtime spikes</span>
+                            <span className="font-bold block text-rose-300">Expensive Dedicated Servers Needed</span>
+                            <span className="text-[11px] text-rose-200/70 font-normal">High RAM/CPU server specs needed to avoid downtime spikes</span>
                           </div>
                         </div>
                       </td>
                     </tr>
 
                     {/* Scalability Row */}
-                    <tr className="hover:bg-slate-50/50 transition-colors">
-                      <td className="py-4 px-5 font-bold text-primary-dark">
+                    <tr className="hover:bg-[#3B1580]/40 transition-colors">
+                      <td className="py-4 px-5 font-bold text-[#FFFFFF]">
                         <div className="flex items-center gap-2">
-                          <i className="fa-solid fa-arrow-trend-up text-[#7C3AED]" />
+                          <i className="fa-solid fa-arrow-trend-up text-[#C9F600]" />
                           <span>Traffic Scalability</span>
                         </div>
                       </td>
-                      <td className="py-4 px-5 text-emerald-700 font-bold bg-[#7C3AED]/5 border-x border-[#E5E7EB]">
+                      <td className="py-4 px-5 text-emerald-700 font-bold bg-[#C9F600]/5 border-x border-[#FFFFFF]/20">
                         <div className="flex items-start gap-2">
-                          <i className="fa-solid fa-circle-check text-emerald-500 mt-1 shrink-0" />
+                          <i className="fa-solid fa-circle-check text-[#C9F600] mt-1 shrink-0" />
                           <div>
-                            <span className="font-extrabold block text-emerald-800">Infinite Edge Auto-Scale</span>
-                            <span className="text-[11px] text-emerald-600 font-normal">Handles 100k+ concurrent visits without a hiccup</span>
+                            <span className="font-extrabold block text-[#C9F600]">Infinite Edge Auto-Scale</span>
+                            <span className="text-[11px] text-[#FFFFFF]/80 font-normal">Handles 100k+ concurrent visits without a hiccup</span>
                           </div>
                         </div>
                       </td>
-                      <td className="py-4 px-5 text-rose-700 bg-rose-50/20">
+                      <td className="py-4 px-5 text-rose-300 bg-rose-950/20">
                         <div className="flex items-start gap-2">
-                          <i className="fa-solid fa-circle-xmark text-rose-500 mt-1 shrink-0" />
+                          <i className="fa-solid fa-circle-xmark text-rose-400 mt-1 shrink-0" />
                           <div>
-                            <span className="font-bold block text-rose-800">Frequent 502/504 Timeouts</span>
-                            <span className="text-[11px] text-rose-600 font-normal">Database bottleneck crashes under sudden viral traffic</span>
+                            <span className="font-bold block text-rose-300">Frequent 502/504 Timeouts</span>
+                            <span className="text-[11px] text-rose-200/70 font-normal">Database bottleneck crashes under sudden viral traffic</span>
                           </div>
                         </div>
                       </td>
@@ -326,113 +326,113 @@ export default async function StaticWebDevPage() {
             {/* 4. TARGET AUDIENCE / IDEAL USE CASES */}
             <div className="my-10 pt-4">
               <div className="text-center max-w-2xl mx-auto mb-8">
-                <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-1">
+                <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-1">
                   Target Audience
                 </span>
-                <h3 className="text-xl sm:text-2xl font-extrabold text-primary-dark">
+                <h3 className="text-xl sm:text-2xl font-extrabold text-[#FFFFFF]">
                   Who Is Static Website Development Ideal For?
                 </h3>
-                <p className="text-xs sm:text-sm text-text-secondary mt-1">
+                <p className="text-xs sm:text-sm text-[#FFFFFF]/80 mt-1">
                   Our custom Next.js static builds are purpose-engineered for businesses where speed, reliability, and security drive client acquisition.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose">
                 {/* 1. Corporate Business Websites */}
-                <div className="bg-white border border-[#E5E7EB] hover:border-[#7C3AED]/40 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div className="bg-[#3B1580] border border-[#FFFFFF]/20 hover:border-[#C9F600]/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group text-[#FFFFFF]">
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-[#7C3AED]/10 text-[#7C3AED] flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-[#7C3AED] group-hover:text-white transition-all">
+                    <div className="w-12 h-12 rounded-xl bg-[#C9F600]/15 text-[#C9F600] flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-[#C9F600] group-hover:text-[#3B1580] transition-all">
                       <i className="fa-solid fa-building" />
                     </div>
-                    <h4 className="text-base font-bold text-primary-dark mb-2 group-hover:text-[#7C3AED] transition-colors">
+                    <h4 className="text-base font-bold text-[#FFFFFF] mb-2 group-hover:text-[#C9F600] transition-colors">
                       Corporate Business Websites
                     </h4>
-                    <p className="text-xs text-text-secondary leading-relaxed mb-4">
+                    <p className="text-xs text-[#FFFFFF]/80 leading-relaxed mb-4">
                       Mid-sized companies and enterprise brands that require 100% serverless security, high brand authority, and instant loading pages for international clients, partners, and investors.
                     </p>
                   </div>
-                  <ul className="space-y-1.5 text-xs text-slate-700 font-semibold border-t border-slate-100 pt-3">
+                  <ul className="space-y-1.5 text-xs text-[#FFFFFF]/90 font-medium border-t border-[#FFFFFF]/15 pt-3">
                     <li className="flex items-center gap-2">
-                      <i className="fa-solid fa-check text-emerald-500 text-[10px]" />
+                      <i className="fa-solid fa-check text-[#C9F600] text-[10px]" />
                       <span>Zero database attack vectors &amp; 99.99% uptime</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <i className="fa-solid fa-check text-emerald-500 text-[10px]" />
+                      <i className="fa-solid fa-check text-[#C9F600] text-[10px]" />
                       <span>Sub-100ms global Edge CDN delivery</span>
                     </li>
                   </ul>
                 </div>
 
                 {/* 2. Local Service Providers & Consultants */}
-                <div className="bg-white border border-[#E5E7EB] hover:border-[#7C3AED]/40 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div className="bg-[#3B1580] border border-[#FFFFFF]/20 hover:border-[#C9F600]/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group text-[#FFFFFF]">
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-[#7C3AED]/10 text-[#7C3AED] flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-[#7C3AED] group-hover:text-white transition-all">
+                    <div className="w-12 h-12 rounded-xl bg-[#C9F600]/15 text-[#C9F600] flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-[#C9F600] group-hover:text-[#3B1580] transition-all">
                       <i className="fa-solid fa-user-tie" />
                     </div>
-                    <h4 className="text-base font-bold text-primary-dark mb-2 group-hover:text-[#7C3AED] transition-colors">
+                    <h4 className="text-base font-bold text-[#FFFFFF] mb-2 group-hover:text-[#C9F600] transition-colors">
                       Local Service Providers &amp; Consultants
                     </h4>
-                    <p className="text-xs text-text-secondary leading-relaxed mb-4">
+                    <p className="text-xs text-[#FFFFFF]/80 leading-relaxed mb-4">
                       Clinics, medical professionals, financial advisors, legal consultants, and local agencies who rely on high Google Maps visibility and quick mobile enquiries.
                     </p>
                   </div>
-                  <ul className="space-y-1.5 text-xs text-slate-700 font-semibold border-t border-slate-100 pt-3">
+                  <ul className="space-y-1.5 text-xs text-[#FFFFFF]/90 font-medium border-t border-[#FFFFFF]/15 pt-3">
                     <li className="flex items-center gap-2">
-                      <i className="fa-solid fa-check text-emerald-500 text-[10px]" />
+                      <i className="fa-solid fa-check text-[#C9F600] text-[10px]" />
                       <span>Direct WhatsApp &amp; click-to-call integrations</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <i className="fa-solid fa-check text-emerald-500 text-[10px]" />
+                      <i className="fa-solid fa-check text-[#C9F600] text-[10px]" />
                       <span>LocalBusiness JSON-LD schema &amp; fast indexation</span>
                     </li>
                   </ul>
                 </div>
 
                 {/* 3. Landing Pages & Product Showcases */}
-                <div className="bg-white border border-[#E5E7EB] hover:border-[#7C3AED]/40 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div className="bg-[#3B1580] border border-[#FFFFFF]/20 hover:border-[#C9F600]/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group text-[#FFFFFF]">
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-[#7C3AED]/10 text-[#7C3AED] flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-[#7C3AED] group-hover:text-white transition-all">
+                    <div className="w-12 h-12 rounded-xl bg-[#C9F600]/15 text-[#C9F600] flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-[#C9F600] group-hover:text-[#3B1580] transition-all">
                       <i className="fa-solid fa-rocket" />
                     </div>
-                    <h4 className="text-base font-bold text-primary-dark mb-2 group-hover:text-[#7C3AED] transition-colors">
+                    <h4 className="text-base font-bold text-[#FFFFFF] mb-2 group-hover:text-[#C9F600] transition-colors">
                       Landing Pages &amp; Product Showcases
                     </h4>
-                    <p className="text-xs text-text-secondary leading-relaxed mb-4">
+                    <p className="text-xs text-[#FFFFFF]/80 leading-relaxed mb-4">
                       SaaS platforms and performance marketers running Google Ads or Meta Ads who cannot afford slow load times causing expensive ad click bounces.
                     </p>
                   </div>
-                  <ul className="space-y-1.5 text-xs text-slate-700 font-semibold border-t border-slate-100 pt-3">
+                  <ul className="space-y-1.5 text-xs text-[#FFFFFF]/90 font-medium border-t border-[#FFFFFF]/15 pt-3">
                     <li className="flex items-center gap-2">
-                      <i className="fa-solid fa-check text-emerald-500 text-[10px]" />
+                      <i className="fa-solid fa-check text-[#C9F600] text-[10px]" />
                       <span>Instant first viewport render (&lt; 0.6s)</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <i className="fa-solid fa-check text-emerald-500 text-[10px]" />
+                      <i className="fa-solid fa-check text-[#C9F600] text-[10px]" />
                       <span>High-converting, frictionless lead forms</span>
                     </li>
                   </ul>
                 </div>
 
                 {/* 4. Portfolio & Agency Sites */}
-                <div className="bg-white border border-[#E5E7EB] hover:border-[#7C3AED]/40 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div className="bg-[#3B1580] border border-[#FFFFFF]/20 hover:border-[#C9F600]/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group text-[#FFFFFF]">
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-[#7C3AED]/10 text-[#7C3AED] flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-[#7C3AED] group-hover:text-white transition-all">
+                    <div className="w-12 h-12 rounded-xl bg-[#C9F600]/15 text-[#C9F600] flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-[#C9F600] group-hover:text-[#3B1580] transition-all">
                       <i className="fa-solid fa-briefcase" />
                     </div>
-                    <h4 className="text-base font-bold text-primary-dark mb-2 group-hover:text-[#7C3AED] transition-colors">
+                    <h4 className="text-base font-bold text-[#FFFFFF] mb-2 group-hover:text-[#C9F600] transition-colors">
                       Portfolio &amp; Agency Sites
                     </h4>
-                    <p className="text-xs text-text-secondary leading-relaxed mb-4">
+                    <p className="text-xs text-[#FFFFFF]/80 leading-relaxed mb-4">
                       Creative professionals, architects, designers, and boutique agencies wanting to present work samples, case studies, and imagery with silky-smooth frame rates.
                     </p>
                   </div>
-                  <ul className="space-y-1.5 text-xs text-slate-700 font-semibold border-t border-slate-100 pt-3">
+                  <ul className="space-y-1.5 text-xs text-[#FFFFFF]/90 font-medium border-t border-[#FFFFFF]/15 pt-3">
                     <li className="flex items-center gap-2">
-                      <i className="fa-solid fa-check text-emerald-500 text-[10px]" />
+                      <i className="fa-solid fa-check text-[#C9F600] text-[10px]" />
                       <span>Next-gen WebP/AVIF asset compression</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <i className="fa-solid fa-check text-emerald-500 text-[10px]" />
+                      <i className="fa-solid fa-check text-[#C9F600] text-[10px]" />
                       <span>Zero image jitter or Cumulative Layout Shift (CLS)</span>
                     </li>
                   </ul>
@@ -441,33 +441,33 @@ export default async function StaticWebDevPage() {
             </div>
 
             {/* Core Tech Stack Summary */}
-            <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose">
-              <h3 className="text-lg font-bold text-primary-dark">
+            <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+              <h3 className="text-lg font-bold text-[#FFFFFF]">
                 Why Modern Brands Choose Next.js Static Site Generation (SSG)
               </h3>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
                 <li className="flex items-center gap-2">
-                  <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                  <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                   <span><strong>Sub-100ms Global Edge CDN Delivery</strong> (Vercel / Cloudflare)</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                  <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                   <span><strong>Zero-Downtime Serverless Security</strong> (No DB Vulnerabilities)</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                  <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                   <span><strong>Headless CMS Integration</strong> (Sanity, Strapi, Contentful)</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                  <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                   <span><strong>WordPress to Next.js SSG Migration</strong> with 100% SEO Preservation</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                  <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                   <span><strong>100% Core Web Vitals Performance Guarantee</strong></span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                  <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                   <span><strong>Zero Monthly Database Maintenance Fees</strong></span>
                 </li>
               </ul>

@@ -29,7 +29,7 @@ export default function StickyWidgets() {
   return (
     <>
       {/* Sticky Mobile Banner (Bottom-pinned for conversions, hidden on desktop) */}
-      <div className="lg:hidden fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-2xl p-2 z-40 grid grid-cols-3 gap-2">
+      <div className="lg:hidden fixed bottom-0 left-0 w-full bg-[#3B1580]/95 backdrop-blur-md border-t border-[#FFFFFF]/20 shadow-2xl p-2 z-40 grid grid-cols-3 gap-2">
         <a
           href="tel:+919080026133"
           title="Call Joy Digital directly"
@@ -40,7 +40,7 @@ export default function StickyWidgets() {
               tracker("call_click", { location: "mobile sticky bar" });
             }
           }}
-          className="bg-primary hover:bg-primary-dark text-white font-extrabold text-[11px] py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-all cursor-pointer"
+          className="bg-[#3B1580] hover:bg-[#3B1580]/80 text-[#FFFFFF] border border-[#FFFFFF]/30 hover:border-[#C9F600] hover:text-[#C9F600] font-extrabold text-[11px] py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-all cursor-pointer"
         >
           <i className="fa-solid fa-phone text-xs" /> Call
         </a>
@@ -56,7 +56,7 @@ export default function StickyWidgets() {
               tracker("whatsapp_click", { location: "mobile sticky bar" });
             }
           }}
-          className="bg-[#10b981] hover:bg-[#059669] text-white font-extrabold text-[11px] py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-all cursor-pointer"
+          className="bg-[#3B1580] hover:bg-[#3B1580]/80 text-[#FFFFFF] border border-[#FFFFFF]/30 hover:border-[#C9F600] hover:text-[#C9F600] font-extrabold text-[11px] py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-all cursor-pointer"
         >
           <i className="fa-brands fa-whatsapp text-sm" /> WhatsApp
         </a>
@@ -70,7 +70,7 @@ export default function StickyWidgets() {
               tracker("cta_click", { button_text: "Get Quote", location: "mobile sticky bar" });
             }
           }}
-          className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-[11px] py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-all cursor-pointer"
+          className="bg-[#C9F600] hover:opacity-90 text-[#3B1580] font-extrabold text-[11px] py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-all cursor-pointer"
         >
           <i className="fa-solid fa-file-invoice text-xs" /> Free Quote
         </Link>
@@ -94,7 +94,7 @@ export default function StickyWidgets() {
       >
         <span className="absolute top-0 left-0 w-full h-full bg-whatsapp-green rounded-full -z-1 opacity-70 animate-pulse-ring"></span>
         <i className="fa-brands fa-whatsapp relative z-10" />
-        <span className="absolute right-16 top-1/2 -translate-y-1/2 bg-slate-900 text-white text-[11px] font-bold px-3 py-1.5 rounded-lg opacity-0 translate-x-2 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 shadow-xl whitespace-nowrap hidden lg:block border border-slate-800">
+        <span className="absolute right-16 top-1/2 -translate-y-1/2 bg-[#3B1580] text-[#FFFFFF] text-[11px] font-bold px-3 py-1.5 rounded-lg opacity-0 translate-x-2 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 shadow-xl whitespace-nowrap hidden lg:block border border-[#FFFFFF]/25">
           Chat on WhatsApp
         </span>
       </a>
@@ -102,7 +102,7 @@ export default function StickyWidgets() {
       {/* Scroll to Top Button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className={`fixed bottom-38 lg:bottom-24 right-6 sm:right-7 lg:right-9 w-10 h-10 bg-[#171126] hover:bg-[#7C3AED] border border-white/20 text-white rounded-full flex items-center justify-center text-xs shadow-lg transition-all duration-300 z-40 hover:scale-110 active:scale-95 ${
+        className={`fixed bottom-38 lg:bottom-24 right-6 sm:right-7 lg:right-9 w-10 h-10 bg-[#3B1580] hover:bg-[#3B1580]/80 border border-[#FFFFFF]/30 hover:border-[#C9F600] text-[#FFFFFF] hover:text-[#C9F600] rounded-full flex items-center justify-center text-xs shadow-lg transition-all duration-300 z-40 hover:scale-110 active:scale-95 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
         }`}
         aria-label="Scroll to top of page"

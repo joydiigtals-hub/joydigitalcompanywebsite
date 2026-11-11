@@ -71,37 +71,37 @@ export default function LogisticsWebPage() {
           <p>
             Unfortunately, many logistics websites suffer from clunky navigation, broken container tracking widgets, hidden rate inquiry options, and slow loading speeds across mobile trade networks.
           </p>
-          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
-            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Freight & Logistics Websites</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting Freight & Logistics Websites</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Instant Freight Rate RFQ Form</strong>: Origin/Destination port selection & weight inputs</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Container & Cargo Tracking Widget</strong>: Quick AWB/Container number lookup interface</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Trade Lane & Route Network Showcase</strong>: Sea ports, airports & road transport hubs</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Global Logistics SEO Strategy</strong>: Rank for high-value freight forwarding terms</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Speed Performance</strong>: Edge-served serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Operations WhatsApp Routing</strong>: Instant connection with regional booking desks</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we combine supply chain domain expertise with <Link href="/website-development" className="text-primary font-bold hover:underline">high-speed Next.js web development</Link> and <Link href="/seo-services" className="text-primary font-bold hover:underline">logistics B2B search optimization</Link> to help freight operators capture international cargo contracts.
+            At Joy Digital, we combine supply chain domain expertise with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">high-speed Next.js web development</Link> and <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">logistics B2B search optimization</Link> to help freight operators capture international cargo contracts.
           </p>
         </div>
       }

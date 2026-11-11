@@ -54,7 +54,7 @@ export default async function TourOperatorWebPage() {
           <p>
             Our <strong>tour operator website development</strong> services focus on building custom, high-converting platforms featuring rich day-by-day itineraries, seamless seasonal pricing, and secure direct-booking funnels.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Why Templates Fail Tour Operators</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Why Templates Fail Tour Operators</h3>
           <p>
             Generic WordPress travel plugins are slow and easily break under high traffic. We build bespoke Next.js React platforms that load in under a second across the globe, ensuring your rich imagery and video content never frustrates a potential buyer.
           </p>

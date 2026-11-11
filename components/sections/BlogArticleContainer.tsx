@@ -199,20 +199,20 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
       <JsonLd schema={articleGraph} />
 
       {/* Breadcrumbs Navigation */}
-      <nav aria-label="Breadcrumb" className="text-[10px] sm:text-xs font-bold text-[#6B6478] uppercase tracking-wider mb-8 select-none animate-fade-in text-left">
-        <Link href="/" className="hover:text-primary transition-colors">Home</Link>
-        <span className="mx-2 text-slate-300">/</span>
-        <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
-        <span className="mx-2 text-slate-300">/</span>
-        <span className="text-primary font-extrabold">{post.category}</span>
-        <span className="mx-2 text-slate-300">/</span>
-        <span className="text-slate-900 truncate max-w-[220px] inline-block height-4 align-bottom">{post.title}</span>
+      <nav aria-label="Breadcrumb" className="text-[10px] sm:text-xs font-bold text-[#D9CCF5]/75 uppercase tracking-wider mb-8 select-none animate-fade-in text-left">
+        <Link href="/" className="hover:text-[#C9F600] text-white/90 transition-colors">Home</Link>
+        <span className="mx-2 text-white/30">/</span>
+        <Link href="/blog" className="hover:text-[#C9F600] text-white/90 transition-colors">Blog</Link>
+        <span className="mx-2 text-white/30">/</span>
+        <span className="text-[#C9F600] font-extrabold">{post.category}</span>
+        <span className="mx-2 text-white/30">/</span>
+        <span className="text-white font-extrabold truncate max-w-[220px] inline-block height-4 align-bottom">{post.title}</span>
       </nav>
 
       {/* Header Details */}
       <header className="mb-10 text-left max-w-4xl animate-slide-up">
         <div className="flex flex-wrap items-center gap-3.5 mb-5 select-none">
-          <span className="bg-primary/10 text-primary border border-primary-light/20 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+          <span className="bg-[#C9F600]/15 text-[#C9F600] border border-[#C9F600]/30 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
             {post.category}
           </span>
 
@@ -220,41 +220,41 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
             <Link
               key={idx}
               href={`/blog?search=${encodeURIComponent(tag)}`}
-              className="hidden sm:inline-flex items-center gap-1 bg-slate-100 hover:bg-primary/10 text-slate-650 hover:text-primary border border-slate-200/80 hover:border-primary/30 text-[10px] font-bold px-2.5 py-0.5 rounded-full transition-colors"
+              className="hidden sm:inline-flex items-center gap-1 bg-white/10 hover:bg-white/20 text-[#D9CCF5] hover:text-white border border-white/20 text-[10px] font-bold px-2.5 py-0.5 rounded-full transition-colors"
             >
-              <span className="text-primary font-black">#</span>
+              <span className="text-[#C9F600] font-black">#</span>
               <span>{tag}</span>
             </Link>
           ))}
           
-          <span className="text-[11px] text-[#64748B] font-semibold flex items-center gap-1">
-            <i className="fa-regular fa-calendar text-[10px]" />
+          <span className="text-[11px] text-[#D9CCF5]/90 font-semibold flex items-center gap-1">
+            <i className="fa-regular fa-calendar text-[10px] text-[#C9F600]" />
             {new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
           </span>
 
           {post.lastUpdatedDate && post.lastUpdatedDate !== post.date && (
-            <span className="text-[10px] bg-slate-100 text-slate-600 font-bold px-2.5 py-0.5 rounded-full border border-slate-200">
+            <span className="text-[10px] bg-white/10 text-[#D9CCF5] font-bold px-2.5 py-0.5 rounded-full border border-white/20">
               Updated: {new Date(post.lastUpdatedDate).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
             </span>
           )}
 
-          <span className="text-slate-300">&bull;</span>
-          <span className="text-[11px] text-slate-500 font-semibold flex items-center gap-1">
-            <i className="fa-regular fa-clock text-[10px]" /> {readingTime} min read ({wordCount} words)
+          <span className="text-white/30">&bull;</span>
+          <span className="text-[11px] text-[#D9CCF5]/90 font-semibold flex items-center gap-1">
+            <i className="fa-regular fa-clock text-[10px] text-[#C9F600]" /> {readingTime} min read ({wordCount} words)
           </span>
 
-          <span className="text-slate-300">&bull;</span>
+          <span className="text-white/30">&bull;</span>
           <ViewCounter slug={slug} increment={true} />
         </div>
 
-        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-tight tracking-tight mb-6">
+        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-6">
           {post.title}
         </h1>
 
         {/* Author Header Bar & Share Options */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-b border-[#E9E4F2] py-4 select-none">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-b border-white/15 py-4 select-none">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-primary/10 border border-primary-light/20 text-primary font-bold text-sm flex items-center justify-center overflow-hidden shrink-0">
+            <div className="w-10 h-10 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/30 text-[#C9F600] font-bold text-sm flex items-center justify-center overflow-hidden shrink-0">
               {post.authorImage && post.authorImage.startsWith("/") || post.authorImage?.startsWith("http") ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={post.authorImage} alt={post.authorName || post.author} width={40} height={40} className="w-full h-full object-cover" />
@@ -263,10 +263,10 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
               )}
             </div>
             <div>
-              <span className="text-xs font-black text-slate-900 block leading-none mb-1">
-                By <Link href="/author/saravanan" className="hover:text-primary transition-colors">{post.authorName || post.author}</Link>
+              <span className="text-xs font-black text-white block leading-none mb-1">
+                By <Link href="/author/saravanan" className="text-white hover:text-[#C9F600] transition-colors">{post.authorName || post.author}</Link>
               </span>
-              <span className="text-[10px] text-[#64748B] font-semibold block">
+              <span className="text-[10px] text-[#D9CCF5]/80 font-semibold block">
                 {post.authorRole || "Technical Web & Search Marketing Specialist"}
               </span>
             </div>
@@ -303,18 +303,18 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
         
         {/* Table of Contents sidebar */}
         {post.showTableOfContents !== false && toc.length > 0 && (
-          <aside className="hidden lg:block lg:col-span-3 sticky top-28 self-start select-none border-l-2 border-slate-100/80 pr-2 max-h-[80vh] overflow-y-auto scrollbar-thin">
-            <h3 className="text-xs font-black text-slate-900 uppercase tracking-widest mb-4 pl-3.5">
+          <aside className="hidden lg:block lg:col-span-3 sticky top-28 self-start select-none border-l-2 border-white/15 pr-2 max-h-[80vh] overflow-y-auto scrollbar-thin">
+            <h3 className="text-xs font-black text-white uppercase tracking-widest mb-4 pl-3.5">
               Table of Contents
             </h3>
-            <ul className="flex flex-col gap-2.5 text-xs font-semibold text-[#64748B]">
+            <ul className="flex flex-col gap-2.5 text-xs font-semibold text-[#D9CCF5]/80">
               {toc.map((item) => (
                 <li key={item.id}>
                   <a
                     href={`#${item.id}`}
                     onClick={(e) => handleTocClick(e, item.id)}
-                    className={`block border-l-2 border-transparent transition-all duration-250 cursor-pointer text-left pl-3.5 hover:text-primary hover:border-primary/45 ${
-                      activeId === item.id ? "toc-item-active font-extrabold text-primary border-primary" : ""
+                    className={`block border-l-2 border-transparent transition-all duration-250 cursor-pointer text-left pl-3.5 hover:text-[#C9F600] hover:border-[#C9F600]/50 ${
+                      activeId === item.id ? "toc-item-active font-extrabold text-[#C9F600] border-[#C9F600]" : ""
                     } ${item.level === 3 ? "pl-6 text-[11px]" : ""}`}
                   >
                     {item.text}
@@ -324,7 +324,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
             </ul>
 
             {/* Quick Share in Sidebar */}
-            <div className="mt-8 pt-5 border-t border-slate-150 pl-3.5">
+            <div className="mt-8 pt-5 border-t border-white/15 pl-3.5">
               <BlogShareButtons title={post.title} slug={slug} variant="sidebar" />
             </div>
 
@@ -359,15 +359,15 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
         )}
 
         {/* Prose Reader Content Column */}
-        <article className={`${post.showTableOfContents !== false && toc.length > 0 ? "lg:col-span-9" : "lg:col-span-12 max-w-4xl mx-auto"} bg-white border border-[#E2E8F0] p-8 sm:p-12 rounded-[32px] shadow-sm relative overflow-hidden w-full`}>
+        <article className={`${post.showTableOfContents !== false && toc.length > 0 ? "lg:col-span-9" : "lg:col-span-12 max-w-4xl mx-auto"} bg-white border border-[#E2E8F0] p-8 sm:p-12 rounded-[32px] shadow-sm relative overflow-hidden w-full text-slate-800`}>
           
           <div 
-            className="prose prose-blue max-w-none text-[#334155] leading-relaxed text-sm sm:text-base space-y-6.5
+            className="prose prose-blue max-w-none text-slate-800 leading-relaxed text-sm sm:text-base space-y-6.5
                        prose-content
                        prose-headings:text-slate-900 prose-headings:font-black prose-headings:tracking-tight 
                        prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-[#E2E8F0] prose-h2:pb-2
                        prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3 
-                       prose-p:mb-5 prose-p:leading-relaxed
+                       prose-p:mb-5 prose-p:leading-relaxed prose-p:text-slate-700 prose-li:text-slate-700
                        prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-5 prose-ul:space-y-2
                        prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-5 prose-ol:space-y-2
                        prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-slate-50 prose-blockquote:py-4.5 prose-blockquote:px-6 prose-blockquote:rounded-r-2xl prose-blockquote:italic prose-blockquote:font-semibold prose-blockquote:text-slate-700
@@ -450,14 +450,14 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
             <div className="mt-10 pt-6 border-t border-slate-200 select-none">
               <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                 <span className="text-xs font-black uppercase tracking-wider text-slate-500 flex items-center gap-1.5 shrink-0">
-                  <i className="fa-solid fa-tags text-primary text-xs" /> Related Topics:
+                  <i className="fa-solid fa-tags text-[#3B1580] text-xs" /> Related Topics:
                 </span>
                 <div className="flex flex-wrap items-center gap-2">
                   {post.tags.slice(0, 6).map((tag, idx) => (
                     <Link
                       key={idx}
                       href={`/blog?search=${encodeURIComponent(tag)}`}
-                      className="inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-1.5 rounded-full bg-slate-50 hover:bg-primary/10 text-slate-700 hover:text-primary border border-slate-200 hover:border-primary/30 transition-all duration-200 shadow-2xs hover:scale-[1.02]"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-1.5 rounded-full bg-slate-100 hover:bg-purple-100/70 text-slate-800 hover:text-[#3B1580] border border-slate-200 hover:border-purple-300 transition-all duration-200 shadow-2xs hover:scale-[1.02]"
                     >
                       <span className="text-primary font-black">#</span>
                       <span>{tag}</span>
@@ -589,7 +589,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
           <div className="border-t border-[#E9E4F2] mt-10 pt-6 text-center select-none">
             <Link
               href="/blog"
-              className="text-xs font-bold text-primary hover:text-primary-light flex items-center justify-center gap-2 group"
+              className="text-xs font-bold text-[#3B1580] hover:text-[#4D1FA3] flex items-center justify-center gap-2 group"
             >
               <i className="fa-solid fa-arrow-left-long group-hover:-translate-x-1.5 transition-transform" /> Back to Blog Articles
             </Link>
@@ -643,11 +643,11 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="mt-20 border-t border-[#E9E4F2] pt-16">
+        <section className="mt-20 border-t border-white/15 pt-16">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 select-none gap-4">
             <div className="text-left">
-              <span className="text-[10px] font-black text-primary uppercase tracking-widest block mb-2">Related Articles</span>
-              <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">Further Reading & Case Insights</h3>
+              <span className="text-[10px] font-black text-[#C9F600] uppercase tracking-widest block mb-2">Related Articles</span>
+              <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">Further Reading & Case Insights</h3>
             </div>
             {(() => {
               const cat = (post.category || "").toLowerCase();
@@ -670,7 +670,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
               return (
                 <Link
                   href={service.href}
-                  className="text-xs font-bold text-primary hover:text-primary-light flex items-center gap-1.5 self-start sm:self-auto bg-primary/5 hover:bg-primary/10 border border-primary/15 px-4 py-2 rounded-xl transition-all"
+                  className="text-xs font-bold text-white hover:text-[#C9F600] flex items-center gap-1.5 self-start sm:self-auto bg-white/10 hover:bg-white/15 border border-white/20 px-4 py-2 rounded-xl transition-all"
                 >
                   <span>Explore Service: <strong>{service.label}</strong></span>
                   <i className="fa-solid fa-arrow-right-long text-[10px]" />

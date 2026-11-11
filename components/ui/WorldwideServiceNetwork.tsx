@@ -60,19 +60,19 @@ export default function WorldwideServiceNetwork() {
       
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-        <span className="text-xs font-semibold text-purple-400 uppercase tracking-widest block">
+        <span className="text-xs font-semibold text-[#C9F600] uppercase tracking-widest block">
           GLOBAL REACH & COLLABORATION
         </span>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
           Building High-Impact Software for Global Founders
         </h2>
-        <p className="text-sm sm:text-base text-slate-400 font-normal leading-relaxed max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base text-[#FFFFFF]/70 font-normal leading-relaxed max-w-2xl mx-auto">
           Seamless async delivery and dedicated timezone overlap from our core engineering base.
         </p>
       </div>
 
       {/* Main Bento Grid Container */}
-      <div className="relative w-full bg-[#0E0C1F] border border-purple-500/20 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl overflow-hidden backdrop-blur-xl">
+      <div className="relative w-full bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl overflow-hidden backdrop-blur-xl">
         
         {/* Dark Grid Overlay & Soft Purple Radial Light */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#2d224d15_1px,transparent_1px),linear-gradient(to_bottom,#2d224d15_1px,transparent_1px)] bg-[size:2.5rem_2.5rem] pointer-events-none" />
@@ -82,7 +82,7 @@ export default function WorldwideServiceNetwork() {
           
           {/* LEFT SIDE: Interactive Node Network / Map Graph */}
           <div
-            className="lg:col-span-7 w-full aspect-[16/10] sm:aspect-[16/9] relative min-h-[300px] sm:min-h-[340px] bg-[#141029]/60 border border-[#271E42] rounded-xl p-4 overflow-hidden"
+            className="lg:col-span-7 w-full aspect-[16/10] sm:aspect-[16/9] relative min-h-[300px] sm:min-h-[340px] bg-[#3B1580] border border-[#FFFFFF]/20 rounded-xl p-4 overflow-hidden"
             onMouseEnter={() => setIsAutoRotating(false)}
             onMouseLeave={() => setIsAutoRotating(true)}
           >
@@ -181,7 +181,7 @@ export default function WorldwideServiceNetwork() {
                           ? "bg-emerald-950/90 border-emerald-500/50 text-emerald-300"
                           : isActive
                           ? "bg-purple-950/90 border-purple-500/60 text-purple-200"
-                          : "bg-[#140F2D]/90 border-[#2A2148] text-slate-300"
+                          : "bg-[#140F2D]/90 border-[#2A2148] text-[#FFFFFF]/80"
                       }`}
                     >
                       <span>{node.name}</span>
@@ -193,17 +193,17 @@ export default function WorldwideServiceNetwork() {
             })}
 
             {/* Active Region Status Floating Box at Bottom */}
-            <div className="absolute bottom-3 left-3 right-3 bg-[#0F0C22]/90 border border-[#271E42] p-3 rounded-xl backdrop-blur-md flex items-center justify-between z-20 text-xs">
+            <div className="absolute bottom-3 left-3 right-3 bg-[#3B1580] border border-[#FFFFFF]/20 p-3 rounded-xl backdrop-blur-md flex items-center justify-between z-20 text-xs">
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-purple-400" />
+                <MapPin className="w-4 h-4 text-[#C9F600]" />
                 <div>
                   <p className="font-bold text-white text-xs">{activeNode.region}</p>
-                  <p className="text-[10px] text-slate-400">{activeNode.tz}</p>
+                  <p className="text-[10px] text-[#FFFFFF]/70">{activeNode.tz}</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 font-semibold text-[11px]">
-                <Clock className="w-3 h-3 text-purple-400" />
+              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/30 text-[#C9F600] font-semibold text-[11px]">
+                <Clock className="w-3 h-3 text-[#C9F600]" />
                 <span>{activeNode.overlap}</span>
               </div>
             </div>
@@ -213,8 +213,8 @@ export default function WorldwideServiceNetwork() {
           <div className="lg:col-span-5 flex flex-col justify-between space-y-6 text-left">
             
             {/* Section Badge */}
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs font-semibold w-fit">
-              <Zap className="w-3.5 h-3.5 text-purple-400" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/30 text-[#C9F600] text-xs font-semibold w-fit">
+              <Zap className="w-3.5 h-3.5 text-[#C9F600]" />
               <span>TIMEZONE-ALIGNED DELIVERY</span>
             </div>
 
@@ -223,7 +223,7 @@ export default function WorldwideServiceNetwork() {
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white leading-snug">
                 Collaborate effortlessly across 5+ continents.
               </h3>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#FFFFFF]/80 leading-relaxed">
                 Structured agile workflows, continuous deployment, and guaranteed real-time overlap tailored to your working hours.
               </p>
             </div>
@@ -232,23 +232,23 @@ export default function WorldwideServiceNetwork() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
               
               {/* Card 1: 4+ Hours Daily Overlap */}
-              <div className="bg-[#16122E]/80 border border-[#2B224B] hover:border-purple-500/40 p-4 rounded-xl space-y-1.5 transition-all group">
-                <div className="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/30 text-purple-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="bg-[#3B1580] border border-[#FFFFFF]/20 hover:border-purple-500/40 p-4 rounded-xl space-y-1.5 transition-all group">
+                <div className="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/30 text-[#C9F600] flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Clock className="w-4 h-4" />
                 </div>
                 <h4 className="text-xs font-bold text-white">4+ Hours Daily Overlap</h4>
-                <p className="text-[11px] text-slate-400 leading-normal">
+                <p className="text-[11px] text-[#FFFFFF]/70 leading-normal">
                   Guaranteed daily sync for US, EU & APAC sprints.
                 </p>
               </div>
 
               {/* Card 2: 100% Async-First Sprints */}
-              <div className="bg-[#16122E]/80 border border-[#2B224B] hover:border-purple-500/40 p-4 rounded-xl space-y-1.5 transition-all group">
+              <div className="bg-[#3B1580] border border-[#FFFFFF]/20 hover:border-purple-500/40 p-4 rounded-xl space-y-1.5 transition-all group">
                 <div className="w-8 h-8 rounded-lg bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Rocket className="w-4 h-4" />
                 </div>
                 <h4 className="text-xs font-bold text-white">100% Async-First Sprints</h4>
-                <p className="text-[11px] text-slate-400 leading-normal">
+                <p className="text-[11px] text-[#FFFFFF]/70 leading-normal">
                   Transparent Loom updates, Jira/Linear tracks, and weekly ship cycles.
                 </p>
               </div>
@@ -260,7 +260,7 @@ export default function WorldwideServiceNetwork() {
               <button
                 type="button"
                 onClick={() => setIsModalOpen(true)}
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-purple-600/25 flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer group"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#C9F600] hover:bg-[#b8f000] text-[#3B1580] font-black text-xs sm:text-sm shadow-lg shadow-purple-600/25 flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer group"
               >
                 <span>Schedule a Discovery Call</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

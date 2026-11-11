@@ -81,8 +81,8 @@ export default function IndustryTabs() {
             onClick={() => setSelectedIndustry(ind.name)}
             className={`text-xs px-5 py-3.5 rounded-xl font-bold border transition-all text-left whitespace-nowrap lg:whitespace-normal cursor-pointer ${
               selectedIndustry === ind.name
-                ? "bg-[#7C3AED] text-white border-[#7C3AED] shadow-md shadow-[#7C3AED]/10"
-                : "bg-white text-[#1F1B2D] border-[#E9E4F2] hover:bg-slate-50"
+                ? "bg-[#C9F600] text-[#3B1580] font-extrabold border-[#C9F600] shadow-md shadow-[#C9F600]/10"
+                : "bg-[#3B1580] text-[#FFFFFF] border-[#FFFFFF]/20 hover:border-[#C9F600]/50"
             }`}
           >
             {ind.name}
@@ -90,18 +90,18 @@ export default function IndustryTabs() {
         ))}
       </div>
 
-      <div className="lg:col-span-8 bg-white border border-[#E9E4F2] p-8 sm:p-12 rounded-[24px] shadow-sm text-left h-full flex flex-col justify-center min-h-[300px] hover:border-[#7C3AED]/15 transition-colors">
-        <span className="text-[10px] font-extrabold text-[#7C3AED] uppercase tracking-widest block mb-3">Target Industry Blueprint</span>
-        <h3 className="text-2xl font-black text-[#1F1B2D] mb-4">Joy Digital for {selectedIndustry}</h3>
-        <p className="text-sm text-[#6B6478] leading-relaxed font-semibold max-w-xl">
+      <div className="lg:col-span-8 bg-[#3B1580] border border-[#FFFFFF]/20 p-8 sm:p-12 rounded-[24px] shadow-sm text-left h-full flex flex-col justify-center min-h-[300px] hover:border-[#7C3AED]/15 transition-colors">
+        <span className="text-[10px] font-extrabold text-[#C9F600] uppercase tracking-widest block mb-3">Target Industry Blueprint</span>
+        <h3 className="text-2xl font-black text-[#FFFFFF] mb-4">Joy Digital for {selectedIndustry}</h3>
+        <p className="text-sm text-[#FFFFFF]/80 leading-relaxed font-normal max-w-xl">
           {currentIndustry?.desc}
         </p>
-        <div className="mt-8 border-t border-[#E9E4F2] pt-6 flex flex-wrap gap-4 items-center">
+        <div className="mt-8 border-t border-[#FFFFFF]/20 pt-6 flex flex-wrap gap-4 items-center">
           {currentIndustry?.pageUrl && (
             <TrackedLink
               href={currentIndustry.pageUrl}
               eventName={`View ${selectedIndustry} Page`}
-              className="bg-[#7C3AED] hover:bg-[#6D28D9] hover:scale-[1.03] transition-all text-white font-bold text-xs px-6 py-3 rounded-lg shadow-sm"
+              className="bg-[#C9F600] hover:bg-[#b8f000] hover:scale-[1.03] transition-all text-[#3B1580] font-extrabold text-xs px-6 py-3 rounded-lg shadow-sm"
             >
               Explore {selectedIndustry} Blueprint &rarr;
             </TrackedLink>
@@ -114,14 +114,14 @@ export default function IndustryTabs() {
                 ? selectedIndustry
                 : "Custom Next.js Development") as QuoteServiceType
             }
-            triggerClassName="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs px-6 py-3 rounded-lg border border-slate-200 transition-colors inline-flex items-center justify-center cursor-pointer shadow-none"
+            triggerClassName="bg-[#3B1580] hover:bg-[#3B1580]/80 text-[#FFFFFF] hover:border-[#C9F600] font-bold text-xs px-6 py-3 rounded-lg border border-[#FFFFFF]/25 transition-colors inline-flex items-center justify-center cursor-pointer shadow-none"
             replaceClassName
             hideIcons
           />
           <TrackedWaLink
             href="https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20discuss%20our%20project."
             location="who_we_help"
-            className="text-xs text-[#10b981] hover:text-[#059669] font-bold flex items-center gap-1.5 group"
+            className="text-xs text-[#C9F600] hover:underline font-bold flex items-center gap-1.5 group"
           >
             <i className="fa-brands fa-whatsapp text-sm group-hover:scale-110 transition-transform" /> Chat on WhatsApp
           </TrackedWaLink>

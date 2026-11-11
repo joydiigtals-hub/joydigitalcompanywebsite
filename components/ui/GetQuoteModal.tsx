@@ -330,7 +330,7 @@ export default function GetQuoteModal({
     showTrigger ?? (controlledIsOpen === undefined);
 
   const defaultTriggerClasses =
-    "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] hover:from-[#8B5CF6] hover:to-[#7C3AED] shadow-lg shadow-[#7C3AED]/25 hover:shadow-xl hover:shadow-[#7C3AED]/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/50 focus:ring-offset-2";
+    "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-[#3B1580] bg-[#C9F600] font-bold hover:opacity-90 shadow-lg shadow-[#C9F600]/25 hover:shadow-xl hover:shadow-[#C9F600]/35 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#C9F600]/50 focus:ring-offset-2";
 
   const triggerClasses = replaceClassName
     ? triggerClassName
@@ -369,14 +369,14 @@ export default function GetQuoteModal({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 15 }}
             transition={{ type: "spring", stiffness: 350, damping: 28 }}
-            className="relative w-full max-w-lg bg-[#110E20] border border-[#2B2347] rounded-2xl shadow-2xl text-white overflow-hidden z-20 my-auto"
+            className="relative w-full max-w-lg bg-[#3B1580] border border-[#FFFFFF]/25 rounded-2xl shadow-2xl text-[#FFFFFF] overflow-hidden z-20 my-auto"
           >
             {/* Close Button (X) */}
             <button
               type="button"
               onClick={handleCloseModal}
               aria-label="Close quote modal"
-              className="absolute top-4 right-4 w-9 h-9 rounded-full bg-[#1D1833] hover:bg-[#2B244D] text-slate-300 hover:text-white flex items-center justify-center border border-[#352B5C] transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#7C3AED] z-20"
+              className="absolute top-4 right-4 w-9 h-9 rounded-full bg-[#3B1580] hover:bg-[#3B1580]/80 text-[#FFFFFF] hover:text-[#C9F600] flex items-center justify-center border border-[#FFFFFF]/30 hover:border-[#C9F600] transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#C9F600] z-20"
             >
               <X className="w-4 h-4" />
             </button>
@@ -384,19 +384,19 @@ export default function GetQuoteModal({
               {/* Success View */}
               {isSuccess ? (
                 <div className="p-6 sm:p-8 text-center flex flex-col items-center">
-                  <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-4 text-emerald-400">
+                  <div className="w-16 h-16 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/30 flex items-center justify-center mb-4 text-[#C9F600]">
                     <CheckCircle2 className="w-9 h-9" />
                   </div>
 
                   <h3
                     id={titleId}
-                    className="text-2xl font-bold text-white mb-2"
+                    className="text-2xl font-bold text-[#FFFFFF] mb-2"
                   >
                     Thank you! We will get back to you shortly.
                   </h3>
                   <p
                     id={descId}
-                    className="text-sm text-slate-300 max-w-md mx-auto mb-6 leading-relaxed"
+                    className="text-sm text-[#FFFFFF]/80 max-w-md mx-auto mb-6 leading-relaxed"
                   >
                     Your project details have been successfully received. Our
                     solutions team will review your requirements and provide a
@@ -404,12 +404,12 @@ export default function GetQuoteModal({
                   </p>
 
                   {/* Immediate WhatsApp Action (Approach A) */}
-                  <div className="w-full bg-[#16122B] border border-[#2B2347] rounded-xl p-4 mb-6 text-left">
-                    <p className="text-xs uppercase tracking-wider font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                  <div className="w-full bg-[#3B1580] border border-[#FFFFFF]/20 rounded-xl p-4 mb-6 text-left">
+                    <p className="text-xs uppercase tracking-wider font-bold text-[#C9F600] mb-1 flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-[#C9F600] animate-ping" />
                       Want an Instant Response?
                     </p>
-                    <p className="text-xs text-slate-300 mb-3">
+                    <p className="text-xs text-[#FFFFFF]/80 mb-3">
                       Skip the email queue and connect directly with our
                       technical leads on WhatsApp with your pre-filled inquiry.
                     </p>
@@ -417,7 +417,7 @@ export default function GetQuoteModal({
                       href={whatsAppUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-lg font-semibold text-white bg-[#10b981] hover:bg-[#059669] shadow-md shadow-emerald-500/20 hover:shadow-emerald-500/40 transition-all cursor-pointer text-sm"
+                      className="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-lg font-bold text-[#3B1580] bg-[#C9F600] hover:opacity-90 shadow-md transition-all cursor-pointer text-sm"
                     >
                       <svg
                         className="w-5 h-5 fill-current"
@@ -433,7 +433,7 @@ export default function GetQuoteModal({
                   <button
                     type="button"
                     onClick={handleCloseModal}
-                    className="text-xs text-slate-400 hover:text-slate-200 transition-colors underline cursor-pointer"
+                    className="text-xs text-[#FFFFFF]/70 hover:text-[#C9F600] transition-colors underline cursor-pointer"
                   >
                     Done & Close Window
                   </button>
@@ -443,19 +443,19 @@ export default function GetQuoteModal({
                 <div className="p-5 sm:p-7">
                   {/* Header Title */}
                   <div className="mb-5 pr-8">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#7C3AED]/15 border border-[#7C3AED]/30 text-[#A78BFA] text-[11px] font-semibold tracking-wide uppercase mb-2">
-                      <Sparkles className="w-3 h-3 text-[#A78BFA]" />
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/30 text-[#C9F600] text-[11px] font-semibold tracking-wide uppercase mb-2">
+                      <Sparkles className="w-3 h-3 text-[#C9F600]" />
                       Fast Turnaround
                     </span>
                     <h2
                       id={titleId}
-                      className="text-xl sm:text-2xl font-bold text-white tracking-tight"
+                      className="text-xl sm:text-2xl font-bold text-[#FFFFFF] tracking-tight"
                     >
                       {packageName ? `Get Quote: ${packageName}` : "Request a Project Quote"}
                     </h2>
                     <p
                       id={descId}
-                      className="text-xs sm:text-sm text-slate-300 mt-1"
+                      className="text-xs sm:text-sm text-[#FFFFFF]/80 mt-1"
                     >
                       Fill in your project requirements below. We will analyze
                       your scope and provide an accurate cost estimate.
@@ -464,7 +464,7 @@ export default function GetQuoteModal({
 
                   {/* Form Submission Error Alert */}
                   {errors.form && (
-                    <div className="mb-4 p-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-300 text-xs">
+                    <div className="mb-4 p-3 rounded-lg bg-[#3B1580] border border-[#C9F600] text-[#C9F600] text-xs font-semibold">
                       {errors.form}
                     </div>
                   )}
@@ -491,12 +491,12 @@ export default function GetQuoteModal({
                     <div>
                       <label
                         htmlFor="quote-fullName"
-                        className="block text-xs font-medium text-slate-200 mb-1.5"
+                        className="block text-xs font-medium text-[#FFFFFF] mb-1.5"
                       >
-                        Full Name <span className="text-red-400">*</span>
+                        Full Name <span className="text-[#C9F600]">*</span>
                       </label>
                       <div className="relative">
-                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#FFFFFF]/60">
                           <User className="w-4 h-4" />
                         </div>
                         <input
@@ -514,15 +514,15 @@ export default function GetQuoteModal({
                               setErrors((prev) => ({ ...prev, fullName: "" }));
                             }
                           }}
-                          className={`w-full pl-9 pr-3 py-2.5 bg-[#17132B] border rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#7C3AED] transition-colors ${
+                          className={`w-full pl-9 pr-3 py-2.5 bg-[#3B1580] border rounded-xl text-sm text-[#FFFFFF] placeholder-[#FFFFFF]/40 focus:outline-none focus:ring-2 focus:ring-[#C9F600] transition-colors ${
                             errors.fullName
-                              ? "border-red-500 focus:border-red-500"
-                              : "border-[#2E264E] hover:border-[#423770]"
+                              ? "border-[#C9F600] focus:border-[#C9F600]"
+                              : "border-[#FFFFFF]/25 hover:border-[#FFFFFF]/40"
                           }`}
                         />
                       </div>
                       {errors.fullName && (
-                        <p className="text-[11px] text-red-400 mt-1">
+                        <p className="text-[11px] text-[#C9F600] mt-1">
                           {errors.fullName}
                         </p>
                       )}
@@ -532,12 +532,12 @@ export default function GetQuoteModal({
                     <div>
                       <label
                         htmlFor="quote-phone"
-                        className="block text-xs font-medium text-slate-200 mb-1.5"
+                        className="block text-xs font-medium text-[#FFFFFF] mb-1.5"
                       >
                         WhatsApp / Phone Number{" "}
-                        <span className="text-red-400">*</span>
+                        <span className="text-[#C9F600]">*</span>
                       </label>
-                      <div className="relative flex rounded-xl border border-[#2E264E] focus-within:border-[#7C3AED] focus-within:ring-2 focus-within:ring-[#7C3AED]/40 bg-[#17132B] transition-all">
+                      <div className="relative flex rounded-xl border border-[#FFFFFF]/25 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/30 bg-[#3B1580] transition-all">
                         {/* Country Code Trigger */}
                         <div
                           ref={countryDropdownRef}
@@ -550,7 +550,7 @@ export default function GetQuoteModal({
                             }
                             aria-label="Select country code"
                             aria-expanded={isCountryDropdownOpen}
-                            className="flex items-center gap-1 pl-3 pr-2 py-2.5 text-xs text-slate-200 hover:text-white bg-[#1D1836] border-r border-[#2E264E] rounded-l-xl transition-colors cursor-pointer"
+                            className="flex items-center gap-1 pl-3 pr-2 py-2.5 text-xs text-slate-200 hover:text-[#FFFFFF] bg-[#3B1580] border-r border-[#FFFFFF]/25 rounded-l-xl transition-colors cursor-pointer"
                           >
                             <span className="text-base leading-none">
                               {currentCountry.flag}
@@ -558,16 +558,16 @@ export default function GetQuoteModal({
                             <span className="font-medium">
                               {currentCountry.code}
                             </span>
-                            <ChevronDown className="w-3 h-3 text-slate-400" />
+                            <ChevronDown className="w-3 h-3 text-[#FFFFFF]/60" />
                           </button>
 
                           {/* Country Code Popup List */}
                           {isCountryDropdownOpen && (
-                            <div className="absolute left-0 top-full mt-1.5 w-64 max-h-64 bg-[#16122C] border border-[#352B5C] rounded-xl shadow-2xl overflow-hidden z-50 flex flex-col">
+                            <div className="absolute left-0 top-full mt-1.5 w-64 max-h-64 bg-[#3B1580] border border-[#FFFFFF]/25 rounded-xl shadow-2xl overflow-hidden z-50 flex flex-col">
                               {/* Search Filter */}
-                              <div className="p-2 border-b border-[#2E264E] bg-[#110E23]">
+                              <div className="p-2 border-b border-[#FFFFFF]/25 bg-[#3B1580]">
                                 <div className="relative">
-                                  <Search className="w-3.5 h-3.5 absolute left-2.5 top-2.5 text-slate-400 pointer-events-none" />
+                                  <Search className="w-3.5 h-3.5 absolute left-2.5 top-2.5 text-[#FFFFFF]/60 pointer-events-none" />
                                   <input
                                     type="text"
                                     placeholder="Search country..."
@@ -575,14 +575,14 @@ export default function GetQuoteModal({
                                     onChange={(e) =>
                                       setCountrySearch(e.target.value)
                                     }
-                                    className="w-full pl-8 pr-2 py-1.5 bg-[#1B1636] border border-[#2B234C] rounded-lg text-xs text-white placeholder-slate-400 focus:outline-none focus:border-[#7C3AED]"
+                                    className="w-full pl-8 pr-2 py-1.5 bg-[#3B1580] border border-[#FFFFFF]/25 rounded-lg text-xs text-[#FFFFFF] placeholder-slate-400 focus:outline-none focus:border-[#C9F600]"
                                     autoFocus
                                   />
                                 </div>
                               </div>
 
                               {/* Countries Scrollable List */}
-                              <div className="overflow-y-auto divide-y divide-[#231B3D]">
+                              <div className="overflow-y-auto divide-y divide-[#FFFFFF]/15">
                                 {displayCountries.length > 0 ? (
                                   displayCountries.map((c) => (
                                     <button
@@ -596,9 +596,9 @@ export default function GetQuoteModal({
                                         setIsCountryDropdownOpen(false);
                                         setCountrySearch("");
                                       }}
-                                      className={`w-full flex items-center justify-between px-3 py-2 text-xs text-left hover:bg-[#231B40] transition-colors cursor-pointer ${
+                                      className={`w-full flex items-center justify-between px-3 py-2 text-xs text-left hover:bg-[#FFFFFF]/10 transition-colors cursor-pointer ${
                                         c.code === formData.countryCode
-                                          ? "bg-[#7C3AED]/20 text-[#A78BFA] font-medium"
+                                          ? "bg-[#C9F600]/15 text-[#C9F600] font-bold"
                                           : "text-slate-200"
                                       }`}
                                     >
@@ -610,13 +610,13 @@ export default function GetQuoteModal({
                                           {c.name}
                                         </span>
                                       </span>
-                                      <span className="text-slate-400 ml-2 font-mono">
+                                      <span className="text-[#FFFFFF]/60 ml-2 font-mono">
                                         {c.code}
                                       </span>
                                     </button>
                                   ))
                                 ) : (
-                                  <div className="p-3 text-center text-xs text-slate-400">
+                                  <div className="p-3 text-center text-xs text-[#FFFFFF]/60">
                                     No country found
                                   </div>
                                 )}
@@ -642,12 +642,12 @@ export default function GetQuoteModal({
                                 setErrors((prev) => ({ ...prev, phone: "" }));
                               }
                             }}
-                            className="w-full px-3 py-2.5 bg-transparent text-sm text-white placeholder-slate-500 focus:outline-none"
+                            className="w-full px-3 py-2.5 bg-transparent text-sm text-[#FFFFFF] placeholder-[#FFFFFF]/40 focus:outline-none"
                           />
                         </div>
                       </div>
                       {errors.phone && (
-                        <p className="text-[11px] text-red-400 mt-1">
+                        <p className="text-[11px] text-[#C9F600] mt-1">
                           {errors.phone}
                         </p>
                       )}
@@ -657,12 +657,12 @@ export default function GetQuoteModal({
                     <div>
                       <label
                         htmlFor="quote-email"
-                        className="block text-xs font-medium text-slate-200 mb-1.5"
+                        className="block text-xs font-medium text-[#FFFFFF] mb-1.5"
                       >
-                        Email Address <span className="text-red-400">*</span>
+                        Email Address <span className="text-[#C9F600]">*</span>
                       </label>
                       <div className="relative">
-                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#FFFFFF]/60">
                           <Mail className="w-4 h-4" />
                         </div>
                         <input
@@ -680,15 +680,15 @@ export default function GetQuoteModal({
                               setErrors((prev) => ({ ...prev, email: "" }));
                             }
                           }}
-                          className={`w-full pl-9 pr-3 py-2.5 bg-[#17132B] border rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#7C3AED] transition-colors ${
+                          className={`w-full pl-9 pr-3 py-2.5 bg-[#3B1580] border rounded-xl text-sm text-[#FFFFFF] placeholder-[#FFFFFF]/40 focus:outline-none focus:ring-2 focus:ring-[#C9F600] transition-colors ${
                             errors.email
-                              ? "border-red-500 focus:border-red-500"
-                              : "border-[#2E264E] hover:border-[#423770]"
+                              ? "border-[#C9F600] focus:border-[#C9F600]"
+                              : "border-[#FFFFFF]/25 hover:border-[#FFFFFF]/40"
                           }`}
                         />
                       </div>
                       {errors.email && (
-                        <p className="text-[11px] text-red-400 mt-1">
+                        <p className="text-[11px] text-[#C9F600] mt-1">
                           {errors.email}
                         </p>
                       )}
@@ -698,12 +698,12 @@ export default function GetQuoteModal({
                     <div>
                       <label
                         htmlFor="quote-service"
-                        className="block text-xs font-medium text-slate-200 mb-1.5"
+                        className="block text-xs font-medium text-[#FFFFFF] mb-1.5"
                       >
-                        Service Needed <span className="text-red-400">*</span>
+                        Service Needed <span className="text-[#C9F600]">*</span>
                       </label>
                       <div className="relative">
-                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#FFFFFF]/60">
                           <Layers className="w-4 h-4" />
                         </div>
                         <select
@@ -715,19 +715,19 @@ export default function GetQuoteModal({
                               service: e.target.value as QuoteServiceType,
                             }))
                           }
-                          className="w-full pl-9 pr-8 py-2.5 bg-[#17132B] border border-[#2E264E] hover:border-[#423770] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-[#7C3AED] appearance-none cursor-pointer transition-colors"
+                          className="w-full pl-9 pr-8 py-2.5 bg-[#3B1580] border border-[#FFFFFF]/25 hover:border-[#FFFFFF]/40 rounded-xl text-sm text-[#FFFFFF] focus:outline-none focus:ring-2 focus:ring-[#C9F600] appearance-none cursor-pointer transition-colors"
                         >
                           {QUOTE_SERVICES.map((s) => (
                             <option
                               key={s}
                               value={s}
-                              className="bg-[#17132B] text-white py-1"
+                              className="bg-[#3B1580] text-[#FFFFFF] py-1"
                             >
                               {s}
                             </option>
                           ))}
                         </select>
-                        <ChevronDown className="w-4 h-4 absolute right-3 top-3 text-slate-400 pointer-events-none" />
+                        <ChevronDown className="w-4 h-4 absolute right-3 top-3 text-[#FFFFFF]/60 pointer-events-none" />
                       </div>
                     </div>
 
@@ -735,10 +735,10 @@ export default function GetQuoteModal({
                     <div>
                       <label
                         htmlFor="quote-notes"
-                        className="block text-xs font-medium text-slate-200 mb-1.5 flex justify-between"
+                        className="block text-xs font-medium text-[#FFFFFF] mb-1.5 flex justify-between"
                       >
                         <span>Project Notes / Scope</span>
-                        <span className="text-[11px] text-slate-400 font-normal">
+                        <span className="text-[11px] text-[#FFFFFF]/60 font-normal">
                           Optional
                         </span>
                       </label>
@@ -754,7 +754,7 @@ export default function GetQuoteModal({
                               notes: e.target.value,
                             }))
                           }
-                          className="w-full p-3 bg-[#17132B] border border-[#2E264E] hover:border-[#423770] rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#7C3AED] transition-colors resize-none"
+                          className="w-full p-3 bg-[#3B1580] border border-[#FFFFFF]/25 hover:border-[#FFFFFF]/40 rounded-xl text-sm text-[#FFFFFF] placeholder-[#FFFFFF]/40 focus:outline-none focus:ring-2 focus:ring-[#C9F600] transition-colors resize-none"
                         />
                       </div>
                     </div>
@@ -764,11 +764,11 @@ export default function GetQuoteModal({
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full py-3.5 px-4 rounded-xl font-semibold text-white bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] hover:from-[#8B5CF6] hover:to-[#7C3AED] shadow-lg shadow-[#7C3AED]/25 hover:shadow-xl hover:shadow-[#7C3AED]/40 disabled:opacity-60 disabled:cursor-not-allowed transition-all cursor-pointer flex items-center justify-center gap-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/60 focus:ring-offset-2 focus:ring-offset-[#110E20]"
+                        className="w-full py-3.5 px-4 rounded-xl font-semibold text-[#3B1580] bg-[#C9F600] font-bold hover:opacity-90 shadow-lg shadow-[#C9F600]/25 hover:shadow-xl hover:shadow-[#C9F600]/40 disabled:opacity-60 disabled:cursor-not-allowed transition-all cursor-pointer flex items-center justify-center gap-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#C9F600]/60 focus:ring-offset-2 focus:ring-offset-[#3B1580]"
                       >
                         {isSubmitting ? (
                           <>
-                            <Loader2 className="w-4 h-4 animate-spin text-white" />
+                            <Loader2 className="w-4 h-4 animate-spin text-[#3B1580]" />
                             <span>Submitting Quote Request...</span>
                           </>
                         ) : (
@@ -781,7 +781,7 @@ export default function GetQuoteModal({
                     </div>
 
                     {/* Privacy & Guarantee note */}
-                    <p className="text-[11px] text-center text-slate-400 pt-1">
+                    <p className="text-[11px] text-center text-[#FFFFFF]/60 pt-1">
                       🔒 100% Privacy Guaranteed. No spam. Direct response
                       from engineering leads.
                     </p>

@@ -68,7 +68,7 @@ export default function CustomSoftwarePage() {
           <p>
             At Joy Digital, our specialized <strong>custom software development</strong> focuses on building secure database portals and SaaS applications. We design custom back-ends and connect them to fast React front-ends to ensure smooth performance across mobile and desktop devices.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">API Configurations, CRM Integrations, and Process Automation</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">API Configurations, CRM Integrations, and Process Automation</h3>
           <p>
             We help eliminate manual data entry by connecting your website to third-party tools (such as payment gates, invoicing, SMS notifications, and CRM systems). We build custom admin dashboards that let you check reports, manage user access, and coordinate customer requests.
           </p>

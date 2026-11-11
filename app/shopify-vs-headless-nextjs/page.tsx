@@ -99,7 +99,7 @@ export default function ShopifyVsHeadlessNextjsPage() {
         </section>
 
         {/* FEATURE COMPARISON */}
-        <section className="py-20 bg-white border-b border-[#E9E4F2]">
+        <section className="py-20 bg-primary border-b border-[#E9E4F2]">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">Side-by-Side Comparison</span>

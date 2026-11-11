@@ -78,6 +78,7 @@ const REGIONS = [
 const LANGUAGES = [
   { code: "en", label: "English", flag: "🇬🇧" },
 ];
+
 export default function Header({ transparent = false }: { transparent?: boolean }) {
   const [isScrolledRaw, setIsScrolledRaw] = useState(false);
   const isScrolled = !transparent || isScrolledRaw;
@@ -168,11 +169,9 @@ export default function Header({ transparent = false }: { transparent?: boolean 
   }, []);
 
   const handleLangChange = (langCode: string) => {
-    // 1. Update React state immediately for UI feedback
     setCurrentLang(langCode);
     setIsLangDropdownOpen(false);
 
-    // 2. Delegate to GoogleTranslateLoader
     if (typeof window !== "undefined") {
       const triggerFn = (window as any).__triggerGoogleTranslate;
       if (typeof triggerFn === "function") {
@@ -228,21 +227,22 @@ export default function Header({ transparent = false }: { transparent?: boolean 
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-[#E9E4F2] py-3"
-            : "bg-transparent py-5"
+            ? "bg-[#3B1580]/95 backdrop-blur-md shadow-md border-b border-[#FFFFFF]/20 py-3 text-[#FFFFFF]"
+            : "bg-[#3B1580] py-5 border-b border-[#FFFFFF]/10 text-[#FFFFFF]"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href={getRegionalHref("/")} title="Joy Digital Home" className="flex items-center flex-shrink-0">
             <Image
-              src={isScrolled ? "/assets/images/logo.webp" : "/assets/images/logo-light.webp"}
+              src="/assets/images/joydigital-lime-logo.webp"
               alt="Joy Digital - Web Design, Web Development & SEO Services Worldwide"
               title="Joy Digital Logo"
               width={240}
               height={77}
               className="h-10 sm:h-11 md:h-12 lg:h-[50px] w-auto object-contain transition-all duration-300"
               priority
+              unoptimized
             />
           </Link>
 
@@ -251,12 +251,8 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             <Link
               href={getRegionalHref("/")}
               title="Home"
-              className={`font-semibold text-sm transition-colors nav-link-underline ${
-                isScrolled ? "hover:text-accent" : "hover:text-primary-light"
-              } ${
-                isActive("/") 
-                  ? (isScrolled ? "text-accent" : "text-primary-light") 
-                  : (isScrolled ? "text-text-primary" : "text-slate-100")
+              className={`font-semibold text-sm transition-colors nav-link-underline hover:text-[#C9F600] ${
+                isActive("/") ? "text-[#C9F600]" : "text-[#FFFFFF]"
               }`}
             >
               Home
@@ -272,12 +268,10 @@ export default function Header({ transparent = false }: { transparent?: boolean 
               <button
                 type="button"
                 onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
-                className={`font-semibold text-sm flex items-center gap-1 transition-colors nav-link-underline cursor-pointer ${
-                  isScrolled ? "hover:text-accent" : "hover:text-primary-light"
-                } ${
+                className={`font-semibold text-sm flex items-center gap-1 transition-colors nav-link-underline cursor-pointer hover:text-[#C9F600] ${
                   pathname.includes("-services") || pathname.includes("-development") || pathname.includes("-setup") || pathname.includes("marketing") || pathname.includes("-seo") || pathname.includes("seo-") || pathname.includes("ai-search")
-                    ? (isScrolled ? "text-accent" : "text-primary-light")
-                    : (isScrolled ? "text-text-primary" : "text-slate-100")
+                    ? "text-[#C9F600]"
+                    : "text-[#FFFFFF]"
                 }`}
               >
                 Services
@@ -292,7 +286,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                     : "opacity-0 invisible -translate-y-2 pointer-events-none"
                 }`}
               >
-                <div className="bg-white border border-[#E9E4F2] rounded-2xl shadow-xl p-6 overflow-hidden">
+                <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl shadow-2xl p-6 overflow-hidden">
                   <div className="grid grid-cols-2 gap-x-8 gap-y-6">
                     {SERVICES_CATEGORIES.map((category) => {
                       const targetCategoryHref = category.localized ? getRegionalHref(category.href) : category.href;
@@ -302,7 +296,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                             href={targetCategoryHref}
                             title={category.title}
                             onClick={() => setIsServicesDropdownOpen(false)}
-                            className="font-bold text-[13px] text-[#1F1B2D] hover:text-[#7C3AED] transition-colors border-b border-[#E9E4F2] pb-2 uppercase tracking-wide"
+                            className="font-bold text-[13px] text-[#C9F600] hover:text-[#FFFFFF] transition-colors border-b border-[#FFFFFF]/20 pb-2 uppercase tracking-wide"
                           >
                             {category.title}
                           </Link>
@@ -316,8 +310,8 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                                     href={targetSubHref}
                                     title={sub.label}
                                     onClick={() => setIsServicesDropdownOpen(false)}
-                                    className={`text-[13px] font-semibold transition-colors hover:text-[#7C3AED] ${
-                                      pathname === targetSubHref ? "text-[#7C3AED]" : "text-slate-600"
+                                    className={`text-[13px] font-semibold transition-colors hover:text-[#C9F600] ${
+                                      pathname === targetSubHref ? "text-[#C9F600] font-bold" : "text-[#FFFFFF]/80"
                                     }`}
                                   >
                                     {sub.label}
@@ -337,12 +331,8 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             <Link
               href="/portfolio"
               title="Portfolio"
-              className={`font-semibold text-sm transition-colors nav-link-underline ${
-                isScrolled ? "hover:text-accent" : "hover:text-primary-light"
-              } ${
-                isActive("/portfolio")
-                  ? (isScrolled ? "text-accent" : "text-primary-light")
-                  : (isScrolled ? "text-text-primary" : "text-slate-100")
+              className={`font-semibold text-sm transition-colors nav-link-underline hover:text-[#C9F600] ${
+                isActive("/portfolio") ? "text-[#C9F600]" : "text-[#FFFFFF]"
               }`}
             >
               Portfolio
@@ -351,42 +341,28 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             <Link
               href="/free-tools"
               title="Free Tools"
-              className={`font-semibold text-sm transition-colors nav-link-underline ${
-                isScrolled ? "hover:text-accent" : "hover:text-primary-light"
-              } ${
-                isActive("/free-tools")
-                  ? (isScrolled ? "text-accent" : "text-primary-light") 
-                  : (isScrolled ? "text-text-primary" : "text-slate-100")
+              className={`font-semibold text-sm transition-colors nav-link-underline hover:text-[#C9F600] ${
+                isActive("/free-tools") ? "text-[#C9F600]" : "text-[#FFFFFF]"
               }`}
             >
               Free Tools
             </Link>
 
-
             <Link
               href="/blog"
               title="Blog"
-              className={`font-semibold text-sm transition-colors nav-link-underline ${
-                isScrolled ? "hover:text-accent" : "hover:text-primary-light"
-              } ${
-                isActive("/blog") 
-                  ? (isScrolled ? "text-accent" : "text-primary-light") 
-                  : (isScrolled ? "text-text-primary" : "text-slate-100")
+              className={`font-semibold text-sm transition-colors nav-link-underline hover:text-[#C9F600] ${
+                isActive("/blog") ? "text-[#C9F600]" : "text-[#FFFFFF]"
               }`}
             >
               Blog
             </Link>
 
-
             <Link
               href={getRegionalHref("/contact")}
               title="Contact Us"
-              className={`font-semibold text-sm transition-colors nav-link-underline ${
-                isScrolled ? "hover:text-accent" : "hover:text-primary-light"
-              } ${
-                isActive("/contact") 
-                  ? (isScrolled ? "text-accent" : "text-primary-light") 
-                  : (isScrolled ? "text-text-primary" : "text-slate-100")
+              className={`font-semibold text-sm transition-colors nav-link-underline hover:text-[#C9F600] ${
+                isActive("/contact") ? "text-[#C9F600]" : "text-[#FFFFFF]"
               }`}
             >
               Contact
@@ -399,7 +375,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             <div className="relative" ref={regionRef}>
               <button
                 onClick={() => setIsRegionDropdownOpen(!isRegionDropdownOpen)}
-                className="flex items-center gap-2 px-3 py-1.5 border border-[#E5E7EB] rounded-lg text-sm font-medium hover:border-accent hover:text-accent transition-colors bg-white shadow-sm"
+                className="flex items-center gap-2 px-3 py-1.5 border border-[#FFFFFF]/25 rounded-lg text-sm font-medium hover:border-[#C9F600] hover:text-[#C9F600] transition-colors bg-[#3B1580] text-[#FFFFFF] shadow-sm"
               >
                 <span>{activeRegionObj.flag}</span>
                 <span className="uppercase text-xs">{activeRegionObj.code || "Global"}</span>
@@ -407,7 +383,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
               </button>
 
               <div
-                className={`absolute right-0 mt-2 w-48 bg-white border border-[#E5E7EB] rounded-lg shadow-lg py-1.5 transition-all duration-200 ${
+                className={`absolute right-0 mt-2 w-48 bg-[#3B1580] border border-[#FFFFFF]/25 rounded-lg shadow-xl py-1.5 transition-all duration-200 ${
                   isRegionDropdownOpen
                     ? "opacity-100 visible translate-y-0"
                     : "opacity-0 invisible -translate-y-2 pointer-events-none"
@@ -417,8 +393,8 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                   <button
                     key={region.code}
                     onClick={() => handleRegionChange(region.code)}
-                    className={`w-full flex items-center gap-3 px-4 py-2 text-left text-xs font-semibold transition-colors hover:bg-gray-50 hover:text-accent ${
-                      currentRegion === region.code ? "text-accent bg-gray-50/50" : "text-text-primary"
+                    className={`w-full flex items-center gap-3 px-4 py-2 text-left text-xs font-semibold transition-colors hover:bg-[#FFFFFF]/10 hover:text-[#C9F600] ${
+                      currentRegion === region.code ? "text-[#C9F600] bg-[#FFFFFF]/10 font-bold" : "text-[#FFFFFF]"
                     }`}
                   >
                     <span className="text-sm">{region.flag}</span>
@@ -432,7 +408,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             <div className="relative notranslate" ref={desktopLangRef}>
               <button
                 onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
-                className="flex items-center gap-2 px-3 py-1.5 border border-[#E5E7EB] rounded-lg text-sm font-medium hover:border-accent hover:text-accent transition-colors bg-white shadow-sm"
+                className="flex items-center gap-2 px-3 py-1.5 border border-[#FFFFFF]/25 rounded-lg text-sm font-medium hover:border-[#C9F600] hover:text-[#C9F600] transition-colors bg-[#3B1580] text-[#FFFFFF] shadow-sm"
               >
                 <span>{LANGUAGES.find(l => l.code === currentLang)?.flag || "🇺🇸"}</span>
                 <span className="uppercase text-xs">{currentLang}</span>
@@ -440,7 +416,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
               </button>
 
               <div
-                className={`absolute right-0 mt-2 w-48 max-h-80 overflow-y-auto bg-white border border-[#E5E7EB] rounded-lg shadow-lg py-1.5 transition-all duration-200 z-[70] ${
+                className={`absolute right-0 mt-2 w-48 max-h-80 overflow-y-auto bg-[#3B1580] border border-[#FFFFFF]/25 rounded-lg shadow-xl py-1.5 transition-all duration-200 z-[70] ${
                   isLangDropdownOpen
                     ? "opacity-100 visible translate-y-0"
                     : "opacity-0 invisible -translate-y-2 pointer-events-none"
@@ -450,8 +426,8 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                   <button
                     key={lang.code}
                     onClick={() => handleLangChange(lang.code)}
-                    className={`w-full flex items-center gap-3 px-4 py-2 text-left text-xs font-semibold transition-colors hover:bg-gray-50 hover:text-accent ${
-                      currentLang === lang.code ? "text-accent bg-gray-50/50" : "text-text-primary"
+                    className={`w-full flex items-center gap-3 px-4 py-2 text-left text-xs font-semibold transition-colors hover:bg-[#FFFFFF]/10 hover:text-[#C9F600] ${
+                      currentLang === lang.code ? "text-[#C9F600] bg-[#FFFFFF]/10 font-bold" : "text-[#FFFFFF]"
                     }`}
                   >
                     <span className="text-sm">{lang.flag}</span>
@@ -464,7 +440,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             <Link
               href="/free-website-audit"
               title="Get a Free Website Audit"
-              className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white !py-2.5 !px-5 !text-xs !font-bold !rounded-full shadow-md shrink-0 transition-all hover:scale-105 active:scale-95 flex items-center justify-center text-center"
+              className="bg-[#C9F600] text-[#3B1580] font-bold hover:opacity-90 !py-2.5 !px-5 !text-xs !rounded-full shadow-md shrink-0 transition-all hover:scale-105 active:scale-95 flex items-center justify-center text-center"
             >
               Get a Free Website Audit
             </Link>
@@ -476,14 +452,14 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             <div className="relative">
               <button
                 onClick={() => setIsRegionDropdownOpen(!isRegionDropdownOpen)}
-                className="flex items-center justify-center w-8 h-8 border border-[#E5E7EB] rounded-lg text-sm bg-white shadow-sm"
+                className="flex items-center justify-center w-8 h-8 border border-[#FFFFFF]/25 rounded-lg text-sm bg-[#3B1580] text-[#FFFFFF] shadow-sm"
                 aria-label="Select Country"
               >
                 <span>{activeRegionObj.flag}</span>
               </button>
 
               {isRegionDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-44 bg-white border border-[#E5E7EB] rounded-lg shadow-lg py-1 z-[60]">
+                <div className="absolute right-0 mt-2 w-44 bg-[#3B1580] border border-[#FFFFFF]/25 rounded-lg shadow-xl py-1 z-[60]">
                   {REGIONS.map((region) => (
                     <button
                       key={region.code}
@@ -491,7 +467,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                         handleRegionChange(region.code);
                         setIsRegionDropdownOpen(false);
                       }}
-                      className="w-full flex items-center gap-3 px-4 py-2.5 text-left text-xs font-semibold text-text-primary hover:bg-gray-50 hover:text-accent"
+                      className="w-full flex items-center gap-3 px-4 py-2.5 text-left text-xs font-semibold text-[#FFFFFF] hover:bg-[#FFFFFF]/10 hover:text-[#C9F600]"
                     >
                       <span>{region.flag}</span>
                       <span>{region.label}</span>
@@ -505,14 +481,14 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             <div className="relative notranslate" ref={mobileLangRef}>
               <button
                 onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
-                className="flex items-center justify-center w-8 h-8 border border-[#E5E7EB] rounded-lg text-sm bg-white shadow-sm"
+                className="flex items-center justify-center w-8 h-8 border border-[#FFFFFF]/25 rounded-lg text-sm bg-[#3B1580] text-[#FFFFFF] shadow-sm"
                 aria-label="Select Language"
               >
                 <span>{LANGUAGES.find(l => l.code === currentLang)?.flag || "🇺🇸"}</span>
               </button>
 
               {isLangDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-44 max-h-64 overflow-y-auto bg-white border border-[#E5E5E5] rounded-lg shadow-lg py-1.5 z-[60]">
+                <div className="absolute right-0 mt-2 w-44 max-h-64 overflow-y-auto bg-[#3B1580] border border-[#FFFFFF]/25 rounded-lg shadow-xl py-1.5 z-[60]">
                   {LANGUAGES.map((lang) => (
                     <button
                       key={lang.code}
@@ -520,7 +496,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                         handleLangChange(lang.code);
                         setIsLangDropdownOpen(false);
                       }}
-                      className="w-full flex items-center gap-3 px-4 py-2.5 text-left text-xs font-semibold text-text-primary hover:bg-gray-50 hover:text-accent"
+                      className="w-full flex items-center gap-3 px-4 py-2.5 text-left text-xs font-semibold text-[#FFFFFF] hover:bg-[#FFFFFF]/10 hover:text-[#C9F600]"
                     >
                       <span>{lang.flag}</span>
                       <span>{lang.label}</span>
@@ -530,67 +506,62 @@ export default function Header({ transparent = false }: { transparent?: boolean 
               )}
             </div>
 
-             {/* Mobile Menu Toggle Button */}
-             <button
-               onClick={() => setIsMobileOpen(!isMobileOpen)}
-               className="flex flex-col justify-between w-6 h-4 z-[60] focus:outline-none"
-               aria-label="Toggle navigation menu"
-             >
-               <span
-                 className={`w-full h-0.5 rounded transition-all duration-300 ${
-                   isScrolled || isMobileOpen ? "bg-primary-dark" : "bg-white"
-                 } ${
-                   isMobileOpen ? "rotate-45 translate-y-1.5" : ""
-                 }`}
-               />
-               <span
-                 className={`w-full h-0.5 rounded transition-all duration-300 ${
-                   isScrolled || isMobileOpen ? "bg-primary-dark" : "bg-white"
-                 } ${
-                   isMobileOpen ? "opacity-0" : ""
-                 }`}
-               />
-               <span
-                 className={`w-full h-0.5 rounded transition-all duration-300 ${
-                   isScrolled || isMobileOpen ? "bg-primary-dark" : "bg-white"
-                 } ${
-                   isMobileOpen ? "-rotate-45 -translate-y-1.5" : ""
-                 }`}
-               />
-             </button>
+            {/* Mobile Menu Toggle Button */}
+            <button
+              onClick={() => setIsMobileOpen(!isMobileOpen)}
+              className="flex flex-col justify-between w-6 h-4 z-[60] focus:outline-none"
+              aria-label="Toggle navigation menu"
+            >
+              <span
+                className={`w-full h-0.5 rounded transition-all duration-300 bg-[#FFFFFF] ${
+                  isMobileOpen ? "rotate-45 translate-y-1.5" : ""
+                }`}
+              />
+              <span
+                className={`w-full h-0.5 rounded transition-all duration-300 bg-[#FFFFFF] ${
+                  isMobileOpen ? "opacity-0" : ""
+                }`}
+              />
+              <span
+                className={`w-full h-0.5 rounded transition-all duration-300 bg-[#FFFFFF] ${
+                  isMobileOpen ? "-rotate-45 -translate-y-1.5" : ""
+                }`}
+              />
+            </button>
           </div>
         </div>
       </header>
 
       {/* Mobile Drawer Menu */}
       <div
-        className={`fixed inset-0 z-[60] bg-black/40 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${
+        className={`fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${
           isMobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setIsMobileOpen(false)}
       />
 
       <aside
-        className={`fixed top-0 right-0 w-4/5 max-w-sm h-full bg-white z-[65] shadow-2xl flex flex-col p-6 transition-transform duration-300 lg:hidden ${
+        className={`fixed top-0 right-0 w-4/5 max-w-sm h-full bg-[#3B1580] border-l border-[#FFFFFF]/20 text-[#FFFFFF] z-[65] shadow-2xl flex flex-col p-6 transition-transform duration-300 lg:hidden ${
           isMobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Mobile Drawer Header with Logo & Close Button */}
-        <div className="flex items-center justify-between pb-5 mb-4 border-b border-[#E5E7EB] shrink-0">
+        <div className="flex items-center justify-between pb-5 mb-4 border-b border-[#FFFFFF]/20 shrink-0">
           <Link href={getRegionalHref("/")} title="Joy Digital Home" onClick={() => setIsMobileOpen(false)} className="flex items-center">
             <Image
-              src="/assets/images/logo.webp"
+              src="/assets/images/joydigital-lime-logo.webp"
               alt="Joy Digital Logo"
               width={200}
               height={64}
               className="h-10 w-auto object-contain"
+              unoptimized
             />
           </Link>
 
           {/* Prominent Close (X) Button */}
           <button
             onClick={() => setIsMobileOpen(false)}
-            className="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-extrabold flex items-center justify-center transition-colors cursor-pointer active:scale-95"
+            className="w-9 h-9 rounded-full bg-[#3B1580] border border-[#FFFFFF]/30 text-[#FFFFFF] hover:border-[#C9F600] hover:text-[#C9F600] font-extrabold flex items-center justify-center transition-colors cursor-pointer active:scale-95"
             aria-label="Close menu"
             title="Close menu"
           >
@@ -602,8 +573,9 @@ export default function Header({ transparent = false }: { transparent?: boolean 
           <Link
             href={getRegionalHref("/")}
             title="Home"
-            className={`font-semibold text-lg border-b border-[#E5E7EB] pb-2 ${
-              isActive("/") ? "text-accent" : "text-primary-dark"
+            onClick={() => setIsMobileOpen(false)}
+            className={`font-semibold text-lg border-b border-[#FFFFFF]/15 pb-2 transition-colors hover:text-[#C9F600] ${
+              isActive("/") ? "text-[#C9F600]" : "text-[#FFFFFF]"
             }`}
           >
             Home
@@ -611,7 +583,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
 
           {/* Mobile Services Sub-list */}
           <div className="flex flex-col gap-2">
-            <span className="font-semibold text-lg text-primary-dark border-b border-[#E5E7EB] pb-2 flex justify-between items-center">
+            <span className="font-semibold text-lg text-[#FFFFFF] border-b border-[#FFFFFF]/15 pb-2 flex justify-between items-center">
               Our Services
             </span>
             <div className="flex flex-col gap-4 mt-2">
@@ -623,14 +595,12 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                       href={targetCategoryHref}
                       title={category.title}
                       onClick={() => setIsMobileOpen(false)}
-                      className={`font-bold text-[15px] transition-colors ${
-                        pathname === targetCategoryHref ? "text-accent" : "text-primary-dark"
-                      }`}
+                      className="font-bold text-[15px] transition-colors text-[#C9F600] hover:text-[#FFFFFF]"
                     >
                       {category.title}
                     </Link>
                     {category.subServices.length > 0 && (
-                      <div className="pl-4 flex flex-col gap-2 border-l-2 border-[#E9E4F2] ml-1">
+                      <div className="pl-4 flex flex-col gap-2 border-l-2 border-[#FFFFFF]/20 ml-1">
                         {category.subServices.map((sub, idx) => {
                           const targetSubHref = sub.localized ? getRegionalHref(sub.href) : sub.href;
                           return (
@@ -639,8 +609,8 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                               href={targetSubHref}
                               title={sub.label}
                               onClick={() => setIsMobileOpen(false)}
-                              className={`text-sm font-semibold transition-colors hover:text-accent ${
-                                pathname === targetSubHref ? "text-accent" : "text-slate-500"
+                              className={`text-sm font-semibold transition-colors hover:text-[#C9F600] ${
+                                pathname === targetSubHref ? "text-[#C9F600] font-bold" : "text-[#FFFFFF]/80"
                               }`}
                             >
                               {sub.label}
@@ -658,19 +628,19 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             href="/portfolio"
             title="Portfolio"
             onClick={() => setIsMobileOpen(false)}
-            className={`font-semibold text-lg border-b border-[#E5E7EB] pb-2 ${
-              isActive("/portfolio") ? "text-accent" : "text-primary-dark"
+            className={`font-semibold text-lg border-b border-[#FFFFFF]/15 pb-2 transition-colors hover:text-[#C9F600] ${
+              isActive("/portfolio") ? "text-[#C9F600]" : "text-[#FFFFFF]"
             }`}
           >
             Portfolio
           </Link>
 
-            <Link
+          <Link
             href="/free-tools"
             title="Free Tools"
             onClick={() => setIsMobileOpen(false)}
-            className={`font-semibold text-lg border-b border-[#E5E7EB] pb-2 ${
-              isActive("/free-tools") ? "text-accent" : "text-primary-dark"
+            className={`font-semibold text-lg border-b border-[#FFFFFF]/15 pb-2 transition-colors hover:text-[#C9F600] ${
+              isActive("/free-tools") ? "text-[#C9F600]" : "text-[#FFFFFF]"
             }`}
           >
             Free Tools
@@ -679,19 +649,20 @@ export default function Header({ transparent = false }: { transparent?: boolean 
           <Link
             href="/blog"
             title="Blog"
-            className={`font-semibold text-lg border-b border-[#E5E7EB] pb-2 ${
-              isActive("/blog") ? "text-accent" : "text-primary-dark"
+            onClick={() => setIsMobileOpen(false)}
+            className={`font-semibold text-lg border-b border-[#FFFFFF]/15 pb-2 transition-colors hover:text-[#C9F600] ${
+              isActive("/blog") ? "text-[#C9F600]" : "text-[#FFFFFF]"
             }`}
           >
             Blog
           </Link>
 
-
           <Link
             href={getRegionalHref("/contact")}
             title="Contact Us"
-            className={`font-semibold text-lg border-b border-[#E5E7EB] pb-2 ${
-              isActive("/contact") ? "text-accent" : "text-primary-dark"
+            onClick={() => setIsMobileOpen(false)}
+            className={`font-semibold text-lg border-b border-[#FFFFFF]/15 pb-2 transition-colors hover:text-[#C9F600] ${
+              isActive("/contact") ? "text-[#C9F600]" : "text-[#FFFFFF]"
             }`}
           >
             Contact
@@ -699,7 +670,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
 
           {/* Mobile Language Selector */}
           <div className="flex flex-col gap-2">
-            <span className="font-semibold text-lg text-primary-dark border-b border-[#E5E7EB] pb-2 flex justify-between items-center">
+            <span className="font-semibold text-lg text-[#FFFFFF] border-b border-[#FFFFFF]/15 pb-2 flex justify-between items-center">
               Select Language
             </span>
             <div className="grid grid-cols-2 gap-2 mt-2 max-h-60 overflow-y-auto pr-1">
@@ -709,8 +680,8 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                   onClick={() => handleLangChange(lang.code)}
                   className={`flex items-center gap-2 px-3 py-2 border rounded-lg text-xs font-semibold transition-colors ${
                     currentLang === lang.code
-                      ? "border-accent text-accent bg-[#FAF9FF]"
-                      : "border-gray-200 text-text-primary hover:border-accent hover:text-accent bg-white"
+                      ? "border-[#C9F600] text-[#3B1580] bg-[#C9F600] font-bold"
+                      : "border-[#FFFFFF]/20 text-[#FFFFFF] hover:border-[#C9F600] hover:text-[#C9F600] bg-[#3B1580]"
                   }`}
                 >
                   <span>{lang.flag}</span>
@@ -724,7 +695,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             href="/free-website-audit"
             title="Get a Free Website Audit"
             onClick={() => setIsMobileOpen(false)}
-            className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-center font-bold text-sm py-3.5 px-6 rounded-xl shadow-md mt-4 transition-all block"
+            className="w-full bg-[#C9F600] text-[#3B1580] font-bold hover:opacity-90 text-center text-sm py-3.5 px-6 rounded-xl shadow-md mt-4 transition-all block"
           >
             Get a Free Website Audit
           </Link>
@@ -733,4 +704,3 @@ export default function Header({ transparent = false }: { transparent?: boolean 
     </>
   );
 }
-

@@ -100,125 +100,125 @@ export default async function TextileWebPage() {
   const relatedBlogPosts = [post1, post2, post3].filter((p): p is NonNullable<typeof p> => p !== null);
 
   const comparisonTable = (
-    <section className="py-16 lg:py-24 bg-[#FAF9FF] border-b border-[#E9E4F2]">
+    <section className="py-16 lg:py-24 bg-[#260B5E] border-b border-[#FFFFFF]/15 text-[#FFFFFF]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-bold uppercase tracking-wider mb-3">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/30 text-[#C9F600] text-xs font-bold uppercase tracking-wider mb-3">
             B2B Export Performance Comparison
           </span>
-          <h2 className="text-2xl md:text-4xl font-extrabold text-primary-dark mb-4">
+          <h2 className="text-2xl md:text-4xl font-extrabold text-[#FFFFFF] mb-4">
             Legacy Factory Sites vs Joy Digital B2B Export Portals
           </h2>
-          <p className="text-sm text-text-secondary leading-relaxed font-normal">
+          <p className="text-sm text-[#FFFFFF]/80 leading-relaxed font-normal">
             Why global textile exporters need custom Next.js portals to capture high-value buyer RFQs.
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto overflow-hidden bg-white border border-[#E5E7EB] rounded-2xl shadow-sm">
+        <div className="max-w-5xl mx-auto overflow-hidden bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl shadow-md not-prose">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="border-b border-[#E5E7EB] bg-slate-50/80">
+                <tr className="border-b border-[#FFFFFF]/20 bg-[#260B5E]">
                   <th className="py-4 px-6 text-xs font-extrabold text-primary-dark uppercase tracking-wider w-1/4">
                     Features
                   </th>
-                  <th className="py-4 px-6 text-xs font-extrabold text-slate-500 uppercase tracking-wider w-3/8">
+                  <th className="py-4 px-6 text-xs font-extrabold text-[#FFFFFF]/70 uppercase tracking-wider w-3/8">
                     Legacy Factory Website
                   </th>
-                  <th className="py-4 px-6 text-xs font-extrabold text-accent uppercase tracking-wider w-3/8 bg-purple-50/60 border-l border-[#E5E7EB]">
+                  <th className="py-4 px-6 text-xs font-extrabold text-[#C9F600] uppercase tracking-wider w-3/8 bg-[#3B1580]/80 border-l border-[#FFFFFF]/20">
                     <div className="flex items-center gap-1.5">
                       <span>Joy Digital B2B Export Portal</span>
-                      <span className="bg-accent text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Recommended</span>
+                      <span className="bg-[#C9F600] text-[#3B1580] text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Recommended</span>
                     </div>
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#E5E7EB] text-xs">
-                <tr className="hover:bg-slate-50/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-primary-dark">
+              <tbody className="divide-y divide-[#FFFFFF]/15 text-xs text-[#FFFFFF]">
+                <tr className="hover:bg-[#260B5E]/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
                     Performance &amp; Speed
                   </td>
-                  <td className="py-4 px-6 text-rose-500 font-medium">
+                  <td className="py-4 px-6 text-rose-400 font-medium">
                     <div className="flex items-center gap-2">
                       <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
                       <span>Heavy PDF downloads &amp; slow loading speeds</span>
                     </div>
                   </td>
-                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
                     <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
                       <span>Sub-1.5s Global Edge-Served Next.js architecture</span>
                     </div>
                   </td>
                 </tr>
 
-                <tr className="hover:bg-slate-50/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-primary-dark">
+                <tr className="hover:bg-[#260B5E]/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
                     Buyer Lead Capture
                   </td>
-                  <td className="py-4 px-6 text-rose-500 font-medium">
+                  <td className="py-4 px-6 text-rose-400 font-medium">
                     <div className="flex items-center gap-2">
                       <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
                       <span>Generic &apos;Contact Us&apos; box</span>
                     </div>
                   </td>
-                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
                     <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
                       <span>Instant B2B RFQ &amp; Physical Sample Request Builder</span>
                     </div>
                   </td>
                 </tr>
 
-                <tr className="hover:bg-slate-50/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-primary-dark">
+                <tr className="hover:bg-[#260B5E]/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
                     Product Catalog
                   </td>
-                  <td className="py-4 px-6 text-rose-500 font-medium">
+                  <td className="py-4 px-6 text-rose-400 font-medium">
                     <div className="flex items-center gap-2">
                       <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
                       <span>Static images with missing specs</span>
                     </div>
                   </td>
-                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
                     <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
                       <span>Digital Fabric Catalog with GSM, Blend &amp; Weave Filters</span>
                     </div>
                   </td>
                 </tr>
 
-                <tr className="hover:bg-slate-50/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-primary-dark">
+                <tr className="hover:bg-[#260B5E]/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
                     Compliance &amp; Trust
                   </td>
-                  <td className="py-4 px-6 text-rose-500 font-medium">
+                  <td className="py-4 px-6 text-rose-400 font-medium">
                     <div className="flex items-center gap-2">
                       <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
                       <span>Text-only compliance claims</span>
                     </div>
                   </td>
-                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
                     <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
                       <span>Prominent Certification Wall (OEKO-TEX, GOTS, ISO, SEDEX)</span>
                     </div>
                   </td>
                 </tr>
 
-                <tr className="hover:bg-slate-50/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-primary-dark">
+                <tr className="hover:bg-[#260B5E]/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
                     Search Visibility
                   </td>
-                  <td className="py-4 px-6 text-rose-500 font-medium">
+                  <td className="py-4 px-6 text-rose-400 font-medium">
                     <div className="flex items-center gap-2">
                       <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
                       <span>Local search tags</span>
                     </div>
                   </td>
-                  <td className="py-4 px-6 font-bold text-emerald-600 bg-purple-50/20 border-l border-[#E5E7EB]">
+                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
                     <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-emerald-500 shrink-0" />
+                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
                       <span>International B2B SEO targeting US, EU, UAE &amp; Global Buyers</span>
                     </div>
                   </td>
@@ -248,37 +248,37 @@ export default async function TextileWebPage() {
           <p>
             When international sourcing managers land on a site that lacks detailed fabric specifications (GSM, weave, blend %, MOQs), clear compliance certifications (GOTS, OEKO-TEX, ISO), or responsive mobile RFQ buttons, they immediately abandon the page for competing exporters.
           </p>
-          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
-            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting B2B Textile Export Portals</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting B2B Textile Export Portals</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Digital Fabric &amp; Swatch Catalog</strong>: Interactive GSM, construction &amp; blend filters</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Instant B2B RFQ Builder</strong>: Quick custom quote &amp; sample swatch request form</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>International Certification Wall</strong>: Prominent OEKO-TEX, GOTS, ISO, SEDEX badges</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Global B2B SEO Strategy</strong>: Target buyer searches in US, UK, UAE &amp; Australia</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s International Speed</strong>: Edge-served serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Export Sales WhatsApp Routing</strong>: Instant connection with regional trade reps</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we combine robust <Link href="/website-development" className="text-primary font-bold hover:underline">custom web development</Link> with specialized <Link href="/seo-services" className="text-primary font-bold hover:underline">international B2B SEO</Link> and <Link href="/offshore-web-development-partner" className="text-primary font-bold hover:underline">global web partner solutions</Link> to help textile exporters establish market authority and close volume buyer contracts.
+            At Joy Digital, we combine robust <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">custom web development</Link> with specialized <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">international B2B SEO</Link> and <Link href="/offshore-web-development-partner" className="text-[#C9F600] font-bold hover:underline">global web partner solutions</Link> to help textile exporters establish market authority and close volume buyer contracts.
           </p>
         </div>
       }

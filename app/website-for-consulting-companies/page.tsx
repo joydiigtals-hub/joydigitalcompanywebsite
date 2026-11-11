@@ -77,37 +77,37 @@ export default function ConsultingWebPage() {
           <p>
             Yet most consulting websites rely on vague buzzwords, lack structured case study presentations, load slowly, and fail to provide direct audit booking or whitepaper lead capture features.
           </p>
-          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
-            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Impact Consulting Websites</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Impact Consulting Websites</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Interactive Strategy Audit Booking</strong>: Direct consultation scheduling</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Client Case Study & ROI Portals</strong>: Problem-solution-results frameworks</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Thought Leadership & Research Hub</strong>: Downloadable whitepapers & reports</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Executive Team & Partner Bios</strong>: Credentials, past advisory wins & publications</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Global B2B SEO Strategy</strong>: Rank for high-value corporate consulting queries</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we merge corporate design elegance with <Link href="/website-development" className="text-primary font-bold hover:underline">modern Next.js engineering</Link> and <Link href="/seo-services" className="text-primary font-bold hover:underline">B2B search optimization</Link> to help consulting agencies win enterprise accounts.
+            At Joy Digital, we merge corporate design elegance with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">modern Next.js engineering</Link> and <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">B2B search optimization</Link> to help consulting agencies win enterprise accounts.
           </p>
         </div>
       }

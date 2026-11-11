@@ -229,12 +229,12 @@ export default function LeadForm({
 
   if (isSuccess) {
     return (
-      <div className={`bg-white border border-[#E9E4F2] p-8 rounded-2xl shadow-xl w-full ${layout === "horizontal" ? "max-w-4xl" : "max-w-md"} text-center animate-fade-in`}>
-        <div className="w-16 h-16 bg-emerald-100 text-emerald-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+      <div className={`bg-[#3B1580] border border-[#FFFFFF]/25 p-8 rounded-2xl shadow-xl w-full ${layout === "horizontal" ? "max-w-4xl" : "max-w-md"} text-center animate-fade-in text-[#FFFFFF]`}>
+        <div className="w-16 h-16 bg-[#C9F600]/15 text-[#C9F600] rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
           <i className="fa-solid fa-check" />
         </div>
-        <h3 className="text-xl font-extrabold text-primary-dark mb-2">Message Sent!</h3>
-        <p className="text-sm text-text-secondary mb-6">
+        <h3 className="text-xl font-extrabold text-[#FFFFFF] mb-2">Message Sent!</h3>
+        <p className="text-sm text-[#FFFFFF]/80 mb-6">
           Thank you, {formData.name.split(" ")[0]}. We have received your request. Our team will review your details and send you a calendar link to discuss your project within 24 hours.
         </p>
         <button
@@ -242,7 +242,7 @@ export default function LeadForm({
             setIsSuccess(false);
             setFormData(prev => ({ ...prev, name: "", email: "", website: "", mobile: "", message: "", _honey: "" }));
           }}
-          className="text-xs font-bold text-[#7C3AED] hover:text-[#6D28D9] transition-colors"
+          className="text-xs font-bold text-[#C9F600] hover:underline transition-colors"
         >
           Submit another request
         </button>
@@ -259,12 +259,12 @@ export default function LeadForm({
         }
       ` }} />
 
-      <div className={`bg-white border border-[#E9E4F2] p-5 sm:p-7 rounded-2xl shadow-xl w-full ${layout === "horizontal" ? "max-w-4xl" : "max-w-md"} relative transition-all duration-300 hover:shadow-2xl`}>
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#7C3AED] via-[#A78BFA] to-[#F97316] rounded-t-2xl" />
+      <div className={`bg-[#3B1580] border border-[#FFFFFF]/25 p-5 sm:p-7 rounded-2xl shadow-xl w-full ${layout === "horizontal" ? "max-w-4xl" : "max-w-md"} relative transition-all duration-300 hover:shadow-2xl text-[#FFFFFF]`}>
+        <div className="absolute top-0 left-0 w-full h-1 bg-[#C9F600] rounded-t-2xl" />
 
         <div className="mb-6 mt-1 text-center sm:text-left">
-          {title && <h3 className="text-xl font-extrabold text-primary-dark mb-1 leading-snug">{title}</h3>}
-          {subtitle && <p className="text-xs text-text-secondary leading-relaxed">{subtitle}</p>}
+          {title && <h3 className="text-xl font-extrabold text-[#FFFFFF] mb-1 leading-snug">{title}</h3>}
+          {subtitle && <p className="text-xs text-[#FFFFFF]/80 leading-relaxed">{subtitle}</p>}
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -278,21 +278,21 @@ export default function LeadForm({
             <>
               {/* Full Name */}
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="name" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
-                  Full Name <span className="text-error-red">*</span>
+                <label htmlFor="name" className="text-[10px] font-bold text-[#FFFFFF] uppercase tracking-wider">
+                  Full Name <span className="text-[#C9F600]">*</span>
                 </label>
-                <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-xl border px-3.5 py-3 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 ${errors.name ? "border-[#ef4444]" : "border-[#E9E4F2]"}`}>
-                  <i className={`fa-solid fa-user text-[13px] shrink-0 ${errors.name ? "text-error-red" : "text-slate-400 group-focus-within:text-[#7C3AED]"}`} />
-                  <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400" />
+                <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-3 group transition-all duration-300 focus-within:bg-[#3B1580] focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.name ? "border-[#C9F600]" : "border-[#FFFFFF]/25"}`}>
+                  <i className={`fa-solid fa-user text-[13px] shrink-0 ${errors.name ? "text-[#C9F600]" : "text-[#FFFFFF]/60 group-focus-within:text-[#C9F600]"}`} />
+                  <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" className="w-full text-sm bg-transparent outline-none font-semibold text-[#FFFFFF] placeholder:font-normal placeholder:text-[#FFFFFF]/60" />
                 </div>
-                {errors.name && <span className="text-[10px] font-semibold text-[#ef4444]">{errors.name}</span>}
+                {errors.name && <span className="text-[10px] font-semibold text-[#C9F600]">{errors.name}</span>}
               </div>
 
               {/* WhatsApp / Phone - Full Width Row */}
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="mobile" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider flex items-center justify-between">
-                  <span>WhatsApp / Phone <span className="text-slate-400 font-normal">(Instant Quote &amp; Demo)</span></span>
-                  <span className="text-[10px] text-emerald-600 font-bold flex items-center gap-1">
+                <label htmlFor="mobile" className="text-[10px] font-bold text-[#FFFFFF] uppercase tracking-wider flex items-center justify-between">
+                  <span>WhatsApp / Phone <span className="text-[#FFFFFF]/60 font-normal">(Instant Quote &amp; Demo)</span></span>
+                  <span className="text-[10px] text-[#C9F600] font-bold flex items-center gap-1">
                     <i className="fa-brands fa-whatsapp text-xs" /> WhatsApp Enabled
                   </span>
                 </label>
@@ -301,37 +301,37 @@ export default function LeadForm({
                     <button
                       type="button"
                       onClick={() => setIsCountryOpen(!isCountryOpen)}
-                      className="h-full px-3 py-2.5 bg-[#FAF9FF] rounded-xl border border-[#E9E4F2] hover:bg-white text-left flex items-center gap-1.5 outline-none font-semibold text-primary-dark transition-all focus:border-[#7C3AED] focus:bg-white focus:ring-4 focus:ring-[#7C3AED]/10 cursor-pointer shadow-sm"
+                      className="h-full px-3 py-2.5 bg-[#3B1580] rounded-xl border border-[#FFFFFF]/25 hover:bg-[#3B1580] text-left flex items-center gap-1.5 outline-none font-semibold text-[#FFFFFF] transition-all focus:border-[#C9F600] focus:bg-[#3B1580] focus:ring-2 focus:ring-[#C9F600]/25 cursor-pointer shadow-sm"
                     >
                       <span className="text-base">{selectedCountry.flag}</span>
-                      <span className="text-xs font-bold text-slate-700">{selectedCountry.code}</span>
-                      <i className={`fa-solid fa-chevron-down text-[8px] text-slate-400 transition-transform ${isCountryOpen ? "rotate-180" : ""}`} />
+                      <span className="text-xs font-bold text-[#FFFFFF]">{selectedCountry.code}</span>
+                      <i className={`fa-solid fa-chevron-down text-[8px] text-[#FFFFFF]/60 transition-transform ${isCountryOpen ? "rotate-180" : ""}`} />
                     </button>
 
                     {isCountryOpen && (
-                      <div className="absolute z-30 left-0 top-[108%] w-60 max-h-60 overflow-y-auto bg-white border border-[#E9E4F2] rounded-xl shadow-xl py-1" style={{ animation: "fadeInSlideDown 0.18s ease-out forwards" }}>
-                        <div className="p-2 border-b border-[#E9E4F2] bg-[#FAF9FF] sticky top-0 z-10">
-                          <input type="text" placeholder="Search country..." value={countrySearch} onChange={(e) => setCountrySearch(e.target.value)} onClick={(e) => e.stopPropagation()} className="w-full text-xs px-2.5 py-1.5 border border-[#E9E4F2] rounded-lg focus:border-[#7C3AED] outline-none" />
+                      <div className="absolute z-30 left-0 top-[108%] w-60 max-h-60 overflow-y-auto bg-white border border-[#FFFFFF]/25 rounded-xl shadow-xl py-1" style={{ animation: "fadeInSlideDown 0.18s ease-out forwards" }}>
+                        <div className="p-2 border-b border-[#FFFFFF]/25 bg-[#3B1580] sticky top-0 z-10">
+                          <input type="text" placeholder="Search country..." value={countrySearch} onChange={(e) => setCountrySearch(e.target.value)} onClick={(e) => e.stopPropagation()} className="w-full text-xs px-2.5 py-1.5 border border-[#FFFFFF]/25 rounded-lg focus:border-[#C9F600] outline-none" />
                         </div>
                         {filteredCountries.map((c) => (
                           <button
                             key={`${c.name}-${c.code}`}
                             type="button"
                             onClick={() => { setSelectedCountryCode(c.code); setIsCountryOpen(false); setCountrySearch(""); }}
-                            className="w-full flex justify-between px-4 py-2 text-left text-xs hover:bg-[#FAF9FF] text-primary-dark"
+                            className="w-full flex justify-between px-4 py-2 text-left text-xs hover:bg-[#3B1580] text-[#FFFFFF]"
                           >
                             <span className="flex items-center gap-2">
                               <span className="text-base">{c.flag}</span>
                               <span className="font-semibold">{c.name}</span>
                             </span>
-                            <span className="text-slate-400 font-mono text-[11px]">{c.code}</span>
+                            <span className="text-[#FFFFFF]/60 font-mono text-[11px]">{c.code}</span>
                           </button>
                         ))}
                       </div>
                     )}
                   </div>
 
-                  <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-xl border px-3.5 py-3 w-full group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 ${errors.mobile ? "border-[#ef4444]" : "border-[#E9E4F2]"}`}>
+                  <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-3 w-full group transition-all duration-300 focus-within:bg-[#3B1580] focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.mobile ? "border-[#C9F600]" : "border-[#FFFFFF]/25"}`}>
                     <input
                       type="tel"
                       id="mobile"
@@ -339,32 +339,32 @@ export default function LeadForm({
                       value={formData.mobile}
                       onChange={handleChange}
                       placeholder="e.g. 98765 43210"
-                      className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400"
+                      className="w-full text-sm bg-transparent outline-none font-semibold text-[#FFFFFF] placeholder:font-normal placeholder:text-[#FFFFFF]/60"
                     />
                   </div>
                 </div>
-                {errors.mobile && <span className="text-[10px] font-semibold text-[#ef4444]">{errors.mobile}</span>}
+                {errors.mobile && <span className="text-[10px] font-semibold text-[#C9F600]">{errors.mobile}</span>}
               </div>
 
               {/* Work Email */}
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="email" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
-                  Work Email <span className="text-error-red">*</span>
+                <label htmlFor="email" className="text-[10px] font-bold text-[#FFFFFF] uppercase tracking-wider">
+                  Work Email <span className="text-[#C9F600]">*</span>
                 </label>
-                <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-xl border px-3.5 py-3 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 ${errors.email ? "border-[#ef4444]" : "border-[#E9E4F2]"}`}>
-                  <i className={`fa-solid fa-envelope text-[13px] shrink-0 ${errors.email ? "text-error-red" : "text-slate-400 group-focus-within:text-[#7C3AED]"}`} />
-                  <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="john@travelagency.com" className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400" />
+                <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-3 group transition-all duration-300 focus-within:bg-[#3B1580] focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.email ? "border-[#C9F600]" : "border-[#FFFFFF]/25"}`}>
+                  <i className={`fa-solid fa-envelope text-[13px] shrink-0 ${errors.email ? "text-[#C9F600]" : "text-[#FFFFFF]/60 group-focus-within:text-[#C9F600]"}`} />
+                  <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="john@travelagency.com" className="w-full text-sm bg-transparent outline-none font-semibold text-[#FFFFFF] placeholder:font-normal placeholder:text-[#FFFFFF]/60" />
                 </div>
-                {errors.email && <span className="text-[10px] font-semibold text-[#ef4444]">{errors.email}</span>}
+                {errors.email && <span className="text-[10px] font-semibold text-[#C9F600]">{errors.email}</span>}
               </div>
 
               {/* Project Details */}
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="message" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
-                  Project Details <span className="text-slate-400 font-normal">(Destinations, Goals, or Timeline)</span>
+                <label htmlFor="message" className="text-[10px] font-bold text-[#FFFFFF] uppercase tracking-wider">
+                  Project Details <span className="text-[#FFFFFF]/60 font-normal">(Destinations, Goals, or Timeline)</span>
                 </label>
-                <div className="bg-[#FAF9FF] rounded-xl border border-[#E9E4F2] p-3.5 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10">
-                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={2} placeholder="Tell us about your tour agency goals, required features, or current challenges..." className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400 resize-none" />
+                <div className="bg-[#3B1580] rounded-xl border border-[#FFFFFF]/25 p-3.5 group transition-all duration-300 focus-within:bg-[#3B1580] focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25">
+                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={2} placeholder="Tell us about your tour agency goals, required features, or current challenges..." className="w-full text-sm bg-transparent outline-none font-semibold text-[#FFFFFF] placeholder:font-normal placeholder:text-[#FFFFFF]/60 resize-none" />
                 </div>
               </div>
             </>
@@ -373,84 +373,84 @@ export default function LeadForm({
           <div className={`grid grid-cols-1 ${layout === "horizontal" ? "md:grid-cols-2" : ""} gap-4`}>
             {/* Name */}
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="name" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
-                Full Name <span className="text-error-red">*</span>
+              <label htmlFor="name" className="text-[10px] font-bold text-[#FFFFFF] uppercase tracking-wider">
+                Full Name <span className="text-[#C9F600]">*</span>
               </label>
-              <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-xl border px-3.5 py-3 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 ${errors.name ? "border-[#ef4444]" : "border-[#E9E4F2]"}`}>
-                <i className={`fa-solid fa-user text-[13px] shrink-0 ${errors.name ? "text-error-red" : "text-slate-400 group-focus-within:text-[#7C3AED]"}`} />
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400" />
+              <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-3 group transition-all duration-300 focus-within:bg-[#3B1580] focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.name ? "border-[#C9F600]" : "border-[#FFFFFF]/25"}`}>
+                <i className={`fa-solid fa-user text-[13px] shrink-0 ${errors.name ? "text-[#C9F600]" : "text-[#FFFFFF]/60 group-focus-within:text-[#C9F600]"}`} />
+                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" className="w-full text-sm bg-transparent outline-none font-semibold text-[#FFFFFF] placeholder:font-normal placeholder:text-[#FFFFFF]/60" />
               </div>
-              {errors.name && <span className="text-[10px] font-semibold text-[#ef4444]">{errors.name}</span>}
+              {errors.name && <span className="text-[10px] font-semibold text-[#C9F600]">{errors.name}</span>}
             </div>
 
             {/* Email */}
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="email" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
-                Work Email <span className="text-error-red">*</span>
+              <label htmlFor="email" className="text-[10px] font-bold text-[#FFFFFF] uppercase tracking-wider">
+                Work Email <span className="text-[#C9F600]">*</span>
               </label>
-              <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-xl border px-3.5 py-3 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 ${errors.email ? "border-[#ef4444]" : "border-[#E9E4F2]"}`}>
-                <i className={`fa-solid fa-envelope text-[13px] shrink-0 ${errors.email ? "text-error-red" : "text-slate-400 group-focus-within:text-[#7C3AED]"}`} />
-                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="john@company.com" className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400" />
+              <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-3 group transition-all duration-300 focus-within:bg-[#3B1580] focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.email ? "border-[#C9F600]" : "border-[#FFFFFF]/25"}`}>
+                <i className={`fa-solid fa-envelope text-[13px] shrink-0 ${errors.email ? "text-[#C9F600]" : "text-[#FFFFFF]/60 group-focus-within:text-[#C9F600]"}`} />
+                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="john@company.com" className="w-full text-sm bg-transparent outline-none font-semibold text-[#FFFFFF] placeholder:font-normal placeholder:text-[#FFFFFF]/60" />
               </div>
-              {errors.email && <span className="text-[10px] font-semibold text-[#ef4444]">{errors.email}</span>}
+              {errors.email && <span className="text-[10px] font-semibold text-[#C9F600]">{errors.email}</span>}
             </div>
           </div>
 
           <div className={`grid grid-cols-1 ${layout === "horizontal" ? "md:grid-cols-2" : ""} gap-4`}>
             {/* Website/Project (Optional) */}
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="website" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
+              <label htmlFor="website" className="text-[10px] font-bold text-[#FFFFFF] uppercase tracking-wider">
                 Website / Project (Optional)
               </label>
-              <div className="flex items-center gap-2 bg-[#FAF9FF] rounded-xl border border-[#E9E4F2] px-3.5 py-3 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10">
-                <i className="fa-solid fa-link text-[13px] text-slate-400 group-focus-within:text-[#7C3AED] shrink-0" />
-                <input type="text" id="website" name="website" value={formData.website} onChange={handleChange} placeholder="example.com" className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400" />
+              <div className="flex items-center gap-2 bg-[#3B1580] rounded-xl border border-[#FFFFFF]/25 px-3.5 py-3 group transition-all duration-300 focus-within:bg-[#3B1580] focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25">
+                <i className="fa-solid fa-link text-[13px] text-[#FFFFFF]/60 group-focus-within:text-[#C9F600] shrink-0" />
+                <input type="text" id="website" name="website" value={formData.website} onChange={handleChange} placeholder="example.com" className="w-full text-sm bg-transparent outline-none font-semibold text-[#FFFFFF] placeholder:font-normal placeholder:text-[#FFFFFF]/60" />
               </div>
             </div>
 
             {/* Mobile (Optional) */}
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="mobile" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
+              <label htmlFor="mobile" className="text-[10px] font-bold text-[#FFFFFF] uppercase tracking-wider">
                 Phone / WhatsApp (Optional)
               </label>
               <div className="flex gap-2 relative">
                 <div className="relative shrink-0" ref={countryDropdownRef}>
-                  <button type="button" onClick={() => setIsCountryOpen(!isCountryOpen)} className="w-[85px] h-full text-sm px-3 bg-[#FAF9FF] rounded-xl border border-[#E9E4F2] hover:bg-white text-left flex items-center justify-between outline-none font-semibold text-primary-dark transition-all focus:border-[#7C3AED] focus:bg-white focus:ring-4 focus:ring-[#7C3AED]/10">
+                  <button type="button" onClick={() => setIsCountryOpen(!isCountryOpen)} className="w-[85px] h-full text-sm px-3 bg-[#3B1580] rounded-xl border border-[#FFFFFF]/25 hover:bg-[#3B1580] text-left flex items-center justify-between outline-none font-semibold text-[#FFFFFF] transition-all focus:border-[#C9F600] focus:bg-[#3B1580] focus:ring-2 focus:ring-[#C9F600]/25">
                     <span className="flex items-center gap-1.5">
                       <span>{selectedCountry.flag}</span>
                     </span>
-                    <i className={`fa-solid fa-chevron-down text-[9px] text-slate-400 ${isCountryOpen ? "rotate-180" : ""}`} />
+                    <i className={`fa-solid fa-chevron-down text-[9px] text-[#FFFFFF]/60 ${isCountryOpen ? "rotate-180" : ""}`} />
                   </button>
 
                   {isCountryOpen && (
-                    <div className="absolute z-30 left-0 top-[108%] w-56 max-h-60 overflow-y-auto bg-white border border-[#E9E4F2] rounded-xl shadow-xl py-1" style={{ animation: "fadeInSlideDown 0.18s ease-out forwards" }}>
-                      <div className="p-2 border-b border-[#E9E4F2] bg-[#FAF9FF] sticky top-0 z-10">
-                        <input type="text" placeholder="Search country..." value={countrySearch} onChange={(e) => setCountrySearch(e.target.value)} onClick={(e) => e.stopPropagation()} className="w-full text-xs px-2.5 py-1.5 border border-[#E9E4F2] rounded-lg focus:border-[#7C3AED] outline-none" />
+                    <div className="absolute z-30 left-0 top-[108%] w-56 max-h-60 overflow-y-auto bg-white border border-[#FFFFFF]/25 rounded-xl shadow-xl py-1" style={{ animation: "fadeInSlideDown 0.18s ease-out forwards" }}>
+                      <div className="p-2 border-b border-[#FFFFFF]/25 bg-[#3B1580] sticky top-0 z-10">
+                        <input type="text" placeholder="Search country..." value={countrySearch} onChange={(e) => setCountrySearch(e.target.value)} onClick={(e) => e.stopPropagation()} className="w-full text-xs px-2.5 py-1.5 border border-[#FFFFFF]/25 rounded-lg focus:border-[#C9F600] outline-none" />
                       </div>
                       {filteredCountries.map((c) => (
-                        <button key={`${c.name}-${c.code}`} type="button" onClick={() => { setSelectedCountryCode(c.code); setIsCountryOpen(false); setCountrySearch(""); }} className="w-full flex justify-between px-4 py-2.5 text-left text-xs hover:bg-[#FAF9FF] text-primary-dark">
+                        <button key={`${c.name}-${c.code}`} type="button" onClick={() => { setSelectedCountryCode(c.code); setIsCountryOpen(false); setCountrySearch(""); }} className="w-full flex justify-between px-4 py-2.5 text-left text-xs hover:bg-[#3B1580] text-[#FFFFFF]">
                           <span className="flex items-center gap-2"><span className="text-base">{c.flag}</span> <span className="font-semibold">{c.name}</span></span>
-                          <span className="text-slate-400">{c.code}</span>
+                          <span className="text-[#FFFFFF]/60">{c.code}</span>
                         </button>
                       ))}
                     </div>
                   )}
                 </div>
-                <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-xl border px-3.5 py-3 w-full group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 ${errors.mobile ? "border-[#ef4444]" : "border-[#E9E4F2]"}`}>
-                  <input type="tel" id="mobile" name="mobile" value={formData.mobile} onChange={handleChange} placeholder="Phone number" className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400" />
+                <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-3 w-full group transition-all duration-300 focus-within:bg-[#3B1580] focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.mobile ? "border-[#C9F600]" : "border-[#FFFFFF]/25"}`}>
+                  <input type="tel" id="mobile" name="mobile" value={formData.mobile} onChange={handleChange} placeholder="Phone number" className="w-full text-sm bg-transparent outline-none font-semibold text-[#FFFFFF] placeholder:font-normal placeholder:text-[#FFFFFF]/60" />
                 </div>
               </div>
-              {errors.mobile && <span className="text-[10px] font-semibold text-[#ef4444]">{errors.mobile}</span>}
+              {errors.mobile && <span className="text-[10px] font-semibold text-[#C9F600]">{errors.mobile}</span>}
             </div>
           </div>
 
           {/* Message (Optional) */}
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="message" className="text-[10px] font-bold text-[#6B6478] uppercase tracking-wider">
+            <label htmlFor="message" className="text-[10px] font-bold text-[#FFFFFF] uppercase tracking-wider">
               Project Details (Optional)
             </label>
-            <div className="bg-[#FAF9FF] rounded-xl border border-[#E9E4F2] p-3.5 group transition-all duration-300 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10">
-              <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={3} placeholder="Tell us about your goals, timeline, or current challenges..." className="w-full text-sm bg-transparent outline-none font-semibold text-primary-dark placeholder:font-normal placeholder:text-slate-400 resize-none" />
+            <div className="bg-[#3B1580] rounded-xl border border-[#FFFFFF]/25 p-3.5 group transition-all duration-300 focus-within:bg-[#3B1580] focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25">
+              <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={3} placeholder="Tell us about your goals, timeline, or current challenges..." className="w-full text-sm bg-transparent outline-none font-semibold text-[#FFFFFF] placeholder:font-normal placeholder:text-[#FFFFFF]/60 resize-none" />
             </div>
           </div>
             </>
@@ -459,7 +459,7 @@ export default function LeadForm({
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-sm py-4 rounded-xl shadow-lg shadow-[#7C3AED]/20 hover:shadow-[#7C3AED]/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-2"
+            className="w-full bg-[#C9F600] hover:opacity-90 text-[#3B1580] font-bold text-sm py-4 rounded-xl shadow-lg transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-2 cursor-pointer"
           >
             {isLoading ? (
               <><i className="fa-solid fa-spinner animate-spin" /> Submitting...</>
@@ -469,12 +469,12 @@ export default function LeadForm({
           </button>
           
           <div className="mt-3 flex flex-col items-center gap-3">
-            <p className="text-[10px] text-slate-500 font-medium text-center leading-relaxed max-w-[280px]">
-              <i className="fa-solid fa-lock text-emerald-500 mr-1" />
+            <p className="text-[10px] text-[#FFFFFF]/70 font-medium text-center leading-relaxed max-w-[280px]">
+              <i className="fa-solid fa-lock text-[#C9F600] mr-1" />
               <strong>What happens next?</strong> We'll review your details and send you a calendar link to discuss your project within 24 hours.
             </p>
-            <div className="flex items-center gap-3 pt-3 border-t border-slate-100 w-full justify-center opacity-85 hover:opacity-100 transition-all duration-300">
-              <div className="flex items-center h-6 px-2 py-0.5 rounded bg-slate-50 border border-slate-200">
+            <div className="flex items-center gap-3 pt-3 border-t border-[#FFFFFF]/15 w-full justify-center opacity-85 hover:opacity-100 transition-all duration-300">
+              <div className="flex items-center h-6 px-2 py-0.5 rounded bg-[#3B1580] border border-[#FFFFFF]/20">
                 <Image
                   src="/assets/images/google-reviews.svg"
                   alt="Google Reviews"
@@ -484,7 +484,7 @@ export default function LeadForm({
                   className="h-4 w-auto object-contain"
                 />
               </div>
-              <div className="flex items-center h-6 px-2 py-0.5 rounded bg-slate-50 border border-slate-200">
+              <div className="flex items-center h-6 px-2 py-0.5 rounded bg-[#3B1580] border border-[#FFFFFF]/20">
                 <Image
                   src="/assets/images/clutch-logo.svg"
                   alt="Clutch Reviews"

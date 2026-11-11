@@ -77,37 +77,37 @@ export default function EcommerceWebPage() {
           <p>
             At Joy Digital, we build high-performance headless e-commerce platforms using serverless Next.js and React. This guarantees that your product catalogs load instantly across US, European, Middle Eastern, and Asian networks, keeping buyers engaged.
           </p>
-          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
-            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Global E-Commerce Stores</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting Global E-Commerce Stores</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Multi-Currency Checkouts</strong>: Automated USD, EUR, GBP, AED & INR currency switches</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Global Gateway Integrations</strong>: Stripe, PayPal, Razorpay, Klarna & Apple Pay</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>International Product SEO Schema</strong>: Rich Google snippets with price & stock badges</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s LCP Load Speeds</strong>: Edge-hosted image CDN & static catalog chunks</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Cross-Border Logistics & Shipping API Sync</strong>: DHL, FedEx, UPS & local carrier tracking</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>WhatsApp Sales & Support Checkout</strong>: Direct chat routing for quick customer conversion</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we merge modern e-commerce UI/UX design with <Link href="/website-development" className="text-primary font-bold hover:underline">custom web engineering</Link> and <Link href="/seo-services" className="text-primary font-bold hover:underline">international search optimization</Link> to help retail brands scale worldwide.
+            At Joy Digital, we merge modern e-commerce UI/UX design with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">custom web engineering</Link> and <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">international search optimization</Link> to help retail brands scale worldwide.
           </p>
         </div>
       }

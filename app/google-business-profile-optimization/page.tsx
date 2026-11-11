@@ -70,7 +70,7 @@ export default function GoogleBusinessProfilePage() {
           <p>
             At Joy Digital, our expert <strong>google business profile optimization</strong> service helps local companies claim, verify, and rank their profiles. We audit categories, resolve suspension issues, standardize addresses (NAP consistency), and link profiles to optimized local landing pages.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Why Google Maps Algorithms Value Profile Completeness</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Why Google Maps Algorithms Value Profile Completeness</h3>
           <p>
             Google ranks map profiles based on relevance, distance, and prominence. We optimize relevance by adding accurate secondary categories, listing services with search terms, and writing detailed keyword descriptions.
           </p>

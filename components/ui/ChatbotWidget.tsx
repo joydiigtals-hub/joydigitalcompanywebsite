@@ -587,16 +587,16 @@ export default function ChatbotWidget() {
     <div className="fixed bottom-22 left-4 sm:bottom-6 sm:left-6 z-[999] font-sans select-none">
       {/* 1. Proactive Context-Aware Tooltip (Shows after 7s based on current page) */}
       {!isOpen && showTooltip && (
-        <div className="absolute bottom-16 left-0 mb-2 w-80 sm:w-88 bg-white/95 dark:bg-[#130B24]/95 backdrop-blur-md border border-purple-300/80 dark:border-purple-600/40 p-4 rounded-2xl shadow-[0_15px_40px_-5px_rgba(22,13,46,0.35)] animate-fade-in text-xs z-[999] transition-all duration-300">
+        <div className="absolute bottom-16 left-0 mb-2 w-80 sm:w-88 bg-[#3B1580] backdrop-blur-md border border-[#FFFFFF]/20 p-4 rounded-2xl shadow-[0_15px_40px_-5px_rgba(22,13,46,0.35)] animate-fade-in text-xs z-[999] transition-all duration-300">
           {/* Header pill & close */}
           <div className="flex justify-between items-start gap-2 mb-2">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/40">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#C9F600]/15 text-[#C9F600] border border-[#C9F600]/30">
+              <span className="w-2 h-2 rounded-full bg-[#C9F600] animate-pulse" />
               {pageContext.badge}
             </span>
             <button
               onClick={handleCloseTooltip}
-              className="text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 cursor-pointer p-0.5 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              className="text-[#FFFFFF]/60 hover:text-[#FFFFFF] cursor-pointer p-0.5 rounded-md hover:bg-[#FFFFFF]/10 transition-colors"
               aria-label="Close message"
             >
               <i className="fa-solid fa-xmark text-xs" />
@@ -605,26 +605,26 @@ export default function ChatbotWidget() {
 
           {/* Heading */}
           <div className="flex items-center gap-2 mb-1.5">
-            <h4 className="font-black text-[13px] text-slate-900 dark:text-white leading-snug">
+            <h4 className="font-black text-[13px] text-[#FFFFFF] leading-snug">
               {pageContext.title}
             </h4>
           </div>
 
-          <p className="text-[11.5px] text-slate-600 dark:text-slate-300 leading-relaxed font-medium mb-3.5">
+          <p className="text-[11.5px] text-[#FFFFFF]/80 leading-relaxed font-medium mb-3.5">
             {pageContext.body}
           </p>
 
-          <div className="flex items-center gap-2 pt-1 border-t border-slate-100 dark:border-purple-900/30">
+          <div className="flex items-center gap-2 pt-1 border-t border-[#FFFFFF]/20">
             <button
               onClick={handleOpenContextualChat}
-              className="flex-1 px-3.5 py-2 bg-gradient-to-r from-purple-600 via-[#7C3AED] to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-xl font-bold text-[11px] shadow-sm hover:shadow-md cursor-pointer transition-all flex items-center justify-center gap-1.5"
+              className="flex-1 px-3.5 py-2 bg-[#C9F600] hover:bg-[#b8f000] text-[#3B1580] rounded-xl font-black text-[11px] shadow-sm hover:shadow-md cursor-pointer transition-all flex items-center justify-center gap-1.5"
             >
               <span>{pageContext.ctaText}</span>
               <i className="fa-solid fa-arrow-right text-[10px]" />
             </button>
             <button
               onClick={handleCloseTooltip}
-              className="px-2.5 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/80 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-xl font-semibold text-[11px] cursor-pointer transition-colors"
+              className="px-2.5 py-2 bg-[#3B1580] border border-[#FFFFFF]/25 hover:border-[#C9F600] text-[#FFFFFF] rounded-xl font-semibold text-[11px] cursor-pointer transition-colors"
             >
               Later
             </button>
@@ -637,15 +637,15 @@ export default function ChatbotWidget() {
         <button
           onClick={handleOpenChat}
           aria-label="Open Joy Digital AI Assistant"
-          className="relative w-13 h-13 sm:w-14 sm:h-14 bg-gradient-to-tr from-[#7C3AED] via-purple-600 to-indigo-600 hover:scale-105 active:scale-95 text-white rounded-full flex items-center justify-center shadow-[0_10px_25px_-5px_rgba(124,58,237,0.5)] hover:shadow-[0_15px_35px_-5px_rgba(124,58,237,0.7)] transition-all duration-300 cursor-pointer border border-purple-400/40 animate-bounce-subtle"
+          className="relative w-13 h-13 sm:w-14 sm:h-14 bg-[#C9F600] hover:bg-[#b8f000] hover:scale-105 active:scale-95 text-[#3B1580] rounded-full flex items-center justify-center shadow-[0_10px_25px_-5px_rgba(201, 246, 0,0.4)] transition-all duration-300 cursor-pointer border-2 border-[#C9F600] animate-bounce-subtle"
         >
-          <i className="fa-solid fa-comments text-xl sm:text-2xl" />
+          <i className="fa-solid fa-comments text-xl sm:text-2xl text-[#3B1580]" />
 
           {/* Unread badge with pulse */}
           {hasUnread && (
             <span className="absolute -top-1 -right-1 flex h-4 w-4">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex items-center justify-center rounded-full h-4 w-4 bg-emerald-500 text-[9px] font-black text-white">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C9F600] opacity-75"></span>
+              <span className="relative inline-flex items-center justify-center rounded-full h-4 w-4 bg-[#3B1580] border border-[#C9F600] text-[9px] font-black text-[#C9F600]">
                 1
               </span>
             </span>
@@ -655,18 +655,18 @@ export default function ChatbotWidget() {
 
       {/* 3. Main Chat Window Panel */}
       {isOpen && (
-        <div className="fixed inset-x-3 bottom-4 sm:inset-auto sm:bottom-24 sm:left-6 w-auto sm:w-[395px] h-[85vh] sm:h-[610px] max-h-[660px] bg-white dark:bg-[#110B22] border border-slate-200/90 dark:border-purple-900/50 rounded-[24px] shadow-[0_20px_60px_-15px_rgba(15,10,35,0.4)] flex flex-col overflow-hidden animate-fade-in transition-all z-[999]">
+        <div className="fixed inset-x-3 bottom-4 sm:inset-auto sm:bottom-24 sm:left-6 w-auto sm:w-[395px] h-[85vh] sm:h-[610px] max-h-[660px] bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-2xl flex flex-col overflow-hidden animate-fade-in transition-all z-[999]">
           
           {/* Header - Solid Deep Obsidian/Amethyst Theme (NO white wash gradient!) */}
-          <div className="bg-[#160D2E] text-white p-3.5 sm:p-4 flex items-center justify-between shrink-0 border-b border-purple-500/20 relative overflow-hidden">
+          <div className="bg-[#3B1580] text-[#FFFFFF] p-3.5 sm:p-4 flex items-center justify-between shrink-0 border-b border-[#FFFFFF]/20 relative overflow-hidden">
             {/* Ambient subtle decorative glow */}
             <div className="absolute -top-10 -right-10 w-28 h-28 bg-purple-600/30 rounded-full blur-2xl pointer-events-none" />
             <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-indigo-600/20 rounded-full blur-xl pointer-events-none" />
 
             <div className="flex items-center gap-2.5 sm:gap-3 relative z-10">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-tr from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center relative shadow-md border border-white/20 shrink-0">
-                <span className="font-black text-xs text-white tracking-wider">JD</span>
-                <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 rounded-full border-2 border-[#160D2E] flex items-center justify-center">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 bg-[#C9F600] rounded-xl flex items-center justify-center relative shadow-md border border-[#C9F600] shrink-0">
+                <span className="font-black text-xs text-[#3B1580] tracking-wider">JD</span>
+                <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-[#C9F600] rounded-full border-2 border-[#3B1580] flex items-center justify-center">
                   <span className="w-1 h-1 bg-white rounded-full"></span>
                 </span>
               </div>
@@ -675,11 +675,11 @@ export default function ChatbotWidget() {
                   <h4 className="text-xs sm:text-[13px] font-black tracking-wide text-white leading-none">
                     Joy Digital AI
                   </h4>
-                  <span className="text-[9px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-1.5 py-0.5 rounded-full font-bold">
+                  <span className="text-[9px] bg-[#C9F600]/15 text-[#C9F600] border border-[#C9F600]/30 px-1.5 py-0.5 rounded-full font-bold">
                     Online
                   </span>
                 </div>
-                <p className="text-[10px] text-purple-200/90 font-medium mt-1 leading-none">
+                <p className="text-[10px] text-[#FFFFFF]/80 font-medium mt-1 leading-none">
                   Next.js Agency • Chennai & Madurai
                 </p>
               </div>
@@ -689,7 +689,7 @@ export default function ChatbotWidget() {
               {/* Direct WhatsApp Action */}
               <button
                 onClick={handleWhatsAppRedirect}
-                className="w-7.5 h-7.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/35 border border-emerald-500/35 text-emerald-300 hover:text-white flex items-center justify-center cursor-pointer transition-all active:scale-95"
+                className="w-7.5 h-7.5 rounded-lg bg-[#C9F600]/15 hover:bg-[#C9F600]/30 border border-[#C9F600]/30 text-[#C9F600] flex items-center justify-center cursor-pointer transition-all active:scale-95"
                 title="Chat on WhatsApp"
                 aria-label="Chat on WhatsApp"
               >
@@ -700,7 +700,7 @@ export default function ChatbotWidget() {
               {stepHistory.length > 0 && !isCompleted && (
                 <button
                   onClick={handleGoBack}
-                  className="w-7.5 h-7.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 text-white/90 hover:text-white flex items-center justify-center cursor-pointer transition-all active:scale-95"
+                  className="w-7.5 h-7.5 rounded-lg bg-[#3B1580] hover:bg-[#3B1580]/80 border border-[#FFFFFF]/20 text-[#FFFFFF]/90 hover:text-[#FFFFFF] flex items-center justify-center cursor-pointer transition-all active:scale-95"
                   title="Go Back 1 Step"
                   aria-label="Back"
                 >
@@ -711,7 +711,7 @@ export default function ChatbotWidget() {
               {/* Start Over button */}
               <button
                 onClick={() => setShowResetModal(true)}
-                className="w-7.5 h-7.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 text-white/90 hover:text-white flex items-center justify-center cursor-pointer transition-all active:scale-95"
+                className="w-7.5 h-7.5 rounded-lg bg-[#3B1580] hover:bg-[#3B1580]/80 border border-[#FFFFFF]/20 text-[#FFFFFF]/90 hover:text-[#FFFFFF] flex items-center justify-center cursor-pointer transition-all active:scale-95"
                 title="Start Over"
                 aria-label="Start Over"
               >
@@ -721,7 +721,7 @@ export default function ChatbotWidget() {
               {/* Minimize/Close */}
               <button
                 onClick={() => setIsOpen(false)}
-                className="w-7.5 h-7.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 text-white/90 hover:text-white flex items-center justify-center cursor-pointer transition-all active:scale-95 ml-0.5"
+                className="w-7.5 h-7.5 rounded-lg bg-[#3B1580] hover:bg-[#3B1580]/80 border border-[#FFFFFF]/20 text-[#FFFFFF]/90 hover:text-[#FFFFFF] flex items-center justify-center cursor-pointer transition-all active:scale-95 ml-0.5"
                 title="Close chat"
                 aria-label="Close"
               >
@@ -731,13 +731,13 @@ export default function ChatbotWidget() {
           </div>
 
           {/* Messages Scroll Area */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3.5 text-xs text-left bg-[#F8F9FD] dark:bg-[#0D0819]">
+          <div className="flex-1 overflow-y-auto p-4 space-y-3.5 text-xs text-left bg-[#3B1580]">
             {messages.map((msg, idx) => {
               const isBot = msg.role === "assistant";
               return (
                 <div key={msg.id || idx} className={`flex ${isBot ? "justify-start" : "justify-end"} gap-2`}>
                   {isBot && (
-                    <div className="w-6.5 h-6.5 bg-gradient-to-tr from-purple-700 to-indigo-600 text-white rounded-lg flex items-center justify-center font-bold text-[9px] shrink-0 self-end shadow-xs">
+                    <div className="w-6.5 h-6.5 bg-[#C9F600] text-[#3B1580] rounded-lg flex items-center justify-center font-bold text-[9px] shrink-0 self-end shadow-xs">
                       JD
                     </div>
                   )}
@@ -745,8 +745,8 @@ export default function ChatbotWidget() {
                   <div
                     className={`max-w-[85%] p-3.5 rounded-2xl leading-relaxed whitespace-pre-wrap shadow-xs ${
                       isBot
-                        ? "bg-white dark:bg-[#1A1230] text-slate-800 dark:text-slate-100 border border-slate-200/80 dark:border-purple-900/40 rounded-bl-xs"
-                        : "bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-br-xs font-medium shadow-purple-600/15"
+                        ? "bg-[#3B1580] text-[#FFFFFF] border border-[#FFFFFF]/20 rounded-bl-xs"
+                        : "bg-[#C9F600] text-[#3B1580] font-bold rounded-br-xs shadow-md"
                     }`}
                   >
                     {msg.text}
@@ -758,43 +758,43 @@ export default function ChatbotWidget() {
             {/* Assistant Typing Indicator */}
             {isTyping && (
               <div className="flex justify-start gap-2">
-                <div className="w-6.5 h-6.5 bg-gradient-to-tr from-purple-700 to-indigo-600 text-white rounded-lg flex items-center justify-center font-bold text-[9px] shrink-0 self-end shadow-xs">
+                <div className="w-6.5 h-6.5 bg-[#C9F600] text-[#3B1580] rounded-lg flex items-center justify-center font-bold text-[9px] shrink-0 self-end shadow-xs">
                   JD
                 </div>
-                <div className="bg-white dark:bg-[#1A1230] text-slate-400 border border-slate-200/80 dark:border-purple-900/40 px-3.5 py-2.5 rounded-2xl rounded-bl-xs flex items-center gap-1.5 shadow-xs">
-                  <span className="text-[10.5px] font-semibold text-purple-600 dark:text-purple-400 mr-1">
+                <div className="bg-[#3B1580] text-[#FFFFFF]/80 border border-[#FFFFFF]/20 px-3.5 py-2.5 rounded-2xl rounded-bl-xs flex items-center gap-1.5 shadow-xs">
+                  <span className="text-[10.5px] font-semibold text-[#C9F600] mr-1">
                     Joy Digital is typing
                   </span>
-                  <span className="w-1.5 h-1.5 bg-purple-600 rounded-full animate-bounce"></span>
-                  <span className="w-1.5 h-1.5 bg-purple-600 rounded-full animate-bounce [animation-delay:0.2s]"></span>
-                  <span className="w-1.5 h-1.5 bg-purple-600 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+                  <span className="w-1.5 h-1.5 bg-[#C9F600] rounded-full animate-bounce"></span>
+                  <span className="w-1.5 h-1.5 bg-[#C9F600] rounded-full animate-bounce [animation-delay:0.2s]"></span>
+                  <span className="w-1.5 h-1.5 bg-[#C9F600] rounded-full animate-bounce [animation-delay:0.4s]"></span>
                 </div>
               </div>
             )}
 
             {/* Final Completed Screen with WhatsApp CTA */}
             {isCompleted && (
-              <div className="bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/80 rounded-2xl p-4 space-y-3 animate-fade-in text-left">
+              <div className="bg-[#3B1580] border border-[#C9F600]/40 rounded-2xl p-4 space-y-3 animate-fade-in text-left">
                 {!submitError ? (
                   <>
-                    <div className="flex items-center gap-2 text-emerald-700 dark:text-emerald-400 font-black text-xs">
+                    <div className="flex items-center gap-2 text-[#C9F600] font-black text-xs">
                       <i className="fa-solid fa-circle-check text-sm" />
                       <span>Requirements Successfully Received!</span>
                     </div>
-                    <p className="text-[11.5px] text-slate-600 dark:text-slate-300 leading-normal">
+                    <p className="text-[11.5px] text-[#FFFFFF]/80 leading-normal">
                       Saravanan and our tech team will review your project and prepare a tailored proposal. Want an instant discussion? Continue on WhatsApp!
                     </p>
                     <div className="flex flex-col gap-2 pt-1">
                       <button
                         onClick={handleWhatsAppRedirect}
-                        className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-black text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer transition-all active:scale-98"
+                        className="w-full py-2.5 bg-[#C9F600] hover:bg-[#b8f000] text-[#3B1580] rounded-xl font-black text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer transition-all active:scale-98"
                       >
                         <i className="fa-brands fa-whatsapp text-sm" />
                         <span>Discuss on WhatsApp</span>
                       </button>
                       <button
                         onClick={() => setIsOpen(false)}
-                        className="w-full py-2 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl font-bold text-xs cursor-pointer transition-all"
+                        className="w-full py-2 bg-[#3B1580] border border-[#FFFFFF]/25 hover:border-[#C9F600] text-[#FFFFFF] rounded-xl font-bold text-xs cursor-pointer transition-all"
                       >
                         Close Chat
                       </button>
@@ -806,7 +806,7 @@ export default function ChatbotWidget() {
                       <i className="fa-solid fa-triangle-exclamation text-sm" />
                       <span>Connection Delay</span>
                     </div>
-                    <p className="text-[11px] text-slate-600 dark:text-slate-300">
+                    <p className="text-[11px] text-[#FFFFFF]">
                       Please connect with us directly on WhatsApp to receive your proposal without delay!
                     </p>
                     <button
@@ -826,7 +826,7 @@ export default function ChatbotWidget() {
 
           {/* Quick-Reply Options & Active Input Panel */}
           {!isCompleted && (
-            <div className="p-3 bg-white dark:bg-[#120B24] border-t border-slate-200/80 dark:border-purple-900/40 shrink-0 space-y-2.5">
+            <div className="p-3 bg-[#3B1580] border-t border-[#FFFFFF]/20 shrink-0 space-y-2.5">
               
               {/* 1. Quick Reply Options (when options exist) */}
               {currentStep.type === "options" && currentStep.options && !isTyping && (
@@ -835,7 +835,7 @@ export default function ChatbotWidget() {
                     <button
                       key={idx}
                       onClick={() => handleSelectOption(opt)}
-                      className="text-[11.5px] font-semibold bg-slate-50 dark:bg-[#1C1436] hover:bg-purple-50 dark:hover:bg-purple-950/50 text-slate-800 dark:text-slate-200 hover:text-purple-700 dark:hover:text-purple-300 border border-slate-200 dark:border-purple-900/50 hover:border-purple-300 dark:hover:border-purple-600 px-3 py-1.5 rounded-xl cursor-pointer transition-all shadow-2xs hover:shadow-xs active:scale-95 text-left flex items-center gap-1.5"
+                      className="text-[11.5px] font-semibold bg-[#3B1580] hover:bg-[#3B1580]/80 text-[#FFFFFF] hover:text-[#C9F600] border border-[#FFFFFF]/25 hover:border-[#C9F600] px-3 py-1.5 rounded-xl cursor-pointer transition-all shadow-2xs hover:shadow-xs active:scale-95 text-left flex items-center gap-1.5"
                     >
                       <span>{opt.label}</span>
                     </button>
@@ -851,12 +851,12 @@ export default function ChatbotWidget() {
                     value={textInput}
                     onChange={(e) => setTextInput(e.target.value)}
                     placeholder={currentStep.placeholder || "Type your answer..."}
-                    className="flex-1 text-xs px-3.5 py-2.5 bg-slate-50 dark:bg-[#1A1133] border border-slate-200 dark:border-purple-900/50 rounded-xl outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600/20 text-slate-900 dark:text-white transition-colors"
+                    className="flex-1 text-xs px-3.5 py-2.5 bg-[#3B1580] border border-[#FFFFFF]/25 rounded-xl outline-none focus:border-[#C9F600] text-[#FFFFFF] placeholder-[#FFFFFF]/40 transition-colors"
                   />
                   <button
                     type="submit"
                     disabled={!textInput.trim()}
-                    className="w-9 h-9 bg-purple-600 hover:bg-purple-700 text-white rounded-xl flex items-center justify-center shadow-md disabled:opacity-40 cursor-pointer shrink-0 transition-transform active:scale-95"
+                    className="w-9 h-9 bg-[#C9F600] hover:bg-[#b8f000] text-[#3B1580] font-black rounded-xl flex items-center justify-center shadow-md disabled:opacity-40 cursor-pointer shrink-0 transition-transform active:scale-95"
                   >
                     <i className="fa-solid fa-paper-plane text-xs" />
                   </button>
@@ -871,12 +871,12 @@ export default function ChatbotWidget() {
                     value={textInput}
                     onChange={(e) => setTextInput(e.target.value)}
                     placeholder={currentStep.placeholder || "Type your requirement here..."}
-                    className="w-full text-xs p-3 bg-slate-50 dark:bg-[#1A1133] border border-slate-200 dark:border-purple-900/50 rounded-xl outline-none focus:border-purple-600 text-slate-900 dark:text-white resize-none"
+                    className="w-full text-xs p-3 bg-[#3B1580] border border-[#FFFFFF]/25 rounded-xl outline-none focus:border-[#C9F600] text-[#FFFFFF] placeholder-[#FFFFFF]/40 resize-none"
                   />
                   <button
                     type="submit"
                     disabled={!textInput.trim()}
-                    className="w-full py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-bold text-xs shadow-md disabled:opacity-40 cursor-pointer"
+                    className="w-full py-2.5 bg-[#C9F600] hover:bg-[#b8f000] text-[#3B1580] font-black rounded-xl font-bold text-xs shadow-md disabled:opacity-40 cursor-pointer"
                   >
                     Submit Requirement
                   </button>
@@ -885,14 +885,14 @@ export default function ChatbotWidget() {
 
               {/* 4. Contact Form Input (Lead Capture) */}
               {currentStep.type === "contact_form" && (
-                <form onSubmit={handleContactSubmit} className="space-y-2 text-left text-xs bg-slate-50/70 dark:bg-[#181030] p-3 rounded-2xl border border-slate-200/80 dark:border-purple-900/40">
+                <form onSubmit={handleContactSubmit} className="space-y-2 text-left text-xs bg-[#3B1580] p-3 rounded-2xl border border-[#FFFFFF]/20">
                   {formError && (
                     <p className="text-[10.5px] text-red-500 font-bold bg-red-50 dark:bg-red-950/40 p-1.5 rounded-lg">
                       {formError}
                     </p>
                   )}
                   <div className="flex flex-col gap-0.5">
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300">
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-[#FFFFFF]">
                       Your Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -901,12 +901,12 @@ export default function ChatbotWidget() {
                       value={contactName}
                       onChange={(e) => setContactName(e.target.value)}
                       placeholder="e.g. Ramesh Kumar"
-                      className="w-full px-3 py-2 bg-white dark:bg-[#100922] border border-slate-200 dark:border-purple-900/50 rounded-xl outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600/20 text-slate-900 dark:text-white text-xs"
+                      className="w-full px-3 py-2 bg-[#3B1580] border border-[#FFFFFF]/25 rounded-xl outline-none focus:border-[#C9F600] text-[#FFFFFF] placeholder-[#FFFFFF]/40 text-xs"
                     />
                   </div>
 
                   <div className="flex flex-col gap-0.5">
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300">
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-[#FFFFFF]">
                       WhatsApp / Mobile <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -915,12 +915,12 @@ export default function ChatbotWidget() {
                       value={contactPhone}
                       onChange={(e) => setContactPhone(e.target.value)}
                       placeholder="+91 98765 43210"
-                      className="w-full px-3 py-2 bg-white dark:bg-[#100922] border border-slate-200 dark:border-purple-900/50 rounded-xl outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600/20 text-slate-900 dark:text-white text-xs"
+                      className="w-full px-3 py-2 bg-[#3B1580] border border-[#FFFFFF]/25 rounded-xl outline-none focus:border-[#C9F600] text-[#FFFFFF] placeholder-[#FFFFFF]/40 text-xs"
                     />
                   </div>
 
                   <div className="flex flex-col gap-0.5">
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-[#FFFFFF]/70">
                       Email Address <span className="text-slate-400 font-normal">(Optional)</span>
                     </label>
                     <input
@@ -928,14 +928,14 @@ export default function ChatbotWidget() {
                       value={contactEmail}
                       onChange={(e) => setContactEmail(e.target.value)}
                       placeholder="name@business.com"
-                      className="w-full px-3 py-2 bg-white dark:bg-[#100922] border border-slate-200 dark:border-purple-900/50 rounded-xl outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600/20 text-slate-900 dark:text-white text-xs"
+                      className="w-full px-3 py-2 bg-[#3B1580] border border-[#FFFFFF]/25 rounded-xl outline-none focus:border-[#C9F600] text-[#FFFFFF] placeholder-[#FFFFFF]/40 text-xs"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold rounded-xl shadow-md shadow-purple-600/25 cursor-pointer disabled:opacity-40 transition-all active:scale-[0.98] mt-1 text-xs flex items-center justify-center gap-2"
+                    className="w-full py-2.5 bg-[#C9F600] hover:bg-[#b8f000] text-[#3B1580] font-black rounded-xl shadow-md cursor-pointer disabled:opacity-40 transition-all active:scale-[0.98] mt-1 text-xs flex items-center justify-center gap-2"
                   >
                     <i className="fa-solid fa-paper-plane text-xs" />
                     <span>{isSubmitting ? "Submitting..." : "Get My Custom Proposal"}</span>
@@ -957,7 +957,7 @@ export default function ChatbotWidget() {
                     value={textInput}
                     onChange={(e) => setTextInput(e.target.value)}
                     placeholder="Ask any question (English / தமிழ்)..."
-                    className="flex-1 text-[11px] px-3.5 py-2 bg-slate-50 dark:bg-[#1A1133] border border-slate-200 dark:border-purple-900/50 rounded-xl outline-none focus:border-purple-600 text-slate-900 dark:text-white"
+                    className="flex-1 text-[11px] px-3.5 py-2 bg-[#3B1580] border border-[#FFFFFF]/25 rounded-xl outline-none focus:border-[#C9F600] text-[#FFFFFF] placeholder-[#FFFFFF]/40"
                   />
                   <button
                     type="submit"
@@ -977,15 +977,15 @@ export default function ChatbotWidget() {
       {/* Reset Confirmation Modal */}
       {showResetModal && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-xs z-[1000] flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-[#160E28] border border-slate-200 dark:border-purple-800/40 rounded-2xl p-5 max-w-xs w-full shadow-2xl text-left space-y-3">
-            <h4 className="font-extrabold text-sm text-slate-900 dark:text-white">Start a new conversation?</h4>
-            <p className="text-xs text-slate-500 dark:text-slate-400 leading-normal">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-5 max-w-xs w-full shadow-2xl text-left space-y-3">
+            <h4 className="font-extrabold text-sm text-[#FFFFFF]">Start a new conversation?</h4>
+            <p className="text-xs text-[#FFFFFF]/70 leading-normal">
               Are you sure? Your current selections will be cleared.
             </p>
             <div className="flex justify-end gap-2 pt-2">
               <button
                 onClick={() => setShowResetModal(false)}
-                className="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-lg font-bold text-xs cursor-pointer"
+                className="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 text-[#FFFFFF] rounded-lg font-bold text-xs cursor-pointer"
               >
                 Cancel
               </button>

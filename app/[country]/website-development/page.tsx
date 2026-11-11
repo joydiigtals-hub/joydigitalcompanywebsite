@@ -283,7 +283,7 @@ export default async function CountryWebDevPage({ params }: PageProps) {
           <p>
             At Joy Digital, we design and develop custom corporate portals and platforms using next-generation frameworks like Next.js, React, and optimized HTML5/Tailwind architectures. This guarantees that your platforms load in less than 1.5 seconds, achieve perfect PageSpeed scores, and rank highly on search engine results pages in {config.targetMarket} and globally.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Why Code Quality and Architecture Impact Search Rankings</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Why Code Quality and Architecture Impact Search Rankings</h3>
           <p>
             Google uses page experience and Core Web Vitals as crucial ranking factors. If your site takes longer than 3 seconds to render, visitors will leave before they even view your offer. Slow rendering directly increases bounce rates, signaling to search crawlers that your page does not provide a good user experience. By developing sites with clean semantic markup, compressed WebP/AVIF graphics, server-side pre-rendering, and optimized bundle chunks, we build a solid foundation.
           </p>

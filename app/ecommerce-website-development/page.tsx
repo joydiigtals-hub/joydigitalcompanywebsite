@@ -59,7 +59,7 @@ export default function EcommerceWebDevPage() {
           <p>
             At Joy Digital, our specialized <strong>ecommerce website development</strong> uses **Next.js** and **Tailwind CSS**. We separate the front-end display from the back-end database (headless architecture). This ensures your product pages load in under 1.2 seconds, even on slow mobile networks.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Optimized Checkout Funnels, Security, and Payment Gateway Setup</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Optimized Checkout Funnels, Security, and Payment Gateway Setup</h3>
           <p>
             Over 70% of e-commerce carts are abandoned due to complicated checkouts or slow load times. We design checkout pages that make purchasing simple. We integrate domestic and international payment gateways, set up automated invoice emails, and construct product catalog feeds.
           </p>

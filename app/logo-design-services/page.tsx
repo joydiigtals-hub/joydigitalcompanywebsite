@@ -56,14 +56,14 @@ export default function LogoPage() {
           <p>
             At Joy Digital, a premier <strong>branding agency in chennai</strong>, our design process goes far beyond standard templates and automated clip art. We research your specific industry, review competitor branding layouts in Chennai and across India, and sketch custom logo concepts that represent your core corporate values. This structured design approach ensures that your visual assets are clean, memorable, scalable, and visually appealing.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Complete Brand Systems for Online & Offline Growth</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Complete Brand Systems for Online & Offline Growth</h3>
           <p>
             A consistent brand identity uses matching design elements across all marketing platforms. We provide complete branding packages that include custom typography guides, secondary submarks, and print layouts. This ensures your branding looks unified whether it is displayed on your website, social profiles, business cards, letterheads, or marketing brochures.
           </p>
           <p>
             We deliver all designs in vector formats (SVG, PDF, EPS, AI), allowing you to scale them for any print or digital need—from small website icons to massive outdoor billboards—without losing resolution. This provides you with the creative files needed to represent your business professionally in any commercial setting.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Color Psychology and Typography Pairings</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Color Psychology and Typography Pairings</h3>
           <p>
             Colors and fonts carry emotional weight. Choosing the right color board (using HSL/Hex values) and pairing typography systems helps convey the right message to your target audience. For example, dark blues communicate trust and security, while vibrant oranges communicate creativity and energy. We help select a palette and font pairings that align with your industry standards and target customer expectations.
           </p>

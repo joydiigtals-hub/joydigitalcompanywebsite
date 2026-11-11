@@ -68,57 +68,57 @@ export default function AboutPage() {
     <>
       <JsonLd schema={graphSchema} />
       <Header />
-      <main className="pt-20 lg:pt-24">
+      <main className="pt-20 lg:pt-24 bg-[#3B1580] text-[#FFFFFF]">
         
         {/* Intro Hero */}
-        <section className="pt-6 lg:pt-8 pb-16 lg:pb-20 bg-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
+        <section className="pt-6 lg:pt-8 pb-16 lg:pb-20 bg-[#3B1580] relative overflow-hidden text-[#FFFFFF]">
+          <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
           <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-            <span className="inline-block bg-accent-glow text-accent font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full border border-accent/20 mb-6 animate-pulse-dot">
+            <span className="inline-block bg-[#C9F600]/15 text-[#C9F600] font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full border border-[#C9F600]/30 mb-6 animate-pulse-dot">
               Our Vision
             </span>
-            <h1 className="text-3xl md:text-5xl font-extrabold text-primary-dark tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
-              Driving Growth for <span className="text-gradient">Startups & Regional Businesses</span>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-[#FFFFFF] tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
+              Driving Growth for <span className="text-[#C9F600]">Startups &amp; Regional Businesses</span>
             </h1>
-            <p className="text-sm md:text-base text-text-secondary max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-base text-[#FFFFFF]/80 max-w-2xl mx-auto leading-relaxed">
               Joy Digital Growth Agency provides professional website development, Local SEO, and branding solutions to help regional businesses build long-term search presence and grow customer inquiries.
             </p>
           </div>
         </section>
 
         {/* Story Section */}
-        <section className="py-16 bg-light-bg">
+        <section className="py-16 bg-[#260B5E] border-y border-[#FFFFFF]/15 text-[#FFFFFF]">
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Visual Stats */}
-            <div className="bg-white border border-[#E5E7EB] p-8 sm:p-12 rounded-3xl shadow-md relative overflow-hidden min-h-[300px] flex items-center justify-center">
+            <div className="bg-[#3B1580] border border-[#FFFFFF]/20 p-8 sm:p-12 rounded-3xl shadow-md relative overflow-hidden min-h-[300px] flex items-center justify-center">
               <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
               <div className="grid grid-cols-2 gap-8 relative z-10 w-full">
                 <div className="flex flex-col">
-                  <span className="text-3xl sm:text-4xl font-extrabold text-primary">100%</span>
-                  <span className="text-[10px] font-bold text-text-secondary uppercase tracking-wider mt-1">Client Focus</span>
+                  <span className="text-3xl sm:text-4xl font-extrabold text-[#C9F600]">100%</span>
+                  <span className="text-[10px] font-bold text-[#FFFFFF]/70 uppercase tracking-wider mt-1">Client Focus</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-3xl sm:text-4xl font-extrabold text-primary">₹0</span>
-                  <span className="text-[10px] font-bold text-text-secondary uppercase tracking-wider mt-1">Hidden Costs</span>
+                  <span className="text-3xl sm:text-4xl font-extrabold text-[#C9F600]">₹0</span>
+                  <span className="text-[10px] font-bold text-[#FFFFFF]/70 uppercase tracking-wider mt-1">Hidden Costs</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-3xl sm:text-4xl font-extrabold text-primary">Under 1.5s</span>
-                  <span className="text-[10px] font-bold text-text-secondary uppercase tracking-wider mt-1">Page Load Target</span>
+                  <span className="text-3xl sm:text-4xl font-extrabold text-[#C9F600]">Under 1.5s</span>
+                  <span className="text-[10px] font-bold text-[#FFFFFF]/70 uppercase tracking-wider mt-1">Page Load Target</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-3xl sm:text-4xl font-extrabold text-primary">24/7</span>
-                  <span className="text-[10px] font-bold text-text-secondary uppercase tracking-wider mt-1">Direct Support</span>
+                  <span className="text-3xl sm:text-4xl font-extrabold text-[#C9F600]">24/7</span>
+                  <span className="text-[10px] font-bold text-[#FFFFFF]/70 uppercase tracking-wider mt-1">Direct Support</span>
                 </div>
               </div>
             </div>
 
             {/* Copy */}
             <div className="flex flex-col items-start justify-center text-left">
-              <span className="text-xs font-bold text-accent uppercase tracking-widest mb-3">About Joy Digital</span>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-primary-dark mb-6">
+              <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest mb-3">About Joy Digital</span>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-[#FFFFFF] mb-6">
                 Our Core Mission
               </h2>
-              <div className="text-sm text-text-secondary leading-relaxed space-y-6">
+              <div className="text-sm text-[#FFFFFF]/85 leading-relaxed space-y-6">
                 <p>
                   At Joy Digital Growth Agency, our core mission is to deliver professional digital marketing and web engineering solutions designed to fit startup and small-to-medium business budgets. Based in Chennai, Tamil Nadu, we understand how local search habits impact customer acquisition.
                 </p>
@@ -134,16 +134,16 @@ export default function AboutPage() {
         </section>
 
         {/* Founder profile */}
-        <section className="py-16 lg:py-24 bg-white">
+        <section className="py-16 lg:py-24 bg-[#3B1580] text-[#FFFFFF]">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <span className="text-xs font-bold text-accent uppercase tracking-widest block mb-3">
+            <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
               Leadership
             </span>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-primary-dark mb-12">
-              Founder Profile & Vision
+            <h2 className="text-2xl md:text-3xl font-extrabold text-[#FFFFFF] mb-12">
+              Founder Profile &amp; Vision
             </h2>
-            <div className="bg-white border border-[#E5E7EB] rounded-3xl p-8 sm:p-12 shadow-sm flex flex-col items-center">
-              <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-accent/30 shadow-md mb-4 group">
+            <div className="bg-[#260B5E] border border-[#FFFFFF]/20 rounded-3xl p-8 sm:p-12 shadow-sm flex flex-col items-center text-[#FFFFFF]">
+              <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-[#C9F600]/40 shadow-md mb-4 group">
                 <Image
                   src="/assets/images/founder.jpg"
                   alt="Saravanan L - Founder & Director of Joy Digital"
@@ -154,19 +154,19 @@ export default function AboutPage() {
                   priority
                 />
               </div>
-              <h3 className="text-xl font-extrabold text-primary-dark mb-1">Saravanan L</h3>
-              <span className="text-xs font-semibold text-accent uppercase tracking-widest mb-3">Founder & Director</span>
+              <h3 className="text-xl font-extrabold text-[#FFFFFF] mb-1">Saravanan L</h3>
+              <span className="text-xs font-semibold text-[#C9F600] uppercase tracking-widest mb-3">Founder &amp; Director</span>
               
               <a
                 href="https://www.linkedin.com/in/saravanan-l-34a861154/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs text-text-muted hover:text-accent transition-colors font-medium mb-6"
+                className="inline-flex items-center gap-1.5 text-xs text-[#FFFFFF]/70 hover:text-[#C9F600] transition-colors font-medium mb-6"
               >
                 <i className="fa-brands fa-linkedin text-sm" /> View LinkedIn Profile
               </a>
               
-              <p className="text-sm text-text-secondary leading-relaxed max-w-xl mx-auto mb-6">
+              <p className="text-sm text-[#FFFFFF]/85 leading-relaxed max-w-xl mx-auto mb-6">
                 &ldquo;We launched Joy Digital with a clear goal: to make professional web development and search engine optimization accessible to regional startups and small businesses. We focus on providing clean, fast-loading code and clear SEO strategies that deliver measurable results and support long-term growth.&rdquo;
               </p>
               <div className="flex items-center gap-4">
@@ -174,7 +174,7 @@ export default function AboutPage() {
                   href="https://share.google/BSniheS2qnzwqUKXU"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-light-bg flex items-center justify-center text-[#4285F4] hover:bg-[#4285F4] hover:text-white transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-[#3B1580] flex items-center justify-center text-[#FFFFFF] hover:bg-[#4285F4] hover:text-white transition-all duration-300 border border-[#FFFFFF]/20"
                   aria-label="Google Business Profile"
                   title="Joy Digital Google Business Profile"
                 >
@@ -182,7 +182,7 @@ export default function AboutPage() {
                 </a>
                 <a
                   href="tel:+919080026133"
-                  className="w-10 h-10 rounded-full bg-light-bg flex items-center justify-center text-primary hover:bg-accent hover:text-white transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-[#3B1580] flex items-center justify-center text-[#FFFFFF] hover:bg-[#C9F600] hover:text-[#3B1580] transition-all duration-300 border border-[#FFFFFF]/20"
                   aria-label="Call Direct"
                 >
                   <i className="fa-solid fa-phone" />
@@ -191,7 +191,7 @@ export default function AboutPage() {
                   href="https://wa.me/919080026133"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-light-bg flex items-center justify-center text-whatsapp-green hover:bg-accent hover:text-white transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-[#3B1580] flex items-center justify-center text-[#10b981] hover:bg-[#10b981] hover:text-white transition-all duration-300 border border-[#FFFFFF]/20"
                   aria-label="WhatsApp"
                   data-wa-location="contact page"
                 >
@@ -203,16 +203,16 @@ export default function AboutPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 lg:py-24 bg-light-bg border-t border-gray-100">
+        <section className="py-16 lg:py-24 bg-[#260B5E] border-t border-[#FFFFFF]/15 text-[#FFFFFF]">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-xs font-bold text-accent uppercase tracking-widest block mb-3">
+              <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
                 Common Questions
               </span>
-              <h2 className="text-2xl md:text-4xl font-extrabold text-primary-dark mb-4">
+              <h2 className="text-2xl md:text-4xl font-extrabold text-[#FFFFFF] mb-4">
                 Frequently Asked Questions
               </h2>
-              <p className="text-sm text-text-secondary">
+              <p className="text-sm text-[#FFFFFF]/80">
                 Have questions about Joy Digital, our web engineering process, or how we help businesses grow? Find answers below.
               </p>
             </div>

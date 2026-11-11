@@ -228,7 +228,7 @@ export default async function WebsiteDevelopmentCompanyChennai() {
             </p>
 
             {/* H2: Secondary Keyword 1 */}
-            <h2 className="text-2xl font-extrabold text-[#0F172A] mt-8 mb-4">
+            <h2 className="text-2xl font-extrabold text-white mt-8 mb-4">
               Custom Website Development Chennai: Engineering Speed and Conversions
             </h2>
             <p>
@@ -237,7 +237,7 @@ export default async function WebsiteDevelopmentCompanyChennai() {
             <p>
               Our approach to <strong>custom website development Chennai</strong> centers on performance-first engineering:
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-slate-700">
+            <ul className="list-disc pl-5 space-y-2 text-secondary">
               <li>
                 <strong>Next.js App Router Architecture:</strong> We leverage server-side static generation (SSG) and edge computing to serve pre-rendered pages directly from cloud CDN edges, ensuring page rendering times under 1.5 seconds.
               </li>
@@ -256,13 +256,13 @@ export default async function WebsiteDevelopmentCompanyChennai() {
             </p>
 
             {/* H2: Secondary Keyword 2 */}
-            <h2 className="text-2xl font-extrabold text-[#0F172A] mt-8 mb-4">
+            <h2 className="text-2xl font-extrabold text-white mt-8 mb-4">
               Bespoke Website Design and Development Chennai for Core Industries
             </h2>
             <p>
               Different industries in Chennai require distinct user conversion pathways. As an experienced team specializing in <strong>website design and development Chennai</strong>, we tailor every layout to the commercial realities of your market:
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-slate-700">
+            <ul className="list-disc pl-5 space-y-2 text-secondary">
               <li>
                 <strong>B2B &amp; Precision Manufacturing (Ambattur, Guindy, Sriperumbudur):</strong> We build product specification catalogs, downloadable technical PDFs, and fast quotation inquiry workflows tailored for procurement managers.
               </li>
@@ -278,11 +278,11 @@ export default async function WebsiteDevelopmentCompanyChennai() {
             </ul>
 
             {/* Architecture Comparison Table */}
-            <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">
+            <h3 className="text-xl font-bold text-white mt-8 mb-4">
               Custom Next.js vs. Generic WordPress Templates
             </h3>
             <div className="overflow-x-auto my-6 not-prose">
-              <table className="w-full text-left text-xs border-collapse bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+              <table className="w-full text-left text-xs border-collapse bg-primary rounded-xl shadow-sm border border-white/[0.18] overflow-hidden">
                 <thead>
                   <tr className="bg-slate-900 text-white">
                     <th className="p-3 font-bold border-b border-slate-800">Feature</th>
@@ -290,7 +290,7 @@ export default async function WebsiteDevelopmentCompanyChennai() {
                     <th className="p-3 font-bold border-b border-slate-800 text-[#38bdf8]">Joy Digital Custom Next.js</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-200 text-slate-700">
+                <tbody className="divide-y divide-slate-200 text-secondary">
                   <tr>
                     <td className="p-3 font-bold">Mobile Page Speed</td>
                     <td className="p-3">Sluggish (3.5s to 6.5s) with heavy plugin bloat</td>
@@ -304,7 +304,7 @@ export default async function WebsiteDevelopmentCompanyChennai() {
                   <tr>
                     <td className="p-3 font-bold">Security &amp; Maintenance</td>
                     <td className="p-3">Requires constant plugin updates; SQL injection risk</td>
-                    <td className="p-3 font-semibold text-slate-900">Decoupled serverless build; zero database exploit vector</td>
+                    <td className="p-3 font-semibold text-white">Decoupled serverless build; zero database exploit vector</td>
                   </tr>
                   <tr>
                     <td className="p-3 font-bold">Lead Capture Pathways</td>
@@ -314,7 +314,7 @@ export default async function WebsiteDevelopmentCompanyChennai() {
                   <tr>
                     <td className="p-3 font-bold">Code Ownership</td>
                     <td className="p-3">Locked into theme licenses and visual builders</td>
-                    <td className="p-3 font-semibold text-slate-900">100% full IP and TypeScript source code ownership</td>
+                    <td className="p-3 font-semibold text-white">100% full IP and TypeScript source code ownership</td>
                   </tr>
                 </tbody>
               </table>

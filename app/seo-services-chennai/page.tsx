@@ -226,7 +226,7 @@ export default async function SeoServicesChennai() {
             </p>
 
             {/* H2: Secondary Keyword 1 */}
-            <h2 className="text-2xl font-extrabold text-[#0F172A] mt-8 mb-4">
+            <h2 className="text-2xl font-extrabold text-white mt-8 mb-4">
               Why Partner with an Experienced SEO Company in Chennai?
             </h2>
             <p>
@@ -240,7 +240,7 @@ export default async function SeoServicesChennai() {
             </p>
 
             {/* H2: Secondary Keyword 2 */}
-            <h2 className="text-2xl font-extrabold text-[#0F172A] mt-8 mb-4">
+            <h2 className="text-2xl font-extrabold text-white mt-8 mb-4">
               What Sets Our Technical SEO Agency in Chennai Apart?
             </h2>
             <p>
@@ -249,7 +249,7 @@ export default async function SeoServicesChennai() {
             <p>
               As a technical <strong>SEO agency in Chennai</strong>, Joy Digital approaches search optimization from an engineering standpoint:
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-slate-700">
+            <ul className="list-disc pl-5 space-y-2 text-secondary">
               <li>
                 <strong>Core Web Vitals Engineering:</strong> We analyze Largest Contentful Paint (LCP), Cumulative Layout Shift (CLS), and Interaction to Next Paint (INP) to ensure your website responds instantly on mobile networks.
               </li>
@@ -265,7 +265,7 @@ export default async function SeoServicesChennai() {
             </ul>
 
             {/* H2: Local SEO in Chennai */}
-            <h2 className="text-2xl font-extrabold text-[#0F172A] mt-8 mb-4">
+            <h2 className="text-2xl font-extrabold text-white mt-8 mb-4">
               Dominating Local Search Queries Across Chennai Neighborhoods
             </h2>
             <p>
@@ -276,11 +276,11 @@ export default async function SeoServicesChennai() {
             </p>
 
             {/* Comparison Table */}
-            <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">
+            <h3 className="text-xl font-bold text-white mt-8 mb-4">
               How Joy Digital Compares to Generic SEO Agencies
             </h3>
             <div className="overflow-x-auto my-6 not-prose">
-              <table className="w-full text-left text-xs border-collapse bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+              <table className="w-full text-left text-xs border-collapse bg-primary rounded-xl shadow-sm border border-white/[0.18] overflow-hidden">
                 <thead>
                   <tr className="bg-slate-900 text-white">
                     <th className="p-3 font-bold border-b border-slate-800">Capability</th>
@@ -288,7 +288,7 @@ export default async function SeoServicesChennai() {
                     <th className="p-3 font-bold border-b border-slate-800 text-[#38bdf8]">Joy Digital Technical SEO</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-200 text-slate-700">
+                <tbody className="divide-y divide-slate-200 text-secondary">
                   <tr>
                     <td className="p-3 font-bold">Primary KPI</td>
                     <td className="p-3">Generic impressions &amp; irrelevant clicks</td>
@@ -297,7 +297,7 @@ export default async function SeoServicesChennai() {
                   <tr>
                     <td className="p-3 font-bold">Code &amp; Speed Engineering</td>
                     <td className="p-3">Automated WordPress plugins &amp; slow themes</td>
-                    <td className="p-3 font-semibold text-slate-900">Custom Next.js &amp; sub-second Core Web Vitals</td>
+                    <td className="p-3 font-semibold text-white">Custom Next.js &amp; sub-second Core Web Vitals</td>
                   </tr>
                   <tr>
                     <td className="p-3 font-bold">Local Maps 3-Pack</td>
@@ -307,7 +307,7 @@ export default async function SeoServicesChennai() {
                   <tr>
                     <td className="p-3 font-bold">Transparency</td>
                     <td className="p-3">Automated 50-page PDF reports filled with vanity charts</td>
-                    <td className="p-3 font-semibold text-slate-900">GA4 verified conversion tracking &amp; direct developer chats</td>
+                    <td className="p-3 font-semibold text-white">GA4 verified conversion tracking &amp; direct developer chats</td>
                   </tr>
                 </tbody>
               </table>

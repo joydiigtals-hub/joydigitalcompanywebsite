@@ -68,7 +68,7 @@ export default function WebsiteDesignChennai() {
           <p>
             Whether you are looking for a reliable <strong>website developer near me</strong> or a full-service <strong>web development agency in T Nagar / Guindy / Velachery</strong>, our team has 9+ years of experience helping Chennai businesses establish dominant local search authority.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Mobile-Responsive Layouts for T Nagar, Guindy & Velachery Businesses</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Mobile-Responsive Layouts for T Nagar, Guindy & Velachery Businesses</h3>
           <p>
             Over 80% of local service queries in Tamil Nadu occur on smartphones. We design clean wireframes, compressed media, and secure code structures. This ensures your website loads under 1.5 seconds and renders beautifully across all mobile browsers.
           </p>

@@ -44,11 +44,11 @@ function ThankYouContent() {
         Inquiry Successfully Logged
       </div>
 
-      <h1 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-3 leading-tight">
+      <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-3 leading-tight">
         {name ? `Thank You, ${name}!` : "Thank You!"}
       </h1>
 
-      <p className="text-sm md:text-base text-slate-600 max-w-xl mx-auto mb-10 leading-relaxed font-semibold">
+      <p className="text-sm md:text-base text-secondary max-w-xl mx-auto mb-10 leading-relaxed font-semibold">
         {name
           ? `We received your request for ${service}. Our senior lead strategist has been notified and will prepare a customized proposal for you.`
           : "Our team will review your requirements and reach out shortly with a tailored project scope."}
@@ -79,11 +79,11 @@ function ThankYouContent() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWaClick}
-            className="shrink-0 bg-white hover:bg-emerald-50 text-emerald-900 font-extrabold text-xs px-7 py-4 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-0.5 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer border border-emerald-200"
+            className="shrink-0 bg-primary hover:bg-emerald-50 text-emerald-900 font-extrabold text-xs px-7 py-4 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-0.5 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer border border-emerald-200"
           >
             <i className="fa-brands fa-whatsapp text-2xl text-[#25D366]" />
             <div className="flex flex-col text-left">
-              <span className="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider">Fast Track</span>
+              <span className="text-[10px] text-muted font-extrabold uppercase tracking-wider">Fast Track</span>
               <span className="text-xs font-black text-emerald-950">Chat Instantly on WhatsApp →</span>
             </div>
           </a>
@@ -93,9 +93,9 @@ function ThankYouContent() {
       {/* 4. STRUCTURED CONFIRMATION TICKET & ROADMAP */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 text-left mb-10">
         {/* Ticket Summary Card (5 cols) */}
-        <div className="md:col-span-5 bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+        <div className="md:col-span-5 bg-primary border border-white/[0.18]/80 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
           <div>
-            <h3 className="text-xs font-black text-slate-900 uppercase tracking-wider mb-4 flex items-center justify-between border-b border-slate-100 pb-3">
+            <h3 className="text-xs font-black text-white uppercase tracking-wider mb-4 flex items-center justify-between border-b border-slate-100 pb-3">
               <span>Summary Ticket</span>
               <span className="text-[10px] text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">
                 Verified
@@ -104,7 +104,7 @@ function ThankYouContent() {
             <div className="space-y-3.5 text-xs">
               <div>
                 <span className="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider block">Submitted For</span>
-                <span className="font-extrabold text-slate-900">{name || "Valued Client"}</span>
+                <span className="font-extrabold text-white">{name || "Valued Client"}</span>
               </div>
               <div>
                 <span className="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider block">Service Requested</span>
@@ -114,7 +114,7 @@ function ThankYouContent() {
               </div>
               <div>
                 <span className="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider block">Guaranteed Response</span>
-                <span className="font-bold text-slate-700">Within 15 - 30 Minutes</span>
+                <span className="font-bold text-secondary">Within 15 - 30 Minutes</span>
               </div>
             </div>
           </div>
@@ -124,8 +124,8 @@ function ThankYouContent() {
         </div>
 
         {/* Next Steps Roadmap (7 cols) */}
-        <div className="md:col-span-7 bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm">
-          <h3 className="text-xs font-black text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2 border-b border-slate-100 pb-3">
+        <div className="md:col-span-7 bg-primary border border-white/[0.18]/80 rounded-2xl p-6 shadow-sm">
+          <h3 className="text-xs font-black text-white uppercase tracking-wider mb-4 flex items-center gap-2 border-b border-slate-100 pb-3">
             <i className="fa-solid fa-route text-blue-600" /> What Happens Next?
           </h3>
           <div className="space-y-4 text-xs font-semibold">
@@ -134,8 +134,8 @@ function ThankYouContent() {
                 1
               </div>
               <div>
-                <h4 className="font-extrabold text-slate-900">Requirement Review</h4>
-                <p className="text-slate-500 text-[11px] mt-0.5 leading-relaxed">
+                <h4 className="font-extrabold text-white">Requirement Review</h4>
+                <p className="text-muted text-[11px] mt-0.5 leading-relaxed">
                   Our technical leads analyze your goals, competitors, and scope specs.
                 </p>
               </div>
@@ -146,8 +146,8 @@ function ThankYouContent() {
                 2
               </div>
               <div>
-                <h4 className="font-extrabold text-slate-900">Custom Audit & Proposal</h4>
-                <p className="text-slate-500 text-[11px] mt-0.5 leading-relaxed">
+                <h4 className="font-extrabold text-white">Custom Audit & Proposal</h4>
+                <p className="text-muted text-[11px] mt-0.5 leading-relaxed">
                   We prepare a transparent pricing structure, timeline, and strategy roadmap.
                 </p>
               </div>
@@ -158,8 +158,8 @@ function ThankYouContent() {
                 3
               </div>
               <div>
-                <h4 className="font-extrabold text-slate-900">Direct Consultation Call</h4>
-                <p className="text-slate-500 text-[11px] mt-0.5 leading-relaxed">
+                <h4 className="font-extrabold text-white">Direct Consultation Call</h4>
+                <p className="text-muted text-[11px] mt-0.5 leading-relaxed">
                   We schedule a brief 15-minute call to align on project execution & launch date.
                 </p>
               </div>
@@ -172,13 +172,13 @@ function ThankYouContent() {
       <div className="flex flex-wrap items-center justify-center gap-3">
         <Link
           href="/"
-          className="bg-white border border-slate-200 hover:bg-slate-50 text-slate-800 font-extrabold text-xs px-6 py-3 rounded-xl shadow-xs hover:-translate-y-0.5 transition-all duration-300"
+          className="bg-primary border border-white/[0.18] hover:bg-primary-dark text-white font-extrabold text-xs px-6 py-3 rounded-xl shadow-xs hover:-translate-y-0.5 transition-all duration-300"
         >
           Return to Homepage
         </Link>
         <Link
           href="/case-studies"
-          className="bg-white border border-slate-200 hover:bg-slate-50 text-slate-800 font-extrabold text-xs px-6 py-3 rounded-xl shadow-xs hover:-translate-y-0.5 transition-all duration-300"
+          className="bg-primary border border-white/[0.18] hover:bg-primary-dark text-white font-extrabold text-xs px-6 py-3 rounded-xl shadow-xs hover:-translate-y-0.5 transition-all duration-300"
         >
           View Case Studies
         </Link>

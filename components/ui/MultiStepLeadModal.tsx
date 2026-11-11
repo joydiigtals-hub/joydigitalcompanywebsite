@@ -191,14 +191,14 @@ export default function MultiStepLeadModal({
             {/* Header */}
             <div className="p-6 sm:p-7 border-b border-[#201B36] relative flex items-start justify-between">
               <div>
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-violet-500/10 border border-violet-500/30 text-violet-400 text-xs font-semibold mb-2">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-violet-500/10 border border-violet-500/30 text-[#C9F600] text-xs font-semibold mb-2">
                   <Sparkles className="w-3.5 h-3.5" />
                   <span>Step {step} of 2 • Fast Track Discovery</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
                   {step === 1 ? "Book Your 15-Min Growth Call" : "Tell Us About Your Project"}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-400 mt-1">
+                <p className="text-xs sm:text-sm text-[#FFFFFF]/70 mt-1">
                   {step === 1
                     ? "Direct strategy call with senior web engineers & SEO specialists."
                     : "Help us tailor our audit & discovery deck to your exact goals."}
@@ -208,7 +208,7 @@ export default function MultiStepLeadModal({
               <button
                 type="button"
                 onClick={onClose}
-                className="text-slate-400 hover:text-white p-2 rounded-lg bg-[#1B1730] hover:bg-[#252042] transition-colors"
+                className="text-[#FFFFFF]/70 hover:text-white p-2 rounded-lg bg-[#1B1730] hover:bg-[#252042] transition-colors"
                 aria-label="Close modal"
               >
                 <X className="w-5 h-5" />
@@ -227,18 +227,18 @@ export default function MultiStepLeadModal({
                 >
                   {/* Full Name */}
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-semibold text-[#FFFFFF]/90 uppercase tracking-wider mb-1.5">
                       Full Name <span className="text-rose-400">*</span>
                     </label>
                     <div className="relative">
-                      <User className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                      <User className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#FFFFFF]/70" />
                       <input
                         type="text"
                         placeholder="e.g. Alex Morgan"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className={`w-full bg-[#151226] border text-sm text-white placeholder:text-slate-500 rounded-xl pl-10 pr-4 py-3 outline-none focus:ring-2 transition-all ${
-                          errors.name ? "border-rose-500 focus:ring-rose-500/20" : "border-[#2A2440] focus:border-violet-500 focus:ring-violet-500/20"
+                        className={`w-full bg-[#151226] border text-sm text-white placeholder:text-[#FFFFFF]/50 rounded-xl pl-10 pr-4 py-3 outline-none focus:ring-2 transition-all ${
+                          errors.name ? "border-rose-500 focus:ring-rose-500/20" : "border-[#2A2440] focus:border-[#C9F600] focus:ring-violet-500/20"
                         }`}
                       />
                     </div>
@@ -247,18 +247,18 @@ export default function MultiStepLeadModal({
 
                   {/* Work Email */}
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-semibold text-[#FFFFFF]/90 uppercase tracking-wider mb-1.5">
                       Work Email <span className="text-rose-400">*</span>
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                      <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#FFFFFF]/70" />
                       <input
                         type="email"
                         placeholder="alex@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className={`w-full bg-[#151226] border text-sm text-white placeholder:text-slate-500 rounded-xl pl-10 pr-4 py-3 outline-none focus:ring-2 transition-all ${
-                          errors.email ? "border-rose-500 focus:ring-rose-500/20" : "border-[#2A2440] focus:border-violet-500 focus:ring-violet-500/20"
+                        className={`w-full bg-[#151226] border text-sm text-white placeholder:text-[#FFFFFF]/50 rounded-xl pl-10 pr-4 py-3 outline-none focus:ring-2 transition-all ${
+                          errors.email ? "border-rose-500 focus:ring-rose-500/20" : "border-[#2A2440] focus:border-[#C9F600] focus:ring-violet-500/20"
                         }`}
                       />
                     </div>
@@ -267,18 +267,18 @@ export default function MultiStepLeadModal({
 
                   {/* Phone / WhatsApp */}
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-semibold text-[#FFFFFF]/90 uppercase tracking-wider mb-1.5">
                       Phone / WhatsApp Number <span className="text-rose-400">*</span>
                     </label>
                     <div className="relative">
-                      <Phone className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                      <Phone className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#FFFFFF]/70" />
                       <input
                         type="tel"
                         placeholder="+1 (555) 000-0000 or WhatsApp"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className={`w-full bg-[#151226] border text-sm text-white placeholder:text-slate-500 rounded-xl pl-10 pr-4 py-3 outline-none focus:ring-2 transition-all ${
-                          errors.phone ? "border-rose-500 focus:ring-rose-500/20" : "border-[#2A2440] focus:border-violet-500 focus:ring-violet-500/20"
+                        className={`w-full bg-[#151226] border text-sm text-white placeholder:text-[#FFFFFF]/50 rounded-xl pl-10 pr-4 py-3 outline-none focus:ring-2 transition-all ${
+                          errors.phone ? "border-rose-500 focus:ring-rose-500/20" : "border-[#2A2440] focus:border-[#C9F600] focus:ring-violet-500/20"
                         }`}
                       />
                     </div>
@@ -295,7 +295,7 @@ export default function MultiStepLeadModal({
                 >
                   {/* Service Selection */}
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-semibold text-[#FFFFFF]/90 uppercase tracking-wider mb-1.5">
                       Primary Objective
                     </label>
                     <div className="grid grid-cols-1 gap-2">
@@ -306,16 +306,16 @@ export default function MultiStepLeadModal({
                           onClick={() => setFormData({ ...formData, service: opt.value })}
                           className={`text-left p-3 rounded-xl border transition-all flex items-center justify-between ${
                             formData.service === opt.value
-                              ? "bg-violet-600/15 border-violet-500 text-white"
-                              : "bg-[#151226] border-[#2A2440] text-slate-300 hover:border-slate-600"
+                              ? "bg-[#C9F600]/15 border-[#C9F600] text-[#FFFFFF]"
+                              : "bg-[#151226] border-[#2A2440] text-[#FFFFFF]/90 hover:border-slate-600"
                           }`}
                         >
                           <div>
                             <p className="text-xs font-bold">{opt.label}</p>
-                            <p className="text-[11px] text-slate-400">{opt.desc}</p>
+                            <p className="text-[11px] text-[#FFFFFF]/70">{opt.desc}</p>
                           </div>
                           {formData.service === opt.value && (
-                            <CheckCircle2 className="w-4 h-4 text-violet-400 shrink-0 ml-2" />
+                            <CheckCircle2 className="w-4 h-4 text-[#C9F600] shrink-0 ml-2" />
                           )}
                         </button>
                       ))}
@@ -325,33 +325,33 @@ export default function MultiStepLeadModal({
                   {/* Company Name & Website */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                      <label className="block text-[11px] font-semibold text-[#FFFFFF]/90 uppercase tracking-wider mb-1">
                         Company Name
                       </label>
                       <div className="relative">
-                        <Building className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
+                        <Building className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-[#FFFFFF]/70" />
                         <input
                           type="text"
                           placeholder="Acme Inc."
                           value={formData.company}
                           onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                          className="w-full bg-[#151226] border border-[#2A2440] focus:border-violet-500 text-xs text-white placeholder:text-slate-500 rounded-xl pl-9 pr-3 py-2.5 outline-none"
+                          className="w-full bg-[#3B1580] border border-[#FFFFFF]/25 focus:border-[#C9F600] text-xs text-white placeholder:text-[#FFFFFF]/50 rounded-xl pl-9 pr-3 py-2.5 outline-none"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                      <label className="block text-[11px] font-semibold text-[#FFFFFF]/90 uppercase tracking-wider mb-1">
                         Website (Optional)
                       </label>
                       <div className="relative">
-                        <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
+                        <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-[#FFFFFF]/70" />
                         <input
                           type="text"
                           placeholder="acme.com"
                           value={formData.website}
                           onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-                          className="w-full bg-[#151226] border border-[#2A2440] focus:border-violet-500 text-xs text-white placeholder:text-slate-500 rounded-xl pl-9 pr-3 py-2.5 outline-none"
+                          className="w-full bg-[#3B1580] border border-[#FFFFFF]/25 focus:border-[#C9F600] text-xs text-white placeholder:text-[#FFFFFF]/50 rounded-xl pl-9 pr-3 py-2.5 outline-none"
                         />
                       </div>
                     </div>
@@ -359,13 +359,13 @@ export default function MultiStepLeadModal({
 
                   {/* Budget */}
                   <div>
-                    <label className="block text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                    <label className="block text-[11px] font-semibold text-[#FFFFFF]/90 uppercase tracking-wider mb-1">
                       Estimated Project Budget
                     </label>
                     <select
                       value={formData.budget}
                       onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                      className="w-full bg-[#151226] border border-[#2A2440] focus:border-violet-500 text-xs text-white rounded-xl px-3 py-2.5 outline-none"
+                      className="w-full bg-[#3B1580] border border-[#FFFFFF]/25 focus:border-[#C9F600] text-xs text-white rounded-xl px-3 py-2.5 outline-none"
                     >
                       {BUDGET_OPTIONS.map((b) => (
                         <option key={b.value} value={b.value} className="bg-[#0F0D1C] text-white">
@@ -383,7 +383,7 @@ export default function MultiStepLeadModal({
                   <button
                     type="button"
                     onClick={() => setStep(1)}
-                    className="px-4 py-3 rounded-xl bg-[#1B1730] hover:bg-[#252042] border border-[#2A2440] text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+                    className="px-4 py-3 rounded-xl bg-[#3B1580] hover:bg-[#3B1580]/80 border border-[#FFFFFF]/25 text-[#FFFFFF] text-[#FFFFFF]/90 text-xs font-semibold flex items-center gap-1.5 transition-colors"
                   >
                     <ArrowLeft className="w-4 h-4" /> Back
                   </button>
@@ -393,7 +393,7 @@ export default function MultiStepLeadModal({
                   <button
                     type="button"
                     onClick={handleNext}
-                    className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white text-xs sm:text-sm font-bold shadow-lg shadow-violet-600/30 flex items-center justify-center gap-2 transition-all cursor-pointer"
+                    className="w-full py-3.5 px-6 rounded-xl bg-[#C9F600] hover:bg-[#b8f000] text-[#3B1580] font-black text-xs sm:text-sm font-bold shadow-lg shadow-violet-600/30 flex items-center justify-center gap-2 transition-all cursor-pointer"
                   >
                     <span>Continue to Project Details</span>
                     <ArrowRight className="w-4 h-4" />
@@ -402,7 +402,7 @@ export default function MultiStepLeadModal({
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex-1 py-3.5 px-6 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white text-xs sm:text-sm font-bold shadow-lg shadow-violet-600/30 flex items-center justify-center gap-2 transition-all cursor-pointer disabled:opacity-50"
+                    className="flex-1 py-3.5 px-6 rounded-xl bg-[#C9F600] hover:bg-[#b8f000] text-[#3B1580] font-black text-xs sm:text-sm font-bold shadow-lg shadow-violet-600/30 flex items-center justify-center gap-2 transition-all cursor-pointer disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <>
@@ -421,7 +421,7 @@ export default function MultiStepLeadModal({
 
               {/* Trust Micro-Footer */}
               <div className="pt-2 text-center border-t border-[#1C1833]">
-                <p className="text-[11px] text-slate-400 flex items-center justify-center gap-1.5">
+                <p className="text-[11px] text-[#FFFFFF]/70 flex items-center justify-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                   <span>100% Privacy • No Spam Guarantee • Direct Engineer Discovery</span>
                 </p>

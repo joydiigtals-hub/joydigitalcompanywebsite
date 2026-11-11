@@ -52,9 +52,9 @@ export default function ProcessSection() {
   return (
     <div id="process-section-inner" className="relative">
       {/* Progressive animated horizontal connecting gradient line (purple theme) */}
-      <div className="absolute top-6 left-12 right-12 h-[2px] bg-slate-100 hidden lg:block z-0">
+      <div className="absolute top-6 left-12 right-12 h-[2px] bg-[#FFFFFF]/15 hidden lg:block z-0">
         <div 
-          className="h-full bg-gradient-to-r from-[#7C3AED] to-[#A78BFA] origin-left transition-transform duration-1000 ease-out"
+          className="h-full bg-[#C9F600] origin-left transition-transform duration-1000 ease-out"
           style={{ transform: processInView ? "scaleX(1)" : "scaleX(0)" }}
         />
       </div>
@@ -67,14 +67,14 @@ export default function ProcessSection() {
             className="flex flex-col items-start text-left group reveal-hidden"
           >
             <div className="relative mb-6">
-              <span className="text-4xl font-black text-[#7C3AED]/15 group-hover:text-[#7C3AED] transition-colors duration-300">
+              <span className="text-4xl font-black text-[#C9F600]/30 group-hover:text-[#C9F600] transition-colors duration-300">
                 {step.step}
               </span>
             </div>
-            <h3 className="text-sm font-extrabold text-[#1F1B2D] mb-3 group-hover:text-[#7C3AED] transition-colors">
+            <h3 className="text-sm font-extrabold text-[#FFFFFF] mb-3 group-hover:text-[#C9F600] transition-colors">
               {step.title}
             </h3>
-            <p className="text-xs text-[#6B6478] leading-relaxed font-semibold">
+            <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-medium">
               {step.desc}
             </p>
           </div>

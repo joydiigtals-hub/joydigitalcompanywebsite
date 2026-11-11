@@ -58,14 +58,14 @@ export default function LocalSEOPage() {
           <p>
             At Joy Digital, our specialized <strong>Multi-Location Local SEO Services</strong> are engineered for global businesses. We streamline <strong>Enterprise Google Business Profile Management</strong>, unifying data across hundreds of listings. By deploying centralized optimization, we ensure your brand captures Hyper-Local Geo-Targeted SEO traffic in every market you operate in—from the US and UK to the UAE and Australia.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Mastering Franchise Local Search Strategy & AI Ecosystems</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Mastering Franchise Local Search Strategy & AI Ecosystems</h3>
           <p>
             Local SEO for global brands isn't just about NAP (Name, Address, Phone) consistency anymore. Modern algorithms prioritize real-time signals, review velocity, and localized relevance. We implement advanced Store Locator Schema and configure AI Search Optimization (GEO) strategies to ensure your locations are prioritized by Google's latest AI Overviews and Maps algorithms.
           </p>
           <p>
             Instead of manually managing fragmented profiles, we centralize your <strong>Franchise Local Search Strategy</strong>. We launch dynamic location pages targeting precise global zip codes and regional hubs, enabling your brand to blanket search results organically and drive qualified foot traffic or enterprise inquiries system-wide.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Global Authority Platforms & Data Sync</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Global Authority Platforms & Data Sync</h3>
           <p>
             Search engines aggregate data from top-tier global platforms to establish entity prominence. We syndicate your location data directly to authority networks like Apple Maps, Bing Places, Yelp, Yext, and BrightLocal ecosystems. This automated, API-driven data integrity ensures 100% uniformity, protecting your brand from rogue edits and algorithmic downgrades across all international territories.
           </p>

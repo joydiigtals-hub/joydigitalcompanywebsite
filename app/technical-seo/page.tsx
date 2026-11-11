@@ -74,37 +74,37 @@ export default function TechnicalSEOPage() {
             At <strong>Joy Digital</strong>, we approach technical SEO from a software engineering perspective. We don't just export automated tool reports with generic recommendations; our engineers diagnose and write production-grade code to fix indexing loops, eliminate JavaScript hydration delays, optimize server-side rendering (SSR/SSG), and inject advanced JSON-LD structured schema graphs.
           </p>
 
-          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
-            <h3 className="text-lg font-bold text-primary-dark">What We Diagnose &amp; Engineer</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
+            <h3 className="text-lg font-bold text-[#FFFFFF]">What We Diagnose &amp; Engineer</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Core Web Vitals Pass Guarantee:</strong> LCP &lt; 2.5s, INP &lt; 200ms, CLS &lt; 0.1</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>JavaScript SEO:</strong> Clean SSR/SSG rendering for Googlebot and Bingbot</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Crawl Budget Optimization:</strong> Log file analysis &amp; duplicate URL pruning</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Dynamic XML Sitemaps &amp; Robots Directives:</strong> Instant discovery &amp; indexing</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Connected Schema Graph:</strong> Rich snippets, breadcrumbs, &amp; organization entities</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>International Hreflang Configuration:</strong> Multi-region &amp; multi-lingual mapping</span>
               </li>
             </ul>
           </div>
 
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Why Next.js &amp; Modern Frameworks Need Specialized Technical SEO</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Why Next.js &amp; Modern Frameworks Need Specialized Technical SEO</h3>
           <p>
             Client-side rendered React applications often present empty HTML shells to search crawlers, resulting in delayed indexing or missed keyword context. We configure hybrid pre-rendering, edge caching, and incremental static regeneration (ISR) so that every page delivers 100% crawlable, semantic HTML to search engines within milliseconds.
           </p>

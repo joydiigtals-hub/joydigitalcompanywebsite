@@ -4,13 +4,12 @@ import React from "react";
 
 /**
  * DigitalNetworkBackground
- *
- * Lightweight, accessible hero background for Joy Digital.
- * Combines subtle radial purple/blue gradient glows with a delicate
- * SVG digital grid and connecting geometric nodes.
- *
- * Designed to zero-out CPU load (no canvas loops), maintain high contrast
- * for readability, and honor `prefers-reduced-motion`.
+ * Premium depth background with:
+ * - Multi-stop rich violet & royal purple gradient
+ * - Luminous ambient glow spheres (deep purple & subtle lime halo)
+ * - Modern abstract tech grid with coordinate intersection markers
+ * - Subtle tech connection paths with soft pulsing nodes
+ * - Radial vignette mask to preserve high text contrast
  */
 export default function DigitalNetworkBackground() {
   return (
@@ -18,93 +17,105 @@ export default function DigitalNetworkBackground() {
       aria-hidden="true"
       className="absolute inset-0 pointer-events-none overflow-hidden select-none z-0"
     >
-      {/* 1. Deep Navy/Purple Base Gradient Layer */}
-      <div className="absolute inset-0 bg-[#0B0914]" />
-
-      {/* 2. Soft Ambient Radial Glows (Purple & Blue) */}
-      <div
-        className="absolute -top-20 right-1/4 w-[650px] lg:w-[800px] h-[650px] lg:h-[800px] rounded-full bg-gradient-to-tr from-purple-700/20 via-violet-600/15 to-indigo-600/10 blur-[140px] motion-safe:animate-pulse"
-        style={{ animationDuration: "10s" }}
+      {/* 1. Multi-Stop Deep Violet to Rich Purple Gradient Base */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: `
+            radial-gradient(ellipse 90% 70% at 50% -15%, rgba(139, 92, 246, 0.22) 0%, rgba(53, 16, 123, 0) 70%),
+            radial-gradient(circle 600px at 12% 25%, rgba(109, 40, 217, 0.28) 0%, transparent 65%),
+            radial-gradient(circle 550px at 88% 75%, rgba(59, 17, 126, 0.45) 0%, transparent 60%),
+            linear-gradient(160deg, #1F0742 0%, #3B1580 40%, #290C5D 75%, #180533 100%)
+          `
+        }}
       />
-      <div
-        className="absolute -bottom-28 -left-20 w-[550px] lg:w-[700px] h-[550px] lg:h-[700px] rounded-full bg-gradient-to-br from-blue-700/15 via-indigo-900/20 to-purple-900/10 blur-[130px] motion-safe:animate-pulse"
-        style={{ animationDuration: "14s" }}
-      />
-      <div className="absolute top-1/3 left-1/3 w-[400px] lg:w-[500px] h-[400px] lg:h-[500px] rounded-full bg-violet-600/10 blur-[120px]" />
 
-      {/* 3. Subtle Digital Grid Pattern with Vignette Fade */}
+      {/* 2. Ambient Atmosphere Glow Blobs */}
+      {/* Top-center rich purple illumination */}
+      <div className="absolute -top-28 left-1/2 -translate-x-1/2 w-[720px] h-[480px] bg-purple-600/20 rounded-full blur-[130px]" />
+      
+      {/* Left-side vibrant violet accent */}
+      <div className="absolute top-1/4 -left-32 w-[520px] h-[520px] bg-[#7C3AED]/18 rounded-full blur-[140px]" />
+      
+      {/* Right-side subtle deep glow behind form */}
+      <div className="absolute top-1/3 -right-24 w-[560px] h-[560px] bg-[#4C1D95]/25 rounded-full blur-[140px]" />
+      
+      {/* Delicate Electric Lime signature glow (ambient, soft bridge with CTAs) */}
+      <div className="absolute -top-16 right-1/4 w-[420px] h-[420px] bg-[#C9F600]/[0.055] rounded-full blur-[150px]" />
+
+      {/* 3. Modern Technical Grid with Radial Vignette */}
       <svg
-        className="absolute inset-0 w-full h-full opacity-40 mix-blend-screen"
+        className="absolute inset-0 w-full h-full"
         xmlns="http://www.w3.org/2000/svg"
+        style={{
+          maskImage: "radial-gradient(ellipse 85% 75% at 50% 40%, black 25%, transparent 85%)",
+          WebkitMaskImage: "radial-gradient(ellipse 85% 75% at 50% 40%, black 25%, transparent 85%)",
+        }}
       >
         <defs>
-          {/* 48px Coordinate Grid Pattern */}
+          {/* 48px Precision Tech Grid */}
           <pattern
-            id="digital-network-grid"
+            id="premium-tech-grid"
             width="48"
             height="48"
             patternUnits="userSpaceOnUse"
           >
+            {/* Grid line */}
             <path
               d="M 48 0 L 0 0 0 48"
               fill="none"
-              stroke="#A78BFA"
-              strokeWidth="0.6"
+              stroke="#FFFFFF"
+              strokeWidth="0.75"
               strokeOpacity="0.08"
             />
-            {/* Subtle Intersection Node */}
+            {/* Subtle Grid Intersection Cross / Dot */}
             <circle
               cx="48"
               cy="0"
               r="1.2"
-              fill="#A78BFA"
-              fillOpacity="0.22"
+              fill="#FFFFFF"
+              fillOpacity="0.2"
             />
           </pattern>
-
-          {/* Vignette Mask: Keeps background soft and ensures high contrast behind text */}
-          <radialGradient id="network-vignette" cx="50%" cy="40%" r="65%">
-            <stop offset="0%" stopColor="#fff" stopOpacity="0.8" />
-            <stop offset="60%" stopColor="#fff" stopOpacity="0.4" />
-            <stop offset="100%" stopColor="#fff" stopOpacity="0.05" />
-          </radialGradient>
-
-          <mask id="grid-mask">
-            <rect width="100%" height="100%" fill="url(#network-vignette)" />
-          </mask>
         </defs>
 
-        {/* Pattern applied with mask */}
         <rect
           width="100%"
           height="100%"
-          fill="url(#digital-network-grid)"
-          mask="url(#grid-mask)"
+          fill="url(#premium-tech-grid)"
         />
 
-        {/* 4. Restrained Geometric Network Connecting Lines & Nodes */}
-        <g stroke="#C4B5FD" strokeOpacity="0.12" strokeWidth="1" strokeDasharray="3 4" fill="none">
-          {/* Left Hero Area Network Accent */}
-          <path d="M 96 144 L 192 192 L 288 144 L 384 240" />
-          <path d="M 192 192 L 192 288 L 96 336" />
-          {/* Right Form Backing Geometric Accent */}
-          <path d="M 864 192 L 960 144 L 1056 240 L 1152 192" />
-          <path d="M 960 144 L 960 288 L 1056 336" />
+        {/* 4. Elegant Abstract Tech Network Lines (Faint, Sophisticated) */}
+        <g
+          stroke="#FFFFFF"
+          strokeOpacity="0.16"
+          strokeWidth="1"
+          strokeDasharray="4 6"
+          fill="none"
+        >
+          {/* Top-left circuit bridge */}
+          <path d="M 48 96 L 144 96 L 240 192 L 384 192" />
+          <path d="M 240 192 L 240 336 L 144 384" />
+          
+          {/* Top-right subtle balance lines */}
+          <path d="M 816 144 L 960 144 L 1056 240 L 1200 240" />
+          <path d="M 960 144 L 960 288 L 1056 336 L 1152 336" />
         </g>
 
-        {/* Glowing Geometric Accent Nodes */}
-        <g fill="#A78BFA">
-          <circle cx="192" cy="192" r="2.5" fillOpacity="0.35" />
-          <circle cx="288" cy="144" r="2" fillOpacity="0.3" />
-          <circle cx="384" cy="240" r="2.5" fillOpacity="0.35" />
-          <circle cx="960" cy="144" r="2.5" fillOpacity="0.35" />
-          <circle cx="1056" cy="240" r="2" fillOpacity="0.3" />
-          <circle cx="1152" cy="192" r="2.5" fillOpacity="0.35" />
+        {/* 5. Electric Lime Micro Tech Nodes (Glow highlights) */}
+        <g fill="#C9F600">
+          <circle cx="144" cy="96" r="2.5" fillOpacity="0.5" />
+          <circle cx="240" cy="192" r="3" fillOpacity="0.6" />
+          <circle cx="384" cy="192" r="2.5" fillOpacity="0.45" />
+          <circle cx="240" cy="336" r="2" fillOpacity="0.4" />
+          <circle cx="960" cy="144" r="3" fillOpacity="0.55" />
+          <circle cx="1056" cy="240" r="2.5" fillOpacity="0.5" />
+          <circle cx="1056" cy="336" r="2" fillOpacity="0.4" />
         </g>
       </svg>
 
-      {/* 5. Soft Bottom Vignette for Seamless Transition into Content */}
-      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0B0914] to-transparent pointer-events-none" />
+      {/* 6. Subtle Bottom Gradient Edge Transition */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#3B1580] to-transparent pointer-events-none" />
     </div>
   );
 }

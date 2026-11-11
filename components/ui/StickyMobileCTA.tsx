@@ -26,13 +26,13 @@ export default function StickyMobileCTA() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919080026133";
 
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-[100] lg:hidden animate-fade-in pb-safe">
+    <div className="fixed bottom-0 left-0 w-full bg-[#3B1580] border-t border-[#FFFFFF]/20 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-[100] lg:hidden animate-fade-in pb-safe">
       <div className="flex items-center justify-between px-2 py-2 gap-2">
         <a
           href={`https://wa.me/${whatsappNumber}?text=Hi%20Joy%20Digital,%20I%20want%20to%20discuss%20a%20project.`}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-[1.5] bg-[#25D366] hover:bg-[#128C7E] text-white flex flex-col items-center justify-center py-2 rounded-xl shadow-md transition-colors"
+          className="flex-[1.5] bg-[#C9F600] hover:bg-[#b8f000] text-[#3B1580] font-bold flex flex-col items-center justify-center py-2 rounded-xl shadow-md transition-colors"
         >
           <span className="text-[13px] font-extrabold flex items-center gap-1.5"><i className="fa-brands fa-whatsapp text-lg"></i> WhatsApp</span>
           <span className="text-[9px] opacity-90">Instant Reply</span>
@@ -40,7 +40,7 @@ export default function StickyMobileCTA() {
 
         <a
           href={`mailto:${contactEmail}`}
-          className="flex-1 flex flex-col items-center justify-center gap-1 py-1.5 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors"
+          className="flex-1 flex flex-col items-center justify-center gap-1 py-1.5 text-[#FFFFFF] hover:bg-[#FFFFFF]/10 rounded-lg transition-colors"
         >
           <i className="fa-solid fa-envelope text-xl"></i>
           <span className="text-[10px] font-bold">Email Us</span>

@@ -37,7 +37,7 @@ export default function EnterpriseWebSolutions() {
             <Link href="/contact" className="px-8 py-4 bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold rounded-lg transition-colors w-full sm:w-auto text-lg">
               Get Your Global Strategy
             </Link>
-            <Link href="/case-studies" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold rounded-lg transition-colors w-full sm:w-auto text-lg">
+            <Link href="/case-studies" className="px-8 py-4 bg-primary/10 hover:bg-primary/20 border border-white/20 text-white font-bold rounded-lg transition-colors w-full sm:w-auto text-lg">
               View Our Work
             </Link>
           </div>
@@ -45,58 +45,58 @@ export default function EnterpriseWebSolutions() {
       </section>
 
       {/* Intro & Pitch */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-primary">
         <div className="max-w-4xl mx-auto px-6">
-          <p className="text-lg text-slate-700 leading-relaxed mb-8">
-            We specialize in <strong className="text-slate-900">custom website development</strong> that transforms your online presence from a simple brochure into a high-converting, scalable business asset. 
+          <p className="text-lg text-secondary leading-relaxed mb-8">
+            We specialize in <strong className="text-white">custom website development</strong> that transforms your online presence from a simple brochure into a high-converting, scalable business asset. 
           </p>
-          <p className="text-lg text-slate-700 leading-relaxed mb-8">
-            Whether you are a fast-growing tech startup or an established multinational brand, our <strong className="text-slate-900">enterprise website design</strong> solutions are specifically tailored to meet the complex demands of a global audience. We don't just build websites; we engineer state-of-the-art digital experiences that captivate users and drive measurable ROI across borders. 
+          <p className="text-lg text-secondary leading-relaxed mb-8">
+            Whether you are a fast-growing tech startup or an established multinational brand, our <strong className="text-white">enterprise website design</strong> solutions are specifically tailored to meet the complex demands of a global audience. We don't just build websites; we engineer state-of-the-art digital experiences that captivate users and drive measurable ROI across borders. 
           </p>
-          <p className="text-lg text-slate-700 leading-relaxed mb-8">
-            However, a visually stunning website is only half the equation. As a specialized <strong className="text-slate-900">generative engine optimization agency</strong>, we ensure your brand achieves maximum visibility in the rapidly evolving landscape of AI-driven search engines (like ChatGPT, Perplexity, and AI Overviews). By combining technical excellence with advanced search strategies, we future-proof your digital footprint so that your business commands authority, no matter how your customers search.
+          <p className="text-lg text-secondary leading-relaxed mb-8">
+            However, a visually stunning website is only half the equation. As a specialized <strong className="text-white">generative engine optimization agency</strong>, we ensure your brand achieves maximum visibility in the rapidly evolving landscape of AI-driven search engines (like ChatGPT, Perplexity, and AI Overviews). By combining technical excellence with advanced search strategies, we future-proof your digital footprint so that your business commands authority, no matter how your customers search.
           </p>
-          <p className="text-lg text-slate-700 leading-relaxed">
-            From headless commerce architectures to lightning-fast Next.js applications, our comprehensive <strong className="text-slate-900">full-stack web development services</strong> cover it all. We handle the heavy lifting of complex backend infrastructure and premium frontend aesthetics, allowing you to focus on scaling your business. Partner with Joy Digital today, and let’s build a powerful digital ecosystem that outpaces the competition worldwide.
+          <p className="text-lg text-secondary leading-relaxed">
+            From headless commerce architectures to lightning-fast Next.js applications, our comprehensive <strong className="text-white">full-stack web development services</strong> cover it all. We handle the heavy lifting of complex backend infrastructure and premium frontend aesthetics, allowing you to focus on scaling your business. Partner with Joy Digital today, and let’s build a powerful digital ecosystem that outpaces the competition worldwide.
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-slate-50 border-t border-slate-200">
+      <section className="py-20 bg-primary-dark border-t border-white/[0.18]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Core Competencies for Global Brands</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Core Competencies for Global Brands</h2>
             <div className="w-24 h-1 bg-[#EA580C] mx-auto rounded"></div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+            <div className="bg-primary p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
               <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6">
                 <i className="fa-solid fa-code"></i>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">Custom Website Development Engineered for Global Scale</h3>
-              <p className="text-slate-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-white mb-4">Custom Website Development Engineered for Global Scale</h3>
+              <p className="text-secondary leading-relaxed">
                 We build high-performance, scalable web applications that handle international traffic with sub-second load times. Our architectures are built for security, speed, and seamless global reach.
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+            <div className="bg-primary p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
               <div className="w-14 h-14 bg-orange-50 text-[#EA580C] rounded-xl flex items-center justify-center text-2xl mb-6">
                 <i className="fa-solid fa-microchip"></i>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">A Generative Engine Optimization Agency for the AI Era</h3>
-              <p className="text-slate-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-white mb-4">A Generative Engine Optimization Agency for the AI Era</h3>
+              <p className="text-secondary leading-relaxed">
                 Traditional SEO isn't enough. We optimize your brand to dominate AI search engines like ChatGPT and Perplexity, establishing unmatched authority in the generative search landscape.
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+            <div className="bg-primary p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
               <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-2xl mb-6">
                 <i className="fa-solid fa-layer-group"></i>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">Full-Stack Web Development Services That Drive Revenue</h3>
-              <p className="text-slate-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-white mb-4">Full-Stack Web Development Services That Drive Revenue</h3>
+              <p className="text-secondary leading-relaxed">
                 From headless eCommerce to robust SaaS platforms, our full-stack engineering team handles complex backend logic and stunning frontend UI to maximize your global conversions.
               </p>
             </div>

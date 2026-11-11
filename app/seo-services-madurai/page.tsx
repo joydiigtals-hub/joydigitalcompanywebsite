@@ -75,28 +75,28 @@ export default function SeoServicesMadurai() {
             As a full-stack <strong>SEO company in Madurai</strong>, we move beyond basic keyword placement. Traditional agencies often focus on generic blogs that generate empty traffic from outside your service area. We prioritize local search relevance: performing comprehensive technical site audits, fixing crawl barriers, ensuring accurate Name-Address-Phone (NAP) consistency across directories, and optimizing your Google Business Profile for high-intent search terms like <em>&quot;best clinic in Madurai&quot;</em> or <em>&quot;industrial machinery supplier Madurai&quot;</em>.
           </p>
 
-          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">
+          <h3 className="text-xl font-bold text-white mt-8 mb-4">
             Dominating the Google Maps Local 3-Pack in Madurai
           </h3>
           <p>
             Local search queries represent high-intent buyers looking to call, get GPS directions, or book consultations immediately. Our localized framework synchronizes citations across trusted Indian business directories (Justdial, Sulekha, IndiaMART), audits category selections, eliminates duplicate listings, and embeds structured LocalBusiness JSON-LD schemas into your website. This signals clear geographical authority to Googlebot, helping your business capture prime spots in local map pack results.
           </p>
 
-          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">
+          <h3 className="text-xl font-bold text-white mt-8 mb-4">
             Core Web Vitals Speed & Technical On-Page Optimization
           </h3>
           <p>
             Google search crawlers consistently deprioritize slow, bloated websites. If your website takes 4+ seconds to load on mobile connections, potential customers bounce to competitors before reading your offers. As an engineering-first <strong>SEO agency in Madurai</strong>, we analyze layout rendering, eliminate unused JavaScript, optimize WebP assets, and configure clean semantic headings (H1, H2, H3) and canonical tags so search engines easily crawl and rank your service pages.
           </p>
 
-          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">
+          <h3 className="text-xl font-bold text-white mt-8 mb-4">
             Preparing for Google AI Overviews & Local Entity Search
           </h3>
           <p>
             Search is rapidly evolving toward AI answers and conversational queries. We structure your website content into structured question-and-answer formats and clear entity hierarchies. This ensures your business not only ranks on traditional Google blue links, but is also cited in Google AI Overviews and modern conversational search tools.
           </p>
 
-          <h3 className="text-xl font-bold text-[#0F172A] mt-8 mb-4">
+          <h3 className="text-xl font-bold text-white mt-8 mb-4">
             Transparent Lead Tracking & Conversion Analytics
           </h3>
           <p>
