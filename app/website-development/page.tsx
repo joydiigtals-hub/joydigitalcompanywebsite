@@ -6,6 +6,13 @@ import IndustryPackagesSection from "@/components/sections/IndustryPackagesSecti
 export const metadata: Metadata = {
   title: "Custom Next.js Web Development",
   description: "Replace legacy web bloat with scalable, serverless Next.js architecture engineered for maximum conversions. Ship enterprise code faster. Audit your site today.",
+  keywords: [
+      "Custom Web Development",
+      "Next.js Web Development Services",
+      "Full-Stack Web Engineering",
+      "Enterprise Web Solutions",
+      "Modern Web App Development"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-development",
     languages: {

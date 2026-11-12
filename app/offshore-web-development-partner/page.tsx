@@ -11,6 +11,13 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   title: "Offshore Next.js Partner",
   description: "Scale agency margins with a white-label Next.js & React partner in India. 100% NDA protected, EST/GMT time sync, and 95+ PageSpeed guaranteed.",
+  keywords: [
+      "Offshore Web Development Partner",
+      "Hire Dedicated Next.js Developers",
+      "White Label Web Development",
+      "Software Outsourcing India",
+      "Cost Effective Web Engineering"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/offshore-web-development-partner",
     languages: {

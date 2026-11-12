@@ -6,6 +6,13 @@ import ExportLeadForm from "@/components/ui/ExportLeadForm";
 export const metadata: Metadata = {
   title: "B2B Export Web Development",
   description: "Digital B2B portals and SEO for export-import houses. International buyer sourcing platforms, digital catalogs, and global trade lead engines.",
+  keywords: [
+      "Export Import Website Development",
+      "Export Business Web Design",
+      "International SEO Services",
+      "B2B Export Marketing",
+      "International Buyer Lead Generation"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-export-and-import",
   },

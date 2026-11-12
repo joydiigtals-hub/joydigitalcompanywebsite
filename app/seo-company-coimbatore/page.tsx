@@ -7,6 +7,13 @@ export const metadata: Metadata = {
     absolute: "SEO Company in Coimbatore | Top SEO Agency | Joy Digital",
   },
   description: "Looking for the best SEO company in Coimbatore? We rank local businesses, retail brands, and industrial suppliers on Google Page 1. Free SEO audit.",
+  keywords: [
+      "SEO Company Coimbatore",
+      "SEO Services Coimbatore",
+      "Best SEO Agency Coimbatore",
+      "Local SEO Coimbatore",
+      "Digital Marketing Coimbatore"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/seo-company-coimbatore",
   },

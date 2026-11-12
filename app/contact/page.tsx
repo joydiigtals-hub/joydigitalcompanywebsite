@@ -11,6 +11,13 @@ import { SITE_URL, siteConfig } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   title: "Contact Us & Free Consultation",
   description: "Get in touch with our digital specialists. Request a free SEO audit, custom website quotes, or logo design consulting from our office.",
+  keywords: [
+      "Contact Joy Digital",
+      "Web Development Consultation",
+      "SEO Agency Contact",
+      "Website Enquiry",
+      "Hire Next.js Developers"
+  ],
   alternates: {
     canonical: `${SITE_URL}/contact`,
     languages: {

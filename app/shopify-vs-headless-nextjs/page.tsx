@@ -11,6 +11,13 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   title: "Shopify vs Headless Next.js",
   description: "Compare Shopify Liquid vs Headless Next.js storefronts. Learn how sub-second load times reduce cart abandonment and boost conversions.",
+  keywords: [
+      "Shopify vs Headless Next.js",
+      "Headless Commerce Performance",
+      "Shopify Speed Optimization",
+      "Next.js Ecommerce Architecture",
+      "Ecommerce ROI Analysis"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/shopify-vs-headless-nextjs",
   },

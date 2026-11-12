@@ -7,6 +7,13 @@ import { Sparkles, ArrowLeft, CheckCircle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Get Quote Modal Demo",
   description: "Interactive demo and test sandbox for GetQuoteModal component.",
+  keywords: [
+      "Quote Demo",
+      "Quote Demo Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   robots: {
     index: false,
     follow: false,

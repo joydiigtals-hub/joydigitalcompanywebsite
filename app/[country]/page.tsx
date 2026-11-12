@@ -112,6 +112,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: data.title,
     description: data.description,
+    keywords: [
+      `Web Development ${countryLower.toUpperCase()}`,
+      `SEO Agency ${countryLower.toUpperCase()}`,
+      "Next.js Web Development",
+      "Enterprise SEO Services",
+      "Joy Digital"
+    ],
     alternates: {
       canonical: `https://www.joydigital.in/${countryLower}`,
       languages: {

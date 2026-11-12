@@ -5,6 +5,13 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Digital Marketing Agency Chennai",
   description: "Joy Digital is a result-driven digital marketing agency in Chennai. We offer local SEO, social media marketing, Google Ads, and conversion-optimized websites.",
+  keywords: [
+      "Digital Marketing Agency in Chennai",
+      "Top Digital Marketing Company Chennai",
+      "SEO & Web Design Chennai",
+      "B2B Lead Generation Chennai",
+      "Google Ads & SEO Agency Chennai"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/digital-marketing-agency-in-chennai",
   },

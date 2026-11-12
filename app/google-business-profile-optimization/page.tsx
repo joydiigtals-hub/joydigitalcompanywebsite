@@ -6,6 +6,13 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   title: "GBP Optimization Services",
   description: "Expert Google Business Profile optimization to rank in Google Maps 3-Pack, gain local visibility, and generate phone calls with Joy Digital.",
+  keywords: [
+      "Google Business Profile Optimization",
+      "Google Business Profile Optimization Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/google-business-profile-optimization",
   },

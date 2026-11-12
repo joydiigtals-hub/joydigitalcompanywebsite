@@ -18,6 +18,13 @@ export const metadata: Metadata = {
     absolute: BLOG_TITLE,
   },
   description: BLOG_DESC,
+  keywords: [
+      "Web Development Blog",
+      "SEO Guides & Insights",
+      "Technical SEO Blog",
+      "Next.js Tutorials",
+      "Local SEO Tips"
+  ],
   alternates: {
     canonical: `${SITE_URL}/blog`,
   },

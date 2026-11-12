@@ -11,6 +11,14 @@ export const metadata: Metadata = {
   },
   description:
     "Affordable SEO services in Chennai: technical SEO, on-page, local SEO and content. See our case studies and get a free SEO audit.",
+  keywords: [
+      "SEO Services Chennai",
+      "SEO Company in Chennai",
+      "Best SEO Agency Chennai",
+      "Local SEO Services Chennai",
+      "Digital Marketing Agency Chennai",
+      "Joy Digital Chennai"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/seo-services-chennai",
   },

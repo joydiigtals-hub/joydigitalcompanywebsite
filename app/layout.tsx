@@ -21,6 +21,17 @@ export const metadata: Metadata = {
     template: "%s | Joy Digital",
   },
   description: "Joy Digital builds high-performance Next.js websites and data-driven SEO strategies that generate qualified enquiries and measurable organic growth.",
+  keywords: [
+    "Web Development Company",
+    "Custom Website Development",
+    "SEO Services",
+    "Next.js Development Agency",
+    "Local SEO Services",
+    "B2B Web Design",
+    "Joy Digital",
+    "Technical SEO",
+    "Digital Marketing Agency"
+  ],
   authors: [{ name: "Joy Digital" }],
   publisher: "Joy Digital",
   robots: {

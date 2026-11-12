@@ -6,6 +6,13 @@ import { SITE_URL } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   title: "HTML Sitemap Index",
   description: "Complete list of all website pages, regional hubs, industry solutions, and free business tools on JoyDigital.in.",
+  keywords: [
+      "Sitemap",
+      "Sitemap Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   alternates: {
     canonical: `${SITE_URL}/sitemap`,
   },

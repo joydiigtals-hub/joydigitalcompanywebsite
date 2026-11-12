@@ -14,6 +14,13 @@ const Accordion = dynamic(() => import("@/components/ui/Accordion"));
 export const metadata: Metadata = {
   title: "About Our Web Agency",
   description: "Learn about Joy Digital, a growth agency building custom Next.js websites, local SEO campaigns, and digital solutions for companies worldwide.",
+  keywords: [
+      "About Joy Digital",
+      "Web Development Agency",
+      "Next.js Specialists",
+      "SEO Experts India",
+      "Saravanan L Web Architect"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/about",
   },

@@ -5,6 +5,13 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Logo Design & Branding",
   description: "Joy Digital is a professional logo design company in Chennai, India. We design creative, custom vector logos, brand color boards, and corporate identity sets.",
+  keywords: [
+      "Logo Design Services",
+      "Logo Design Services Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/logo-design-services",
   },

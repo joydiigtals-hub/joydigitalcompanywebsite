@@ -6,6 +6,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Websites for Consulting Firms",
   description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
+  keywords: [
+      "Consulting Company Website Development",
+      "Corporate Consulting Web Design",
+      "B2B Advisory SEO",
+      "Professional Services Web Development",
+      "High Ticket Lead Generation"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-consulting-companies",
   },

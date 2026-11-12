@@ -9,6 +9,13 @@ export const metadata: Metadata = {
     absolute: "B2B Textile Manufacturer Website Design & SEO | Joy Digital",
   },
   description: "High-converting B2B website design & international SEO for textile manufacturers, spinning mills & garment exporters. Drive RFQs, sample requests & global sales!",
+  keywords: [
+      "Textile Manufacturer Website Development",
+      "Textile Export Web Design",
+      "Tiruppur Garment Exporter SEO",
+      "Garment Manufacturing Web Portal",
+      "B2B Textile Supplier SEO"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-textile-manufacturers",
   },

@@ -5,6 +5,13 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Digital Marketing Agency Madurai",
   description: "Looking for the best digital marketing agency in Madurai? We run high-converting social media ads, PPC campaigns, and Local SEO systems.",
+  keywords: [
+      "Digital Marketing Agency Madurai",
+      "Online Marketing Company Madurai",
+      "SEO & Social Media Marketing Madurai",
+      "Local Lead Generation Madurai",
+      "Joy Digital Madurai Services"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/digital-marketing-agency-madurai",
   },

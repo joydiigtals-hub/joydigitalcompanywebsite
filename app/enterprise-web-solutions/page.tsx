@@ -7,6 +7,13 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   title: "Enterprise Web Solutions",
   description: "Accelerate your international growth with custom website development and generative engine optimization. Partner with a premier global SEO agency.",
+  keywords: [
+      "Enterprise Web Solutions",
+      "Scalable Cloud Architecture",
+      "Enterprise Next.js Applications",
+      "High Security Web Development",
+      "B2B Enterprise Portal"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/enterprise-web-solutions",
   },

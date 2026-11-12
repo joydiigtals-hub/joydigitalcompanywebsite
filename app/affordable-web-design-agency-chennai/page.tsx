@@ -5,6 +5,13 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Affordable Web Design Chennai",
   description: "Looking for an affordable web design agency in Chennai? Get custom Next.js websites at a competitive website design price in Chennai.",
+  keywords: [
+      "Affordable Web Design Agency Chennai",
+      "Budget Friendly Website Design Chennai",
+      "Low Cost Web Development Chennai",
+      "Quality Small Business Web Design",
+      "Next.js Website Packages Chennai"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/affordable-web-design-agency-chennai",
   },

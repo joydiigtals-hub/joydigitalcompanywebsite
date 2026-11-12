@@ -6,6 +6,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Law Firm Website Design & SEO",
   description: "Custom website design and SEO for law firms and attorneys. Confidential client consultation forms, attorney profiles, and top Google rankings.",
+  keywords: [
+      "Law Firm Website Development",
+      "Legal Web Design Services",
+      "SEO for Lawyers & Advocates",
+      "Attorney Website Design",
+      "Legal Practice Lead Generation"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-law-firms",
   },

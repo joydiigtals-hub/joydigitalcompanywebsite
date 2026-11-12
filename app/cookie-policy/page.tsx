@@ -9,6 +9,13 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   title: "Cookie Policy",
   description: "Read the official Cookie Policy for Joy Digital to understand how we use cookies and tracking technologies to optimize your browsing experience.",
+  keywords: [
+      "Cookie Policy",
+      "Cookie Policy Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/cookie-policy",
   },

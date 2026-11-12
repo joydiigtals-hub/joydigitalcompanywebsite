@@ -6,6 +6,13 @@ import { getPostBySlug } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Tour Operator Web Development",
   description: "Expert tour operator website development. We build custom booking portals, day-by-day itineraries, and high-converting travel websites for DMCs.",
+  keywords: [
+      "Tour Operator Website Development",
+      "Tour Booking Web Design",
+      "Safari Tour Operator SEO",
+      "Travel Booking Engine",
+      "Direct Tourism Lead Generation"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/tour-operator-website-development",
   },

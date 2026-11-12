@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   title: "Case Study: You & Me Voyage | Custom Next.js Website Chennai",
   description:
     "See how Joy Digital built a custom Next.js travel platform with an interactive 3-step tour enquiry planner and direct WhatsApp lead routing for You & Me Voyage, Chennai.",
+  keywords: [
+      "Case Studies/you And Me Voyage",
+      "Case Studies/you And Me Voyage Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/case-studies/you-and-me-voyage",
   },

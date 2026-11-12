@@ -6,6 +6,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Manufacturing Website Design",
   description: "B2B manufacturing website design and SEO. Digital machinery catalogs, instant RFQ inquiry engines, and international buyer lead generation.",
+  keywords: [
+      "Manufacturing Company Website Development",
+      "Industrial Web Design",
+      "B2B Manufacturing SEO",
+      "OEM Supplier Website",
+      "Industrial RFQ Generation"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-manufacturing-companies",
   },

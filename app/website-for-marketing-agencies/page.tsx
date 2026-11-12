@@ -8,6 +8,13 @@ export const metadata: Metadata = {
     absolute: "Marketing Agency Website Design & SEO Services | Joy Digital",
   },
   description: "High-converting website design & SEO for digital marketing agencies, PR firms & ad studios. Show case studies, generate audit leads & win high-retainer clients!",
+  keywords: [
+      "Marketing Agency Website Development",
+      "Creative Agency Web Design",
+      "White Label Web Development",
+      "Next.js Partner for Agencies",
+      "High Performance Agency Sites"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-marketing-agencies",
   },

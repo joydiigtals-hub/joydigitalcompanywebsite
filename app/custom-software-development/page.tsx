@@ -5,6 +5,13 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Custom Software Development",
   description: "Joy Digital offers custom software development services. We build secure database applications, dashboard portals, and customized APIs.",
+  keywords: [
+      "Custom Software Development",
+      "Custom Software Development Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/custom-software-development",
   },

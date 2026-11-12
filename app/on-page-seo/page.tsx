@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "On-Page SEO Services & Semantic Content Optimization",
   description:
     "Expert On-Page SEO services by Joy Digital. High-intent keyword mapping, meta tags, semantic HTML5, header hierarchy, internal link architecture, and search intent alignment.",
+  keywords: [
+      "On-Page SEO Services",
+      "Content Optimization",
+      "Meta Tag & Heading Optimization",
+      "Internal Linking Architecture",
+      "Search Intent Optimization"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/on-page-seo",
   },

@@ -6,6 +6,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Small Business Website Design",
   description: "Fast Next.js website design and local SEO for small businesses and startups. Rank on Google Maps, generate leads, and grow revenue.",
+  keywords: [
+      "Small Business Website Development",
+      "Affordable Web Design for Small Business",
+      "Local Business SEO",
+      "Lead Generating Small Business Sites",
+      "Mobile Responsive Web Design"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-small-business",
   },

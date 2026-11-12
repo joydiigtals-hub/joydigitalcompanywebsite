@@ -14,6 +14,15 @@ export const metadata: Metadata = {
     absolute: PAGE_TITLE,
   },
   description: PAGE_DESC,
+  keywords: [
+      "Custom Web Development",
+      "Web Development Company",
+      "SEO Agency Services",
+      "Next.js Development Agency",
+      "Local SEO Services",
+      "B2B Website Design",
+      "Joy Digital"
+  ],
   authors: [{ name: "Joy Digital" }],
   publisher: "Joy Digital",
   robots: {

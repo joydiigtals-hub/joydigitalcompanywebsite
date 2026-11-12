@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   },
   description:
     "Custom website design and development built for speed and leads. Serving Chennai businesses. Get a free quote and project roadmap.",
+  keywords: [
+      "Custom Website Development",
+      "Tailored Web Architecture",
+      "High Performance Web Design",
+      "B2B Web Applications",
+      "Next.js Web Agency"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/custom-website-development",
   },

@@ -5,6 +5,13 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "SEO Company Madurai",
   description: "Looking for the best SEO company in Madurai? We rank local businesses, retail stores, and service firms on Google Page 1. Get a free SEO blueprint.",
+  keywords: [
+      "SEO Company Madurai",
+      "Search Engine Optimization Madurai",
+      "Local SEO Madurai 3-Pack",
+      "Google Ranking Services Madurai",
+      "Digital Marketing Madurai"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/seo-company-madurai",
   },

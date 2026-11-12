@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.joydigital.in"),
   title: "Free Online Business Tools",
   description: "Boost productivity with free online business tools. Calculate GST, create PDF invoices & quotes, build QR codes, and generate WhatsApp chat links.",
+  keywords: [
+      "Free Tools",
+      "Free Tools Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/free-tools",
   },

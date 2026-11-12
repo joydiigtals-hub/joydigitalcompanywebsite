@@ -8,6 +8,13 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   title: "Websites for Insurance Agents",
   description: "Custom website design & local SEO for insurance agents in India. Rank on Google, generate policy leads, and build client trust with Joy Digital.",
+  keywords: [
+      "Insurance Agent Website Development",
+      "Insurance Broker Web Design",
+      "Insurance SEO Services",
+      "Policy Lead Generation Funnels",
+      "Financial Services Web Design"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-insurance-agents",
   },

@@ -9,6 +9,13 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   title: "Website Disclaimer",
   description: "Read the official website disclaimer, legal notices, and limitation of liability policy for Joy Digital web design & digital marketing services.",
+  keywords: [
+      "Disclaimer",
+      "Disclaimer Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/disclaimer",
   },

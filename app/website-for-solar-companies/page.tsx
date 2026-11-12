@@ -10,6 +10,13 @@ export const metadata: Metadata = {
     absolute: "Solar EPC Website Design & SEO Services | Joy Digital",
   },
   description: "High-converting website design & local SEO for solar installers & EPC contractors in India. Get ROI calculators, PM Surya Ghar leads & C&I site survey bookings!",
+  keywords: [
+      "Solar Company Website Development",
+      "Solar EPC Web Design",
+      "Solar SEO Services",
+      "Commercial Solar Lead Generation",
+      "Clean Energy Web Solutions"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-solar-companies",
   },

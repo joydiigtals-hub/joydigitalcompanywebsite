@@ -7,6 +7,13 @@ import { getPostBySlug } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Real Estate Website Design",
   description: "Custom website design and SEO for real estate brokers and developers. Fast property listings, NRI buyer inquiry funnels, and local SEO.",
+  keywords: [
+      "Real Estate Website Development",
+      "Real Estate SEO Services",
+      "Builder & Contractor Website Design",
+      "Property Listing Portal",
+      "Real Estate Lead Generation"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-real-estate",
   },

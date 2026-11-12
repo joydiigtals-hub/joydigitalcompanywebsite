@@ -13,6 +13,13 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Saravanan L - Technical Web Specialist & Author",
   description: "Read technical articles, web performance breakdowns, and SEO architectures written by Saravanan L, Founder and Technical Web Specialist at Joy Digital.",
+  keywords: [
+      "Author/saravanan",
+      "Author/saravanan Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/author/saravanan",
   },

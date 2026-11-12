@@ -9,6 +9,13 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Read the Privacy Policy of Joy Digital to understand how we collect, use, and protect your personal information.",
+  keywords: [
+      "Privacy Policy",
+      "Privacy Policy Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/privacy-policy",
   },

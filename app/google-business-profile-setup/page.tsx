@@ -5,6 +5,13 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Google Business Profile Setup",
   description: "Joy Digital is a professional Google Business Profile optimization agency in Chennai, India. We verify and rank your business on Google Maps pack.",
+  keywords: [
+      "Google Business Profile Setup",
+      "Google Business Profile Setup Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/google-business-profile-setup",
   },

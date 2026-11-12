@@ -6,6 +6,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Logistics Website Design & SEO",
   description: "Custom website design and SEO for freight forwarders and logistics companies. Cargo tracking integrations, freight rate calculators, and B2B leads.",
+  keywords: [
+      "Logistics Website Development",
+      "Freight Forwarder Web Design",
+      "Shipping Company SEO",
+      "Supply Chain Portal Development",
+      "Cargo Tracking Web Design"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-logistics-and-shipping",
   },

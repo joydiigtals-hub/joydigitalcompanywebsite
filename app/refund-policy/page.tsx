@@ -9,6 +9,13 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   title: "Refund & Cancellation Policy",
   description: "Read the refund policy for website development, SEO, digital marketing, and custom software services provided by Joy Digital.",
+  keywords: [
+      "Refund Policy",
+      "Refund Policy Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/refund-policy",
   },

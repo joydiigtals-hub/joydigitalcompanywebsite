@@ -37,12 +37,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isNoindex = post.robots?.toLowerCase().includes("noindex");
   const isNofollow = post.robots?.toLowerCase().includes("nofollow");
 
+  const rawKeywords: (string | undefined)[] = [
+    post.focusKeyword,
+    ...(post.tags || []),
+    ...(post.secondaryKeywords ? post.secondaryKeywords.split(',').map((k: string) => k.trim()) : [])
+  ];
+  const blogKeywords: string[] = rawKeywords.filter((k): k is string => Boolean(k));
+
   return {
     title: title,
     description: description,
-    alternates: {
-      canonical: canonical,
-    },
+    keywords: blogKeywords.length > 0 ? blogKeywords : ["Web Development", "SEO Services", "Joy Digital"],
     robots: {
       index: !isNoindex,
       follow: !isNofollow,

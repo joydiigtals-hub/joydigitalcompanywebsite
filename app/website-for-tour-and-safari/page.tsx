@@ -5,6 +5,13 @@ import ToursTravelsWebPage from "../travel-website-development/page";
 export const metadata: Metadata = {
   title: "Tour & Safari Website Design",
   description: "Custom travel websites with itinerary builders, WhatsApp booking & multi-currency options. Boost direct travel bookings with Joy Digital!",
+  keywords: [
+      "Website For Tour And Safari",
+      "Website For Tour And Safari Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-tour-and-safari",
   },

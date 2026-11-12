@@ -5,6 +5,13 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Website Design Chennai",
   description: "Looking for the best website design company in Chennai? We design custom, high-speed corporate websites, hotels, and schools in Chennai.",
+  keywords: [
+      "Website Design Company Chennai",
+      "UI UX Web Design Chennai",
+      "Professional Web Designers Chennai",
+      "Responsive Website Design Chennai",
+      "Modern Web Agency Chennai"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-design-company-chennai",
   },

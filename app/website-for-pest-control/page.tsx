@@ -9,6 +9,13 @@ export const metadata: Metadata = {
     absolute: "Pest Control Website Design & SEO Services | Joy Digital",
   },
   description: "High-converting website design & local SEO for pest control companies. Drive emergency calls, WhatsApp bookings & qualified leads. Get a free audit today!",
+  keywords: [
+      "Pest Control Website Design",
+      "Pest Control SEO Services",
+      "Local SEO for Pest Control",
+      "Pest Control Marketing",
+      "Pest Inspection Lead Generation"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-pest-control",
   },

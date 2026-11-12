@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   },
   description:
     "Custom Next.js website development in Chennai. Fast, SEO-ready websites that bring leads via WhatsApp and forms. Free quote.",
+  keywords: [
+      "Website Development Company Chennai",
+      "Web Design Company in Chennai",
+      "Next.js Web Development Chennai",
+      "Best Web Developers Chennai",
+      "Custom Website Design Chennai"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-development-company-chennai",
   },

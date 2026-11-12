@@ -5,6 +5,13 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Website Design Coimbatore",
   description: "Looking for the best website design company in Coimbatore? We design custom, high-speed corporate portfolios, e-commerce stores, and coaching blogs.",
+  keywords: [
+      "Website Design Company Coimbatore",
+      "Web Development Company Coimbatore",
+      "Industrial Web Design Coimbatore",
+      "Next.js Web Agency Coimbatore",
+      "Business Website Design Coimbatore"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-design-company-coimbatore",
   },

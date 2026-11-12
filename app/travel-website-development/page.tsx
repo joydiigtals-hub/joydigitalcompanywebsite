@@ -7,6 +7,13 @@ import { getPostBySlug } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Custom Travel Agency Website Development & Next.js Travel Engine",
   description: "High-converting custom travel agency website development with instant Next.js travel engine speed, bespoke tour operator admin panel, and global SEO. Book your free consultation!",
+  keywords: [
+      "Travel Website Development",
+      "Travel Agency Web Design",
+      "Tour Operator SEO",
+      "Custom Itinerary Booking Engine",
+      "Direct Travel Booking Portal"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/travel-website-development",
   },

@@ -6,6 +6,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "School Website Design & Dev",
   description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
+  keywords: [
+      "School Website Development",
+      "School Website Design",
+      "SEO for Schools",
+      "School Admission Marketing",
+      "Education Institution Web Design"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-schools",
   },

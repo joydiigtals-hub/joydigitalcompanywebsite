@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "SEO Content Strategy & Copywriting Services",
   description:
     "Expert SEO content strategy and copywriting services by Joy Digital. Topical authority clustering, commercial intent copywriting, GEO & AI citation writing, and blog engines that drive pipeline growth.",
+  keywords: [
+      "SEO Content Writing",
+      "B2B Content Strategy",
+      "High-Converting Blog Articles",
+      "Search Optimized Copywriting",
+      "E-E-A-T Content Services"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/seo-content",
   },

@@ -11,6 +11,13 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   title: "Free Website & SEO Audit",
   description: "Claim your free website audit report from Joy Digital. Discover page speed bottlenecks, mobile layout errors, and SEO ranking opportunities.",
+  keywords: [
+      "Free Website Audit",
+      "Website Speed Test",
+      "Technical SEO Audit Tool",
+      "Core Web Vitals Audit",
+      "Free SEO Health Check"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/free-website-audit",
   },

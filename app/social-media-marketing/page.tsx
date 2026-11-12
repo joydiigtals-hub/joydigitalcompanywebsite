@@ -5,6 +5,13 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 export const metadata: Metadata = {
   title: "Social Media Marketing",
   description: "Joy Digital is a leading digital marketing agency in Chennai, India. We manage high-converting Facebook, Instagram, and LinkedIn ad campaigns to scale leads.",
+  keywords: [
+      "Social Media Marketing Services",
+      "B2B LinkedIn Marketing",
+      "Brand Visibility Campaigns",
+      "Organic Social Growth",
+      "Digital Marketing Agency"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/social-media-marketing",
   },

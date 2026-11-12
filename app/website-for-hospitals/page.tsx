@@ -6,6 +6,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Hospital Website Design & SEO",
   description: "Custom website design and SEO for hospitals and healthcare clinics. Doctor appointment booking, patient portals, and high Google rankings.",
+  keywords: [
+      "Hospital Website Development",
+      "Healthcare Web Design",
+      "Medical Clinic SEO Services",
+      "Doctor Appointment Booking Website",
+      "Healthcare Digital Marketing"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-hospitals",
   },

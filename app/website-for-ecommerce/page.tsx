@@ -6,6 +6,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Custom Ecommerce Websites",
   description: "Fast Next.js E-commerce websites built for high conversions, payment gateway integration, and SEO. Scale your online store today with Joy Digital!",
+  keywords: [
+      "Website For Ecommerce",
+      "Website For Ecommerce Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/website-for-ecommerce",
   },
