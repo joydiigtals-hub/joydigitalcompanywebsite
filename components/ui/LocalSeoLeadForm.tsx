@@ -5,20 +5,44 @@ import { useRouter } from "next/navigation";
 import { getUtmParameters } from "@/lib/utmTracker";
 
 const LOCATION_COUNT_OPTIONS = [
-  { value: "1_location", label: "1 Location" },
-  { value: "2_5_locations", label: "2-5 Locations" },
-  { value: "6_20_locations", label: "6-20 Locations" },
-  { value: "20_plus_franchise", label: "20+ Franchise Locations" },
+  { value: "1_location", label: "1 Location (Single Store / Clinic / Office)" },
+  { value: "2_5_locations", label: "2 - 5 Locations (Regional Branch Network)" },
+  { value: "6_20_locations", label: "6 - 20 Locations (Multi-Area Expansion)" },
+  { value: "20_plus_franchise", label: "20+ Locations (Enterprise / Franchise)" },
+];
+
+const INDUSTRY_OPTIONS = [
+  { value: "schools_education", label: "Schools & Educational Institutions" },
+  { value: "pest_control_services", label: "Pest Control & Home Services" },
+  { value: "construction_contractors", label: "Construction & Building Contractors" },
+  { value: "healthcare_clinics", label: "Healthcare, Hospitals & Clinics" },
+  { value: "real_estate_property", label: "Real Estate & Property Developers" },
+  { value: "hotels_hospitality", label: "Hotels, Resorts & Hospitality" },
+  { value: "professional_services", label: "Legal, Consulting & Financial Services" },
+  { value: "other_local_business", label: "Other Local Business / Retail" },
+];
+
+const GOAL_OPTIONS = [
+  { value: "rank_maps_3pack", label: "Rank #1 in Google Maps 3-Pack" },
+  { value: "increase_phone_calls", label: "Get More Direct Phone Calls & Customer Leads" },
+  { value: "outrank_local_competitor", label: "Outrank Specific Nearby Competitors" },
+  { value: "fix_nap_and_reviews", label: "Fix Inconsistent NAP Citations & Build Reviews" },
+  { value: "multi_location_scaling", label: "Scale Multi-Location / Franchise Visibility" },
 ];
 
 export default function LocalSeoLeadForm() {
   const router = useRouter();
   const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
+  
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
-    locationCount: "",
+    businessName: "",
+    industry: "",
+    locationCount: "1_location",
+    primaryGoal: "rank_maps_3pack",
   });
+  
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -32,12 +56,20 @@ export default function LocalSeoLeadForm() {
 
     const mobileVal = formData.mobile.trim();
     if (!mobileVal) {
-      tempErrors.mobile = "Contact number is required.";
+      tempErrors.mobile = "Contact phone or WhatsApp number is required.";
     } else {
       const numbersOnly = mobileVal.replace(/\D/g, "");
       if (numbersOnly.length < 7) {
         tempErrors.mobile = "Please enter a valid phone number.";
       }
+    }
+
+    if (!formData.businessName.trim()) {
+      tempErrors.businessName = "Business name or website/GBP link is required.";
+    }
+
+    if (!formData.industry) {
+      tempErrors.industry = "Please select your business category.";
     }
 
     if (!formData.locationCount) {
@@ -57,18 +89,18 @@ export default function LocalSeoLeadForm() {
       const utm = getUtmParameters();
       const payload = {
         Name: formData.name.trim(),
-        CompanyName: "N/A",
-        Website: "N/A",
+        CompanyName: formData.businessName.trim(),
+        Website: formData.businessName.includes(".") ? formData.businessName.trim() : "N/A",
         Email: contactEmail,
         Mobile: formData.mobile.trim(),
-        Service: `Global Enterprise Local SEO (${formData.locationCount})`,
-        Budget: "N/A",
-        Timeline: "N/A",
-        Message: `Number of Business Locations: ${formData.locationCount}`,
-        Source: "Enterprise Local SEO Landing Page",
-        TargetRegion: "GLOBAL",
+        Service: `Local SEO & Google Maps Optimization (${formData.locationCount})`,
+        Budget: "Tailored Retainer",
+        Timeline: "Immediate",
+        Message: `Industry: ${formData.industry} | Locations: ${formData.locationCount} | Primary Goal: ${formData.primaryGoal} | Business/GBP Name: ${formData.businessName.trim()}`,
+        Source: "Local SEO Services Landing Page",
+        TargetRegion: "LOCAL_AND_GLOBAL",
         utmParams: utm || undefined,
-        _subject: `🔥 Multi-Location Local SEO Lead [${formData.locationCount}] - Joy Digital`,
+        _subject: `🔥 Qualified Local SEO Lead: ${formData.businessName.trim()} [${formData.locationCount}] - Joy Digital`,
         _captcha: "false",
         _template: "table",
       };
@@ -90,15 +122,16 @@ export default function LocalSeoLeadForm() {
         const tracker = (window as any).trackJoyDigitalEvent;
         if (typeof tracker === "function") {
           tracker("contact_form_submission", {
-            form_source: "Enterprise Local SEO Landing Page",
+            form_source: "Local SEO Services Landing Page",
             page_url: window.location.href,
             location_count: formData.locationCount,
+            industry: formData.industry,
           });
         } else {
           const gtag = (window as any).gtag;
           if (typeof gtag === "function") {
             gtag("event", "contact_form_submission", {
-              form_source: "Enterprise Local SEO Landing Page",
+              form_source: "Local SEO Services Landing Page",
               page_url: window.location.href,
               location_count: formData.locationCount,
             });
@@ -109,14 +142,17 @@ export default function LocalSeoLeadForm() {
       setFormData({
         name: "",
         mobile: "",
-        locationCount: "",
+        businessName: "",
+        industry: "",
+        locationCount: "1_location",
+        primaryGoal: "rank_maps_3pack",
       });
       setErrors({});
       setIsSuccess(true);
       
       const queryParams = new URLSearchParams({
         name: formData.name.trim(),
-        service: "Enterprise Local SEO",
+        service: "Local SEO Services",
         mobile: formData.mobile.trim()
       }).toString();
 
@@ -131,37 +167,35 @@ export default function LocalSeoLeadForm() {
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes fadeInSlideDown {
-          from { opacity: 0; transform: translateY(-8px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-      ` }} />
+      <div className="bg-[#260B5E] border border-[#FFFFFF]/25 p-5 sm:p-7 rounded-2xl shadow-2xl w-full max-w-md relative transition-all duration-300 text-[#FFFFFF]">
+        <div className="absolute top-0 left-0 w-full h-1.5 bg-[#C9F600] rounded-t-2xl" />
 
-      <div className="bg-[#260B5E] border border-[#FFFFFF]/25 p-5 sm:p-6 rounded-2xl shadow-2xl w-full max-w-md relative transition-all duration-300 text-[#FFFFFF]">
-        <div className="absolute top-0 left-0 w-full h-1 bg-[#C9F600] rounded-t-2xl" />
-
-        <div className="mb-6 mt-1 text-center lg:text-left">
+        <div className="mb-5 mt-1 text-center lg:text-left">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#C9F600]/15 text-[#C9F600] border border-[#C9F600]/30 text-[9px] font-black uppercase tracking-wider mb-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C9F600] animate-pulse" />
+            100% Free • No Obligation
+          </div>
           <h3 className="text-xl font-extrabold text-[#FFFFFF] mb-1.5 leading-snug">
-            Request a Free Global Geo-Grid Local SEO Audit
+            Get Your Free Local SEO &amp; Google Maps Audit
           </h3>
           <p className="text-xs text-[#FFFFFF]/80 leading-relaxed">
-            Enter your details below to receive a multi-location heatmap analysis of your brand's Maps visibility.
+            Discover exactly why competitors outrank you on Google Maps and how to claim the top-3 Local Pack positions.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3.5">
           
-          <div className="flex flex-col gap-1.5">
+          {/* Full Name */}
+          <div className="flex flex-col gap-1">
             <label className="text-[10px] font-extrabold text-[#FFFFFF] uppercase tracking-wider">
               Full Name <span className="text-[#C9F600]">*</span>
             </label>
-            <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-3 transition-all duration-300 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.name ? "border-[#ef4444]" : "border-[#FFFFFF]/25"}`}>
+            <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-2.5 transition-all duration-300 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.name ? "border-[#ef4444]" : "border-[#FFFFFF]/25"}`}>
               <span className="text-xs text-[#FFFFFF]/60"><i className="fa-solid fa-user" /></span>
               <input
                 type="text"
-                placeholder="Enter your name"
-                className="w-full text-sm bg-transparent outline-none border-none text-[#FFFFFF] placeholder:text-[#FFFFFF]/50 font-semibold"
+                placeholder="e.g. Rajesh Kumar"
+                className="w-full text-xs sm:text-sm bg-transparent outline-none border-none text-[#FFFFFF] placeholder:text-[#FFFFFF]/50 font-semibold"
                 value={formData.name}
                 onChange={(e) => { setFormData({...formData, name: e.target.value}); setErrors({...errors, name: ""}); }}
               />
@@ -169,16 +203,17 @@ export default function LocalSeoLeadForm() {
             {errors.name && <span className="text-[9px] font-semibold text-[#ef4444] mt-0.5">{errors.name}</span>}
           </div>
 
-          <div className="flex flex-col gap-1.5">
+          {/* Contact Phone / WhatsApp */}
+          <div className="flex flex-col gap-1">
             <label className="text-[10px] font-extrabold text-[#FFFFFF] uppercase tracking-wider">
-              Contact Number <span className="text-[#C9F600]">*</span>
+              Phone / WhatsApp Number <span className="text-[#C9F600]">*</span>
             </label>
-            <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-3 transition-all duration-300 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.mobile ? "border-[#ef4444]" : "border-[#FFFFFF]/25"}`}>
-              <span className="text-xs text-[#FFFFFF]/60"><i className="fa-solid fa-phone" /></span>
+            <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-2.5 transition-all duration-300 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.mobile ? "border-[#ef4444]" : "border-[#FFFFFF]/25"}`}>
+              <span className="text-xs text-[#C9F600]"><i className="fa-brands fa-whatsapp text-sm" /></span>
               <input
                 type="tel"
-                placeholder="+1 (555) 000-0000"
-                className="w-full text-sm bg-transparent outline-none border-none text-[#FFFFFF] placeholder:text-[#FFFFFF]/50 font-semibold"
+                placeholder="+91 98765 43210"
+                className="w-full text-xs sm:text-sm bg-transparent outline-none border-none text-[#FFFFFF] placeholder:text-[#FFFFFF]/50 font-semibold"
                 value={formData.mobile}
                 onChange={(e) => { setFormData({...formData, mobile: e.target.value}); setErrors({...errors, mobile: ""}); }}
               />
@@ -186,41 +221,102 @@ export default function LocalSeoLeadForm() {
             {errors.mobile && <span className="text-[9px] font-semibold text-[#ef4444] mt-0.5">{errors.mobile}</span>}
           </div>
 
-          <div className="flex flex-col gap-1.5">
+          {/* Business Name or Website / GBP */}
+          <div className="flex flex-col gap-1">
             <label className="text-[10px] font-extrabold text-[#FFFFFF] uppercase tracking-wider">
-              Number of Business Locations <span className="text-[#C9F600]">*</span>
+              Business Name or Website / GBP Listing <span className="text-[#C9F600]">*</span>
             </label>
-            <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-3 transition-all duration-300 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.locationCount ? "border-[#ef4444]" : "border-[#FFFFFF]/25"}`}>
-              <span className="text-xs text-[#FFFFFF]/60"><i className="fa-solid fa-map-location-dot" /></span>
+            <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-2.5 transition-all duration-300 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.businessName ? "border-[#ef4444]" : "border-[#FFFFFF]/25"}`}>
+              <span className="text-xs text-[#FFFFFF]/60"><i className="fa-solid fa-store" /></span>
+              <input
+                type="text"
+                placeholder="e.g. Apex Academy or apexacademy.in"
+                className="w-full text-xs sm:text-sm bg-transparent outline-none border-none text-[#FFFFFF] placeholder:text-[#FFFFFF]/50 font-semibold"
+                value={formData.businessName}
+                onChange={(e) => { setFormData({...formData, businessName: e.target.value}); setErrors({...errors, businessName: ""}); }}
+              />
+            </div>
+            {errors.businessName && <span className="text-[9px] font-semibold text-[#ef4444] mt-0.5">{errors.businessName}</span>}
+          </div>
+
+          {/* Industry / Category */}
+          <div className="flex flex-col gap-1">
+            <label className="text-[10px] font-extrabold text-[#FFFFFF] uppercase tracking-wider">
+              Business Category <span className="text-[#C9F600]">*</span>
+            </label>
+            <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-2.5 transition-all duration-300 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.industry ? "border-[#ef4444]" : "border-[#FFFFFF]/25"}`}>
+              <span className="text-xs text-[#FFFFFF]/60"><i className="fa-solid fa-briefcase" /></span>
               <select
-                className="w-full text-sm bg-transparent outline-none border-none text-[#FFFFFF] font-semibold cursor-pointer [&>option]:bg-[#3B1580] [&>option]:text-[#FFFFFF]"
-                value={formData.locationCount}
-                onChange={(e) => { setFormData({...formData, locationCount: e.target.value}); setErrors({...errors, locationCount: ""}); }}
+                className="w-full text-xs sm:text-sm bg-transparent outline-none border-none text-[#FFFFFF] font-semibold cursor-pointer [&>option]:bg-[#260B5E] [&>option]:text-[#FFFFFF]"
+                value={formData.industry}
+                onChange={(e) => { setFormData({...formData, industry: e.target.value}); setErrors({...errors, industry: ""}); }}
               >
-                <option value="" disabled className="bg-[#3B1580] text-[#FFFFFF]/60">Select Location Count</option>
-                {LOCATION_COUNT_OPTIONS.map((opt) => (
-                  <option key={opt.value} value={opt.value} className="bg-[#3B1580] text-[#FFFFFF]">{opt.label}</option>
+                <option value="" disabled className="bg-[#260B5E] text-[#FFFFFF]/60">Select Your Industry</option>
+                {INDUSTRY_OPTIONS.map((opt) => (
+                  <option key={opt.value} value={opt.value} className="bg-[#260B5E] text-[#FFFFFF]">{opt.label}</option>
                 ))}
               </select>
             </div>
-            {errors.locationCount && <span className="text-[9px] font-semibold text-[#ef4444] mt-0.5">{errors.locationCount}</span>}
+            {errors.industry && <span className="text-[9px] font-semibold text-[#ef4444] mt-0.5">{errors.industry}</span>}
+          </div>
+
+          {/* Number of Locations & Primary Goal */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] font-extrabold text-[#FFFFFF] uppercase tracking-wider">
+                Locations <span className="text-[#C9F600]">*</span>
+              </label>
+              <div className="flex items-center gap-2 bg-[#3B1580] rounded-xl border border-[#FFFFFF]/25 px-3 py-2.5">
+                <select
+                  className="w-full text-xs bg-transparent outline-none border-none text-[#FFFFFF] font-semibold cursor-pointer [&>option]:bg-[#260B5E] [&>option]:text-[#FFFFFF]"
+                  value={formData.locationCount}
+                  onChange={(e) => setFormData({...formData, locationCount: e.target.value})}
+                >
+                  {LOCATION_COUNT_OPTIONS.map((opt) => (
+                    <option key={opt.value} value={opt.value} className="bg-[#260B5E] text-[#FFFFFF]">{opt.label.split(" (")[0]}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] font-extrabold text-[#FFFFFF] uppercase tracking-wider">
+                Primary Goal
+              </label>
+              <div className="flex items-center gap-2 bg-[#3B1580] rounded-xl border border-[#FFFFFF]/25 px-3 py-2.5">
+                <select
+                  className="w-full text-xs bg-transparent outline-none border-none text-[#FFFFFF] font-semibold cursor-pointer [&>option]:bg-[#260B5E] [&>option]:text-[#FFFFFF]"
+                  value={formData.primaryGoal}
+                  onChange={(e) => setFormData({...formData, primaryGoal: e.target.value})}
+                >
+                  {GOAL_OPTIONS.map((opt) => (
+                    <option key={opt.value} value={opt.value} className="bg-[#260B5E] text-[#FFFFFF]">{opt.label}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
           </div>
 
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-[#C9F600] hover:opacity-90 text-[#3B1580] font-extrabold text-sm py-4 rounded-xl shadow-lg shadow-[#C9F600]/20 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 mt-2 flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer"
+            className="w-full bg-[#C9F600] hover:opacity-90 text-[#3B1580] font-black text-xs sm:text-sm py-3.5 rounded-xl shadow-lg shadow-[#C9F600]/20 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 mt-2 flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer"
           >
             {isLoading ? (
                <>
-                 <i className="fa-solid fa-spinner animate-spin" /> Processing...
+                 <i className="fa-solid fa-spinner animate-spin" /> Preparing Free Audit...
                </>
             ) : (
                <>
-                 Request Free Geo-Grid Audit <i className="fa-solid fa-arrow-right text-xs" />
+                 Get Free Local SEO Audit <i className="fa-solid fa-arrow-right text-xs" />
                </>
             )}
           </button>
+          
+          <div className="flex items-center justify-center gap-4 text-[10px] text-[#FFFFFF]/60 font-semibold mt-1">
+            <span className="flex items-center gap-1"><i className="fa-solid fa-shield-halved text-[#C9F600]" /> 100% Privacy</span>
+            <span className="flex items-center gap-1"><i className="fa-solid fa-clock text-[#C9F600]" /> Report within 4 hrs</span>
+          </div>
         </form>
       </div>
 
@@ -232,7 +328,7 @@ export default function LocalSeoLeadForm() {
             </div>
             <h4 className="text-xl font-extrabold text-[#FFFFFF] mb-2">Audit Request Submitted!</h4>
             <p className="text-sm text-[#FFFFFF]/80 mb-6 leading-relaxed">
-              Thank you for requesting a Geo-Grid Local SEO Audit. Our enterprise SEO specialists will analyze your Maps visibility and reach out shortly.
+              Thank you for submitting your details. Our Local SEO specialists are analyzing your Google Maps visibility and will deliver your customized audit roadmap shortly.
             </p>
             <button
               onClick={() => setIsSuccess(false)}
