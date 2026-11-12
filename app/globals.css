@@ -233,6 +233,76 @@ i[class*="fa-"] {
   color: #FFFFFF !important;
 }
 
+
+/* Blog article prose mobile responsiveness & overflow prevention */
+.prose-content {
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+.prose-content pre {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  white-space: pre !important;
+  word-break: normal !important;
+  word-wrap: normal !important;
+  border-radius: 12px !important;
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  padding: 1rem !important;
+  font-size: 0.75rem !important;
+  line-height: 1.4 !important;
+  box-sizing: border-box !important;
+}
+
+.prose-content pre code {
+  white-space: pre !important;
+  word-break: normal !important;
+  display: block !important;
+  background: transparent !important;
+  color: inherit !important;
+  padding: 0 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+.prose-content code:not(pre code) {
+  word-break: break-all !important;
+  white-space: normal !important;
+}
+
+.prose-content table {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  border-collapse: collapse !important;
+  box-sizing: border-box !important;
+}
+
+.prose-content table th,
+.prose-content table td {
+  white-space: normal !important;
+  min-width: 120px !important;
+}
+
+.prose-content img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.table-responsive-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  margin: 1.5rem 0 !important;
+  border-radius: 0.75rem !important;
+}
+
 /* Sidebar Table of Contents active trackers */
 .toc-item-active {
   color: #C9F600 !important;

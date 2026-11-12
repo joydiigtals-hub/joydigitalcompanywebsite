@@ -193,20 +193,20 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
   });
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-10 select-text">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-10 select-text w-full min-w-0 overflow-x-hidden">
       
       {/* Schema Injection */}
       <JsonLd schema={articleGraph} />
 
       {/* Breadcrumbs Navigation */}
-      <nav aria-label="Breadcrumb" className="text-[10px] sm:text-xs font-bold text-[#D9CCF5]/75 uppercase tracking-wider mb-8 select-none animate-fade-in text-left">
+      <nav aria-label="Breadcrumb" className="flex flex-wrap items-center text-[10px] sm:text-xs font-bold text-[#D9CCF5]/75 uppercase tracking-wider mb-8 select-none animate-fade-in text-left gap-y-1">
         <Link href="/" className="hover:text-[#C9F600] text-white/90 transition-colors">Home</Link>
         <span className="mx-2 text-white/30">/</span>
         <Link href="/blog" className="hover:text-[#C9F600] text-white/90 transition-colors">Blog</Link>
         <span className="mx-2 text-white/30">/</span>
         <span className="text-[#C9F600] font-extrabold">{post.category}</span>
         <span className="mx-2 text-white/30">/</span>
-        <span className="text-white font-extrabold truncate max-w-[220px] inline-block height-4 align-bottom">{post.title}</span>
+        <span className="text-white font-extrabold truncate max-w-[220px] inline-block h-4 align-bottom">{post.title}</span>
       </nav>
 
       {/* Header Details */}
@@ -247,7 +247,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
           <ViewCounter slug={slug} increment={true} />
         </div>
 
-        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-6">
+        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-6 break-words">
           {post.title}
         </h1>
 
@@ -299,7 +299,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
       )}
 
       {/* 2-Column Desktop Grid (Table of Contents + Prose Reader) */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start text-left">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start text-left w-full min-w-0">
         
         {/* Table of Contents sidebar */}
         {post.showTableOfContents !== false && toc.length > 0 && (
@@ -359,11 +359,11 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
         )}
 
         {/* Prose Reader Content Column */}
-        <article className={`${post.showTableOfContents !== false && toc.length > 0 ? "lg:col-span-9" : "lg:col-span-12 max-w-4xl mx-auto"} bg-white border border-[#E2E8F0] p-8 sm:p-12 rounded-[32px] shadow-sm relative overflow-hidden w-full text-slate-800`}>
+        <article className={`${post.showTableOfContents !== false && toc.length > 0 ? "lg:col-span-9" : "lg:col-span-12 max-w-4xl mx-auto"} bg-white border border-[#E2E8F0] p-4 sm:p-8 lg:p-12 rounded-2xl sm:rounded-[32px] shadow-sm relative w-full min-w-0 text-slate-800`}>
           
           <div 
             className="prose prose-blue max-w-none text-slate-800 leading-relaxed text-sm sm:text-base space-y-6.5
-                       prose-content
+                       prose-content min-w-0 break-words
                        prose-headings:text-slate-900 prose-headings:font-black prose-headings:tracking-tight 
                        prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-[#E2E8F0] prose-h2:pb-2
                        prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3 
@@ -381,7 +381,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
                 <div dangerouslySetInnerHTML={{ __html: beforeHtml }} />
 
                 {/* High-Converting Mid-Article Conversion Callout Box */}
-                <div className="my-10 p-6 sm:p-8 bg-gradient-to-br from-slate-950 via-slate-900 to-purple-950 text-white rounded-3xl border border-purple-500/30 shadow-xl relative overflow-hidden not-prose select-none">
+                <div className="my-10 p-5 sm:p-8 bg-gradient-to-br from-slate-950 via-slate-900 to-purple-950 text-white rounded-2xl sm:rounded-3xl border border-purple-500/30 shadow-xl relative overflow-hidden not-prose select-none min-w-0">
                   <div className="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
                   <div className="relative z-10">
                     <div className="flex flex-wrap items-center gap-2 mb-3">
@@ -599,7 +599,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
       </div>
 
       {/* Conversion CTA */}
-      <section className="mt-16 bg-gradient-to-br from-slate-950 via-slate-900 to-purple-950 border border-purple-500/30 text-white rounded-[32px] p-8 sm:p-12 relative overflow-hidden select-none reveal-hidden blog-card-reveal text-center shadow-2xl">
+      <section className="mt-16 bg-gradient-to-br from-slate-950 via-slate-900 to-purple-950 border border-purple-500/30 text-white rounded-2xl sm:rounded-[32px] p-5 sm:p-12 relative overflow-hidden select-none reveal-hidden blog-card-reveal text-center shadow-2xl min-w-0">
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
         <div className="relative z-10 max-w-2xl mx-auto">
           <span className="bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-[10px] font-black tracking-widest px-3.5 py-1 rounded-full uppercase mb-4 inline-flex items-center gap-1.5">
@@ -679,7 +679,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
             })()}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left related-cards-grid reveal-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left related-cards-grid reveal-hidden w-full min-w-0">
             {relatedPosts.map((rPost, idx) => (
               <div
                 key={rPost.slug}

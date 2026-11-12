@@ -80,7 +80,11 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   // Compile markdown content to HTML string on the server side
-  const htmlContent = await marked(post.content);
+  let rawHtml = await marked(post.content);
+  // Ensure tables have responsive overflow wrapper
+  rawHtml = rawHtml.replace(/<table(\b[^>]*)>/gi, '<div class="table-responsive-wrapper"><table$1>');
+  rawHtml = rawHtml.replace(/<\/table>/gi, '</table></div>');
+  const htmlContent = rawHtml;
 
   // Retrieve all posts for related selection
   const allPosts = await getAllPosts();
@@ -119,7 +123,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   return (
     <>
       <Header />
-      <main className="pt-16 lg:pt-20">
+      <main className="pt-16 lg:pt-20 min-w-0 w-full overflow-x-hidden">
         
         {/* Animated layout wrapper holding article details */}
         <BlogArticleContainer 
