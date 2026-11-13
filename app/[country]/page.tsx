@@ -4,6 +4,8 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
+import { SITE_URL } from "@/lib/siteConfig";
+import { COUNTRY_LANDING_DATA, getCountryLandingData } from "@/data/countryLandingData";
 
 interface PageProps {
   params: Promise<{ country: string }>;
@@ -16,7 +18,6 @@ export async function generateStaticParams() {
     { country: "us" },
     { country: "uk" },
     { country: "ae" },
-
     { country: "ca" },
     { country: "au" },
     { country: "sg" },
@@ -32,104 +33,146 @@ export async function generateStaticParams() {
   ];
 }
 
-const METADATA_MAP: Record<string, { title: string; description: string }> = {
-  us: {
-    title: "Next.js Web Development & SEO Agency USA",
-    description: "Scale organic revenue. Joy Digital is a premium digital agency serving US businesses with custom web design, headless Next.js platforms, and results-driven SEO.",
-  },
-  uk: {
-    title: "Professional Web Design & SEO Services UK",
-    description: "Convert search traffic into loyal buyers. Joy Digital constructs high-speed corporate sites and executes organic search engine marketing campaigns across the UK.",
-  },
-  ae: {
-    title: "Next.js Enterprise Web Dev Dubai & UAE",
-    description: "Engineer ultra-fast, sub-second Next.js web applications in Dubai & Abu Dhabi. Scale B2B enquiries with enterprise-grade SEO and AI Search Optimization.",
-  },
+const FALLBACK_METADATA_MAP: Record<string, { title: string; description: string; ogLocale: string }> = {
   in: {
-    title: "Top Website Design & SEO Company India",
+    title: "Top Website Design & SEO Company India | Joy Digital",
     description: "Boost your customer conversions. Joy Digital is India's leading SEO & custom web design agency, delivering search marketing and Map pack ranking systems.",
-  },
-  ca: {
-    title: "Next.js Web Development & SEO Agency Canada",
-    description: "Scale organic revenue. Joy Digital builds high-performance Next.js websites, headless storefronts, and SEO campaigns for Canadian enterprises and startups.",
-  },
-  au: {
-    title: "Custom Web Design & SEO Agency Australia",
-    description: "Empower your business with fast, search-compliant Next.js websites and Google ranking strategies engineered for Australian businesses.",
+    ogLocale: "en_IN",
   },
   es: {
-    title: "Agencia de Desarrollo Web Next.js y SEO España",
+    title: "Agencia de Desarrollo Web Next.js y SEO España | Joy Digital",
     description: "Impulsa tu negocio con Joy Digital. Diseñamos sitios web rápidos en Next.js y estrategias SEO orientadas a resultados para clientes en España y Latinoamérica.",
+    ogLocale: "es_ES",
   },
   de: {
-    title: "Webdesign & Next.js Entwicklung Agentur Deutschland",
+    title: "Webdesign & Next.js Entwicklung Agentur Deutschland | Joy Digital",
     description: "Wachsen Sie online mit Joy Digital. Wir entwickeln erstklassige Next.js Websites und datengesteuerte SEO-Lösungen für Unternehmen in Deutschland.",
+    ogLocale: "de_DE",
   },
   fr: {
-    title: "Agence de Création Web Next.js & Référencement SEO France",
+    title: "Agence de Création Web Next.js & Référencement SEO France | Joy Digital",
     description: "Développez votre entreprise avec Joy Digital. Nous créons des sites web Next.js ultra-rapides et des solutions SEO sur mesure pour le marché français.",
+    ogLocale: "fr_FR",
   },
   it: {
-    title: "Sviluppo Web Next.js e Agenzia SEO Italia",
+    title: "Sviluppo Web Next.js e Agenzia SEO Italia | Joy Digital",
     description: "Siti web ultra-veloci e posizionamento SEO per aziende in Italia. Aumenta il tuo fatturato con la presenza digitale di Joy Digital.",
+    ogLocale: "it_IT",
   },
   sg: {
-    title: "Next.js Web Dev & SEO Agency Singapore",
+    title: "Next.js Web Dev & SEO Agency Singapore | Joy Digital",
     description: "Scale organic revenue. Joy Digital builds high-performance Next.js websites and data-driven SEO campaigns for businesses in Singapore.",
+    ogLocale: "en_SG",
   },
   mx: {
-    title: "Agencia de Desarrollo Web Next.js y SEO Méxi",
+    title: "Agencia de Desarrollo Web Next.js y SEO México | Joy Digital",
     description: "Diseño web moderno en Next.js y estrategias de SEO enfocadas en resultados para empresas en México y Latinoamérica.",
+    ogLocale: "es_MX",
   },
   br: {
-    title: "Desenvolvimento Web Next.js e Agência de SEO",
+    title: "Desenvolvimento Web Next.js e Agência de SEO Brasil | Joy Digital",
     description: "Desenvolvimento de sites ultra-rápidos e otimização SEO para empresas no Brasil com a Joy Digital.",
+    ogLocale: "pt_BR",
   },
   my: {
-    title: "Next.js Web Development & B2B SEO Malaysia",
+    title: "Next.js Web Development & B2B SEO Malaysia | Joy Digital",
     description: "Scale your Kuala Lumpur business with high-performance Next.js web applications and organic SEO. Get 50% faster speeds and higher B2B lead conversion.",
+    ogLocale: "en_MY",
   },
   za: {
-    title: "High-Speed Web Dev & B2B SEO South Africa",
+    title: "High-Speed Web Dev & B2B SEO South Africa | Joy Digital",
     description: "Build ultra-fast Next.js websites for South African enterprises. Scale B2B leads across Johannesburg, Cape Town, and global export markets.",
+    ogLocale: "en_ZA",
   },
   ng: {
-    title: "High-Speed Web Applications & B2B Lead Gen N",
+    title: "High-Speed Web Applications & B2B Lead Gen Nigeria | Joy Digital",
     description: "Ultra-fast, low-bandwidth Next.js web apps and B2B SEO engineered for Nigerian businesses in Lagos, Abuja, and West Africa.",
+    ogLocale: "en_NG",
   },
   ke: {
-    title: "Next.js Web Engineering & B2B SEO Growth Ken",
+    title: "Next.js Web Engineering & B2B SEO Growth Kenya | Joy Digital",
     description: "High-converting web development and search engine optimization engineered for Kenyan businesses in Nairobi and East Africa.",
+    ogLocale: "en_KE",
   },
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { country } = await params;
   const countryLower = country.toLowerCase();
-  const data = METADATA_MAP[countryLower];
-  if (!data) return {};
+  
+  const landingData = COUNTRY_LANDING_DATA[countryLower];
+  const fallbackData = FALLBACK_METADATA_MAP[countryLower];
+
+  if (!landingData && !fallbackData) {
+    return {};
+  }
+
+  const pageTitle = landingData ? landingData.metadata.title : fallbackData.title;
+  const pageDesc = landingData ? landingData.metadata.description : fallbackData.description;
+  const pageKeywords = landingData ? landingData.metadata.keywords : [
+    `Web Development ${countryLower.toUpperCase()}`,
+    `SEO Agency ${countryLower.toUpperCase()}`,
+    "Next.js Web Development",
+    "Enterprise SEO Services",
+    "Joy Digital"
+  ];
+  const pageLocale = landingData ? landingData.metadata.ogLocale : (fallbackData?.ogLocale || "en_US");
+  const countryUrl = `${SITE_URL}/${countryLower}`;
 
   return {
-    title: data.title,
-    description: data.description,
-    keywords: [
-      `Web Development ${countryLower.toUpperCase()}`,
-      `SEO Agency ${countryLower.toUpperCase()}`,
-      "Next.js Web Development",
-      "Enterprise SEO Services",
-      "Joy Digital"
-    ],
-    alternates: {
-      canonical: `https://www.joydigital.in/${countryLower}`,
-      languages: {
-        "x-default": "https://www.joydigital.in",
-        "en-IN": "https://www.joydigital.in",
-        "en-US": "https://www.joydigital.in/us",
-        "en-GB": "https://www.joydigital.in/uk",
-        "en-AE": "https://www.joydigital.in/ae",
-        "en-CA": "https://www.joydigital.in/ca",
-        "en-AU": "https://www.joydigital.in/au",
+    metadataBase: new URL(SITE_URL),
+    title: {
+      absolute: pageTitle,
+    },
+    description: pageDesc,
+    keywords: pageKeywords,
+    authors: [{ name: "Joy Digital" }],
+    publisher: "Joy Digital",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
       },
+    },
+    alternates: {
+      canonical: countryUrl, // Strictly self-referencing canonical tag
+      languages: {
+        "x-default": SITE_URL,
+        "en-in": SITE_URL,
+        "en-us": `${SITE_URL}/us`,
+        "en-gb": `${SITE_URL}/uk`,
+        "en-ae": `${SITE_URL}/ae`,
+        "en-ca": `${SITE_URL}/ca`,
+        "en-au": `${SITE_URL}/au`,
+      },
+    },
+    openGraph: {
+      type: "website",
+      locale: pageLocale,
+      url: countryUrl,
+      siteName: "Joy Digital",
+      title: pageTitle,
+      description: pageDesc,
+      images: [
+        {
+          url: `${SITE_URL}/assets/images/hero-banner.webp`,
+          width: 1200,
+          height: 630,
+          alt: pageTitle,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageTitle,
+      description: pageDesc,
+      images: [`${SITE_URL}/assets/images/hero-banner.webp`],
+      creator: "@joydigital",
     },
   };
 }
@@ -137,18 +180,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function CountryHomePage({ params }: PageProps) {
   const { country } = await params;
   const countryLower = country.toLowerCase();
-  const data = METADATA_MAP[countryLower];
-  if (!data) {
+  
+  const landingData = COUNTRY_LANDING_DATA[countryLower];
+  const fallbackData = FALLBACK_METADATA_MAP[countryLower];
+
+  if (!landingData && !fallbackData) {
     notFound();
   }
 
-  const countryUrl = `https://www.joydigital.in/${countryLower}`;
+  const pageTitle = landingData ? landingData.metadata.title : fallbackData.title;
+  const pageDesc = landingData ? landingData.metadata.description : fallbackData.description;
+  const countryFaqs = landingData?.faqs || HOME_FAQS;
+  const countryUrl = `${SITE_URL}/${countryLower}`;
+
   const graphSchema = buildPageGraphSchema({
     url: countryUrl,
-    title: data.title,
-    description: data.description,
+    title: pageTitle,
+    description: pageDesc,
     includeLocalBusiness: true,
-    faqs: HOME_FAQS,
+    faqs: countryFaqs,
   });
 
   return (

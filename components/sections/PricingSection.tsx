@@ -8,6 +8,8 @@ const GetQuoteModal = dynamic(() => import("@/components/ui/GetQuoteModal"), {
   ssr: false,
 });
 
+import { COUNTRY_LANDING_DATA } from "@/data/countryLandingData";
+
 interface PricingSectionProps {
   country?: string;
 }
@@ -18,6 +20,33 @@ export default function PricingSection({ country = "in" }: PricingSectionProps) 
     name: string;
     notes: string;
   } | null>(null);
+
+  const countryLower = (country || "").toLowerCase();
+  const localizedData = COUNTRY_LANDING_DATA[countryLower];
+
+  const getPricing = () => {
+    if (localizedData) {
+      return localizedData.pricing;
+    }
+    if (countryLower === "in") {
+      return {
+        starterPrice: "₹25,000",
+        growthPrice: "₹45,000",
+        enterprisePrice: "₹85,000+",
+        currencySymbol: "₹",
+        currencyCode: "INR",
+      };
+    }
+    return {
+      starterPrice: "$1,200",
+      growthPrice: "$2,400",
+      enterprisePrice: "$4,800+",
+      currencySymbol: "$",
+      currencyCode: "USD",
+    };
+  };
+
+  const pricing = getPricing();
 
   const handleOpenQuote = (name: string, notes: string) => {
     if (typeof window !== "undefined") {
@@ -50,7 +79,7 @@ export default function PricingSection({ country = "in" }: PricingSectionProps) 
             <div className="mb-6 p-3 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 flex items-center justify-between">
               <div className="flex flex-col">
                 <span className="text-[10px] font-bold text-[#FFFFFF]/70 uppercase tracking-wider">Starting from</span>
-                <span className="text-sm font-extrabold text-[#C9F600]">$1,200</span>
+                <span className="text-sm font-extrabold text-[#C9F600]">{pricing.starterPrice}</span>
               </div>
               <span className="text-[10px] font-bold text-[#FFFFFF] uppercase tracking-wider bg-[#3B1580] px-2.5 py-1 rounded-md border border-[#FFFFFF]/20 shadow-xs">
                 Custom Quote
@@ -105,7 +134,7 @@ export default function PricingSection({ country = "in" }: PricingSectionProps) 
             <div className="mb-6 p-3 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 flex items-center justify-between">
               <div className="flex flex-col">
                 <span className="text-[10px] font-bold text-[#FFFFFF]/70 uppercase tracking-wider">Starting from</span>
-                <span className="text-sm font-extrabold text-[#C9F600]">$1,200</span>
+                <span className="text-sm font-extrabold text-[#C9F600]">{pricing.growthPrice}</span>
               </div>
               <span className="text-[10px] font-bold text-[#FFFFFF] uppercase tracking-wider bg-[#3B1580] px-2.5 py-1 rounded-md border border-[#FFFFFF]/20 shadow-xs">
                 Custom Quote
@@ -155,7 +184,7 @@ export default function PricingSection({ country = "in" }: PricingSectionProps) 
             <div className="mb-6 p-3 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 flex items-center justify-between">
               <div className="flex flex-col">
                 <span className="text-[10px] font-bold text-[#FFFFFF]/70 uppercase tracking-wider">Starting from</span>
-                <span className="text-sm font-extrabold text-[#C9F600]">$1,200</span>
+                <span className="text-sm font-extrabold text-[#C9F600]">{pricing.enterprisePrice}</span>
               </div>
               <span className="text-[10px] font-bold text-[#FFFFFF] uppercase tracking-wider bg-[#3B1580] px-2.5 py-1 rounded-md border border-[#FFFFFF]/20 shadow-xs">
                 Custom Quote

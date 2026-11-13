@@ -21,20 +21,49 @@ import { getUtmParameters } from "@/lib/utmTracker";
 import { ALL_COUNTRY_CODES, POPULAR_COUNTRY_CODES, getFilteredCountries } from "@/lib/countryCodes";
 import GetQuoteModal from "@/components/ui/GetQuoteModal";
 import DigitalNetworkBackground from "@/components/ui/DigitalNetworkBackground";
+import { COUNTRY_LANDING_DATA } from "@/data/countryLandingData";
 
 interface ModernHeroSectionProps {
   country?: string;
+  badge?: string;
+  titleWordsMain?: string[];
+  titleWordsGradient?: string[];
+  subtitle?: string;
+  bulletPoints?: string[];
+  trustText?: string;
 }
 
 const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919080026133";
 
-const heroMainWords = ["Custom", "Website", "Development", "for", "Businesses"];
-const heroGradientWords = ["Ready", "to", "Grow"];
+const defaultHeroMainWords = ["Custom", "Website", "Development", "for", "Businesses"];
+const defaultHeroGradientWords = ["Ready", "to", "Grow"];
 
 // Framer Motion Variants for Staggered Orchestration (Optimized for Mobile Speed)
-export default function ModernHeroSection({ country = "" }: ModernHeroSectionProps) {
+export default function ModernHeroSection({
+  country = "",
+  badge,
+  titleWordsMain,
+  titleWordsGradient,
+  subtitle,
+  bulletPoints,
+  trustText,
+}: ModernHeroSectionProps) {
   const router = useRouter();
+
+  const countryLower = (country || "").toLowerCase();
+  const localizedData = COUNTRY_LANDING_DATA[countryLower];
+
+  const currentBadge = badge || localizedData?.hero.badge || "Custom Websites & SEO-Friendly Solutions";
+  const heroMainWords = titleWordsMain || localizedData?.hero.headingWordsMain || defaultHeroMainWords;
+  const heroGradientWords = titleWordsGradient || localizedData?.hero.headingWordsGradient || defaultHeroGradientWords;
+  const currentSubtitle = subtitle || localizedData?.hero.subtitle || "We build custom, mobile-friendly websites that help businesses showcase their services, reach more customers, and generate enquiries. From business websites to specialized travel platforms, our solutions are designed around your goals.";
+  const currentBulletPoints = bulletPoints || localizedData?.hero.bulletPoints || [
+    "Custom websites tailored to your business needs",
+    "Mobile-friendly design and performance-focused development",
+    "SEO-friendly structure and clear enquiry pathways",
+  ];
+  const currentTrustText = trustText || localizedData?.hero.trustText || "Trusted by fast-growing brands across USA, UK, UAE & worldwide.";
 
   // Form State
   const [formData, setFormData] = useState({
@@ -224,7 +253,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
           <div className="flex flex-wrap items-center gap-2">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#3B1580] border border-[#FFFFFF]/25 text-[#C9F600] text-xs font-semibold shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-[#C9F600]" />
-              <span className="text-[#FFFFFF]">Custom Websites &amp; SEO-Friendly Solutions</span>
+              <span className="text-[#FFFFFF]">{currentBadge}</span>
             </div>
           </div>
 
@@ -249,30 +278,18 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
             {/* Step 3: Subtitle & Feature Bullet Points */}
           <div className="space-y-4 max-w-2xl">
             <p className="text-base sm:text-lg text-[#FFFFFF]/90 leading-relaxed font-normal">
-              We build custom, mobile-friendly websites that help businesses showcase their services, reach more customers, and generate enquiries. From business websites to specialized travel platforms, our solutions are designed around your goals.
+              {currentSubtitle}
             </p>
 
             <div className="space-y-2.5 pt-1">
-              <div className="flex items-center gap-2.5 text-sm text-[#FFFFFF] font-medium">
-                <div className="w-5 h-5 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/40 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C9F600]" />
+              {currentBulletPoints.map((bp, bpIdx) => (
+                <div key={`hero-bp-${bpIdx}`} className="flex items-center gap-2.5 text-sm text-[#FFFFFF] font-medium">
+                  <div className="w-5 h-5 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/40 flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#C9F600]" />
+                  </div>
+                  <span>{bp}</span>
                 </div>
-                <span>Custom websites tailored to your business needs</span>
-              </div>
-
-              <div className="flex items-center gap-2.5 text-sm text-[#FFFFFF] font-medium">
-                <div className="w-5 h-5 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/40 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C9F600]" />
-                </div>
-                <span>Mobile-friendly design and performance-focused development</span>
-              </div>
-
-              <div className="flex items-center gap-2.5 text-sm text-[#FFFFFF] font-medium">
-                <div className="w-5 h-5 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/40 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C9F600]" />
-                </div>
-                <span>SEO-friendly structure and clear enquiry pathways</span>
-              </div>
+              ))}
             </div>
           </div>
 
@@ -281,7 +298,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
             <div className="flex flex-wrap items-center gap-3">
               <GetQuoteModal
                 triggerText="Get a Free Quote"
-                source="Hero Left CTA"
+                source={`Hero Left CTA ${country ? country.toUpperCase() : "Global"}`}
                 triggerClassName="px-7 py-3.5 text-sm font-bold rounded-xl bg-[#C9F600] text-[#3B1580] hover:opacity-90 shadow-lg shadow-[#C9F600]/25 transition-all"
               />
               <a
@@ -296,7 +313,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
 
             <div className="pt-5 border-t border-[#FFFFFF]/20 w-full">
               <p className="text-xs text-[#FFFFFF]/70 font-medium">
-                Trusted by fast-growing brands across USA, UK, UAE &amp; worldwide.
+                {currentTrustText}
               </p>
             </div>
           </div>

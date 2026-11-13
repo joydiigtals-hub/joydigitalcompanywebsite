@@ -11,6 +11,7 @@ import Header from "@/components/layout/Header";
 import { Code2, SearchCheck, Target, Smartphone, PanelsTopLeft, Globe, Headset, ArrowRight } from "lucide-react";
 import ModernHeroSection from "@/components/sections/ModernHeroSection";
 import IndustrySpecializationSection from "@/components/sections/IndustrySpecializationSection";
+import { COUNTRY_LANDING_DATA } from "@/data/countryLandingData";
 
 const DigitalNetworkBackground = dynamic(() => import("@/components/ui/DigitalNetworkBackground"));
 const IndustryTabs = dynamic(() => import("@/components/sections/IndustryTabs"));
@@ -103,49 +104,24 @@ interface HomePageComponentProps {
 }
 
 export default function HomePageComponent({ country }: HomePageComponentProps) {
-  
-  
-
-
+  const countryLower = (country || "").toLowerCase();
+  const localizedData = COUNTRY_LANDING_DATA[countryLower];
 
   // Dynamic localized copy overrides
   const getHeroContent = () => {
+    if (localizedData) {
+      return {
+        badge: localizedData.hero.badge,
+        h1: `${localizedData.hero.headingWordsMain.join(" ")} ${localizedData.hero.headingWordsGradient.join(" ")}`,
+        subtitle: localizedData.hero.subtitle,
+      };
+    }
     switch (country) {
-      case "us":
-        return {
-          badge: "Premium Web Engineering Partner",
-          h1: "Websites, SEO & Digital Marketing for US Businesses",
-          subtitle: "Joy Digital helps startups, growing companies, and enterprises across the USA build fast, search-optimized Next.js web systems to capture organic pipelines.",
-        };
-      case "uk":
-        return {
-          badge: "High-Performance Web Agency",
-          h1: "Websites, SEO & Digital Marketing for UK Companies",
-          subtitle: "Convert search traffic into loyal clients. Joy Digital builds high-speed corporate platforms and implements conversion-optimized user journeys across the United Kingdom.",
-        };
-      case "ae":
-        return {
-          badge: "Premium Web Development Dubai",
-          h1: "Websites, SEO & Digital Marketing for UAE Enterprises",
-          subtitle: "Build ultra-fast, responsive corporate portals and headless storefronts tailored for the Dubai and Gulf market to accelerate your digital performance.",
-        };
       case "in":
         return {
           badge: "Premium Custom Web & SEO",
           h1: "Websites, SEO & Digital Marketing for Indian Businesses",
           subtitle: "Grow your business online. Joy Digital designs high-speed business sites, Google Maps ranking systems, and lead-generation setups for companies across India.",
-        };
-      case "ca":
-        return {
-          badge: "Canada Web Engineering Partner",
-          h1: "Websites, SEO & Digital Marketing for Canadian Businesses",
-          subtitle: "Joy Digital helps startups and enterprise teams across Canada build high-speed Next.js platforms and capture organic search pipelines.",
-        };
-      case "au":
-        return {
-          badge: "Australia Custom Web & SEO",
-          h1: "Websites, SEO & Digital Marketing for Australian Businesses",
-          subtitle: "Empower your business with fast, search-compliant Next.js websites and Google ranking strategies engineered for Australian companies.",
         };
       default:
         return {
@@ -159,7 +135,7 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
   const hero = getHeroContent();
 
   // 2. TRUST / VALUE ITEMS (Purple themed icons)
-  const VALUE_ITEMS = [
+  const DEFAULT_VALUE_ITEMS = [
     {
       icon: "fa-solid fa-earth-americas text-[#C9F600]",
       title: "Global Service Support",
@@ -191,6 +167,49 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
       description: "Post-launch maintenance covering server deployment, security configurations, index monitoring, and speed tuning."
     }
   ];
+
+  const valueSectionBadge = localizedData?.valueProposition?.badge || "Value Proposition";
+  const valueSectionTitle = localizedData?.valueProposition?.title || "Designed for Growing Businesses Worldwide";
+  const valueSectionSubtitle = localizedData?.valueProposition?.subtitle || "Transparent processes, specialized technical engineers, and conversion-first workflows. No fake claims.";
+  const valueItems = localizedData?.valueProposition?.items || DEFAULT_VALUE_ITEMS;
+
+  const bottleneckSectionBadge = localizedData?.marketBottlenecks?.badge || "Common Bottlenecks";
+  const bottleneckSectionTitle = localizedData?.marketBottlenecks?.title || "Is Your Website Actually Generating Leads?";
+  const bottleneckSectionSubtitle = localizedData?.marketBottlenecks?.subtitle || "Most websites look decent but fail to achieve actual business results. Here are the core problems holding your online visibility back.";
+  const bottleneckItems = localizedData?.marketBottlenecks?.items || [
+    {
+      icon: "fa-solid fa-eye-slash",
+      title: "Low Google Visibility",
+      description: "Your site is buried on Page 2 or 3 of Google search results for key buying keywords, causing you to lose traffic to local competitors."
+    },
+    {
+      icon: "fa-solid fa-palette",
+      title: "Poor Website Design",
+      description: "Outdated layouts or generic agency templates that look unprofessional and fail to establish trust within the first 3 seconds."
+    },
+    {
+      icon: "fa-solid fa-circle-question",
+      title: "Low Enquiries",
+      description: "Visitors click onto your site, browse around, but leave without filling out forms, sending emails, or making phone calls."
+    },
+    {
+      icon: "fa-brands fa-whatsapp",
+      title: "No WhatsApp Conversion",
+      description: "Absence of direct WhatsApp click-to-chat widgets makes it difficult for mobile users to quickly ask about your pricing and services."
+    },
+    {
+      icon: "fa-solid fa-gauge-simple",
+      title: "Slow Website",
+      description: "Bloated page builders take 5+ seconds to load, triggering high bounce rates and causing search engines to devalue your page rank."
+    },
+    {
+      icon: "fa-solid fa-mobile-screen-button",
+      title: "Poor Mobile Experience",
+      description: "Cluttered mobile layouts, microscopic buttons, and poorly aligned input fields block smartphone users from converting."
+    }
+  ];
+
+  const currentFaqs = localizedData?.faqs || HOME_FAQS;
 
   // 3. SERVICES LIST
   const SERVICES = [
@@ -423,19 +442,19 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
               <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
-                Value Proposition
+                {valueSectionBadge}
               </span>
               <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
-                Designed for Growing Businesses Worldwide
+                {valueSectionTitle}
               </h2>
               <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-medium">
-                Transparent processes, specialized technical engineers, and conversion-first workflows. No fake claims.
+                {valueSectionSubtitle}
               </p>
             </div>
 
             {/* Staggered card grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {VALUE_ITEMS.map((item, index) => (
+              {valueItems.map((item, index) => (
                 <div 
                   key={index}
                   style={{ transitionDelay: `${index * 80}ms` }}
@@ -457,82 +476,28 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
               <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
-                Common Bottlenecks
+                {bottleneckSectionBadge}
               </span>
               <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
-                Is Your Website Actually Generating Leads?
+                {bottleneckSectionTitle}
               </h2>
               <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-semibold">
-                Most websites look decent but fail to achieve actual business results. Here are the core problems holding your online visibility back.
+                {bottleneckSectionSubtitle}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Problem 1 */}
-              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
-                <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <i className="fa-solid fa-eye-slash" />
+              {bottleneckItems.map((item, index) => (
+                <div key={index} className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
+                  <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <i className={item.icon} />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-bold text-[#FFFFFF] mb-2">{item.title}</h3>
+                    <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-medium">{item.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[#FFFFFF] mb-2">Low Google Visibility</h3>
-                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-medium">Your site is buried on Page 2 or 3 of Google search results for key buying keywords, causing you to lose traffic to local competitors.</p>
-                </div>
-              </div>
-
-              {/* Problem 2 */}
-              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
-                <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <i className="fa-solid fa-palette" />
-                </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[#FFFFFF] mb-2">Poor Website Design</h3>
-                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-semibold">Outdated layouts or generic agency templates that look unprofessional and fail to establish trust within the first 3 seconds.</p>
-                </div>
-              </div>
-
-              {/* Problem 3 */}
-              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
-                <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <i className="fa-solid fa-circle-question" />
-                </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[#FFFFFF] mb-2">Low Enquiries</h3>
-                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-semibold">Visitors click onto your site, browse around, but leave without filling out forms, sending emails, or making phone calls.</p>
-                </div>
-              </div>
-
-              {/* Problem 4 */}
-              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
-                <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <i className="fa-brands fa-whatsapp" />
-                </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[#FFFFFF] mb-2">No WhatsApp Conversion</h3>
-                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-semibold">Absence of direct WhatsApp click-to-chat widgets makes it difficult for mobile users to quickly ask about your pricing and services.</p>
-                </div>
-              </div>
-
-              {/* Problem 5 */}
-              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
-                <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <i className="fa-solid fa-gauge-simple" />
-                </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[#FFFFFF] mb-2">Slow Website</h3>
-                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-semibold">Bloated page builders take 5+ seconds to load, triggering high bounce rates and causing search engines to devalue your page rank.</p>
-                </div>
-              </div>
-
-              {/* Problem 6 */}
-              <div className="p-8 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] shadow-sm hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 flex gap-5 items-start text-left reveal-hidden group">
-                <div className="w-12 h-12 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/20 text-[#C9F600] flex items-center justify-center text-xl shadow-sm flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <i className="fa-solid fa-mobile-screen-button" />
-                </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[#FFFFFF] mb-2">Poor Mobile Experience</h3>
-                  <p className="text-xs text-[#FFFFFF]/80 leading-relaxed font-semibold">Cluttered mobile layouts, microscopic buttons, and poorly aligned input fields block smartphone users from converting.</p>
-                </div>
-              </div>
+              ))}
             </div>
             
             <div className="text-center mt-12">
@@ -604,39 +569,58 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
               ))}
             </div>
 
-            {/* Regional Local SEO Quick Links */}
+            {/* Regional Local SEO / Metro Market Quick Links */}
             <div className="mt-12 p-6 bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl flex flex-wrap items-center justify-between gap-4 text-left">
               <div>
-                <span className="text-xs font-extrabold text-[#FFFFFF] block mb-1">Looking for Local SEO &amp; Google Maps Rankings?</span>
-                <p className="text-[11px] text-[#FFFFFF]/80">Dominate search results and local pack queries in Chennai with our sub-second Next.js optimization.</p>
+                <span className="text-xs font-extrabold text-[#FFFFFF] block mb-1">
+                  {localizedData?.metroFocus?.title || "Looking for Local SEO & Google Maps Rankings?"}
+                </span>
+                <p className="text-[11px] text-[#FFFFFF]/80">
+                  {localizedData?.metroFocus?.description || "Dominate search results and local pack queries in Chennai with our sub-second Next.js optimization."}
+                </p>
               </div>
               <div className="flex flex-wrap items-center gap-3">
-                <Link
-                  href="/seo-services-chennai"
-                  className="inline-flex items-center gap-1.5 bg-[#3B1580] border border-[#FFFFFF]/25 text-[#C9F600] hover:border-[#C9F600] hover:text-[#C9F600] px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm"
-                >
-                  <i className="fa-solid fa-location-dot text-xs" />
-                  SEO Services in Chennai
-                </Link>
-                <Link
-                  href="/website-development-company-chennai"
-                  className="inline-flex items-center gap-1.5 bg-[#3B1580] border border-[#FFFFFF]/25 text-[#C9F600] hover:border-[#C9F600] hover:text-[#C9F600] px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm"
-                >
-                  <i className="fa-solid fa-code text-xs" />
-                  Web Development Chennai
-                </Link>
-                <Link
-                  href="/seo-services-madurai"
-                  className="inline-flex items-center gap-1.5 bg-[#3B1580] border border-[#FFFFFF]/20 text-[#FFFFFF]/80 hover:text-[#C9F600] px-4 py-2 rounded-xl text-xs font-bold transition-all"
-                >
-                  SEO Services Madurai
-                </Link>
-                <Link
-                  href="/seo-company-coimbatore"
-                  className="inline-flex items-center gap-1.5 bg-[#3B1580] border border-[#FFFFFF]/20 text-[#FFFFFF]/80 hover:text-[#C9F600] px-4 py-2 rounded-xl text-xs font-bold transition-all"
-                >
-                  SEO Company Coimbatore
-                </Link>
+                {localizedData?.metroFocus ? (
+                  localizedData.metroFocus.regions.map((reg, regIdx) => (
+                    <Link
+                      key={`metro-reg-${regIdx}`}
+                      href={reg.href}
+                      className="inline-flex items-center gap-1.5 bg-[#3B1580] border border-[#FFFFFF]/25 text-[#C9F600] hover:border-[#C9F600] hover:text-[#C9F600] px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm"
+                    >
+                      <i className="fa-solid fa-location-dot text-xs" />
+                      {reg.label}
+                    </Link>
+                  ))
+                ) : (
+                  <>
+                    <Link
+                      href="/seo-services-chennai"
+                      className="inline-flex items-center gap-1.5 bg-[#3B1580] border border-[#FFFFFF]/25 text-[#C9F600] hover:border-[#C9F600] hover:text-[#C9F600] px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm"
+                    >
+                      <i className="fa-solid fa-location-dot text-xs" />
+                      SEO Services in Chennai
+                    </Link>
+                    <Link
+                      href="/website-development-company-chennai"
+                      className="inline-flex items-center gap-1.5 bg-[#3B1580] border border-[#FFFFFF]/25 text-[#C9F600] hover:border-[#C9F600] hover:text-[#C9F600] px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm"
+                    >
+                      <i className="fa-solid fa-code text-xs" />
+                      Web Development Chennai
+                    </Link>
+                    <Link
+                      href="/seo-services-madurai"
+                      className="inline-flex items-center gap-1.5 bg-[#3B1580] border border-[#FFFFFF]/20 text-[#FFFFFF]/80 hover:text-[#C9F600] px-4 py-2 rounded-xl text-xs font-bold transition-all"
+                    >
+                      SEO Services Madurai
+                    </Link>
+                    <Link
+                      href="/seo-company-coimbatore"
+                      className="inline-flex items-center gap-1.5 bg-[#3B1580] border border-[#FFFFFF]/20 text-[#FFFFFF]/80 hover:text-[#C9F600] px-4 py-2 rounded-xl text-xs font-bold transition-all"
+                    >
+                      SEO Company Coimbatore
+                    </Link>
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -1286,15 +1270,17 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
                 FAQ
               </span>
               <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
-                Frequently Asked Questions
+                {countryLower ? `Frequently Asked Questions (${countryLower.toUpperCase()} Market)` : "Frequently Asked Questions"}
               </h2>
               <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-semibold">
-                Quick answers regarding site pricing plans, delivery timelines, maps optimizations, and global services.
+                {countryLower
+                  ? `Quick answers regarding ${countryLower.toUpperCase()} timezone coordination, pricing currencies, compliance, and Next.js delivery.`
+                  : "Quick answers regarding site pricing plans, delivery timelines, maps optimizations, and global services."}
               </p>
             </div>
 
             <div className="max-w-3xl mx-auto text-left reveal-hidden">
-              <Accordion items={HOME_FAQS} />
+              <Accordion items={currentFaqs} />
             </div>
           </div>
         </section>
