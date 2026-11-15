@@ -1,28 +1,30 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
 
+const config = getIndustryConfig("website-for-real-estate");
+
 export const metadata: Metadata = {
-  title: "Real Estate Website Design",
-  description: "Custom website design and SEO for real estate brokers and developers. Fast property listings, NRI buyer inquiry funnels, and local SEO.",
-  keywords: [
-      "Real Estate Website Development",
-      "Real Estate SEO Services",
-      "Builder & Contractor Website Design",
-      "Property Listing Portal",
-      "Real Estate Lead Generation"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-real-estate",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-real-estate",
-    title: "Real Estate Website Design & NRI Property Buyer Leads | Joy Digital",
-    description: "Ultra-fast Next.js website design for real estate agencies, luxury home builders, and commercial brokers. Interactive floor plans, NRI buyer portals, site visit scheduling, and local/global property SEO.",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Real Estate Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -31,15 +33,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://www.joydigital.in/website-for-real-estate#service",
+      "@id": "https://joydigital.in/website-for-real-estate#service",
       "name": "Real Estate Website Design & Property SEO",
       "serviceType": "Real Estate Web Development & Property Lead Generation",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://www.joydigital.in/assets/images/logo.webp",
+        "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://www.joydigital.in",
+        "url": "https://joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
@@ -71,7 +73,7 @@ export default async function RealEstateWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Real Estate"
-      heroTitle="High-Converting Website Design & Property SEO for Real Estate Developers & Brokers"
+      heroTitle={config.h1}
       heroSubtitle="Convert high-intent homebuyers, commercial tenants, and NRI property investors into direct site visit bookings. We engineer fast, visually arresting Next.js portals for real estate builders, luxury brokers, and property agencies."
       leadSource="Website for Real Estate Landing Page"
       heroCtaText="Get Free Real Estate Web Quote"
@@ -84,37 +86,37 @@ export default async function RealEstateWebPage() {
           <p>
             Unfortunately, many real estate websites suffer from slow image rendering, unorganized property listings, broken mobile inquiry popups, and missing direct WhatsApp links or site visit scheduling widgets.
           </p>
-          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
-            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting Real Estate Portals</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
+            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Real Estate Portals</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Site Visit & VIP Consultation Form</strong>: Direct booking widget with date selection</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>NRI Investment Portal</strong>: Specialized currency converters & video walkthroughs</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Filterable Property Directory</strong>: BHK, location, budget & possession timeline</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Real Estate SEO Strategy</strong>: Rank for competitive local & global property keywords</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Property Sales WhatsApp Routing</strong>: Instant buyer lead connection</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we merge real estate branding with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">high-speed Next.js web development</Link>, <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">property SEO strategies</Link>, and <Link href="/local-seo-services" className="text-[#C9F600] font-bold hover:underline">Google Business Profile optimization</Link> to help builders sell out inventory faster.
+            At Joy Digital, we merge real estate branding with <Link href="/website-development" className="text-primary font-bold hover:underline">high-speed Next.js web development</Link>, <Link href="/seo-services" className="text-primary font-bold hover:underline">property SEO strategies</Link>, and <Link href="/local-seo-services" className="text-primary font-bold hover:underline">Google Business Profile optimization</Link> to help builders sell out inventory faster.
           </p>
         </div>
       }

@@ -1,36 +1,30 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
 
+const config = getIndustryConfig("website-for-pest-control");
+
 export const metadata: Metadata = {
-  title: {
-    absolute: "Pest Control Website Design & SEO Services | Joy Digital",
-  },
-  description: "High-converting website design & local SEO for pest control companies. Drive emergency calls, WhatsApp bookings & qualified leads. Get a free audit today!",
-  keywords: [
-      "Pest Control Website Design",
-      "Pest Control SEO Services",
-      "Local SEO for Pest Control",
-      "Pest Control Marketing",
-      "Pest Inspection Lead Generation"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-pest-control",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-pest-control",
-    title: "Pest Control Website Design & SEO Services | Joy Digital",
-    description: "High-converting website design & local SEO for pest control companies. Drive emergency calls, WhatsApp bookings & qualified leads. Get a free audit today!",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Pest Control Website Design & SEO Services Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pest Control Website Design & SEO Services | Joy Digital",
-    description: "High-converting website design & local SEO for pest control companies. Drive emergency calls, WhatsApp bookings & qualified leads. Get a free audit today!",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -39,15 +33,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://www.joydigital.in/website-for-pest-control#service",
-      "name": "Pest Control Website Design & SEO Services",
-      "serviceType": "Pest Control Web Development & Local SEO Lead Marketing",
+      "@id": "https://joydigital.in/website-for-pest-control#service",
+      "name": "Pest Control Company Website Design & Exterminator SEO",
+      "serviceType": "Pest Control Web Development & Digital Lead Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://www.joydigital.in/assets/images/logo.webp",
+        "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://www.joydigital.in",
+        "url": "https://joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
@@ -58,44 +52,14 @@ const pageSchema = {
           "addressCountry": "IN"
         }
       },
-      "description": "Custom website design and local SEO for pest control companies, termite exterminators, bed bug specialists, and commercial pest managers. Features 1-tap emergency calling, WhatsApp lead capture, and Google Maps ranking.",
+      "description": "Custom website design for pest control companies, termite exterminators, bed bug treatment experts, and commercial pest management providers. Features emergency booking forms, WhatsApp lead routing, service area maps, and local search optimization.",
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "USD",
-        "lowPrice": "1200",
-        "highPrice": "2800",
+        "lowPrice": "25000",
+        "highPrice": "45000",
         "offerCount": "2"
       }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://www.joydigital.in/website-for-pest-control#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How does a custom website help pest control companies get more leads?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A high-converting exterminator website provides instant 1-tap mobile calling, interactive service area coverage maps, and online inspection scheduling—turning high-intent emergency searches into direct client phone calls."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you integrate emergency WhatsApp booking for exterminators?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we build custom lead generation hooks allowing residential and commercial clients to instantly send photos of pest damage (termite tubing, bed bug signs) straight to your WhatsApp support desk."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you optimize local SEO for 'pest control near me' searches?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We create location-specific service pages, implement LocalBusiness schema markup, and optimize Google Business Profile citations to help your extermination services rank on top of Google Maps."
-          }
-        }
-      ]
     }
   ]
 };
@@ -104,128 +68,14 @@ export default async function PestControlWebPage() {
   const post1 = await getPostBySlug("5-website-features-pest-control-companies-leads");
   const relatedBlogPosts = [post1].filter((p): p is NonNullable<typeof p> => p !== null);
 
-  const comparisonTable = (
-    <section className="py-16 lg:py-24 bg-[#260B5E] border-b border-[#FFFFFF]/15 text-[#FFFFFF]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/30 text-[#C9F600] text-xs font-bold uppercase tracking-wider mb-3">
-            Performance &amp; Conversion Comparison
-          </span>
-          <h2 className="text-2xl md:text-4xl font-extrabold text-[#FFFFFF] mb-4">
-            Why Choose Joy Digital for Pest Control Web Design?
-          </h2>
-          <p className="text-sm text-[#FFFFFF]/80 leading-relaxed font-normal">
-            Compare generic web templates with our custom high-converting Next.js architecture.
-          </p>
-        </div>
-
-        <div className="max-w-5xl mx-auto overflow-hidden bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl shadow-md not-prose">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="border-b border-[#FFFFFF]/20 bg-[#260B5E]">
-                  <th className="py-4 px-6 text-xs font-extrabold text-primary-dark uppercase tracking-wider w-1/4">
-                    Features
-                  </th>
-                  <th className="py-4 px-6 text-xs font-extrabold text-[#FFFFFF]/70 uppercase tracking-wider w-3/8">
-                    Generic Website
-                  </th>
-                  <th className="py-4 px-6 text-xs font-extrabold text-[#C9F600] uppercase tracking-wider w-3/8 bg-[#3B1580]/80 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-1.5">
-                      <span>Joy Digital Pest Control Solution</span>
-                      <span className="bg-[#C9F600] text-[#3B1580] text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Recommended</span>
-                    </div>
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[#FFFFFF]/15 text-xs text-[#FFFFFF]">
-                <tr className="hover:bg-[#260B5E]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
-                    Mobile Speed
-                  </td>
-                  <td className="py-4 px-6 text-rose-400 font-medium">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
-                      <span>Slow (3s+ load delay)</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
-                      <span>Sub-1.5s Ultra-Fast Next.js</span>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr className="hover:bg-[#260B5E]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
-                    Emergency CTAs
-                  </td>
-                  <td className="py-4 px-6 text-rose-400 font-medium">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
-                      <span>Basic email forms</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
-                      <span>1-Tap Mobile Call &amp; WhatsApp Sticky Hooks</span>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr className="hover:bg-[#260B5E]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
-                    Search Engine SEO
-                  </td>
-                  <td className="py-4 px-6 text-rose-400 font-medium">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
-                      <span>Basic meta tags only</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
-                      <span>Local Schema Markup &amp; Google Maps Integration</span>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr className="hover:bg-[#260B5E]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
-                    Lead Capture
-                  </td>
-                  <td className="py-4 px-6 text-rose-400 font-medium">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
-                      <span>Standard contact box</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
-                      <span>3-Step Pest Inspection Booking Funnel</span>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-
   return (
     <ServicePageTemplate
       serviceName="Website for Pest Control"
-      heroTitle="High-Converting Website Design & SEO for Pest Control Companies"
+      heroTitle={config.h1}
       heroSubtitle="Turn urgent pest infestations into direct phone calls, instant WhatsApp bookings, and emergency inspection requests. We engineer ultra-fast, mobile-friendly Next.js websites for residential & commercial pest exterminators."
       leadSource="Website for Pest Control Landing Page"
       heroCtaText="Get Free Pest Control Web Quote"
-      canonicalUrl="https://www.joydigital.in/website-for-pest-control"
+      canonicalUrl="https://joydigital.in/website-for-pest-control"
       overviewTitle="Why Most Pest Control Websites Fail to Convert Emergency Calls (And How We Fix It)"
       overviewContent={
         <div className="space-y-6">
@@ -235,37 +85,37 @@ export default async function PestControlWebPage() {
           <p>
             Unfortunately, many pest control websites suffer from slow mobile speeds, missing service area breakdowns, unorganized treatment packages, and lack of immediate emergency contact buttons—causing high-intent leads to bounce to competitors.
           </p>
-          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
-            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting Pest Control Websites</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
+            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Pest Control Websites</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>1-Tap Emergency Call & WhatsApp Button</strong>: Connect instantly on mobile</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Free Inspection Request Form</strong>: Simple 3-step property inspection booking</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
-                <span><strong>Google Business Profile & Maps SEO</strong>: Rank top for &apos;Pest control near me&apos;</span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span><strong>Google Business Profile & Maps SEO</strong>: Rank top for 'Pest control near me'</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Eco-Friendly & Safe Certification Badges</strong>: Build instant customer trust</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Commercial B2B Maintenance Plans</strong>: Contracts for hotels, restaurants & offices</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we combine expert <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">custom web development</Link> with localized <Link href="/local-seo-services" className="text-[#C9F600] font-bold hover:underline">pest control SEO</Link> and <Link href="/google-business-profile-setup" className="text-[#C9F600] font-bold hover:underline">Google Maps local citation setups</Link> to help exterminators generate daily customer inquiries.
+            At Joy Digital, we combine expert <Link href="/website-development" className="text-primary font-bold hover:underline">custom web development</Link> with localized <Link href="/local-seo-services" className="text-primary font-bold hover:underline">pest control SEO</Link> and <Link href="/google-business-profile-setup" className="text-primary font-bold hover:underline">Google Maps local citation setups</Link> to help exterminators generate daily customer inquiries.
           </p>
         </div>
       }
@@ -323,7 +173,6 @@ export default async function PestControlWebPage() {
           description: "Highlight 1-Year to 5-Year Termite Service Warranties and Free Retreatment Guarantees clearly.",
         },
       ]}
-      afterBenefitsSection={comparisonTable}
       processTitle="Our 6-Step Pest Control Website Engineering Process"
       processSubtitle="A smooth roadmap from initial consultation to active lead generation on Google."
       processSteps={[
@@ -403,18 +252,6 @@ export default async function PestControlWebPage() {
       ]}
       faqs={[
         {
-          question: "How does a custom website help pest control companies get more leads?",
-          answer: "A high-converting exterminator website provides instant 1-tap mobile calling, interactive service area coverage maps, and online inspection scheduling—turning high-intent emergency searches into direct client phone calls.",
-        },
-        {
-          question: "Can you integrate emergency WhatsApp booking for exterminators?",
-          answer: "Yes, we build custom lead generation hooks allowing residential and commercial clients to instantly send photos of pest damage (termite tubing, bed bug signs) straight to your WhatsApp support desk.",
-        },
-        {
-          question: "How do you optimize local SEO for 'pest control near me' searches?",
-          answer: "We create location-specific service pages, implement LocalBusiness schema markup, and optimize Google Business Profile citations to help your extermination services rank on top of Google Maps.",
-        },
-        {
           question: "How much does a website for a pest control company cost?",
           answer: "Our pest control website packages start from $1,200 USD for local exterminators up to $2,800 USD for multi-city commercial pest management portals.",
         },
@@ -448,3 +285,4 @@ export default async function PestControlWebPage() {
     />
   );
 }
+

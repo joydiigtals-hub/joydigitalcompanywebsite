@@ -1,3 +1,4 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
@@ -5,25 +6,26 @@ import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
+const config = getIndustryConfig("website-for-insurance-agents");
+
 export const metadata: Metadata = {
-  title: "Websites for Insurance Agents",
-  description: "Custom website design & local SEO for insurance agents in India. Rank on Google, generate policy leads, and build client trust with Joy Digital.",
-  keywords: [
-      "Insurance Agent Website Development",
-      "Insurance Broker Web Design",
-      "Insurance SEO Services",
-      "Policy Lead Generation Funnels",
-      "Financial Services Web Design"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-insurance-agents",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-insurance-agents",
-    title: "Websites for Insurance Agents | Joy Digital",
-    description: "Custom website design & local SEO for insurance agents in India. Rank on Google, generate policy leads, and build client trust with Joy Digital.",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "SEO and Website for Insurance Agents in India Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -57,12 +59,12 @@ export default async function InsuranceWebPage() {
   const relatedBlogPosts = [post1, post2, post3].filter((p): p is NonNullable<typeof p> => p !== null);
 
   const pageGraphSchema = buildPageGraphSchema({
-    url: "https://www.joydigital.in/website-for-insurance-agents",
-    title: "Websites for Insurance Agents | Joy Digital",
+    url: "https://joydigital.in/website-for-insurance-agents",
+    title: "SEO and Website for Insurance Agents in India | Joy Digital",
     description: "Custom website design & local SEO for insurance agents in India. Rank on Google, generate policy leads, and build client trust with Joy Digital.",
     breadcrumbs: [
-      { name: "Home", item: "https://www.joydigital.in" },
-      { name: "Website for Insurance Agents", item: "https://www.joydigital.in/website-for-insurance-agents" },
+      { name: "Home", item: "https://joydigital.in" },
+      { name: "Website for Insurance Agents", item: "https://joydigital.in/website-for-insurance-agents" },
     ],
     service: {
       name: "SEO and Website for Insurance Agents in India",
@@ -75,7 +77,7 @@ export default async function InsuranceWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Insurance Agents"
-      heroTitle="SEO and Website for Insurance Agents in India"
+      heroTitle={config.h1}
       heroSubtitle="Generate qualified health, term, vehicle, and NRI insurance leads across India. We engineer fast, trustworthy Next.js websites and high-ranking local SEO for insurance agents, LIC advisors, and brokerages."
       leadSource="Website for Insurance Agents Landing Page"
       heroCtaText="Get Free Insurance Web Quote"
@@ -88,37 +90,37 @@ export default async function InsuranceWebPage() {
           <p>
             Unfortunately, many insurance agent websites look untrustworthy, load slowly, hide policy benefits, and lack interactive premium quote forms or instant WhatsApp inquiry buttons.
           </p>
-          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
-            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting Insurance Agent Websites</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
+            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Insurance Agent Websites</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Instant Policy Premium Quote Estimator</strong>: Health, life & vehicle inputs</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>NRI & Expat Insurance Portal</strong>: Specialized term & health policy advisories</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Policy Comparison Matrix</strong>: Coverage, sum assured & rider options</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Local & Global Financial SEO Strategy</strong>: Rank for high-value policy keywords</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Advisor WhatsApp Routing</strong>: Instant client policy consultation</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we combine financial branding with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">custom web engineering</Link>, <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">insurance search optimization</Link>, and <Link href="/google-business-profile-setup" className="text-[#C9F600] font-bold hover:underline">Google Business Profile setup</Link> to help agents scale policy sales.
+            At Joy Digital, we combine financial branding with <Link href="/website-development" className="text-primary font-bold hover:underline">custom web engineering</Link>, <Link href="/seo-services" className="text-primary font-bold hover:underline">insurance search optimization</Link>, and <Link href="/google-business-profile-setup" className="text-primary font-bold hover:underline">Google Business Profile setup</Link> to help agents scale policy sales.
           </p>
         </div>
       }

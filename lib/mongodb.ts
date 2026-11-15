@@ -38,8 +38,8 @@ function getDirectFallbackUri(srvUri: string): string | null {
 }
 
 const options = {
-  serverSelectionTimeoutMS: 15000,
-  connectTimeoutMS: 15000,
+  serverSelectionTimeoutMS: 2000,
+  connectTimeoutMS: 2000,
   maxPoolSize: 10,
 };
 

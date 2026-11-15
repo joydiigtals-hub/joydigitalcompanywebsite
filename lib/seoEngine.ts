@@ -18,7 +18,7 @@ export async function generatePageSeo(pagePath: string, defaultTitle?: string, d
   const pageMapping = await getSeoPageByPath(pagePath);
   const allKeywords = await getAllKeywords();
 
-  const baseUrl = "https://www.joydigital.in";
+  const baseUrl = "https://joydigital.in";
   const canonical = `${baseUrl}${pagePath === "/" ? "" : pagePath}`;
 
   let primaryKw: SeoKeyword | null = null;
@@ -53,16 +53,13 @@ export async function generatePageSeo(pagePath: string, defaultTitle?: string, d
     "Next.js Agency"
   ];
 
-  const rawTitle = pageMapping?.title_template || defaultTitle || "Web Development & Engineering Services";
-  const pageTitle = rawTitle.replace(/\s*\|\s*Joy Digital.*$/i, "").trim();
-  const fullTitle = `${pageTitle} | Joy Digital`;
+  const title = pageMapping?.title_template || defaultTitle || "Custom Web Development & Engineering Services | Joy Digital";
   const description = pageMapping?.meta_description || defaultDescription || "Joy Digital engineers high-performance custom Next.js web applications, headless CMS, and full-stack digital solutions for global enterprises.";
 
   const metadata: Metadata = {
     metadataBase: new URL(baseUrl),
-    title: pageTitle,
+    title,
     description,
-    keywords: keywordStrings,
     alternates: {
       canonical,
       languages: {
@@ -77,20 +74,20 @@ export async function generatePageSeo(pagePath: string, defaultTitle?: string, d
       type: "website",
       url: canonical,
       siteName: "Joy Digital Agency",
-      title: fullTitle,
+      title,
       description,
       images: [
         {
           url: `${baseUrl}/assets/images/hero-banner.webp`,
           width: 1200,
           height: 630,
-          alt: primaryKw?.keyword || fullTitle,
+          alt: primaryKw?.keyword || title,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: fullTitle,
+      title,
       description,
       images: [`${baseUrl}/assets/images/hero-banner.webp`],
       creator: "@joydigital",
@@ -113,12 +110,12 @@ export async function generatePageSeo(pagePath: string, defaultTitle?: string, d
 
   const graphSchema = buildPageGraphSchema({
     url: canonical,
-    title: fullTitle,
+    title,
     description,
     isHomepage,
     includeLocalBusiness: true,
     service: {
-      name: pageMapping?.h1 || fullTitle,
+      name: pageMapping?.h1 || title,
       description: description,
       serviceType: primaryKw?.keyword || "Web Engineering",
     },

@@ -1,36 +1,30 @@
-import React from "react";
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
+﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
 
+const config = getIndustryConfig("website-for-textile-manufacturers");
+
 export const metadata: Metadata = {
-  title: {
-    absolute: "B2B Textile Manufacturer Website Design & SEO | Joy Digital",
-  },
-  description: "High-converting B2B website design & international SEO for textile manufacturers, spinning mills & garment exporters. Drive RFQs, sample requests & global sales!",
-  keywords: [
-      "Textile Manufacturer Website Development",
-      "Textile Export Web Design",
-      "Tiruppur Garment Exporter SEO",
-      "Garment Manufacturing Web Portal",
-      "B2B Textile Supplier SEO"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-textile-manufacturers",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-textile-manufacturers",
-    title: "B2B Textile Manufacturer Website Design & SEO | Joy Digital",
-    description: "High-converting B2B website design & international SEO for textile manufacturers, spinning mills & garment exporters. Drive RFQs, sample requests & global sales!",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "B2B Textile Manufacturer Website Design & SEO Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "B2B Textile Manufacturer Website Design & SEO | Joy Digital",
-    description: "High-converting B2B website design & international SEO for textile manufacturers, spinning mills & garment exporters. Drive RFQs, sample requests & global sales!",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -39,213 +33,50 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://www.joydigital.in/website-for-textile-manufacturers#service",
-      "name": "B2B Textile Manufacturer Website Design & International SEO",
-      "serviceType": "Textile B2B Web Development & Export Lead Marketing",
+      "@id": "https://joydigital.in/website-for-textile-manufacturers#service",
+      "name": "Global Textile Manufacturer Website Design & B2B SEO",
+      "serviceType": "Textile B2B Web Development & Export Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://www.joydigital.in/assets/images/logo.webp",
+        "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://www.joydigital.in",
-        "priceRange": "$$",
+        "url": "https://joydigital.in",
+        "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "4/166 T, Thinamani Nagar",
+          "streetAddress": "Old Perungalathur",
           "addressLocality": "Madurai",
           "addressRegion": "Tamil Nadu",
-          "postalCode": "625018",
+          "postalCode": "600063",
           "addressCountry": "IN"
         }
       },
-      "description": "Custom B2B website development and international SEO for textile manufacturers, spinning mills, fabric exporters, and apparel OEM factories. Features digital swatch catalogs, online RFQ builders, compliance walls, and global search ranking.",
+      "description": "Custom B2B website development for global textile manufacturers, yarn mills, fabric exporters, and apparel OEM factories. Features online RFQ submission, digital swatch catalogs, compliance badge walls, and multi-country SEO.",
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "USD",
-        "lowPrice": "1200",
-        "highPrice": "3800",
+        "lowPrice": "25000",
+        "highPrice": "75000",
         "offerCount": "3"
       }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://www.joydigital.in/website-for-textile-manufacturers#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How does a custom B2B website help textile manufacturers generate international buyer leads?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "International apparel buyers and sourcing managers look for clear fabric specifications (GSM, weave, blend %), compliance certifications (OEKO-TEX, GOTS), and low-friction RFQ forms. A custom Next.js export portal turns high-intent B2B search traffic into direct sample requests and bulk volume inquiries."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can buyers request physical fabric swatches or custom lab dips directly on the site?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we build interactive B2B swatch catalog systems and sample request builders where sourcing agents can specify required GSM, fiber blend, order volume, and delivery port before requesting physical swatches."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you optimize SEO for global textile export queries?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We structure individual product category landing pages, optimize technical LocalBusiness/Organization schema markup, and target intent-rich international search terms like 'Cotton yarn manufacturer exporter' and 'Organic knits fabric supplier' to reach buyers in key markets like the US, UK, Europe, and UAE."
-          }
-        }
-      ]
     }
   ]
 };
 
 export default async function TextileWebPage() {
-  const post1 = await getPostBySlug("textile-exporters-website-uk-us-buyers-2026");
-  const post2 = await getPostBySlug("how-global-buyers-find-textile-suppliers-india");
-  const post3 = await getPostBySlug("textile-manufacturing-website-features-2026");
+  const post1 = await getPostBySlug("textile-manufacturing-website-features-2026");
+  const post2 = await getPostBySlug("custom-website-development-requirements-guide");
+  const post3 = await getPostBySlug("why-ai-built-websites-fail-b2b-web-architecture");
   const relatedBlogPosts = [post1, post2, post3].filter((p): p is NonNullable<typeof p> => p !== null);
-
-  const comparisonTable = (
-    <section className="py-16 lg:py-24 bg-[#260B5E] border-b border-[#FFFFFF]/15 text-[#FFFFFF]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/30 text-[#C9F600] text-xs font-bold uppercase tracking-wider mb-3">
-            B2B Export Performance Comparison
-          </span>
-          <h2 className="text-2xl md:text-4xl font-extrabold text-[#FFFFFF] mb-4">
-            Legacy Factory Sites vs Joy Digital B2B Export Portals
-          </h2>
-          <p className="text-sm text-[#FFFFFF]/80 leading-relaxed font-normal">
-            Why global textile exporters need custom Next.js portals to capture high-value buyer RFQs.
-          </p>
-        </div>
-
-        <div className="max-w-5xl mx-auto overflow-hidden bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl shadow-md not-prose">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="border-b border-[#FFFFFF]/20 bg-[#260B5E]">
-                  <th className="py-4 px-6 text-xs font-extrabold text-primary-dark uppercase tracking-wider w-1/4">
-                    Features
-                  </th>
-                  <th className="py-4 px-6 text-xs font-extrabold text-[#FFFFFF]/70 uppercase tracking-wider w-3/8">
-                    Legacy Factory Website
-                  </th>
-                  <th className="py-4 px-6 text-xs font-extrabold text-[#C9F600] uppercase tracking-wider w-3/8 bg-[#3B1580]/80 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-1.5">
-                      <span>Joy Digital B2B Export Portal</span>
-                      <span className="bg-[#C9F600] text-[#3B1580] text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Recommended</span>
-                    </div>
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[#FFFFFF]/15 text-xs text-[#FFFFFF]">
-                <tr className="hover:bg-[#260B5E]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
-                    Performance &amp; Speed
-                  </td>
-                  <td className="py-4 px-6 text-rose-400 font-medium">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
-                      <span>Heavy PDF downloads &amp; slow loading speeds</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
-                      <span>Sub-1.5s Global Edge-Served Next.js architecture</span>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr className="hover:bg-[#260B5E]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
-                    Buyer Lead Capture
-                  </td>
-                  <td className="py-4 px-6 text-rose-400 font-medium">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
-                      <span>Generic &apos;Contact Us&apos; box</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
-                      <span>Instant B2B RFQ &amp; Physical Sample Request Builder</span>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr className="hover:bg-[#260B5E]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
-                    Product Catalog
-                  </td>
-                  <td className="py-4 px-6 text-rose-400 font-medium">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
-                      <span>Static images with missing specs</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
-                      <span>Digital Fabric Catalog with GSM, Blend &amp; Weave Filters</span>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr className="hover:bg-[#260B5E]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
-                    Compliance &amp; Trust
-                  </td>
-                  <td className="py-4 px-6 text-rose-400 font-medium">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
-                      <span>Text-only compliance claims</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
-                      <span>Prominent Certification Wall (OEKO-TEX, GOTS, ISO, SEDEX)</span>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr className="hover:bg-[#260B5E]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
-                    Search Visibility
-                  </td>
-                  <td className="py-4 px-6 text-rose-400 font-medium">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
-                      <span>Local search tags</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
-                      <span>International B2B SEO targeting US, EU, UAE &amp; Global Buyers</span>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
 
   return (
     <ServicePageTemplate
       serviceName="Website for Textile Manufacturers"
-      heroTitle="High-Converting B2B Website Design & Global SEO for Textile Manufacturers"
+      heroTitle={config.h1}
       heroSubtitle="Turn international apparel brands, wholesale buyers, and sourcing managers into high-value B2B RFQ leads. We build ultra-fast Next.js export portals for spinning mills, fabric weavers, garment OEMs, and home textile exporters worldwide."
       leadSource="Website for Textile Manufacturers Landing Page"
       heroCtaText="Get Free B2B Web Quote"
-      canonicalUrl="https://www.joydigital.in/website-for-textile-manufacturers"
       overviewTitle="Why Most B2B Textile Manufacturer Websites Fail to Convert International Buyers (And How We Fix It)"
       overviewContent={
         <div className="space-y-6">
@@ -255,37 +86,37 @@ export default async function TextileWebPage() {
           <p>
             When international sourcing managers land on a site that lacks detailed fabric specifications (GSM, weave, blend %, MOQs), clear compliance certifications (GOTS, OEKO-TEX, ISO), or responsive mobile RFQ buttons, they immediately abandon the page for competing exporters.
           </p>
-          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
-            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting B2B Textile Export Portals</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
+            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting B2B Textile Export Portals</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
-                <span><strong>Digital Fabric &amp; Swatch Catalog</strong>: Interactive GSM, construction &amp; blend filters</span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span><strong>Digital Fabric & Swatch Catalog</strong>: Interactive GSM, construction & blend filters</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
-                <span><strong>Instant B2B RFQ Builder</strong>: Quick custom quote &amp; sample swatch request form</span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span><strong>Instant B2B RFQ Builder</strong>: Quick custom quote & sample swatch request form</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>International Certification Wall</strong>: Prominent OEKO-TEX, GOTS, ISO, SEDEX badges</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
-                <span><strong>Global B2B SEO Strategy</strong>: Target buyer searches in US, UK, UAE &amp; Australia</span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span><strong>Global B2B SEO Strategy</strong>: Target buyer searches in US, UK, UAE & Australia</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s International Speed</strong>: Edge-served serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Export Sales WhatsApp Routing</strong>: Instant connection with regional trade reps</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we combine robust <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">custom web development</Link> with specialized <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">international B2B SEO</Link> and <Link href="/offshore-web-development-partner" className="text-[#C9F600] font-bold hover:underline">global web partner solutions</Link> to help textile exporters establish market authority and close volume buyer contracts.
+            At Joy Digital, we combine robust <Link href="/website-development" className="text-primary font-bold hover:underline">custom web development</Link> with specialized <Link href="/seo-services" className="text-primary font-bold hover:underline">international B2B SEO</Link> and <Link href="/offshore-web-development-partner" className="text-primary font-bold hover:underline">global web partner solutions</Link> to help textile exporters establish market authority and close volume buyer contracts.
           </p>
         </div>
       }
@@ -343,7 +174,6 @@ export default async function TextileWebPage() {
           description: "Showcase recycled polyester, organic cotton, zero liquid discharge (ZLD) effluent treatment plants, and carbon footprint reduction efforts.",
         },
       ]}
-      afterBenefitsSection={comparisonTable}
       processTitle="Our 6-Step Textile Website Engineering Roadmap"
       processSubtitle="A systematic process designed to take your factory from legacy offline marketing to a global digital export engine."
       processSteps={[
@@ -442,18 +272,6 @@ export default async function TextileWebPage() {
       ]}
       faqs={[
         {
-          question: "How does a custom B2B website help textile manufacturers generate international buyer leads?",
-          answer: "International apparel buyers and sourcing managers look for clear fabric specifications (GSM, weave, blend %), compliance certifications (OEKO-TEX, GOTS), and low-friction RFQ forms. A custom Next.js export portal turns high-intent B2B search traffic into direct sample requests and bulk volume inquiries.",
-        },
-        {
-          question: "Can buyers request physical fabric swatches or custom lab dips directly on the site?",
-          answer: "Yes, we build interactive B2B swatch catalog systems and sample request builders where sourcing agents can specify required GSM, fiber blend, order volume, and delivery port before requesting physical swatches.",
-        },
-        {
-          question: "How do you optimize SEO for global textile export queries?",
-          answer: "We structure individual product category landing pages, optimize technical LocalBusiness/Organization schema markup, and target intent-rich international search terms like 'Cotton yarn manufacturer exporter' and 'Organic knits fabric supplier' to reach buyers in key markets like the US, UK, Europe, and UAE.",
-        },
-        {
           question: "How much does a website for a textile manufacturing company cost?",
           answer: "Our B2B textile manufacturer website packages start from $1,200 USD for specialized exporter sites up to $2,800 USD for enterprise multi-factory textile portals.",
         },
@@ -491,3 +309,4 @@ export default async function TextileWebPage() {
     />
   );
 }
+

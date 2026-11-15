@@ -1,27 +1,29 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 ﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
+const config = getIndustryConfig("website-for-law-firms");
+
 export const metadata: Metadata = {
-  title: "Law Firm Website Design & SEO",
-  description: "Custom website design and SEO for law firms and attorneys. Confidential client consultation forms, attorney profiles, and top Google rankings.",
-  keywords: [
-      "Law Firm Website Development",
-      "Legal Web Design Services",
-      "SEO for Lawyers & Advocates",
-      "Attorney Website Design",
-      "Legal Practice Lead Generation"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-law-firms",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-law-firms",
-    title: "Law Firm Website Design & Legal Client Acquisition | Joy Digital",
-    description: "Ultra-fast Next.js websites built for legal practices and corporate law attorneys. Confidential case evaluation forms, practice area showcases, attorney bio pages, and local search dominance.",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Law Firm Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -30,15 +32,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://www.joydigital.in/website-for-law-firms#service",
+      "@id": "https://joydigital.in/website-for-law-firms#service",
       "name": "Law Firm Website Design & Legal SEO Services",
       "serviceType": "Legal Web Development & Attorney Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://www.joydigital.in/assets/images/logo.webp",
+        "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://www.joydigital.in",
+        "url": "https://joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
@@ -65,7 +67,7 @@ export default function LawFirmWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Law Firms"
-      heroTitle="High-Converting Website Design & SEO for Law Firms & Attorneys"
+      heroTitle={config.h1}
       heroSubtitle="Build immediate professional trust and convert high-value legal inquiries into scheduled client consultations. We engineer fast, elegant Next.js websites for corporate law firms, litigation advocates, IP attorneys, and specialized legal practices."
       leadSource="Website for Law Firms Landing Page"
       heroCtaText="Get Free Legal Web Quote"
@@ -78,37 +80,37 @@ export default function LawFirmWebPage() {
           <p>
             However, many legal websites look sterile, load slowly on mobile devices, display outdated attorney bios, and lack clear confidential case submission forms or instant phone/WhatsApp routing.
           </p>
-          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
-            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting Law Firm Websites</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
+            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Law Firm Websites</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Confidential Case Evaluation Forms</strong>: Encrypted client intake workflow</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Practice Area Hubs</strong>: Dedicated landing pages for corporate, IP, litigation & tax</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Attorney & Partner Bio Profiles</strong>: Education, bar admissions & trial victories</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Local Legal SEO Strategy</strong>: Rank for high-value attorney search queries</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Legal Advisory Schema Markup</strong>: Rich Google Search snippet enhancement</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we combine sophisticated legal branding with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">high-speed Next.js web development</Link>, <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">legal SEO strategies</Link>, and <Link href="/local-seo-services" className="text-[#C9F600] font-bold hover:underline">Google Business Profile optimization</Link> to position your practice at the forefront of your legal market.
+            At Joy Digital, we combine sophisticated legal branding with <Link href="/website-development" className="text-primary font-bold hover:underline">high-speed Next.js web development</Link>, <Link href="/seo-services" className="text-primary font-bold hover:underline">legal SEO strategies</Link>, and <Link href="/local-seo-services" className="text-primary font-bold hover:underline">Google Business Profile optimization</Link> to position your practice at the forefront of your legal market.
           </p>
         </div>
       }

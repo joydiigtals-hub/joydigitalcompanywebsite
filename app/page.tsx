@@ -3,27 +3,13 @@ import HomePageComponent, { HOME_FAQS } from "@/components/sections/HomePageComp
 import type { Metadata } from "next";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
-import { SITE_URL } from "@/lib/siteConfig";
-
-const PAGE_TITLE = "Custom Web Development & SEO Agency Services | Joy Digital";
-const PAGE_DESC = "Joy Digital provides expert Web Development & SEO Services. We build high-performing custom Next.js platforms to drive organic traffic & leads.";
+import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: {
-    absolute: PAGE_TITLE,
-  },
-  description: PAGE_DESC,
-  keywords: [
-      "Custom Web Development",
-      "Web Development Company",
-      "SEO Agency Services",
-      "Next.js Development Agency",
-      "Local SEO Services",
-      "B2B Website Design",
-      "Joy Digital"
-  ],
-  authors: [{ name: "Joy Digital" }],
+  metadataBase: new URL("https://joydigital.in"),
+  title: "Web Development & SEO Company – Get More Leads | Joy Digital",
+  description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
+  authors: [{ name: "Joy Digital", url: "https://joydigital.in" }],
   publisher: "Joy Digital",
   robots: {
     index: true,
@@ -37,50 +23,60 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: SITE_URL,
+    canonical: "https://joydigital.in",
     languages: {
-      "x-default": SITE_URL,
-      "en-us": `${SITE_URL}/us`,
-      "en-gb": `${SITE_URL}/uk`,
-      "en-ae": `${SITE_URL}/ae`,
-      "en-in": SITE_URL,
-      "en-ca": `${SITE_URL}/ca`,
-      "en-au": `${SITE_URL}/au`,
+      "x-default": "https://joydigital.in",
+      "en-US": "https://joydigital.in/us",
+      "en-GB": "https://joydigital.in/uk",
+      "en-AE": "https://joydigital.in/ae",
+      "en-CA": "https://joydigital.in/ca",
+      "en-AU": "https://joydigital.in/au",
+      "en-IN": "https://joydigital.in/in",
     },
   },
   verification: {
     google: "yYfFlGYZPthQmXcw3V9yq2U2OlPPPxWBCtG7URIXDwQ",
   },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: SITE_URL,
+    url: "https://joydigital.in",
     siteName: "Joy Digital",
-    title: PAGE_TITLE,
-    description: PAGE_DESC,
+    title: "Web Development & SEO Company – Get More Leads | Joy Digital",
+    description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
     images: [
       {
-        url: `${SITE_URL}/assets/images/hero-banner.webp`,
+        url: "https://joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
-        alt: "Joy Digital - Custom Web Development & SEO Agency Services",
+        alt: "Joy Digital - Web Development & SEO Company",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: PAGE_TITLE,
-    description: PAGE_DESC,
-    images: [`${SITE_URL}/assets/images/hero-banner.webp`],
+    title: "Web Development & SEO Company – Get More Leads | Joy Digital",
+    description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
     creator: "@joydigital",
   },
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  const posts = await getAllPosts();
+  const latestPosts = posts
+    .filter((p) => p.status !== "Draft" && p.status !== "Archived")
+    .slice(0, 3);
+
   const homeGraph = buildPageGraphSchema({
-    url: SITE_URL,
-    title: PAGE_TITLE,
-    description: PAGE_DESC,
+    url: "https://joydigital.in",
+    title: "Web Development & SEO Company – Get More Leads | Joy Digital",
+    description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
     isHomepage: true,
     faqs: HOME_FAQS,
   });
@@ -88,7 +84,7 @@ export default function HomePage() {
   return (
     <>
       <JsonLd schema={homeGraph} />
-      <HomePageComponent country="" />
+      <HomePageComponent country="" latestPosts={latestPosts} />
     </>
   );
 }

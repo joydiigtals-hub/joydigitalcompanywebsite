@@ -1,3 +1,4 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
@@ -5,49 +6,30 @@ import Link from "next/link";
 import SolarLeadForm from "@/components/ui/SolarLeadForm";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
+const config = getIndustryConfig("website-for-solar-companies");
+
 export const metadata: Metadata = {
-  title: {
-    absolute: "Solar EPC Website Design & SEO Services | Joy Digital",
-  },
-  description: "High-converting website design & local SEO for solar installers & EPC contractors in India. Get ROI calculators, PM Surya Ghar leads & C&I site survey bookings!",
-  keywords: [
-      "Solar Company Website Development",
-      "Solar EPC Web Design",
-      "Solar SEO Services",
-      "Commercial Solar Lead Generation",
-      "Clean Energy Web Solutions"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-solar-companies",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-solar-companies",
-    title: "Solar EPC Website Design & SEO Services | Joy Digital",
-    description: "High-converting website design & local SEO for solar installers & EPC contractors in India. Get ROI calculators, PM Surya Ghar leads & C&I site survey bookings!",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Solar EPC Website Design & SEO Services Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Solar EPC Website Design & SEO Services | Joy Digital",
-    description: "High-converting website design & local SEO for solar installers & EPC contractors in India. Get ROI calculators, PM Surya Ghar leads & C&I site survey bookings!",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
 const SOLAR_FAQS = [
-  {
-    question: "How does a custom website help solar EPC companies capture more leads in India?",
-    answer: "A specialized solar website includes interactive PM Surya Ghar subsidy tables, net-metering ROI estimators, and frictionless site survey booking forms. This turns local rooftop and industrial electricity bill searches into direct engineering leads.",
-  },
-  {
-    question: "Can you build custom solar payback calculators for commercial clients?",
-    answer: "Yes, we integrate dynamic financial estimators where factory owners and commercial clients enter their monthly sanction load or electricity bill to calculate capital payback, tax depreciation, and long-term carbon savings.",
-  },
-  {
-    question: "How do you optimize Local SEO for 'solar installer near me' queries?",
-    answer: "We set up location-specific service landing pages, implement LocalBusiness schema markup, and optimize Google Business Profile citations to help your solar EPC rank top on Google Maps across target cities.",
-  },
   {
     question: "How does SEO help solar installers in India get more inquiries?",
     answer: "When homeowners and factory owners look to install rooftop solar in India, they search Google for 'solar rooftop installer near me', 'PM Surya Ghar registered solar vendor', or 'industrial solar EPC [City]'. By optimizing your Google Business Profile and ranking your city landing pages in the top 3 spots, you receive direct phone calls and site inspection requests without paying third-party lead aggregator fees.",
@@ -68,160 +50,27 @@ const SOLAR_FAQS = [
 
 export default function SolarWebPage() {
   const pageGraphSchema = buildPageGraphSchema({
-    url: "https://www.joydigital.in/website-for-solar-companies",
-    title: "Solar EPC Website Design & SEO Services | Joy Digital",
-    description: "High-converting website design & local SEO for solar installers & EPC contractors in India. Get ROI calculators, PM Surya Ghar leads & C&I site survey bookings!",
+    url: "https://joydigital.in/website-for-solar-companies",
+    title: "SEO & Website for Solar Installers India | Joy Digital",
+    description: "Website design & local SEO for solar installers and EPC companies in India. Rank on Google, generate rooftop solar inquiries & C&I leads with Joy Digital.",
     breadcrumbs: [
-      { name: "Home", item: "https://www.joydigital.in" },
-      { name: "Website for Solar Companies", item: "https://www.joydigital.in/website-for-solar-companies" },
+      { name: "Home", item: "https://joydigital.in" },
+      { name: "Website for Solar Companies", item: "https://joydigital.in/website-for-solar-companies" },
     ],
     service: {
-      name: "Solar EPC Website Design & SEO Services",
-      description: "Custom website design and search engine optimization for solar EPCs, rooftop installers, and renewable energy companies in India.",
-      serviceType: "Solar EPC Web Development & Local Clean Energy SEO",
+      name: "SEO and Website Development for Solar Installers in India",
+      description: "Custom website design and search engine optimization for solar EPCs, rooftop installers, and renewable energy companies.",
+      serviceType: "Solar Web Engineering & Local SEO",
     },
     faqs: SOLAR_FAQS,
   });
 
-  const comparisonTable = (
-    <section className="py-16 lg:py-24 bg-[#260B5E] border-b border-[#FFFFFF]/15 text-[#FFFFFF]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/30 text-[#C9F600] text-xs font-bold uppercase tracking-wider mb-3">
-            Clean Energy Performance Comparison
-          </span>
-          <h2 className="text-2xl md:text-4xl font-extrabold text-[#FFFFFF] mb-4">
-            Generic Web Templates vs Joy Digital Solar EPC Portals
-          </h2>
-          <p className="text-sm text-[#FFFFFF]/80 leading-relaxed font-normal">
-            Why clean energy companies require specialized Next.js portals to win high-value rooftop &amp; commercial EPC contracts.
-          </p>
-        </div>
-
-        <div className="max-w-5xl mx-auto overflow-hidden bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl shadow-md not-prose">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="border-b border-[#FFFFFF]/20 bg-[#260B5E]">
-                  <th className="py-4 px-6 text-xs font-extrabold text-primary-dark uppercase tracking-wider w-1/4">
-                    Features
-                  </th>
-                  <th className="py-4 px-6 text-xs font-extrabold text-[#FFFFFF]/70 uppercase tracking-wider w-3/8">
-                    Generic Web Template
-                  </th>
-                  <th className="py-4 px-6 text-xs font-extrabold text-[#C9F600] uppercase tracking-wider w-3/8 bg-[#3B1580]/80 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-1.5">
-                      <span>Joy Digital Solar EPC Portal</span>
-                      <span className="bg-[#C9F600] text-[#3B1580] text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Recommended</span>
-                    </div>
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[#FFFFFF]/15 text-xs text-[#FFFFFF]">
-                <tr className="hover:bg-[#260B5E]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
-                    Performance &amp; Speed
-                  </td>
-                  <td className="py-4 px-6 text-rose-400 font-medium">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
-                      <span>Slow loading speeds with unoptimized images</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
-                      <span>Sub-1.5s Ultra-Fast Next.js architecture</span>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr className="hover:bg-[#260B5E]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
-                    Lead Generation Tools
-                  </td>
-                  <td className="py-4 px-6 text-rose-400 font-medium">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
-                      <span>Basic &apos;Contact Us&apos; box</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
-                      <span>Interactive Solar PPA, Subsidy &amp; ROI Payback Calculators</span>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr className="hover:bg-[#260B5E]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
-                    Technical Credibility
-                  </td>
-                  <td className="py-4 px-6 text-rose-400 font-medium">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
-                      <span>Generic text without hardware specs</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
-                      <span>Tier-1 Hardware Catalogs (TOPCon, Bifacial, Inverters)</span>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr className="hover:bg-[#260B5E]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
-                    Local Search Ranking
-                  </td>
-                  <td className="py-4 px-6 text-rose-400 font-medium">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
-                      <span>Basic meta tags</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
-                      <span>Local 3-Pack Maps SEO for &apos;Solar Installer Near Me&apos; queries</span>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr className="hover:bg-[#260B5E]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF]">
-                    Lead Routing
-                  </td>
-                  <td className="py-4 px-6 text-rose-400 font-medium">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-xmark text-rose-400 shrink-0" />
-                      <span>Manual email delays</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 font-bold text-[#FFFFFF] bg-[#260B5E]/40 border-l border-[#FFFFFF]/20">
-                    <div className="flex items-center gap-2">
-                      <i className="fa-solid fa-circle-check text-[#C9F600] shrink-0" />
-                      <span>1-Tap Site Survey WhatsApp &amp; CRM Routing</span>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-
   return (
     <ServicePageTemplate
       serviceName="Commercial Solar EPC Web Development"
-      heroTitle="SEO & Website Development for Solar Installers & EPCs in India"
+      heroTitle={config.h1}
       heroSubtitle="Dominate the clean energy market with sub-1.5s serverless Next.js speed, high-converting rooftop & C&I solar funnels, and targeted Google search rankings for solar installers and commercial EPCs across India and worldwide."
       leadSource="Global B2B Solar EPC Landing Page"
-      canonicalUrl="https://www.joydigital.in/website-for-solar-companies"
       customLeadForm={<SolarLeadForm />}
       overviewTitle="Why Traditional Solar Websites Fail to Convert Enterprise Buyers"
       overviewContent={
@@ -276,31 +125,31 @@ export default function SolarWebPage() {
             </div>
           </div>
 
-          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
-            <h3 className="text-lg font-bold text-[#FFFFFF]">How We Engineer C&amp;I Rooftop Solar Lead Generation</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
+            <h3 className="text-lg font-bold text-primary-dark">How We Engineer C&amp;I Rooftop Solar Lead Generation</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Solar PPA &amp; ROI Estimator Widgets</strong>: Dynamic financial modeling</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Utility-Scale Solar Project Portals</strong>: High-resolution case study architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Enterprise Local &amp; Global SEO</strong>: Dominating search terms for EPC contracts</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js rendering</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Tier-1 Equipment Catalogs</strong>: TOPCon &amp; Bifacial module databases</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Corporate ESG Integration</strong>: Streamlined global compliance guides</span>
               </li>
             </ul>
@@ -341,7 +190,6 @@ export default function SolarWebPage() {
           description: "Convert high-value decision-makers with frictionless lead capture forms that collect roof area, monthly electricity bill, and sanction load.",
         },
       ]}
-      afterBenefitsSection={comparisonTable}
       processTitle="Our 6-Step Clean Energy Digital Engineering Roadmap"
       processSubtitle="A proven roadmap from technical asset audit to global pipeline generation."
       processSteps={[

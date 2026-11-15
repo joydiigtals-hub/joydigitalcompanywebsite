@@ -83,11 +83,23 @@ function writeJsonFile<T>(filePath: string, data: T[]): void {
 // KEYWORD CRUD FUNCTIONS
 // ----------------------------------------------------
 
+function withTimeout<T>(promise: Promise<T>, timeoutMs = 1000): Promise<T> {
+  return Promise.race([
+    promise,
+    new Promise<T>((_, reject) =>
+      setTimeout(() => reject(new Error("MongoDB timeout")), timeoutMs)
+    ),
+  ]);
+}
+
 export async function getAllKeywords(): Promise<SeoKeyword[]> {
   try {
     if (process.env.MONGODB_URI) {
-      const db = await getDb();
-      const docs = await db.collection<SeoKeyword>("seo_keywords").find({}).sort({ created_at: -1 }).toArray();
+      const db = await withTimeout(getDb(), 1000);
+      const docs = await withTimeout(
+        db.collection<SeoKeyword>("seo_keywords").find({}).sort({ created_at: -1 }).toArray(),
+        1000
+      );
       if (docs && docs.length > 0) {
         return docs.map(doc => ({
           id: doc.id || (doc as any)._id?.toString(),
@@ -167,8 +179,11 @@ export async function deleteKeyword(id: string): Promise<boolean> {
 export async function getAllSeoPages(): Promise<SeoPageMapping[]> {
   try {
     if (process.env.MONGODB_URI) {
-      const db = await getDb();
-      const docs = await db.collection<SeoPageMapping>("seo_pages").find({}).sort({ path: 1 }).toArray();
+      const db = await withTimeout(getDb(), 1000);
+      const docs = await withTimeout(
+        db.collection<SeoPageMapping>("seo_pages").find({}).sort({ path: 1 }).toArray(),
+        1000
+      );
       if (docs && docs.length > 0) {
         return docs.map(doc => ({
           id: doc.id || (doc as any)._id?.toString(),

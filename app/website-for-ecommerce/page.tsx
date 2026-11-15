@@ -1,33 +1,29 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
+const config = getIndustryConfig("website-for-ecommerce");
+
 export const metadata: Metadata = {
-  title: "Custom Ecommerce Websites",
-  description: "Fast Next.js E-commerce websites built for high conversions, payment gateway integration, and SEO. Scale your online store today with Joy Digital!",
-  keywords: [
-      "Website For Ecommerce",
-      "Website For Ecommerce Services",
-      "Web Development",
-      "SEO Services",
-      "Joy Digital"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-ecommerce",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-ecommerce",
-    title: "Custom Ecommerce Websites | Joy Digital",
-    description: "Fast Next.js E-commerce websites built for high conversions, payment gateway integration, and SEO. Scale your online store today with Joy Digital!",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Custom E-Commerce Website Development Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Ecommerce Websites | Joy Digital",
-    description: "Fast Next.js E-commerce websites built for high conversions, payment gateway integration, and SEO. Scale your online store today with Joy Digital!",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -36,15 +32,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://www.joydigital.in/website-for-ecommerce#service",
+      "@id": "https://joydigital.in/website-for-ecommerce#service",
       "name": "Global Headless E-Commerce Web Development",
       "serviceType": "E-Commerce Development & Cross-Border Retail Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://www.joydigital.in/assets/images/logo.webp",
+        "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://www.joydigital.in",
+        "url": "https://joydigital.in",
         "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
@@ -71,7 +67,7 @@ export default function EcommerceWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Ecommerce"
-      heroTitle="Lightning-Fast Headless E-Commerce Stores Built for Global Sales"
+      heroTitle={config.h1}
       heroSubtitle="Scale cross-border shopping conversions by up to 40%. We build high-speed, search-ready Next.js e-commerce storefronts designed to load under 1.5s, support multi-currency checkouts (USD, EUR, GBP, AED, INR), and capture international shoppers."
       leadSource="Website for Ecommerce Landing Page"
       heroCtaText="Get Free E-Commerce Quote"
@@ -84,37 +80,37 @@ export default function EcommerceWebPage() {
           <p>
             At Joy Digital, we build high-performance headless e-commerce platforms using serverless Next.js and React. This guarantees that your product catalogs load instantly across US, European, Middle Eastern, and Asian networks, keeping buyers engaged.
           </p>
-          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
-            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting Global E-Commerce Stores</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
+            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Global E-Commerce Stores</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Multi-Currency Checkouts</strong>: Automated USD, EUR, GBP, AED & INR currency switches</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Global Gateway Integrations</strong>: Stripe, PayPal, Razorpay, Klarna & Apple Pay</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>International Product SEO Schema</strong>: Rich Google snippets with price & stock badges</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s LCP Load Speeds</strong>: Edge-hosted image CDN & static catalog chunks</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Cross-Border Logistics & Shipping API Sync</strong>: DHL, FedEx, UPS & local carrier tracking</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>WhatsApp Sales & Support Checkout</strong>: Direct chat routing for quick customer conversion</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we merge modern e-commerce UI/UX design with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">custom web engineering</Link> and <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">international search optimization</Link> to help retail brands scale worldwide.
+            At Joy Digital, we merge modern e-commerce UI/UX design with <Link href="/website-development" className="text-primary font-bold hover:underline">custom web engineering</Link> and <Link href="/seo-services" className="text-primary font-bold hover:underline">international search optimization</Link> to help retail brands scale worldwide.
           </p>
         </div>
       }

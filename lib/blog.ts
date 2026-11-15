@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { getDb } from "./mongodb";
-import { SITE_URL } from "@/lib/siteConfig";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 
@@ -82,27 +81,9 @@ function normalizePostData(slug: string, data: any, content: string): BlogPost {
     tags = data.tags.split(",").map((t: string) => t.trim());
   }
 
-  // Normalize legacy URLs in content
-  let normalizedContent = (content || "")
-    .replace(/\]\(\/website-for-tours-and-travels\)/g, "](/travel-website-development)")
-    .replace(/href=["']\/website-for-tours-and-travels["']/g, 'href="/travel-website-development"')
-    .replace(/\]\(\/local-seo-madurai\)/g, "](/seo-services-madurai)")
-    .replace(/href=["']\/local-seo-madurai["']/g, 'href="/seo-services-madurai"')
-    .replace(/\]\(\/africa\)/g, "](/africa/tourism-website-development)")
-    .replace(/href=["']\/africa["']/g, 'href="/africa/tourism-website-development"');
-
   let internalLinks: InternalLinkItem[] = [];
   if (Array.isArray(data.internalLinks)) {
-    internalLinks = data.internalLinks.map((item: any) => ({
-      anchorText: item.anchorText || "",
-      targetUrl: item.targetUrl === "/website-for-tours-and-travels"
-        ? "/travel-website-development"
-        : item.targetUrl === "/local-seo-madurai"
-        ? "/seo-services-madurai"
-        : item.targetUrl === "/africa"
-        ? "/africa/tourism-website-development"
-        : item.targetUrl || "",
-    }));
+    internalLinks = data.internalLinks;
   }
 
   let faqs: FaqItem[] = [];
@@ -129,7 +110,7 @@ function normalizePostData(slug: string, data: any, content: string): BlogPost {
     imageAlt: data.imageAlt || data.title || "",
     imageCaption: data.imageCaption || "",
     tags,
-    content: normalizedContent,
+    content,
 
     showTableOfContents: data.showTableOfContents !== false,
     showAuthorInfo: data.showAuthorInfo !== false,
@@ -139,9 +120,7 @@ function normalizePostData(slug: string, data: any, content: string): BlogPost {
     metaDescription: data.metaDescription || data.description || "",
     focusKeyword: data.focusKeyword || "",
     secondaryKeywords: data.secondaryKeywords || "",
-    canonicalUrl: data.canonicalUrl
-      ? data.canonicalUrl.replace(/https?:\/\/(?!www\.)joydigital\.in/g, SITE_URL)
-      : `${SITE_URL}/blog/${slug}`,
+    canonicalUrl: data.canonicalUrl || `https://joydigital.in/blog/${slug}`,
     robots: data.robots || "Index, Follow",
 
     internalLinks,
@@ -152,9 +131,7 @@ function normalizePostData(slug: string, data: any, content: string): BlogPost {
     authorRole: data.authorRole || "Technical Web Specialist",
     authorBio: data.authorBio || "Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.",
     authorImage: data.authorImage || "/assets/images/logo.webp",
-    authorProfileUrl: data.authorProfileUrl
-      ? data.authorProfileUrl.replace(/https?:\/\/(?!www\.)joydigital\.in/g, SITE_URL)
-      : `${SITE_URL}/about`,
+    authorProfileUrl: data.authorProfileUrl || "https://joydigital.in/about",
 
     faqs,
 
@@ -227,9 +204,7 @@ function getLocalPostBySlug(slug: string): BlogPost | null {
   }
 }
 
-const hasMongoUri = Boolean(process.env.MONGODB_DIRECT_URI || process.env.MONGODB_URI);
-
-function withTimeout<T>(promise: Promise<T>, timeoutMs = 4000): Promise<T> {
+function withTimeout<T>(promise: Promise<T>, timeoutMs = 1500): Promise<T> {
   return Promise.race([
     promise,
     new Promise<T>((_, reject) =>
@@ -244,15 +219,15 @@ export async function getAllPosts(): Promise<BlogPost[]> {
   let dbPosts: BlogPost[] = [];
   let deletedSlugs: Set<string> = new Set();
 
-  if (hasMongoUri) {
+  if (process.env.MONGODB_URI) {
     try {
-      const db = await withTimeout(getDb(), 4000);
+      const db = await withTimeout(getDb(), 1500);
       const blogsCol = db.collection("blogs");
 
-      const dbRecords = await withTimeout(blogsCol.find({ isDeleted: { $ne: true } }).toArray(), 4000);
+      const dbRecords = await withTimeout(blogsCol.find({ isDeleted: { $ne: true } }).toArray(), 1500);
       dbPosts = dbRecords.map((r) => normalizePostData(r.slug, r, r.content));
 
-      const deletedRecords = await withTimeout(blogsCol.find({ isDeleted: true }, { projection: { slug: 1 } }).toArray(), 4000);
+      const deletedRecords = await withTimeout(blogsCol.find({ isDeleted: true }, { projection: { slug: 1 } }).toArray(), 1500);
       deletedSlugs = new Set(deletedRecords.map((r) => r.slug));
     } catch (err) {
       console.error("Failed to fetch blog posts from MongoDB within timeout, falling back to local files:", err);
@@ -278,12 +253,12 @@ export async function getAllPosts(): Promise<BlogPost[]> {
 
 // GET post by slug: Check MongoDB first, fallback to local
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
-  if (hasMongoUri) {
+  if (process.env.MONGODB_URI) {
     try {
-      const db = await withTimeout(getDb(), 4000);
+      const db = await withTimeout(getDb(), 1500);
       const blogsCol = db.collection("blogs");
 
-      const dbRecord = await withTimeout(blogsCol.findOne({ slug }), 4000);
+      const dbRecord = await withTimeout(blogsCol.findOne({ slug }), 1500);
       if (dbRecord) {
         if (dbRecord.isDeleted === true) {
           return null;
@@ -296,4 +271,94 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   }
 
   return getLocalPostBySlug(slug);
+}
+
+export function slugifyBlogTerm(text: string): string {
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+export async function getAllCategories(): Promise<{ name: string; slug: string; count: number }[]> {
+  const posts = await getAllPosts();
+  const published = posts.filter((p) => p.status !== "Draft" && p.status !== "Archived");
+  const catMap = new Map<string, { name: string; slug: string; count: number }>();
+
+  for (const post of published) {
+    if (post.category) {
+      const slug = slugifyBlogTerm(post.category);
+      if (!catMap.has(slug)) {
+        catMap.set(slug, { name: post.category, slug, count: 0 });
+      }
+      catMap.get(slug)!.count++;
+    }
+  }
+
+  return Array.from(catMap.values()).sort((a, b) => b.count - a.count);
+}
+
+export async function getAllTags(): Promise<{ name: string; slug: string; count: number }[]> {
+  const posts = await getAllPosts();
+  const published = posts.filter((p) => p.status !== "Draft" && p.status !== "Archived");
+  const tagMap = new Map<string, { name: string; slug: string; count: number }>();
+
+  for (const post of published) {
+    const tags = post.tags || [];
+    for (const tag of tags) {
+      if (tag && tag.trim()) {
+        const trimmed = tag.trim();
+        const slug = slugifyBlogTerm(trimmed);
+        if (!tagMap.has(slug)) {
+          tagMap.set(slug, { name: trimmed, slug, count: 0 });
+        }
+        tagMap.get(slug)!.count++;
+      }
+    }
+  }
+
+  return Array.from(tagMap.values()).sort((a, b) => b.count - a.count);
+}
+
+export async function getPostsByCategory(categorySlug: string): Promise<{ name: string; slug: string; posts: BlogPost[] } | null> {
+  const posts = await getAllPosts();
+  const published = posts.filter((p) => p.status !== "Draft" && p.status !== "Archived");
+
+  let matchedName = "";
+  for (const post of published) {
+    if (post.category && slugifyBlogTerm(post.category) === categorySlug) {
+      matchedName = post.category;
+      break;
+    }
+  }
+
+  if (!matchedName) return null;
+
+  const filtered = published.filter((p) => slugifyBlogTerm(p.category || "") === categorySlug);
+  return { name: matchedName, slug: categorySlug, posts: filtered };
+}
+
+export async function getPostsByTag(tagSlug: string): Promise<{ name: string; slug: string; posts: BlogPost[] } | null> {
+  const posts = await getAllPosts();
+  const published = posts.filter((p) => p.status !== "Draft" && p.status !== "Archived");
+
+  let matchedName = "";
+  for (const post of published) {
+    const tags = post.tags || [];
+    for (const tag of tags) {
+      if (slugifyBlogTerm(tag) === tagSlug) {
+        matchedName = tag;
+        break;
+      }
+    }
+    if (matchedName) break;
+  }
+
+  if (!matchedName) return null;
+
+  const filtered = published.filter((p) => (p.tags || []).some((t) => slugifyBlogTerm(t) === tagSlug));
+  return { name: matchedName, slug: tagSlug, posts: filtered };
 }

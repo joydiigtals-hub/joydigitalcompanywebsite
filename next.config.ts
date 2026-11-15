@@ -3,7 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   compress: true,
   reactStrictMode: true,
-  devIndicators: false,
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
@@ -14,7 +13,7 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000,
     dangerouslyAllowSVG: true,
-    contentDispositionType: "inline",
+    contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
@@ -28,19 +27,20 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // 0. Non-www to www Canonical 301 Redirect
+      // 1. Host-level 301 redirect: www.joydigital.in -> https://joydigital.in
       {
         source: "/:path*",
         has: [
           {
             type: "host",
-            value: "joydigital.in",
+            value: "www.joydigital.in",
           },
         ],
-        destination: "https://www.joydigital.in/:path*",
+        destination: "https://joydigital.in/:path*",
         permanent: true,
       },
-      // 1. Chennai SEO: keep /seo-services-chennai
+
+      // 2. Chennai SEO: keep /seo-services-chennai
       { source: "/seo-services-in-chennai", destination: "/seo-services-chennai", permanent: true },
       { source: "/seo-company-chennai", destination: "/seo-services-chennai", permanent: true },
 
@@ -52,17 +52,15 @@ const nextConfig: NextConfig = {
       // 4. Madurai Web Design: keep /website-design-company-madurai
       { source: "/website-design-company-in-madurai", destination: "/website-design-company-madurai", permanent: true },
 
-      // 5. Duplicate e-commerce & travel landing pages
+      // 5. Duplicate e-commerce landing page
       { source: "/website-for-e-commerce-stores", destination: "/website-for-ecommerce", permanent: true },
-      { source: "/website-for-tours-and-travels", destination: "/travel-website-development", permanent: true },
-      { source: "/tools", destination: "/free-tools", permanent: true },
 
       // 6. Regional URL consolidation & legacy redirects
       { source: "/web-development-company-in-chennai", destination: "/website-development-company-chennai", permanent: true },
       { source: "/web-development-company-chennai", destination: "/website-development-company-chennai", permanent: true },
       { source: "/website-development-chennai", destination: "/website-development-company-chennai", permanent: true },
-      { source: "/website-design-company-in-chennai", destination: "/website-design-company-chennai", permanent: true },
-      { source: "/affordable-web-design-agency-chennai", destination: "/website-design-company-chennai", permanent: true },
+      { source: "/website-design-company-in-chennai", destination: "/website-development-company-chennai", permanent: true },
+      { source: "/affordable-web-design-agency-chennai", destination: "/website-development-company-chennai", permanent: true },
 
       { source: "/seo-company-madurai", destination: "/seo-services-madurai", permanent: true },
       { source: "/seo-services-in-madurai", destination: "/seo-services-madurai", permanent: true },
@@ -72,20 +70,11 @@ const nextConfig: NextConfig = {
 
       { source: "/website-development-coimbatore", destination: "/website-design-company-coimbatore", permanent: true },
       { source: "/web-development-company-coimbatore", destination: "/website-design-company-coimbatore", permanent: true },
+      { source: "/seo-company-coimbatore", destination: "/website-design-company-coimbatore", permanent: true },
 
       {
         source: "/free-audit",
         destination: "/free-website-audit",
-        permanent: true,
-      },
-      {
-        source: "/in",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/in/:path*",
-        destination: "/:path*",
         permanent: true,
       },
       {
@@ -164,101 +153,39 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/technical-seo-services",
-        destination: "/technical-seo",
+        source: "/nocev/:path*",
+        destination: "/",
         permanent: true,
       },
       {
-        source: "/on-page-seo-services",
-        destination: "/on-page-seo",
+        source: "/fr",
+        destination: "/",
         permanent: true,
       },
       {
-        source: "/seo-content-services",
-        destination: "/seo-content",
+        source: "/fr/:path*",
+        destination: "/",
         permanent: true,
       },
       {
-        source: "/website-seo-services",
-        destination: "/website-seo",
+        source: "/pages",
+        destination: "/",
         permanent: true,
       },
       {
-        source: "/technical_seo",
-        destination: "/technical-seo",
+        source: "/pages/:path*",
+        destination: "/",
         permanent: true,
       },
       {
-        source: "/on_page_seo",
-        destination: "/on-page-seo",
-        permanent: true,
-      },
-      {
-        source: "/seo_content",
-        destination: "/seo-content",
-        permanent: true,
-      },
-      {
-        source: "/website_seo",
-        destination: "/website-seo",
+        source: "/kr/:path*",
+        destination: "/",
         permanent: true,
       },
     ];
   },
   async headers() {
     return [
-      {
-        source: "/sitemap.xsl",
-        headers: [
-          {
-            key: "Content-Type",
-            value: "text/xsl; charset=utf-8",
-          },
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/sitemap.xml",
-        headers: [
-          {
-            key: "Content-Type",
-            value: "text/xml; charset=utf-8",
-          },
-          {
-            key: "Cache-Control",
-            value: "public, max-age=86400, s-maxage=86400, stale-while-revalidate=43200",
-          },
-        ],
-      },
-      {
-        source: "/llms.txt",
-        headers: [
-          {
-            key: "Content-Type",
-            value: "text/plain; charset=utf-8",
-          },
-          {
-            key: "Cache-Control",
-            value: "public, max-age=86400, s-maxage=86400, stale-while-revalidate=43200",
-          },
-        ],
-      },
-      {
-        source: "/llms-full.txt",
-        headers: [
-          {
-            key: "Content-Type",
-            value: "text/plain; charset=utf-8",
-          },
-          {
-            key: "Cache-Control",
-            value: "public, max-age=86400, s-maxage=86400, stale-while-revalidate=43200",
-          },
-        ],
-      },
       {
         source: "/:path*",
         headers: [

@@ -4,17 +4,10 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Tour Operator Web Development",
+  title: "Tour Operator Website Development Company | Booking Websites",
   description: "Expert tour operator website development. We build custom booking portals, day-by-day itineraries, and high-converting travel websites for DMCs.",
-  keywords: [
-      "Tour Operator Website Development",
-      "Tour Booking Web Design",
-      "Safari Tour Operator SEO",
-      "Travel Booking Engine",
-      "Direct Tourism Lead Generation"
-  ],
   alternates: {
-    canonical: "https://www.joydigital.in/tour-operator-website-development",
+    canonical: "https://joydigital.in/tour-operator-website-development",
   },
 };
 
@@ -26,7 +19,7 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://www.joydigital.in/assets/images/logo.webp",
+    "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133"
   },
   "description": "Joy Digital builds custom booking portals and high-converting websites specifically designed for global Tour Operators and Destination Management Companies (DMCs).",
@@ -51,7 +44,7 @@ export default async function TourOperatorWebPage() {
       heroSubtitle="Transform your Destination Management Company with a custom booking portal designed to capture direct, high-margin international enquiries."
       leadSource="Tour Operator Website Page"
       heroCtaText="Get a Tour Website Quote"
-      canonicalUrl="https://www.joydigital.in/tour-operator-website-development"
+      canonicalUrl="https://joydigital.in/tour-operator-website-development"
       overviewTitle="Direct Bookings Start with a High-Trust Portal"
       overviewContent={
         <div className="space-y-6">
@@ -61,7 +54,7 @@ export default async function TourOperatorWebPage() {
           <p>
             Our <strong>tour operator website development</strong> services focus on building custom, high-converting platforms featuring rich day-by-day itineraries, seamless seasonal pricing, and secure direct-booking funnels.
           </p>
-          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Why Templates Fail Tour Operators</h3>
+          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Why Templates Fail Tour Operators</h3>
           <p>
             Generic WordPress travel plugins are slow and easily break under high traffic. We build bespoke Next.js React platforms that load in under a second across the globe, ensuring your rich imagery and video content never frustrates a potential buyer.
           </p>

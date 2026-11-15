@@ -1,27 +1,29 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 ﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
+const config = getIndustryConfig("website-for-hospitals");
+
 export const metadata: Metadata = {
-  title: "Hospital Website Design & SEO",
-  description: "Custom website design and SEO for hospitals and healthcare clinics. Doctor appointment booking, patient portals, and high Google rankings.",
-  keywords: [
-      "Hospital Website Development",
-      "Healthcare Web Design",
-      "Medical Clinic SEO Services",
-      "Doctor Appointment Booking Website",
-      "Healthcare Digital Marketing"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-hospitals",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-hospitals",
-    title: "Hospital Website Design & Global Medical Patient Acquisition | Joy Digital",
-    description: "Ultra-fast Next.js website design for hospitals, specialized surgery centers, and medical tourism providers. Online doctor appointment booking, international patient visa desk, and global healthcare SEO.",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Hospital Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -30,15 +32,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://www.joydigital.in/website-for-hospitals#service",
+      "@id": "https://joydigital.in/website-for-hospitals#service",
       "name": "Hospital Website Design & Global Medical SEO",
       "serviceType": "Healthcare Web Development & Medical Tourism Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://www.joydigital.in/assets/images/logo.webp",
+        "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://www.joydigital.in",
+        "url": "https://joydigital.in",
         "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
@@ -65,7 +67,7 @@ export default function HospitalWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Hospitals"
-      heroTitle="High-Converting Website Design & Medical Tourism SEO for Hospitals"
+      heroTitle={config.h1}
       heroSubtitle="Attract local patients and high-value international medical tourism inquiries. We engineer fast, HIPAA/NABH-compliant Next.js websites for multi-specialty hospitals, surgical institutes, diagnostic chains, and medical travel advisories."
       leadSource="Website for Hospitals Landing Page"
       heroCtaText="Get Free Hospital Web Quote"
@@ -78,37 +80,37 @@ export default function HospitalWebPage() {
           <p>
             Unfortunately, many hospital websites have confused navigation, slow mobile load speeds, buried doctor profiles, and lack direct medical opinion request forms or WhatsApp international patient desks.
           </p>
-          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
-            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting Hospital Portals</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
+            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Hospital Portals</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>International Medical Opinion & Inquiry Form</strong>: Medical report upload workflow</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Doctor & Specialist Directory</strong>: Searchable qualifications, experience & schedules</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Specialty Department Pages</strong>: Cardiology, Oncology, Orthopedics & IVF hubs</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Global Medical Tourism SEO Strategy</strong>: Rank for high-value treatment keywords</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Medical Desk WhatsApp Routing</strong>: Instant patient care connection</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we merge healthcare domain knowledge with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">high-speed Next.js web development</Link>, <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">medical SEO strategies</Link>, and <Link href="/local-seo-services" className="text-[#C9F600] font-bold hover:underline">Google Business Profile setup</Link> to help medical centers scale patient admissions.
+            At Joy Digital, we merge healthcare domain knowledge with <Link href="/website-development" className="text-primary font-bold hover:underline">high-speed Next.js web development</Link>, <Link href="/seo-services" className="text-primary font-bold hover:underline">medical SEO strategies</Link>, and <Link href="/local-seo-services" className="text-primary font-bold hover:underline">Google Business Profile setup</Link> to help medical centers scale patient admissions.
           </p>
         </div>
       }

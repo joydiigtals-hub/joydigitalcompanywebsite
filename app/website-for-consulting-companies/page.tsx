@@ -1,33 +1,29 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
+const config = getIndustryConfig("website-for-consulting-companies");
+
 export const metadata: Metadata = {
-  title: "Websites for Consulting Firms",
-  description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
-  keywords: [
-      "Consulting Company Website Development",
-      "Corporate Consulting Web Design",
-      "B2B Advisory SEO",
-      "Professional Services Web Development",
-      "High Ticket Lead Generation"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-consulting-companies",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-consulting-companies",
-    title: "Websites for Consulting Firms | Joy Digital",
-    description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Consulting Firm Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Websites for Consulting Firms | Joy Digital",
-    description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -36,15 +32,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://www.joydigital.in/website-for-consulting-companies#service",
+      "@id": "https://joydigital.in/website-for-consulting-companies#service",
       "name": "Consulting Firm Website Design & Advisory SEO",
       "serviceType": "Consulting Web Development & Business Advisory Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://www.joydigital.in/assets/images/logo.webp",
+        "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://www.joydigital.in",
+        "url": "https://joydigital.in",
         "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
@@ -71,7 +67,7 @@ export default function ConsultingWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Consulting Companies"
-      heroTitle="High-Converting Website Design & SEO for Consulting & Advisory Firms"
+      heroTitle={config.h1}
       heroSubtitle="Position your advisory firm as an indispensable strategic partner. We engineer fast, authoritative Next.js websites for management consultants, IT strategy firms, corporate growth advisors, and specialized business consultants."
       leadSource="Website for Consulting Companies Landing Page"
       heroCtaText="Get Free Consulting Web Quote"
@@ -84,37 +80,37 @@ export default function ConsultingWebPage() {
           <p>
             Yet most consulting websites rely on vague buzzwords, lack structured case study presentations, load slowly, and fail to provide direct audit booking or whitepaper lead capture features.
           </p>
-          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
-            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Impact Consulting Websites</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
+            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Impact Consulting Websites</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Interactive Strategy Audit Booking</strong>: Direct consultation scheduling</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Client Case Study & ROI Portals</strong>: Problem-solution-results frameworks</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Thought Leadership & Research Hub</strong>: Downloadable whitepapers & reports</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Executive Team & Partner Bios</strong>: Credentials, past advisory wins & publications</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Global B2B SEO Strategy</strong>: Rank for high-value corporate consulting queries</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we merge corporate design elegance with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">modern Next.js engineering</Link> and <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">B2B search optimization</Link> to help consulting agencies win enterprise accounts.
+            At Joy Digital, we merge corporate design elegance with <Link href="/website-development" className="text-primary font-bold hover:underline">modern Next.js engineering</Link> and <Link href="/seo-services" className="text-primary font-bold hover:underline">B2B search optimization</Link> to help consulting agencies win enterprise accounts.
           </p>
         </div>
       }

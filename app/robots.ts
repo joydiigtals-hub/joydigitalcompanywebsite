@@ -1,5 +1,4 @@
 import type { MetadataRoute } from 'next';
-import { SITE_URL } from '@/lib/siteConfig';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,28 +6,25 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/admin/', '/thank-you'],
+        disallow: ['/api/', '/admin/'],
       },
-      // Explicitly allow AI Search Crawlers & LLM Agents
       {
         userAgent: [
           'GPTBot',
           'OAI-SearchBot',
           'PerplexityBot',
           'ClaudeBot',
-          'anthropic-ai',
-          'Bingbot',
-          'Googlebot',
-          'Google-InspectionTool',
           'Google-Extended',
-          'Applebot',
+          'bingbot',
           'Applebot-Extended',
+          'Meta-ExternalAgent',
         ],
         allow: '/',
-        disallow: ['/api/', '/admin/', '/thank-you'],
+        disallow: ['/api/', '/admin/'],
       },
     ],
-    sitemap: `${SITE_URL}/sitemap.xml`,
-    host: SITE_URL,
+    sitemap: 'https://joydigital.in/sitemap.xml',
+    host: 'https://joydigital.in',
   };
 }
+

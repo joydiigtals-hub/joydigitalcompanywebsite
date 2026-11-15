@@ -3,26 +3,19 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Safari Website Development",
+  title: "Safari Website Development Company",
   description: "Custom safari website engineering for safari operators and wildlife lodges. Sub-second booking portals and global SEO to capture high-ticket bookings.",
-  keywords: [
-      "Safari Website Development",
-      "African Safari Web Design",
-      "Wildlife Safari Tour SEO",
-      "Custom Safari Itinerary Portal",
-      "Safari Direct Booking Engine"
-  ],
   alternates: {
-    canonical: "https://www.joydigital.in/safari-website-development",
+    canonical: "https://joydigital.in/safari-website-development",
   },
   openGraph: {
     type: "website",
     title: "Safari Website Development Company | Joy Digital",
     description: "Custom safari website engineering for safari operators and wildlife lodges. Sub-second booking portals and global SEO to capture high-ticket bookings.",
-    url: "https://www.joydigital.in/safari-website-development",
+    url: "https://joydigital.in/safari-website-development",
     images: [
       {
-        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
+        url: "https://joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Joy Digital - Safari Website Development Company",
@@ -33,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Safari Website Development Company | Joy Digital",
     description: "Custom safari website engineering for safari operators and wildlife lodges. Sub-second booking portals and global SEO to capture high-ticket bookings.",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -45,7 +38,7 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://www.joydigital.in/assets/images/logo.webp",
+    "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133"
   },
   "description": "Premium safari website development for safari operators, lodges, and wildlife tourism businesses globally.",
@@ -66,7 +59,7 @@ export default function SafariWebPage() {
       heroSubtitle="Build Trust and Sell High-Ticket Safari Packages. We build premium, high-converting websites for African safari businesses, wildlife tours, and luxury lodges."
       leadSource="Safari Website Development Landing Page"
       heroCtaText="Request a Safari Website Quote"
-      canonicalUrl="https://www.joydigital.in/safari-website-development"
+      canonicalUrl="https://joydigital.in/safari-website-development"
       overviewTitle="Build Trust and Sell High-Ticket Safari Packages"
       overviewContent={
         <div className="space-y-6">
@@ -76,7 +69,7 @@ export default function SafariWebPage() {
           <p>
             Joy Digital is the expert custom website development partner for Safari operators, wildlife tourism businesses, and lodges. We build premium, immersive, and high-trust websites designed to convert global safari enquiries.
           </p>
-          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Features Every Safari Website Needs</h3>
+          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Features Every Safari Website Needs</h3>
           <p>
             Unlike standard travel agencies, safari operators require unique digital features: beautiful day-by-day visual itineraries, detailed accommodation and camp showcases, easy-to-update seasonal rate tables, and immersive wildlife photo galleries. 
           </p>

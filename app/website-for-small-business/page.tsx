@@ -1,27 +1,29 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 ﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
+const config = getIndustryConfig("website-for-small-business");
+
 export const metadata: Metadata = {
-  title: "Small Business Website Design",
-  description: "Fast Next.js website design and local SEO for small businesses and startups. Rank on Google Maps, generate leads, and grow revenue.",
-  keywords: [
-      "Small Business Website Development",
-      "Affordable Web Design for Small Business",
-      "Local Business SEO",
-      "Lead Generating Small Business Sites",
-      "Mobile Responsive Web Design"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-small-business",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-small-business",
-    title: "Small Business Website Design & Global Client Lead Generation | Joy Digital",
-    description: "Ultra-fast Next.js website design tailored for growing small businesses, service providers, and global startups. Mobile-friendly layouts, lead quote forms, WhatsApp integration, and search engine optimization.",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Small Business Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -30,15 +32,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://www.joydigital.in/website-for-small-business#service",
+      "@id": "https://joydigital.in/website-for-small-business#service",
       "name": "Small Business Website Design & Digital Growth SEO",
       "serviceType": "Small Business Web Development & Growth Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://www.joydigital.in/assets/images/logo.webp",
+        "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://www.joydigital.in",
+        "url": "https://joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
@@ -65,7 +67,7 @@ export default function SmallBusinessWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Small Business"
-      heroTitle="Affordable, High-Converting Website Design & SEO for Small Businesses"
+      heroTitle={config.h1}
       heroSubtitle="Transform your small business or startup into a 24/7 lead acquisition engine. We engineer ultra-fast, mobile-friendly Next.js websites for local service providers, growing startups, and small business owners worldwide."
       leadSource="Website for Small Business Landing Page"
       heroCtaText="Get Free Small Business Quote"
@@ -78,37 +80,37 @@ export default function SmallBusinessWebPage() {
           <p>
             Unfortunately, many small business websites are built on bloated DIY site builders, take over 4 seconds to load on mobile phones, look outdated, and lack clear click-to-call or WhatsApp lead buttons.
           </p>
-          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
-            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting Small Business Websites</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
+            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Small Business Websites</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Instant Lead Capture Quote Form</strong>: Simple 3-step customer inquiry form</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Google Business Profile Setup</strong>: Rank in Google Maps Local 3-Pack</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Services & Portfolio Showcase</strong>: Clear pricing & past project galleries</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Local & Global SEO Strategy</strong>: Rank for high-value customer search terms</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Direct WhatsApp Button</strong>: Instant mobile customer connection</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we combine affordable pricing with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">custom Next.js web development</Link>, <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">small business SEO</Link>, and <Link href="/google-business-profile-setup" className="text-[#C9F600] font-bold hover:underline">Google Maps setup</Link> to help small businesses compete and grow.
+            At Joy Digital, we combine affordable pricing with <Link href="/website-development" className="text-primary font-bold hover:underline">custom Next.js web development</Link>, <Link href="/seo-services" className="text-primary font-bold hover:underline">small business SEO</Link>, and <Link href="/google-business-profile-setup" className="text-primary font-bold hover:underline">Google Maps setup</Link> to help small businesses compete and grow.
           </p>
         </div>
       }

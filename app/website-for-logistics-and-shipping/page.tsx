@@ -1,27 +1,29 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 ﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
+const config = getIndustryConfig("website-for-logistics-and-shipping");
+
 export const metadata: Metadata = {
-  title: "Logistics Website Design & SEO",
-  description: "Custom website design and SEO for freight forwarders and logistics companies. Cargo tracking integrations, freight rate calculators, and B2B leads.",
-  keywords: [
-      "Logistics Website Development",
-      "Freight Forwarder Web Design",
-      "Shipping Company SEO",
-      "Supply Chain Portal Development",
-      "Cargo Tracking Web Design"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-logistics-and-shipping",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-logistics-and-shipping",
-    title: "Logistics & Shipping Website Design & Freight Lead Generation | Joy Digital",
-    description: "Ultra-fast Next.js website design for freight forwarders, 3PL warehousing providers, and cargo shipping lines. Includes freight quote forms, shipment tracking widgets, and international search ranking.",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Logistics & Shipping Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -30,15 +32,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://www.joydigital.in/website-for-logistics-and-shipping#service",
+      "@id": "https://joydigital.in/website-for-logistics-and-shipping#service",
       "name": "Logistics & Shipping Website Design & Freight SEO",
       "serviceType": "Logistics Web Development & Freight Forwarding Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://www.joydigital.in/assets/images/logo.webp",
+        "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://www.joydigital.in",
+        "url": "https://joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
@@ -65,7 +67,7 @@ export default function LogisticsWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Logistics & Shipping"
-      heroTitle="High-Converting Website Design & SEO for Logistics & Freight Companies"
+      heroTitle={config.h1}
       heroSubtitle="Capture high-volume ocean freight, air cargo, and 3PL warehousing inquiries. We build fast, reliable Next.js websites for freight forwarders, custom brokers, supply chain operators, and international shipping lines."
       leadSource="Website for Logistics & Shipping Landing Page"
       heroCtaText="Get Free Freight Web Quote"
@@ -78,37 +80,37 @@ export default function LogisticsWebPage() {
           <p>
             Unfortunately, many logistics websites suffer from clunky navigation, broken container tracking widgets, hidden rate inquiry options, and slow loading speeds across mobile trade networks.
           </p>
-          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
-            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting Freight & Logistics Websites</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
+            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Freight & Logistics Websites</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Instant Freight Rate RFQ Form</strong>: Origin/Destination port selection & weight inputs</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Container & Cargo Tracking Widget</strong>: Quick AWB/Container number lookup interface</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Trade Lane & Route Network Showcase</strong>: Sea ports, airports & road transport hubs</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Global Logistics SEO Strategy</strong>: Rank for high-value freight forwarding terms</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Speed Performance</strong>: Edge-served serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Operations WhatsApp Routing</strong>: Instant connection with regional booking desks</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we combine supply chain domain expertise with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">high-speed Next.js web development</Link> and <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">logistics B2B search optimization</Link> to help freight operators capture international cargo contracts.
+            At Joy Digital, we combine supply chain domain expertise with <Link href="/website-development" className="text-primary font-bold hover:underline">high-speed Next.js web development</Link> and <Link href="/seo-services" className="text-primary font-bold hover:underline">logistics B2B search optimization</Link> to help freight operators capture international cargo contracts.
           </p>
         </div>
       }

@@ -1,28 +1,30 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
 
+const config = getIndustryConfig("website-for-hotels");
+
 export const metadata: Metadata = {
-  title: "Hotel Website Design & SEO",
-  description: "Direct-booking websites and SEO for luxury hotels and resorts. Cut OTA commissions and capture international tourist bookings directly.",
-  keywords: [
-      "Hotel Website Development",
-      "Resort Website Design",
-      "Hotel SEO Services",
-      "Direct Booking Engine for Hotels",
-      "Hospitality Web Solutions"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-hotels",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-hotels",
-    title: "Hotel Website Design & International Direct Booking Engine | Joy Digital",
-    description: "Ultra-fast Next.js website design for luxury hotels, eco-resorts, and hospitality chains. Commission-free direct reservation engines, 360 virtual room tours, multi-currency booking, and global travel SEO.",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Hotel Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -31,15 +33,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://www.joydigital.in/website-for-hotels#service",
+      "@id": "https://joydigital.in/website-for-hotels#service",
       "name": "Hotel Website Design & Direct Booking SEO",
       "serviceType": "Hospitality Web Development & Hotel Digital Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://www.joydigital.in/assets/images/logo.webp",
+        "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://www.joydigital.in",
+        "url": "https://joydigital.in",
         "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
@@ -71,7 +73,7 @@ export default async function HotelWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Hotels"
-      heroTitle="High-Converting Website Design & Direct Booking SEO for Hotels & Resorts"
+      heroTitle={config.h1}
       heroSubtitle="Stop losing 18-25% to OTA commissions like Booking.com and Agoda. We engineer fast, commission-free Next.js websites for luxury hotels, eco-resorts, boutique homestays, and global hospitality chains."
       leadSource="Website for Hotels Landing Page"
       heroCtaText="Get Free Hotel Web Quote"
@@ -84,37 +86,37 @@ export default async function HotelWebPage() {
           <p>
             However, most hotel websites suffer from slow room gallery rendering, broken reservation widgets, missing multi-currency prices, and complex checkout steps—forcing guests right back to OTA booking platforms.
           </p>
-          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
-            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Drives Commission-Free Direct Hotel Bookings</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
+            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Drives Commission-Free Direct Hotel Bookings</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Commission-Free Direct Booking Engine</strong>: Instant check-in/check-out reservation widget</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Multi-Currency Pricing</strong>: Automated USD, EUR, GBP, AED & INR display</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>360° Virtual Room & Resort Tour</strong>: High-resolution room suite showcases</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Global Travel SEO Strategy</strong>: Rank for high-value destination keywords</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Front Desk WhatsApp Link</strong>: Instant direct guest inquiry connection</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we combine hospitality design elegance with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">custom web engineering</Link>, <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">hotel search optimization</Link>, and <Link href="/google-business-profile-setup" className="text-[#C9F600] font-bold hover:underline">Google Hotel Ads integration</Link> to maximize direct profit margins.
+            At Joy Digital, we combine hospitality design elegance with <Link href="/website-development" className="text-primary font-bold hover:underline">custom web engineering</Link>, <Link href="/seo-services" className="text-primary font-bold hover:underline">hotel search optimization</Link>, and <Link href="/google-business-profile-setup" className="text-primary font-bold hover:underline">Google Hotel Ads integration</Link> to maximize direct profit margins.
           </p>
         </div>
       }
@@ -277,7 +279,7 @@ export default async function HotelWebPage() {
       crossLinks={[
         { href: "/website-development", label: "Custom Web Development" },
         { href: "/seo-services", label: "Hotel SEO Services" },
-        { href: "/travel-website-development", label: "Tours & Travels Web Dev" },
+        { href: "/website-for-tours-and-travels", label: "Tours & Travels Web Dev" },
         { href: "/local-seo-services", label: "Local Map SEO" },
         { href: "/case-studies", label: "Case Studies" },
         { href: "/contact", label: "Contact Front Desk" },

@@ -1,27 +1,29 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 ﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import ExportLeadForm from "@/components/ui/ExportLeadForm";
 
+const config = getIndustryConfig("website-for-export-and-import");
+
 export const metadata: Metadata = {
-  title: "B2B Export Web Development",
-  description: "Digital B2B portals and SEO for export-import houses. International buyer sourcing platforms, digital catalogs, and global trade lead engines.",
-  keywords: [
-      "Export Import Website Development",
-      "Export Business Web Design",
-      "International SEO Services",
-      "B2B Export Marketing",
-      "International Buyer Lead Generation"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-export-and-import",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-export-and-import",
-    title: "Enterprise Digital Platforms for Global Export-Import Houses | Joy Digital",
-    description: "Connect directly with international buyers. We build ultra-fast Next.js B2B web portals with custom RFQ engines and International B2B Trade SEO Architecture.",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Export Import Business Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -30,15 +32,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://www.joydigital.in/website-for-export-and-import#service",
+      "@id": "https://joydigital.in/website-for-export-and-import#service",
       "name": "B2B Export Web Development Services & International Trade SEO",
       "serviceType": "B2B Export Web Development Services",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://www.joydigital.in/assets/images/logo.webp",
+        "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://www.joydigital.in",
+        "url": "https://joydigital.in",
         "priceRange": "$$$",
         "address": {
           "@type": "PostalAddress",
@@ -65,7 +67,7 @@ export default function ExportImportWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Global B2B Export Portals"
-      heroTitle="Enterprise Digital Platforms & B2B Trade Engines for Global Export-Import Houses"
+      heroTitle={config.h1}
       heroSubtitle="Connect directly with international buyers, sourcing networks, and institutional distributors. We build ultra-fast, search-optimized Next.js B2B web portals with custom RFQ engines, digital product catalogs, and international B2B SEO."
       leadSource="B2B Export Engine Landing Page"
       customLeadForm={<ExportLeadForm />}
@@ -78,31 +80,31 @@ export default function ExportImportWebPage() {
           <p>
             At Joy Digital, we provide premium <strong>B2B Export Web Development Services</strong> engineered specifically for multi-product trade houses and merchant exporters. We don't build generic brochures; we engineer highly scalable <strong>Global Trade Portal & Digital Product Catalogs</strong> that convert anonymous global traffic into verified, multi-container RFQ leads.
           </p>
-          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
-            <h3 className="text-lg font-bold text-[#FFFFFF]">Enterprise Architecture Built for Global Trade</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
+            <h3 className="text-lg font-bold text-primary-dark">Enterprise Architecture Built for Global Trade</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Interactive RFQ & Container Volume Estimator</strong> (FOB, CIF, CFR Incoterms 2020)</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Multi-Currency & Port Logistics Showcase</strong></span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Digital Quality & Compliance Vault</strong> (ISO, FSSAI, APEDA, Halal, Organic Badges)</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Private Labeling & OEM Packaging Portals</strong></span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>International B2B Trade SEO Architecture</strong></span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Global Loading Speed</strong> (Edge-Serverless CDN Nodes)</span>
               </li>
             </ul>

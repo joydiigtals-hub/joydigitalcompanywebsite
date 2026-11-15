@@ -6,33 +6,21 @@ import AnalyticsTracker from "@/components/AnalyticsTracker";
 import ClarityTracker from "@/components/ClarityTracker";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
-import { getRootLayoutSchema } from "@/lib/seo/schema";
+import GoogleTranslateLoader from "@/components/GoogleTranslateLoader";
 import ClientWidgets from "@/components/ui/ClientWidgets";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import CookieConsent from "@/components/ui/CookieConsent";
-import NavigationLoadingBar from "@/components/ui/NavigationLoadingBar";
-import { SITE_URL } from "@/lib/siteConfig";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL("https://joydigital.in"),
   title: {
-    default: "Custom Next.js Website Development & SEO Agency | Joy Digital",
+    default: "Web Development & SEO Company – Get More Leads | Joy Digital",
     template: "%s | Joy Digital",
   },
-  description: "Joy Digital builds high-performance Next.js websites and data-driven SEO strategies that generate qualified enquiries and measurable organic growth.",
-  keywords: [
-    "Web Development Company",
-    "Custom Website Development",
-    "SEO Services",
-    "Next.js Development Agency",
-    "Local SEO Services",
-    "B2B Web Design",
-    "Joy Digital",
-    "Technical SEO",
-    "Digital Marketing Agency"
-  ],
-  authors: [{ name: "Joy Digital" }],
+  description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
+
+  authors: [{ name: "Joy Digital", url: "https://joydigital.in" }],
   publisher: "Joy Digital",
   robots: {
     index: true,
@@ -46,40 +34,35 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
+    canonical: "https://joydigital.in",
     languages: {
-      "en-IN": SITE_URL,
-      "en-US": `${SITE_URL}/us`,
-      "en-GB": `${SITE_URL}/uk`,
-      "en-AE": `${SITE_URL}/ae`,
-      "en-CA": `${SITE_URL}/ca`,
-      "en-AU": `${SITE_URL}/au`,
-      "x-default": SITE_URL,
+      "en-IN": "https://joydigital.in/in",
+      "en-US": "https://joydigital.in/us",
+      "en-GB": "https://joydigital.in/uk",
+      "en-AE": "https://joydigital.in/ae",
+      "en-CA": "https://joydigital.in/ca",
+      "en-AU": "https://joydigital.in/au",
+      "x-default": "https://joydigital.in",
     },
   },
   verification: {
     google: "yYfFlGYZPthQmXcw3V9yq2U2OlPPPxWBCtG7URIXDwQ",
   },
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/icon.png", type: "image/png" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: SITE_URL,
+    url: "https://joydigital.in",
     siteName: "Joy Digital",
-    title: "Custom Next.js Website Development & SEO Agency | Joy Digital",
-    description: "Joy Digital builds high-performance Next.js websites and data-driven SEO strategies that generate qualified enquiries and measurable organic growth.",
+    title: "Joy Digital | Digital Agency & Next.js Web Development Chennai",
+    description: "Premier Digital Agency & Next.js Web Development company based in Chennai, India. We build high-converting, sub-second web applications and generative AI search-optimized systems.",
     images: [
       {
-        url: `${SITE_URL}/assets/images/hero-banner.webp`,
+        url: "https://joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Joy Digital - Digital Agency & Next.js Web Development Chennai",
@@ -88,14 +71,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Next.js Website Development & SEO Agency | Joy Digital",
-    description: "Joy Digital builds high-performance Next.js websites and data-driven SEO strategies that generate qualified enquiries and measurable organic growth.",
-    images: [`${SITE_URL}/assets/images/hero-banner.webp`],
+    title: "Joy Digital | Digital Agency & Next.js Web Development Chennai",
+    description: "Premier Digital Agency & Next.js Web Development company based in Chennai, India. High-performance Next.js apps, SEO, and Generative Engine Optimization (GEO).",
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
     creator: "@joydigital",
   },
 };
 
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -104,20 +87,13 @@ const inter = Inter({
   weight: ["400", "600", "700", "800"],
 });
 
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-display",
-  weight: ["600", "700", "800"],
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${plusJakarta.variable} ${inter.className} h-full antialiased font-sans`}>
+    <html lang="en" className={`${inter.variable} ${inter.className} h-full antialiased font-sans`}>
       <head>
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
@@ -127,20 +103,14 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.clarity.ms" />
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getRootLayoutSchema()),
-          }}
-        />
       </head>
       <body className="min-h-full flex flex-col bg-light-bg text-text-primary">
-        <NavigationLoadingBar />
         <FontAwesomeLoader />
         <GoogleAnalytics />
         <AnalyticsTracker />
         <ClarityTracker />
-                {children}
+        <GoogleTranslateLoader />
+        {children}
         <ClientWidgets />
         <StickyMobileCTA />
         <CookieConsent />

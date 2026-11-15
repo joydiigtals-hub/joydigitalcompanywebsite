@@ -1,5 +1,4 @@
-import { SITE_URL, siteConfig } from "@/lib/siteConfig";
-export { SITE_URL };
+export const SITE_URL = "https://joydigital.in";
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 export const LOCALBUSINESS_ID = `${SITE_URL}/#localbusiness`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
@@ -11,11 +10,11 @@ export const BUSINESS_INFO = {
   logo: `${SITE_URL}/assets/images/logo.webp`,
   image: `${SITE_URL}/assets/images/hero-banner.webp`,
   description: "Joy Digital is a premier Next.js & Custom Web Development company based in Madurai, India. We engineer sub-second web applications, custom software, SEO, and Generative Engine Optimization (GEO) for global brands in the USA, UK, and UAE.",
-  telephone: "+91-9080026133",
+  telephone: "+919080026133",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com",
   address: {
     "@type": "PostalAddress",
-    "streetAddress": "4/166 T, Thinamani Nagar",
+    "streetAddress": "Madurai",
     "addressLocality": "Madurai",
     "addressRegion": "Tamil Nadu",
     "postalCode": "625018",
@@ -41,7 +40,7 @@ export const BUSINESS_INFO = {
     { "@type": "AdministrativeArea", "name": "Worldwide" }
   ],
   sameAs: [
-    "https://www.linkedin.com/company/joydigital-solution/",
+    "https://www.linkedin.com/in/saravanan-l-34a861154/",
     "https://share.google/BSniheS2qnzwqUKXU",
     "https://www.youtube.com/@Joydigital2026",
     "https://www.facebook.com/profile.php?id=61590372457559",

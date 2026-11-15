@@ -1,85 +1,73 @@
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
-import IndustryPackagesSection from "@/components/sections/IndustryPackagesSection";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Custom Next.js Web Development",
-  description: "Replace legacy web bloat with scalable, serverless Next.js architecture engineered for maximum conversions. Ship enterprise code faster. Audit your site today.",
-  keywords: [
-      "Custom Web Development",
-      "Next.js Web Development Services",
-      "Full-Stack Web Engineering",
-      "Enterprise Web Solutions",
-      "Modern Web App Development"
-  ],
+  title: "Web Development Company | Professional Website Services | Joy Digital",
+  description: "Joy Digital is a professional web development company building high-speed, SEO-ready websites that bring in organic leads. Request a free project audit today.",
   alternates: {
-    canonical: "https://www.joydigital.in/website-development",
+    canonical: "https://joydigital.in/website-development",
     languages: {
-      "x-default": "https://www.joydigital.in/website-development",
-      "en-IN": "https://www.joydigital.in/website-development",
-      "en-US": "https://www.joydigital.in/us/website-development",
-      "en-GB": "https://www.joydigital.in/uk/website-development",
-      "en-AE": "https://www.joydigital.in/ae/website-development",
-      "en-CA": "https://www.joydigital.in/ca/website-development",
-      "en-AU": "https://www.joydigital.in/au/website-development",
+      "x-default": "https://joydigital.in/website-development",
+      "en-us": "https://joydigital.in/us/website-development",
+      "en-gb": "https://joydigital.in/uk/website-development",
+      "en-ae": "https://joydigital.in/ae/website-development",
+      "en-in": "https://joydigital.in/in/website-development",
     },
   },
-};
-
-const pageSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Custom Web Development Services & Engineering",
-  "serviceType": "Custom Web Development Services",
-  "provider": {
-    "@type": "Organization",
-    "name": "Joy Digital",
-    "image": "https://www.joydigital.in/assets/images/logo.webp",
-    "telephone": "+919080026133"
+  openGraph: {
+    title: "Web Development Company | Professional Website Services | Joy Digital",
+    description: "Joy Digital is a professional web development company building high-speed, SEO-ready websites that bring in organic leads. Request a free project audit today.",
+    url: "https://joydigital.in/website-development",
+    type: "website",
   },
-  "description": "Joy Digital delivers full-stack custom web development services, Next.js web engineering, React applications, and scalable high-performance web systems.",
-  "offers": {
-    "@type": "AggregateOffer",
-    "priceCurrency": "INR",
-    "lowPrice": "25000",
-    "highPrice": "95000",
-    "offerCount": "3"
-  }
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Development Company | Professional Website Services | Joy Digital",
+    description: "Joy Digital is a professional web development company building high-speed, SEO-ready websites that bring in organic leads. Request a free project audit today.",
+  },
 };
 
 export default function WebDevPage() {
   return (
     <ServicePageTemplate
       serviceName="Website Development"
-      heroTitle="Custom Web Development Services & Next.js Engineering"
-      heroSubtitle="Full-stack custom web development services powered by Next.js, React, and Node.js. Build scalable web apps and high-performance web platforms engineered for speed."
+      heroTitle="Web Development Company for High-Performing Business Websites"
+      heroSubtitle="We engineer clean, secure, and conversion-optimized websites that turn visitors into customers. Fast performance, technical SEO, and scalable code."
       leadSource="Website Development Landing Page"
       heroCtaText="Get My Website Quote"
-      customPricingSection={<IndustryPackagesSection />}
-      overviewTitle="Professional Services from a Top Website Development Agency"
+      overviewTitle="Professional Services from a Top Website Development Company"
       overviewContent={
         <div className="space-y-6">
           <p>
             In today&apos;s digital economy, partnering with an experienced web engineering agency is essential to scale your online presence. Joy Digital provides end-to-end web development services, custom React/Next.js architecture, and technical search engine optimization designed to generate recurring client inquiries globally.
           </p>
-          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">What is Website Design and Development?</h3>
+          <div className="p-4 bg-purple-50 rounded-xl border border-purple-100 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between my-4 text-xs">
+            <span className="font-semibold text-slate-800">Need a ground-up bespoke architecture or dedicated framework team?</span>
+            <div className="flex gap-3 shrink-0">
+              <Link href="/custom-website-development" className="text-accent underline font-bold hover:text-purple-700">Custom Website Development</Link>
+              <span className="text-slate-300">|</span>
+              <Link href="/nextjs-development-agency" className="text-accent underline font-bold hover:text-purple-700">Next.js Development Agency</Link>
+            </div>
+          </div>
+          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">What is Website Design and Development?</h3>
           <p>
             Web design handles the visual and user experience (UI/UX) layout of your site, while web development covers the underlying front-end and back-end code engineering (HTML, CSS, JavaScript, Next.js) that makes the platform responsive, interactive, and fast.
           </p>
-          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Why Website Development is Important for Business Growth</h3>
+          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Why Website Development is Important for Business Growth</h3>
           <p>
-            Your website serves as your 24/7 digital storefront. Without a fast, modern, mobile-friendly platform, potential clients will choose your competitors. High-quality web development improves Google search indexing, satisfies Core Web Vitals, reduces bounce rates, and turns passive traffic into paying customers.
+            Your website serves as your 24/7 digital storefront. Without a fast, modern, mobile-friendly platform, potential clients will choose your competitors. High-quality web development improves Google search indexing, satisfies Core Web Vitals, reduces bounce rates, and turns passive traffic into paying customers. For tailored solutions, see our <Link href="/custom-website-development" className="text-accent underline font-semibold">custom website development services</Link>.
           </p>
-          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">What is the Cost of Website Development in India?</h3>
+          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">What is the Cost of Website Development in India?</h3>
           <p>
-            Custom web platforms scale based on complexity. Starter setups begin at $1,200, while advanced enterprise SaaS or headless e-commerce structures require bespoke milestone proposals. Joy Digital offers transparent flat-rate pricing with no hidden maintenance fees for our global clients.
+            Custom web platforms scale based on complexity. Starter setups begin at $1,200, while advanced enterprise web apps or online stores require bespoke milestone proposals. Joy Digital offers transparent flat-rate pricing with no hidden maintenance fees for our global clients.
           </p>
-          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Which Language and AI Tools are Best for Website Development?</h3>
+          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Which Language and Frameworks are Best for Modern Websites?</h3>
           <p>
-            JavaScript and TypeScript paired with Next.js/React are the industry standard for modern architecture due to server-side rendering, SEO efficiency, and blazing speed. We leverage these advanced frameworks alongside AI code-assist tools to accelerate delivery without compromising quality.
+            JavaScript and TypeScript paired with Next.js/React are the industry standard for modern architecture due to server-side rendering, SEO efficiency, and blazing speed. To explore dedicated React builds, consult our specialized <Link href="/nextjs-development-agency" className="text-accent underline font-semibold">Next.js development agency</Link> team.
           </p>
-          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">How to Find Clients and Leads for Website Development</h3>
+          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">How to Find Clients and Leads for Website Development</h3>
           <p>
             To capture global B2B projects, companies must combine high-speed technical SEO landing pages, targeted direct outreach, and robust digital trust signals. We build the exact infrastructure you need to support these acquisition strategies.
           </p>
@@ -152,47 +140,56 @@ export default function WebDevPage() {
       pricingTiers={[
         {
           name: "Starter Website",
-          description: "Essential online presence engineered for speed, credibility, and direct customer contact.",
+          price: "₹25,000",
+          description: "Perfect for new local service businesses wanting to establish professional authority online.",
           features: [
-            "Custom responsive website layout",
-            "Mobile-first speed optimization",
-            "Direct WhatsApp & click-to-call triggers",
-            "Lead contact & inquiry routing form",
-            "Basic On-page SEO setup",
-            "Google Search Console & sitemap sync",
-            "Zero database security vulnerabilities",
+            "Custom responsive website",
+            "Mobile optimization",
+            "WhatsApp integration",
+            "Lead Contact form",
+            "Basic SEO setup",
+            "Google Search Console sync",
+            "XML Sitemap generated",
+            "Google Analytics integration",
           ],
-          ctaText: "Enquire Now",
+          ctaText: "Get Started",
         },
         {
           name: "Business Growth Website",
-          description: "High-converting architecture designed to attract local and global inquiries and drive measurable sales.",
+          price: "₹45,000",
+          description: "Recommended for growing companies targeting local search rankings and active online client acquisition.",
           isPopular: true,
           features: [
-            "Up to 15 custom pages designed for conversions",
-            "Conversion-focused UI/UX with high-contrast CTAs",
-            "Advanced multi-field lead capture forms",
-            "WhatsApp leads notification sync",
-            "Search Console & Analytics event tracking",
-            "Core Web Vitals speed tuning (< 1.2s load)",
-            "On-page technical SEO & rich schema markup",
-            "Admin panel / headless CMS option",
+            "Custom website layout",
+            "Conversion-focused UI/UX",
+            "SEO-ready architecture",
+            "Advanced contact forms",
+            "WhatsApp leads sync",
+            "Search Console configuration",
+            "Google Analytics event tracking",
+            "Core Web Vitals speed tuning",
+            "Basic content copywriting check",
+            "Admin panel / CMS option",
           ],
-          ctaText: "Enquire Now",
+          ctaText: "Request a Quote",
         },
         {
-          name: "Custom Business Website",
-          description: "Bespoke web platform engineered with headless CMS, custom workflows, and deep integrations.",
+          name: "Website + SEO Growth",
+          price: "Custom Quote",
+          description: "Perfect for companies seeking persistent ranking growth, organic pipelines, and local lead dominance.",
           features: [
-            "Scalable Next.js enterprise architecture",
-            "Complex database schema & headless CMS",
-            "Third-party CRM, ERP or payment gateway sync",
-            "Multi-region global Edge CDN routing",
-            "Continuous automated CI/CD pipelines",
-            "Dedicated developer support & SLA",
-            "100% code ownership & IP handover",
+            "Custom website layout",
+            "Technical SEO code audits",
+            "Advanced On-page SEO setup",
+            "High-intent keyword research",
+            "Local SEO & maps optimizations",
+            "Google Business Profile setups",
+            "Comprehensive content strategy",
+            "Monthly SEO retainer campaigns",
+            "Index monitoring & audit fixes",
+            "Google Search Console reporting",
           ],
-          ctaText: "Enquire Now",
+          ctaText: "Talk to an SEO Expert",
         },
       ]}
       faqs={[
@@ -225,7 +222,6 @@ export default function WebDevPage() {
           answer: "Joy Digital builds bespoke Next.js websites that load in under 1.5s, achieve 90+ Core Web Vitals scores, and include full Google Search Console indexing configuration to ensure your brand ranks globally.",
         },
       ]}
-      schemaMarkup={pageSchema}
       crossLinks={[
         { href: "/web-design-services", label: "Web Design" },
         { href: "/seo-services", label: "SEO Services" },

@@ -1,33 +1,29 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
+const config = getIndustryConfig("website-for-schools");
+
 export const metadata: Metadata = {
-  title: "School Website Design & Dev",
-  description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
-  keywords: [
-      "School Website Development",
-      "School Website Design",
-      "SEO for Schools",
-      "School Admission Marketing",
-      "Education Institution Web Design"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://www.joydigital.in/website-for-schools",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://www.joydigital.in/website-for-schools",
-    title: "School Website Design & Dev | Joy Digital",
-    description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
-    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "School Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "School Website Design & Dev | Joy Digital",
-    description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -36,15 +32,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://www.joydigital.in/website-for-schools#service",
+      "@id": "https://joydigital.in/website-for-schools#service",
       "name": "School & Educational Institute Website Design",
       "serviceType": "Educational Web Development & School Admission Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://www.joydigital.in/assets/images/logo.webp",
+        "image": "https://joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://www.joydigital.in",
+        "url": "https://joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
@@ -71,7 +67,7 @@ export default function SchoolWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Schools"
-      heroTitle="High-Converting Website Design & Education SEO for Schools & Institutes"
+      heroTitle={config.h1}
       heroSubtitle="Convert prospective parent inquiries into direct campus visits and online student applications. We engineer fast, modern Next.js websites for international schools, IB/IGCSE academies, K-12 institutes, and study abroad advisories."
       leadSource="Website for Schools Landing Page"
       heroCtaText="Get Free School Web Quote"
@@ -84,37 +80,37 @@ export default function SchoolWebPage() {
           <p>
             Unfortunately, many school websites have cluttered layouts, slow mobile page loads, outdated circular notices, and missing online admission application forms or instant admission desk WhatsApp links.
           </p>
-          <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 my-6 not-prose text-[#FFFFFF]">
-            <h3 className="text-lg font-bold text-[#FFFFFF]">How Joy Digital Builds High-Converting Educational Portals</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
+            <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Educational Portals</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Online Admission Application & Inquiry Form</strong>: Digital application workflow</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Interactive Curriculum & Academic Hubs</strong>: IB, IGCSE, CBSE & STEM programs</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Virtual Campus Tour & Facilities Showcase</strong>: Labs, sports arenas & libraries</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Global Education SEO Strategy</strong>: Rank for competitive school admission terms</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Sub-1.5s Load Speeds</strong>: Ultra-fast serverless Next.js architecture</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
+                <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Admission Desk WhatsApp Link</strong>: Direct connection for instant parent support</span>
               </li>
             </ul>
           </div>
           <p>
-            At Joy Digital, we merge academic branding with <Link href="/website-development" className="text-[#C9F600] font-bold hover:underline">high-speed Next.js web development</Link>, <Link href="/seo-services" className="text-[#C9F600] font-bold hover:underline">education SEO strategies</Link>, and <Link href="/local-seo-services" className="text-[#C9F600] font-bold hover:underline">Google Business Profile setup</Link> to help schools fill admission seats.
+            At Joy Digital, we merge academic branding with <Link href="/website-development" className="text-primary font-bold hover:underline">high-speed Next.js web development</Link>, <Link href="/seo-services" className="text-primary font-bold hover:underline">education SEO strategies</Link>, and <Link href="/local-seo-services" className="text-primary font-bold hover:underline">Google Business Profile setup</Link> to help schools fill admission seats.
           </p>
         </div>
       }

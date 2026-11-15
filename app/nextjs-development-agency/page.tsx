@@ -1,28 +1,22 @@
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Next.js Development Agency",
-  description: "Hire expert Next.js & React developers. We engineer scalable, sub-second web apps, headless systems, and serverless platforms. Get a free proposal!",
-  keywords: [
-      "Nextjs Development Agency",
-      "Nextjs Development Agency Services",
-      "Web Development",
-      "SEO Services",
-      "Joy Digital"
-  ],
+  title: "Next.js Development Agency | High-Performance React Web Apps | Joy Digital",
+  description: "Hire a dedicated Next.js development agency. We engineer fast, scalable, and search-optimized React web applications with modern serverless architecture.",
   alternates: {
-    canonical: "https://www.joydigital.in/nextjs-development-agency",
+    canonical: "https://joydigital.in/nextjs-development-agency",
   },
   openGraph: {
     type: "website",
-    title: "Next.js & React Development Agency | Joy Digital",
-    description: "Hire expert Next.js & React developers. We engineer scalable, sub-second web apps, headless systems, and serverless platforms. Get a free proposal!",
-    url: "https://www.joydigital.in/nextjs-development-agency",
+    title: "Next.js Development Agency | High-Performance React Web Apps | Joy Digital",
+    description: "Hire a dedicated Next.js development agency. We engineer fast, scalable, and search-optimized React web applications with modern serverless architecture.",
+    url: "https://joydigital.in/nextjs-development-agency",
     images: [
       {
-        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
+        url: "https://joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Joy Digital - Next.js & React Development Agency",
@@ -31,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Next.js & React Development Agency | Joy Digital",
-    description: "Hire expert Next.js & React developers. We engineer scalable, sub-second web apps, headless systems, and serverless platforms. Get a free proposal!",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    title: "Next.js Development Agency | High-Performance React Web Apps | Joy Digital",
+    description: "Hire a dedicated Next.js development agency. We engineer fast, scalable, and search-optimized React web applications with modern serverless architecture.",
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -45,7 +39,7 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://www.joydigital.in/assets/images/logo.webp",
+    "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133"
   },
   "description": "Premium Next.js development agency delivering highly scalable, sub-second web applications for global B2B and enterprise clients.",
@@ -66,17 +60,25 @@ export default function NextjsAgencyPage() {
       heroSubtitle="We engineer blazing-fast, secure, and highly scalable React applications deployed on the Edge. Outperform your competitors with modern headless architecture."
       leadSource="Next.js Agency Page"
       heroCtaText="Consult a Next.js Expert"
-      canonicalUrl="https://www.joydigital.in/nextjs-development-agency"
+      canonicalUrl="https://joydigital.in/nextjs-development-agency"
       overviewTitle="Why Enterprises are Migrating to Next.js"
       overviewContent={
         <div className="space-y-6">
           <p>
             Legacy monolithic platforms like WordPress and Magento are inherently slow, vulnerable to plugin hacks, and difficult to scale globally. The modern web demands <strong>sub-second load times</strong> and dynamic edge delivery.
           </p>
+          <div className="p-4 bg-purple-50 rounded-xl border border-purple-100 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between my-4 text-xs">
+            <span className="font-semibold text-slate-800">Compare with our broader web service offerings:</span>
+            <div className="flex gap-3 shrink-0">
+              <Link href="/website-development" className="text-accent underline font-bold hover:text-purple-700">Web Development Company</Link>
+              <span className="text-slate-300">|</span>
+              <Link href="/custom-website-development" className="text-accent underline font-bold hover:text-purple-700">Custom Website Development</Link>
+            </div>
+          </div>
           <p>
-            As a specialized <strong>Next.js development agency</strong>, Joy Digital builds decoupled frontend architectures. By separating your UI from your backend systems (Headless CMS, CRMs, APIs), we create platforms that are infinitely scalable and completely unhackable.
+            As a specialized <strong>Next.js development agency</strong>, Joy Digital builds decoupled frontend architectures. By separating your UI from your backend systems (CMS, CRMs, APIs), we create platforms that are infinitely scalable and secure. For broad corporate website builds, see our full-service <Link href="/website-development" className="text-accent underline font-semibold">web development company</Link> solutions, or review our bespoke <Link href="/custom-website-development" className="text-accent underline font-semibold">custom website development services</Link>.
           </p>
-          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Core Web Vitals Obsession</h3>
+          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Core Web Vitals Obsession</h3>
           <p>
             Google now ranks websites heavily based on Core Web Vitals. Our Next.js engineering guarantees a 95+ score on mobile through static site generation (SSG), advanced image optimization, and server-side rendering (SSR) delivered via global CDNs.
           </p>
@@ -193,9 +195,9 @@ export default function NextjsAgencyPage() {
       ]}
       schemaMarkup={pageSchema}
       crossLinks={[
-        { href: "/custom-website-development", label: "Custom Website Development" },
-        { href: "/web-design-services", label: "UI/UX Web Design" },
-        { href: "/ecommerce-website-development", label: "Headless E-Commerce Development" },
+        { href: "/website-development", label: "Professional Web Development Company" },
+        { href: "/custom-website-development", label: "Custom Website Development Services" },
+        { href: "/web-design-services", label: "Custom Website Design" },
       ]}
     />
   );
