@@ -26,7 +26,7 @@ metaDescription: >-
 focusKeyword: Local SEO
 secondaryKeywords: >-
   Google Business Profile, Near Me Searches, Joy Digital, Local Service Business, Customer Lead Generation
-canonicalUrl: 'https://joydigital.in/blog/when-customers-need-you-urgently-can-they-find-your-business-on-google'
+canonicalUrl: 'https://www.joydigital.in/blog/when-customers-need-you-urgently-can-they-find-your-business-on-google'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Website Design & Development Services
@@ -41,7 +41,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on local search
   optimization, Google Business Profiles, and high-converting web architecture.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: Is Google Business Profile important for local businesses?
     answer: >-

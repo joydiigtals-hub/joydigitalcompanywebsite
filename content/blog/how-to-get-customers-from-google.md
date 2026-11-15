@@ -22,7 +22,7 @@ metaDescription: >-
   local map listings, organic SEO, and Google Search Ads campaigns.
 focusKeyword: Customers from Google
 secondaryKeywords: 'Digital Marketing, Joy Digital, Search Engine Optimization, SEO Strategy'
-canonicalUrl: 'https://joydigital.in/blog/how-to-get-customers-from-google'
+canonicalUrl: 'https://www.joydigital.in/blog/how-to-get-customers-from-google'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Digital Marketing Agency
@@ -37,7 +37,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: 'How to Get Customers from Google: 3 Proven Search Strategies'
 ogDescription: >-

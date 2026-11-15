@@ -3,10 +3,17 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Web Development Company in Chennai | Joy Digital",
-  description: "Looking for a professional web development company in Chennai? We build dynamic, fast, secure Next.js/React web platforms for growing businesses.",
+  title: "Web Development Chennai",
+  description: "Looking for the best website development company in Chennai? We build dynamic, fast, secure Next.js and React web platforms for growing businesses.",
+  keywords: [
+      "Web Development Company Chennai",
+      "Web Design Agency Chennai",
+      "Full Stack Web Development Chennai",
+      "React & Next.js Developers Chennai",
+      "Corporate Web Design Chennai"
+  ],
   alternates: {
-    canonical: "https://joydigital.in/web-development-company-chennai",
+    canonical: "https://www.joydigital.in/web-development-company-chennai",
   },
 };
 
@@ -18,7 +25,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -47,7 +54,7 @@ export default function WebDevChennai() {
       heroSubtitle="Get dynamic, mobile-friendly React and Next.js website assets. As a premium web development company in Chennai, we build fast corporate portfolios that convert visitors into active customers."
       leadSource="Web Development Chennai Landing Page"
       heroCtaText="Get Web Development Quote"
-      canonicalUrl="https://joydigital.in/web-development-company-chennai"
+      canonicalUrl="https://www.joydigital.in/web-development-company-chennai"
       overviewTitle="High-Performance Website Design & Development in Chennai"
       overviewContent={
         <div className="space-y-6">
@@ -183,7 +190,7 @@ export default function WebDevChennai() {
       schemaMarkup={pageSchema}
       crossLinks={[
         { href: "/website-design-company-chennai", label: "Web Design Chennai" },
-        { href: "/seo-company-chennai", label: "SEO Company Chennai" },
+        { href: "/seo-services-chennai", label: "SEO Company Chennai" },
         { href: "/case-studies", label: "Case Studies" },
       ]}
     />

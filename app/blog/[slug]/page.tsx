@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/siteConfig";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import StickyWidgets from "@/components/ui/StickyWidgets";
@@ -29,18 +30,24 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const rawTitle = (post.seoTitle || post.title || "")
     .replace(/\s*\|\s*Joy\s*Digital.*$/i, "")
     .trim();
-  const title = `${rawTitle} | Joy Digital`;
+  const title = rawTitle.length > 42 ? rawTitle.slice(0, 42).trim() : rawTitle;
+  const fullTitle = `${title} | Joy Digital`;
   const description = post.metaDescription || post.description;
-  const canonical = post.canonicalUrl || `https://joydigital.in/blog/${resolvedParams.slug}`;
+  const canonical = post.canonicalUrl ? post.canonicalUrl.replace(/https?:\/\/(?!www\.)joydigital\.in/g, SITE_URL) : `${SITE_URL}/blog/${resolvedParams.slug}`;
   const isNoindex = post.robots?.toLowerCase().includes("noindex");
   const isNofollow = post.robots?.toLowerCase().includes("nofollow");
+
+  const rawKeywords: (string | undefined)[] = [
+    post.focusKeyword,
+    ...(post.tags || []),
+    ...(post.secondaryKeywords ? post.secondaryKeywords.split(',').map((k: string) => k.trim()) : [])
+  ];
+  const blogKeywords: string[] = rawKeywords.filter((k): k is string => Boolean(k));
 
   return {
     title: title,
     description: description,
-    alternates: {
-      canonical: canonical,
-    },
+    keywords: blogKeywords.length > 0 ? blogKeywords : ["Web Development", "SEO Services", "Joy Digital"],
     robots: {
       index: !isNoindex,
       follow: !isNofollow,
@@ -49,11 +56,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "article",
       url: canonical,
       siteName: "Joy Digital Agency",
-      title: post.ogTitle ? (post.ogTitle.includes("Joy Digital") ? post.ogTitle : `${post.ogTitle} | Joy Digital`) : title,
+      title: post.ogTitle ? (post.ogTitle.includes("Joy Digital") ? post.ogTitle : `${post.ogTitle} | Joy Digital`) : fullTitle,
       description: post.ogDescription || description,
       images: [
         {
-          url: post.ogImage || post.image || "https://joydigital.in/assets/images/hero-banner.webp",
+          url: post.ogImage || post.image || `${SITE_URL}/assets/images/hero-banner.webp`,
           width: 1200,
           height: 630,
           alt: post.imageAlt || rawTitle,
@@ -62,9 +69,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary_large_image",
-      title: post.twitterTitle ? (post.twitterTitle.includes("Joy Digital") ? post.twitterTitle : `${post.twitterTitle} | Joy Digital`) : title,
+      title: post.twitterTitle ? (post.twitterTitle.includes("Joy Digital") ? post.twitterTitle : `${post.twitterTitle} | Joy Digital`) : fullTitle,
       description: post.twitterDescription || post.ogDescription || description,
-      images: [post.twitterImage || post.ogImage || post.image || "https://joydigital.in/assets/images/hero-banner.webp"],
+      images: [post.twitterImage || post.ogImage || post.image || `${SITE_URL}/assets/images/hero-banner.webp`],
     },
   };
 }
@@ -78,7 +85,11 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   // Compile markdown content to HTML string on the server side
-  const htmlContent = await marked(post.content);
+  let rawHtml = await marked(post.content);
+  // Ensure tables have responsive overflow wrapper
+  rawHtml = rawHtml.replace(/<table(\b[^>]*)>/gi, '<div class="table-responsive-wrapper"><table$1>');
+  rawHtml = rawHtml.replace(/<\/table>/gi, '</table></div>');
+  const htmlContent = rawHtml;
 
   // Retrieve all posts for related selection
   const allPosts = await getAllPosts();
@@ -117,7 +128,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   return (
     <>
       <Header />
-      <main className="pt-20 lg:pt-28">
+      <main className="pt-16 lg:pt-20 min-w-0 w-full overflow-x-hidden">
         
         {/* Animated layout wrapper holding article details */}
         <BlogArticleContainer 

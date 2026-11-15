@@ -24,7 +24,7 @@ metaDescription: >-
 focusKeyword: pest control website features leads
 secondaryKeywords: >-
   pest control website design, pest control company website, pest control SEO, pest control lead generation, web development for service business
-canonicalUrl: 'https://joydigital.in/blog/5-website-features-pest-control-companies-leads'
+canonicalUrl: 'https://www.joydigital.in/blog/5-website-features-pest-control-companies-leads'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Custom Website Development
@@ -44,7 +44,7 @@ authorRole: Technical Web & SEO Specialist
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: Why does a pest control company need dedicated service pages?
     answer: >-
@@ -233,6 +233,6 @@ At **Joy Digital**, we create customised websites for service-based businesses, 
 
 We focus on building websites that are professional, mobile-friendly, SEO-ready, and designed to generate enquiries.
 
-If your current website is outdated or you are planning a new **pest control website**, **[contact Joy Digital](https://joydigital.in/contact?service=Website%20Development)** and let us help you build a website that represents your business and makes it easier for customers to contact you.
+If your current website is outdated or you are planning a new **pest control website**, **[contact Joy Digital](https://www.joydigital.in/contact?service=Website%20Development)** and let us help you build a website that represents your business and makes it easier for customers to contact you.
 
 **Build your professional pest control website with Joy Digital today and turn your online visitors into potential customers.**

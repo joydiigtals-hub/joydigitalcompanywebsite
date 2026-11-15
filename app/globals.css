@@ -3,39 +3,46 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-primary: #7C3AED;
-  --color-primary-light: #A78BFA;
-  --color-primary-dark: #171126;
-  --color-primary-glow: rgba(124, 58, 237, 0.06);
-  --color-accent: #7C3AED;
-  --color-accent-light: #A78BFA;
-  --color-accent-dark: #171126;
-  --color-accent-glow: rgba(167, 139, 250, 0.15);
-  --color-secondary: #A78BFA;
-  --color-secondary-light: #F5F3FF;
-  --color-dark: #171126;
-  --color-dark-slate: #1F1B2D;
-  --color-light-bg: #FAF9FF;
-  --color-light-card: #FFFFFF;
+  /* ═══ NEW BRAND COLOR SYSTEM ═══ */
+  --color-brand-purple: #3B1580;
+  --color-brand-lavender: #D9CCF5;
+  --color-brand-lime: #C9F600;
+
+  --color-primary: #3B1580;
+  --color-primary-light: #4D1FA3;
+  --color-primary-dark: #260B5E;
+  --color-primary-glow: rgba(201, 246, 0, 0.15);
+  --color-accent: #C9F600;
+  --color-accent-light: #D8FF3A;
+  --color-accent-dark: #A9D100;
+  --color-accent-glow: rgba(201, 246, 0, 0.35);
+  --color-secondary: #D9CCF5;
+  --color-secondary-light: #FFFFFF;
+  --color-dark: #260B5E;
+  --color-dark-slate: #260B5E;
+  --color-light-bg: #3B1580;
+  --color-light-lavender: #D9CCF5;
+  --color-light-card: #260B5E;
   --color-white: #FFFFFF;
-  --color-text-primary: #1F1B2D;
-  --color-text-secondary: #6B6478;
-  --color-text-muted: #BDB8C7;
-  --color-border: #E9E4F2;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #D9CCF5;
+  --color-text-muted: rgba(217, 204, 245, 0.65);
+  --color-border: rgba(255, 255, 255, 0.18);
   --color-whatsapp-green: #10b981;
-  --color-whatsapp-glow: rgba(16, 185, 129, 0.2);
+  --color-whatsapp-glow: rgba(16, 185, 129, 0.25);
   --color-error-red: #ef4444;
   --color-success-green: #10b981;
   --font-inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-full: 9999px;
-  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.03), 0 4px 6px -4px rgba(15, 23, 42, 0.03);
-  --shadow-glow: 0 10px 30px -5px rgba(249, 115, 22, 0.15);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 10px 30px -5px rgba(201, 246, 0, 0.35);
   --animate-pulse-dot: pulse-dot 2s infinite;
   --animate-pulse-ring: pulse-ring 2.5s infinite;
 }
@@ -48,12 +55,14 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-height);
+  background-color: #3B1580;
+  color: #FFFFFF;
 }
 
 body {
   font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-color: var(--color-light-bg);
-  color: var(--color-text-primary);
+  background-color: #3B1580;
+  color: #FFFFFF;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -105,31 +114,6 @@ i[class*="fa-"] {
   100% {
     box-shadow: 0 0 0 0 hsla(25, 95%, 53%, 0);
   }
-}
-
-/* FontAwesome 6 font-display overrides to resolve Lighthouse font-display warning */
-@font-face {
-  font-family: 'Font Awesome 6 Free';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Font Awesome 6 Brands';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Font Awesome 6 Free';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-regular-400.woff2') format('woff2');
 }
 
 /* Scroll reveal states - minimal transform to prevent mobile CLS */
@@ -195,16 +179,16 @@ i[class*="fa-"] {
   }
 }
 
-/* Blog article text links underlines */
-.prose a {
+/* Blog article text links underlines (exclude buttons, not-prose and colored buttons) */
+.prose:not(.prose-invert) a:not([class*="bg-"]):not([class*="btn"]):not([class*="text-"]):not(.not-prose *) {
   position: relative;
   text-decoration: none !important;
-  color: #7C3AED !important;
+  color: var(--color-brand-purple) !important;
   font-weight: 700;
   transition: color 0.2s ease;
 }
 
-.prose a::after {
+.prose:not(.prose-invert) a:not([class*="bg-"]):not([class*="btn"]):not([class*="text-"]):not(.not-prose *)::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -212,21 +196,146 @@ i[class*="fa-"] {
   height: 1.5px;
   bottom: -1px;
   left: 0;
-  background-color: #7C3AED;
+  background-color: var(--color-brand-purple);
   transform-origin: bottom left;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.prose a:hover::after {
+.prose:not(.prose-invert) a:not([class*="bg-"]):not([class*="btn"]):not([class*="text-"]):not(.not-prose *):hover::after {
   transform: scaleX(1);
+}
+
+/* Inverted / Dark prose links (Service pages, dark mode sections) */
+.prose.prose-invert a:not([class*="bg-"]):not([class*="btn"]):not([class*="text-white"]):not(.not-prose *),
+.prose-invert a:not([class*="bg-"]):not([class*="btn"]):not([class*="text-white"]):not(.not-prose *) {
+  position: relative;
+  color: #C9F600 !important;
+  text-decoration: underline !important;
+  text-decoration-color: #C9F600 !important;
+  text-underline-offset: 3px;
+  font-weight: 700;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.prose.prose-invert a:not([class*="bg-"]):not([class*="btn"]):not([class*="text-white"]):not(.not-prose *):hover,
+.prose-invert a:not([class*="bg-"]):not([class*="btn"]):not([class*="text-white"]):not(.not-prose *):hover {
+  color: #FFFFFF !important;
+  text-decoration-color: #FFFFFF !important;
+}
+
+/* Ensure button links inside prose or not-prose always preserve explicit white font if requested */
+.prose a[class*="text-white"],
+.not-prose a[class*="text-white"] {
+  color: #FFFFFF !important;
+}
+.prose a[class*="text-white"] *,
+.not-prose a[class*="text-white"] * {
+  color: #FFFFFF !important;
+}
+
+
+/* Blog article prose mobile responsiveness & overflow prevention */
+.prose-content {
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+.prose-content pre {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  white-space: pre !important;
+  word-break: normal !important;
+  word-wrap: normal !important;
+  border-radius: 12px !important;
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  padding: 1rem !important;
+  font-size: 0.75rem !important;
+  line-height: 1.4 !important;
+  box-sizing: border-box !important;
+}
+
+.prose-content pre code {
+  white-space: pre !important;
+  word-break: normal !important;
+  display: block !important;
+  background: transparent !important;
+  color: inherit !important;
+  padding: 0 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+.prose-content code:not(pre code) {
+  word-break: break-all !important;
+  white-space: normal !important;
+}
+
+.prose-content table {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  border-collapse: collapse !important;
+  box-sizing: border-box !important;
+}
+
+.prose-content table th,
+.prose-content table td {
+  white-space: normal !important;
+  min-width: 120px !important;
+}
+
+.prose-content img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.table-responsive-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  margin: 1.5rem 0 !important;
+  border-radius: 0.75rem !important;
 }
 
 /* Sidebar Table of Contents active trackers */
 .toc-item-active {
-  color: #7C3AED !important;
-  font-weight: 700;
-  border-left-color: #7C3AED !important;
+  color: #C9F600 !important;
+  font-weight: 800;
+  border-left-color: #C9F600 !important;
   padding-left: 14px !important;
+}
+
+/* Strict 3-Color System Utilities */
+.btn-cta-lime {
+  background-color: #C9F600;
+  color: #24094F;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+.btn-cta-lime:hover {
+  opacity: 0.92;
+  box-shadow: 0 10px 25px -5px rgba(201, 246, 0, 0.45);
+}
+
+.card-surface {
+  background-color: #3B1580;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.card-dark-surface {
+  background-color: #260B5E;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.card-lavender-tint {
+  background-color: #3B1580;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 /* Simple keyframe fade utilities */
@@ -248,23 +357,34 @@ i[class*="fa-"] {
   animation: slideUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Hide Google Translate top banner bar */
+/* Hide Google Translate top banner bar and popups */
 .goog-te-banner-frame.skiptranslate,
 .goog-te-banner-frame,
+iframe.goog-te-banner-frame,
 .goog-te-balloon-frame,
 #goog-gt-tt,
-.goog-te-menu-frame {
+.goog-te-menu-frame,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
   display: none !important;
 }
 
+/* Prevent Google Translate from shifting the body down */
 body {
   top: 0px !important;
+  position: static !important;
 }
 
-/* Hide original Google Translate widget element */
-#google_translate_element,
-.skiptranslate iframe {
-  display: none !important;
+/* Hide original Google Translate widget off-screen while keeping it active in DOM */
+#google_translate_element {
+  position: fixed !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: -9999 !important;
 }
 
 .goog-tooltip,
@@ -334,3 +454,31 @@ body {
 
 
 
+
+
+/* Infinite Scrolling Marquee Ticker */
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none !important;
+  }
+}

@@ -22,7 +22,7 @@ metaDescription: 'Learn how to find and attract the right customers in 2026 usin
 focusKeyword: 'how to find the right customers for your business'
 secondaryKeywords: >-
   find the right customers, attract the right customers, target customers online, customer acquisition strategy, digital marketing for businesses, custom website development, custom website design, SEO for businesses, business website SEO, B2B website development, B2B lead generation, website lead generation, conversion-focused website, international SEO, global SEO services
-canonicalUrl: 'https://joydigital.in/blog/how-to-find-the-right-customers-for-your-business'
+canonicalUrl: 'https://www.joydigital.in/blog/how-to-find-the-right-customers-for-your-business'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Custom Website Development Services
@@ -46,7 +46,7 @@ authorRole: Technical Web Specialist & Founder
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: What does "the right customer" mean for a growing business?
     answer: >-
@@ -83,7 +83,7 @@ But getting **the right customers** is more important than simply getting more w
 
 The right customer is someone who actually needs your product or service, has the ability to buy, and is looking for a solution you can provide.
 
-In 2026, customers are searching for businesses differently. They use Google, social media, business directories, websites, and even AI-powered search tools to research products and services before making a decision. Learn how our [AI Search Optimization (GEO) Services](https://joydigital.in/ai-search-optimization) prepare your brand for modern search engines.
+In 2026, customers are searching for businesses differently. They use Google, social media, business directories, websites, and even AI-powered search tools to research products and services before making a decision. Learn how our [AI Search Optimization (GEO) Services](https://www.joydigital.in/ai-search-optimization) prepare your brand for modern search engines.
 
 If your business cannot be found where your potential customers are searching, you may be losing valuable opportunities to your competitors.
 
@@ -104,7 +104,7 @@ For example, a manufacturing company may sell industrial equipment. Its ideal cu
 * Procurement teams
 * International buyers
 
-Explore our specialized guide on [Website Development for Manufacturing Companies](https://joydigital.in/website-for-manufacturing-companies).
+Explore our specialized guide on [Website Development for Manufacturing Companies](https://www.joydigital.in/website-for-manufacturing-companies).
 
 Similarly, a tourism company may want to attract international travellers instead of local visitors.
 
@@ -188,7 +188,7 @@ A service business can include:
 * Contact options
 * Online enquiry forms
 
-This is one of the biggest advantages of a **custom website**. Explore our [Custom Website Development Services](https://joydigital.in/website-development).
+This is one of the biggest advantages of a **custom website**. Explore our [Custom Website Development Services](https://www.joydigital.in/website-development).
 
 The website can be designed around your specific customers and business process instead of using a generic template.
 
@@ -196,7 +196,7 @@ The website can be designed around your specific customers and business process 
 
 ## 4. Use SEO to Reach Customers Who Are Already Searching
 
-Search Engine Optimization (SEO) helps your website become more visible when people search for relevant products and services. Discover our comprehensive [SEO Services](https://joydigital.in/seo-services).
+Search Engine Optimization (SEO) helps your website become more visible when people search for relevant products and services. Discover our comprehensive [SEO Services](https://www.joydigital.in/seo-services).
 
 For example, a company selling industrial machinery could target searches such as:
 
@@ -230,7 +230,7 @@ The goal is to attract **relevant visitors who are more likely to become custome
 
 ## 5. Target the Right Countries
 
-If your business serves international customers, your website should communicate that clearly. Read about our [Export & Import Website Solutions](https://joydigital.in/website-for-export-and-import).
+If your business serves international customers, your website should communicate that clearly. Read about our [Export & Import Website Solutions](https://www.joydigital.in/website-for-export-and-import).
 
 For example, a company targeting international B2B customers may focus on markets such as:
 
@@ -446,7 +446,7 @@ Ready to transform your online presence and attract qualified customers? Contact
 * **Agency Name:** Joy Digital Growth Agency
 * **Phone / Call Support:** [+91 90800 26133](tel:+919080026133)
 * **WhatsApp Chat:** [Chat on WhatsApp (+91 90800 26133)](https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20get%20more%20details%20about%20custom%20website%20development%20and%20SEO.)
-* **Contact:** [Contact Us Online](https://joydigital.in/contact)
+* **Contact:** [Contact Us Online](https://www.joydigital.in/contact)
 * **Office Address:** Tamil Nadu, India
-* **Website & Consultation:** [Request a Free Quote](https://joydigital.in/contact?service=Custom%20Website%20and%20SEO)
+* **Website & Consultation:** [Request a Free Quote](https://www.joydigital.in/contact?service=Custom%20Website%20and%20SEO)
 

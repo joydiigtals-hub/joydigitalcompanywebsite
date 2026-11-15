@@ -15,36 +15,29 @@ export default function AnalyticsTracker() {
     if (prevPath.current === pathname) return;
     prevPath.current = pathname;
 
-    const trackVisit = async () => {
-      try {
-        let clientIp = "";
-        try {
-          const ipRes = await fetch("https://api.ipify.org?format=json");
-          if (ipRes.ok) {
-            const ipData = await ipRes.json();
-            clientIp = ipData.ip;
-          }
-        } catch (e) {
-          console.warn("Could not fetch client IP from frontend");
-        }
-
-        await fetch("/api/analytics/track", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            path: pathname,
-            referrer: typeof document !== "undefined" ? document.referrer : "",
-            clientIp,
-          }),
-        });
-      } catch (err) {
-        console.warn("Analytics ping skipped or database not connected yet.");
-      }
+    // Defer analytics ping so it never competes with Largest Contentful Paint (LCP)
+    const sendPing = () => {
+      fetch("/api/analytics/track", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          path: pathname,
+          referrer: typeof document !== "undefined" ? document.referrer : "",
+        }),
+      }).catch(() => {
+        // Silently catch background analytics errors
+      });
     };
 
-    trackVisit();
+    if (typeof window !== "undefined") {
+      if ("requestIdleCallback" in window) {
+        (window as any).requestIdleCallback(sendPing, { timeout: 3500 });
+      } else {
+        setTimeout(sendPing, 3000);
+      }
+    }
   }, [pathname]);
 
   // Global click event listener for CTAs
@@ -72,7 +65,7 @@ export default function AnalyticsTracker() {
       }
     };
 
-    document.addEventListener("click", handleGlobalClick);
+    document.addEventListener("click", handleGlobalClick, { passive: true });
     return () => {
       document.removeEventListener("click", handleGlobalClick);
     };
@@ -80,4 +73,3 @@ export default function AnalyticsTracker() {
 
   return null;
 }
-

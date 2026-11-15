@@ -21,7 +21,7 @@ seoTitle: "How Much Does It Cost to Build a Travel Agency Website in 2026? | Joy
 metaDescription: "Planning to build a website for your travel agency in 2026? Learn how much a travel website costs, key factors affecting pricing, static vs dynamic setups, and essential features."
 focusKeyword: "cost to build a travel agency website 2026"
 secondaryKeywords: "travel agency website cost, tour operator website pricing, travel website development, custom travel website cost, travel booking website cost"
-canonicalUrl: 'https://joydigital.in/blog/how-much-does-it-cost-to-build-a-travel-agency-website-in-2026'
+canonicalUrl: 'https://www.joydigital.in/blog/how-much-does-it-cost-to-build-a-travel-agency-website-in-2026'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: "Travel Website Development"
@@ -42,7 +42,7 @@ authorName: "Saravanan"
 authorRole: "Technical Web & SEO Specialist"
 authorBio: "Founder at Joy Digital and Next.js web specialist helping travel agencies and tour operators engineer sub-second web platforms that capture direct global inquiries."
 authorImage: "/assets/images/logo.webp"
-authorProfileUrl: 'https://joydigital.in/author/saravanan'
+authorProfileUrl: 'https://www.joydigital.in/author/saravanan'
 faqs:
   - question: "How much does a basic travel agency website cost in 2026?"
     answer: "A basic travel showcase website with tour itineraries and enquiry forms typically ranges between $500 and $1,500 (or ₹25,000 to ₹75,000 in India), depending on customization, branding, and mobile responsiveness."
@@ -122,6 +122,6 @@ Looking for a professional website for your travel agency or tour operator busin
 
 Joy Digital helps travel businesses build custom websites designed around their services, customers, and growth goals.
 
-Explore our [website development services](https://joydigital.in/travel-website-development) and discuss a website solution that fits your business.
+Explore our [website development services](https://www.joydigital.in/travel-website-development) and discuss a website solution that fits your business.
 
-**Ready to build your travel website?** [Contact Joy Digital](https://joydigital.in/contact) to get started today!
+**Ready to build your travel website?** [Contact Joy Digital](https://www.joydigital.in/contact) to get started today!

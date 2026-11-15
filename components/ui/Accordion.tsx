@@ -25,21 +25,21 @@ export default function Accordion({ items }: AccordionProps) {
         return (
           <div
             key={index}
-            className={`bg-white border ${
-              isOpen ? "border-[#E5E7EB] bg-white shadow-sm" : "border-[#E5E7EB] hover:border-gray-300"
-            } rounded-xl shadow-sm transition-all duration-300 overflow-hidden`}
+            className={`bg-[#3B1580] border ${
+              isOpen ? "border-[#C9F600] shadow-md" : "border-[#FFFFFF]/20 hover:border-[#FFFFFF]/40"
+            } rounded-xl transition-all duration-300 overflow-hidden`}
           >
             <button
               onClick={() => toggleItem(index)}
               className="w-full text-left py-5 px-6 sm:px-8 flex justify-between items-center gap-4 focus:outline-none"
               aria-expanded={isOpen}
             >
-              <span className="font-bold text-sm sm:text-base text-primary-dark select-none">
+              <span className="font-bold text-sm sm:text-base text-[#FFFFFF] select-none">
                 {item.question}
               </span>
               <span
-                className={`text-xs text-text-muted transition-transform duration-300 ${
-                  isOpen ? "text-accent rotate-180" : ""
+                className={`text-xs text-[#C9F600] transition-transform duration-300 ${
+                  isOpen ? "text-[#C9F600] rotate-180" : ""
                 }`}
               >
                 <i className="fa-solid fa-chevron-down" />
@@ -53,7 +53,7 @@ export default function Accordion({ items }: AccordionProps) {
                 opacity: isOpen ? 1 : 0,
               }}
             >
-              <div className="px-6 sm:px-8 pb-5 text-xs sm:text-sm text-text-secondary leading-relaxed border-t border-[#E5E7EB] pt-4">
+              <div className="px-6 sm:px-8 pb-5 text-xs sm:text-sm text-[#FFFFFF]/80 leading-relaxed border-t border-[#FFFFFF]/15 pt-4">
                 {item.answer}
               </div>
             </div>

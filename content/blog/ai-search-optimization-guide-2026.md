@@ -22,7 +22,7 @@ metaDescription: >-
   (GEO) gets your business recommended by ChatGPT and Google AI Overview.
 focusKeyword: SEO
 secondaryKeywords: 'SEO, Joy Digital, Search Engine Optimization, 2026 Digital Trends'
-canonicalUrl: 'https://joydigital.in/blog/ai-search-optimization-guide-2026'
+canonicalUrl: 'https://www.joydigital.in/blog/ai-search-optimization-guide-2026'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: SEO Services
@@ -37,7 +37,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: 'AI Search Optimization (AEO/GEO): Why Your Business Needs It in 2026'
 ogDescription: >-

@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const MONGODB_URI = process.env.MONGODB_URI;
+    const MONGODB_URI = process.env.MONGODB_DIRECT_URI || process.env.MONGODB_URI;
     if (!MONGODB_URI) {
       return NextResponse.json({
         totalPageviews: 0,

@@ -42,16 +42,12 @@ export default function ViewCounter({ slug, increment = false, className = "" }:
   }, [slug, increment]);
 
   if (views === null) {
-    return (
-      <span className={`inline-flex items-center gap-1 text-[10px] text-text-muted font-semibold ${className}`}>
-        <i className="fa-solid fa-eye animate-pulse" /> ... views
-      </span>
-    );
+    return null;
   }
 
   return (
-    <span className={`inline-flex items-center gap-1 text-[10px] text-text-muted font-semibold ${className}`} title={`${views} page views`}>
-      <i className="fa-solid fa-eye" /> {views.toLocaleString()} views
+    <span className={`inline-flex items-center gap-1 text-[10px] text-[#D9CCF5]/90 font-semibold ${className}`} title={`${views} page views`}>
+      <i className="fa-solid fa-eye text-[#C9F600]" /> {views.toLocaleString()} views
     </span>
   );
 }

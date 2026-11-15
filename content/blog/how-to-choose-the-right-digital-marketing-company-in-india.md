@@ -24,7 +24,7 @@ metaDescription: >-
 focusKeyword: digital marketing company in India
 secondaryKeywords: >-
   digital marketing agency in India, digital marketing services, local SEO India, website development India, digital marketing firms in India
-canonicalUrl: 'https://joydigital.in/blog/how-to-choose-the-right-digital-marketing-company-in-india'
+canonicalUrl: 'https://www.joydigital.in/blog/how-to-choose-the-right-digital-marketing-company-in-india'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: SEO Services
@@ -45,7 +45,7 @@ authorRole: Technical Web & SEO Specialist
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: How much does digital marketing cost in India?
     answer: >-

@@ -29,7 +29,7 @@ focusKeyword: Real Estate
 secondaryKeywords: >-
   Real Estate AI, Property Hunting, Property Search, Next.js Real Estate, Real
   Estate Website Design, SEO Strategy
-canonicalUrl: 'https://joydigital.in/blog/ai-agents-real-estate-property-hunting-trends'
+canonicalUrl: 'https://www.joydigital.in/blog/ai-agents-real-estate-property-hunting-trends'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Real Estate Website Design
@@ -46,7 +46,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: What is Agentic AI property hunting?
     answer: >-

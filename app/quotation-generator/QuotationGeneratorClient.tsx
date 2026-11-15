@@ -7,7 +7,7 @@ import { trackToolUsage } from "@/lib/toolTracker";
 import ToolFeedback from "@/components/ui/ToolFeedback";
 import { getUtmParameters } from "@/lib/utmTracker";
 
-interface QuoteItem {
+interface QuotationItem {
   id: string;
   name: string;
   description: string;
@@ -33,7 +33,7 @@ export default function QuotationGeneratorClient() {
   const [custPhone, setCustPhone] = useState<string>("");
   const [custEmail, setCustEmail] = useState<string>("");
 
-  // Quote Info
+  // Quotation Info
   const [quoteNumber, setQuoteNumber] = useState<string>("QT-101");
   const [quoteDate, setQuoteDate] = useState<string>(() => new Date().toISOString().split("T")[0]);
   const [quoteValidUntil, setQuoteValidUntil] = useState<string>(() => {
@@ -43,11 +43,11 @@ export default function QuotationGeneratorClient() {
   });
 
   // Items List
-  const [items, setItems] = useState<QuoteItem[]>([
+  const [items, setItems] = useState<QuotationItem[]>([
     {
       id: crypto.randomUUID(),
-      name: "Web Development Services",
-      description: "Custom Landing Page Design and React Coding",
+      name: "Products / Services",
+      description: "Business services description",
       quantity: 1,
       price: 15000,
       discount: 0,
@@ -57,7 +57,7 @@ export default function QuotationGeneratorClient() {
 
   // Notes & Terms
   const [notes, setNotes] = useState<string>("");
-  const [terms, setTerms] = useState<string>("Payment terms: 50% advance, 50% upon delivery.");
+  const [terms, setTerms] = useState<string>("This quotation is valid for 15 days from issuance. 50% advance upon project kick-off.");
 
   // Calculated Values
   const [subtotal, setSubtotal] = useState<number>(0);
@@ -71,11 +71,11 @@ export default function QuotationGeneratorClient() {
   const [leadFormSubmitting, setLeadFormSubmitting] = useState<boolean>(false);
   const [leadSuccess, setLeadSuccess] = useState<boolean>(false);
 
-  // Lead Form state
-  const [leadName, setLeadName] = useState<string>(" ");
-  const [leadBizName, setLeadBizName] = useState<string>(" ");
-  const [leadEmail, setLeadEmail] = useState<string>(" ");
-  const [leadPhone, setLeadPhone] = useState<string>(" ");
+  // Lead Form State
+  const [leadName, setLeadName] = useState<string>("");
+  const [leadBizName, setLeadBizName] = useState<string>("");
+  const [leadEmail, setLeadEmail] = useState<string>("");
+  const [leadPhone, setLeadPhone] = useState<string>("");
   const [leadService, setLeadService] = useState<string>("Website Development");
 
   // Track page view
@@ -126,12 +126,11 @@ export default function QuotationGeneratorClient() {
     setItems(items.filter((item) => item.id !== id));
   };
 
-  const handleUpdateItem = (id: string, field: keyof QuoteItem, value: any) => {
+  const handleUpdateItem = (id: string, field: keyof QuotationItem, value: any) => {
     setItems(
       items.map((item) => {
         if (item.id === id) {
-          const updated = { ...item, [field]: value };
-          return updated;
+          return { ...item, [field]: value };
         }
         return item;
       })
@@ -164,12 +163,12 @@ export default function QuotationGeneratorClient() {
     setCustEmail("");
     setQuoteNumber("QT-101");
     setNotes("");
-    setTerms("Payment terms: 50% advance, 50% upon delivery.");
+    setTerms("This quotation is valid for 15 days from issuance. 50% advance upon project kick-off.");
     setItems([
       {
         id: crypto.randomUUID(),
-        name: "Web Development Services",
-        description: "Custom Landing Page Design and React Coding",
+        name: "Products / Services",
+        description: "Business services description",
         quantity: 1,
         price: 15000,
         discount: 0,
@@ -248,7 +247,7 @@ export default function QuotationGeneratorClient() {
       doc.setFont("helvetica", "bold");
       doc.setFontSize(11);
       doc.setTextColor(31, 27, 45);
-      doc.text("QUOTED TO:", 20, y);
+      doc.text("QUOTED TO (CUSTOMER):", 20, y);
       doc.setFont("helvetica", "normal");
       doc.setFontSize(10);
       y += 6;
@@ -274,7 +273,7 @@ export default function QuotationGeneratorClient() {
       doc.setFont("helvetica", "bold");
       doc.setFontSize(9);
       doc.setTextColor(255, 255, 255);
-      doc.text("Item / Service Description", 22, y + 5);
+      doc.text("Item / Scope of Work", 22, y + 5);
       doc.text("Qty", 115, y + 5);
       doc.text("Price (INR)", 130, y + 5);
       doc.text("GST %", 155, y + 5);
@@ -314,7 +313,7 @@ export default function QuotationGeneratorClient() {
       doc.text("Discount:", 135, y);
       doc.text(`- INR ${totalDiscount.toFixed(2)}`, 165, y);
       y += 6;
-      doc.text("Total Tax (GST):", 135, y);
+      doc.text("Estimated Tax (GST):", 135, y);
       doc.text(`INR ${totalGst.toFixed(2)}`, 165, y);
       y += 8;
 
@@ -326,7 +325,7 @@ export default function QuotationGeneratorClient() {
       if (notes) {
         doc.setFont("helvetica", "bold");
         doc.setFontSize(9);
-        doc.text("Notes:", 20, y);
+        doc.text("Notes / Scope Details:", 20, y);
         doc.setFont("helvetica", "normal");
         doc.text(notes.substring(0, 150), 20, y + 4);
         y += 15;
@@ -346,7 +345,7 @@ export default function QuotationGeneratorClient() {
       doc.setFontSize(8);
       doc.setTextColor(150, 150, 150);
       doc.text("Created via JoyDigital.in Free Quotation Tools", 20, 280);
-      doc.text("Need a professional website? Visit https://joydigital.in", 125, 280);
+      doc.text("Need a professional website? Visit https://www.joydigital.in", 125, 280);
 
       doc.save(`quotation_${quoteNumber}.pdf`);
       trackToolUsage({ toolName: "Quotation Generator", action: "pdf_download" });
@@ -414,171 +413,176 @@ export default function QuotationGeneratorClient() {
     <>
       <Header />
 
-      <main className="bg-[#FAF9FF] text-[#1F1B2D] min-h-screen pt-24 pb-16">
+      <main className="bg-[#3B1580] text-[#FFFFFF] min-h-screen pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-6">
           {/* Breadcrumbs */}
-          <nav className="text-xs text-[#6B6478] font-bold mb-6 flex items-center gap-1.5">
-            <a href="/" className="hover:text-[#7C3AED]">Home</a>
+          <nav className="text-xs text-[#D9CCF5] font-bold mb-6 flex items-center gap-1.5" aria-label="Breadcrumb">
+            <a href="/" className="hover:text-[#C9F600] transition-colors">Home</a>
             <i className="fa-solid fa-chevron-right text-[8px]" />
-            <span className="text-[#1F1B2D]">Quotation Generator</span>
+            <a href="/free-tools" className="hover:text-[#C9F600] transition-colors">Free Tools</a>
+            <i className="fa-solid fa-chevron-right text-[8px]" />
+            <span className="text-white">Quotation Generator</span>
           </nav>
 
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <h1 className="text-3xl font-black text-[#1F1B2D] mb-2">Professional Quotation Generator</h1>
-            <p className="text-xs text-[#6B6478] font-semibold leading-relaxed">
-              Create GST-ready business quotes in seconds. Preview, download PDFs, print, and share with clients.
+            <span className="text-[10px] font-black text-[#C9F600] uppercase tracking-widest block mb-1">
+              Professional Business Quotes
+            </span>
+            <h1 className="text-3xl font-black text-white mb-2">Professional Quotation Generator</h1>
+            <p className="text-xs text-[#D9CCF5]/80 font-medium leading-relaxed">
+              Create GST-ready business quotes in seconds. Live preview, download high-res PDFs, print, and share with clients.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
             
             {/* Editor Side */}
-            <div className={`lg:col-span-7 bg-white border border-[#E9E4F2] p-6 sm:p-8 rounded-[24px] shadow-sm ${showPreview ? "hidden lg:block" : ""}`}>
+            <div className={`lg:col-span-7 bg-[#260B5E] border border-white/20 p-6 sm:p-8 rounded-[24px] shadow-2xl ${showPreview ? "hidden lg:block" : ""}`}>
               
               {/* Business Section */}
               <div className="mb-6">
-                <h3 className="text-xs font-black text-[#7C3AED] uppercase tracking-wider mb-4 border-b border-[#FAF9FF] pb-2">1. Business Details</h3>
+                <h3 className="text-xs font-black text-[#C9F600] uppercase tracking-wider mb-4 border-b border-white/10 pb-2">1. Business Details</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-[10px] font-extrabold text-[#6B6478] uppercase">Business Name</label>
+                    <label className="text-[10px] font-extrabold text-[#D9CCF5] uppercase">Business Name</label>
                     <input
                       type="text"
                       value={bizName}
                       onChange={(e) => setBizName(e.target.value)}
                       placeholder="My Business"
-                      className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED]"
+                      className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-[10px] font-extrabold text-[#6B6478] uppercase">Logo (PNG/JPG)</label>
+                    <label className="text-[10px] font-extrabold text-[#D9CCF5] uppercase">Logo (PNG/JPG)</label>
                     <input
                       type="file"
                       accept="image/*"
                       onChange={handleLogoUpload}
-                      className="text-[10px] font-semibold outline-none file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-[10px] file:font-bold file:bg-[#7C3AED]/10 file:text-[#7C3AED] hover:file:bg-[#7C3AED]/20 cursor-pointer"
+                      className="text-[10px] font-semibold outline-none text-[#D9CCF5] file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-[10px] file:font-bold file:bg-white/10 file:text-[#C9F600] hover:file:bg-white/20 cursor-pointer"
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-[10px] font-extrabold text-[#6B6478] uppercase">GSTIN (Optional)</label>
+                    <label className="text-[10px] font-extrabold text-[#D9CCF5] uppercase">GSTIN (Optional)</label>
                     <input
                       type="text"
                       value={bizGstin}
                       onChange={(e) => setBizGstin(e.target.value)}
                       placeholder="e.g. 33AAAAA1111A1Z1"
-                      className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED]"
+                      className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-[10px] font-extrabold text-[#6B6478] uppercase">Email</label>
+                    <label className="text-[10px] font-extrabold text-[#D9CCF5] uppercase">Email</label>
                     <input
                       type="email"
                       value={bizEmail}
                       onChange={(e) => setBizEmail(e.target.value)}
                       placeholder="sales@mybusiness.com"
-                      className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED]"
+                      className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                     />
                   </div>
                   <div className="flex flex-col gap-1.5 sm:col-span-2">
-                    <label className="text-[10px] font-extrabold text-[#6B6478] uppercase">Address</label>
+                    <label className="text-[10px] font-extrabold text-[#D9CCF5] uppercase">Address</label>
                     <input
                       type="text"
                       value={bizAddress}
                       onChange={(e) => setBizAddress(e.target.value)}
                       placeholder="Street, City, State, ZIP"
-                      className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED]"
+                      className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                     />
                   </div>
                 </div>
               </div>
 
               {/* Client Info Section */}
-              <div className="mb-6 border-t border-[#FAF9FF] pt-4">
-                <h3 className="text-xs font-black text-[#7C3AED] uppercase tracking-wider mb-4 border-b border-[#FAF9FF] pb-2">2. Quoted To (Client Details)</h3>
+              <div className="mb-6 border-t border-white/10 pt-4">
+                <h3 className="text-xs font-black text-[#C9F600] uppercase tracking-wider mb-4 border-b border-white/10 pb-2">2. Quoted To (Client Details)</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-[10px] font-extrabold text-[#6B6478] uppercase">Customer Name</label>
+                    <label className="text-[10px] font-extrabold text-[#D9CCF5] uppercase">Customer Name</label>
                     <input
                       type="text"
                       value={custName}
                       onChange={(e) => setCustName(e.target.value)}
                       placeholder="Client contact person"
-                      className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED]"
+                      className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-[10px] font-extrabold text-[#6B6478] uppercase">Company Name</label>
+                    <label className="text-[10px] font-extrabold text-[#D9CCF5] uppercase">Company Name</label>
                     <input
                       type="text"
                       value={custCompany}
                       onChange={(e) => setCustCompany(e.target.value)}
                       placeholder="Client company"
-                      className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED]"
+                      className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-[10px] font-extrabold text-[#6B6478] uppercase">Email</label>
+                    <label className="text-[10px] font-extrabold text-[#D9CCF5] uppercase">Email</label>
                     <input
                       type="email"
                       value={custEmail}
                       onChange={(e) => setCustEmail(e.target.value)}
                       placeholder="client@company.com"
-                      className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED]"
+                      className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-[10px] font-extrabold text-[#6B6478] uppercase">Address</label>
+                    <label className="text-[10px] font-extrabold text-[#D9CCF5] uppercase">Address</label>
                     <input
                       type="text"
                       value={custAddress}
                       onChange={(e) => setCustAddress(e.target.value)}
                       placeholder="Client address details"
-                      className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED]"
+                      className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                     />
                   </div>
                 </div>
               </div>
 
               {/* Quote Info Details */}
-              <div className="mb-6 border-t border-[#FAF9FF] pt-4">
-                <h3 className="text-xs font-black text-[#7C3AED] uppercase tracking-wider mb-4 border-b border-[#FAF9FF] pb-2">3. Quotation parameters</h3>
+              <div className="mb-6 border-t border-white/10 pt-4">
+                <h3 className="text-xs font-black text-[#C9F600] uppercase tracking-wider mb-4 border-b border-white/10 pb-2">3. Quotation parameters</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-[10px] font-extrabold text-[#6B6478] uppercase">Quote Number</label>
+                    <label className="text-[10px] font-extrabold text-[#D9CCF5] uppercase">Quote Number</label>
                     <input
                       type="text"
                       value={quoteNumber}
                       onChange={(e) => setQuoteNumber(e.target.value)}
-                      className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED]"
+                      className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-[10px] font-extrabold text-[#6B6478] uppercase">Date</label>
+                    <label className="text-[10px] font-extrabold text-[#D9CCF5] uppercase">Date</label>
                     <input
                       type="date"
                       value={quoteDate}
                       onChange={(e) => setQuoteDate(e.target.value)}
-                      className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED]"
+                      className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-[10px] font-extrabold text-[#6B6478] uppercase">Valid Until</label>
+                    <label className="text-[10px] font-extrabold text-[#D9CCF5] uppercase">Valid Until</label>
                     <input
                       type="date"
                       value={quoteValidUntil}
                       onChange={(e) => setQuoteValidUntil(e.target.value)}
-                      className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED]"
+                      className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                     />
                   </div>
                 </div>
               </div>
 
               {/* Items Table Form */}
-              <div className="mb-6 border-t border-[#FAF9FF] pt-4">
+              <div className="mb-6 border-t border-white/10 pt-4">
                 <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-xs font-black text-[#7C3AED] uppercase tracking-wider">4. Item / Services Rows</h3>
+                  <h3 className="text-xs font-black text-[#C9F600] uppercase tracking-wider">4. Item / Services Rows</h3>
                   <button
                     onClick={handleAddItem}
-                    className="bg-[#7C3AED]/10 hover:bg-[#7C3AED]/20 text-[#7C3AED] text-[10px] font-bold py-1.5 px-3 rounded-lg transition-all flex items-center gap-1 cursor-pointer"
+                    className="bg-[#C9F600] hover:bg-[#b8f000] text-[#120526] text-[10px] font-black py-1.5 px-3 rounded-lg transition-all flex items-center gap-1 cursor-pointer"
                   >
                     <i className="fa-solid fa-plus" /> Add Row
                   </button>
@@ -586,11 +590,11 @@ export default function QuotationGeneratorClient() {
 
                 <div className="flex flex-col gap-4">
                   {items.map((item) => (
-                    <div key={item.id} className="bg-[#FAF9FF] border border-[#E9E4F2] p-4 rounded-2xl flex flex-col gap-3 relative">
+                    <div key={item.id} className="bg-[#1A0742] border border-white/15 p-4 rounded-2xl flex flex-col gap-3 relative">
                       {items.length > 1 && (
                         <button
                           onClick={() => handleRemoveItem(item.id)}
-                          className="absolute top-2 right-2 text-rose-500 hover:text-rose-600 text-xs p-1 cursor-pointer"
+                          className="absolute top-2 right-2 text-rose-400 hover:text-rose-300 text-xs p-1 cursor-pointer"
                         >
                           <i className="fa-solid fa-trash-can" />
                         </button>
@@ -598,62 +602,62 @@ export default function QuotationGeneratorClient() {
 
                       <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 pt-2">
                         <div className="sm:col-span-6 flex flex-col gap-1.5">
-                          <label className="text-[9px] font-extrabold text-[#6B6478] uppercase">Item Name</label>
+                          <label className="text-[9px] font-extrabold text-[#D9CCF5] uppercase">Item Name</label>
                           <input
                             type="text"
                             value={item.name}
                             onChange={(e) => handleUpdateItem(item.id, "name", e.target.value)}
                             placeholder="Item Name / Service Type"
-                            className="text-xs bg-white border border-[#E9E4F2] rounded-xl px-3 py-2 font-bold outline-none focus:border-[#7C3AED]"
+                            className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                           />
                         </div>
                         <div className="sm:col-span-3 flex flex-col gap-1.5">
-                          <label className="text-[9px] font-extrabold text-[#6B6478] uppercase">Qty</label>
+                          <label className="text-[9px] font-extrabold text-[#D9CCF5] uppercase">Qty</label>
                           <input
                             type="number"
                             value={item.quantity}
                             onChange={(e) => handleUpdateItem(item.id, "quantity", parseInt(e.target.value) || 0)}
-                            className="text-xs bg-white border border-[#E9E4F2] rounded-xl px-3 py-2 font-bold outline-none focus:border-[#7C3AED]"
+                            className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                           />
                         </div>
                         <div className="sm:col-span-3 flex flex-col gap-1.5">
-                          <label className="text-[9px] font-extrabold text-[#6B6478] uppercase">Price (₹)</label>
+                          <label className="text-[9px] font-extrabold text-[#D9CCF5] uppercase">Price (₹)</label>
                           <input
                             type="number"
                             value={item.price}
                             onChange={(e) => handleUpdateItem(item.id, "price", parseFloat(e.target.value) || 0)}
-                            className="text-xs bg-white border border-[#E9E4F2] rounded-xl px-3 py-2 font-bold outline-none focus:border-[#7C3AED]"
+                            className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                           />
                         </div>
                       </div>
 
                       <div className="grid grid-cols-3 gap-3">
                         <div className="flex flex-col gap-1.5">
-                          <label className="text-[9px] font-extrabold text-[#6B6478] uppercase">Discount (%)</label>
+                          <label className="text-[9px] font-extrabold text-[#D9CCF5] uppercase">Discount (%)</label>
                           <input
                             type="number"
                             value={item.discount}
                             onChange={(e) => handleUpdateItem(item.id, "discount", parseFloat(e.target.value) || 0)}
-                            className="text-xs bg-white border border-[#E9E4F2] rounded-xl px-3 py-2 font-bold outline-none focus:border-[#7C3AED]"
+                            className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                           />
                         </div>
                         <div className="flex flex-col gap-1.5">
-                          <label className="text-[9px] font-extrabold text-[#6B6478] uppercase">GST (%)</label>
+                          <label className="text-[9px] font-extrabold text-[#D9CCF5] uppercase">GST (%)</label>
                           <select
                             value={item.gst}
                             onChange={(e) => handleUpdateItem(item.id, "gst", parseInt(e.target.value) || 0)}
-                            className="text-xs bg-white border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-semibold outline-none focus:border-[#7C3AED] cursor-pointer"
+                            className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-semibold outline-none text-white focus:border-[#C9F600] cursor-pointer"
                           >
-                            <option value={0}>0%</option>
-                            <option value={5}>5%</option>
-                            <option value={12}>12%</option>
-                            <option value={18}>18%</option>
-                            <option value={28}>28%</option>
+                            <option value={0} className="bg-[#260B5E] text-white">0%</option>
+                            <option value={5} className="bg-[#260B5E] text-white">5%</option>
+                            <option value={12} className="bg-[#260B5E] text-white">12%</option>
+                            <option value={18} className="bg-[#260B5E] text-white">18%</option>
+                            <option value={28} className="bg-[#260B5E] text-white">28%</option>
                           </select>
                         </div>
                         <div className="flex flex-col gap-1.5 justify-end text-right">
-                          <span className="text-[8px] font-black text-[#A7A2B2] uppercase">Row Total</span>
-                          <span className="text-xs font-bold text-[#1F1B2D]">
+                          <span className="text-[8px] font-black text-[#D9CCF5] uppercase">Row Total</span>
+                          <span className="text-xs font-black text-[#C9F600]">
                             ₹{((item.quantity * item.price * (1 - item.discount / 100)) * (1 + item.gst / 100)).toLocaleString("en-IN", { minimumFractionDigits: 2 })}
                           </span>
                         </div>
@@ -664,44 +668,44 @@ export default function QuotationGeneratorClient() {
               </div>
 
               {/* Notes & Terms */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-[#FAF9FF] pt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-white/10 pt-4">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[10px] font-extrabold text-[#6B6478] uppercase">Additional Notes</label>
+                  <label className="text-[10px] font-extrabold text-[#D9CCF5] uppercase">Additional Notes</label>
                   <textarea
                     value={notes}
                     onChange={(e) => setNotes(e.target.value)}
                     rows={3}
                     placeholder="Provide special notes for clients..."
-                    className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-semibold outline-none focus:bg-white focus:border-[#7C3AED]"
+                    className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-medium outline-none text-white placeholder:text-white/40 focus:border-[#C9F600] resize-none"
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[10px] font-extrabold text-[#6B6478] uppercase">Terms & Conditions</label>
+                  <label className="text-[10px] font-extrabold text-[#D9CCF5] uppercase">Terms & Conditions</label>
                   <textarea
                     value={terms}
                     onChange={(e) => setTerms(e.target.value)}
                     rows={3}
-                    className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-semibold outline-none focus:bg-white focus:border-[#7C3AED]"
+                    className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-medium outline-none text-white placeholder:text-white/40 focus:border-[#C9F600] resize-none"
                   />
                 </div>
               </div>
 
-              <div className="flex gap-4 border-t border-[#E9E4F2] pt-6 mt-6">
+              <div className="flex gap-4 border-t border-white/15 pt-6 mt-6">
                 <button
                   onClick={() => setShowPreview(true)}
-                  className="flex-1 bg-slate-50 border border-[#E9E4F2] hover:bg-slate-100 text-[#1F1B2D] font-bold text-xs py-3.5 rounded-xl transition-all lg:hidden cursor-pointer"
+                  className="flex-1 bg-[#3B1580] border border-white/20 hover:bg-[#431B8E] text-white font-bold text-xs py-3.5 rounded-xl transition-all lg:hidden cursor-pointer"
                 >
                   Preview Quotation
                 </button>
                 <button
                   onClick={handleDownloadClick}
-                  className="flex-1 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-xs py-3.5 rounded-xl transition-all shadow-md shadow-[#7C3AED]/15 flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="flex-1 bg-[#C9F600] hover:bg-[#b8f000] text-[#120526] font-black text-xs py-3.5 rounded-xl transition-all shadow-lg shadow-[#C9F600]/20 flex items-center justify-center gap-1.5 cursor-pointer"
                 >
-                  <i className="fa-solid fa-download" /> Download PDF
+                  <i className="fa-solid fa-download" /> Download PDF Quote
                 </button>
                 <button
                   onClick={handleReset}
-                  className="bg-transparent border border-[#E9E4F2] hover:bg-slate-50 text-[#1F1B2D] font-bold text-xs py-3.5 px-6 rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="bg-[#3B1580] border border-white/20 hover:bg-[#431B8E] text-white font-bold text-xs py-3.5 px-6 rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <i className="fa-solid fa-rotate-left" /> Reset
                 </button>
@@ -709,33 +713,33 @@ export default function QuotationGeneratorClient() {
             </div>
 
             {/* Preview Side */}
-            <div className={`lg:col-span-5 bg-white border border-[#E9E4F2] p-6 sm:p-8 rounded-[24px] shadow-sm flex flex-col justify-between min-h-[500px] ${!showPreview ? "hidden lg:flex" : "flex"}`}>
+            <div className={`lg:col-span-5 bg-[#260B5E] border border-white/20 p-6 sm:p-8 rounded-[24px] shadow-2xl flex flex-col justify-between min-h-[500px] ${!showPreview ? "hidden lg:flex" : "flex"}`}>
               <div>
-                <div className="flex justify-between items-center mb-6 border-b border-[#FAF9FF] pb-3">
-                  <h2 className="text-sm font-black text-[#1F1B2D] uppercase tracking-wider">Live Preview</h2>
+                <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-3">
+                  <h2 className="text-sm font-black text-white uppercase tracking-wider">Live Preview</h2>
                   <button
                     onClick={() => setShowPreview(false)}
-                    className="lg:hidden text-xs font-bold text-[#7C3AED] hover:underline cursor-pointer"
+                    className="lg:hidden text-xs font-bold text-[#C9F600] hover:underline cursor-pointer"
                   >
                     Edit Fields
                   </button>
                 </div>
 
-                {/* Quotation Sheet Visual */}
-                <div className="border border-[#E9E4F2] rounded-xl p-5 bg-[#FAF9FF] text-[10px] flex flex-col justify-between min-h-[400px]">
+                {/* Printable Quotation Sheet Visual - Kept white/clean for printable contrast */}
+                <div className="border border-slate-200 rounded-xl p-5 bg-white text-slate-900 text-[10px] flex flex-col justify-between min-h-[400px] shadow-lg">
                   
                   <div className="flex justify-between items-start mb-6">
                     <div>
                       {bizLogoUrl ? (
                         <img src={bizLogoUrl} alt="Logo" className="max-h-8 object-contain mb-2" />
                       ) : (
-                        <div className="font-black text-xs text-[#7C3AED] tracking-tight uppercase mb-1">{bizName || "My Business"}</div>
+                        <div className="font-black text-xs text-[#3B1580] tracking-tight uppercase mb-1">{bizName || "My Business"}</div>
                       )}
-                      <p className="text-[8px] text-[#6B6478] max-w-[150px] leading-tight">{bizAddress || "Street Details"}</p>
+                      <p className="text-[8px] text-slate-500 max-w-[150px] leading-tight">{bizAddress || "Street Details"}</p>
                     </div>
                     <div className="text-right">
-                      <div className="font-extrabold text-[12px] text-[#1F1B2D] tracking-tight">QUOTATION</div>
-                      <p className="text-[#6B6478] text-[8px] font-bold mt-1">
+                      <div className="font-extrabold text-[12px] text-slate-900 tracking-tight">QUOTATION</div>
+                      <p className="text-slate-500 text-[8px] font-bold mt-1">
                         Quote No: {quoteNumber}<br />
                         Date: {quoteDate}
                       </p>
@@ -743,14 +747,14 @@ export default function QuotationGeneratorClient() {
                   </div>
 
                   <div className="mb-6">
-                    <span className="text-[7px] font-extrabold text-[#7C3AED] uppercase block mb-1">Quoted To:</span>
-                    <div className="font-bold text-[#1F1B2D]">{custName || "Customer Name"}</div>
-                    {custCompany && <div className="font-medium text-[#6B6478]">{custCompany}</div>}
-                    {custAddress && <div className="text-[#6B6478] leading-normal">{custAddress}</div>}
+                    <span className="text-[7px] font-extrabold text-[#3B1580] uppercase block mb-1">Quoted To:</span>
+                    <div className="font-bold text-slate-900">{custName || "Customer Name"}</div>
+                    {custCompany && <div className="font-medium text-slate-600">{custCompany}</div>}
+                    {custAddress && <div className="text-slate-500 leading-normal">{custAddress}</div>}
                   </div>
 
                   <div className="flex-grow">
-                    <div className="grid grid-cols-12 bg-[#1F1B2D] text-white py-1 px-2 font-bold mb-1.5 rounded">
+                    <div className="grid grid-cols-12 bg-slate-900 text-white py-1.5 px-2 font-bold mb-1.5 rounded">
                       <span className="col-span-6">Item Description</span>
                       <span className="col-span-2 text-center">Qty</span>
                       <span className="col-span-2 text-right">Price</span>
@@ -759,11 +763,11 @@ export default function QuotationGeneratorClient() {
 
                     <div className="flex flex-col gap-1">
                       {items.map((item) => (
-                        <div key={item.id} className="grid grid-cols-12 border-b border-slate-50 py-1 px-2 text-[#6B6478] font-semibold">
-                          <span className="col-span-6 truncate text-[#1F1B2D]">{item.name || "Untitled Item"}</span>
+                        <div key={item.id} className="grid grid-cols-12 border-b border-slate-100 py-1 px-2 text-slate-600 font-semibold">
+                          <span className="col-span-6 truncate text-slate-900">{item.name || "Untitled Item"}</span>
                           <span className="col-span-2 text-center">{item.quantity}</span>
                           <span className="col-span-2 text-right">₹{item.price}</span>
-                          <span className="col-span-2 text-right text-[#1F1B2D]">
+                          <span className="col-span-2 text-right text-slate-900">
                             ₹{((item.quantity * item.price * (1 - item.discount / 100)) * (1 + item.gst / 100)).toFixed(0)}
                           </span>
                         </div>
@@ -771,8 +775,8 @@ export default function QuotationGeneratorClient() {
                     </div>
                   </div>
 
-                  <div className="border-t border-[#E9E4F2] pt-4 mt-4 flex flex-col items-end gap-1.5">
-                    <div className="flex justify-between w-full max-w-[150px] font-bold text-[#6B6478]">
+                  <div className="border-t border-slate-200 pt-4 mt-4 flex flex-col items-end gap-1.5">
+                    <div className="flex justify-between w-full max-w-[150px] font-bold text-slate-600">
                       <span>Subtotal:</span>
                       <span>₹{subtotal.toFixed(0)}</span>
                     </div>
@@ -782,28 +786,28 @@ export default function QuotationGeneratorClient() {
                         <span>-₹{totalDiscount.toFixed(0)}</span>
                       </div>
                     )}
-                    <div className="flex justify-between w-full max-w-[150px] font-bold text-[#6B6478]">
+                    <div className="flex justify-between w-full max-w-[150px] font-bold text-slate-600">
                       <span>Tax (GST):</span>
                       <span>₹{totalGst.toFixed(0)}</span>
                     </div>
-                    <div className="flex justify-between w-full max-w-[150px] font-black text-sm text-[#7C3AED] border-t border-[#E9E4F2] pt-1.5">
+                    <div className="flex justify-between w-full max-w-[150px] font-black text-sm text-[#3B1580] border-t border-slate-200 pt-1.5">
                       <span>Total:</span>
                       <span>₹{grandTotal.toFixed(0)}</span>
                     </div>
                   </div>
 
-                  <div className="text-[7px] text-[#A7A2B2] border-t border-slate-50 pt-2.5 mt-4 flex justify-between">
+                  <div className="text-[7px] text-slate-400 border-t border-slate-100 pt-2.5 mt-4 flex justify-between">
                     <span>Powered by JoyDigital.in</span>
                     <span>Valid until: {quoteValidUntil}</span>
                   </div>
                 </div>
               </div>
 
-              {/* Consultation Pitch Banner: CUSTOM CRM SOFTWARE Pitch */}
-              <div className="bg-[#FAF9FF] border border-[#E9E4F2] p-5 rounded-2xl mt-6 relative overflow-hidden text-left">
-                <div className="absolute top-0 left-0 h-full w-1 bg-[#7C3AED]" />
-                <h3 className="text-xs font-bold text-[#1F1B2D] mb-1">Need a Custom CRM or Quotation Tool?</h3>
-                <p className="text-[10px] text-[#6B6478] font-semibold leading-relaxed mb-4">
+              {/* Consultation Pitch Banner */}
+              <div className="bg-[#1A0742] border border-[#C9F600]/30 p-5 rounded-2xl mt-6 relative overflow-hidden text-left">
+                <div className="absolute top-0 left-0 h-full w-1 bg-[#C9F600]" />
+                <h3 className="text-xs font-bold text-white mb-1">Need a Custom CRM or Quotation Tool?</h3>
+                <p className="text-[10px] text-[#D9CCF5]/80 font-medium leading-relaxed mb-4">
                   Streamline your sales process! We engineer custom CRM database applications, multi-service quotation engines, and automated lead trackers for growing teams.
                 </p>
                 <a
@@ -811,7 +815,7 @@ export default function QuotationGeneratorClient() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleCtaClick}
-                  className="inline-flex items-center gap-1.5 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-[10px] py-2.5 px-4 rounded-lg shadow-sm hover:scale-[1.01] transition-all cursor-pointer"
+                  className="inline-flex items-center gap-1.5 bg-[#C9F600] hover:bg-[#b8f000] text-[#120526] font-black text-[10px] py-2.5 px-4 rounded-lg shadow-sm hover:scale-[1.01] transition-all cursor-pointer"
                 >
                   <i className="fa-brands fa-whatsapp text-xs animate-pulse" /> Talk to a CRM Engineer
                 </a>
@@ -825,79 +829,79 @@ export default function QuotationGeneratorClient() {
 
       {/* Optional Lead Capture Popup Modal */}
       {showLeadModal && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-md flex items-center justify-center p-6 animate-fade-in">
-          <div className="bg-white p-6 sm:p-8 rounded-[28px] shadow-2xl max-w-md w-full border border-[#E9E4F2] relative">
-            <div className="absolute top-0 left-0 w-full h-1 bg-[#7C3AED]" />
-            <h3 className="text-lg font-black text-[#1F1B2D] mb-1">Want help building your business online?</h3>
-            <p className="text-[10px] text-[#6B6478] font-semibold leading-relaxed mb-6">
+        <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-6 animate-fade-in">
+          <div className="bg-[#260B5E] p-6 sm:p-8 rounded-[28px] shadow-2xl max-w-md w-full border border-white/20 text-white relative">
+            <div className="absolute top-0 left-0 w-full h-1 bg-[#C9F600]" />
+            <h3 className="text-lg font-black text-white mb-1">Want help building your business online?</h3>
+            <p className="text-[10px] text-[#D9CCF5]/80 font-medium leading-relaxed mb-6">
               Claim a free 15-minute consultation to rank higher on Google Maps and drive more sales.
             </p>
 
             <form onSubmit={handleLeadSubmit} className="flex flex-col gap-4">
               <div className="flex flex-col gap-1">
-                <label className="text-[8px] font-black text-[#6B6478] uppercase">Full Name *</label>
+                <label className="text-[8px] font-black text-[#D9CCF5] uppercase">Full Name *</label>
                 <input
                   type="text"
                   value={leadName}
                   onChange={(e) => setLeadName(e.target.value)}
                   placeholder="Your Name"
                   required
-                  className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED]"
+                  className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div className="flex flex-col gap-1">
-                  <label className="text-[8px] font-black text-[#6B6478] uppercase">Business Name</label>
+                  <label className="text-[8px] font-black text-[#D9CCF5] uppercase">Business Name</label>
                   <input
                     type="text"
                     value={leadBizName}
                     onChange={(e) => setLeadBizName(e.target.value)}
                     placeholder="Acme Inc"
-                    className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED]"
+                    className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                   />
                 </div>
                 <div className="flex flex-col gap-1">
-                  <label className="text-[8px] font-black text-[#6B6478] uppercase">Phone / WhatsApp *</label>
+                  <label className="text-[8px] font-black text-[#D9CCF5] uppercase">Phone / WhatsApp *</label>
                   <input
                     type="tel"
                     value={leadPhone}
                     onChange={(e) => setLeadPhone(e.target.value)}
                     placeholder="90800 26133"
                     required
-                    className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED]"
+                    className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                   />
                 </div>
               </div>
 
               <div className="flex flex-col gap-1">
-                <label className="text-[8px] font-black text-[#6B6478] uppercase">Email ID</label>
+                <label className="text-[8px] font-black text-[#D9CCF5] uppercase">Email ID</label>
                 <input
                   type="email"
                   value={leadEmail}
                   onChange={(e) => setLeadEmail(e.target.value)}
                   placeholder="contact@company.com"
-                  className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED]"
+                  className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white placeholder:text-white/40 focus:border-[#C9F600]"
                 />
               </div>
 
               <div className="flex flex-col gap-1">
-                <label className="text-[8px] font-black text-[#6B6478] uppercase">Interested Service</label>
+                <label className="text-[8px] font-black text-[#D9CCF5] uppercase">Interested Service</label>
                 <select
                   value={leadService}
                   onChange={(e) => setLeadService(e.target.value)}
-                  className="text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-3 py-2.5 font-bold outline-none focus:bg-white focus:border-[#7C3AED] cursor-pointer"
+                  className="text-xs bg-[#3B1580] border border-white/20 rounded-xl px-3 py-2.5 font-bold outline-none text-white focus:border-[#C9F600] cursor-pointer"
                 >
-                  <option value="Website Development">Website Development</option>
-                  <option value="SEO Optimization">SEO Optimization</option>
-                  <option value="Google Business Profile Setup">Google Business Profile / Maps</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Logo Design">Logo & Brand Design</option>
+                  <option value="Website Development" className="bg-[#260B5E] text-white">Website Development</option>
+                  <option value="SEO Optimization" className="bg-[#260B5E] text-white">SEO Optimization</option>
+                  <option value="Google Business Profile Setup" className="bg-[#260B5E] text-white">Google Business Profile / Maps</option>
+                  <option value="Digital Marketing" className="bg-[#260B5E] text-white">Digital Marketing</option>
+                  <option value="Logo Design" className="bg-[#260B5E] text-white">Logo & Brand Design</option>
                 </select>
               </div>
 
               {leadSuccess && (
-                <p className="text-center text-xs font-bold text-emerald-600 bg-emerald-50 border border-emerald-100 py-2 rounded-xl">
+                <p className="text-center text-xs font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-500/30 py-2 rounded-xl">
                   Details captured! Starting download...
                 </p>
               )}
@@ -906,7 +910,7 @@ export default function QuotationGeneratorClient() {
                 <button
                   type="submit"
                   disabled={leadFormSubmitting}
-                  className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-xs py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-1 cursor-pointer"
+                  className="w-full bg-[#C9F600] hover:bg-[#b8f000] text-[#120526] font-black text-xs py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-1 cursor-pointer"
                 >
                   {leadFormSubmitting ? "Submitting..." : "Get Free Consultation"}
                 </button>
@@ -917,7 +921,7 @@ export default function QuotationGeneratorClient() {
                     triggerPdfDownload();
                     trackToolUsage({ toolName: "Quotation Generator", action: "lead_bypass" });
                   }}
-                  className="w-full bg-transparent hover:bg-slate-50 text-[#6B6478] hover:text-[#1F1B2D] font-bold text-xs py-3 rounded-xl transition-all cursor-pointer"
+                  className="w-full bg-transparent hover:bg-white/5 text-[#D9CCF5] hover:text-white font-bold text-xs py-3 rounded-xl transition-all cursor-pointer"
                 >
                   Continue without contacting
                 </button>

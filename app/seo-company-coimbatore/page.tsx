@@ -3,10 +3,19 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "SEO Company in Coimbatore | Google Maps Optimization Agency",
+  title: {
+    absolute: "SEO Company in Coimbatore | Top SEO Agency | Joy Digital",
+  },
   description: "Looking for the best SEO company in Coimbatore? We rank local businesses, retail brands, and industrial suppliers on Google Page 1. Free SEO audit.",
+  keywords: [
+      "SEO Company Coimbatore",
+      "SEO Services Coimbatore",
+      "Best SEO Agency Coimbatore",
+      "Local SEO Coimbatore",
+      "Digital Marketing Coimbatore"
+  ],
   alternates: {
-    canonical: "https://joydigital.in/seo-company-coimbatore",
+    canonical: "https://www.joydigital.in/seo-company-coimbatore",
   },
 };
 
@@ -18,15 +27,20 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Coimbatore",
+      "streetAddress": "4/162, Melakkal Main Road, Kochadai",
+      "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
-      "postalCode": "641001",
+      "postalCode": "625016",
       "addressCountry": "IN"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Coimbatore"
     }
   },
   "description": "Joy Digital is a result-oriented SEO company in Coimbatore, helping businesses drive traffic, rank high for local terms, and optimize search CTRs.",
@@ -47,7 +61,7 @@ export default function SeoCompanyCoimbatore() {
       heroSubtitle="Rank higher on Google and bring more customers to your business. As a top SEO agency in Coimbatore, we optimize websites to gain organic local traffic and maps visibility."
       leadSource="SEO Company Coimbatore Landing Page"
       heroCtaText="Get Free SEO Audit"
-      canonicalUrl="https://joydigital.in/seo-company-coimbatore"
+      canonicalUrl="https://www.joydigital.in/seo-company-coimbatore"
       overviewTitle="Increase Search Visibility & Rank for Keywords That Bring Leads"
       overviewContent={
         <div className="space-y-6">

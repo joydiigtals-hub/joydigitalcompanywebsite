@@ -1,10 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
+import { SITE_URL } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "HTML Sitemap | Joy Digital Web Design & SEO Services",
+  title: "HTML Sitemap Index",
   description: "Complete list of all website pages, regional hubs, industry solutions, and free business tools on JoyDigital.in.",
+  keywords: [
+      "Sitemap",
+      "Sitemap Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
+  alternates: {
+    canonical: `${SITE_URL}/sitemap`,
+  },
 };
 
 const SECTIONS = [
@@ -22,11 +33,10 @@ const SECTIONS = [
   {
     title: "Global & Regional Pages",
     links: [
-      { href: "/", label: "Global Operations" },
+      { href: "/", label: "India & Global Operations" },
       { href: "/us", label: "United States (US)" },
       { href: "/uk", label: "United Kingdom (UK)" },
       { href: "/ae", label: "United Arab Emirates (UAE)" },
-      { href: "/in", label: "India (IN)" },
       { href: "/ca", label: "Canada (CA)" },
       { href: "/au", label: "Australia (AU)" },
     ],
@@ -35,7 +45,11 @@ const SECTIONS = [
     title: "Core Web & SEO Services",
     links: [
       { href: "/website-development", label: "Website Development" },
-      { href: "/seo-services", label: "SEO Services" },
+      { href: "/seo-services", label: "Enterprise B2B SEO Services" },
+      { href: "/website-seo", label: "Website SEO Services" },
+      { href: "/technical-seo", label: "Technical SEO Services" },
+      { href: "/on-page-seo", label: "On-Page SEO Services" },
+      { href: "/seo-content", label: "SEO Content Strategy" },
       { href: "/web-design-services", label: "Web Design Services" },
       { href: "/local-seo-services", label: "Local SEO Services" },
       { href: "/google-business-profile-setup", label: "Google Business Profile Setup" },
@@ -58,7 +72,7 @@ const SECTIONS = [
       { href: "/website-for-hotels", label: "Website for Hotels" },
       { href: "/website-for-hospitals", label: "Website for Hospitals" },
       { href: "/website-for-real-estate", label: "Website for Real Estate" },
-      { href: "/website-for-tours-and-travels", label: "Website for Tours & Travels" },
+      { href: "/travel-website-development", label: "Website for Tours & Travels" },
       { href: "/africa/tourism-website-development", label: "Africa Tourism Website Development" },
       { href: "/website-for-schools", label: "Website for Schools" },
       { href: "/website-for-small-business", label: "Website for Small Business" },
@@ -72,12 +86,15 @@ const SECTIONS = [
       { href: "/website-for-export-and-import", label: "Website for Export & Import" },
       { href: "/website-for-marketing-agencies", label: "Website for Marketing Agencies" },
       { href: "/website-for-luxury-brands", label: "Website for Luxury Brands" },
+      { href: "/website-for-pest-control", label: "Website for Pest Control" },
     ],
   },
   {
     title: "Regional Landing Pages (Tamil Nadu)",
     links: [
       { href: "/seo-services-chennai", label: "SEO Services Chennai" },
+      { href: "/website-development-company-chennai", label: "Website Development Company Chennai" },
+      { href: "/website-design-company-chennai", label: "Website Design Company Chennai" },
       { href: "/digital-marketing-agency-in-chennai", label: "Digital Marketing Agency Chennai" },
       { href: "/website-development-company-madurai", label: "Website Development Company Madurai" },
       { href: "/website-design-company-madurai", label: "Website Design Company Madurai" },
@@ -108,17 +125,17 @@ const SECTIONS = [
 
 export default function HtmlSitemapPage() {
   return (
-    <main className="pt-28 pb-20 bg-[#FAF9FF] min-h-screen">
+    <main className="pt-28 pb-20 bg-[#3B1580] min-h-screen text-[#FFFFFF]">
       <div className="max-w-7xl mx-auto px-6 space-y-12">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <span className="text-xs font-bold text-accent uppercase tracking-widest block">
+          <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block">
             INDEXABLE MAP
           </span>
-          <h1 className="text-3xl sm:text-4xl font-black text-primary-dark tracking-tight">
+          <h1 className="text-3xl sm:text-4xl font-black text-[#FFFFFF] tracking-tight">
             HTML Sitemap
           </h1>
-          <p className="text-sm text-text-secondary">
+          <p className="text-sm text-[#FFFFFF]/80">
             Quick directory access to all web design, development, SEO services, industry solutions, and free tools offered by Joy Digital.
           </p>
         </div>
@@ -126,17 +143,17 @@ export default function HtmlSitemapPage() {
         {/* Links Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SECTIONS.map((sec, idx) => (
-            <div key={idx} className="bg-white border border-[#E9E4F2] rounded-2xl p-6 shadow-sm space-y-4">
-              <h2 className="text-base font-extrabold text-primary-dark border-b border-[#E9E4F2] pb-3 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-accent" />
+            <div key={idx} className="bg-[#260B5E] border border-[#FFFFFF]/20 rounded-2xl p-6 shadow-sm space-y-4 text-[#FFFFFF]">
+              <h2 className="text-base font-extrabold text-[#FFFFFF] border-b border-[#FFFFFF]/15 pb-3 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#C9F600]" />
                 <span>{sec.title}</span>
               </h2>
-              <ul className="space-y-2 text-xs text-text-secondary">
+              <ul className="space-y-2 text-xs text-[#FFFFFF]/85">
                 {sec.links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="hover:text-accent hover:pl-1 transition-all block font-medium"
+                      className="hover:text-[#C9F600] hover:pl-1 transition-all block font-medium"
                     >
                       {link.label}
                     </Link>

@@ -138,14 +138,14 @@ export default function EnterpriseSeoLeadForm() {
         }
       ` }} />
 
-      <div className="bg-white border border-[#E9E4F2] p-5 sm:p-6 rounded-2xl shadow-2xl w-full max-w-md relative transition-all duration-300 hover:shadow-2xl hover:border-gray-200">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#7C3AED] via-[#A78BFA] to-[#F97316] rounded-t-2xl" />
+      <div className="bg-[#260B5E] border border-[#FFFFFF]/25 p-5 sm:p-6 rounded-2xl shadow-2xl w-full max-w-md relative transition-all duration-300 text-[#FFFFFF]">
+        <div className="absolute top-0 left-0 w-full h-1 bg-[#C9F600] rounded-t-2xl" />
 
         <div className="mb-6 mt-1 text-center lg:text-left">
-          <h3 className="text-xl font-extrabold text-primary-dark mb-1.5 leading-snug">
+          <h3 className="text-xl font-extrabold text-[#FFFFFF] mb-1.5 leading-snug">
             Request a Free Global B2B Technical SEO & AI Search Audit
           </h3>
-          <p className="text-xs text-text-secondary leading-relaxed">
+          <p className="text-xs text-[#FFFFFF]/80 leading-relaxed">
             Enter your details below to discuss revenue-driven organic pipeline growth and GEO mapping.
           </p>
         </div>
@@ -153,15 +153,15 @@ export default function EnterpriseSeoLeadForm() {
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           
           <div className="flex flex-col gap-1.5">
-            <label className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider">
-              Full Name <span className="text-error-red">*</span>
+            <label className="text-[10px] font-extrabold text-[#FFFFFF] uppercase tracking-wider">
+              Full Name <span className="text-[#C9F600]">*</span>
             </label>
-            <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-lg border px-3 py-3 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 transition-all ${errors.name ? "border-[#ef4444]" : "border-[#E9E4F2]"}`}>
-              <span className="text-xs text-text-muted"><i className="fa-solid fa-user" /></span>
+            <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-3 transition-all duration-300 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.name ? "border-[#ef4444]" : "border-[#FFFFFF]/25"}`}>
+              <span className="text-xs text-[#FFFFFF]/60"><i className="fa-solid fa-user" /></span>
               <input
                 type="text"
                 placeholder="Enter your name"
-                className="w-full text-sm bg-transparent outline-none border-none text-text-primary placeholder:text-text-muted font-semibold"
+                className="w-full text-sm bg-transparent outline-none border-none text-[#FFFFFF] placeholder:text-[#FFFFFF]/50 font-semibold"
                 value={formData.name}
                 onChange={(e) => { setFormData({...formData, name: e.target.value}); setErrors({...errors, name: ""}); }}
               />
@@ -170,15 +170,15 @@ export default function EnterpriseSeoLeadForm() {
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <label className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider">
-              Contact Number <span className="text-error-red">*</span>
+            <label className="text-[10px] font-extrabold text-[#FFFFFF] uppercase tracking-wider">
+              Contact Number <span className="text-[#C9F600]">*</span>
             </label>
-            <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-lg border px-3 py-3 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 transition-all ${errors.mobile ? "border-[#ef4444]" : "border-[#E9E4F2]"}`}>
-              <span className="text-xs text-text-muted"><i className="fa-solid fa-phone" /></span>
+            <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-3 transition-all duration-300 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.mobile ? "border-[#ef4444]" : "border-[#FFFFFF]/25"}`}>
+              <span className="text-xs text-[#FFFFFF]/60"><i className="fa-solid fa-phone" /></span>
               <input
                 type="tel"
                 placeholder="+1 (555) 000-0000"
-                className="w-full text-sm bg-transparent outline-none border-none text-text-primary placeholder:text-text-muted font-semibold"
+                className="w-full text-sm bg-transparent outline-none border-none text-[#FFFFFF] placeholder:text-[#FFFFFF]/50 font-semibold"
                 value={formData.mobile}
                 onChange={(e) => { setFormData({...formData, mobile: e.target.value}); setErrors({...errors, mobile: ""}); }}
               />
@@ -187,19 +187,19 @@ export default function EnterpriseSeoLeadForm() {
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <label className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider">
-              Business Type <span className="text-error-red">*</span>
+            <label className="text-[10px] font-extrabold text-[#FFFFFF] uppercase tracking-wider">
+              Business Type <span className="text-[#C9F600]">*</span>
             </label>
-            <div className={`flex items-center gap-2 bg-[#FAF9FF] rounded-lg border px-3 py-3 focus-within:bg-white focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/10 transition-all ${errors.businessType ? "border-[#ef4444]" : "border-[#E9E4F2]"}`}>
-              <span className="text-xs text-text-muted"><i className="fa-solid fa-building" /></span>
+            <div className={`flex items-center gap-2 bg-[#3B1580] rounded-xl border px-3.5 py-3 transition-all duration-300 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${errors.businessType ? "border-[#ef4444]" : "border-[#FFFFFF]/25"}`}>
+              <span className="text-xs text-[#FFFFFF]/60"><i className="fa-solid fa-building" /></span>
               <select
-                className="w-full text-sm bg-transparent outline-none border-none text-text-primary font-semibold cursor-pointer"
+                className="w-full text-sm bg-transparent outline-none border-none text-[#FFFFFF] font-semibold cursor-pointer [&>option]:bg-[#3B1580] [&>option]:text-[#FFFFFF]"
                 value={formData.businessType}
                 onChange={(e) => { setFormData({...formData, businessType: e.target.value}); setErrors({...errors, businessType: ""}); }}
               >
-                <option value="" disabled>Select Business Type</option>
+                <option value="" disabled className="bg-[#3B1580] text-[#FFFFFF]/60">Select Business Type</option>
                 {BUSINESS_TYPE_OPTIONS.map((opt) => (
-                  <option key={opt.value} value={opt.value}>{opt.label}</option>
+                  <option key={opt.value} value={opt.value} className="bg-[#3B1580] text-[#FFFFFF]">{opt.label}</option>
                 ))}
               </select>
             </div>
@@ -209,7 +209,7 @@ export default function EnterpriseSeoLeadForm() {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-sm py-4 rounded-xl shadow-lg shadow-[#7C3AED]/20 hover:shadow-[#7C3AED]/30 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 mt-2 flex items-center justify-center gap-2 disabled:opacity-50"
+            className="w-full bg-[#C9F600] hover:opacity-90 text-[#3B1580] font-extrabold text-sm py-4 rounded-xl shadow-lg shadow-[#C9F600]/20 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 mt-2 flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer"
           >
             {isLoading ? (
                <>
@@ -225,18 +225,18 @@ export default function EnterpriseSeoLeadForm() {
       </div>
 
       {isSuccess && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-md flex items-center justify-center p-6 animate-fade-in">
-          <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-sm w-full text-center border border-[#E5E7EB] flex flex-col items-center">
-            <div className="text-[#10b981] text-6xl mb-4 leading-none animate-bounce">
+        <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-md flex items-center justify-center p-6 animate-fade-in">
+          <div className="bg-[#3B1580] p-8 rounded-2xl shadow-2xl max-w-sm w-full text-center border border-[#FFFFFF]/25 flex flex-col items-center text-[#FFFFFF]">
+            <div className="text-[#C9F600] text-6xl mb-4 leading-none animate-bounce">
               <i className="fa-solid fa-circle-check" />
             </div>
-            <h4 className="text-xl font-extrabold text-primary-dark mb-2">Audit Request Submitted!</h4>
-            <p className="text-sm text-text-secondary mb-6 leading-relaxed">
+            <h4 className="text-xl font-extrabold text-[#FFFFFF] mb-2">Audit Request Submitted!</h4>
+            <p className="text-sm text-[#FFFFFF]/80 mb-6 leading-relaxed">
               Thank you for requesting an Enterprise SEO Audit. Our technical growth strategists will review your domain and reach out shortly.
             </p>
             <button
               onClick={() => setIsSuccess(false)}
-              className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold px-8 py-2.5 rounded-lg shadow-md transition-all duration-200 cursor-pointer"
+              className="bg-[#C9F600] hover:opacity-90 text-[#3B1580] font-bold px-8 py-2.5 rounded-lg shadow-md transition-all duration-200 cursor-pointer"
             >
               Done
             </button>

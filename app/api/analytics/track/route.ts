@@ -5,7 +5,7 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { path, referrer, clientIp: bodyClientIp } = body;
 
-    const MONGODB_URI = process.env.MONGODB_URI;
+    const MONGODB_URI = process.env.MONGODB_DIRECT_URI || process.env.MONGODB_URI;
     if (!MONGODB_URI) {
       return NextResponse.json({ success: false, error: "Database not configured." }, { status: 500 });
     }
@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     let lng = lngStr ? parseFloat(lngStr) : 80.2707;
 
     const headerIp = headers.get("x-forwarded-for")?.split(",")[0] || headers.get("x-real-ip") || "";
-    const finalClientIp = bodyClientIp || headerIp;
+    const finalClientIp = (bodyClientIp || headerIp || "").trim();
 
     // Fix for reverse proxies setting localhost in request.url
     const isLocalhost = process.env.NODE_ENV === "development" && (!finalClientIp || finalClientIp === "127.0.0.1" || finalClientIp === "::1");
@@ -34,10 +34,12 @@ export async function POST(request: Request) {
         city = "Local Dev Machine";
         region = "Localhost";
         country = "IN";
-      } else {
+      } else if (finalClientIp && !finalClientIp.startsWith("10.") && !finalClientIp.startsWith("192.168.") && !finalClientIp.startsWith("127.")) {
         try {
-          // Fetch from free geoip API if edge headers are missing
-          const geoRes = await fetch(`http://ip-api.com/json/${finalClientIp}?fields=status,countryCode,regionName,city,lat,lon`);
+          // Fetch from free geoip API if edge headers are missing (with 2.5s timeout)
+          const geoRes = await fetch(`http://ip-api.com/json/${finalClientIp}?fields=status,countryCode,regionName,city,lat,lon`, {
+            signal: AbortSignal.timeout(2500),
+          });
           if (geoRes.ok) {
             const geoData = await geoRes.json();
             if (geoData.status === "success") {

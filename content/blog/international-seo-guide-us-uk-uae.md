@@ -22,7 +22,7 @@ metaDescription: >-
   Step-by-step guide to expanding your website globally across the US, UK, and UAE. Learn hreflang setup in Next.js, subfolder routing, multi-currency detection, and GSC geotargeting.
 focusKeyword: International SEO Guide US UK UAE
 secondaryKeywords: 'Next.js hreflang setup, Global SEO strategy, Subfolder geotargeting, Multi country SEO Next.js'
-canonicalUrl: 'https://joydigital.in/blog/international-seo-guide-us-uk-uae'
+canonicalUrl: 'https://www.joydigital.in/blog/international-seo-guide-us-uk-uae'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Custom Web Development
@@ -40,7 +40,7 @@ authorRole: Technical Web & SEO Specialist
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and international organic growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: 'What is the best URL structure for International SEO?'
     answer: 'Subfolders with language/country codes (e.g., joydigital.in/us or joydigital.in/uk) are recommended for most growing SMBs. They consolidate domain authority onto one root domain while enabling clear regional targeting.'
@@ -89,13 +89,13 @@ We strongly recommend **Subfolders** (`/us`, `/uk`, `/ae`) because every backlin
 ```typescript
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://joydigital.in",
+    canonical: "https://www.joydigital.in",
     languages: {
-      "en-US": "https://joydigital.in/us",
-      "en-GB": "https://joydigital.in/uk",
-      "en-AE": "https://joydigital.in/ae",
-      "en-IN": "https://joydigital.in",
-      "x-default": "https://joydigital.in",
+      "en-US": "https://www.joydigital.in/us",
+      "en-GB": "https://www.joydigital.in/uk",
+      "en-AE": "https://www.joydigital.in/ae",
+      "en-IN": "https://www.joydigital.in",
+      "x-default": "https://www.joydigital.in",
     },
   },
 };
@@ -120,7 +120,7 @@ Using Next.js Middleware or Cloudflare Edge Functions, detect the visitor's inco
 
 To ensure Google indexes your regional pages accurately:
 
-1. Submit a comprehensive sitemap in Google Search Console: `https://joydigital.in/sitemap.xml`
+1. Submit a comprehensive sitemap in Google Search Console: `https://www.joydigital.in/sitemap.xml`
 2. Ensure regional URLs are grouped logically under `/us/website-development`, `/uk/website-development`, and `/ae/website-development`.
 3. Verify structured JSON-LD schema with `areaServed` property listing your primary global markets.
 

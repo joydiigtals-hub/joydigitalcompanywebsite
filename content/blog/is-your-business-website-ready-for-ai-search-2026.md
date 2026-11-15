@@ -22,7 +22,7 @@ metaDescription: >-
   Learn how AI-powered search experiences like Google AI Overviews, ChatGPT, and Gemini are changing SEO in 2026, and the 7 essential things your business website needs.
 focusKeyword: AI Search
 secondaryKeywords: 'AI Search Optimization, GEO, AEO, Next.js SEO, Local SEO, Joy Digital'
-canonicalUrl: 'https://joydigital.in/blog/is-your-business-website-ready-for-ai-search-2026'
+canonicalUrl: 'https://www.joydigital.in/blog/is-your-business-website-ready-for-ai-search-2026'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: SEO Services
@@ -39,7 +39,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: 'Is Your Business Website Ready for AI Search in 2026?'
 ogDescription: >-

@@ -6,10 +6,12 @@ import { generatePageSeo } from "@/lib/seoEngine";
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await generatePageSeo(
     "/landing-page-development",
-    "High-Converting Landing Page Design & Dev | Joy Digital",
-    "Maximize ad ROI with sub-second, custom landing pages built for Google & Meta PPC campaigns. High-converting UX with fast turnaround. Request a quote!"
+    "High Converting Landing Page for Google Ads & PPC | Joy Digital",
+    "Maximize ad ROAS with a high converting landing page built for Google Ads & Meta PPC. Sub-second Next.js speed boosts Quality Score and lowers CPC. Request a quote!"
   );
-  return seoData.metadata;
+  return {
+    ...seoData.metadata,
+  };
 }
 
 export default async function LandingPageDevPage() {
@@ -27,7 +29,7 @@ export default async function LandingPageDevPage() {
         heroSubtitle="Turn paid ad clicks and social campaign traffic into qualified leads. We build distraction-free, sub-second landing pages optimized for Google Ads, Meta PPC, and high-ROI conversion funnels."
         leadSource="Landing Page Development Page"
         heroCtaText="Request a Landing Page Quote"
-        canonicalUrl="https://joydigital.in/landing-page-development"
+        canonicalUrl="https://www.joydigital.in/landing-page-development"
         overviewTitle="Conversion Rate Optimization (CRO) & Distraction-Free Funnel Architecture"
         overviewContent={
           <div className="space-y-6">
@@ -37,6 +39,10 @@ export default async function LandingPageDevPage() {
             <p>
               Joy Digital specializes in high-converting <strong>landing page website design</strong>, standalone PPC landing pages, and lead acquisition funnels built with Next.js and Tailwind CSS. Featuring sub-second loading speeds, prefilled lead forms, sticky WhatsApp conversion buttons, and verified social proof sections, our landing pages maximize your Return on Ad Spend (ROAS).
             </p>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">High Converting Landing Page for Google Ads: Lower CPC &amp; Higher Quality Score</h3>
+          <p>
+            Running Google Ads campaigns to a slow or cluttered page drains ad budget with high Cost-Per-Click (CPC) and low Quality Scores. A custom <strong>high converting landing page</strong> engineered specifically as a <strong>landing page for google ads</strong> achieves a 10/10 Landing Page Experience rating from Google&apos;s algorithm. Sub-800ms load speeds directly lower your required bid while converting up to 3x more paid clicks into qualified sales enquiries.
+          </p>
           </div>
         }
         benefitsTitle="Why Choose High-Converting Custom Landing Pages?"
@@ -44,7 +50,7 @@ export default async function LandingPageDevPage() {
         benefits={[
           {
             icon: "fa-solid fa-[#7C3AED] fa-bullseye",
-            title: "Distraction-Free UX Design",
+            title: "Landing Page Development",
             description: "No external navigation menus or social links leaking prospects before they complete the enquiry form.",
           },
           {

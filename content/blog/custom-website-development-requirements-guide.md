@@ -22,7 +22,7 @@ metaDescription: >-
   requirements beats template sites for UX, lead generation, and scalability.
 focusKeyword: Custom Website
 secondaryKeywords: 'Web Development, Joy Digital, Search Engine Optimization, SEO Strategy'
-canonicalUrl: 'https://joydigital.in/blog/custom-website-development-requirements-guide'
+canonicalUrl: 'https://www.joydigital.in/blog/custom-website-development-requirements-guide'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Custom Web Development
@@ -37,7 +37,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: 'Custom Website Development: Build Around Your Business Requirements'
 ogDescription: >-

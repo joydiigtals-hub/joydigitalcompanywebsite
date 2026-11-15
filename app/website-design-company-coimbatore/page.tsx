@@ -3,10 +3,17 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Website Design Company in Coimbatore | Joy Digital",
+  title: "Website Design Coimbatore",
   description: "Looking for the best website design company in Coimbatore? We design custom, high-speed corporate portfolios, e-commerce stores, and coaching blogs.",
+  keywords: [
+      "Website Design Company Coimbatore",
+      "Web Development Company Coimbatore",
+      "Industrial Web Design Coimbatore",
+      "Next.js Web Agency Coimbatore",
+      "Business Website Design Coimbatore"
+  ],
   alternates: {
-    canonical: "https://joydigital.in/website-design-company-coimbatore",
+    canonical: "https://www.joydigital.in/website-design-company-coimbatore",
   },
 };
 
@@ -18,7 +25,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -47,7 +54,7 @@ export default function WebDesignCoimbatore() {
       heroSubtitle="Get a modern, fast website designed to stand out and bring customers. As a top web design company in Coimbatore, we code custom layouts optimized for speed and leads."
       leadSource="Website Design Coimbatore Landing Page"
       heroCtaText="Get Free Design Quote"
-      canonicalUrl="https://joydigital.in/website-design-company-coimbatore"
+      canonicalUrl="https://www.joydigital.in/website-design-company-coimbatore"
       overviewTitle="Custom Website Design & Branding Solutions in Coimbatore"
       overviewContent={
         <div className="space-y-6">
@@ -158,11 +165,11 @@ export default function WebDesignCoimbatore() {
       ]}
       faqs={[
         {
-          question: "Can you help update photos or text after the site goes live?",
+          question: "Can you help update photos or text for our Coimbatore business after launch?",
           answer: "Yes! We offer 30 days of free support for post-launch adjustments. We also build custom admin dashboards to make edits simple.",
         },
         {
-          question: "How do we coordinate design reviews?",
+          question: "How do we coordinate design reviews for our Coimbatore project?",
           answer: "We send active staging URLs where you can inspect design layouts on your phone. Feedback rounds are managed easily via WhatsApp.",
         },
       ]}

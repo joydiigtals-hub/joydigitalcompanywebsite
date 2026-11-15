@@ -29,7 +29,7 @@ metaDescription: >-
 focusKeyword: Direct Bookings
 secondaryKeywords: 'SEO, Joy Digital, Search Engine Optimization, SEO Strategy'
 canonicalUrl: >-
-  https://joydigital.in/blog/how-independent-resorts-can-increase-direct-bookings
+  https://www.joydigital.in/blog/how-independent-resorts-can-increase-direct-bookings
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: SEO Services
@@ -44,7 +44,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: >-
   How Independent Resorts Can Increase Direct Bookings & Cut High OTA

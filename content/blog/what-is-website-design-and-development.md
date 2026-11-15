@@ -19,7 +19,7 @@ seoTitle: "What is Website Design and Development? Best Languages & AI Tools Gui
 metaDescription: "Learn what is website design and development, why website development is important, which language is best, and which AI is best for website development."
 focusKeyword: "what is website design and development"
 secondaryKeywords: "top website development agency, top website development company, why website development is important, which language is best for website development, which ai is best for website development, website development services"
-canonicalUrl: "https://joydigital.in/blog/what-is-website-design-and-development"
+canonicalUrl: "https://www.joydigital.in/blog/what-is-website-design-and-development"
 robots: "Index, Follow"
 internalLinks:
   - anchorText: Custom Website Development
@@ -36,7 +36,7 @@ authorName: "Saravanan"
 authorRole: "Technical Web & SEO Specialist"
 authorBio: "Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth."
 authorImage: "/assets/images/logo.webp"
-authorProfileUrl: "https://joydigital.in/about"
+authorProfileUrl: "https://www.joydigital.in/about"
 faqs:
   - question: "What is website design and development?"
     answer: "Website design focuses on the visual layout, typography, UI/UX aesthetics, and user journey. Website development is the code engineering phase using HTML, CSS, JavaScript, React, or Next.js to turn visual mockups into fast, functional web applications."

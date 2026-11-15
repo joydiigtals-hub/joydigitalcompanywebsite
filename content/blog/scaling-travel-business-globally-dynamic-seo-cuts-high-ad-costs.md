@@ -22,11 +22,11 @@ metaDescription: >-
   Learn how tour operators cut high PPC ad costs and scale international bookings organically with Dynamic SEO and automated landing pages.
 focusKeyword: Dynamic SEO Cuts High Ad Costs
 secondaryKeywords: 'Travel Web Development, Tour Operator SEO, Reduce CAC Travel, Dynamic Travel Websites'
-canonicalUrl: 'https://joydigital.in/blog/scaling-travel-business-globally-dynamic-seo-cuts-high-ad-costs'
+canonicalUrl: 'https://www.joydigital.in/blog/scaling-travel-business-globally-dynamic-seo-cuts-high-ad-costs'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Travel Website Development
-    targetUrl: /website-for-tours-and-travels
+    targetUrl: /travel-website-development
   - anchorText: Dynamic Web Development
     targetUrl: /dynamic-website-development
   - anchorText: B2B SEO Services
@@ -38,7 +38,7 @@ authorRole: Technical Web & SEO Specialist
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: How does Dynamic SEO reduce Customer Acquisition Cost (CAC) for travel agencies?
     answer: Dynamic SEO automatically generates and ranks thousands of long-tail landing pages for hyper-specific travel queries. This attracts high-intent organic visitors for free, drastically lowering your dependency on expensive Google & Meta paid ads.
@@ -104,4 +104,4 @@ Scaling your travel business globally shouldn't mean blowing your entire revenue
 
 By integrating a powerful Dynamic SEO strategy, you can slash your high ad costs, dominate international search engine result pages (SERPs), and secure consistent bookings worldwide.
 
-Ready to cut your ad spend and turn organic search into your most profitable global acquisition channel? Explore advanced web engineering, programmatic SEO, and enterprise digital solutions tailored for travel operators at [Joy Digital Travel Web Solutions](/website-for-tours-and-travels).
+Ready to cut your ad spend and turn organic search into your most profitable global acquisition channel? Explore advanced web engineering, programmatic SEO, and enterprise digital solutions tailored for travel operators at [Joy Digital Travel Web Solutions](/travel-website-development).

@@ -3,7 +3,7 @@
     "id": "page-custom-web-dev",
     "path": "/custom-website-development",
     "category": "Core Service",
-    "title_template": "Custom Website Development Services | Joy Digital",
+    "title_template": "Custom Website Development Services",
     "meta_description": "Enterprise custom website development services. We build high-speed Next.js & React web applications with 99+ Core Web Vitals and zero template bloat.",
     "h1": "Custom Website Development Services for Global Enterprises",
     "h2_tags": [
@@ -53,7 +53,7 @@
     "id": "page-dynamic-web-dev",
     "path": "/dynamic-website-development",
     "category": "Core Service",
-    "title_template": "Dynamic Website Development Services | Joy Digital",
+    "title_template": "Dynamic Website Development Services",
     "meta_description": "Build high-speed, database-driven dynamic websites with custom admin panels, real-time API sync, and secure PostgreSQL/Supabase backends.",
     "h1": "Dynamic Website Development Services with Custom Admin Controls",
     "h2_tags": [
@@ -71,13 +71,17 @@
       "kw-dynamic-web-04",
       "kw-dynamic-web-07",
       "kw-cms-02",
-      "kw-cms-04"
+      "kw-cms-04",
+      "kw-dyn-chn-01",
+      "kw-dyn-web-09",
+      "kw-web-ai-01"
     ],
     "longtail_keyword_ids": [
       "kw-dynamic-web-05",
       "kw-dynamic-web-06",
       "kw-dynamic-web-08",
-      "kw-cms-03"
+      "kw-cms-03",
+      "kw-dyn-cost-01"
     ],
     "faq_schema": [
       {
@@ -105,7 +109,7 @@
     "id": "page-web-dev-services",
     "path": "/website-development",
     "category": "Core Service",
-    "title_template": "Professional Web Development Services | Joy Digital",
+    "title_template": "Professional Web Development Services",
     "meta_description": "Full-stack web development services for global startups, agencies, and enterprises. Fast Next.js, React & Node.js web applications.",
     "h1": "Full-Stack Web Development Services for Global Growth",
     "h2_tags": [
@@ -147,7 +151,7 @@
     "id": "page-ind-real-estate",
     "path": "/industries/real-estate",
     "category": "Industry Page",
-    "title_template": "Real Estate Website Development Company | Joy Digital",
+    "title_template": "Real Estate Website Development Company",
     "meta_description": "High-converting real estate website development services. Build property listing portals, interactive map filters, and WhatsApp lead capture funnels.",
     "h1": "Custom Real Estate Website Development & Property Portals",
     "h2_tags": [
@@ -184,7 +188,7 @@
     "id": "page-ind-travel-tourism",
     "path": "/industries/travel-tourism",
     "category": "Industry Page",
-    "title_template": "Custom Travel Website Development Services | Joy Digital",
+    "title_template": "Custom Travel Website Development Services",
     "meta_description": "Build high-speed travel portals, tour package booking engines, and multi-currency travel agency websites.",
     "h1": "Custom Travel Website Development & Booking Portals",
     "h2_tags": [
@@ -213,7 +217,7 @@
     "id": "page-ind-healthcare",
     "path": "/industries/healthcare",
     "category": "Industry Page",
-    "title_template": "Healthcare Website Development Services | Joy Digital",
+    "title_template": "Healthcare Website Development Services",
     "meta_description": "Secure healthcare and hospital website development. Doctor appointment scheduling, patient portals, and local SEO.",
     "h1": "Healthcare Website Development Services & Hospital Portals",
     "h2_tags": [
@@ -242,7 +246,7 @@
     "id": "page-ind-ecommerce",
     "path": "/industries/ecommerce",
     "category": "Industry Page",
-    "title_template": "Custom E-Commerce Website Development | Joy Digital",
+    "title_template": "Custom E-Commerce Website Development",
     "meta_description": "Next.js headless e-commerce store development. Sub-second mobile load times, custom checkout, and global payment sync.",
     "h1": "Custom E-Commerce Website Development & Headless Stores",
     "h2_tags": [
@@ -271,7 +275,7 @@
     "id": "page-india-seo-mkt",
     "path": "/in",
     "category": "Regional Market",
-    "title_template": "Top Digital Marketing Company in India | Joy Digital",
+    "title_template": "Top Digital Marketing Company in India",
     "meta_description": "Joy Digital is a premier digital marketing company in india & search engine optimization agency. We scale organic search rankings and lead funnels across India.",
     "h1": "Premier Digital Marketing & SEO Company in India",
     "h2_tags": [
@@ -311,9 +315,9 @@
     "id": "page-static-web-dev",
     "path": "/static-website-development",
     "category": "Core Service",
-    "title_template": "Static Website Development Services & SSG | Joy Digital",
-    "meta_description": "Learn what is a static website. Explore static website examples, Next.js generator tech, and dynamic vs static website performance.",
-    "h1": "Static Website Development Services, Examples & Edge Architecture",
+    "title_template": "Fast Static Website Development",
+    "meta_description": "Build high-speed, secure, and cost-effective static websites with sub-second load times, 100% serverless security, and zero database maintenance.",
+    "h1": "Blazing-Fast Static Website Development Services",
     "h2_tags": [
       "What is a Static Website & How Does It Work?",
       "Dynamic Website vs Static Website: Comprehensive Comparison",
@@ -367,7 +371,7 @@
     "id": "page-portfolio-web-dev",
     "path": "/portfolio-website-development",
     "category": "Core Service",
-    "title_template": "Portfolio Website Development & AI Design | Joy Digital",
+    "title_template": "Portfolio Website Development & AI Design",
     "meta_description": "Build custom portfolio websites for web developers, executives, & agencies. Explore portfolio templates, GitHub hosting, and AI design.",
     "h1": "Custom Portfolio Website Development & Personal Branding Architecture",
     "h2_tags": [
@@ -423,7 +427,7 @@
     "id": "page-ai-search-opt",
     "path": "/ai-search-optimization",
     "category": "Core Service",
-    "title_template": "AI Search Optimization (GEO/AIO) Services | Joy Digital",
+    "title_template": "AI Search Optimization (GEO/AIO) Services",
     "meta_description": "Learn how to optimize website for AI search. Discover AI search optimization tools, tutorials, GEO acronym meanings, and ASO strategies for AI engines.",
     "h1": "AI Search Optimization & Generative Engine Services",
     "h2_tags": [
@@ -477,9 +481,9 @@
   },
   {
     "id": "page-seo-company-chennai",
-    "path": "/seo-company-chennai",
+    "path": "/seo-services-chennai",
     "category": "Core Service",
-    "title_template": "Best SEO Website Company in Chennai & India | Joy Digital",
+    "title_template": "Best SEO Website Company in Chennai & India",
     "meta_description": "Looking for the best SEO website company in Chennai & India? Joy Digital provides expert SEO services, Google SEO checker tools, and local Map Pack optimization.",
     "h1": "Top SEO Company in Chennai & Premier SEO Website Company in India",
     "h2_tags": [
@@ -535,7 +539,7 @@
     "id": "page-website-for-schools",
     "path": "/website-for-schools",
     "category": "Industry Page",
-    "title_template": "School Website Design & Development Services | Joy Digital",
+    "title_template": "School Website Design & Development Services",
     "meta_description": "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
     "h1": "School Website Design & Development Services",
     "h2_tags": [
@@ -568,7 +572,7 @@
     "id": "page-website-for-luxury-brands",
     "path": "/website-for-luxury-brands",
     "category": "Industry Page",
-    "title_template": "Premium Luxury Brand Website Design Services | Joy Digital",
+    "title_template": "Premium Luxury Brand Website Design Services",
     "meta_description": "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
     "h1": "Premium Luxury Brand Website Design Services",
     "h2_tags": [
@@ -601,7 +605,7 @@
     "id": "page-website-for-marketing-agencies",
     "path": "/website-for-marketing-agencies",
     "category": "Industry Page",
-    "title_template": "High-Converting Website Design for Agencies | Joy Digital",
+    "title_template": "High-Converting Website Design for Agencies",
     "meta_description": "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
     "h1": "High-Converting Website Design for Agencies",
     "h2_tags": [
@@ -634,7 +638,7 @@
     "id": "page-website-for-consulting-companies",
     "path": "/website-for-consulting-companies",
     "category": "Industry Page",
-    "title_template": "Corporate Website Development for Consultants | Joy Digital",
+    "title_template": "Corporate Website Development for Consultants",
     "meta_description": "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
     "h1": "Corporate Website Development for Consultants",
     "h2_tags": [
@@ -667,7 +671,7 @@
     "id": "page-website-for-pest-control",
     "path": "/website-for-pest-control",
     "category": "Industry Page",
-    "title_template": "Local SEO & Website Design for Pest Control | Joy Digital",
+    "title_template": "Local SEO & Website Design for Pest Control",
     "meta_description": "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
     "h1": "Local SEO & Website Design for Pest Control",
     "h2_tags": [
@@ -698,9 +702,9 @@
   },
   {
     "id": "page-website-for-e-commerce-stores",
-    "path": "/website-for-e-commerce-stores",
+    "path": "/website-for-ecommerce",
     "category": "Industry Page",
-    "title_template": "Custom E-Commerce Website Development | Joy Digital",
+    "title_template": "Custom E-Commerce Website Development",
     "meta_description": "Fast Next.js E-commerce websites built for high conversions, payment gateway integration, and SEO. Scale your online store today with Joy Digital!",
     "h1": "Custom E-Commerce Website Development",
     "h2_tags": [
@@ -733,7 +737,7 @@
     "id": "page-website-for-solar-companies",
     "path": "/website-for-solar-companies",
     "category": "Industry Page",
-    "title_template": "Solar Energy Company Website Development | Joy Digital",
+    "title_template": "Solar Energy Company Website Development",
     "meta_description": "Generate high-intent residential & commercial solar leads with modern, fast-loading websites built for renewable energy companies. Get a free quote!",
     "h1": "Solar Energy Company Website Development",
     "h2_tags": [
@@ -766,7 +770,7 @@
     "id": "page-website-for-tour-and-safari",
     "path": "/website-for-tour-and-safari",
     "category": "Industry Page",
-    "title_template": "Tour & Travel Agency Website Design | Joy Digital",
+    "title_template": "Tour & Travel Agency Website Design",
     "meta_description": "Custom travel websites with itinerary builders, WhatsApp booking & multi-currency options. Boost direct travel bookings with Joy Digital!",
     "h1": "Tour & Travel Agency Website Design",
     "h2_tags": [
@@ -794,5 +798,224 @@
     "alt_texts": [],
     "updated_at": "2026-10-10T04:09:32.349Z",
     "primary_keyword_id": "kw-ind-toursafari-01"
+  },
+  {
+    "id": "page-seo-services-chennai",
+    "path": "/seo-services-chennai",
+    "category": "Landing Page",
+    "title_template": "Best SEO Company in Chennai | Top SEO Agency",
+    "meta_description": "Drive organic search rankings with Joy Digital, recognized as the best SEO company and leading SEO agency in Chennai. We provide technical SEO services in Chennai and high-speed website development.",
+    "h1": "Best SEO Company in Chennai | Top SEO Agency & Website Development",
+    "h2_tags": [
+      "Core Web Vitals & Technical Speed Architecture",
+      "Dominating the Google Maps Local 3-Pack",
+      "Transparent Event Analytics & Lead Attribution"
+    ],
+    "h3_tags": [
+      "Technical Website Audits & Full-Funnel SEO in Chennai",
+      "Why Partner with Our Chennai SEO Team?"
+    ],
+    "primary_keyword_id": "kw-seo-chn-01",
+    "secondary_keyword_ids": [
+      "kw-seo-chn-02",
+      "kw-seo-chn-03",
+      "kw-seo-chn-04",
+      "kw-seo-chn-05"
+    ],
+    "longtail_keyword_ids": [
+      "kw-dyn-chn-01"
+    ],
+    "faq_schema": [
+      {
+        "question": "Who is the best SEO company in Chennai?",
+        "answer": "Joy Digital is recognized as a premier technical SEO company in Chennai, specializing in Core Web Vitals, schema markup, and Google Maps Local 3-Pack rankings."
+      },
+      {
+        "question": "Why choose Joy Digital as your SEO agency in Chennai?",
+        "answer": "As an experienced SEO agency in Chennai, Joy Digital combines high-speed Next.js website development with advanced search engine optimization and Local 3-Pack domination."
+      },
+      {
+        "question": "Can I hire an SEO consultant or SEO freelancer in Chennai?",
+        "answer": "Yes, Joy Digital provides dedicated SEO consultant and agile SEO freelancer services tailored for startups and businesses across Chennai."
+      }
+    ],
+    "alt_texts": [],
+    "updated_at": "2026-10-13T20:55:00.000Z"
+  },
+  {
+    "id": "page-travel-website-dev",
+    "path": "/travel-website-development",
+    "category": "Core Service",
+    "title_template": "Travel Agency Website Development & Booking Portals",
+    "meta_description": "Best website for travel agency growth. Custom Next.js booking engines, instant itinerary loading, multi-currency payments, and high-converting travel agency website builder solutions.",
+    "h1": "Best Website for Travel Agency Growth & Online Booking Portals",
+    "h2_tags": [
+      "Why Custom Next.js Outperforms Any Travel Agency Website Builder",
+      "Dynamic Tour Itinerary Showcases & Instant Mobile Loading",
+      "Direct WhatsApp Booking & Multi-Currency Payment Gateways"
+    ],
+    "h3_tags": [
+      "Interactive Custom Trip Planners",
+      "Brochure & PDF Itinerary Download Leads",
+      "Automated Multi-Language Localization"
+    ],
+    "primary_keyword_id": "kw-travel-best-agency-01",
+    "secondary_keyword_ids": [
+      "kw-travel-agency-builder-02",
+      "kw-ind-travel-01",
+      "kw-ind-travel-02"
+    ],
+    "longtail_keyword_ids": [
+      "kw-ind-travel-05",
+      "kw-ind-travel-06",
+      "kw-ind-travel-07"
+    ],
+    "faq_schema": [
+      {
+        "question": "Why is custom Next.js the best website for travel agency businesses compared to generic builders?",
+        "answer": "Generic travel agency website builders use bloated plugins, slow monthly templates, and rigid layouts that fail mobile Core Web Vitals. Our custom Next.js travel websites load in under 1.2s on mobile networks worldwide, integrate seamlessly with WhatsApp and Stripe, and give you 100% code ownership with zero monthly builder lock-in."
+      },
+      {
+        "question": "Can you integrate custom itinerary builders and direct booking engines?",
+        "answer": "Yes! We build bespoke day-by-day itinerary displays, automated PDF brochure downloads, multi-currency pricing calculators, and direct WhatsApp inquiry systems."
+      }
+    ],
+    "alt_texts": [
+      {
+        "image_url": "/assets/images/hero-banner.webp",
+        "alt_text": "Best website for travel agency dashboard with instant booking and itinerary builder."
+      }
+    ],
+    "updated_at": "2026-10-20T14:35:52.512Z"
+  },
+  {
+    "id": "page-wp-to-nextjs",
+    "path": "/wordpress-to-nextjs-migration",
+    "category": "Core Service",
+    "title_template": "WordPress to Next.js Migration Agency",
+    "meta_description": "Migrate legacy WordPress to high-speed Next.js. Master headless WordPress Next.js architecture and headless CMS SEO with 100% Core Web Vitals and zero ranking loss.",
+    "h1": "Migrate WordPress to Next.js for Headless CMS SEO & 95+ PageSpeed",
+    "h2_tags": [
+      "Headless WordPress Next.js Architecture",
+      "Headless CMS SEO Advantages: Pre-rendered HTML & Sub-Second LCP",
+      "100% SEO Safety: 1:1 URL Mapping & 301 Redirect Protection"
+    ],
+    "h3_tags": [
+      "Decoupled WP GraphQL and REST APIs",
+      "Zero Static Attack Surface & No Plugin Hacks",
+      "Automated Incremental Static Regeneration (ISR)"
+    ],
+    "primary_keyword_id": "kw-headless-wp-nextjs-02",
+    "secondary_keyword_ids": [
+      "kw-headless-cms-seo-01",
+      "kw-custom-web-01"
+    ],
+    "longtail_keyword_ids": [
+      "kw-custom-web-06"
+    ],
+    "faq_schema": [
+      {
+        "question": "How does headless WordPress Next.js improve headless CMS SEO?",
+        "answer": "Headless WordPress paired with Next.js App Router delivers server-side pre-rendered HTML and automated ISR. Googlebot immediately indexes clean, lightweight static content with sub-100ms TTFB and perfect 100/100 Core Web Vitals, outranking bloated PHP-based WordPress sites."
+      },
+      {
+        "question": "Will our content authors still be able to use the WordPress Gutenberg dashboard?",
+        "answer": "Yes. In a headless WordPress Next.js architecture, your content editors keep writing in WordPress as usual. Next.js fetches data via WPGraphQL and instantly revalidates the live website."
+      }
+    ],
+    "alt_texts": [
+      {
+        "image_url": "/assets/images/hero-banner.webp",
+        "alt_text": "Headless WordPress Next.js migration benchmark and headless CMS SEO performance."
+      }
+    ],
+    "updated_at": "2026-10-20T14:35:52.524Z"
+  },
+  {
+    "id": "page-landing-page-dev",
+    "path": "/landing-page-development",
+    "category": "Core Service",
+    "title_template": "High Converting Landing Page for Google Ads & PPC",
+    "meta_description": "Maximize paid ad ROAS with a high converting landing page built for Google Ads & Meta PPC. Sub-second Next.js speed boosts Quality Score and lowers CPC.",
+    "h1": "High Converting Landing Page Development for Google Ads & PPC Campaigns",
+    "h2_tags": [
+      "High Converting Landing Page Architecture & Distraction-Free CRO Funnels",
+      "How a Sub-Second Landing Page for Google Ads Lowers CPC & Boosts Quality Score",
+      "Dual Conversion Channels: Sticky WhatsApp & Frictionless Form Submissions"
+    ],
+    "h3_tags": [
+      "Sub-800ms Mobile 4G Load Speeds",
+      "A/B Testing Ready Modular Components",
+      "Verified Social Proof & Trust Badges"
+    ],
+    "primary_keyword_id": "kw-high-converting-landing-01",
+    "secondary_keyword_ids": [
+      "kw-landing-page-google-ads-02",
+      "kw-custom-web-01"
+    ],
+    "longtail_keyword_ids": [
+      "kw-custom-web-07"
+    ],
+    "faq_schema": [
+      {
+        "question": "How does a fast landing page for Google Ads lower ad costs?",
+        "answer": "Google Ads calculates Quality Score largely based on landing page experience and mobile loading speed. A sub-second Next.js landing page achieves a 10/10 Landing Page Experience rating, directly lowering your Cost-Per-Click (CPC) and winning higher ad positions for less budget."
+      },
+      {
+        "question": "What makes a high converting landing page different from a standard web page?",
+        "answer": "Standard web pages have header links, footers, blogs, and multiple exits. A high converting landing page removes all exit distractions and focuses 100% of the visitor attention on a single compelling call-to-action (CTA)."
+      }
+    ],
+    "alt_texts": [
+      {
+        "image_url": "/assets/images/hero-banner.webp",
+        "alt_text": "High converting landing page for Google ads conversion rate optimization dashboard."
+      }
+    ],
+    "updated_at": "2026-10-20T14:35:52.524Z"
+  },
+  {
+    "id": "page-web-dev-chennai",
+    "path": "/website-development-company-chennai",
+    "category": "Core Service",
+    "title_template": "Website Development Company in Chennai | Best Web Agency",
+    "meta_description": "Ranked among the best website development company in Chennai. We deliver custom Next.js platforms, SEO-friendly architectures, and high-converting websites. Free audit!",
+    "h1": "Best Website Development Company in Chennai & Web Engineering Agency",
+    "h2_tags": [
+      "Next.js & React Web App Development for Chennai Businesses",
+      "Why Joy Digital Is Ranked Among the Best Website Development Companies in Chennai",
+      "Integrated Website Development and SEO Service for Maximum Organic ROI"
+    ],
+    "h3_tags": [
+      "Sub-Second Mobile PageSpeed & 95+ Core Web Vitals",
+      "Direct WhatsApp & CRM Conversion Routing",
+      "Enterprise Security Without Monolithic Plugin Bloat"
+    ],
+    "primary_keyword_id": "kw-web-dev-chn-01",
+    "secondary_keyword_ids": [
+      "kw-web-dev-chn-02",
+      "kw-web-dev-ind-01",
+      "kw-web-dev-seo-01"
+    ],
+    "longtail_keyword_ids": [
+      "kw-seo-chennai-01"
+    ],
+    "faq_schema": [
+      {
+        "question": "Why is Joy Digital considered the best website development company in Chennai?",
+        "answer": "Unlike agencies using slow, outdated WordPress templates, Joy Digital builds custom Next.js web applications delivering sub-second load speeds, 95+ Core Web Vitals, and direct API-driven conversion funnels with 100% code ownership."
+      },
+      {
+        "question": "Do you offer combined website development and SEO service?",
+        "answer": "Yes! Every website we engineer includes technical SEO fundamentals built-in from day one: server-rendered HTML for Googlebot, structured JSON-LD schemas, automated XML sitemaps, and optimized Core Web Vitals."
+      }
+    ],
+    "alt_texts": [
+      {
+        "image_url": "/assets/images/hero-banner.webp",
+        "alt_text": "Best website development company in Chennai performance benchmarks"
+      }
+    ],
+    "updated_at": "2026-10-20T15:14:05.416Z"
   }
 ]

@@ -3,15 +3,22 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Web Design Company in Chennai | Joy Digital",
+  title: "Web Design Company Chennai",
   description: "Joy Digital is a leading web design company in Chennai. We build high-speed, responsive websites & local SEO plans. Find a website developer near me.",
+  keywords: [
+      "Website Design Company in Chennai",
+      "Top Web Design Firm Chennai",
+      "Creative Web Designers Chennai",
+      "Mobile Friendly Web Design Chennai",
+      "Custom Web Portals Chennai"
+  ],
   alternates: {
-    canonical: "https://joydigital.in/website-design-company-in-chennai",
+    canonical: "https://www.joydigital.in/website-design-company-in-chennai",
   },
   openGraph: {
     title: "Web Design Company in Chennai | Premium Website Design Agency",
     description: "Joy Digital is a leading web design company in Chennai. We build high-speed, responsive websites & local SEO plans. Find a website developer near me.",
-    url: "https://joydigital.in/website-design-company-in-chennai",
+    url: "https://www.joydigital.in/website-design-company-in-chennai",
     type: "website",
   },
   twitter: {
@@ -29,7 +36,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -58,7 +65,7 @@ export default function WebsiteDesignChennai() {
       heroTitle="Web Design Company in Chennai"
       heroSubtitle="Looking for a website developer near me or a web development agency in T Nagar / Guindy / Velachery? We design high-speed Next.js websites that convert local search traffic into leads."
       leadSource="Website Design Chennai Landing Page"
-      canonicalUrl="https://joydigital.in/website-design-company-in-chennai"
+      canonicalUrl="https://www.joydigital.in/website-design-company-in-chennai"
       overviewTitle="Local Web Design Company in Chennai Built for Results"
       overviewContent={
         <div className="space-y-6">
@@ -68,7 +75,7 @@ export default function WebsiteDesignChennai() {
           <p>
             Whether you are looking for a reliable <strong>website developer near me</strong> or a full-service <strong>web development agency in T Nagar / Guindy / Velachery</strong>, our team has 9+ years of experience helping Chennai businesses establish dominant local search authority.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Mobile-Responsive Layouts for T Nagar, Guindy & Velachery Businesses</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Mobile-Responsive Layouts for T Nagar, Guindy & Velachery Businesses</h3>
           <p>
             Over 80% of local service queries in Tamil Nadu occur on smartphones. We design clean wireframes, compressed media, and secure code structures. This ensures your website loads under 1.5 seconds and renders beautifully across all mobile browsers.
           </p>
@@ -198,7 +205,7 @@ export default function WebsiteDesignChennai() {
       schemaMarkup={pageSchema}
       crossLinks={[
         { href: "/website-development-company-chennai", label: "website development in Chennai" },
-        { href: "/seo-services-in-chennai", label: "SEO Services Chennai" },
+        { href: "/seo-services-chennai", label: "SEO Services Chennai" },
         { href: "/case-studies", label: "Case Studies" },
       ]}
     />

@@ -13,7 +13,6 @@ export async function generateStaticParams() {
     { country: "us" },
     { country: "uk" },
     { country: "ae" },
-    { country: "in" },
     { country: "ca" },
     { country: "au" },
     { country: "es" },
@@ -220,32 +219,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ke: "Kenya",
   };
   const countryName = countryNames[countryLower] || countryLower.toUpperCase();
-  const title = `SEO Services in ${countryName} | Drive Organic Growth - Joy Digital`;
+  const title = `SEO Services in ${countryName}`;
   
   return {
     title,
     description: `Joy Digital is a professional SEO agency serving the ${config.targetMarket}. We rank your website on Google using technical audits, content clusters, and high-quality backlink outreach.`,
     alternates: {
-      canonical: `https://joydigital.in/${countryLower}/seo-services`,
+      canonical: `https://www.joydigital.in/${countryLower}/seo-services`,
       languages: {
-        "x-default": "https://joydigital.in/seo-services",
-        "en-in": "https://joydigital.in/seo-services",
-        "en-us": "https://joydigital.in/us/seo-services",
-        "en-gb": "https://joydigital.in/uk/seo-services",
-        "en-ae": "https://joydigital.in/ae/seo-services",
-        "en-ca": "https://joydigital.in/ca/seo-services",
-        "en-au": "https://joydigital.in/au/seo-services",
-        "es-es": "https://joydigital.in/es/seo-services",
-        "de-de": "https://joydigital.in/de/seo-services",
-        "fr-fr": "https://joydigital.in/fr/seo-services",
-        "it-it": "https://joydigital.in/it/seo-services",
-        "en-sg": "https://joydigital.in/sg/seo-services",
-        "es-mx": "https://joydigital.in/mx/seo-services",
-        "pt-br": "https://joydigital.in/br/seo-services",
-        "en-my": "https://joydigital.in/my/seo-services",
-        "en-za": "https://joydigital.in/za/seo-services",
-        "en-ng": "https://joydigital.in/ng/seo-services",
-        "en-ke": "https://joydigital.in/ke/seo-services",
+        "x-default": "https://www.joydigital.in/seo-services",
+        "en-IN": "https://www.joydigital.in/seo-services",
+        "en-US": "https://www.joydigital.in/us/seo-services",
+        "en-GB": "https://www.joydigital.in/uk/seo-services",
+        "en-AE": "https://www.joydigital.in/ae/seo-services",
+        "en-CA": "https://www.joydigital.in/ca/seo-services",
+        "en-AU": "https://www.joydigital.in/au/seo-services",
       },
     },
   };
@@ -268,7 +256,7 @@ export default async function CountrySEOPage({ params }: PageProps) {
     "provider": {
       "@type": "Organization",
       "name": "Joy Digital",
-      "url": `https://joydigital.in/${country}`
+      "url": `https://www.joydigital.in/${country}`
     },
     "description": `Joy Digital is a premium SEO agency helping companies in ${config.targetMarket} rank on top search results, build authority, and optimize technical page structures.`,
     "offers": {
@@ -295,7 +283,7 @@ export default async function CountrySEOPage({ params }: PageProps) {
           <p>
             At Joy Digital, our strategist team avoids shortcuts, black-hat tricks, and spam networks that trigger search penalties. We align our campaigns around technical crawlability fixes, commercial search intent audits, engaging copywriting, and outreach to secure authoritative digital brand mentions in {config.targetMarket} and globally.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">A Holistic Approach to SEO Performance</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">A Holistic Approach to SEO Performance</h3>
           <p>
             Search visibility requires continuous attention to technical site architecture, page speeds, indexing structures, and clean semantic tag hierarchies. We clean up metadata fields, configure XML sitemaps, optimize redirect pathways, and map out extensive content clusters. This helps search crawlers easily read your layout value.
           </p>

@@ -23,7 +23,7 @@ metaDescription: >-
 focusKeyword: what is the cost of website development in india
 secondaryKeywords: >-
   website development company in india, website development services, website cost in india 2026, Joy Digital, Web Development Pricing
-canonicalUrl: 'https://joydigital.in/blog/website-cost-in-india-2026'
+canonicalUrl: 'https://www.joydigital.in/blog/website-cost-in-india-2026'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Custom Web Development
@@ -38,7 +38,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: How Much Does a Website Cost in India in 2026? A Practical Pricing Guide
 ogDescription: >-
@@ -418,7 +418,9 @@ That question will usually lead you to a much better decision.
 
 At **Joy Digital**, we help businesses build websites that are designed around their services, customers and business goals.
 
-Whether you need a simple business website, a professional company website, an e-commerce website or SEO support, the right solution depends on what you actually need.
+Whether you need a simple business website, a professional company website, or ongoing search visibility, the right solution depends on what you actually need.
+
+At Joy Digital, our **[Custom Website Development](/custom-website-development)** and **[Website Development Company in Chennai](/website-development-company-chennai)** services start from **Rs 25,000 (one-time)** (final price depends on pages, features and integrations). For ongoing organic growth, explore our specialized **[SEO Services in Chennai](/seo-services-chennai)** and check our verified client results in the **[You & Me Voyage Case Study](/case-studies/you-and-me-voyage)**.
 
 If you're planning a new website and aren't sure what type of website or budget is right for your business, you can **contact Joy Digital for a discussion about your requirements.**
 

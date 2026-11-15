@@ -98,34 +98,45 @@ export default function GstCalculatorClient() {
     }
 
     setInputValue(clean);
-
     const parsed = parseFloat(clean);
-    if (clean.length === 0) {
-      setAmount(0);
-      setErrorMsg("");
-    } else if (!isNaN(parsed) && parsed >= 0) {
-      setAmount(parsed);
-      setErrorMsg("");
-      trackToolUsage({
-        toolName: "GST Calculator",
-        action: "gst_calculator_used",
-        metadata: { value: parsed }
-      });
-    } else {
-      setAmount(0);
-      setErrorMsg("Please enter a valid amount.");
-    }
-  };
 
-  const handleFocus = () => {
-    setIsFocused(true);
-    setInputValue(amount > 0 ? amount.toString() : "");
+    if (!clean) {
+      setAmount(0);
+      setErrorMsg("Amount is required");
+      return;
+    }
+
+    if (isNaN(parsed) || parsed < 0) {
+      setErrorMsg("Please enter a valid positive number");
+      setAmount(0);
+      return;
+    }
+
+    if (parsed > 1000000000) {
+      setErrorMsg("Amount exceeds maximum limit (₹100 Cr)");
+      return;
+    }
+
+    setErrorMsg("");
+    setAmount(parsed);
+    trackToolUsage({
+      toolName: "GST Calculator",
+      action: "amount_changed",
+      metadata: { amount: parsed }
+    });
   };
 
   const handleBlur = () => {
     setIsFocused(false);
     if (amount > 0) {
-      setInputValue(new Intl.NumberFormat("en-IN", { maximumFractionDigits: 2 }).format(amount));
+      setInputValue(new Intl.NumberFormat("en-IN").format(amount));
+    }
+  };
+
+  const handleFocus = () => {
+    setIsFocused(true);
+    if (amount > 0) {
+      setInputValue(amount.toString());
     } else {
       setInputValue("");
     }
@@ -233,21 +244,27 @@ export default function GstCalculatorClient() {
     <>
       <Header />
 
-      <main className="bg-[#FAF9FF] text-[#1F1B2D] min-h-screen pt-24 pb-16">
+      <main className="bg-[#3B1580] text-[#FFFFFF] min-h-screen pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-6">
           
           {/* Breadcrumbs */}
-          <nav className="text-xs text-[#6B6478] font-bold mb-6 flex items-center gap-1.5" aria-label="Breadcrumb">
-            <a href="/" className="hover:text-[#7C3AED]">Home</a>
-            <i className="fa-solid fa-chevron-right text-[8px]" aria-hidden="true" />
-            <span className="text-[#1F1B2D]" aria-current="page">GST Calculator</span>
+          <nav className="text-xs text-[#D9CCF5]/80 font-bold mb-6 flex items-center gap-1.5" aria-label="Breadcrumb">
+            <a href="/" className="hover:text-[#C9F600] transition-colors">Home</a>
+            <i className="fa-solid fa-chevron-right text-[8px] text-[#D9CCF5]/50" aria-hidden="true" />
+            <a href="/free-tools" className="hover:text-[#C9F600] transition-colors">Free Tools</a>
+            <i className="fa-solid fa-chevron-right text-[8px] text-[#D9CCF5]/50" aria-hidden="true" />
+            <span className="text-white" aria-current="page">GST Calculator</span>
           </nav>
 
           {/* H1 and supporting text */}
           <div className="mb-10 text-center max-w-2xl mx-auto">
-            <h1 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
-            Online GST Calculator Tool
-          </h1>  <p className="text-xs sm:text-sm text-[#6B6478] font-semibold leading-relaxed">
+            <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-2">
+              Free Financial Utility
+            </span>
+            <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
+              Online GST Calculator Tool
+            </h1>
+            <p className="text-xs sm:text-sm text-[#D9CCF5]/90 font-medium leading-relaxed">
               Calculate Goods and Services Tax (GST) instantly with our free tool. Easily estimate CGST, SGST, or IGST breakdowns for 5%, 12%, 18%, and 28% tax slabs.
             </p>
           </div>
@@ -255,18 +272,18 @@ export default function GstCalculatorClient() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
             
             {/* Input Configuration Column */}
-            <div className="lg:col-span-7 bg-white border border-[#E9E4F2] p-6 sm:p-8 rounded-[24px] shadow-sm relative overflow-hidden flex flex-col gap-6">
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-[#7C3AED]" />
+            <div className="lg:col-span-7 bg-[#260B5E] border border-white/20 p-6 sm:p-8 rounded-[24px] shadow-2xl relative overflow-hidden flex flex-col gap-6">
+              <div className="absolute top-0 left-0 w-full h-1.5 bg-[#C9F600]" />
 
               {/* 1. Product / Service Amount Input */}
               <div className="flex flex-col gap-2">
-                <label htmlFor="gst-amount-input" className="text-xs font-black text-[#1F1B2D] tracking-wide block">
+                <label htmlFor="gst-amount-input" className="text-xs font-bold text-white tracking-wide block">
                   Product / Service Amount
                 </label>
-                <div className={`flex items-center gap-2.5 bg-[#FAF9FF] border rounded-2xl px-4 py-3.5 focus-within:bg-white focus-within:ring-4 focus-within:ring-[#7C3AED]/10 transition-all ${
-                  errorMsg ? "border-rose-450 focus-within:border-rose-450 focus-within:ring-rose-500/10" : "border-[#E9E4F2] focus-within:border-[#7C3AED]"
+                <div className={`flex items-center gap-2.5 bg-[#3B1580] border rounded-2xl px-4 py-3.5 focus-within:ring-4 focus-within:ring-[#C9F600]/20 transition-all ${
+                  errorMsg ? "border-rose-450 focus-within:border-rose-450" : "border-white/20 focus-within:border-[#C9F600]"
                 }`}>
-                  <span className="text-sm font-extrabold text-[#6B6478]" aria-hidden="true">₹</span>
+                  <span className="text-sm font-extrabold text-[#C9F600]" aria-hidden="true">₹</span>
                   <input
                     type="text"
                     id="gst-amount-input"
@@ -275,23 +292,23 @@ export default function GstCalculatorClient() {
                     onBlur={handleBlur}
                     onChange={(e) => handleAmountChange(e.target.value)}
                     placeholder="Enter amount"
-                    className="w-full text-xs outline-none border-none bg-transparent font-bold text-[#1F1B2D] placeholder:text-[#A7A2B2]"
+                    className="w-full text-xs sm:text-sm outline-none border-none bg-transparent font-bold text-white placeholder:text-white/40"
                   />
                 </div>
-                {errorMsg && <p className="text-[10px] font-bold text-rose-500 mt-1">{errorMsg}</p>}
+                {errorMsg && <p className="text-xs font-bold text-rose-400 mt-1">{errorMsg}</p>}
               </div>
 
               {/* 2. GST Calculation Mode Exclusive/Inclusive */}
               <div className="flex flex-col gap-2">
-                <span className="text-xs font-black text-[#1F1B2D] tracking-wide block">GST Calculation Mode</span>
-                <div className="flex gap-2 bg-slate-50 p-1.5 rounded-2xl border border-[#E9E4F2]">
+                <span className="text-xs font-bold text-white tracking-wide block">GST Calculation Mode</span>
+                <div className="flex gap-2 bg-[#1A0742] p-1.5 rounded-2xl border border-white/15">
                   <button
                     type="button"
                     onClick={() => handleModeToggle("exclusive")}
                     className={`flex-1 text-center py-2.5 text-xs font-bold rounded-xl transition-all cursor-pointer ${
                       calculationMode === "exclusive"
-                        ? "bg-white text-[#7C3AED] shadow-sm border border-[#E9E4F2]"
-                        : "text-[#6B6478] hover:text-[#1F1B2D]"
+                        ? "bg-[#C9F600] text-[#120526] shadow-md shadow-[#C9F600]/20"
+                        : "text-[#D9CCF5] hover:text-white"
                     }`}
                   >
                     GST Exclusive (Add Tax)
@@ -301,8 +318,8 @@ export default function GstCalculatorClient() {
                     onClick={() => handleModeToggle("inclusive")}
                     className={`flex-1 text-center py-2.5 text-xs font-bold rounded-xl transition-all cursor-pointer ${
                       calculationMode === "inclusive"
-                        ? "bg-white text-[#7C3AED] shadow-sm border border-[#E9E4F2]"
-                        : "text-[#6B6478] hover:text-[#1F1B2D]"
+                        ? "bg-[#C9F600] text-[#120526] shadow-md shadow-[#C9F600]/20"
+                        : "text-[#D9CCF5] hover:text-white"
                     }`}
                   >
                     GST Inclusive (Tax Included)
@@ -312,7 +329,7 @@ export default function GstCalculatorClient() {
 
               {/* 3. GST Rate Selection */}
               <div className="flex flex-col gap-2">
-                <span className="text-xs font-black text-[#1F1B2D] tracking-wide block">GST Rate (%)</span>
+                <span className="text-xs font-bold text-white tracking-wide block">GST Rate (%)</span>
                 <div className="grid grid-cols-5 gap-2">
                   {[0, 5, 12, 18, 28].map((rate) => (
                     <button
@@ -321,8 +338,8 @@ export default function GstCalculatorClient() {
                       onClick={() => handleRateChange(rate)}
                       className={`py-3.5 text-xs font-black rounded-xl border transition-all cursor-pointer ${
                         gstPercentage === rate
-                          ? "bg-[#7C3AED] text-white border-[#7C3AED] shadow-sm scale-[1.01]"
-                          : "bg-white text-[#1F1B2D] border-[#E9E4F2] hover:bg-slate-50"
+                          ? "bg-[#C9F600] text-[#120526] border-[#C9F600] shadow-md shadow-[#C9F600]/20 scale-[1.02]"
+                          : "bg-[#3B1580] text-white border-white/20 hover:border-white/40 hover:bg-[#431B8E]"
                       }`}
                     >
                       {rate}%
@@ -333,7 +350,7 @@ export default function GstCalculatorClient() {
 
               {/* 4. Transaction Type */}
               <div className="flex flex-col gap-2">
-                <span className="text-xs font-black text-[#1F1B2D] tracking-wide block">Transaction Type</span>
+                <span className="text-xs font-bold text-white tracking-wide block">Transaction Type</span>
                 <div className="grid grid-cols-2 gap-3">
                   {[
                     { value: "intra", label: "Intra-State", desc: "Local trade within same state" },
@@ -345,12 +362,12 @@ export default function GstCalculatorClient() {
                       onClick={() => handleTransactionChange(t.value as TransType)}
                       className={`p-4 rounded-[18px] border text-left flex flex-col justify-center gap-1.5 transition-all cursor-pointer ${
                         transactionType === t.value
-                          ? "bg-[#7C3AED]/5 text-[#7C3AED] border-[#7C3AED]/40 shadow-sm"
-                          : "bg-white text-slate-500 border-[#E9E4F2] hover:bg-slate-50"
+                          ? "bg-[#C9F600]/15 text-[#C9F600] border-[#C9F600] shadow-sm"
+                          : "bg-[#3B1580] text-[#D9CCF5] border-white/20 hover:border-white/40 hover:bg-[#431B8E]"
                       }`}
                     >
-                      <span className="text-xs font-black">{t.label}</span>
-                      <span className="text-[9px] font-bold text-slate-400">{t.desc}</span>
+                      <span className={`text-xs font-black ${transactionType === t.value ? "text-[#C9F600]" : "text-white"}`}>{t.label}</span>
+                      <span className="text-[10px] font-medium text-[#D9CCF5]/70">{t.desc}</span>
                     </button>
                   ))}
                 </div>
@@ -358,53 +375,53 @@ export default function GstCalculatorClient() {
             </div>
 
             {/* Results breakdown Column */}
-            <div className="lg:col-span-5 bg-white border border-[#E9E4F2] p-6 sm:p-8 rounded-[24px] shadow-sm flex flex-col justify-between h-full min-h-[460px]">
+            <div className="lg:col-span-5 bg-[#260B5E] border border-white/20 p-6 sm:p-8 rounded-[24px] shadow-2xl flex flex-col justify-between h-full min-h-[460px]">
               <div>
-                <h2 className="text-sm font-black text-[#1F1B2D] mb-6 border-b border-[#E9E4F2] pb-3" id="calc-result-title">
+                <h2 className="text-sm font-black text-white mb-6 border-b border-white/15 pb-3" id="calc-result-title">
                   Calculation Breakdown
                 </h2>
                 
                 {amount > 0 && !errorMsg ? (
                   <div className="flex flex-col gap-4" aria-labelledby="calc-result-title">
                     <div className="flex justify-between items-center text-xs font-bold py-1">
-                      <span className="text-[#6B6478]">Base Amount</span>
-                      <span className="text-[#1F1B2D] font-extrabold">{formatINR(baseAmount)}</span>
+                      <span className="text-[#D9CCF5]/80">Base Amount</span>
+                      <span className="text-white font-extrabold">{formatINR(baseAmount)}</span>
                     </div>
 
                     {transactionType === "intra" ? (
                       <>
-                        <div className="flex justify-between items-center text-xs font-bold py-1 border-t border-slate-50 pt-3">
-                          <span className="text-[#6B6478]">CGST ({gstPercentage / 2}%)</span>
-                          <span className="text-[#1F1B2D]">{formatINR(cgst)}</span>
+                        <div className="flex justify-between items-center text-xs font-bold py-1 border-t border-white/10 pt-3">
+                          <span className="text-[#D9CCF5]/80">CGST ({gstPercentage / 2}%)</span>
+                          <span className="text-white font-bold">{formatINR(cgst)}</span>
                         </div>
-                        <div className="flex justify-between items-center text-xs font-bold py-1 border-t border-slate-50 pt-3">
-                          <span className="text-[#6B6478]">SGST ({gstPercentage / 2}%)</span>
-                          <span className="text-[#1F1B2D]">{formatINR(sgst)}</span>
+                        <div className="flex justify-between items-center text-xs font-bold py-1 border-t border-white/10 pt-3">
+                          <span className="text-[#D9CCF5]/80">SGST ({gstPercentage / 2}%)</span>
+                          <span className="text-white font-bold">{formatINR(sgst)}</span>
                         </div>
                       </>
                     ) : (
-                      <div className="flex justify-between items-center text-xs font-bold py-1 border-t border-slate-50 pt-3">
-                        <span className="text-[#6B6478]">IGST ({gstPercentage}%)</span>
-                        <span className="text-[#1F1B2D]">{formatINR(igst)}</span>
+                      <div className="flex justify-between items-center text-xs font-bold py-1 border-t border-white/10 pt-3">
+                        <span className="text-[#D9CCF5]/80">IGST ({gstPercentage}%)</span>
+                        <span className="text-white font-bold">{formatINR(igst)}</span>
                       </div>
                     )}
 
-                    <div className="flex justify-between items-center text-xs font-bold py-1 border-t border-slate-50 pt-3 text-[#7C3AED]">
+                    <div className="flex justify-between items-center text-xs font-bold py-1 border-t border-white/10 pt-3 text-[#C9F600]">
                       <span>Total GST Tax Amount</span>
                       <span className="font-extrabold">{formatINR(gstAmount)}</span>
                     </div>
 
-                    <div className="flex justify-between items-center text-sm font-extrabold py-5 border-t border-[#E9E4F2] mt-3 text-[#1F1B2D]">
+                    <div className="flex justify-between items-center text-sm font-extrabold py-5 border-t border-white/15 mt-3 text-white">
                       <span>Grand Total</span>
-                      <span className="text-2xl font-black text-[#7C3AED]">{formatINR(finalAmount)}</span>
+                      <span className="text-2xl sm:text-3xl font-black text-[#C9F600]">{formatINR(finalAmount)}</span>
                     </div>
                   </div>
                 ) : (
                   <div className="flex flex-col items-center justify-center py-16 text-center">
-                    <div className="w-12 h-12 rounded-full bg-slate-50 border border-[#E9E4F2] flex items-center justify-center text-slate-400 text-lg mb-4">
+                    <div className="w-12 h-12 rounded-full bg-[#3B1580] border border-white/20 flex items-center justify-center text-[#C9F600] text-lg mb-4">
                       <i className="fa-solid fa-calculator" />
                     </div>
-                    <p className="text-xs text-slate-450 font-bold leading-relaxed max-w-[200px]">
+                    <p className="text-xs text-[#D9CCF5]/70 font-medium leading-relaxed max-w-[200px]">
                       {errorMsg || "Enter an amount above to see the tax breakdown."}
                     </p>
                   </div>
@@ -412,12 +429,12 @@ export default function GstCalculatorClient() {
               </div>
 
               {/* Actions Box */}
-              <div className="flex flex-col gap-3 mt-6 border-t border-slate-50 pt-5">
+              <div className="flex flex-col gap-3 mt-6 border-t border-white/10 pt-5">
                 <button
                   type="button"
                   onClick={handleCopyResult}
                   disabled={amount <= 0 || !!errorMsg}
-                  className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-xs py-4 rounded-xl transition-all shadow-md shadow-[#7C3AED]/15 hover:scale-[1.015] flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-[#C9F600] hover:bg-[#b8f000] text-[#120526] font-black text-xs py-4 rounded-xl transition-all shadow-lg shadow-[#C9F600]/20 hover:scale-[1.015] flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {copySuccess ? (
                     <>
@@ -435,25 +452,25 @@ export default function GstCalculatorClient() {
                     type="button"
                     onClick={handleShareResult}
                     disabled={amount <= 0 || !!errorMsg}
-                    className="flex-1 bg-white border border-[#E9E4F2] hover:bg-slate-50 text-slate-700 font-bold text-xs py-3.5 rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="flex-1 bg-[#3B1580] border border-white/20 hover:bg-[#431B8E] text-white font-bold text-xs py-3.5 rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <i className="fa-solid fa-share-nodes" /> {shareSuccess ? "Copied Share Text" : "Share"}
                   </button>
                   <button
                     type="button"
                     onClick={handleReset}
-                    className="flex-1 bg-white border border-[#E9E4F2] hover:bg-slate-50 text-slate-700 font-bold text-xs py-3.5 rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                    className="flex-1 bg-[#3B1580] border border-white/20 hover:bg-[#431B8E] text-white font-bold text-xs py-3.5 rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <i className="fa-solid fa-rotate-left" /> Reset
                   </button>
                 </div>
               </div>
 
-              {/* Pitch CTA Card: AUTOMATED BILLING SOFTWARE PITCH */}
-              <div className="bg-[#FAF9FF] border border-[#E9E4F2] p-5 rounded-2xl mt-6 relative overflow-hidden text-left">
-                <div className="absolute top-0 left-0 h-full w-1 bg-[#7C3AED]" />
-                <h3 className="text-xs font-black text-[#1F1B2D] mb-1">Automate Your Invoicing & Billing!</h3>
-                <p className="text-[10px] text-[#6B6478] font-bold leading-relaxed mb-4">
+              {/* Pitch CTA Card */}
+              <div className="bg-[#1A0742] border border-[#C9F600]/30 p-5 rounded-2xl mt-6 relative overflow-hidden text-left">
+                <div className="absolute top-0 left-0 h-full w-1 bg-[#C9F600]" />
+                <h3 className="text-xs font-black text-white mb-1">Automate Your Invoicing & Billing!</h3>
+                <p className="text-[10px] text-[#D9CCF5]/80 font-medium leading-relaxed mb-4">
                   We design custom quotation engines, automated GST invoicing portals, and lead systems to save you 10+ hours per week.
                 </p>
                 <a
@@ -461,7 +478,7 @@ export default function GstCalculatorClient() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleCtaClick}
-                  className="inline-flex items-center gap-1.5 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-[10px] py-2.5 px-4.5 rounded-lg shadow-sm hover:scale-[1.01] transition-all cursor-pointer"
+                  className="inline-flex items-center gap-1.5 bg-[#C9F600] hover:bg-[#b8f000] text-[#120526] font-black text-[10px] py-2.5 px-4.5 rounded-lg shadow-sm hover:scale-[1.01] transition-all cursor-pointer"
                 >
                   <i className="fa-brands fa-whatsapp text-xs" /> Talk to an Automation Expert
                 </a>

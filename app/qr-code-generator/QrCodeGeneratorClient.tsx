@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { trackToolUsage } from "@/lib/toolTracker";
+import ToolFeedback from "@/components/ui/ToolFeedback";
 
 type QrType = "url" | "whatsapp" | "phone" | "email" | "text" | "maps" | "upi" | "wifi";
 
@@ -11,7 +12,7 @@ export default function QrCodeGeneratorClient() {
   const [type, setType] = useState<QrType>("url");
   
   // Specific inputs
-  const [url, setUrl] = useState<string>("https://joydigital.in");
+  const [url, setUrl] = useState<string>("https://www.joydigital.in");
   const [waPhone, setWaPhone] = useState<string>("");
   const [waMessage, setWaMessage] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
@@ -94,7 +95,7 @@ export default function QrCodeGeneratorClient() {
             width: 240,
             margin: 2,
             color: {
-              dark: "#1F1B2D",
+              dark: "#120526",
               light: "#FFFFFF"
             }
           });
@@ -138,7 +139,7 @@ export default function QrCodeGeneratorClient() {
   };
 
   const handleReset = () => {
-    setUrl("https://joydigital.in");
+    setUrl("https://www.joydigital.in");
     setWaPhone("");
     setWaMessage("");
     setPhone("");
@@ -166,26 +167,31 @@ export default function QrCodeGeneratorClient() {
     <>
       <Header />
 
-      <main className="bg-[#FAF9FF] text-[#1F1B2D] min-h-screen pt-24 pb-16">
+      <main className="bg-[#3B1580] text-[#FFFFFF] min-h-screen pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-6">
           
           {/* Breadcrumbs */}
-          <nav className="text-xs text-[#6B6478] font-bold mb-6 flex items-center gap-1.5">
-            <a href="/" className="hover:text-[#7C3AED]">Home</a>
+          <nav className="text-xs text-[#D9CCF5] font-bold mb-6 flex items-center gap-1.5" aria-label="Breadcrumb">
+            <a href="/" className="hover:text-[#C9F600] transition-colors">Home</a>
             <i className="fa-solid fa-chevron-right text-[8px]" />
-            <span className="text-[#1F1B2D]" aria-current="page">QR Code Generator</span>
+            <a href="/free-tools" className="hover:text-[#C9F600] transition-colors">Free Tools</a>
+            <i className="fa-solid fa-chevron-right text-[8px]" />
+            <span className="text-white" aria-current="page">QR Code Generator</span>
           </nav>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
             
             {/* Input Form Card */}
-            <div className="lg:col-span-7 bg-white border border-[#E9E4F2] p-8 rounded-[24px] shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-[#F97316]" />
+            <div className="lg:col-span-7 bg-[#260B5E] border border-white/20 p-8 rounded-[24px] shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1.5 bg-[#C9F600]" />
               
               <div className="mb-8 text-left">
-                <h1 className="text-2xl font-black text-[#1F1B2D] mb-2">QR Code Generator</h1>
-                <p className="text-xs text-[#6B6478] font-semibold leading-relaxed">
-                  Generate professional QR codes for links, emails, WiFi, maps, and UPI payments instantly.
+                <span className="text-[10px] font-black text-[#C9F600] uppercase tracking-widest block mb-1">
+                  100% Free & Unlimited
+                </span>
+                <h1 className="text-2xl sm:text-3xl font-black text-white mb-2">QR Code Generator</h1>
+                <p className="text-xs text-[#D9CCF5]/80 font-medium leading-relaxed">
+                  Generate professional QR codes for links, WhatsApp, phone numbers, WiFi, Google Maps, and UPI payments instantly.
                 </p>
               </div>
 
@@ -207,8 +213,8 @@ export default function QrCodeGeneratorClient() {
                     onClick={() => setType(item.value as QrType)}
                     className={`py-3 text-[10px] font-bold rounded-xl border flex flex-col items-center gap-1.5 transition-all cursor-pointer ${
                       type === item.value
-                        ? "bg-[#F97316] text-white border-[#F97316] shadow-sm"
-                        : "bg-[#FAF9FF] text-[#6B6478] border-[#E9E4F2] hover:bg-slate-50 hover:text-[#1F1B2D]"
+                        ? "bg-[#C9F600] text-[#120526] border-[#C9F600] font-black shadow-md shadow-[#C9F600]/20"
+                        : "bg-[#3B1580] text-[#D9CCF5] border-white/15 hover:bg-[#431B8E] hover:text-white"
                     }`}
                   >
                     <i className={item.icon} />
@@ -221,9 +227,9 @@ export default function QrCodeGeneratorClient() {
                 
                 {type === "url" && (
                   <div className="flex flex-col gap-1.5 text-left">
-                    <label htmlFor="url" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">URL / Link Address</label>
-                    <div className="flex items-center gap-2 bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3.5 focus-within:bg-white focus-within:border-[#F97316] focus-within:ring-4 focus-within:ring-[#F97316]/10 transition-all">
-                      <span className="text-sm font-bold text-[#6B6478]"><i className="fa-solid fa-globe" /></span>
+                    <label htmlFor="url" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">URL / Link Address</label>
+                    <div className="flex items-center gap-2 bg-[#3B1580] border border-white/20 rounded-xl px-4 py-3.5 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/20 transition-all">
+                      <span className="text-sm font-bold text-[#C9F600]"><i className="fa-solid fa-globe" /></span>
                       <input
                         type="url"
                         id="url"
@@ -231,7 +237,7 @@ export default function QrCodeGeneratorClient() {
                         onChange={(e) => setUrl(e.target.value)}
                         placeholder="https://example.com"
                         required
-                        className="w-full text-sm outline-none border-none bg-transparent font-bold text-[#1F1B2D] placeholder:text-[#A7A2B2]"
+                        className="w-full text-sm outline-none border-none bg-transparent font-bold text-white placeholder:text-white/40"
                       />
                     </div>
                   </div>
@@ -240,9 +246,9 @@ export default function QrCodeGeneratorClient() {
                 {type === "whatsapp" && (
                   <div className="flex flex-col gap-4 text-left">
                     <div className="flex flex-col gap-1.5">
-                      <label htmlFor="waPhone" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">WhatsApp Number (with country code)</label>
-                      <div className="flex items-center gap-2 bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3.5 focus-within:bg-white focus-within:border-[#F97316] focus-within:ring-4 focus-within:ring-[#F97316]/10 transition-all">
-                        <span className="text-sm font-bold text-[#6B6478]"><i className="fa-solid fa-phone" /></span>
+                      <label htmlFor="waPhone" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">WhatsApp Number (with country code)</label>
+                      <div className="flex items-center gap-2 bg-[#3B1580] border border-white/20 rounded-xl px-4 py-3.5 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/20 transition-all">
+                        <span className="text-sm font-bold text-[#C9F600]"><i className="fa-brands fa-whatsapp" /></span>
                         <input
                           type="tel"
                           id="waPhone"
@@ -250,20 +256,20 @@ export default function QrCodeGeneratorClient() {
                           onChange={(e) => setWaPhone(e.target.value)}
                           placeholder="e.g. 919080026133"
                           required
-                          className="w-full text-sm outline-none border-none bg-transparent font-bold text-[#1F1B2D] placeholder:text-[#A7A2B2]"
+                          className="w-full text-sm outline-none border-none bg-transparent font-bold text-white placeholder:text-white/40"
                         />
                       </div>
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <label htmlFor="waMessage" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">Pre-filled Chat Text</label>
-                      <div className="bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl p-3 focus-within:bg-white focus-within:border-[#F97316] focus-within:ring-4 focus-within:ring-[#F97316]/10 transition-all">
+                      <label htmlFor="waMessage" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">Pre-filled Chat Text</label>
+                      <div className="bg-[#3B1580] border border-white/20 rounded-xl p-3 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/20 transition-all">
                         <textarea
                           id="waMessage"
                           value={waMessage}
                           onChange={(e) => setWaMessage(e.target.value)}
                           rows={3}
                           placeholder="Welcome text..."
-                          className="w-full text-xs outline-none border-none bg-transparent font-bold text-[#1F1B2D] placeholder:text-[#A7A2B2] resize-none"
+                          className="w-full text-xs outline-none border-none bg-transparent font-bold text-white placeholder:text-white/40 resize-none"
                         />
                       </div>
                     </div>
@@ -272,9 +278,9 @@ export default function QrCodeGeneratorClient() {
 
                 {type === "phone" && (
                   <div className="flex flex-col gap-1.5 text-left">
-                    <label htmlFor="phone" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">Phone Contact Number</label>
-                    <div className="flex items-center gap-2 bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3.5 focus-within:bg-white focus-within:border-[#F97316] focus-within:ring-4 focus-within:ring-[#F97316]/10 transition-all">
-                      <span className="text-sm font-bold text-[#6B6478]"><i className="fa-solid fa-phone" /></span>
+                    <label htmlFor="phone" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">Phone Contact Number</label>
+                    <div className="flex items-center gap-2 bg-[#3B1580] border border-white/20 rounded-xl px-4 py-3.5 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/20 transition-all">
+                      <span className="text-sm font-bold text-[#C9F600]"><i className="fa-solid fa-phone" /></span>
                       <input
                         type="tel"
                         id="phone"
@@ -282,7 +288,7 @@ export default function QrCodeGeneratorClient() {
                         onChange={(e) => setPhone(e.target.value)}
                         placeholder="Enter phone number..."
                         required
-                        className="w-full text-sm outline-none border-none bg-transparent font-bold text-[#1F1B2D] placeholder:text-[#A7A2B2]"
+                        className="w-full text-sm outline-none border-none bg-transparent font-bold text-white placeholder:text-white/40"
                       />
                     </div>
                   </div>
@@ -291,9 +297,9 @@ export default function QrCodeGeneratorClient() {
                 {type === "email" && (
                   <div className="flex flex-col gap-4 text-left">
                     <div className="flex flex-col gap-1.5">
-                      <label htmlFor="emailTo" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">Email Recipient Address</label>
-                      <div className="flex items-center gap-2 bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3.5 focus-within:bg-white focus-within:border-[#F97316] focus-within:ring-4 focus-within:ring-[#F97316]/10 transition-all">
-                        <span className="text-sm font-bold text-[#6B6478]"><i className="fa-solid fa-envelope" /></span>
+                      <label htmlFor="emailTo" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">Email Recipient Address</label>
+                      <div className="flex items-center gap-2 bg-[#3B1580] border border-white/20 rounded-xl px-4 py-3.5 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/20 transition-all">
+                        <span className="text-sm font-bold text-[#C9F600]"><i className="fa-solid fa-envelope" /></span>
                         <input
                           type="email"
                           id="emailTo"
@@ -301,30 +307,30 @@ export default function QrCodeGeneratorClient() {
                           onChange={(e) => setEmailTo(e.target.value)}
                           placeholder="recipient@example.com"
                           required
-                          className="w-full text-sm outline-none border-none bg-transparent font-bold text-[#1F1B2D] placeholder:text-[#A7A2B2]"
+                          className="w-full text-sm outline-none border-none bg-transparent font-bold text-white placeholder:text-white/40"
                         />
                       </div>
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <label htmlFor="emailSubject" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">Email Subject</label>
+                      <label htmlFor="emailSubject" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">Email Subject</label>
                       <input
                         type="text"
                         id="emailSubject"
                         value={emailSubject}
                         onChange={(e) => setEmailSubject(e.target.value)}
                         placeholder="Subject line..."
-                        className="w-full text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3 outline-none focus:bg-white focus:border-[#F97316]"
+                        className="w-full text-xs bg-[#3B1580] border border-white/20 text-white placeholder-white/40 rounded-xl px-4 py-3 outline-none focus:border-[#C9F600]"
                       />
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <label htmlFor="emailBody" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">Email Body Message</label>
+                      <label htmlFor="emailBody" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">Email Body Message</label>
                       <textarea
                         id="emailBody"
                         value={emailBody}
                         onChange={(e) => setEmailBody(e.target.value)}
                         rows={3}
                         placeholder="Body content..."
-                        className="w-full text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3 outline-none focus:bg-white focus:border-[#F97316] resize-none"
+                        className="w-full text-xs bg-[#3B1580] border border-white/20 text-white placeholder-white/40 rounded-xl px-4 py-3 outline-none focus:border-[#C9F600] resize-none"
                       />
                     </div>
                   </div>
@@ -332,7 +338,7 @@ export default function QrCodeGeneratorClient() {
 
                 {type === "text" && (
                   <div className="flex flex-col gap-1.5 text-left">
-                    <label htmlFor="plainText" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">Plain Text Value</label>
+                    <label htmlFor="plainText" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">Plain Text Value</label>
                     <textarea
                       id="plainText"
                       value={plainText}
@@ -340,16 +346,16 @@ export default function QrCodeGeneratorClient() {
                       rows={5}
                       required
                       placeholder="Enter raw text details..."
-                      className="w-full text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3 outline-none focus:bg-white focus:border-[#F97316] resize-none"
+                      className="w-full text-xs bg-[#3B1580] border border-white/20 text-white placeholder-white/40 rounded-xl px-4 py-3 outline-none focus:border-[#C9F600] resize-none font-medium"
                     />
                   </div>
                 )}
 
                 {type === "maps" && (
                   <div className="flex flex-col gap-1.5 text-left">
-                    <label htmlFor="mapUrl" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">Google Maps Link</label>
-                    <div className="flex items-center gap-2 bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3.5 focus-within:bg-white focus-within:border-[#F97316] focus-within:ring-4 focus-within:ring-[#F97316]/10 transition-all">
-                      <span className="text-sm font-bold text-[#6B6478]"><i className="fa-solid fa-map-pin" /></span>
+                    <label htmlFor="mapUrl" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">Google Maps Link</label>
+                    <div className="flex items-center gap-2 bg-[#3B1580] border border-white/20 rounded-xl px-4 py-3.5 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/20 transition-all">
+                      <span className="text-sm font-bold text-[#C9F600]"><i className="fa-solid fa-map-pin" /></span>
                       <input
                         type="url"
                         id="mapUrl"
@@ -357,7 +363,7 @@ export default function QrCodeGeneratorClient() {
                         onChange={(e) => setMapUrl(e.target.value)}
                         placeholder="https://maps.google.com/..."
                         required
-                        className="w-full text-sm outline-none border-none bg-transparent font-bold text-[#1F1B2D] placeholder:text-[#A7A2B2]"
+                        className="w-full text-sm outline-none border-none bg-transparent font-bold text-white placeholder:text-white/40"
                       />
                     </div>
                   </div>
@@ -367,7 +373,7 @@ export default function QrCodeGeneratorClient() {
                   <div className="flex flex-col gap-4 text-left">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <div className="flex flex-col gap-1.5">
-                        <label htmlFor="upiId" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">UPI VPA ID *</label>
+                        <label htmlFor="upiId" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">UPI VPA ID *</label>
                         <input
                           type="text"
                           id="upiId"
@@ -375,11 +381,11 @@ export default function QrCodeGeneratorClient() {
                           onChange={(e) => setUpiId(e.target.value)}
                           placeholder="e.g. business@upi"
                           required
-                          className="w-full text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3 outline-none focus:bg-white focus:border-[#F97316]"
+                          className="w-full text-xs bg-[#3B1580] border border-white/20 text-white placeholder-white/40 rounded-xl px-4 py-3 outline-none focus:border-[#C9F600]"
                         />
                       </div>
                       <div className="flex flex-col gap-1.5">
-                        <label htmlFor="upiName" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">Payee Name *</label>
+                        <label htmlFor="upiName" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">Payee Name *</label>
                         <input
                           type="text"
                           id="upiName"
@@ -387,31 +393,31 @@ export default function QrCodeGeneratorClient() {
                           onChange={(e) => setUpiName(e.target.value)}
                           placeholder="e.g. Acme Agency"
                           required
-                          className="w-full text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3 outline-none focus:bg-white focus:border-[#F97316]"
+                          className="w-full text-xs bg-[#3B1580] border border-white/20 text-white placeholder-white/40 rounded-xl px-4 py-3 outline-none focus:border-[#C9F600]"
                         />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <div className="flex flex-col gap-1.5">
-                        <label htmlFor="upiAmount" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">Amount (Optional)</label>
+                        <label htmlFor="upiAmount" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">Amount (Optional)</label>
                         <input
                           type="number"
                           id="upiAmount"
                           value={upiAmount}
                           onChange={(e) => setUpiAmount(e.target.value)}
                           placeholder="e.g. 500"
-                          className="w-full text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3 outline-none focus:bg-white focus:border-[#F97316]"
+                          className="w-full text-xs bg-[#3B1580] border border-white/20 text-white placeholder-white/40 rounded-xl px-4 py-3 outline-none focus:border-[#C9F600]"
                         />
                       </div>
                       <div className="flex flex-col gap-1.5">
-                        <label htmlFor="upiNote" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">Payment Note (Optional)</label>
+                        <label htmlFor="upiNote" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">Payment Note (Optional)</label>
                         <input
                           type="text"
                           id="upiNote"
                           value={upiNote}
                           onChange={(e) => setUpiNote(e.target.value)}
                           placeholder="e.g. Services payment"
-                          className="w-full text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3 outline-none focus:bg-white focus:border-[#F97316]"
+                          className="w-full text-xs bg-[#3B1580] border border-white/20 text-white placeholder-white/40 rounded-xl px-4 py-3 outline-none focus:border-[#C9F600]"
                         />
                       </div>
                     </div>
@@ -422,7 +428,7 @@ export default function QrCodeGeneratorClient() {
                   <div className="flex flex-col gap-4 text-left">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <div className="flex flex-col gap-1.5">
-                        <label htmlFor="wifiSsid" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">WiFi Network Name (SSID) *</label>
+                        <label htmlFor="wifiSsid" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">WiFi Network Name (SSID) *</label>
                         <input
                           type="text"
                           id="wifiSsid"
@@ -430,26 +436,26 @@ export default function QrCodeGeneratorClient() {
                           onChange={(e) => setWifiSsid(e.target.value)}
                           placeholder="e.g. Home_Network"
                           required
-                          className="w-full text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3 outline-none focus:bg-white focus:border-[#F97316]"
+                          className="w-full text-xs bg-[#3B1580] border border-white/20 text-white placeholder-white/40 rounded-xl px-4 py-3 outline-none focus:border-[#C9F600]"
                         />
                       </div>
                       <div className="flex flex-col gap-1.5">
-                        <label htmlFor="wifiEncryption" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">WiFi Security</label>
+                        <label htmlFor="wifiEncryption" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">WiFi Security</label>
                         <select
                           id="wifiEncryption"
                           value={wifiEncryption}
                           onChange={(e) => setWifiEncryption(e.target.value)}
-                          className="w-full text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3 outline-none focus:bg-white focus:border-[#F97316] font-semibold cursor-pointer"
+                          className="w-full text-xs bg-[#3B1580] border border-white/20 text-white rounded-xl px-4 py-3 outline-none focus:border-[#C9F600] font-semibold cursor-pointer"
                         >
-                          <option value="WPA">WPA / WPA2 / WPA3</option>
-                          <option value="WEP">WEP</option>
-                          <option value="nopass">None (Open)</option>
+                          <option value="WPA" className="bg-[#260B5E] text-white">WPA / WPA2 / WPA3</option>
+                          <option value="WEP" className="bg-[#260B5E] text-white">WEP</option>
+                          <option value="nopass" className="bg-[#260B5E] text-white">None (Open)</option>
                         </select>
                       </div>
                     </div>
                     {wifiEncryption !== "nopass" && (
                       <div className="flex flex-col gap-1.5">
-                        <label htmlFor="wifiPassword" className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider block">WiFi Network Password</label>
+                        <label htmlFor="wifiPassword" className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider block">WiFi Network Password</label>
                         <input
                           type="password"
                           id="wifiPassword"
@@ -457,7 +463,7 @@ export default function QrCodeGeneratorClient() {
                           onChange={(e) => setWifiPassword(e.target.value)}
                           placeholder="••••••••"
                           required
-                          className="w-full text-xs bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3 outline-none focus:bg-white focus:border-[#F97316]"
+                          className="w-full text-xs bg-[#3B1580] border border-white/20 text-white placeholder-white/40 rounded-xl px-4 py-3 outline-none focus:border-[#C9F600]"
                         />
                       </div>
                     )}
@@ -465,17 +471,17 @@ export default function QrCodeGeneratorClient() {
                 )}
 
                 {/* Actions */}
-                <div className="flex gap-4 border-t border-[#E9E4F2] pt-6">
+                <div className="flex gap-4 border-t border-white/15 pt-6">
                   <button
                     type="submit"
-                    className="flex-1 bg-[#F97316] hover:bg-orange-600 text-white font-bold text-xs py-3.5 rounded-xl transition-all shadow-md shadow-orange-500/15 hover:scale-[1.01] flex items-center justify-center gap-1.5 cursor-pointer"
+                    className="flex-1 bg-[#C9F600] hover:bg-[#b8f000] text-[#120526] font-black text-xs py-3.5 rounded-xl transition-all shadow-lg shadow-[#C9F600]/20 hover:scale-[1.01] flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <i className="fa-solid fa-qrcode" /> Generate QR Code
                   </button>
                   <button
                     type="button"
                     onClick={handleReset}
-                    className="bg-transparent border border-[#E9E4F2] hover:bg-slate-50 text-[#1F1B2D] font-bold text-xs py-3.5 px-6 rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                    className="bg-[#3B1580] border border-white/20 hover:bg-[#431B8E] text-white font-bold text-xs py-3.5 px-6 rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <i className="fa-solid fa-rotate-left" /> Reset
                   </button>
@@ -484,30 +490,31 @@ export default function QrCodeGeneratorClient() {
             </div>
 
             {/* Results Display */}
-            <div className="lg:col-span-5 bg-white border border-[#E9E4F2] p-8 rounded-[24px] shadow-sm flex flex-col justify-between h-full min-h-[400px]">
+            <div className="lg:col-span-5 bg-[#260B5E] border border-white/20 p-8 rounded-[24px] shadow-2xl flex flex-col justify-between h-full min-h-[400px]">
               <div>
-                <h2 className="text-lg font-black text-[#1F1B2D] mb-6 border-b border-[#E9E4F2] pb-3" id="qr-result-title">
-                  QR Preview
+                <h2 className="text-lg font-black text-white mb-6 border-b border-white/15 pb-3" id="qr-result-title">
+                  QR Code Preview
                 </h2>
                 
                 {qrValue ? (
                   <div className="flex flex-col items-center gap-6" aria-labelledby="qr-result-title">
-                    <div className="bg-[#FAF9FF] border border-[#E9E4F2] p-6 rounded-2xl flex items-center justify-center shadow-inner relative">
+                    {/* QR Code Canvas container - kept white so cameras have 100% optical contrast */}
+                    <div className="bg-white p-6 rounded-2xl flex items-center justify-center shadow-xl relative border border-white/30">
                       <canvas ref={canvasRef} style={{ display: qrLoaded ? "block" : "none" }} />
                       {!qrLoaded && (
-                        <div className="w-[180px] h-[180px] flex items-center justify-center text-[10px] font-bold text-[#A7A2B2] uppercase tracking-wider">
+                        <div className="w-[180px] h-[180px] flex items-center justify-center text-[10px] font-bold text-slate-400 uppercase tracking-wider">
                           Generating QR...
                         </div>
                       )}
                     </div>
 
                     <div className="w-full text-center">
-                      <span className="text-[9px] font-extrabold text-[#6B6478] uppercase tracking-widest block mb-2">QR Code Data String</span>
-                      <div className="bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3 flex justify-between items-center text-left">
-                        <span className="text-[10px] font-bold truncate text-[#1F1B2D] max-w-[80%]">{qrValue}</span>
+                      <span className="text-[9px] font-extrabold text-[#D9CCF5] uppercase tracking-widest block mb-2">QR Code Data String</span>
+                      <div className="bg-[#3B1580] border border-white/20 rounded-xl px-4 py-3 flex justify-between items-center text-left">
+                        <span className="text-[10px] font-bold truncate text-white max-w-[80%]">{qrValue}</span>
                         <button
                           onClick={handleCopyValue}
-                          className="text-[10px] font-black text-[#F97316] hover:text-orange-600 cursor-pointer flex-shrink-0"
+                          className="text-[10px] font-black text-[#C9F600] hover:underline cursor-pointer flex-shrink-0"
                         >
                           {copySuccess ? "Copied!" : "Copy"}
                         </button>
@@ -517,29 +524,29 @@ export default function QrCodeGeneratorClient() {
                     <button
                       onClick={handleDownloadQR}
                       disabled={!qrLoaded}
-                      className="w-full bg-[#F97316] hover:bg-orange-600 text-white font-bold text-xs py-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full bg-[#C9F600] hover:bg-[#b8f000] text-[#120526] font-black text-xs py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      <i className="fa-solid fa-download" /> Download PNG Image
+                      <i className="fa-solid fa-download" /> Download High-Res PNG
                     </button>
                   </div>
                 ) : (
                   <div className="flex flex-col items-center justify-center py-16 text-center">
-                    <div className="w-16 h-16 rounded-full bg-orange-50 border border-orange-100 flex items-center justify-center text-[#F97316] text-2xl mb-4">
+                    <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[#C9F600] text-2xl mb-4">
                       <i className="fa-solid fa-qrcode" />
                     </div>
-                    <h3 className="font-extrabold text-sm text-[#1F1B2D] mb-1">Enter QR parameters</h3>
-                    <p className="text-[10px] text-[#6B6478] max-w-[200px] leading-relaxed font-semibold">
+                    <h3 className="font-extrabold text-sm text-white mb-1">Enter QR parameters</h3>
+                    <p className="text-[10px] text-[#D9CCF5]/80 max-w-[200px] leading-relaxed font-semibold">
                       Provide network, text, link, or email information to render a real-time QR code.
                     </p>
                   </div>
                 )}
               </div>
 
-              {/* Marketing UX CTA Card: CONVERSION UX & SCAN MARKETING */}
-              <div className="bg-[#FAF9FF] border border-[#E9E4F2] p-5 rounded-2xl mt-6 relative overflow-hidden text-left">
-                <div className="absolute top-0 left-0 h-full w-1 bg-[#F97316]" />
-                <h3 className="text-xs font-black text-[#1F1B2D] mb-1">Increase QR Scan Conversions!</h3>
-                <p className="text-[10px] text-[#6B6478] font-bold leading-relaxed mb-4">
+              {/* Marketing UX CTA Card */}
+              <div className="bg-[#1A0742] border border-[#C9F600]/30 p-5 rounded-2xl mt-6 relative overflow-hidden text-left">
+                <div className="absolute top-0 left-0 h-full w-1 bg-[#C9F600]" />
+                <h3 className="text-xs font-black text-white mb-1">Increase QR Scan Conversions!</h3>
+                <p className="text-[10px] text-[#D9CCF5]/80 font-medium leading-relaxed mb-4">
                   Need a custom client-facing mobile web page or dashboard optimized for quick QR code scans? We build beautiful, conversion-focused mobile interfaces under 1.5s load time.
                 </p>
                 <a
@@ -547,13 +554,15 @@ export default function QrCodeGeneratorClient() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleCtaClick}
-                  className="inline-flex items-center gap-1.5 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-extrabold text-[10px] py-2.5 px-4.5 rounded-lg shadow-sm hover:scale-[1.01] transition-all cursor-pointer"
+                  className="inline-flex items-center gap-1.5 bg-[#C9F600] hover:bg-[#b8f000] text-[#120526] font-black text-[10px] py-2.5 px-4.5 rounded-lg shadow-sm hover:scale-[1.01] transition-all cursor-pointer"
                 >
                   <i className="fa-brands fa-whatsapp text-xs animate-pulse" /> Talk to a UX Architect
                 </a>
               </div>
             </div>
           </div>
+
+          <ToolFeedback toolName="QR Code Generator" />
         </div>
       </main>
 

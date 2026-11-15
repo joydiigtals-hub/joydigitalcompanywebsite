@@ -21,7 +21,7 @@ seoTitle: "Why Is Your Travel Website Not Generating Enquiries? | Joy Digital"
 metaDescription: "Getting visitors but no leads? Discover the 7 common reasons your travel website is not generating enquiries and practical solutions to turn traffic into bookings."
 focusKeyword: "travel website not generating enquiries"
 secondaryKeywords: "travel website conversion rate, why travel website has no leads, increase travel website enquiries, tour operator lead generation, travel agency website optimization"
-canonicalUrl: 'https://joydigital.in/blog/why-is-your-travel-website-not-generating-enquiries'
+canonicalUrl: 'https://www.joydigital.in/blog/why-is-your-travel-website-not-generating-enquiries'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: "Travel Website Development"
@@ -42,7 +42,7 @@ authorName: "Saravanan"
 authorRole: "Technical Web & SEO Specialist"
 authorBio: "Founder at Joy Digital and Next.js web specialist helping travel agencies and tour operators engineer sub-second web platforms that capture direct global inquiries."
 authorImage: "/assets/images/logo.webp"
-authorProfileUrl: 'https://joydigital.in/author/saravanan'
+authorProfileUrl: 'https://www.joydigital.in/author/saravanan'
 faqs:
   - question: "Why are visitors browsing my travel packages but leaving without enquiring?"
     answer: "Visitors usually abandon travel websites due to lack of essential details (missing itineraries, unclear inclusions), complicated contact forms, missing pricing guidelines, slow mobile loading speeds, or lack of trust signals like verified customer reviews."
@@ -118,6 +118,6 @@ Small improvements may help, but if the website structure no longer fits your bu
 ### Need a Better Website for Your Travel Business?
 Joy Digital builds custom websites for travel and tourism businesses, focusing on clear service presentation, user-friendly design, fast performance, and SEO-friendly website structures.
 
-If your existing website is not supporting your business goals, explore our [Travel Website Development Services](https://joydigital.in/travel-website-development) to discuss a solution suited to your needs.
+If your existing website is not supporting your business goals, explore our [Travel Website Development Services](https://www.joydigital.in/travel-website-development) to discuss a solution suited to your needs.
 
-[Contact Joy Digital](https://joydigital.in/contact) to take the next step towards a more effective travel business website.
+[Contact Joy Digital](https://www.joydigital.in/contact) to take the next step towards a more effective travel business website.

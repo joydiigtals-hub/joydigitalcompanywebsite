@@ -13,7 +13,6 @@ export async function generateStaticParams() {
     { country: "us" },
     { country: "uk" },
     { country: "ae" },
-    { country: "in" },
     { country: "ca" },
     { country: "au" },
     { country: "es" },
@@ -220,32 +219,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ke: "Kenya",
   };
   const countryName = countryNames[countryLower] || countryLower.toUpperCase();
-  const title = `Custom Next.js Web Development ${countryName} | Joy Digital`;
+  const title = `Web Development ${countryName}`;
 
   return {
     title,
     description: `Joy Digital is a top web development agency serving the ${config.targetMarket}. We engineer fast, secure, and mobile-responsive websites using Next.js & React to rank on Google and scale leads.`,
     alternates: {
-      canonical: `https://joydigital.in/${countryLower}/website-development`,
+      canonical: `https://www.joydigital.in/${countryLower}/website-development`,
       languages: {
-        "x-default": "https://joydigital.in/website-development",
-        "en-in": "https://joydigital.in/website-development",
-        "en-us": "https://joydigital.in/us/website-development",
-        "en-gb": "https://joydigital.in/uk/website-development",
-        "en-ae": "https://joydigital.in/ae/website-development",
-        "en-ca": "https://joydigital.in/ca/website-development",
-        "en-au": "https://joydigital.in/au/website-development",
-        "es-es": "https://joydigital.in/es/website-development",
-        "de-de": "https://joydigital.in/de/website-development",
-        "fr-fr": "https://joydigital.in/fr/website-development",
-        "it-it": "https://joydigital.in/it/website-development",
-        "en-sg": "https://joydigital.in/sg/website-development",
-        "es-mx": "https://joydigital.in/mx/website-development",
-        "pt-br": "https://joydigital.in/br/website-development",
-        "en-my": "https://joydigital.in/my/website-development",
-        "en-za": "https://joydigital.in/za/website-development",
-        "en-ng": "https://joydigital.in/ng/website-development",
-        "en-ke": "https://joydigital.in/ke/website-development",
+        "x-default": "https://www.joydigital.in/website-development",
+        "en-IN": "https://www.joydigital.in/website-development",
+        "en-US": "https://www.joydigital.in/us/website-development",
+        "en-GB": "https://www.joydigital.in/uk/website-development",
+        "en-AE": "https://www.joydigital.in/ae/website-development",
+        "en-CA": "https://www.joydigital.in/ca/website-development",
+        "en-AU": "https://www.joydigital.in/au/website-development",
       },
     },
   };
@@ -268,7 +256,7 @@ export default async function CountryWebDevPage({ params }: PageProps) {
     "provider": {
       "@type": "Organization",
       "name": "Joy Digital",
-      "url": `https://joydigital.in/${country}`
+      "url": `https://www.joydigital.in/${country}`
     },
     "description": `Joy Digital is a leading web development agency designing high-converting, mobile-responsive, secure websites built for speed and search indexing in the ${config.targetMarket}.`,
     "offers": {
@@ -295,7 +283,7 @@ export default async function CountryWebDevPage({ params }: PageProps) {
           <p>
             At Joy Digital, we design and develop custom corporate portals and platforms using next-generation frameworks like Next.js, React, and optimized HTML5/Tailwind architectures. This guarantees that your platforms load in less than 1.5 seconds, achieve perfect PageSpeed scores, and rank highly on search engine results pages in {config.targetMarket} and globally.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Why Code Quality and Architecture Impact Search Rankings</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Why Code Quality and Architecture Impact Search Rankings</h3>
           <p>
             Google uses page experience and Core Web Vitals as crucial ranking factors. If your site takes longer than 3 seconds to render, visitors will leave before they even view your offer. Slow rendering directly increases bounce rates, signaling to search crawlers that your page does not provide a good user experience. By developing sites with clean semantic markup, compressed WebP/AVIF graphics, server-side pre-rendering, and optimized bundle chunks, we build a solid foundation.
           </p>

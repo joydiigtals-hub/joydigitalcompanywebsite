@@ -24,7 +24,7 @@ metaDescription: >-
 focusKeyword: textile manufacturing website
 secondaryKeywords: >-
   textile manufacturer website, textile website design, textile manufacturing website design, textile company website, garment manufacturer website, fabric manufacturer website, textile exporter website, B2B textile website, custom textile website
-canonicalUrl: 'https://joydigital.in/blog/textile-manufacturing-website-features-2026'
+canonicalUrl: 'https://www.joydigital.in/blog/textile-manufacturing-website-features-2026'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Textile Manufacturer Website Services
@@ -46,7 +46,7 @@ authorRole: Technical Web & SEO Specialist
 authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs:
   - question: What should a textile manufacturing website include?
     answer: >-
@@ -163,7 +163,7 @@ Include:
 * Applications
 * Customization options
 
-This makes the website much more useful for B2B buyers. Learn how we engineer customized digital fabric portals in our specialized [Textile Manufacturer Website Services](https://joydigital.in/website-for-textile-manufacturers).
+This makes the website much more useful for B2B buyers. Learn how we engineer customized digital fabric portals in our specialized [Textile Manufacturer Website Services](https://www.joydigital.in/website-for-textile-manufacturers).
 
 ---
 
@@ -460,7 +460,7 @@ For example:
 
 **OEM Clothing Manufacturer**
 
-These pages can target specific buyer intent. Learn how we implement high-intent B2B search strategies in our [B2B Industrial SEO Services](https://joydigital.in/seo-services).
+These pages can target specific buyer intent. Learn how we implement high-intent B2B search strategies in our [B2B Industrial SEO Services](https://www.joydigital.in/seo-services).
 
 ---
 
@@ -684,7 +684,7 @@ A custom textile manufacturing website can be built around your:
 * SEO strategy
 * Lead-generation process
 
-The website becomes part of your sales infrastructure rather than simply a digital brochure. Explore our comprehensive [Custom Web Development Solutions](https://joydigital.in/website-development).
+The website becomes part of your sales infrastructure rather than simply a digital brochure. Explore our comprehensive [Custom Web Development Solutions](https://www.joydigital.in/website-development).
 
 ---
 
@@ -710,7 +710,7 @@ Examples:
 
 ### Step 3 — AI Search Optimization
 
-Structure your content so that AI-powered search systems can understand your expertise, products and manufacturing capabilities. Read more about AI engine optimization in our [AI Search Optimization (AEO/GEO) Guide](https://joydigital.in/blog/ai-search-optimization-guide-2026).
+Structure your content so that AI-powered search systems can understand your expertise, products and manufacturing capabilities. Read more about AI engine optimization in our [AI Search Optimization (AEO/GEO) Guide](https://www.joydigital.in/blog/ai-search-optimization-guide-2026).
 
 ### Step 4 — LinkedIn
 
@@ -810,12 +810,12 @@ For textile manufacturers, garment manufacturers and exporters, we can create we
 
 **Your factory can be local. Your website shouldn't be.**
 
-[Build Your Global Textile Manufacturing Website](https://joydigital.in/contact?service=Website%20for%20Textile%20Manufacturers)
+[Build Your Global Textile Manufacturing Website](https://www.joydigital.in/contact?service=Website%20for%20Textile%20Manufacturers)
 
 ### Related Joy Digital Services:
 
-* [Textile Manufacturer Website Services](https://joydigital.in/website-for-textile-manufacturers)
-* [Manufacturing Company Web Dev](https://joydigital.in/website-for-manufacturing-companies)
-* [Export Import Website Solutions](https://joydigital.in/website-for-export-and-import)
-* [Custom Website Development](https://joydigital.in/website-development)
-* [International B2B SEO Services](https://joydigital.in/seo-services)
+* [Textile Manufacturer Website Services](https://www.joydigital.in/website-for-textile-manufacturers)
+* [Manufacturing Company Web Dev](https://www.joydigital.in/website-for-manufacturing-companies)
+* [Export Import Website Solutions](https://www.joydigital.in/website-for-export-and-import)
+* [Custom Website Development](https://www.joydigital.in/website-development)
+* [International B2B SEO Services](https://www.joydigital.in/seo-services)

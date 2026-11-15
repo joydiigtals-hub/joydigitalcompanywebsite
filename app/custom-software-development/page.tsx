@@ -3,15 +3,22 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Custom Software Development & Web Apps | Joy Digital",
+  title: "Custom Software Development",
   description: "Joy Digital offers custom software development services. We build secure database applications, dashboard portals, and customized APIs.",
+  keywords: [
+      "Custom Software Development",
+      "Custom Software Development Services",
+      "Web Development",
+      "SEO Services",
+      "Joy Digital"
+  ],
   alternates: {
-    canonical: "https://joydigital.in/custom-software-development",
+    canonical: "https://www.joydigital.in/custom-software-development",
   },
   openGraph: {
     title: "Custom Software Development | Web Apps & Portals - Joy Digital",
     description: "Joy Digital offers custom software development services. We build secure database applications, dashboard portals, and customized APIs.",
-    url: "https://joydigital.in/custom-software-development",
+    url: "https://www.joydigital.in/custom-software-development",
     type: "website",
   },
   twitter: {
@@ -29,7 +36,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -58,7 +65,7 @@ export default function CustomSoftwarePage() {
       heroTitle="Custom Software Development Services"
       heroSubtitle="Automate business processes, coordinate databases, and build secure admin portals. We engineer custom React and Next.js web applications, build APIs, and integrate CRM databases tailored to your goals."
       leadSource="Custom Software Development Landing Page"
-      canonicalUrl="https://joydigital.in/custom-software-development"
+      canonicalUrl="https://www.joydigital.in/custom-software-development"
       overviewTitle="Custom Web Applications & Database Systems Built for Growth"
       overviewContent={
         <div className="space-y-6">
@@ -68,7 +75,7 @@ export default function CustomSoftwarePage() {
           <p>
             At Joy Digital, our specialized <strong>custom software development</strong> focuses on building secure database portals and SaaS applications. We design custom back-ends and connect them to fast React front-ends to ensure smooth performance across mobile and desktop devices.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">API Configurations, CRM Integrations, and Process Automation</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">API Configurations, CRM Integrations, and Process Automation</h3>
           <p>
             We help eliminate manual data entry by connecting your website to third-party tools (such as payment gates, invoicing, SMS notifications, and CRM systems). We build custom admin dashboards that let you check reports, manage user access, and coordinate customer requests.
           </p>

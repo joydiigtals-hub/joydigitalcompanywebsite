@@ -21,7 +21,7 @@ seoTitle: "Stop Losing 25% to OTAs: Tour Operator Direct Bookings Guide"
 metaDescription: "Learn how tour operators can double profits by capturing zero-commission direct bookings. Stop losing 25% to Viator and GetYourGuide with high-speed Next.js portals."
 focusKeyword: "tour operator direct bookings"
 secondaryKeywords: "stop losing commission to otas, tour booking engine, direct booking system for tour operators, travel agency web development"
-canonicalUrl: 'https://joydigital.in/blog/stop-losing-25-to-otas-tour-operators-direct-bookings'
+canonicalUrl: 'https://www.joydigital.in/blog/stop-losing-25-to-otas-tour-operators-direct-bookings'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: "Tour Operator Website Development"
@@ -37,7 +37,7 @@ authorName: "Saravanan"
 authorRole: "Technical Web & SEO Specialist"
 authorBio: "Founder at Joy Digital and Next.js web specialist helping travel agencies and tour operators engineer sub-second web platforms that capture direct global inquiries."
 authorImage: "/assets/images/logo.webp"
-authorProfileUrl: 'https://joydigital.in/author/saravanan'
+authorProfileUrl: 'https://www.joydigital.in/author/saravanan'
 faqs:
   - question: "How much commission do OTAs like Viator and GetYourGuide take?"
     answer: "Online Travel Agencies (OTAs) typically charge tour operators between 20% and 30% commission per booking. For a $1,200 multi-day tour, that means handing over $240 to $360 per customer."

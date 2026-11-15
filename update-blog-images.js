@@ -13,9 +13,19 @@ const genericImages = [
 
 function getRelatedImage(title, slug) {
   const text = (title + ' ' + slug).toLowerCase();
+
+  if (slug === 'tourism-business-plan') return '/assets/images/blog/tourism-business-plan.webp';
+  if (slug === 'website-development-company-in-madurai') return '/assets/images/blog/website-development-company-in-madurai.webp';
+  if (slug === 'increase-profit-tourism-business') return '/assets/images/blog/increase-profit-tourism-business.webp';
+  if (slug === 'digital-marketing-tourism-africa') return '/assets/images/blog/digital-marketing-tourism-africa.webp';
+  if (slug === 'commercial-solar-epc-business-plan') return '/assets/images/blog/commercial-solar-epc-business-plan.webp';
+  if (slug === 'maximize-solar-profit-margins') return '/assets/images/blog/maximize-solar-profit-margins.webp';
+  if (slug === 'digital-marketing-for-solar-companies') return '/assets/images/blog/digital-marketing-for-solar-companies.webp';
   
-  if (text.includes('travel') || text.includes('safari') || text.includes('ota') || text.includes('tour') || text.includes('resort')) {
+  if (text.includes('travel') || text.includes('safari') || text.includes('ota') || text.includes('tour') || text.includes('resort') || text.includes('tourism')) {
     const travelImages = [
+      '/assets/images/blog/essential-tourism-website-features.webp',
+      '/assets/images/blog/tourism-business-website.webp',
       '/assets/images/blog/travel-ai-trip-planner.png',
       '/assets/images/blog/travel-direct-booking.png',
       '/assets/images/blog/travel-website-features-hero.png'

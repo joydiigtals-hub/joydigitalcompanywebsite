@@ -9,7 +9,7 @@ date: '2026-08-29'
 lastUpdatedDate: '2026-08-29'
 category: Web Design
 author: Joy Digital Team
-image: "/assets/images/hero-banner.webp"
+image: "/assets/images/blog/essential-tourism-website-features.webp"
 imageAlt: >-
   Real Estate Website Design: 10 Features That Convert Visitors into Property
   Enquiries
@@ -28,7 +28,7 @@ metaDescription: >-
   businesses attract visitors, build trust and generate more property enquiries.
 focusKeyword: Real Estate
 secondaryKeywords: 'Web Design, Joy Digital, Search Engine Optimization, SEO Strategy'
-canonicalUrl: 'https://joydigital.in/blog/real-estate-website-design-features'
+canonicalUrl: 'https://www.joydigital.in/blog/real-estate-website-design-features'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Website Design Agency
@@ -43,7 +43,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: >-
   Real Estate Website Design: 10 Features That Convert Visitors into Property
@@ -51,14 +51,14 @@ ogTitle: >-
 ogDescription: >-
   Discover 10 essential real estate website features that can help property
   businesses attract visitors, build trust and generate more property enquiries.
-ogImage: "/assets/images/hero-banner.webp"
+ogImage: "/assets/images/blog/essential-tourism-website-features.webp"
 twitterTitle: >-
   Real Estate Website Design: 10 Features That Convert Visitors into Property
   Enquiries
 twitterDescription: >-
   Discover 10 essential real estate website features that can help property
   businesses attract visitors, build trust and generate more property enquiries.
-twitterImage: "/assets/images/hero-banner.webp"
+twitterImage: "/assets/images/blog/essential-tourism-website-features.webp"
 status: Published
 seoScore: 90
 ---

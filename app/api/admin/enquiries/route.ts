@@ -56,7 +56,7 @@ export async function GET(request: Request) {
   const auth = await authenticateAdminRequest(request, "enquiries.view");
   if (!auth.authenticated) return auth.response!;
 
-  const MONGODB_URI = process.env.MONGODB_URI;
+  const MONGODB_URI = process.env.MONGODB_DIRECT_URI || process.env.MONGODB_URI;
 
   if (MONGODB_URI) {
     try {

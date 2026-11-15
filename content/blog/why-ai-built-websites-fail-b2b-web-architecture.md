@@ -20,7 +20,7 @@ seoTitle: "Why 90% of AI-Built Websites Fail | B2B Web Architecture"
 metaDescription: "Discover why generic AI site builders fail B2B enterprises and why custom Next.js web architecture wins high-ticket enterprise client deals."
 focusKeyword: "AI Websites"
 secondaryKeywords: "B2B Web Architecture, Custom Web Development, Enterprise Web Engineering, Lead Generation, Next.js Development"
-canonicalUrl: "https://joydigital.in/blog/why-ai-built-websites-fail-b2b-web-architecture"
+canonicalUrl: "https://www.joydigital.in/blog/why-ai-built-websites-fail-b2b-web-architecture"
 robots: "Index, Follow"
 internalLinks:
   - anchorText: Custom Web Development
@@ -35,7 +35,7 @@ authorName: "Saravanan L"
 authorRole: "Founder & Technical Web Specialist"
 authorBio: "Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth."
 authorImage: "/assets/images/logo.webp"
-authorProfileUrl: "https://joydigital.in/about"
+authorProfileUrl: "https://www.joydigital.in/about"
 faqs:
   - question: "Why do AI-generated websites fail for B2B companies?"
     answer: "AI website builders generate generic visual templates with bloated code, rigid structures, lack of CRM integrations, and zero alignment with complex B2B buyer decision funnels."

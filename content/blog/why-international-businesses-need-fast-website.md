@@ -14,13 +14,13 @@ seoTitle: "Why International Businesses Need a Fast Website: The Key to Global G
 metaDescription: "In today's borderless digital economy, your website serves as your primary global storefront. For businesses targeting international markets, speed is not just a technical metric—it is a core business strategy."
 focusKeyword: "Fast Website"
 secondaryKeywords: "Global Growth, International Business, Web Speed"
-canonicalUrl: "https://joydigital.in/blog/why-international-businesses-need-fast-website"
+canonicalUrl: "https://www.joydigital.in/blog/why-international-businesses-need-fast-website"
 robots: "Index, Follow"
 authorName: "Saravanan L"
 authorRole: "Technical Web & SEO Specialist"
 authorBio: "Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth."
 authorImage: "/assets/images/logo.webp"
-authorProfileUrl: "https://joydigital.in/about"
+authorProfileUrl: "https://www.joydigital.in/about"
 faqs: [{"question":"Why does website speed matter more for international businesses than local ones?","answer":"International visitors experience physical data lag (latency) because server requests travel thousands of miles. High speed ensures users halfway across the globe experience your site as smoothly as local visitors."},{"question":"How does a Content Delivery Network (CDN) help international sites?","answer":"A CDN caches your website's static files on edge servers worldwide. When a user visits from another country, content is delivered from the server closest to them, drastically reducing load times."},{"question":"Will a faster website improve my international Google rankings?","answer":"Yes. Core Web Vitals and page speed are recognized ranking factors for search engines globally, helping you rank higher in target international regions."},{"question":"How can Joy Digital help my business achieve a high-performance website?","answer":"At joydigital.in, we engineer high-speed, SEO-optimized websites tailored for global scalability, utilizing modern frameworks and robust infrastructure to maximize your international conversions."}]
 status: "Published"
 seoScore: 95
@@ -52,5 +52,5 @@ For any business aiming to scale across borders, investing in a fast, highly opt
 ---
 
 > **Ready to expand your business globally with a lightning-fast, high-converting website?**  
-> Visit us at: [joydigital.in](https://joydigital.in)  
+> Visit us at: [joydigital.in](https://www.joydigital.in)  
 > Get in touch today to audit your current platform and supercharge your international web presence!

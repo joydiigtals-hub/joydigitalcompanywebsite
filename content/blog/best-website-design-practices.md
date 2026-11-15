@@ -24,7 +24,7 @@ focusKeyword: Website Design
 secondaryKeywords: >-
   Web Design, Joy Digital, Search Engine Optimization, SEO Strategy, 2026
   Digital Trends
-canonicalUrl: 'https://joydigital.in/blog/best-website-design-practices'
+canonicalUrl: 'https://www.joydigital.in/blog/best-website-design-practices'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Website Design Agency
@@ -39,7 +39,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: 'Best Website Design Practices for 2026: Design for Conversions'
 ogDescription: >-

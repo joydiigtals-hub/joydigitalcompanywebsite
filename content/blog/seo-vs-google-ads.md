@@ -22,7 +22,7 @@ metaDescription: >-
   advertising to find the best channel for your marketing budget.
 focusKeyword: SEO vs Google Ads
 secondaryKeywords: 'SEO, Joy Digital, Search Engine Optimization'
-canonicalUrl: 'https://joydigital.in/blog/seo-vs-google-ads'
+canonicalUrl: 'https://www.joydigital.in/blog/seo-vs-google-ads'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: SEO Services
@@ -37,7 +37,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: 'SEO vs Google Ads: Which Has Better ROI for Small Businesses?'
 ogDescription: >-

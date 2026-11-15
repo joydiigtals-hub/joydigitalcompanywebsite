@@ -9,21 +9,28 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Shopify vs Headless Next.js E-Commerce | Joy Digital",
+  title: "Shopify vs Headless Next.js",
   description: "Compare Shopify Liquid vs Headless Next.js storefronts. Learn how sub-second load times reduce cart abandonment and boost conversions.",
+  keywords: [
+      "Shopify vs Headless Next.js",
+      "Headless Commerce Performance",
+      "Shopify Speed Optimization",
+      "Next.js Ecommerce Architecture",
+      "Ecommerce ROI Analysis"
+  ],
   alternates: {
-    canonical: "https://joydigital.in/shopify-vs-headless-nextjs",
+    canonical: "https://www.joydigital.in/shopify-vs-headless-nextjs",
   },
 };
 
 export default function ShopifyVsHeadlessNextjsPage() {
-  const canonicalUrl = "https://joydigital.in/shopify-vs-headless-nextjs";
+  const canonicalUrl = "https://www.joydigital.in/shopify-vs-headless-nextjs";
   const pageGraphSchema = buildPageGraphSchema({
     url: canonicalUrl,
-    title: "Shopify vs Headless Next.js E-Commerce | Joy Digital",
+    title: "Shopify vs Headless Next.js | Joy Digital",
     description: "Compare Shopify Liquid vs Headless Next.js storefronts. Learn how sub-second load times reduce cart abandonment and boost conversions.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "Shopify vs Headless Next.js", item: canonicalUrl },
     ],
     service: {
@@ -37,10 +44,10 @@ export default function ShopifyVsHeadlessNextjsPage() {
     <>
       <JsonLd schema={pageGraphSchema} />
       <Header />
-      <main className="pt-24 lg:pt-32 bg-[#FAF9FF] text-[#1F1B2D]">
+      <main className="bg-[#FAF9FF] text-[#1F1B2D]">
         
         {/* HERO SECTION */}
-        <section className="bg-[#171126] text-white py-16 lg:py-24 relative overflow-hidden">
+        <section className="bg-[#171126] text-white pt-24 lg:pt-32 pb-16 lg:pb-24 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
             <div className="lg:col-span-7">
               <span className="inline-block bg-[#7C3AED]/20 border border-[#7C3AED]/40 text-[#A78BFA] font-extrabold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
@@ -99,7 +106,7 @@ export default function ShopifyVsHeadlessNextjsPage() {
         </section>
 
         {/* FEATURE COMPARISON */}
-        <section className="py-20 bg-white border-b border-[#E9E4F2]">
+        <section className="py-20 bg-primary border-b border-[#E9E4F2]">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">Side-by-Side Comparison</span>

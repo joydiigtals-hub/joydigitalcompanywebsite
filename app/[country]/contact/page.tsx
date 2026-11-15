@@ -16,7 +16,6 @@ export async function generateStaticParams() {
     { country: "us" },
     { country: "uk" },
     { country: "ae" },
-    { country: "in" },
     { country: "ca" },
     { country: "au" },
     { country: "es" },
@@ -47,7 +46,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Get in touch with our global strategists. Request website performance reports, detailed Next.js code proposals, or commercial SEO consultation.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "United States",
   },
@@ -56,7 +55,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Connect with our Next.js designers and search engine optimization team serving the UK. Receive localized quotes and technical recommendations.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "United Kingdom",
   },
@@ -65,7 +64,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Schedule a consultation with our business managers serving Dubai & UAE. Get customized website development pricing and Google Map Pack rank strategies.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "United Arab Emirates",
   },
@@ -74,7 +73,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Ready to scale your search presence and customer leads in India? Contact our core agency engineering team based in Tamil Nadu.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "India",
   },
@@ -83,7 +82,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Connect with our Next.js designers and search engine optimization team serving Canadian enterprises and startups. Receive localized proposals.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "Canada",
   },
@@ -92,7 +91,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Connect with our custom web design and SEO team serving Australian businesses. Receive localized project quotes and technical recommendations.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "Australia",
   },
@@ -101,7 +100,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Connect with our Next.js designers and SEO strategists serving clients across Spain and Europe. Request localized quotes and consultation.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "Spain",
   },
@@ -110,7 +109,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Connect with our web design and search engine optimization team serving businesses in Germany. Receive localized project proposals.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "Germany",
   },
@@ -119,7 +118,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Connect with our custom website development and SEO strategy team serving enterprise and startup clients across France.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "France",
   },
@@ -128,7 +127,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Connect with our custom Next.js development and SEO optimization specialists serving clients in Italy.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "Italy",
   },
@@ -137,7 +136,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Connect with our high-speed website development and SEO agency team serving Singapore and Southeast Asian markets.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "Singapore",
   },
@@ -146,7 +145,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Connect with our website design and search marketing specialists serving enterprise brands in Mexico and Latin America.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "Mexico",
   },
@@ -155,7 +154,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Connect with our Next.js web development and organic search optimization team serving businesses across Brazil.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "Brazil",
   },
@@ -164,7 +163,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Connect with our Next.js web engineering and B2B SEO specialists serving Kuala Lumpur and Southeast Asian enterprises.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "Malaysia",
   },
@@ -173,7 +172,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Connect with our ultra-fast web development and search engine growth team serving Johannesburg, Cape Town, and African hubs.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "South Africa",
   },
@@ -182,7 +181,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Connect with our high-speed web application developers and search lead generation specialists serving Lagos and Abuja businesses.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "Nigeria",
   },
@@ -191,7 +190,7 @@ const REGIONAL_CONTACTS: Record<string, {
     description: "Connect with our custom web portal developers and B2B SEO strategists serving Nairobi and East African growing enterprises.",
     phone: "+919080026133",
     phoneFormatted: "+91 90800 26133",
-    address: "Joy Digital Growth Agency, Madurai, Tamil Nadu, India",
+    address: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
     showMap: true,
     marketName: "Kenya",
   },
@@ -222,32 +221,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ke: "Kenya",
   };
   const countryName = countryNames[countryLower] || countryLower.toUpperCase();
-  const title = `Contact Joy Digital ${countryName} | Custom Web & SEO Solutions`;
+  const title = `Contact ${countryName} Consultation Desk`;
 
   return {
     title,
     description: `Request a free Next.js website design quote, Core Web Vitals audit, or organic search SEO proposal. Speak to our ${config.marketName} consultation desk.`,
     alternates: {
-      canonical: `https://joydigital.in/${countryLower}/contact`,
+      canonical: `https://www.joydigital.in/${countryLower}/contact`,
       languages: {
-        "x-default": "https://joydigital.in/contact",
-        "en-in": "https://joydigital.in/contact",
-        "en-us": "https://joydigital.in/us/contact",
-        "en-gb": "https://joydigital.in/uk/contact",
-        "en-ae": "https://joydigital.in/ae/contact",
-        "en-ca": "https://joydigital.in/ca/contact",
-        "en-au": "https://joydigital.in/au/contact",
-        "es-es": "https://joydigital.in/es/contact",
-        "de-de": "https://joydigital.in/de/contact",
-        "fr-fr": "https://joydigital.in/fr/contact",
-        "it-it": "https://joydigital.in/it/contact",
-        "en-sg": "https://joydigital.in/sg/contact",
-        "es-mx": "https://joydigital.in/mx/contact",
-        "pt-br": "https://joydigital.in/br/contact",
-        "en-my": "https://joydigital.in/my/contact",
-        "en-za": "https://joydigital.in/za/contact",
-        "en-ng": "https://joydigital.in/ng/contact",
-        "en-ke": "https://joydigital.in/ke/contact",
+        "x-default": "https://www.joydigital.in/contact",
+        "en-IN": "https://www.joydigital.in/contact",
+        "en-US": "https://www.joydigital.in/us/contact",
+        "en-GB": "https://www.joydigital.in/uk/contact",
+        "en-AE": "https://www.joydigital.in/ae/contact",
+        "en-CA": "https://www.joydigital.in/ca/contact",
+        "en-AU": "https://www.joydigital.in/au/contact",
       },
     },
   };
@@ -262,42 +250,42 @@ export default async function CountryContactPage({ params }: PageProps) {
   return (
     <>
       <Header />
-      <main className="pt-24 lg:pt-32">
+      <main className="pt-24 lg:pt-32 bg-[#3B1580] text-[#FFFFFF]">
         
         {/* Intro Section */}
-        <section className="py-12 bg-white relative overflow-hidden">
+        <section className="py-12 bg-[#3B1580] relative overflow-hidden border-b border-[#FFFFFF]/15 text-[#FFFFFF]">
           <div className="max-w-7xl mx-auto px-6 text-center animate-fade-in">
-            <span className="inline-block bg-accent-glow text-accent font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full border border-accent/20 mb-6">
+            <span className="inline-block bg-[#C9F600]/15 text-[#C9F600] font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full border border-[#C9F600]/30 mb-6">
               {config.marketName} Desk
             </span>
-            <h1 className="text-3xl md:text-5xl font-extrabold text-primary-dark tracking-tight mb-4">
-              Let&apos;s Grow Your <span className="text-gradient">Digital Pipeline</span>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-[#FFFFFF] tracking-tight mb-4">
+              Let&apos;s Grow Your <span className="text-[#C9F600]">Digital Pipeline</span>
             </h1>
-            <p className="text-sm text-text-secondary max-w-xl mx-auto leading-relaxed">
+            <p className="text-sm text-[#FFFFFF]/80 max-w-xl mx-auto leading-relaxed">
               {config.description}
             </p>
           </div>
         </section>
 
         {/* Contact split section */}
-        <section className="py-12 bg-light-bg">
+        <section className="py-12 bg-[#260B5E] text-[#FFFFFF]">
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
             {/* Left Info Columns */}
             <div className="lg:col-span-5 flex flex-col gap-8">
-              <h2 className="text-2xl font-bold text-primary-dark relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-accent">
+              <h2 className="text-2xl font-bold text-[#FFFFFF] relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-[#C9F600]">
                 Direct Contact Channels
               </h2>
               
               <div className="flex flex-col gap-4">
                 {/* Location Card */}
-                <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary-glow flex items-center justify-center text-primary text-xl flex-shrink-0">
+                <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-xl p-6 shadow-sm flex items-center gap-4 text-[#FFFFFF]">
+                  <div className="w-12 h-12 rounded-lg bg-[#260B5E] border border-[#FFFFFF]/20 flex items-center justify-center text-[#C9F600] text-xl flex-shrink-0">
                     <i className="fa-solid fa-map-location-dot" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-[10px] font-bold text-text-muted uppercase">Office Address</span>
-                    <span className="text-sm font-bold text-primary-dark mt-0.5">
+                    <span className="text-[10px] font-bold text-[#FFFFFF]/60 uppercase">Office Address</span>
+                    <span className="text-sm font-bold text-[#FFFFFF] mt-0.5">
                       {config.address}
                     </span>
                   </div>
@@ -306,21 +294,21 @@ export default async function CountryContactPage({ params }: PageProps) {
                 {/* Call Card */}
                 <a
                   href={`tel:${config.phone}`}
-                  className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-accent/30 transition-all duration-300"
+                  className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-[#C9F600]/50 transition-all duration-300 text-[#FFFFFF]"
                   title="Call Us Directly"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary-glow flex items-center justify-center text-primary text-xl flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-[#260B5E] border border-[#FFFFFF]/20 flex items-center justify-center text-[#C9F600] text-xl flex-shrink-0">
                       <i className="fa-solid fa-phone" />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-text-muted uppercase">Call Support</span>
-                      <span className="text-sm font-bold text-primary-dark mt-0.5 group-hover:text-accent transition-colors">
+                      <span className="text-[10px] font-bold text-[#FFFFFF]/60 uppercase">Call Support</span>
+                      <span className="text-sm font-bold text-[#FFFFFF] mt-0.5 group-hover:text-[#C9F600] transition-colors">
                         {config.phoneFormatted}
                       </span>
                     </div>
                   </div>
-                  <span className="text-text-muted group-hover:translate-x-1 transition-transform">
+                  <span className="text-[#FFFFFF]/60 group-hover:translate-x-1 group-hover:text-[#C9F600] transition-all">
                     <i className="fa-solid fa-arrow-right-long" />
                   </span>
                 </a>
@@ -330,22 +318,22 @@ export default async function CountryContactPage({ params }: PageProps) {
                   href="https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20get%20more%20details%20about%20your%20services."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-whatsapp-green/30 transition-all duration-300"
+                  className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-emerald-400 transition-all duration-300 text-[#FFFFFF]"
                   title="WhatsApp Us"
                   data-wa-location="contact page"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-whatsapp-glow flex items-center justify-center text-whatsapp-green text-xl flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-[#260B5E] border border-[#FFFFFF]/20 flex items-center justify-center text-emerald-400 text-xl flex-shrink-0">
                       <i className="fa-brands fa-whatsapp" />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-text-muted uppercase">WhatsApp Chat</span>
-                      <span className="text-sm font-bold text-primary-dark mt-0.5 group-hover:text-whatsapp-green transition-colors">
+                      <span className="text-[10px] font-bold text-[#FFFFFF]/60 uppercase">WhatsApp Chat</span>
+                      <span className="text-sm font-bold text-[#FFFFFF] mt-0.5 group-hover:text-emerald-400 transition-colors">
                         +91 90800 26133
                       </span>
                     </div>
                   </div>
-                  <span className="text-text-muted group-hover:translate-x-1 transition-transform">
+                  <span className="text-[#FFFFFF]/60 group-hover:translate-x-1 group-hover:text-emerald-400 transition-all">
                     <i className="fa-solid fa-arrow-right-long" />
                   </span>
                 </a>
@@ -353,21 +341,21 @@ export default async function CountryContactPage({ params }: PageProps) {
                 {/* Email Card */}
                 <a
                   href={`mailto:${contactEmail}`}
-                  className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-accent/30 transition-all duration-300"
+                  className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-[#C9F600]/50 transition-all duration-300 text-[#FFFFFF]"
                   title="Email Us"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary-glow flex items-center justify-center text-primary text-xl flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-[#260B5E] border border-[#FFFFFF]/20 flex items-center justify-center text-[#C9F600] text-xl flex-shrink-0">
                       <i className="fa-solid fa-envelope" />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-text-muted uppercase">Send Email</span>
-                      <span className="text-sm font-bold text-primary-dark mt-0.5 group-hover:text-accent transition-colors">
+                      <span className="text-[10px] font-bold text-[#FFFFFF]/60 uppercase">Send Email</span>
+                      <span className="text-sm font-bold text-[#FFFFFF] mt-0.5 group-hover:text-[#C9F600] transition-colors">
                         {contactEmail}
                       </span>
                     </div>
                   </div>
-                  <span className="text-text-muted group-hover:translate-x-1 transition-transform">
+                  <span className="text-[#FFFFFF]/60 group-hover:translate-x-1 group-hover:text-[#C9F600] transition-all">
                     <i className="fa-solid fa-arrow-right-long" />
                   </span>
                 </a>
@@ -377,21 +365,21 @@ export default async function CountryContactPage({ params }: PageProps) {
                   href="https://share.google/BSniheS2qnzwqUKXU"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-[#4285F4]/40 transition-all duration-300"
+                  className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-xl p-6 shadow-sm flex items-center justify-between group hover:border-[#4285F4]/60 transition-all duration-300 text-[#FFFFFF]"
                   title="Google Business Profile & Reviews"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center text-[#4285F4] text-xl flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-[#260B5E] border border-[#FFFFFF]/20 flex items-center justify-center text-[#4285F4] text-xl flex-shrink-0">
                       <i className="fa-brands fa-google" />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-text-muted uppercase">Google Business Profile</span>
-                      <span className="text-sm font-bold text-primary-dark mt-0.5 group-hover:text-[#4285F4] transition-colors">
+                      <span className="text-[10px] font-bold text-[#FFFFFF]/60 uppercase">Google Business Profile</span>
+                      <span className="text-sm font-bold text-[#FFFFFF] mt-0.5 group-hover:text-[#4285F4] transition-colors">
                         View Profile & Customer Reviews
                       </span>
                     </div>
                   </div>
-                  <span className="text-text-muted group-hover:translate-x-1 transition-transform">
+                  <span className="text-[#FFFFFF]/60 group-hover:translate-x-1 group-hover:text-[#4285F4] transition-all">
                     <i className="fa-solid fa-arrow-right-long" />
                   </span>
                 </a>
@@ -399,7 +387,7 @@ export default async function CountryContactPage({ params }: PageProps) {
 
               {/* Map Embed Card (India headquarters only) */}
               {config.showMap && (
-                <div className="w-full rounded-xl overflow-hidden shadow-sm border border-gray-100 mt-2">
+                <div className="w-full rounded-xl overflow-hidden shadow-sm border border-[#FFFFFF]/20 mt-2">
                   <iframe
                     src="https://maps.google.com/maps?q=Madurai,%20Tamil%20Nadu,%20India&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     width="100%"

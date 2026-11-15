@@ -3,15 +3,22 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Agency in Chennai | Joy Digital",
+  title: "Digital Marketing Agency Chennai",
   description: "Joy Digital is a result-driven digital marketing agency in Chennai. We offer local SEO, social media marketing, Google Ads, and conversion-optimized websites.",
+  keywords: [
+      "Digital Marketing Agency in Chennai",
+      "Top Digital Marketing Company Chennai",
+      "SEO & Web Design Chennai",
+      "B2B Lead Generation Chennai",
+      "Google Ads & SEO Agency Chennai"
+  ],
   alternates: {
-    canonical: "https://joydigital.in/digital-marketing-agency-in-chennai",
+    canonical: "https://www.joydigital.in/digital-marketing-agency-in-chennai",
   },
   openGraph: {
     title: "Digital Marketing Agency in Chennai | Lead Gen & Ads - Joy Digital",
     description: "Joy Digital is a result-driven digital marketing agency in Chennai. We offer local SEO, social media marketing, Google Ads, and conversion-optimized websites.",
-    url: "https://joydigital.in/digital-marketing-agency-in-chennai",
+    url: "https://www.joydigital.in/digital-marketing-agency-in-chennai",
     type: "website",
   },
   twitter: {
@@ -29,7 +36,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -58,7 +65,7 @@ export default function DigitalMarketingChennai() {
       heroTitle="Top Digital Marketing Agency in Chennai"
       heroSubtitle="Stop paying for empty web traffic. We build high-converting lead generation funnels, run target-oriented social campaigns, and run map optimization strategies that bring phone calls and insurance inquiries."
       leadSource="Digital Marketing Chennai Landing Page"
-      canonicalUrl="https://joydigital.in/digital-marketing-agency-in-chennai"
+      canonicalUrl="https://www.joydigital.in/digital-marketing-agency-in-chennai"
       overviewTitle="ROI-Focused Search, Social & Web Optimization for Tamil Nadu Brands"
       overviewContent={
         <div className="space-y-6">
@@ -68,7 +75,7 @@ export default function DigitalMarketingChennai() {
           <p>
             At Joy Digital, our specialized <strong>digital marketing agency in Chennai</strong> bridges the gap between web views and revenue. We build fast, mobile-friendly landing pages, execute local SEO map optimizations, and manage social media campaigns.
           </p>
-          <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Capturing Leads Across the Search and Social Funnel</h3>
+          <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Capturing Leads Across the Search and Social Funnel</h3>
           <p>
             Effective digital marketing requires capturing prospects at all stages. We start by ranking your website on local Google Maps and search results using local keywords. Next, we structure clear, conversion-oriented call-to-actions, including direct WhatsApp links and contact forms.
           </p>
@@ -200,9 +207,9 @@ export default function DigitalMarketingChennai() {
       ]}
       schemaMarkup={pageSchema}
       crossLinks={[
-        { href: "/website-design-company-in-chennai", label: "Web Design Chennai" },
+        { href: "/website-development-company-chennai", label: "Web Design Chennai" },
         { href: "/website-development-company-chennai", label: "website development in Chennai" },
-        { href: "/seo-services-in-chennai", label: "SEO Services Chennai" },
+        { href: "/seo-services-chennai", label: "SEO Services Chennai" },
       ]}
     />
   );

@@ -20,7 +20,7 @@ seoTitle: "Generative Engine Optimization (GEO) | B2B AI Search Guide"
 metaDescription: "Discover how Generative Engine Optimization (GEO) makes your B2B brand visible to AI search tools. Outrank competitors on ChatGPT, Gemini & Perplexity."
 focusKeyword: "Generative Engine Optimization"
 secondaryKeywords: "GEO, AI Search Tools, Traditional SEO vs GEO, B2B Marketing, ChatGPT Search"
-canonicalUrl: 'https://joydigital.in/blog/generative-engine-optimization-geo-ai-search'
+canonicalUrl: 'https://www.joydigital.in/blog/generative-engine-optimization-geo-ai-search'
 robots: 'Index, Follow'
 internalLinks: []
 autoSuggestRelated: true
@@ -29,7 +29,7 @@ authorName: "Saravanan"
 authorRole: "Technical Web & SEO Specialist"
 authorBio: "Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth."
 authorImage: "/assets/images/logo.webp"
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: "Generative Engine Optimization (GEO) | B2B AI Search Guide"
 ogDescription: "Discover how Generative Engine Optimization (GEO) makes your B2B brand visible to AI search tools. Outrank competitors on ChatGPT, Gemini & Perplexity."

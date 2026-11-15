@@ -9,21 +9,32 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "WordPress to Next.js Migration | Headless Architecture",
-  description: "Migrate legacy WordPress to high-speed Next.js. Retain 100% SEO rankings, eliminate plugin security vulnerabilities, and boost Core Web Vitals. Free audit.",
+  title: "WordPress to Next.js Migration Agency",
+  description: "Migrate legacy WordPress to high-speed Next.js. Master headless WordPress Next.js architecture and headless CMS SEO with 100% Core Web Vitals and zero ranking loss.",
+  keywords: [
+      "WordPress to Next.js Migration",
+      "Migrate WordPress Site to Next.js",
+      "Headless WordPress Agency",
+      "WordPress Speed Optimization",
+      "Database Migration Services"
+  ],
   alternates: {
-    canonical: "https://joydigital.in/wordpress-to-nextjs-migration",
+    canonical: "https://www.joydigital.in/wordpress-to-nextjs-migration",
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/wordpress-to-nextjs-migration",
+    url: "https://www.joydigital.in/wordpress-to-nextjs-migration",
     title: "WordPress to Next.js Migration Agency | Joy Digital",
     description: "Migrate legacy WordPress to high-speed Next.js. Retain 100% SEO rankings, eliminate plugin security vulnerabilities, and boost Core Web Vitals.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "WordPress to Next.js Migration" }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "WordPress to Next.js Migration" }],
   },
 };
 
 const FAQS = [
+  {
+    question: "How does headless WordPress Next.js improve headless CMS SEO rankings?",
+    answer: "Headless WordPress paired with Next.js App Router delivers server-side pre-rendered HTML and automated Incremental Static Regeneration (ISR). Search engine crawlers immediately index clean, lightweight static content with sub-100ms TTFB and perfect 100/100 Core Web Vitals, outranking bloated PHP-based WordPress sites.",
+  },
   {
     question: "Will migrating from WordPress to Next.js hurt my current Google SEO rankings?",
     answer: "No. In fact, most migrations see an organic search traffic boost. We perform a rigorous 1:1 URL mapping audit, implement exact 301 server redirects, replicate existing meta titles and descriptions, and maintain identical internal link structures while providing sub-second load speeds that drastically improve Google Core Web Vitals.",
@@ -47,13 +58,13 @@ const FAQS = [
 ];
 
 export default function WordPressToNextjsMigrationPage() {
-  const canonicalUrl = "https://joydigital.in/wordpress-to-nextjs-migration";
+  const canonicalUrl = "https://www.joydigital.in/wordpress-to-nextjs-migration";
   const pageGraphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "WordPress to Next.js Migration Agency | Joy Digital",
     description: "Migrate your slow WordPress website to high-speed serverless Next.js. Pass Core Web Vitals (95+ score), prevent plugin hacks, and preserve your 100% SEO rankings.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "WordPress to Next.js Migration", item: canonicalUrl },
     ],
     service: {
@@ -68,10 +79,10 @@ export default function WordPressToNextjsMigrationPage() {
     <>
       <JsonLd schema={pageGraphSchema} />
       <Header />
-      <main className="pt-24 lg:pt-32 bg-[#FAF9FF] text-[#1F1B2D]">
+      <main className="bg-[#FAF9FF] text-[#1F1B2D]">
         
         {/* HERO SECTION */}
-        <section className="bg-[#171126] text-white py-16 lg:py-24 relative overflow-hidden">
+        <section className="bg-[#171126] text-white pt-24 lg:pt-32 pb-16 lg:pb-24 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
             <div className="lg:col-span-7">
               <span className="inline-block bg-[#7C3AED]/20 border border-[#7C3AED]/40 text-[#A78BFA] font-extrabold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
@@ -130,7 +141,7 @@ export default function WordPressToNextjsMigrationPage() {
         </section>
 
         {/* BEFORE / AFTER PERFORMANCE COMPARISON */}
-        <section className="py-20 bg-white border-b border-[#E9E4F2]">
+        <section className="py-20 bg-primary border-b border-[#E9E4F2]">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">Real-World Speed Impact</span>
@@ -142,7 +153,7 @@ export default function WordPressToNextjsMigrationPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               <div className="bg-[#FAF9FF] border border-[#E9E4F2] p-6 rounded-2xl text-center">
-                <span className="text-xs font-bold text-slate-500 uppercase block mb-2">Google PageSpeed Mobile</span>
+                <span className="text-xs font-bold text-muted uppercase block mb-2">Google PageSpeed Mobile</span>
                 <div className="flex items-center justify-center gap-3">
                   <span className="text-2xl font-black text-rose-500 line-through">34/100</span>
                   <span className="text-slate-400">&rarr;</span>
@@ -152,7 +163,7 @@ export default function WordPressToNextjsMigrationPage() {
               </div>
 
               <div className="bg-[#FAF9FF] border border-[#E9E4F2] p-6 rounded-2xl text-center">
-                <span className="text-xs font-bold text-slate-500 uppercase block mb-2">Largest Contentful Paint (LCP)</span>
+                <span className="text-xs font-bold text-muted uppercase block mb-2">Largest Contentful Paint (LCP)</span>
                 <div className="flex items-center justify-center gap-3">
                   <span className="text-2xl font-black text-rose-500 line-through">4.2s</span>
                   <span className="text-slate-400">&rarr;</span>
@@ -162,7 +173,7 @@ export default function WordPressToNextjsMigrationPage() {
               </div>
 
               <div className="bg-[#FAF9FF] border border-[#E9E4F2] p-6 rounded-2xl text-center">
-                <span className="text-xs font-bold text-slate-500 uppercase block mb-2">Cumulative Layout Shift (CLS)</span>
+                <span className="text-xs font-bold text-muted uppercase block mb-2">Cumulative Layout Shift (CLS)</span>
                 <div className="flex items-center justify-center gap-3">
                   <span className="text-2xl font-black text-rose-500 line-through">0.38</span>
                   <span className="text-slate-400">&rarr;</span>
@@ -172,7 +183,7 @@ export default function WordPressToNextjsMigrationPage() {
               </div>
 
               <div className="bg-[#FAF9FF] border border-[#E9E4F2] p-6 rounded-2xl text-center">
-                <span className="text-xs font-bold text-slate-500 uppercase block mb-2">Time to First Byte (TTFB)</span>
+                <span className="text-xs font-bold text-muted uppercase block mb-2">Time to First Byte (TTFB)</span>
                 <div className="flex items-center justify-center gap-3">
                   <span className="text-2xl font-black text-rose-500 line-through">1.4s</span>
                   <span className="text-slate-400">&rarr;</span>
@@ -183,38 +194,38 @@ export default function WordPressToNextjsMigrationPage() {
             </div>
 
             {/* Feature comparison table */}
-            <div className="overflow-x-auto rounded-2xl border border-slate-200">
+            <div className="overflow-x-auto rounded-2xl border border-white/[0.18]">
               <table className="w-full text-left border-collapse text-xs">
                 <thead>
-                  <tr className="border-b-2 border-slate-200 text-slate-500 uppercase font-black tracking-wider text-[10px]">
-                    <th className="py-4 px-6 bg-slate-50">Feature / Metric</th>
+                  <tr className="border-b-2 border-white/[0.18] text-muted uppercase font-black tracking-wider text-[10px]">
+                    <th className="py-4 px-6 bg-primary-dark">Feature / Metric</th>
                     <th className="py-4 px-6 bg-rose-50/50 text-rose-700">Legacy WordPress</th>
                     <th className="py-4 px-6 bg-emerald-50/50 text-emerald-700 font-extrabold">Serverless Next.js (Joy Digital)</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 font-semibold">
                   <tr>
-                    <td className="py-4 px-6 font-bold text-slate-900">Average Mobile Page Load Speed</td>
+                    <td className="py-4 px-6 font-bold text-white">Average Mobile Page Load Speed</td>
                     <td className="py-4 px-6 text-rose-600 bg-rose-50/30">3.5s – 7.0s (Slow)</td>
                     <td className="py-4 px-6 text-emerald-600 font-extrabold bg-emerald-50/30">0.8s – 1.2s (Lightning)</td>
                   </tr>
                   <tr>
-                    <td className="py-4 px-6 font-bold text-slate-900">Google Core Web Vitals Pass Rate</td>
+                    <td className="py-4 px-6 font-bold text-white">Google Core Web Vitals Pass Rate</td>
                     <td className="py-4 px-6 text-rose-600 bg-rose-50/30">Fails LCP &amp; CLS tests frequently</td>
                     <td className="py-4 px-6 text-emerald-600 font-extrabold bg-emerald-50/30">100% Guaranteed Pass (95+ score)</td>
                   </tr>
                   <tr>
-                    <td className="py-4 px-6 font-bold text-slate-900">Security &amp; Vulnerability Entry Points</td>
+                    <td className="py-4 px-6 font-bold text-white">Security &amp; Vulnerability Entry Points</td>
                     <td className="py-4 px-6 text-rose-600 bg-rose-50/30">High risk (Plugin updates, SQL leaks)</td>
                     <td className="py-4 px-6 text-emerald-600 font-extrabold bg-emerald-50/30">Zero static attack vector (Serverless CDN)</td>
                   </tr>
                   <tr>
-                    <td className="py-4 px-6 font-bold text-slate-900">Database &amp; Server Crashes</td>
+                    <td className="py-4 px-6 font-bold text-white">Database &amp; Server Crashes</td>
                     <td className="py-4 px-6 text-rose-600 bg-rose-50/30">Crashes under high traffic spikes</td>
                     <td className="py-4 px-6 text-emerald-600 font-extrabold bg-emerald-50/30">Auto-scaling edge CDN infrastructure</td>
                   </tr>
                   <tr>
-                    <td className="py-4 px-6 font-bold text-slate-900">Google SEO Indexing Efficiency</td>
+                    <td className="py-4 px-6 font-bold text-white">Google SEO Indexing Efficiency</td>
                     <td className="py-4 px-6 text-rose-600 bg-rose-50/30">Bloated PHP code delays crawlers</td>
                     <td className="py-4 px-6 text-emerald-600 font-extrabold bg-emerald-50/30">Clean pre-rendered HTML for Instant Crawls</td>
                   </tr>
@@ -236,51 +247,51 @@ export default function WordPressToNextjsMigrationPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div className="bg-primary p-6 rounded-2xl border border-white/[0.18] shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="w-10 h-10 rounded-xl bg-[#7C3AED]/10 text-[#7C3AED] font-black flex items-center justify-center mb-4">01</span>
-                  <h3 className="text-sm font-bold text-slate-900 mb-2">1. URL &amp; SEO Audit</h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  <h3 className="text-sm font-bold text-white mb-2">1. URL &amp; SEO Audit</h3>
+                  <p className="text-xs text-secondary leading-relaxed">
                     Full crawl of your existing WordPress website to catalog every URL, canonical tag, meta description, and 301 redirect map.
                   </p>
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div className="bg-primary p-6 rounded-2xl border border-white/[0.18] shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="w-10 h-10 rounded-xl bg-[#7C3AED]/10 text-[#7C3AED] font-black flex items-center justify-center mb-4">02</span>
-                  <h3 className="text-sm font-bold text-slate-900 mb-2">2. CMS Architecture</h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    Choose between Headless WordPress (keep WP dashboard) or modern headless CMS solutions like Sanity, Strapi, or Git Markdown.
+                  <h3 className="text-sm font-bold text-white mb-2">2. CMS Architecture</h3>
+                  <p className="text-xs text-secondary leading-relaxed">
+                    Choose between a decoupled Headless WordPress Next.js architecture (keep WP dashboard) or modern headless CMS solutions like Sanity and Strapi to maximize headless CMS SEO.
                   </p>
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div className="bg-primary p-6 rounded-2xl border border-white/[0.18] shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="w-10 h-10 rounded-xl bg-[#7C3AED]/10 text-[#7C3AED] font-black flex items-center justify-center mb-4">03</span>
-                  <h3 className="text-sm font-bold text-slate-900 mb-2">3. Next.js Rebuild</h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  <h3 className="text-sm font-bold text-white mb-2">3. Next.js Rebuild</h3>
+                  <p className="text-xs text-secondary leading-relaxed">
                     Re-architect the frontend with React Server Components, Tailwind CSS, TypeScript, and optimized dynamic caching.
                   </p>
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div className="bg-primary p-6 rounded-2xl border border-white/[0.18] shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="w-10 h-10 rounded-xl bg-[#7C3AED]/10 text-[#7C3AED] font-black flex items-center justify-center mb-4">04</span>
-                  <h3 className="text-sm font-bold text-slate-900 mb-2">4. Quality &amp; SEO QA</h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  <h3 className="text-sm font-bold text-white mb-2">4. Quality &amp; SEO QA</h3>
+                  <p className="text-xs text-secondary leading-relaxed">
                     Verify all 301 redirects, JSON-LD Schema integration, OpenGraph social cards, form submissions, and Google PageSpeed 95+ score.
                   </p>
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div className="bg-primary p-6 rounded-2xl border border-white/[0.18] shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="w-10 h-10 rounded-xl bg-[#7C3AED]/10 text-[#7C3AED] font-black flex items-center justify-center mb-4">05</span>
-                  <h3 className="text-sm font-bold text-slate-900 mb-2">5. Zero-Downtime Launch</h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  <h3 className="text-sm font-bold text-white mb-2">5. Zero-Downtime Launch</h3>
+                  <p className="text-xs text-secondary leading-relaxed">
                     Seamless DNS cutover on edge CDN, automated SSL certificates, and Google Search Console sitemap resubmission.
                   </p>
                 </div>
@@ -290,7 +301,7 @@ export default function WordPressToNextjsMigrationPage() {
         </section>
 
         {/* TIMELINE & PRICING SECTION */}
-        <section className="py-20 bg-white border-b border-[#E9E4F2]">
+        <section className="py-20 bg-primary border-b border-[#E9E4F2]">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-widest block mb-3">Clear Scope &amp; Estimates</span>
@@ -306,33 +317,33 @@ export default function WordPressToNextjsMigrationPage() {
                 <div className="inline-flex items-center gap-2 text-xs font-bold text-[#7C3AED] uppercase tracking-wider mb-4">
                   <i className="fa-solid fa-calendar-days text-base" /> Project Timeline: 2 to 4 Weeks
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4">Typical Sprint Schedule</h3>
-                <ul className="space-y-4 text-xs text-slate-700 font-medium">
+                <h3 className="text-xl font-bold text-white mb-4">Typical Sprint Schedule</h3>
+                <ul className="space-y-4 text-xs text-secondary font-medium">
                   <li className="flex items-start gap-3">
                     <span className="w-6 h-6 rounded-full bg-[#7C3AED]/10 text-[#7C3AED] font-bold flex items-center justify-center shrink-0 mt-0.5">W1</span>
                     <div>
-                      <strong className="text-slate-900 block">Discovery, Content Scraping &amp; Redirect Map</strong>
+                      <strong className="text-white block">Discovery, Content Scraping &amp; Redirect Map</strong>
                       Full database export, asset inventory, and canonical URL schema audit.
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-6 h-6 rounded-full bg-[#7C3AED]/10 text-[#7C3AED] font-bold flex items-center justify-center shrink-0 mt-0.5">W2</span>
                     <div>
-                      <strong className="text-slate-900 block">Next.js Frontend Engineering</strong>
+                      <strong className="text-white block">Next.js Frontend Engineering</strong>
                       Component creation, Tailwind CSS styling, responsive layout checks.
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-6 h-6 rounded-full bg-[#7C3AED]/10 text-[#7C3AED] font-bold flex items-center justify-center shrink-0 mt-0.5">W3</span>
                     <div>
-                      <strong className="text-slate-900 block">CMS Integration &amp; Dynamic Routing</strong>
+                      <strong className="text-white block">CMS Integration &amp; Dynamic Routing</strong>
                       Connecting headless CMS API, search engine sitemaps, and forms.
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-6 h-6 rounded-full bg-[#7C3AED]/10 text-[#7C3AED] font-bold flex items-center justify-center shrink-0 mt-0.5">W4</span>
                     <div>
-                      <strong className="text-slate-900 block">Staging QA, Speed Optimization &amp; Go-Live</strong>
+                      <strong className="text-white block">Staging QA, Speed Optimization &amp; Go-Live</strong>
                       Lighthouse audit (95+ score), 301 redirect validation, and DNS cutover.
                     </div>
                   </li>
@@ -345,22 +356,22 @@ export default function WordPressToNextjsMigrationPage() {
                   <div className="inline-flex items-center gap-2 text-xs font-bold text-emerald-700 uppercase tracking-wider mb-4">
                     <i className="fa-solid fa-tag text-base" /> Fixed-Fee Investment
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">Cost Range: $1,500 – $4,500 USD</h3>
-                  <p className="text-xs text-slate-500 mb-6 font-medium">Fixed-price milestone delivery with zero surprise fees</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Cost Range: $1,500 – $4,500 USD</h3>
+                  <p className="text-xs text-muted mb-6 font-medium">Fixed-price milestone delivery with zero surprise fees</p>
 
-                  <div className="space-y-3 text-xs text-slate-700">
-                    <div className="p-3 bg-white rounded-xl border border-slate-200">
-                      <strong className="text-slate-900 block mb-1">Standard Corporate Site ($1,500 – $2,500)</strong>
+                  <div className="space-y-3 text-xs text-secondary">
+                    <div className="p-3 bg-primary rounded-xl border border-white/[0.18]">
+                      <strong className="text-white block mb-1">Standard Corporate Site ($1,500 – $2,500)</strong>
                       Up to 15 pages + blog, zero-downtime 301 redirects, lead forms, and 95+ PageSpeed guarantee.
                     </div>
-                    <div className="p-3 bg-white rounded-xl border border-slate-200">
-                      <strong className="text-slate-900 block mb-1">Large Publication / Custom CMS ($2,500 – $4,500)</strong>
+                    <div className="p-3 bg-primary rounded-xl border border-white/[0.18]">
+                      <strong className="text-white block mb-1">Large Publication / Custom CMS ($2,500 – $4,500)</strong>
                       High-volume blog archives, custom post types, dynamic filtering, headless WP GraphQL or Sanity integration.
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-slate-200">
+                <div className="pt-6 mt-6 border-t border-white/[0.18]">
                   <a href="#migration-form" className="w-full text-center bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-xs py-3.5 px-4 rounded-xl shadow-md block transition-all">
                     Get Custom Quote For Your Site
                   </a>
@@ -379,7 +390,7 @@ export default function WordPressToNextjsMigrationPage() {
               </div>
               <Link
                 href="/case-studies/saas-landing-optimization"
-                className="shrink-0 bg-white text-[#171126] hover:bg-[#FAF9FF] font-black text-xs px-6 py-3.5 rounded-xl transition-all shadow-md flex items-center gap-2"
+                className="shrink-0 bg-primary text-[#171126] hover:bg-[#FAF9FF] font-black text-xs px-6 py-3.5 rounded-xl transition-all shadow-md flex items-center gap-2"
               >
                 <span>Read Case Study</span>
                 <i className="fa-solid fa-arrow-right" />
@@ -401,12 +412,12 @@ export default function WordPressToNextjsMigrationPage() {
 
             <div className="space-y-4">
               {FAQS.map((faq, index) => (
-                <div key={index} className="bg-white border border-[#E9E4F2] rounded-2xl p-6 shadow-xs">
-                  <h3 className="text-sm sm:text-base font-bold text-slate-900 mb-2.5 flex items-start gap-2.5">
+                <div key={index} className="bg-primary border border-[#E9E4F2] rounded-2xl p-6 shadow-xs">
+                  <h3 className="text-sm sm:text-base font-bold text-white mb-2.5 flex items-start gap-2.5">
                     <span className="text-[#7C3AED] font-black">Q:</span>
                     <span>{faq.question}</span>
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-6">
+                  <p className="text-xs sm:text-sm text-secondary leading-relaxed pl-6">
                     {faq.answer}
                   </p>
                 </div>
@@ -418,7 +429,7 @@ export default function WordPressToNextjsMigrationPage() {
                 Explore Custom Web Development Services &rarr;
               </Link>
               <span className="hidden sm:inline text-slate-300">•</span>
-              <Link href="/free-website-audit" className="text-xs font-bold text-slate-600 hover:text-slate-900">
+              <Link href="/free-website-audit" className="text-xs font-bold text-secondary hover:text-white">
                 Get a Free 20-Point Performance Audit &rarr;
               </Link>
             </div>

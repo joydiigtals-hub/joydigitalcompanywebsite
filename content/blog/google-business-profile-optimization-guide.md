@@ -9,7 +9,7 @@ date: '2026-06-11'
 lastUpdatedDate: '2026-06-11'
 category: Local SEO
 author: Saravanan
-image: "/assets/images/hero-banner.webp"
+image: "/assets/images/blog/gbp-showcase.webp"
 imageAlt: >-
   Google Business Profile Optimization: Complete Guide for Small Businesses in
   2026
@@ -30,7 +30,7 @@ focusKeyword: Google Business Profile
 secondaryKeywords: >-
   Local SEO, Joy Digital, Search Engine Optimization, SEO Strategy, 2026 Digital
   Trends
-canonicalUrl: 'https://joydigital.in/blog/google-business-profile-optimization-guide'
+canonicalUrl: 'https://www.joydigital.in/blog/google-business-profile-optimization-guide'
 robots: 'Index, Follow'
 internalLinks:
   - anchorText: Google Business Profile Optimization
@@ -45,7 +45,7 @@ authorBio: >-
   Digital marketing strategist and Next.js web developer focusing on search
   optimization and conversion rate growth.
 authorImage: /assets/images/logo.webp
-authorProfileUrl: 'https://joydigital.in/about'
+authorProfileUrl: 'https://www.joydigital.in/about'
 faqs: []
 ogTitle: >-
   Google Business Profile Optimization: Complete Guide for Small Businesses in
@@ -53,14 +53,14 @@ ogTitle: >-
 ogDescription: >-
   Master Google Business Profile Optimization in 2026. Learn how to rank in the
   Local 3-Pack, manage customer reviews, and drive phone calls and walk-ins.
-ogImage: "/assets/images/hero-banner.webp"
+ogImage: "/assets/images/blog/gbp-showcase.webp"
 twitterTitle: >-
   Google Business Profile Optimization: Complete Guide for Small Businesses in
   2026
 twitterDescription: >-
   Master Google Business Profile Optimization in 2026. Learn how to rank in the
   Local 3-Pack, manage customer reviews, and drive phone calls and walk-ins.
-twitterImage: "/assets/images/hero-banner.webp"
+twitterImage: "/assets/images/blog/gbp-showcase.webp"
 status: Published
 seoScore: 84
 ---
