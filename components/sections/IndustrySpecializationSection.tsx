@@ -282,7 +282,7 @@ export default function IndustrySpecializationSection() {
             INDUSTRY SPECIALIZATION
           </span>
           <h2 className="text-3xl lg:text-4xl font-extrabold text-[#FFFFFF] mb-4 leading-tight tracking-tight">
-            Websites Built for How Your Industry Converts
+            Industries We Build Websites For
           </h2>
           <p className="text-sm sm:text-base text-[#FFFFFF]/80 font-medium leading-relaxed max-w-2xl">
             Every industry has different customers and different conversion triggers. We design websites around how your buyers actually decide.

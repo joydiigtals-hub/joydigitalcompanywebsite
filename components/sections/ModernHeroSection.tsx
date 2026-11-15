@@ -19,26 +19,61 @@ import {
 } from "lucide-react";
 import { getUtmParameters } from "@/lib/utmTracker";
 import { ALL_COUNTRY_CODES, POPULAR_COUNTRY_CODES, getFilteredCountries } from "@/lib/countryCodes";
+import GetQuoteModal from "@/components/ui/GetQuoteModal";
+import DigitalNetworkBackground from "@/components/ui/DigitalNetworkBackground";
+import { COUNTRY_LANDING_DATA } from "@/data/countryLandingData";
 
 interface ModernHeroSectionProps {
   country?: string;
+  badge?: string;
+  titleWordsMain?: string[];
+  titleWordsGradient?: string[];
+  subtitle?: string;
+  bulletPoints?: string[];
+  trustText?: string;
 }
 
 const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
+const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919080026133";
 
-const heroMainWords = ["Website", "Development", "&", "SEO", "That", "Brings", "You"];
-const heroGradientWords = ["Customers,", "Not", "Just", "Traffic"];
+const defaultHeroMainWords = ["Website", "Development", "&", "SEO", "That", "Brings", "You"];
+const defaultHeroGradientWords = ["Customers,", "Not", "Just", "Traffic"];
 
 // Framer Motion Variants for Staggered Orchestration (Optimized for Mobile Speed)
-export default function ModernHeroSection({ country = "" }: ModernHeroSectionProps) {
+export default function ModernHeroSection({
+  country = "",
+  badge,
+  titleWordsMain,
+  titleWordsGradient,
+  subtitle,
+  bulletPoints,
+  trustText,
+}: ModernHeroSectionProps) {
   const router = useRouter();
+
+  const countryLower = (country || "").toLowerCase();
+  const localizedData = COUNTRY_LANDING_DATA[countryLower];
+
+  const currentBadge = badge || localizedData?.hero.badge || "Custom Websites & SEO-Friendly Solutions";
+  const heroMainWords = titleWordsMain || localizedData?.hero.headingWordsMain || defaultHeroMainWords;
+  const heroGradientWords = titleWordsGradient || localizedData?.hero.headingWordsGradient || defaultHeroGradientWords;
+  const currentSubtitle = subtitle || localizedData?.hero.subtitle || "We build custom, mobile-friendly websites that help businesses showcase their services, reach more customers through web development and SEO, and generate enquiries. From business websites to specialized travel platforms, our solutions are designed around your goals.";
+  const currentBulletPoints = bulletPoints || localizedData?.hero.bulletPoints || [
+    "Custom websites tailored to your business needs",
+    "Mobile-friendly design and performance-focused development",
+    "SEO-friendly structure and clear enquiry pathways",
+  ];
+  const currentTrustText = trustText || localizedData?.hero.trustText || "Trusted by fast-growing brands across USA, UK, UAE & worldwide.";
 
   // Form State
   const [formData, setFormData] = useState({
     name: "",
+    email: "",
     mobile: "",
     website: "",
+    _honey: "",
   });
+  const [submitError, setSubmitError] = useState("");
 
   const getDefaultCountryCode = (c: string) => {
     switch (c) {
@@ -84,6 +119,10 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
     }
+    if ((name === "email" || name === "mobile") && (errors.email || errors.mobile)) {
+      setErrors((prev) => ({ ...prev, email: "", mobile: "" }));
+    }
+    if (submitError) setSubmitError("");
   };
 
   const validateForm = () => {
@@ -93,11 +132,25 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
       tempErrors.name = "Full Name is required.";
     }
 
-    const mobileVal = formData.mobile.trim();
-    if (mobileVal) {
-      const numbersOnly = mobileVal.replace(/\D/g, "");
-      if (numbersOnly.length < 6) {
-        tempErrors.mobile = "Enter a valid contact number.";
+    const emailTrim = formData.email.trim();
+    const mobileTrim = formData.mobile.trim();
+
+    if (!emailTrim && !mobileTrim) {
+      tempErrors.email = "Please provide an email or phone number.";
+      tempErrors.mobile = "Please provide a phone number or email.";
+    }
+
+    if (emailTrim) {
+      const emailReg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailReg.test(emailTrim)) {
+        tempErrors.email = "Please enter a valid email address.";
+      }
+    }
+
+    if (mobileTrim) {
+      const numbersOnly = mobileTrim.replace(/\D/g, "");
+      if (numbersOnly.length < 7) {
+        tempErrors.mobile = "Please enter a valid phone number (at least 7 digits).";
       }
     }
 
@@ -109,20 +162,29 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
     e.preventDefault();
     if (!validateForm()) return;
 
+    if (formData._honey) {
+      router.push(`/thank-you?name=${encodeURIComponent(formData.name.trim())}`);
+      return;
+    }
+
     setIsLoading(true);
+    setSubmitError("");
     try {
       const utm = getUtmParameters();
       const payload = {
         Name: formData.name.trim(),
-        Email: contactEmail,
-        Mobile: formData.mobile.trim().startsWith("+")
-          ? formData.mobile.trim()
-          : `${selectedCountryCode} ${formData.mobile.trim()}`,
+        Email: formData.email.trim() || "N/A",
+        Mobile: formData.mobile.trim()
+          ? (formData.mobile.trim().startsWith("+")
+            ? formData.mobile.trim()
+            : `${selectedCountryCode} ${formData.mobile.trim()}`)
+          : "N/A",
         Website: formData.website.trim() || "N/A",
-        Service: "15-Min Strategy Call + Free $499 Website & SEO Audit",
+        Service: "Free Website Consultation & Audit + Strategy Proposal",
         Source: "Hero Booking Consultation Form",
         utmParams: utm || undefined,
-        _subject: `🔥 Free Audit & Strategy Call Booking - ${formData.name.trim()} [Joy Digital]`,
+        _honey: formData._honey,
+        _subject: `⚡ Free Website Consultation & Audit Request - ${formData.name.trim()} [Joy Digital]`,
       };
 
       const response = await fetch("/api/enquiry", {
@@ -134,8 +196,9 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
         body: JSON.stringify(payload),
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to submit form");
+      const resData = await response.json();
+      if (!response.ok || !resData.success) {
+        throw new Error(resData.error || "Failed to submit form");
       }
 
       // Unified Conversion Tracking
@@ -151,14 +214,15 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
 
       const queryParams = new URLSearchParams({
         name: formData.name.trim(),
-        service: "15-Min Strategy Call",
+        service: "Free Website Consultation & Audit",
         mobile: formData.mobile.trim(),
+        email: formData.email.trim(),
       }).toString();
 
       router.push(`/thank-you?${queryParams}`);
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
-      alert(`Enquiry submission failed. Please email us at ${contactEmail} directly.`);
+      setSubmitError(err.message || `Enquiry submission failed. Please contact ${contactEmail} directly.`);
     } finally {
       setIsLoading(false);
     }
@@ -175,115 +239,105 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
   };
 
   return (
-    <section className="relative pt-24 lg:pt-32 pb-20 overflow-hidden bg-[#0B0914] text-white border-b border-[#1E1838] select-none">
+    <section className="relative pt-24 lg:pt-32 pb-12 overflow-hidden bg-[#3B1580] text-[#FFFFFF] select-none">
 
-      {/* Moving Aurora Orbs (Optimized for Mobile: Hidden on small screens, desktop-only ambient lighting) */}
-      <div className="hidden md:block absolute -top-28 right-1/4 w-[600px] lg:w-[750px] h-[600px] lg:h-[750px] bg-gradient-to-tr from-purple-700/25 via-purple-600/20 to-indigo-600/15 rounded-full blur-[140px] pointer-events-none z-0 animate-aurora-1" />
-      <div className="hidden md:block absolute -bottom-24 -left-20 w-[500px] lg:w-[650px] h-[500px] lg:h-[650px] bg-gradient-to-br from-blue-700/20 via-indigo-900/25 to-purple-900/15 rounded-full blur-[130px] pointer-events-none z-0 animate-aurora-2" />
-      <div className="hidden md:block absolute top-1/3 left-1/3 w-[450px] lg:w-[550px] h-[450px] lg:h-[550px] bg-gradient-to-r from-violet-600/15 to-purple-800/10 rounded-full blur-[120px] pointer-events-none z-0 animate-aurora-3" />
+      {/* Lightweight Digital Network & Ambient Glow Background */}
+      <DigitalNetworkBackground />
 
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
         
         {/* LEFT COLUMN: Staggered Hero Copy & Actions */}
         <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6">
           
-          {/* Step 1: Top Badges */}
+          {/* Step 1: Eyebrow Badge */}
           <div className="flex flex-wrap items-center gap-2">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#18132E] border border-[#2D244E] text-[#A78BFA] text-xs font-semibold shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-[#A78BFA]" />
-              <span>Global B2B &amp; Travel Website Specialists</span>
-            </div>
-
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/40 text-emerald-300 text-xs font-bold shadow-sm">
-              <Zap className="w-3.5 h-3.5 text-emerald-400" />
-              <span>🎁 Free Website &amp; SEO Audit ($499 Value)</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#3B1580] border border-[#FFFFFF]/25 text-[#C9F600] text-xs font-semibold shadow-sm">
+              <Sparkles className="w-3.5 h-3.5 text-[#C9F600]" />
+              <span className="text-[#FFFFFF]">{currentBadge}</span>
             </div>
           </div>
 
           {/* Step 2: Main Headline with Staggered Word Reveal */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.14] flex flex-wrap gap-x-[0.28em] gap-y-1 sm:gap-y-2 select-none">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#FFFFFF] leading-[1.14] flex flex-wrap gap-x-[0.28em] gap-y-1 sm:gap-y-2 select-none">
             {heroMainWords.map((word, idx) => (
-              <span key={`main-w-${idx}`} className="inline-block">
-                {word}
-              </span>
+              <React.Fragment key={`main-w-${idx}`}>
+                <span className="inline-block text-[#FFFFFF]">{word}</span>
+                {" "}
+              </React.Fragment>
             ))}
             {heroGradientWords.map((word, idx) => (
-              <span key={`grad-w-${idx}`} className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-300 animate-gradient-shimmer">
-                {word}
-              </span>
+              <React.Fragment key={`grad-w-${idx}`}>
+                <span className="inline-block text-[#C9F600]">
+                  {word}
+                </span>
+                {idx < heroGradientWords.length - 1 ? " " : ""}
+              </React.Fragment>
             ))}
           </h1>
 
             {/* Step 3: Subtitle & Feature Bullet Points */}
           <div className="space-y-4 max-w-2xl">
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-              Custom websites that help your business grow. Enterprise Next.js web development and SEO built for global B2B clients, with specialized platforms for travel &amp; safari companies.
+            <p className="text-base sm:text-lg text-[#FFFFFF]/90 leading-relaxed font-normal">
+              {currentSubtitle}
             </p>
 
             <div className="space-y-2.5 pt-1">
-              <div className="flex items-center gap-2.5 text-sm text-slate-200 font-medium">
-                <div className="w-5 h-5 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+              {currentBulletPoints.map((bp, bpIdx) => (
+                <div key={`hero-bp-${bpIdx}`} className="flex items-center gap-2.5 text-sm text-[#FFFFFF] font-medium">
+                  <div className="w-5 h-5 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/40 flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#C9F600]" />
+                  </div>
+                  <span>{bp}</span>
                 </div>
-                <span>Sub-second page loads (Core Web Vitals optimized)</span>
-              </div>
-
-              <div className="flex items-center gap-2.5 text-sm text-slate-200 font-medium">
-                <div className="w-5 h-5 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                </div>
-                <span>Enterprise-grade search architectures</span>
-              </div>
-
-              <div className="flex items-center gap-2.5 text-sm text-emerald-300 font-bold">
-                <div className="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-400/50 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                </div>
-                <span>Includes 100% Free 20+ Page Website &amp; SEO Audit Report</span>
-              </div>
+              ))}
             </div>
           </div>
 
           {/* Step 4: Left CTA Button & Social Proof */}
           <div className="space-y-6 pt-2 w-full max-w-xl">
-            <div>
+            <div className="flex flex-wrap items-center gap-3">
+              <GetQuoteModal
+                triggerText="Get a Free Quote"
+                source={`Hero Left CTA ${country ? country.toUpperCase() : "Global"}`}
+                triggerClassName="px-7 py-3.5 text-sm font-bold rounded-xl bg-[#C9F600] text-[#3B1580] hover:opacity-90 shadow-lg shadow-[#C9F600]/25 transition-all"
+              />
               <a
                 href="#case-studies"
                 onClick={handleExploreCaseStudies}
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#17122B] hover:bg-[#20193B] border border-[#2B2346] hover:border-[#7C3AED]/50 text-white text-sm font-bold transition-all shadow-lg group cursor-pointer"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#3B1580] hover:bg-[#3B1580]/80 border border-[#FFFFFF]/30 hover:border-[#C9F600] text-[#FFFFFF] hover:text-[#C9F600] text-sm font-bold transition-all shadow-lg group cursor-pointer"
               >
-                <span>Explore Case Studies</span>
-                <ArrowRight className="w-4 h-4 text-[#A78BFA] group-hover:translate-x-1 transition-transform duration-300" />
+                <span>Explore Our Work</span>
+                <ArrowRight className="w-4 h-4 text-[#C9F600] group-hover:translate-x-1 transition-transform duration-300" />
               </a>
             </div>
 
-            <div className="pt-5 border-t border-[#1F1938] w-full">
-              <p className="text-xs text-slate-400 font-medium">
-                Trusted by fast-growing brands across USA, UK, UAE &amp; worldwide.
+            <div className="pt-5 border-t border-[#FFFFFF]/20 w-full">
+              <p className="text-xs text-[#FFFFFF]/70 font-medium">
+                {currentTrustText}
               </p>
             </div>
           </div>
         </div>
-        <div className="lg:col-span-5 flex justify-center lg:justify-end w-full">
+        <div id="enquiry-section" className="lg:col-span-5 flex justify-center lg:justify-end w-full scroll-mt-28">
           <div className="w-full max-w-md relative rounded-2xl p-[1px] overflow-hidden group">
             
             {/* Animated Conic Glowing Border Beam */}
-            <div className="absolute inset-[-100%] bg-[conic-gradient(from_0deg_at_50%_50%,#7C3AED_0%,#3B82F6_50%,#7C3AED_100%)] opacity-40 group-hover:opacity-80 transition-opacity duration-500 animate-border-beam pointer-events-none" />
+            <div className="absolute inset-[-100%] bg-[conic-gradient(from_0deg_at_50%_50%,#C9F600_0%,#3B1580_50%,#C9F600_100%)] opacity-35 group-hover:opacity-75 transition-opacity duration-500 animate-border-beam pointer-events-none" />
 
-            {/* Inner Glassmorphism Card */}
-            <div className="w-full bg-[#130E26]/95 border border-[#29204A] rounded-2xl p-6 sm:p-7 shadow-2xl shadow-purple-950/40 backdrop-blur-xl relative z-10 overflow-hidden">
+            {/* Inner Form Card */}
+            <div className="w-full bg-[#260B5E]/95 backdrop-blur-xl border border-[#FFFFFF]/20 rounded-2xl p-6 sm:p-7 shadow-2xl relative z-10 overflow-hidden">
               
               {/* Form Header */}
               <div className="mb-5">
-                <div className="inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-widest text-emerald-300 bg-emerald-950/60 border border-emerald-500/40 px-2.5 py-0.5 rounded-full mb-2">
-                  <Clock className="w-3 h-3 text-emerald-400" />
-                  <span>🎁 Free $499 Audit Included</span>
+                <div className="inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-widest text-[#C9F600] bg-[#C9F600]/10 border border-[#C9F600]/30 px-2.5 py-0.5 rounded-full mb-2">
+                  <Clock className="w-3 h-3 text-[#C9F600]" />
+                  <span>Free Project Review</span>
                 </div>
-                <h3 className="text-xl font-extrabold text-white tracking-tight">
-                  Book a 15-Min Strategy Call
+                <h3 className="text-xl font-extrabold text-[#FFFFFF] tracking-tight">
+                  Request a Free Project Consultation &amp; Audit
                 </h3>
-                <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-                  Fill in the details below to claim your free 20+ page Website &amp; SEO Audit report.
+                <p className="text-xs text-[#FFFFFF]/80 mt-1.5 leading-relaxed font-normal">
+                  Share your project requirements or existing website to receive actionable recommendations and a transparent proposal.
                 </p>
               </div>
 
@@ -291,18 +345,18 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
               <form onSubmit={handleSubmit} className="flex flex-col gap-3.5">
                 
                 {/* Hidden Honeypot & UTM */}
-                <input type="text" name="_honey" value="" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+                <input type="text" name="_honey" value={formData._honey} onChange={handleChange} style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
                 <input type="hidden" name="utm_source" value={getUtmParameters()?.source || ""} />
                 
                 {/* Field 1: Full Name */}
                 <div className="flex flex-col gap-1">
-                  <label htmlFor="hero-name" className="text-[10px] font-extrabold text-slate-300 uppercase tracking-wider block">
-                    Full Name <span className="text-red-400">*</span>
+                  <label htmlFor="hero-name" className="text-[10px] font-extrabold text-[#FFFFFF] uppercase tracking-wider block">
+                    Full Name <span className="text-[#C9F600]">*</span>
                   </label>
-                  <div className={`flex items-center gap-2 bg-[#1A1433] border rounded-xl px-3 py-2.5 transition-all duration-300 focus-within:bg-[#1E173C] focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/20 focus-within:shadow-[0_0_15px_rgba(124,58,237,0.2)] ${
-                    errors.name ? "border-red-500/80 bg-red-950/10" : "border-[#2D2352]"
+                  <div className={`flex items-center gap-2 bg-[#3B1580] border rounded-xl px-3 py-2.5 transition-all duration-300 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${
+                    errors.name ? "border-[#C9F600]" : "border-[#FFFFFF]/25"
                   }`}>
-                    <User className="w-4 h-4 text-slate-400 shrink-0 transition-colors group-focus-within:text-[#A78BFA]" />
+                    <User className="w-4 h-4 text-[#FFFFFF]/60 shrink-0 transition-colors group-focus-within:text-[#C9F600]" />
                     <input
                       type="text"
                       id="hero-name"
@@ -310,18 +364,38 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="John Doe"
-                      className="w-full text-xs bg-transparent outline-none text-white placeholder:text-slate-500 font-medium"
+                      className="w-full text-xs bg-transparent outline-none text-[#FFFFFF] placeholder:text-[#FFFFFF]/40 font-medium"
                     />
                   </div>
-                  {errors.name && <span className="text-[10px] text-red-400 font-medium">{errors.name}</span>}
+                  {errors.name && <span className="text-[10px] text-[#C9F600] font-medium">{errors.name}</span>}
                 </div>
 
-
+                {/* Field 2: Work Email */}
+                <div className="flex flex-col gap-1">
+                  <label htmlFor="hero-email" className="text-[10px] font-extrabold text-[#FFFFFF] uppercase tracking-wider block">
+                    Work Email <span className="text-[#FFFFFF]/60 font-normal text-[9px] lowercase">(or Phone below)</span>
+                  </label>
+                  <div className={`flex items-center gap-2 bg-[#3B1580] border rounded-xl px-3 py-2.5 transition-all duration-300 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${
+                    errors.email ? "border-[#C9F600]" : "border-[#FFFFFF]/25"
+                  }`}>
+                    <Mail className="w-4 h-4 text-[#FFFFFF]/60 shrink-0 transition-colors group-focus-within:text-[#C9F600]" />
+                    <input
+                      type="email"
+                      id="hero-email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="john@company.com"
+                      className="w-full text-xs bg-transparent outline-none text-[#FFFFFF] placeholder:text-[#FFFFFF]/40 font-medium"
+                    />
+                  </div>
+                  {errors.email && <span className="text-[10px] text-[#C9F600] font-medium">{errors.email}</span>}
+                </div>
 
                 {/* Field 3: Phone / WhatsApp Number */}
                 <div className="flex flex-col gap-1">
-                  <label htmlFor="hero-mobile" className="text-[10px] font-extrabold text-slate-300 uppercase tracking-wider block">
-                    Phone / WhatsApp Number <span className="text-slate-400 font-normal text-[9px] lowercase">(optional)</span>
+                  <label htmlFor="hero-mobile" className="text-[10px] font-extrabold text-[#FFFFFF] uppercase tracking-wider block">
+                    Phone / WhatsApp Number <span className="text-[#FFFFFF]/60 font-normal text-[9px] lowercase">(optional)</span>
                   </label>
                   <div className="flex gap-2 relative">
                     {/* Country Selector Dropdown */}
@@ -329,24 +403,24 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                       <button
                         type="button"
                         onClick={() => setIsCountryOpen(!isCountryOpen)}
-                        className="w-[95px] text-xs py-2.5 px-2.5 bg-[#1A1433] border border-[#2D2352] hover:border-[#7C3AED]/50 text-white rounded-xl flex items-center justify-between outline-none cursor-pointer font-semibold transition-all h-full"
+                        className="w-[95px] text-xs py-2.5 px-2.5 bg-[#3B1580] border border-[#FFFFFF]/25 hover:border-[#C9F600] text-[#FFFFFF] rounded-xl flex items-center justify-between outline-none cursor-pointer font-semibold transition-all h-full"
                       >
                         <span className="flex items-center gap-1">
                           <span>{selectedCountry?.flag}</span>
                           <span>{selectedCountryCode}</span>
                         </span>
-                        <ChevronDown className={`w-3 h-3 text-slate-400 transition-transform ${isCountryOpen ? "rotate-180" : ""}`} />
+                        <ChevronDown className={`w-3 h-3 text-[#FFFFFF]/70 transition-transform ${isCountryOpen ? "rotate-180" : ""}`} />
                       </button>
 
                       {isCountryOpen && (
-                        <div className="absolute z-50 left-0 top-[108%] w-72 sm:w-80 max-h-64 overflow-y-auto bg-[#150F2E] border border-[#3B2D6B] rounded-xl shadow-2xl py-1 text-white">
-                          <div className="p-2 border-b border-[#2B2152] bg-[#0E0A21] sticky top-0 z-10">
+                        <div className="absolute z-50 left-0 top-[108%] w-72 sm:w-80 max-h-64 overflow-y-auto bg-[#3B1580] border border-[#FFFFFF]/30 rounded-xl shadow-2xl py-1 text-[#FFFFFF]">
+                          <div className="p-2 border-b border-[#FFFFFF]/20 bg-[#3B1580] sticky top-0 z-10">
                             <input
                               type="text"
                               placeholder="Search country or code..."
                               value={countrySearch}
                               onChange={(e) => setCountrySearch(e.target.value)}
-                              className="w-full text-xs px-3 py-2 bg-[#1C153B] border border-[#3D306E] rounded-lg text-white placeholder:text-slate-400 outline-none focus:border-[#7C3AED]"
+                              className="w-full text-xs px-3 py-2 bg-[#3B1580] border border-[#FFFFFF]/25 rounded-lg text-[#FFFFFF] placeholder:text-[#FFFFFF]/50 outline-none focus:border-[#C9F600]"
                               onClick={(e) => e.stopPropagation()}
                             />
                           </div>
@@ -359,25 +433,25 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                                 setIsCountryOpen(false);
                                 setCountrySearch("");
                               }}
-                              className={`w-full flex items-center justify-between px-3.5 py-2.5 text-left text-xs hover:bg-[#281D54] transition-colors cursor-pointer ${
-                                selectedCountryCode === c.code ? "bg-[#7C3AED]/30 text-white font-bold" : "text-slate-200"
+                              className={`w-full flex items-center justify-between px-3.5 py-2.5 text-left text-xs hover:bg-[#FFFFFF]/10 transition-colors cursor-pointer ${
+                                selectedCountryCode === c.code ? "bg-[#C9F600]/15 text-[#C9F600] font-bold" : "text-[#FFFFFF]"
                               }`}
                             >
                               <span className="flex items-center gap-2.5 min-w-0">
                                 <span className="text-base select-none shrink-0">{c.flag}</span>
-                                <span className="font-semibold text-slate-100 truncate max-w-[170px]">{c.name}</span>
+                                <span className="font-semibold text-[#FFFFFF] truncate max-w-[170px]">{c.name}</span>
                               </span>
-                              <span className="text-[#A78BFA] font-bold text-xs shrink-0">{c.code}</span>
+                              <span className="text-[#C9F600] font-bold text-xs shrink-0">{c.code}</span>
                             </button>
                           ))}
                         </div>
                       )}
                     </div>
 
-                    <div className={`flex items-center gap-2 bg-[#1A1433] border rounded-xl px-3 py-2.5 flex-1 transition-all duration-300 focus-within:bg-[#1E173C] focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/20 focus-within:shadow-[0_0_15px_rgba(124,58,237,0.2)] ${
-                      errors.mobile ? "border-red-500/80 bg-red-950/10" : "border-[#2D2352]"
+                    <div className={`flex items-center gap-2 bg-[#3B1580] border rounded-xl px-3 py-2.5 flex-1 transition-all duration-300 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 ${
+                      errors.mobile ? "border-[#C9F600]" : "border-[#FFFFFF]/25"
                     }`}>
-                      <Phone className="w-4 h-4 text-slate-400 shrink-0" />
+                      <Phone className="w-4 h-4 text-[#FFFFFF]/60 shrink-0" />
                       <input
                         type="tel"
                         id="hero-mobile"
@@ -385,21 +459,21 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                         value={formData.mobile}
                         onChange={handleChange}
                         placeholder="Phone / WhatsApp"
-                        className="w-full text-xs bg-transparent outline-none text-white placeholder:text-slate-500 font-medium"
+                        className="w-full text-xs bg-transparent outline-none text-[#FFFFFF] placeholder:text-[#FFFFFF]/40 font-medium"
                       />
                     </div>
                   </div>
-                  {errors.mobile && <span className="text-[10px] text-red-400 font-medium">{errors.mobile}</span>}
+                  {errors.mobile && <span className="text-[10px] text-[#C9F600] font-medium">{errors.mobile}</span>}
                 </div>
 
                 {/* Field 4: Project Scope / Website URL (Optional) */}
                 <div className="flex flex-col gap-1">
-                  <label htmlFor="hero-website" className="text-[10px] font-extrabold text-slate-300 uppercase tracking-wider flex items-center justify-between">
+                  <label htmlFor="hero-website" className="text-[10px] font-extrabold text-[#FFFFFF] uppercase tracking-wider flex items-center justify-between">
                     <span>Project Scope / Website URL</span>
-                    <span className="text-[9px] text-slate-500 font-normal">Optional</span>
+                    <span className="text-[9px] text-[#FFFFFF]/60 font-normal">Optional</span>
                   </label>
-                  <div className="flex items-center gap-2 bg-[#1A1433] border border-[#2D2352] focus-within:bg-[#1E173C] focus-within:border-[#7C3AED] focus-within:ring-4 focus-within:ring-[#7C3AED]/20 focus-within:shadow-[0_0_15px_rgba(124,58,237,0.2)] rounded-xl px-3 py-2.5 transition-all duration-300">
-                    <Globe className="w-4 h-4 text-slate-400 shrink-0" />
+                  <div className="flex items-center gap-2 bg-[#3B1580] border border-[#FFFFFF]/25 focus-within:border-[#C9F600] focus-within:ring-2 focus-within:ring-[#C9F600]/25 rounded-xl px-3 py-2.5 transition-all duration-300">
+                    <Globe className="w-4 h-4 text-[#FFFFFF]/60 shrink-0" />
                     <input
                       type="text"
                       id="hero-website"
@@ -407,10 +481,17 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                       value={formData.website}
                       onChange={handleChange}
                       placeholder="e.g. acme.com or Web Design / SEO"
-                      className="w-full text-xs bg-transparent outline-none text-white placeholder:text-slate-500 font-medium"
+                      className="w-full text-xs bg-transparent outline-none text-[#FFFFFF] placeholder:text-[#FFFFFF]/40 font-medium"
                     />
                   </div>
                 </div>
+
+                {/* Submission Error Banner */}
+                {submitError && (
+                  <div className="p-3 rounded-xl bg-[#3B1580] border border-[#C9F600] text-[#C9F600] text-xs text-center font-medium">
+                    {submitError}
+                  </div>
+                )}
 
                 {/* Action Buttons Container */}
                 <div className="flex flex-col gap-3 mt-2">
@@ -418,38 +499,39 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#7C3AED] via-[#6D28D9] to-[#3B82F6] hover:from-[#6D28D9] hover:to-[#2563EB] text-white font-extrabold text-sm shadow-xl shadow-purple-900/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2 cursor-pointer relative overflow-hidden group"
+                    className="w-full py-3.5 px-4 rounded-xl bg-[#C9F600] text-[#3B1580] font-bold hover:opacity-90 text-sm shadow-xl shadow-[#C9F600]/25 transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2 cursor-pointer relative overflow-hidden group"
                   >
-                    <span className="absolute inset-0 w-1/3 h-full bg-white/25 blur-sm transform -skew-x-12 animate-shimmer-sweep pointer-events-none" />
                     {isLoading ? (
                       <>
-                        <Loader2 className="w-4 h-4 animate-spin text-white" />
-                        <span>Scheduling...</span>
+                        <Loader2 className="w-4 h-4 animate-spin text-[#3B1580]" />
+                        <span>Generating...</span>
                       </>
                     ) : (
                       <>
-                        <span>Claim My Free Proposal</span>
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                        <span>Get a Free Website Audit</span>
+                        <ArrowRight className="w-4 h-4 text-[#3B1580] group-hover:translate-x-1 transition-transform duration-300" />
                       </>
                     )}
                   </button>
 
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2.5">
                     <a
-                      href="https://wa.me/919176391494?text=Hi%20Joy%20Digital,%20I'd%20like%20to%20claim%20my%20free%20proposal%20and%20strategy%20call."
+                      href={`https://wa.me/${whatsappNumber}?text=Hi%20Joy%20Digital,%20I'd%20like%20to%20discuss%20a%20website%20development%20project%20and%20request%20a%20free%20consultation.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-[1] py-3 px-2 rounded-xl bg-[#25D366] hover:bg-[#128C7E] border border-[#25D366] text-white font-bold text-[11px] shadow-lg hover:shadow-emerald-900/20 transition-all duration-300 flex flex-col items-center justify-center gap-1 cursor-pointer group"
+                      className="flex-1 py-3 px-3 rounded-xl bg-[#C9F600] text-[#3B1580] hover:opacity-90 border border-[#C9F600] font-bold text-xs shadow-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer group"
+                      aria-label="Chat on WhatsApp"
                     >
-                      <Phone className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                      <i className="fa-brands fa-whatsapp text-sm text-[#3B1580]" />
                       <span>WhatsApp</span>
                     </a>
 
                     <a
-                      href={`mailto:${contactEmail}`}
-                      className="flex-[1] py-3 px-2 rounded-xl bg-[#1A1433] hover:bg-[#20193B] border border-[#2D2352] text-slate-300 font-bold text-[11px] shadow-lg transition-all duration-300 flex flex-col items-center justify-center gap-1 cursor-pointer group"
+                      href={`mailto:${contactEmail}?subject=Website%20Development%20%26%20Consultation%20Inquiry`}
+                      className="flex-1 py-3 px-3 rounded-xl bg-[#3B1580] hover:bg-[#3B1580]/80 border border-[#FFFFFF]/30 text-[#FFFFFF] hover:border-[#C9F600] hover:text-[#C9F600] font-bold text-xs shadow-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer group"
+                      aria-label="Email Us"
                     >
-                      <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                      <Mail className="w-4 h-4 text-[#FFFFFF] group-hover:text-[#C9F600] transition-colors" />
                       <span>Email Us</span>
                     </a>
                   </div>
@@ -457,12 +539,12 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
 
                 {/* Micro-trust footer */}
                 <div className="pt-2 text-center flex flex-col gap-1.5">
-                  <p className="text-[10px] font-medium text-slate-400 flex items-center justify-center gap-1.5 flex-wrap">
-                    <ShieldCheck className="w-3 h-3 text-emerald-400 shrink-0" />
+                  <p className="text-[10px] font-medium text-[#FFFFFF]/70 flex items-center justify-center gap-1.5 flex-wrap">
+                    <ShieldCheck className="w-3 h-3 text-[#C9F600] shrink-0" />
                     <span>No credit card required • Instant 15-min call • Zero commitment</span>
                   </p>
-                  <p className="text-[9px] font-semibold text-slate-500 flex items-center justify-center gap-1">
-                    <i className="fa-solid fa-lock text-emerald-500/70" /> We respect your privacy. No spam ever.
+                  <p className="text-[9px] font-semibold text-[#FFFFFF]/60 flex items-center justify-center gap-1">
+                    <i className="fa-solid fa-lock text-[#C9F600]" /> We respect your privacy. No spam ever.
                   </p>
                 </div>
               </form>
@@ -475,7 +557,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
           <button
             type="button"
             onClick={() => {
-              const target = document.getElementById("trust-overview") || document.getElementById("case-studies");
+              const target = document.getElementById("industry-specialization") || document.getElementById("trust-overview") || document.getElementById("case-studies");
               if (target) {
                 target.scrollIntoView({ behavior: "smooth" });
               } else {
@@ -483,11 +565,11 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
               }
             }}
             aria-label="Scroll down to explore website features"
-            className="group flex items-center gap-2.5 text-xs font-bold text-slate-300 hover:text-white transition-all cursor-pointer bg-[#140F2D]/90 hover:bg-[#1B143B] border border-[#2D2352] hover:border-[#7C3AED]/60 px-5 py-2.5 rounded-full shadow-lg hover:shadow-purple-900/30 hover:scale-105 active:scale-95"
+            className="group flex items-center gap-2.5 text-xs font-bold text-[#FFFFFF] hover:text-[#C9F600] transition-all cursor-pointer bg-[#3B1580] hover:bg-[#3B1580]/80 border border-[#FFFFFF]/30 hover:border-[#C9F600] px-5 py-2.5 rounded-full shadow-lg hover:scale-105 active:scale-95"
           >
-            <span className="uppercase tracking-widest text-[11px] font-bold text-slate-300 group-hover:text-white">Scroll Down</span>
-            <div className="w-6 h-6 rounded-full bg-[#7C3AED]/20 group-hover:bg-[#7C3AED] flex items-center justify-center transition-colors">
-              <ChevronDown className="w-3.5 h-3.5 text-[#A78BFA] group-hover:text-white animate-bounce" />
+            <span className="uppercase tracking-widest text-[11px] font-bold text-[#FFFFFF] group-hover:text-[#C9F600]">Scroll Down</span>
+            <div className="w-6 h-6 rounded-full bg-[#C9F600]/15 group-hover:bg-[#C9F600] flex items-center justify-center transition-colors">
+              <ChevronDown className="w-3.5 h-3.5 text-[#C9F600] group-hover:text-[#3B1580] animate-bounce" />
             </div>
           </button>
         </div>

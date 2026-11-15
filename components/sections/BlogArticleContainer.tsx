@@ -4,9 +4,11 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ViewCounter from "@/components/ui/ViewCounter";
+import BlogShareButtons from "@/components/ui/BlogShareButtons";
 import { BlogPost } from "@/lib/blog";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
+import { SITE_URL } from "@/lib/siteConfig";
 
 interface BlogArticleContainerProps {
   post: BlogPost;
@@ -49,6 +51,39 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
   const cleanText = (post.content || "").replace(/<[^>]+>/g, " ").replace(/[#*`_>-\[\]()]/g, " ").trim();
   const wordCount = cleanText ? cleanText.split(/\s+/).filter(Boolean).length : 0;
   const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+
+  // Split htmlContent at 2nd or 3rd H2 for High-Converting Mid-Article Conversion Callout
+  const { beforeHtml, afterHtml } = React.useMemo(() => {
+    if (!htmlContent) return { beforeHtml: "", afterHtml: "" };
+    const h2Regex = /<h2[^>]*>/gi;
+    const matches: number[] = [];
+    let match;
+    while ((match = h2Regex.exec(htmlContent)) !== null) {
+      matches.push(match.index);
+    }
+    // Prefer splitting before 3rd H2 if available, or 2nd H2
+    if (matches.length >= 2) {
+      const splitAt = matches.length >= 3 ? matches[2] : matches[1];
+      return {
+        beforeHtml: htmlContent.slice(0, splitAt),
+        afterHtml: htmlContent.slice(splitAt),
+      };
+    }
+    // Fallback: split after 3rd paragraph </p>
+    const pRegex = /<\/p>/gi;
+    const pMatches: number[] = [];
+    while ((match = pRegex.exec(htmlContent)) !== null) {
+      pMatches.push(match.index + 4);
+    }
+    if (pMatches.length >= 3) {
+      const splitAt = pMatches[2];
+      return {
+        beforeHtml: htmlContent.slice(0, splitAt),
+        afterHtml: htmlContent.slice(splitAt),
+      };
+    }
+    return { beforeHtml: htmlContent, afterHtml: "" };
+  }, [htmlContent]);
 
   // Parse Headings to generate Table of Contents (TOC)
   useEffect(() => {
@@ -159,83 +194,93 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
   });
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-10 select-text">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-10 select-text w-full min-w-0 overflow-x-hidden">
       
       {/* Schema Injection */}
       <JsonLd schema={articleGraph} />
 
       {/* Breadcrumbs Navigation */}
-      <nav aria-label="Breadcrumb" className="text-[10px] sm:text-xs font-bold text-[#6B6478] uppercase tracking-wider mb-8 select-none animate-fade-in text-left">
-        <Link href="/" className="hover:text-primary transition-colors">Home</Link>
-        <span className="mx-2 text-slate-300">/</span>
-        <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
-        <span className="mx-2 text-slate-300">/</span>
-        <Link href={`/blog/category/${catSlug}`} className="text-primary font-extrabold hover:underline">
-          {post.category}
-        </Link>
-        <span className="mx-2 text-slate-300">/</span>
-        <span className="text-slate-900 truncate max-w-[220px] inline-block height-4 align-bottom">{post.title}</span>
+      <nav aria-label="Breadcrumb" className="flex flex-wrap items-center text-[10px] sm:text-xs font-bold text-[#D9CCF5]/75 uppercase tracking-wider mb-8 select-none animate-fade-in text-left gap-y-1">
+        <Link href="/" className="hover:text-[#C9F600] text-white/90 transition-colors">Home</Link>
+        <span className="mx-2 text-white/30">/</span>
+        <Link href="/blog" className="hover:text-[#C9F600] text-white/90 transition-colors">Blog</Link>
+        <span className="mx-2 text-white/30">/</span>
+        <span className="text-[#C9F600] font-extrabold">{post.category}</span>
+        <span className="mx-2 text-white/30">/</span>
+        <span className="text-white font-extrabold truncate max-w-[220px] inline-block h-4 align-bottom">{post.title}</span>
       </nav>
 
       {/* Header Details */}
       <header className="mb-10 text-left max-w-4xl animate-slide-up">
         <div className="flex flex-wrap items-center gap-3.5 mb-5 select-none">
-          <Link
-            href={`/blog/category/${catSlug}`}
-            className="bg-primary/10 text-primary border border-primary-light/20 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider hover:bg-primary hover:text-white transition-colors"
-          >
+          <span className="bg-[#C9F600]/15 text-[#C9F600] border border-[#C9F600]/30 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
             {post.category}
-          </Link>
+          </span>
+
+          {post.tags && post.tags.slice(0, 2).map((tag, idx) => (
+            <Link
+              key={idx}
+              href={`/blog?search=${encodeURIComponent(tag)}`}
+              className="hidden sm:inline-flex items-center gap-1 bg-white/10 hover:bg-white/20 text-[#D9CCF5] hover:text-white border border-white/20 text-[10px] font-bold px-2.5 py-0.5 rounded-full transition-colors"
+            >
+              <span className="text-[#C9F600] font-black">#</span>
+              <span>{tag}</span>
+            </Link>
+          ))}
           
-          <span className="text-[11px] text-[#64748B] font-semibold flex items-center gap-1">
-            <i className="fa-regular fa-calendar text-[10px]" />
+          <span className="text-[11px] text-[#D9CCF5]/90 font-semibold flex items-center gap-1">
+            <i className="fa-regular fa-calendar text-[10px] text-[#C9F600]" />
             {new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
           </span>
 
           {post.lastUpdatedDate && post.lastUpdatedDate !== post.date && (
-            <span className="text-[10px] bg-slate-100 text-slate-600 font-bold px-2.5 py-0.5 rounded-full border border-slate-200">
+            <span className="text-[10px] bg-white/10 text-[#D9CCF5] font-bold px-2.5 py-0.5 rounded-full border border-white/20">
               Updated: {new Date(post.lastUpdatedDate).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
             </span>
           )}
 
-          <span className="text-slate-300">&bull;</span>
-          <span className="text-[11px] text-slate-500 font-semibold flex items-center gap-1">
-            <i className="fa-regular fa-clock text-[10px]" /> {readingTime} min read ({wordCount} words)
+          <span className="text-white/30">&bull;</span>
+          <span className="text-[11px] text-[#D9CCF5]/90 font-semibold flex items-center gap-1">
+            <i className="fa-regular fa-clock text-[10px] text-[#C9F600]" /> {readingTime} min read ({wordCount} words)
           </span>
 
-          <span className="text-slate-300">&bull;</span>
+          <span className="text-white/30">&bull;</span>
           <ViewCounter slug={slug} increment={true} />
         </div>
 
-        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-tight tracking-tight mb-6">
+        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-6 break-words">
           {post.title}
         </h1>
 
-        {/* Author Header Bar */}
-        <div className="flex items-center gap-3 border-t border-b border-[#E9E4F2] py-4 select-none">
-          <div className="w-10 h-10 rounded-full bg-primary/10 border border-primary-light/20 text-primary font-bold text-sm flex items-center justify-center overflow-hidden shrink-0">
-            {post.authorImage && post.authorImage.startsWith("/") || post.authorImage?.startsWith("http") ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={post.authorImage} alt={post.authorName || post.author} width={40} height={40} className="w-full h-full object-cover" />
-            ) : (
-              (post.authorName || post.author || "J").charAt(0)
-            )}
+        {/* Author Header Bar & Share Options */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-b border-white/15 py-4 select-none">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-[#C9F600]/15 border border-[#C9F600]/30 text-[#C9F600] font-bold text-sm flex items-center justify-center overflow-hidden shrink-0">
+              {post.authorImage && post.authorImage.startsWith("/") || post.authorImage?.startsWith("http") ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={post.authorImage} alt={post.authorName || post.author} width={40} height={40} className="w-full h-full object-cover" />
+              ) : (
+                (post.authorName || post.author || "J").charAt(0)
+              )}
+            </div>
+            <div>
+              <span className="text-xs font-black text-white block leading-none mb-1">
+                By <Link href="/author/saravanan" className="text-white hover:text-[#C9F600] transition-colors">{post.authorName || post.author}</Link>
+              </span>
+              <span className="text-[10px] text-[#D9CCF5]/80 font-semibold block">
+                {post.authorRole || "Technical Web & Search Marketing Specialist"}
+              </span>
+            </div>
           </div>
-          <div>
-            <span className="text-xs font-black text-slate-900 block leading-none mb-1">
-              By <Link href="/author/saravanan" className="hover:text-primary transition-colors">{post.authorName || post.author}</Link>
-            </span>
-            <span className="text-[10px] text-[#64748B] font-semibold block">
-              {post.authorRole || "Technical Web & Search Marketing Specialist"}
-            </span>
-          </div>
+
+          <BlogShareButtons title={post.title} slug={slug} variant="compact" />
         </div>
       </header>
 
       {/* Featured Cover Image */}
       {post.showFeaturedImage !== false && post.image && (
         <div className="mb-12 max-w-4xl text-left select-none">
-          <div className="relative w-full h-64 sm:h-96 rounded-[28px] overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50">
+          <div className="relative w-full aspect-video max-h-[500px] rounded-[28px] overflow-hidden border border-slate-200/80 shadow-sm bg-slate-100">
             <Image
               src={post.image}
               alt={post.imageAlt || post.title}
@@ -243,6 +288,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
               priority
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 896px"
+              unoptimized
             />
           </div>
           {post.imageCaption && (
@@ -254,22 +300,22 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
       )}
 
       {/* 2-Column Desktop Grid (Table of Contents + Prose Reader) */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start text-left">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start text-left w-full min-w-0">
         
         {/* Table of Contents sidebar */}
         {post.showTableOfContents !== false && toc.length > 0 && (
-          <aside className="hidden lg:block lg:col-span-3 sticky top-28 self-start select-none border-l-2 border-slate-100/80 pr-2 max-h-[80vh] overflow-y-auto scrollbar-thin">
-            <h3 className="text-xs font-black text-slate-900 uppercase tracking-widest mb-4 pl-3.5">
+          <aside className="hidden lg:block lg:col-span-3 sticky top-28 self-start select-none border-l-2 border-white/15 pr-2 max-h-[80vh] overflow-y-auto scrollbar-thin">
+            <h3 className="text-xs font-black text-white uppercase tracking-widest mb-4 pl-3.5">
               Table of Contents
             </h3>
-            <ul className="flex flex-col gap-2.5 text-xs font-semibold text-[#64748B]">
+            <ul className="flex flex-col gap-2.5 text-xs font-semibold text-[#D9CCF5]/80">
               {toc.map((item) => (
                 <li key={item.id}>
                   <a
                     href={`#${item.id}`}
                     onClick={(e) => handleTocClick(e, item.id)}
-                    className={`block border-l-2 border-transparent transition-all duration-250 cursor-pointer text-left pl-3.5 hover:text-primary hover:border-primary/45 ${
-                      activeId === item.id ? "toc-item-active font-extrabold text-primary border-primary" : ""
+                    className={`block border-l-2 border-transparent transition-all duration-250 cursor-pointer text-left pl-3.5 hover:text-[#C9F600] hover:border-[#C9F600]/50 ${
+                      activeId === item.id ? "toc-item-active font-extrabold text-[#C9F600] border-[#C9F600]" : ""
                     } ${item.level === 3 ? "pl-6 text-[11px]" : ""}`}
                   >
                     {item.text}
@@ -277,19 +323,52 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
                 </li>
               ))}
             </ul>
+
+            {/* Quick Share in Sidebar */}
+            <div className="mt-8 pt-5 border-t border-white/15 pl-3.5">
+              <BlogShareButtons title={post.title} slug={slug} variant="sidebar" />
+            </div>
+
+            {/* Sticky Lead Generation Widget in Desktop Sidebar */}
+            <div className="mt-8 p-5 bg-gradient-to-br from-slate-900 to-purple-950 text-white rounded-2xl shadow-md border border-purple-500/25">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-[10px] uppercase font-black tracking-widest text-emerald-400">Ready to Consult</span>
+              </div>
+              <h4 className="text-xs font-black leading-snug mb-1.5 text-white">
+                Want a Website That Generates Real Inbound Leads?
+              </h4>
+              <p className="text-[11px] text-slate-300 leading-relaxed mb-4 font-medium">
+                Custom sub-second Next.js web systems built with built-in Google &amp; AI Search (GEO) rankings.
+              </p>
+              <a
+                href={`https://wa.me/919080026133?text=${encodeURIComponent(`Hi Joy Digital, I was reading "${post.title}" and would like to discuss building a high-converting website.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-2.5 px-3 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xs rounded-xl flex items-center justify-center gap-2 shadow-md transition-all hover:scale-[1.02] mb-2"
+              >
+                <i className="fa-brands fa-whatsapp text-sm" /> Chat on WhatsApp
+              </a>
+              <Link
+                href="/free-website-audit"
+                className="w-full py-2 px-3 bg-white/10 hover:bg-white/20 text-white font-bold text-[11px] rounded-xl flex items-center justify-center gap-1.5 transition-all text-center border border-white/10"
+              >
+                <i className="fa-solid fa-gauge-high text-[10px] text-purple-300" /> Free Performance Audit
+              </Link>
+            </div>
           </aside>
         )}
 
         {/* Prose Reader Content Column */}
-        <article className={`${post.showTableOfContents !== false && toc.length > 0 ? "lg:col-span-9" : "lg:col-span-12 max-w-4xl mx-auto"} bg-white border border-[#E2E8F0] p-8 sm:p-12 rounded-[32px] shadow-sm relative overflow-hidden w-full`}>
+        <article className={`${post.showTableOfContents !== false && toc.length > 0 ? "lg:col-span-9" : "lg:col-span-12 max-w-4xl mx-auto"} bg-white border border-[#E2E8F0] p-4 sm:p-8 lg:p-12 rounded-2xl sm:rounded-[32px] shadow-sm relative w-full min-w-0 text-slate-800`}>
           
           <div 
-            className="prose prose-blue max-w-none text-[#334155] leading-relaxed text-sm sm:text-base space-y-6.5
-                       prose-content
+            className="prose prose-blue max-w-none text-slate-800 leading-relaxed text-sm sm:text-base space-y-6.5
+                       prose-content min-w-0 break-words
                        prose-headings:text-slate-900 prose-headings:font-black prose-headings:tracking-tight 
                        prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-[#E2E8F0] prose-h2:pb-2
                        prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3 
-                       prose-p:mb-5 prose-p:leading-relaxed
+                       prose-p:mb-5 prose-p:leading-relaxed prose-p:text-slate-700 prose-li:text-slate-700
                        prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-5 prose-ul:space-y-2
                        prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-5 prose-ol:space-y-2
                        prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-slate-50 prose-blockquote:py-4.5 prose-blockquote:px-6 prose-blockquote:rounded-r-2xl prose-blockquote:italic prose-blockquote:font-semibold prose-blockquote:text-slate-700
@@ -297,31 +376,153 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
                        prose-table:w-full prose-table:border-collapse prose-table:my-6
                        prose-th:bg-slate-50 prose-th:border prose-th:border-[#E2E8F0] prose-th:p-3.5 prose-th:text-xs prose-th:font-extrabold prose-th:text-slate-900
                        prose-td:border prose-td:border-[#E2E8F0] prose-td:p-3.5 prose-td:text-xs prose-td:font-semibold"
-            dangerouslySetInnerHTML={{ __html: htmlContent }}
-          />
+          >
+            {afterHtml ? (
+              <>
+                <div dangerouslySetInnerHTML={{ __html: beforeHtml }} />
 
-          {/* Internal Links Box (Recommended Related Services & Resources) */}
-          {post.internalLinks && post.internalLinks.length > 0 && (
-            <div className="mt-10 p-6 bg-gradient-to-br from-slate-50 to-purple-50/40 border border-primary/20 rounded-2xl select-none shadow-sm">
-              <h4 className="text-xs font-extrabold uppercase tracking-wider text-slate-900 mb-3 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <i className="fa-solid fa-compass text-primary" /> Recommended Services &amp; Solutions
-              </h4>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs font-bold">
-                {post.internalLinks.map((link, idx) => (
-                  <li key={idx}>
+                {/* High-Converting Mid-Article Conversion Callout Box */}
+                <div className="my-10 p-5 sm:p-8 bg-gradient-to-br from-slate-950 via-slate-900 to-purple-950 text-white rounded-2xl sm:rounded-3xl border border-purple-500/30 shadow-xl relative overflow-hidden not-prose select-none min-w-0">
+                  <div className="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
+                  <div className="relative z-10">
+                    <div className="flex flex-wrap items-center gap-2 mb-3">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        Turn Search Traffic into Inbound Leads
+                      </span>
+                      <span className="text-[10px] text-slate-400 font-bold hidden sm:inline">&bull; Joy Digital Growth Architecture</span>
+                    </div>
+
+                    <h3 className="text-lg sm:text-2xl font-black text-white tracking-tight leading-snug mb-2.5">
+                      Need a Website That Converts Visitors into Direct Paying Clients?
+                    </h3>
+
+                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium mb-6 max-w-2xl">
+                      Most websites fail to generate sales because they are slow and lack conversion funnels. 
+                      <strong className="text-white font-bold"> Joy Digital</strong> builds custom, sub-second Next.js web applications with 95+ PageSpeed, built-in SEO, and frictionless 1-click WhatsApp lead captures.
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6 text-xs text-slate-200 font-semibold">
+                      <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl p-2.5">
+                        <i className="fa-solid fa-bolt text-yellow-400 text-sm" />
+                        <span>Sub-second Load (&lt;800ms)</span>
+                      </div>
+                      <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl p-2.5">
+                        <i className="fa-solid fa-comments text-emerald-400 text-sm" />
+                        <span>1-Click WhatsApp Funnel</span>
+                      </div>
+                      <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl p-2.5">
+                        <i className="fa-solid fa-chart-line text-purple-400 text-sm" />
+                        <span>Built-in Google &amp; GEO Rank</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                      <a
+                        href={`https://wa.me/919080026133?text=${encodeURIComponent(`Hi Joy Digital, I was reading your article "${post.title}" and would like to consult on my website project.`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xs sm:text-sm shadow-lg shadow-emerald-500/20 hover:scale-[1.02] transition-all"
+                      >
+                        <i className="fa-brands fa-whatsapp text-base" />
+                        <span>Chat on WhatsApp (Instant Reply)</span>
+                      </a>
+
+                      <Link
+                        href="/free-website-audit"
+                        className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/15 transition-all text-center"
+                      >
+                        <i className="fa-solid fa-magnifying-glass-chart text-xs text-purple-300" />
+                        <span>Get Free 20-Point Audit</span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
+                <div dangerouslySetInnerHTML={{ __html: afterHtml }} />
+              </>
+            ) : (
+              <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+            )}
+          </div>
+
+          {/* Clean Topic Badges (Modern Semantic Tags) */}
+          {post.tags && post.tags.length > 0 && (
+            <div className="mt-10 pt-6 border-t border-slate-200 select-none">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+                <span className="text-xs font-black uppercase tracking-wider text-slate-500 flex items-center gap-1.5 shrink-0">
+                  <i className="fa-solid fa-tags text-[#3B1580] text-xs" /> Related Topics:
+                </span>
+                <div className="flex flex-wrap items-center gap-2">
+                  {post.tags.slice(0, 6).map((tag, idx) => (
                     <Link
-                      href={link.targetUrl}
-                      className="text-slate-800 hover:text-primary flex items-center justify-between p-3 bg-white rounded-xl border border-slate-200/90 shadow-xs hover:border-primary/40 hover:shadow-md transition-all duration-200 group"
+                      key={idx}
+                      href={`/blog?search=${encodeURIComponent(tag)}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-1.5 rounded-full bg-slate-100 hover:bg-purple-100/70 text-slate-800 hover:text-[#3B1580] border border-slate-200 hover:border-purple-300 transition-all duration-200 shadow-2xs hover:scale-[1.02]"
                     >
-                      <span className="truncate pr-2 font-bold">{link.anchorText}</span>
-                      <i className="fa-solid fa-arrow-right text-[10px] text-primary group-hover:translate-x-1 transition-transform" />
+                      <span className="text-primary font-black">#</span>
+                      <span>{tag}</span>
                     </Link>
-                  </li>
-                ))}
-              </ul>
+                  ))}
+                </div>
+              </div>
             </div>
           )}
+
+          {/* Internal Links Box (Recommended Related Services & Resources) */}
+          {(() => {
+            const getFallbackServiceLinks = () => {
+              const text = `${post.category || ""} ${post.title || ""}`.toLowerCase();
+              if (text.includes("travel") || text.includes("safari") || text.includes("tour")) {
+                return [
+                  { anchorText: "Travel Website Development", targetUrl: "/travel-website-development" },
+                  { anchorText: "Tour Operator Web Solutions", targetUrl: "/tour-operator-website-development" },
+                ];
+              }
+              if (text.includes("seo") || text.includes("google") || text.includes("ranking") || text.includes("search")) {
+                return [
+                  { anchorText: "Professional SEO Services", targetUrl: "/seo-services" },
+                  { anchorText: "Technical SEO & Speed Tuning", targetUrl: "/technical-seo" },
+                ];
+              }
+              if (text.includes("design") || text.includes("ui") || text.includes("landing")) {
+                return [
+                  { anchorText: "Web Design Services", targetUrl: "/web-design-services" },
+                  { anchorText: "Landing Page Development", targetUrl: "/landing-page-development" },
+                ];
+              }
+              return [
+                { anchorText: "Custom Next.js Web Development", targetUrl: "/website-development" },
+                { anchorText: "Full-Stack Web Engineering", targetUrl: "/custom-website-development" },
+              ];
+            };
+
+            const linksToRender = (post.internalLinks && post.internalLinks.length > 0)
+              ? post.internalLinks
+              : getFallbackServiceLinks();
+
+            return (
+              <div className="mt-10 p-6 bg-gradient-to-br from-slate-50 to-purple-50/40 border border-primary/20 rounded-2xl select-none shadow-sm">
+                <h4 className="text-xs font-extrabold uppercase tracking-wider text-slate-900 mb-3 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                  <i className="fa-solid fa-compass text-primary" /> Recommended Services &amp; Solutions
+                </h4>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs font-bold">
+                  {linksToRender.map((link, idx) => (
+                    <li key={idx}>
+                      <Link
+                        href={link.targetUrl}
+                        className="text-slate-800 hover:text-primary flex items-center justify-between p-3 bg-white rounded-xl border border-slate-200/90 shadow-xs hover:border-primary/40 hover:shadow-md transition-all duration-200 group"
+                      >
+                        <span className="truncate pr-2 font-bold">{link.anchorText}</span>
+                        <i className="fa-solid fa-arrow-right text-[10px] text-primary group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })()}
 
           {/* FAQ Accordion Section (if present) */}
           {post.faqs && post.faqs.length > 0 && (
@@ -355,6 +556,11 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
             </div>
           )}
 
+          {/* Share Article Callout Banner */}
+          <div className="mt-12">
+            <BlogShareButtons title={post.title} slug={slug} variant="box" />
+          </div>
+
           {/* Author E-E-A-T Profile Card */}
           {post.showAuthorInfo !== false && (
             <div className="mt-12 p-6 bg-slate-50 border border-slate-200 rounded-2xl select-none flex flex-col sm:flex-row items-start sm:items-center gap-4">
@@ -380,36 +586,11 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
             </div>
           )}
 
-          {/* Article Tags */}
-          {post.tags && post.tags.length > 0 && (
-            <div className="mt-8 pt-6 border-t border-slate-200">
-              <span className="text-xs font-bold text-slate-700 block mb-3">Related Topics:</span>
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map((t) => {
-                  const tagSlug = t
-                    .toLowerCase()
-                    .replace(/&/g, "and")
-                    .replace(/[^a-z0-9]+/g, "-")
-                    .replace(/^-+|-+$/g, "");
-                  return (
-                    <Link
-                      key={t}
-                      href={`/blog/tag/${tagSlug}`}
-                      className="text-[11px] font-semibold bg-slate-100 hover:bg-primary/10 hover:text-primary text-slate-700 px-3 py-1 rounded-lg transition-colors border border-slate-200"
-                    >
-                      #{t}
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
           {/* Link Back to Blog */}
           <div className="border-t border-[#E9E4F2] mt-10 pt-6 text-center select-none">
             <Link
               href="/blog"
-              className="text-xs font-bold text-primary hover:text-primary-light flex items-center justify-center gap-2 group"
+              className="text-xs font-bold text-[#3B1580] hover:text-[#4D1FA3] flex items-center justify-center gap-2 group"
             >
               <i className="fa-solid fa-arrow-left-long group-hover:-translate-x-1.5 transition-transform" /> Back to Blog Articles
             </Link>
@@ -419,44 +600,55 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
       </div>
 
       {/* Conversion CTA */}
-      <section className="mt-16 bg-slate-950 border border-slate-900 text-white rounded-[32px] p-8 sm:p-12 relative overflow-hidden select-none reveal-hidden blog-card-reveal text-center">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.015] pointer-events-none" />
-        <div className="relative z-10 max-w-xl mx-auto">
-          <span className="bg-orange-500/10 text-orange-400 border border-orange-500/25 text-[9px] font-black tracking-widest px-3 py-1 rounded-full uppercase mb-4 inline-block">
-            Scale Your Business
+      <section className="mt-16 bg-gradient-to-br from-slate-950 via-slate-900 to-purple-950 border border-purple-500/30 text-white rounded-2xl sm:rounded-[32px] p-5 sm:p-12 relative overflow-hidden select-none reveal-hidden blog-card-reveal text-center shadow-2xl min-w-0">
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
+        <div className="relative z-10 max-w-2xl mx-auto">
+          <span className="bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-[10px] font-black tracking-widest px-3.5 py-1 rounded-full uppercase mb-4 inline-flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            Direct Founder Consultation
           </span>
-          <h3 className="text-xl sm:text-2xl font-black mb-4 tracking-tight leading-snug">
-            Need Help Growing Your Business Online?
+          <h3 className="text-2xl sm:text-3xl font-black mb-4 tracking-tight leading-snug">
+            Ready to Build a Website That Actually Brings High-Ticket Clients?
           </h3>
-          <p className="text-xs text-slate-400 leading-relaxed font-semibold mb-8">
-            Leverage fast-loading Next.js web systems and proximity ranking optimizations to secure steady inbound channels.
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium mb-8">
+            Don&apos;t let another month pass with zero organic inquiries. Talk directly with Joy Digital to engineer a sub-second Next.js platform optimized for Google Page 1 and Generative AI search.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/contact"
-              className="bg-primary hover:bg-[#6D28D9] text-white font-bold text-xs px-6 py-3.5 rounded-xl shadow-md transition-all hover:scale-[1.025]"
-            >
-              Talk to Joy Digital
-            </Link>
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <a
-              href="https://wa.me/919080026133?text=Hello%20Joy%20Digital,%20I'd%20like%20to%20discuss%20our%20project."
+              href={`https://wa.me/919080026133?text=${encodeURIComponent(`Hello Saravanan (Joy Digital), I was reading your blog "${post.title}" and want to discuss a new website project.`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#10b981] hover:bg-[#059669] text-white font-bold text-xs px-6 py-3.5 rounded-xl shadow-md transition-all hover:scale-[1.025] flex items-center gap-1.5"
+              className="bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-500/25 transition-all hover:scale-[1.025] flex items-center gap-2"
             >
-              <i className="fa-brands fa-whatsapp" /> WhatsApp Sync
+              <i className="fa-brands fa-whatsapp text-base" /> Chat on WhatsApp Directly
             </a>
+            <Link
+              href="/free-website-audit"
+              className="bg-primary hover:bg-[#6D28D9] text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md transition-all hover:scale-[1.025] flex items-center gap-2"
+            >
+              <i className="fa-solid fa-gauge-high text-xs text-purple-200" /> Get Free 20-Point Audit
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-white/10 hover:bg-white/15 text-white font-bold text-xs sm:text-sm px-5 py-3.5 rounded-xl border border-white/15 transition-all"
+            >
+              Request Custom Quote
+            </Link>
+          </div>
+          <div className="mt-6 flex items-center justify-center gap-6 text-[11px] text-slate-400 font-semibold">
+            <span className="flex items-center gap-1.5"><i className="fa-solid fa-check text-emerald-400 text-xs" /> Response within 2 hours</span>
+            <span className="flex items-center gap-1.5"><i className="fa-solid fa-check text-emerald-400 text-xs" /> No pushy sales pitch</span>
           </div>
         </div>
       </section>
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="mt-20 border-t border-[#E9E4F2] pt-16">
+        <section className="mt-20 border-t border-white/15 pt-16">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 select-none gap-4">
             <div className="text-left">
-              <span className="text-[10px] font-black text-primary uppercase tracking-widest block mb-2">Related Articles</span>
-              <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">Further Reading & Case Insights</h3>
+              <span className="text-[10px] font-black text-[#C9F600] uppercase tracking-widest block mb-2">Related Articles</span>
+              <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">Further Reading & Case Insights</h3>
             </div>
             {(() => {
               const cat = (post.category || "").toLowerCase();
@@ -479,7 +671,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
               return (
                 <Link
                   href={service.href}
-                  className="text-xs font-bold text-primary hover:text-primary-light flex items-center gap-1.5 self-start sm:self-auto bg-primary/5 hover:bg-primary/10 border border-primary/15 px-4 py-2 rounded-xl transition-all"
+                  className="text-xs font-bold text-white hover:text-[#C9F600] flex items-center gap-1.5 self-start sm:self-auto bg-white/10 hover:bg-white/15 border border-white/20 px-4 py-2 rounded-xl transition-all"
                 >
                   <span>Explore Service: <strong>{service.label}</strong></span>
                   <i className="fa-solid fa-arrow-right-long text-[10px]" />
@@ -488,7 +680,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
             })()}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left related-cards-grid reveal-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left related-cards-grid reveal-hidden w-full min-w-0">
             {relatedPosts.map((rPost, idx) => (
               <div
                 key={rPost.slug}
@@ -496,7 +688,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
                 className="bg-white border border-[#E2E8F0] rounded-[24px] overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="relative w-full h-40 bg-slate-50 border-b border-[#E9E4F2] overflow-hidden">
+                  <div className="relative w-full aspect-video bg-slate-100 border-b border-[#E9E4F2] overflow-hidden">
                     <Image
                       src={rPost.image || getThumbnail(rPost.category)}
                       alt={`${rPost.title} preview`}
@@ -504,6 +696,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                       loading="lazy"
+                      unoptimized
                     />
                     <div className="absolute top-4 left-4 z-10">
                       <span className="bg-primary text-white font-extrabold text-[8px] uppercase tracking-wider px-2 py-0.5 rounded-md shadow-sm border border-primary-light/20">
