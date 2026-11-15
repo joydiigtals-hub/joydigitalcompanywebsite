@@ -1,21 +1,30 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 ﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
 
+const config = getIndustryConfig("website-for-textile-manufacturers");
+
 export const metadata: Metadata = {
-  title: "Textile Manufacturer Website Design | Joy Digital",
-  description: "Custom B2B websites and SEO for textile manufacturers and fabric exporters. Digital fabric catalogs, RFQ forms, and global buyer leads.",
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://joydigital.in/website-for-textile-manufacturers",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-textile-manufacturers",
-    title: "Global Textile Manufacturer Website Design & Export Lead Generation | Joy Digital",
-    description: "Ultra-fast Next.js websites tailored for global textile mills, apparel exporters, and fabric manufacturers. Digital swatch catalogs, B2B RFQ forms, GOTS/OEKO-TEX compliance badges, and worldwide search ranking.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Global Textile Manufacturer Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -64,7 +73,7 @@ export default async function TextileWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Textile Manufacturers"
-      heroTitle="High-Converting B2B Website Design & Global SEO for Textile Manufacturers"
+      heroTitle={config.h1}
       heroSubtitle="Turn international apparel brands, wholesale buyers, and sourcing managers into high-value B2B RFQ leads. We build ultra-fast Next.js export portals for spinning mills, fabric weavers, garment OEMs, and home textile exporters worldwide."
       leadSource="Website for Textile Manufacturers Landing Page"
       heroCtaText="Get Free B2B Web Quote"

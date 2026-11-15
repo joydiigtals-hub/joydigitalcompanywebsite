@@ -106,9 +106,10 @@ export default function PortfolioSection() {
               <div className="absolute inset-0 bg-[#7C3AED]/10 opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none" />
               <Image 
                 src="/assets/images/portfolio/you-and-me-voyage-1.png" 
-                alt="You & Me Voyage Homepage" 
+                alt="You & Me Voyage tour operator website homepage screenshot with itinerary booking" 
                 width={800} 
                 height={450} 
+                loading="lazy"
                 className="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-700" 
               />
             </div>
@@ -117,36 +118,40 @@ export default function PortfolioSection() {
               <div className="w-full rounded-2xl overflow-hidden border border-[#2B2346] shadow-lg relative group bg-[#130E26]">
                 <Image 
                   src="/assets/images/portfolio/you-and-me-voyage-2.png" 
-                  alt="Tour Packages List" 
+                  alt="You & Me Voyage tour packages list and dynamic safari filter interface" 
                   width={400} 
                   height={300} 
+                  loading="lazy"
                   className="w-full h-auto object-cover transform group-hover:scale-[1.03] transition-transform duration-500" 
                 />
               </div>
               <div className="w-full rounded-2xl overflow-hidden border border-[#2B2346] shadow-lg relative group bg-[#130E26]">
                 <Image 
                   src="/assets/images/portfolio/you-and-me-voyage-3.png" 
-                  alt="Tour Itinerary Details" 
+                  alt="Detailed day-by-day travel itinerary and WhatsApp booking button screenshot" 
                   width={400} 
                   height={300} 
+                  loading="lazy"
                   className="w-full h-auto object-cover transform group-hover:scale-[1.03] transition-transform duration-500" 
                 />
               </div>
               <div className="w-full rounded-2xl overflow-hidden border border-[#2B2346] shadow-lg relative group bg-[#130E26]">
                 <Image 
                   src="/assets/images/portfolio/you-and-me-voyage-4.png" 
-                  alt="Blog and Articles" 
+                  alt="Travel blog articles and destination guide archive screenshot" 
                   width={400} 
                   height={300} 
+                  loading="lazy"
                   className="w-full h-auto object-cover transform group-hover:scale-[1.03] transition-transform duration-500" 
                 />
               </div>
               <div className="w-full rounded-2xl overflow-hidden border border-[#2B2346] shadow-lg relative group bg-[#130E26]">
                 <Image 
                   src="/assets/images/portfolio/you-and-me-voyage-5.png" 
-                  alt="Footer and Map Integration" 
+                  alt="Interactive contact footer and Google Map integration screenshot" 
                   width={400} 
                   height={300} 
+                  loading="lazy"
                   className="w-full h-auto object-cover transform group-hover:scale-[1.03] transition-transform duration-500" 
                 />
               </div>

@@ -22,9 +22,8 @@ const SERVICES_CATEGORIES = [
     href: "/web-design-services",
     localized: false,
     subServices: [
-      { href: "/web-design-services", label: "Business Website Design", localized: false },
+      { href: "/web-design-services", label: "Business Website Design & UI/UX", localized: false },
       { href: "/landing-page-development", label: "Landing Page Design", localized: false },
-      { href: "/web-design-services", label: "UI/UX Design", localized: false },
     ]
   },
   {
@@ -33,10 +32,8 @@ const SERVICES_CATEGORIES = [
     localized: false,
     subServices: [
       { href: "/travel-website-development", label: "Travel Agency Websites", localized: false },
-      { href: "/travel-website-development", label: "Tour Operator Websites", localized: false },
+      { href: "/tour-operator-website-development", label: "Tour Operator Websites", localized: false },
       { href: "/safari-website-development", label: "Safari Websites", localized: false },
-      { href: "/travel-website-development", label: "Tourism Websites", localized: false },
-      { href: "/travel-website-development", label: "DMC Websites", localized: false },
     ]
   },
   {

@@ -1,20 +1,29 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 ﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
+const config = getIndustryConfig("website-for-logistics-and-shipping");
+
 export const metadata: Metadata = {
-  title: "Logistics & Shipping Website Design | Joy Digital",
-  description: "Custom website design and SEO for freight forwarders and logistics companies. Cargo tracking integrations, freight rate calculators, and B2B leads.",
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://joydigital.in/website-for-logistics-and-shipping",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-logistics-and-shipping",
-    title: "Logistics & Shipping Website Design & Freight Lead Generation | Joy Digital",
-    description: "Ultra-fast Next.js website design for freight forwarders, 3PL warehousing providers, and cargo shipping lines. Includes freight quote forms, shipment tracking widgets, and international search ranking.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Logistics & Shipping Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -58,7 +67,7 @@ export default function LogisticsWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Logistics & Shipping"
-      heroTitle="High-Converting Website Design & SEO for Logistics & Freight Companies"
+      heroTitle={config.h1}
       heroSubtitle="Capture high-volume ocean freight, air cargo, and 3PL warehousing inquiries. We build fast, reliable Next.js websites for freight forwarders, custom brokers, supply chain operators, and international shipping lines."
       leadSource="Website for Logistics & Shipping Landing Page"
       heroCtaText="Get Free Freight Web Quote"

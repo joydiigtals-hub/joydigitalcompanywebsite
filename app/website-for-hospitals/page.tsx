@@ -1,20 +1,29 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 ﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
+const config = getIndustryConfig("website-for-hospitals");
+
 export const metadata: Metadata = {
-  title: "Hospital Website Design & Medical SEO | Joy Digital",
-  description: "Custom website design and SEO for hospitals and healthcare clinics. Doctor appointment booking, patient portals, and high Google rankings.",
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://joydigital.in/website-for-hospitals",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-hospitals",
-    title: "Hospital Website Design & Global Medical Patient Acquisition | Joy Digital",
-    description: "Ultra-fast Next.js website design for hospitals, specialized surgery centers, and medical tourism providers. Online doctor appointment booking, international patient visa desk, and global healthcare SEO.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Hospital Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -58,7 +67,7 @@ export default function HospitalWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Hospitals"
-      heroTitle="High-Converting Website Design & Medical Tourism SEO for Hospitals"
+      heroTitle={config.h1}
       heroSubtitle="Attract local patients and high-value international medical tourism inquiries. We engineer fast, HIPAA/NABH-compliant Next.js websites for multi-specialty hospitals, surgical institutes, diagnostic chains, and medical travel advisories."
       leadSource="Website for Hospitals Landing Page"
       heroCtaText="Get Free Hospital Web Quote"

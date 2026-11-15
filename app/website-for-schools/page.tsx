@@ -1,25 +1,28 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
+const config = getIndustryConfig("website-for-schools");
+
 export const metadata: Metadata = {
-  title: "School Website Design & Development Services | Joy Digital",
-  description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://joydigital.in/website-for-schools",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-schools",
-    title: "School Website Design & Development Services | Joy Digital",
-    description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "School Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "School Website Design & Development Services | Joy Digital",
-    description: "Custom Next.js websites for schools & educational institutes. Enhance admissions, online fee portals & student management. Get a free quote today!",
+    title: config.title,
+    description: config.description,
     images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
@@ -64,7 +67,7 @@ export default function SchoolWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Schools"
-      heroTitle="High-Converting Website Design & Education SEO for Schools & Institutes"
+      heroTitle={config.h1}
       heroSubtitle="Convert prospective parent inquiries into direct campus visits and online student applications. We engineer fast, modern Next.js websites for international schools, IB/IGCSE academies, K-12 institutes, and study abroad advisories."
       leadSource="Website for Schools Landing Page"
       heroCtaText="Get Free School Web Quote"

@@ -2,17 +2,22 @@ import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import { generatePageSeo } from "@/lib/seoEngine";
+import Link from "next/link";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const seoData = await generatePageSeo("/custom-website-development");
+  const seoData = await generatePageSeo(
+    "/custom-website-development",
+    "Custom Website Development Services | Tailored Web Systems | Joy Digital",
+    "Professional custom website development services tailored to your exact business needs. Pass Core Web Vitals, eliminate bloat, and generate qualified enquiries."
+  );
   return seoData.metadata;
 }
 
 export default async function CustomWebDevPage() {
   const seoData = await generatePageSeo(
     "/custom-website-development",
-    "Custom Website Development Services For Businesses | Joy Digital",
-    "Professional custom website development services for businesses worldwide. We build high-converting, SEO-ready websites designed to generate B2B enquiries."
+    "Custom Website Development Services | Tailored Web Systems | Joy Digital",
+    "Professional custom website development services tailored to your exact business needs. Pass Core Web Vitals, eliminate bloat, and generate qualified enquiries."
   );
 
   return (
@@ -30,8 +35,16 @@ export default async function CustomWebDevPage() {
             <p>
               A website is a business asset, not just a digital brochure. It must work 24/7 to bring in leads. Joy Digital is a premium <strong>custom website development</strong> agency delivering high-speed platforms and <strong>custom website development services</strong> designed to generate B2B enquiries globally.
             </p>
+            <div className="p-4 bg-purple-50 rounded-xl border border-purple-100 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between my-4 text-xs">
+              <span className="font-semibold text-slate-800">Exploring other technical service tiers?</span>
+              <div className="flex gap-3 shrink-0">
+                <Link href="/website-development" className="text-accent underline font-bold hover:text-purple-700">Web Development Company</Link>
+                <span className="text-slate-300">|</span>
+                <Link href="/nextjs-development-agency" className="text-accent underline font-bold hover:text-purple-700">Next.js Development Agency</Link>
+              </div>
+            </div>
             <p>
-              Whether you are in Corporate, Retail, Tech, Healthcare, or Manufacturing, our <strong>business website development</strong> team builds scalable platforms that pass Google's Core Web Vitals, giving your business a technical SEO advantage from day one.
+              Whether you are in Corporate, Retail, Tech, Healthcare, or Manufacturing, our <strong>business website development</strong> team builds scalable platforms that pass Google&apos;s Core Web Vitals, giving your business a technical SEO advantage from day one. If you need standard corporate packages, see our <Link href="/website-development" className="text-accent underline font-semibold">web development company</Link> options, or for React-specific infrastructure, consult our <Link href="/nextjs-development-agency" className="text-accent underline font-semibold">Next.js development agency</Link>.
             </p>
             <h3 className="text-xl font-extrabold text-primary-dark mt-8 mb-4">Custom Code (Next.js / React) vs. Off-the-Shelf Templates (WordPress / Wix)</h3>
             <div className="overflow-x-auto my-6">
@@ -180,7 +193,8 @@ export default async function CustomWebDevPage() {
           }
         ]}
         crossLinks={[
-          { href: "/website-development", label: "Custom Web Development Services" },
+          { href: "/website-development", label: "Professional Web Development Company" },
+          { href: "/nextjs-development-agency", label: "Specialized Next.js Development Agency" },
           { href: "/web-design-services", label: "Custom Website Design" },
           { href: "/ecommerce-website-development", label: "Custom Ecommerce Website Development" },
         ]}

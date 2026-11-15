@@ -1,20 +1,29 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 ﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
+const config = getIndustryConfig("website-for-law-firms");
+
 export const metadata: Metadata = {
-  title: "Law Firm Website Design & Legal SEO | Joy Digital",
-  description: "Custom website design and SEO for law firms and attorneys. Confidential client consultation forms, attorney profiles, and top Google rankings.",
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://joydigital.in/website-for-law-firms",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-law-firms",
-    title: "Law Firm Website Design & Legal Client Acquisition | Joy Digital",
-    description: "Ultra-fast Next.js websites built for legal practices and corporate law attorneys. Confidential case evaluation forms, practice area showcases, attorney bio pages, and local search dominance.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Law Firm Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -58,7 +67,7 @@ export default function LawFirmWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Law Firms"
-      heroTitle="High-Converting Website Design & SEO for Law Firms & Attorneys"
+      heroTitle={config.h1}
       heroSubtitle="Build immediate professional trust and convert high-value legal inquiries into scheduled client consultations. We engineer fast, elegant Next.js websites for corporate law firms, litigation advocates, IP attorneys, and specialized legal practices."
       leadSource="Website for Law Firms Landing Page"
       heroCtaText="Get Free Legal Web Quote"

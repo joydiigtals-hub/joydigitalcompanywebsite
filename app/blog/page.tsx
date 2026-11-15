@@ -6,6 +6,8 @@ import StickyWidgets from "@/components/ui/StickyWidgets";
 import { getAllPosts } from "@/lib/blog";
 import StrongCTA from "@/components/StrongCTA";
 import BlogListingContainer from "@/components/sections/BlogListingContainer";
+import JsonLd from "@/components/seo/JsonLd";
+import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const revalidate = 60;
 
@@ -28,8 +30,19 @@ export const metadata: Metadata = {
 export default async function BlogIndexPage() {
   const posts = await getAllPosts();
 
+  const blogSchema = buildPageGraphSchema({
+    url: "https://joydigital.in/blog",
+    title: "Agency Growth Blog | Marketing & SEO Tips | Joy Digital",
+    description: "Stay ahead of competitors with the latest search marketing checklists, SEO audit guidelines, conversion optimization practices, and next-gen web speed updates.",
+    breadcrumbs: [
+      { name: "Home", item: "https://joydigital.in" },
+      { name: "Blog", item: "https://joydigital.in/blog" },
+    ],
+  });
+
   return (
     <>
+      <JsonLd schema={blogSchema} />
       <Header />
       <main className="pt-20 lg:pt-28 bg-[#F8FAFC]">
         

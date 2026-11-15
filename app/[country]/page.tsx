@@ -15,7 +15,6 @@ export async function generateStaticParams() {
     { country: "us" },
     { country: "uk" },
     { country: "ae" },
-    { country: "in" },
     { country: "ca" },
     { country: "au" },
     { country: "sg" },
@@ -105,25 +104,44 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: "Joy Digital is a results-oriented global agency engineering fast Next.js sites and search marketing campaigns.",
   };
 
+  const canonicalUrl = `https://joydigital.in/${countryLower}`;
+
   return {
     title: data.title,
     description: data.description,
     alternates: {
-      canonical: `https://joydigital.in`,
+      canonical: canonicalUrl,
       languages: {
         "x-default": "https://joydigital.in",
-        "en-in": "https://joydigital.in",
-        "en-us": "https://joydigital.in/us",
-        "en-gb": "https://joydigital.in/uk",
-        "en-ae": "https://joydigital.in/ae",
-        "en-ca": "https://joydigital.in/ca",
-        "en-au": "https://joydigital.in/au",
-        "en-sg": "https://joydigital.in/sg",
-        "en-my": "https://joydigital.in/my",
-        "en-za": "https://joydigital.in/za",
-        "en-ng": "https://joydigital.in/ng",
-        "en-ke": "https://joydigital.in/ke",
+        "en-IN": "https://joydigital.in/in",
+        "en-US": "https://joydigital.in/us",
+        "en-GB": "https://joydigital.in/uk",
+        "en-AE": "https://joydigital.in/ae",
+        "en-CA": "https://joydigital.in/ca",
+        "en-AU": "https://joydigital.in/au",
       },
+    },
+    openGraph: {
+      type: "website",
+      locale: "en_US",
+      url: canonicalUrl,
+      title: data.title,
+      description: data.description,
+      siteName: "Joy Digital",
+      images: [
+        {
+          url: "https://joydigital.in/assets/images/hero-banner.webp",
+          width: 1200,
+          height: 630,
+          alt: `Joy Digital - ${data.title}`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: data.title,
+      description: data.description,
+      images: ["https://joydigital.in/assets/images/hero-banner.webp"],
     },
   };
 }

@@ -1,25 +1,28 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
+const config = getIndustryConfig("website-for-luxury-brands");
+
 export const metadata: Metadata = {
-  title: "Premium Luxury Brand Website Design Services | Joy Digital",
-  description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://joydigital.in/website-for-luxury-brands",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-luxury-brands",
-    title: "Premium Luxury Brand Website Design Services | Joy Digital",
-    description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Luxury Brand Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Premium Luxury Brand Website Design Services | Joy Digital",
-    description: "Ultra-fast, elegant Next.js website design for luxury brands. Elevate brand prestige & drive online conversions with seamless UX. Enquire now!",
+    title: config.title,
+    description: config.description,
     images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
@@ -64,7 +67,7 @@ export default function LuxuryBrandWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Luxury & Premium Brands"
-      heroTitle="High-Converting Website Design & Prestige SEO for Luxury & Premium Brands"
+      heroTitle={config.h1}
       heroSubtitle="Evoke desire, elevate brand prestige, and convert high-net-worth clientele. We engineer ultra-fast, visually stunning Next.js web portals for haute couture fashion houses, fine jewelry ateliers, luxury real estate, and bespoke lifestyle brands worldwide."
       leadSource="Website for Luxury Brands Landing Page"
       heroCtaText="Get Free Luxury Web Quote"

@@ -27,8 +27,8 @@ export default function ClientLogoMarquee() {
       </div>
 
       {/* Infinite Scrolling Marquee Wrapper */}
-      <div className="relative w-full overflow-hidden flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-        <div className="flex gap-8 sm:gap-12 animate-marquee whitespace-nowrap py-2">
+      <div className="relative w-full overflow-hidden flex min-h-[56px] contain-layout contain-paint [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className="flex gap-8 sm:gap-12 animate-marquee whitespace-nowrap py-2 will-change-transform">
           {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((logo, idx) => (
             <div
               key={`${logo.name}-${idx}`}

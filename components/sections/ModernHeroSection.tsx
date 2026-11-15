@@ -26,8 +26,8 @@ interface ModernHeroSectionProps {
 
 const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com";
 
-const heroMainWords = ["Next.js", "&", "Custom", "Web", "Development", "Company", "for"];
-const heroGradientWords = ["Global", "Businesses"];
+const heroMainWords = ["Website", "Development", "&", "SEO", "That", "Brings", "You"];
+const heroGradientWords = ["Customers,", "Not", "Just", "Traffic"];
 
 // Framer Motion Variants for Staggered Orchestration (Optimized for Mobile Speed)
 export default function ModernHeroSection({ country = "" }: ModernHeroSectionProps) {
@@ -217,7 +217,7 @@ export default function ModernHeroSection({ country = "" }: ModernHeroSectionPro
             {/* Step 3: Subtitle & Feature Bullet Points */}
           <div className="space-y-4 max-w-2xl">
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-              Custom websites that help your business grow. Enterprise Next.js &amp; full-stack web engineering built for global B2B clients, with specialized platforms for travel &amp; safari companies.
+              Custom websites that help your business grow. Enterprise Next.js web development and SEO built for global B2B clients, with specialized platforms for travel &amp; safari companies.
             </p>
 
             <div className="space-y-2.5 pt-1">

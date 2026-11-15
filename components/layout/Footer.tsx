@@ -160,7 +160,7 @@ export default function Footer() {
               <Link href="/website-design-company-coimbatore" className="hover:text-accent hover:pl-1 transition-all block">Web Design Coimbatore</Link>
             </li>
             <li>
-              <Link href="/seo-company-coimbatore" className="hover:text-accent hover:pl-1 transition-all block">SEO Company Coimbatore</Link>
+              <Link href="/website-design-company-coimbatore" className="hover:text-accent hover:pl-1 transition-all block">Web Design &amp; SEO Coimbatore</Link>
             </li>
           </ul>
         </div>
@@ -209,6 +209,11 @@ export default function Footer() {
             <li>
               <Link href="/social-media-marketing" className="hover:text-accent hover:pl-1 transition-all">
                 Social Media Marketing
+              </Link>
+            </li>
+            <li>
+              <Link href="/digital-marketing-services" className="hover:text-accent hover:pl-1 transition-all">
+                Digital Marketing Services
               </Link>
             </li>
             <li>

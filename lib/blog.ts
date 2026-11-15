@@ -272,3 +272,93 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
 
   return getLocalPostBySlug(slug);
 }
+
+export function slugifyBlogTerm(text: string): string {
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+export async function getAllCategories(): Promise<{ name: string; slug: string; count: number }[]> {
+  const posts = await getAllPosts();
+  const published = posts.filter((p) => p.status !== "Draft" && p.status !== "Archived");
+  const catMap = new Map<string, { name: string; slug: string; count: number }>();
+
+  for (const post of published) {
+    if (post.category) {
+      const slug = slugifyBlogTerm(post.category);
+      if (!catMap.has(slug)) {
+        catMap.set(slug, { name: post.category, slug, count: 0 });
+      }
+      catMap.get(slug)!.count++;
+    }
+  }
+
+  return Array.from(catMap.values()).sort((a, b) => b.count - a.count);
+}
+
+export async function getAllTags(): Promise<{ name: string; slug: string; count: number }[]> {
+  const posts = await getAllPosts();
+  const published = posts.filter((p) => p.status !== "Draft" && p.status !== "Archived");
+  const tagMap = new Map<string, { name: string; slug: string; count: number }>();
+
+  for (const post of published) {
+    const tags = post.tags || [];
+    for (const tag of tags) {
+      if (tag && tag.trim()) {
+        const trimmed = tag.trim();
+        const slug = slugifyBlogTerm(trimmed);
+        if (!tagMap.has(slug)) {
+          tagMap.set(slug, { name: trimmed, slug, count: 0 });
+        }
+        tagMap.get(slug)!.count++;
+      }
+    }
+  }
+
+  return Array.from(tagMap.values()).sort((a, b) => b.count - a.count);
+}
+
+export async function getPostsByCategory(categorySlug: string): Promise<{ name: string; slug: string; posts: BlogPost[] } | null> {
+  const posts = await getAllPosts();
+  const published = posts.filter((p) => p.status !== "Draft" && p.status !== "Archived");
+
+  let matchedName = "";
+  for (const post of published) {
+    if (post.category && slugifyBlogTerm(post.category) === categorySlug) {
+      matchedName = post.category;
+      break;
+    }
+  }
+
+  if (!matchedName) return null;
+
+  const filtered = published.filter((p) => slugifyBlogTerm(p.category || "") === categorySlug);
+  return { name: matchedName, slug: categorySlug, posts: filtered };
+}
+
+export async function getPostsByTag(tagSlug: string): Promise<{ name: string; slug: string; posts: BlogPost[] } | null> {
+  const posts = await getAllPosts();
+  const published = posts.filter((p) => p.status !== "Draft" && p.status !== "Archived");
+
+  let matchedName = "";
+  for (const post of published) {
+    const tags = post.tags || [];
+    for (const tag of tags) {
+      if (slugifyBlogTerm(tag) === tagSlug) {
+        matchedName = tag;
+        break;
+      }
+    }
+    if (matchedName) break;
+  }
+
+  if (!matchedName) return null;
+
+  const filtered = published.filter((p) => (p.tags || []).some((t) => slugifyBlogTerm(t) === tagSlug));
+  return { name: matchedName, slug: tagSlug, posts: filtered };
+}

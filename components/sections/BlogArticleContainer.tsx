@@ -135,6 +135,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
 
   // Structured Data (JSON-LD)
   const canonicalUrl = post.canonicalUrl || `https://joydigital.in/blog/${slug}`;
+  const catSlug = (post.category || "General").toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
   const articleGraph = buildPageGraphSchema({
     url: canonicalUrl,
     title: post.seoTitle || post.title,
@@ -142,7 +143,7 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
     breadcrumbs: [
       { name: "Home", item: "https://joydigital.in" },
       { name: "Blog", item: "https://joydigital.in/blog" },
-      { name: post.category || "General", item: `https://joydigital.in/blog?category=${encodeURIComponent(post.category || "General")}` },
+      { name: post.category || "General", item: `https://joydigital.in/blog/category/${catSlug}` },
       { name: post.title, item: canonicalUrl },
     ],
     blogPosting: {
@@ -169,7 +170,9 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
         <span className="mx-2 text-slate-300">/</span>
         <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
         <span className="mx-2 text-slate-300">/</span>
-        <span className="text-primary font-extrabold">{post.category}</span>
+        <Link href={`/blog/category/${catSlug}`} className="text-primary font-extrabold hover:underline">
+          {post.category}
+        </Link>
         <span className="mx-2 text-slate-300">/</span>
         <span className="text-slate-900 truncate max-w-[220px] inline-block height-4 align-bottom">{post.title}</span>
       </nav>
@@ -177,9 +180,12 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
       {/* Header Details */}
       <header className="mb-10 text-left max-w-4xl animate-slide-up">
         <div className="flex flex-wrap items-center gap-3.5 mb-5 select-none">
-          <span className="bg-primary/10 text-primary border border-primary-light/20 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+          <Link
+            href={`/blog/category/${catSlug}`}
+            className="bg-primary/10 text-primary border border-primary-light/20 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider hover:bg-primary hover:text-white transition-colors"
+          >
             {post.category}
-          </span>
+          </Link>
           
           <span className="text-[11px] text-[#64748B] font-semibold flex items-center gap-1">
             <i className="fa-regular fa-calendar text-[10px]" />
@@ -370,6 +376,31 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
                 <p className="text-xs text-slate-600 leading-relaxed font-medium">
                   {post.authorBio || "Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth."}
                 </p>
+              </div>
+            </div>
+          )}
+
+          {/* Article Tags */}
+          {post.tags && post.tags.length > 0 && (
+            <div className="mt-8 pt-6 border-t border-slate-200">
+              <span className="text-xs font-bold text-slate-700 block mb-3">Related Topics:</span>
+              <div className="flex flex-wrap gap-2">
+                {post.tags.map((t) => {
+                  const tagSlug = t
+                    .toLowerCase()
+                    .replace(/&/g, "and")
+                    .replace(/[^a-z0-9]+/g, "-")
+                    .replace(/^-+|-+$/g, "");
+                  return (
+                    <Link
+                      key={t}
+                      href={`/blog/tag/${tagSlug}`}
+                      className="text-[11px] font-semibold bg-slate-100 hover:bg-primary/10 hover:text-primary text-slate-700 px-3 py-1 rounded-lg transition-colors border border-slate-200"
+                    >
+                      #{t}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           )}

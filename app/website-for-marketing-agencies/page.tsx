@@ -1,25 +1,28 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
+const config = getIndustryConfig("website-for-marketing-agencies");
+
 export const metadata: Metadata = {
-  title: "High-Converting Website Design for Agencies | Joy Digital",
-  description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://joydigital.in/website-for-marketing-agencies",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-marketing-agencies",
-    title: "High-Converting Website Design for Agencies | Joy Digital",
-    description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Marketing Agency Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "High-Converting Website Design for Agencies | Joy Digital",
-    description: "Showcases, portfolio portals & lead-generation websites tailored for marketing agencies. Scale your agency with high-performance web solutions.",
+    title: config.title,
+    description: config.description,
     images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
@@ -64,7 +67,7 @@ export default function MarketingAgencyWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Marketing Agencies"
-      heroTitle="High-Converting Website Design & SEO for Marketing Agencies & Studios"
+      heroTitle={config.h1}
       heroSubtitle="Showcase your creative genius, prove campaign ROI, and land high-retainer clients. We engineer fast, visually arresting Next.js websites for digital marketing agencies, performance media firms, PR agencies, and creative studios."
       leadSource="Website for Marketing Agencies Landing Page"
       heroCtaText="Get Free Agency Web Quote"

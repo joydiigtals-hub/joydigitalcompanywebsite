@@ -3,26 +3,21 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Custom Ecommerce Website Development Services | Joy Digital",
-  description: "Custom Next.js ecommerce development. Fast headless storefronts, B2B digital commerce apps, and high-converting checkout flows.",
-  keywords: [
-    "E-commerce Website Development",
-    "Custom E-commerce Development",
-    "Online Store Development"
-  ],
+  title: "Custom Ecommerce Website Development & Online Stores | Joy Digital",
+  description: "Custom Next.js ecommerce website development. Fast online stores, B2B digital commerce platforms, and high-converting checkout flows. Get a free proposal.",
   alternates: {
     canonical: "https://joydigital.in/ecommerce-website-development",
   },
   openGraph: {
-    title: "Custom Ecommerce Website Development Services | Joy Digital",
-    description: "Custom Next.js ecommerce development. Fast headless storefronts, B2B digital commerce apps, and high-converting checkout flows.",
+    title: "Custom Ecommerce Website Development & Online Stores | Joy Digital",
+    description: "Custom Next.js ecommerce website development. Fast online stores, B2B digital commerce platforms, and high-converting checkout flows. Get a free proposal.",
     url: "https://joydigital.in/ecommerce-website-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Ecommerce Website Development Services | Joy Digital",
-    description: "Custom Next.js ecommerce development. Fast headless storefronts, B2B digital commerce apps, and high-converting checkout flows.",
+    title: "Custom Ecommerce Website Development & Online Stores | Joy Digital",
+    description: "Custom Next.js ecommerce website development. Fast online stores, B2B digital commerce platforms, and high-converting checkout flows. Get a free proposal.",
   }
 };
 
@@ -51,29 +46,29 @@ export default function EcommerceWebDevPage() {
   return (
     <ServicePageTemplate
       serviceName="Ecommerce Website Development"
-      heroTitle="Custom Ecommerce Website Development & Headless Storefronts"
-      heroSubtitle="Convert mobile visitors into paying customers with custom ecommerce website development. We build headless Next.js storefronts, B2B e-commerce platforms, and ultra-fast checkout funnels."
+      heroTitle="Custom Ecommerce Website Development & High-Converting Online Stores"
+      heroSubtitle="Convert mobile visitors into paying customers with custom ecommerce website development. We build fast Next.js online stores, B2B digital commerce platforms, and seamless checkout funnels."
       leadSource="Ecommerce Website Development Landing Page"
       canonicalUrl="https://joydigital.in/ecommerce-website-development"
-      overviewTitle="Headless E-commerce: Blazing Speeds, Zero DB Downtime & High Security"
+      overviewTitle="Fast E-commerce Websites: High Speeds, Zero Downtime & Maximum Security"
       overviewContent={
         <div className="space-y-6">
           <p>
-            Standard e-commerce builders (like WooCommerce, Shopify, or Magento) can feel slow, bloated, and vulnerable to hacks. Every second of delay in loading products or rendering the checkout page directly reduces your conversion rates. To scale sales, you need a high-speed storefront built on modern headless technology.
+            Standard e-commerce builders (like WooCommerce, Shopify, or Magento) can feel slow, bloated, and vulnerable to hacks. Every second of delay in loading products or rendering the checkout page directly reduces your conversion rates. To scale sales, you need a high-speed storefront built on modern technology.
           </p>
           <p>
-            At Joy Digital, our specialized <strong>ecommerce website development</strong> uses **Next.js** and **Tailwind CSS**. We separate the front-end display from the back-end database (headless architecture). This ensures your product pages load in under 1.2 seconds, even on slow mobile networks.
+            At Joy Digital, our specialized <strong>ecommerce website development</strong> uses **Next.js** and **Tailwind CSS**. We separate the front-end display from the back-end database. This ensures your product pages load in under 1.2 seconds, even on slow mobile networks.
           </p>
           <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Optimized Checkout Funnels, Security, and Payment Gateway Setup</h3>
           <p>
             Over 70% of e-commerce carts are abandoned due to complicated checkouts or slow load times. We design checkout pages that make purchasing simple. We integrate domestic and international payment gateways, set up automated invoice emails, and construct product catalog feeds.
           </p>
           <p>
-            Because we build headless sites, there are no SQL databases directly connected to the front-end, making them secure against cyber threats. We also set up product structured data schemas (Product, Offer, and Reviews JSON-LD), helping your product listings rank in Google search.
+            Because we build modern decoupled sites, there are no SQL databases directly connected to the front-end, making them secure against cyber threats. We also set up product structured data schemas (Product, Offer, and Reviews JSON-LD), helping your product listings rank in Google search.
           </p>
         </div>
       }
-      benefitsTitle="Why Choose Headless E-commerce?"
+      benefitsTitle="Why Choose High-Performance E-commerce?"
       benefitsSubtitle="We build high-converting storefronts optimized for speed, search, and checkout."
       benefits={[
         {

@@ -6,7 +6,6 @@ import AnalyticsTracker from "@/components/AnalyticsTracker";
 import ClarityTracker from "@/components/ClarityTracker";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
-import { getRootLayoutSchema } from "@/lib/seo/schema";
 import GoogleTranslateLoader from "@/components/GoogleTranslateLoader";
 import ClientWidgets from "@/components/ui/ClientWidgets";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
@@ -16,10 +15,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://joydigital.in"),
   title: {
-    default: "Joy Digital | Digital Agency & Next.js Web Development Chennai",
+    default: "Web Development & SEO Company – Get More Leads | Joy Digital",
     template: "%s | Joy Digital",
   },
-  description: "Joy Digital is a premier Digital Agency & Next.js Web Development company based in Chennai, India. We engineer sub-second web applications, custom software, SEO, and Generative Engine Optimization (GEO) for global brands.",
+  description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
 
   authors: [{ name: "Joy Digital", url: "https://joydigital.in" }],
   publisher: "Joy Digital",
@@ -37,19 +36,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://joydigital.in",
     languages: {
-      "en-IN": "https://joydigital.in",
+      "en-IN": "https://joydigital.in/in",
       "en-US": "https://joydigital.in/us",
       "en-GB": "https://joydigital.in/uk",
       "en-AE": "https://joydigital.in/ae",
       "en-CA": "https://joydigital.in/ca",
       "en-AU": "https://joydigital.in/au",
-      "es-ES": "https://joydigital.in/es",
-      "de-DE": "https://joydigital.in/de",
-      "fr-FR": "https://joydigital.in/fr",
-      "it-IT": "https://joydigital.in/it",
-      "en-SG": "https://joydigital.in/sg",
-      "es-MX": "https://joydigital.in/mx",
-      "pt-BR": "https://joydigital.in/br",
       "x-default": "https://joydigital.in",
     },
   },
@@ -111,12 +103,6 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.clarity.ms" />
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getRootLayoutSchema()),
-          }}
-        />
       </head>
       <body className="min-h-full flex flex-col bg-light-bg text-text-primary">
         <FontAwesomeLoader />

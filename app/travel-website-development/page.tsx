@@ -6,15 +6,6 @@ import { getPostBySlug } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Travel & Safari Website Development",
   description: "Custom travel & safari website engineering with instant booking engines, sub-second itinerary loading, and global SEO. Book your free consultation!",
-  keywords: [
-    "travel website development",
-    "safari website development company",
-    "tour operator website development",
-    "travel agency website design",
-    "tourism website development",
-    "custom travel booking platform",
-    "safari tour operator website"
-  ],
   alternates: {
     canonical: "https://joydigital.in/travel-website-development",
   },

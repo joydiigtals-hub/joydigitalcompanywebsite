@@ -1,4 +1,4 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/admin/', '/thank-you'],
+        disallow: ['/api/', '/admin/'],
       },
       {
         userAgent: [
@@ -20,7 +20,7 @@ export default function robots(): MetadataRoute.Robots {
           'Meta-ExternalAgent',
         ],
         allow: '/',
-        disallow: ['/api/', '/admin/', '/thank-you'],
+        disallow: ['/api/', '/admin/'],
       },
     ],
     sitemap: 'https://joydigital.in/sitemap.xml',

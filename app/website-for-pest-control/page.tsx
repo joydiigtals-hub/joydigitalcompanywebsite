@@ -1,26 +1,29 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
 
+const config = getIndustryConfig("website-for-pest-control");
+
 export const metadata: Metadata = {
-  title: "Local SEO & Website Design for Pest Control | Joy Digital",
-  description: "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://joydigital.in/website-for-pest-control",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-pest-control",
-    title: "Local SEO & Website Design for Pest Control | Joy Digital",
-    description: "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Pest Control Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Local SEO & Website Design for Pest Control | Joy Digital",
-    description: "Drive local emergency service bookings with high-converting Pest Control websites. Fast-loading, mobile-first & lead optimized. Get started!",
+    title: config.title,
+    description: config.description,
     images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
@@ -68,7 +71,7 @@ export default async function PestControlWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Pest Control"
-      heroTitle="High-Converting Website Design & SEO for Pest Control Companies"
+      heroTitle={config.h1}
       heroSubtitle="Turn urgent pest infestations into direct phone calls, instant WhatsApp bookings, and emergency inspection requests. We engineer ultra-fast, mobile-friendly Next.js websites for residential & commercial pest exterminators."
       leadSource="Website for Pest Control Landing Page"
       heroCtaText="Get Free Pest Control Web Quote"

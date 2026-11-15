@@ -60,7 +60,6 @@ export async function generatePageSeo(pagePath: string, defaultTitle?: string, d
     metadataBase: new URL(baseUrl),
     title,
     description,
-    keywords: keywordStrings,
     alternates: {
       canonical,
       languages: {

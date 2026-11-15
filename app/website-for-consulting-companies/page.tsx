@@ -1,25 +1,28 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
+const config = getIndustryConfig("website-for-consulting-companies");
+
 export const metadata: Metadata = {
-  title: "Corporate Website Development for Consultants | Joy Digital",
-  description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://joydigital.in/website-for-consulting-companies",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-consulting-companies",
-    title: "Corporate Website Development for Consultants | Joy Digital",
-    description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Consulting Firm Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Corporate Website Development for Consultants | Joy Digital",
-    description: "Professional website design for consulting firms & advisors. Build trust, display case studies, and capture qualified corporate leads effortlessly.",
+    title: config.title,
+    description: config.description,
     images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
@@ -64,7 +67,7 @@ export default function ConsultingWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Consulting Companies"
-      heroTitle="High-Converting Website Design & SEO for Consulting & Advisory Firms"
+      heroTitle={config.h1}
       heroSubtitle="Position your advisory firm as an indispensable strategic partner. We engineer fast, authoritative Next.js websites for management consultants, IT strategy firms, corporate growth advisors, and specialized business consultants."
       leadSource="Website for Consulting Companies Landing Page"
       heroCtaText="Get Free Consulting Web Quote"

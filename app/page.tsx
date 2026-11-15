@@ -3,11 +3,12 @@ import HomePageComponent, { HOME_FAQS } from "@/components/sections/HomePageComp
 import type { Metadata } from "next";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
+import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://joydigital.in"),
-  title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
-  description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
+  title: "Web Development & SEO Company – Get More Leads | Joy Digital",
+  description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
   authors: [{ name: "Joy Digital", url: "https://joydigital.in" }],
   publisher: "Joy Digital",
   robots: {
@@ -25,10 +26,12 @@ export const metadata: Metadata = {
     canonical: "https://joydigital.in",
     languages: {
       "x-default": "https://joydigital.in",
-      "en-us": "https://joydigital.in/us",
-      "en-gb": "https://joydigital.in/uk",
-      "en-ae": "https://joydigital.in/ae",
-      "en-in": "https://joydigital.in/in",
+      "en-US": "https://joydigital.in/us",
+      "en-GB": "https://joydigital.in/uk",
+      "en-AE": "https://joydigital.in/ae",
+      "en-CA": "https://joydigital.in/ca",
+      "en-AU": "https://joydigital.in/au",
+      "en-IN": "https://joydigital.in/in",
     },
   },
   verification: {
@@ -44,31 +47,36 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://joydigital.in",
     siteName: "Joy Digital",
-    title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
-    description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
+    title: "Web Development & SEO Company – Get More Leads | Joy Digital",
+    description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
     images: [
       {
         url: "https://joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
-        alt: "Joy Digital - Next.js Development Company India",
+        alt: "Joy Digital - Web Development & SEO Company",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
-    description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
+    title: "Web Development & SEO Company – Get More Leads | Joy Digital",
+    description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
     images: ["https://joydigital.in/assets/images/hero-banner.webp"],
     creator: "@joydigital",
   },
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  const posts = await getAllPosts();
+  const latestPosts = posts
+    .filter((p) => p.status !== "Draft" && p.status !== "Archived")
+    .slice(0, 3);
+
   const homeGraph = buildPageGraphSchema({
-    url: "https://joydigital.in/",
-    title: "Next.js Development Company India | Custom Web Apps | Joy Digital",
-    description: "Next.js & custom web development company for global clients in USA, UK & UAE. Sub-second performance, travel platforms & SEO. Get your free audit today!",
+    url: "https://joydigital.in",
+    title: "Web Development & SEO Company – Get More Leads | Joy Digital",
+    description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
     isHomepage: true,
     faqs: HOME_FAQS,
   });
@@ -76,7 +84,7 @@ export default function HomePage() {
   return (
     <>
       <JsonLd schema={homeGraph} />
-      <HomePageComponent country="" />
+      <HomePageComponent country="" latestPosts={latestPosts} />
     </>
   );
 }

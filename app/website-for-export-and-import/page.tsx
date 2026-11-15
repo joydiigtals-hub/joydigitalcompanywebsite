@@ -1,27 +1,29 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 ﻿import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import ExportLeadForm from "@/components/ui/ExportLeadForm";
 
+const config = getIndustryConfig("website-for-export-and-import");
+
 export const metadata: Metadata = {
-  title: "B2B Export Web Development Services | Joy Digital",
-  description: "Digital B2B portals and SEO for export-import houses. International buyer sourcing platforms, digital catalogs, and global trade lead engines.",
-  keywords: [
-    "B2B Export Web Development Services",
-    "Global Trade Portal",
-    "Digital Product Catalog",
-    "International B2B Sourcing",
-    "International B2B Trade SEO Architecture"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://joydigital.in/website-for-export-and-import",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-export-and-import",
-    title: "Enterprise Digital Platforms for Global Export-Import Houses | Joy Digital",
-    description: "Connect directly with international buyers. We build ultra-fast Next.js B2B web portals with custom RFQ engines and International B2B Trade SEO Architecture.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Export Import Business Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -65,7 +67,7 @@ export default function ExportImportWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Global B2B Export Portals"
-      heroTitle="Enterprise Digital Platforms & B2B Trade Engines for Global Export-Import Houses"
+      heroTitle={config.h1}
       heroSubtitle="Connect directly with international buyers, sourcing networks, and institutional distributors. We build ultra-fast, search-optimized Next.js B2B web portals with custom RFQ engines, digital product catalogs, and international B2B SEO."
       leadSource="B2B Export Engine Landing Page"
       customLeadForm={<ExportLeadForm />}

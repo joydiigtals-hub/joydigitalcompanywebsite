@@ -42,5 +42,5 @@ export default function CountUpNumber({ target, suffix = "" }: { target: number;
     return () => observer.disconnect();
   }, [target, triggered]);
 
-  return <span ref={elementRef}>{count}{suffix}</span>;
+  return <span ref={elementRef} className="inline-block tabular-nums">{count}{suffix}</span>;
 }

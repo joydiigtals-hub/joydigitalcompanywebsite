@@ -1,26 +1,30 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
 
+const config = getIndustryConfig("website-for-hotels");
+
 export const metadata: Metadata = {
-  title: "Hotel Website Design & Booking SEO | Joy Digital",
-  description: "Direct-booking websites and SEO for luxury hotels and resorts. Cut OTA commissions and capture international tourist bookings directly.",
-  keywords: [
-    "Hotel Website Design",
-    "Hotel Website Development",
-    "Hotel SEO"
-  ],
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://joydigital.in/website-for-hotels",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-hotels",
-    title: "Hotel Website Design & International Direct Booking Engine | Joy Digital",
-    description: "Ultra-fast Next.js website design for luxury hotels, eco-resorts, and hospitality chains. Commission-free direct reservation engines, 360 virtual room tours, multi-currency booking, and global travel SEO.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "Hotel Website Design Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: config.title,
+    description: config.description,
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -69,7 +73,7 @@ export default async function HotelWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Website for Hotels"
-      heroTitle="High-Converting Website Design & Direct Booking SEO for Hotels & Resorts"
+      heroTitle={config.h1}
       heroSubtitle="Stop losing 18-25% to OTA commissions like Booking.com and Agoda. We engineer fast, commission-free Next.js websites for luxury hotels, eco-resorts, boutique homestays, and global hospitality chains."
       leadSource="Website for Hotels Landing Page"
       heroCtaText="Get Free Hotel Web Quote"

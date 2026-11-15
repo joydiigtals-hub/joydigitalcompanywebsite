@@ -1,3 +1,4 @@
+import { getIndustryConfig } from "@/lib/industryPagesConfig";
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
@@ -5,23 +6,25 @@ import Link from "next/link";
 import SolarLeadForm from "@/components/ui/SolarLeadForm";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
+const config = getIndustryConfig("website-for-solar-companies");
+
 export const metadata: Metadata = {
-  title: "SEO & Website for Solar Installers India | Joy Digital",
-  description: "Website design & local SEO for solar installers and EPC companies in India. Rank on Google, generate rooftop solar inquiries & C&I leads with Joy Digital.",
+  title: config.title,
+  description: config.description,
   alternates: {
-    canonical: "https://joydigital.in/website-for-solar-companies",
+    canonical: config.canonical,
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/website-for-solar-companies",
-    title: "SEO & Website for Solar Installers India | Joy Digital",
-    description: "Website design & local SEO for solar installers and EPC companies in India. Rank on Google, generate rooftop solar inquiries & C&I leads with Joy Digital.",
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: "SEO & Website for Solar Installers India Joy Digital" }],
+    url: config.canonical,
+    title: config.title,
+    description: config.description,
+    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO & Website for Solar Installers India | Joy Digital",
-    description: "Website design & local SEO for solar installers and EPC companies in India. Rank on Google, generate rooftop solar inquiries & C&I leads with Joy Digital.",
+    title: config.title,
+    description: config.description,
     images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
@@ -65,7 +68,7 @@ export default function SolarWebPage() {
   return (
     <ServicePageTemplate
       serviceName="Commercial Solar EPC Web Development"
-      heroTitle="SEO & Website Development for Solar Installers & EPCs in India"
+      heroTitle={config.h1}
       heroSubtitle="Dominate the clean energy market with sub-1.5s serverless Next.js speed, high-converting rooftop & C&I solar funnels, and targeted Google search rankings for solar installers and commercial EPCs across India and worldwide."
       leadSource="Global B2B Solar EPC Landing Page"
       customLeadForm={<SolarLeadForm />}
