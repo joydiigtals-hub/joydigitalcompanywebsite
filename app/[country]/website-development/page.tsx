@@ -225,15 +225,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description: `Joy Digital is a top web development agency serving the ${config.targetMarket}. We engineer fast, secure, and mobile-responsive websites using Next.js & React to rank on Google and scale leads.`,
     alternates: {
-      canonical: `https://www.joydigital.in/${countryLower}/website-development`,
+      canonical: `https://joydigital.in/${countryLower}/website-development`,
       languages: {
-        "x-default": "https://www.joydigital.in/website-development",
-        "en-IN": "https://www.joydigital.in/website-development",
-        "en-US": "https://www.joydigital.in/us/website-development",
-        "en-GB": "https://www.joydigital.in/uk/website-development",
-        "en-AE": "https://www.joydigital.in/ae/website-development",
-        "en-CA": "https://www.joydigital.in/ca/website-development",
-        "en-AU": "https://www.joydigital.in/au/website-development",
+        "x-default": "https://joydigital.in/website-development",
+        "en-IN": "https://joydigital.in/website-development",
+        "en-US": "https://joydigital.in/us/website-development",
+        "en-GB": "https://joydigital.in/uk/website-development",
+        "en-AE": "https://joydigital.in/ae/website-development",
+        "en-CA": "https://joydigital.in/ca/website-development",
+        "en-AU": "https://joydigital.in/au/website-development",
       },
     },
   };
@@ -256,7 +256,7 @@ export default async function CountryWebDevPage({ params }: PageProps) {
     "provider": {
       "@type": "Organization",
       "name": "Joy Digital",
-      "url": `https://www.joydigital.in/${country}`
+      "url": `https://joydigital.in/${country}`
     },
     "description": `Joy Digital is a leading web development agency designing high-converting, mobile-responsive, secure websites built for speed and search indexing in the ${config.targetMarket}.`,
     "offers": {

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Joy Digital Madurai Services"
   ],
   alternates: {
-    canonical: "https://www.joydigital.in/digital-marketing-agency-madurai",
+    canonical: "https://joydigital.in/digital-marketing-agency-madurai",
   },
 };
 
@@ -25,7 +25,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://www.joydigital.in/assets/images/logo.webp",
+    "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -53,7 +53,7 @@ export default function DigitalMarketingMadurai() {
       heroSubtitle="Stop wasting marketing budgets. We build qualified lead generation funnels, scale social media ads, and optimize search rankings to bring actual paying customers."
       leadSource="Digital Marketing Madurai Landing Page"
       heroCtaText="Get Marketing Blueprint"
-      canonicalUrl="https://www.joydigital.in/digital-marketing-agency-madurai"
+      canonicalUrl="https://joydigital.in/digital-marketing-agency-madurai"
       overviewTitle="Qualified Lead Generation & Performance Marketing in Madurai"
       overviewContent={
         <div className="space-y-6">

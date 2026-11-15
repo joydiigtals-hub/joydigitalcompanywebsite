@@ -15,7 +15,7 @@ export default function BlogShareButtons({
   variant = "compact",
   className = "",
 }: BlogShareButtonsProps) {
-  const [shareUrl, setShareUrl] = useState(`https://www.joydigital.in/blog/${slug}`);
+  const [shareUrl, setShareUrl] = useState(`https://joydigital.in/blog/${slug}`);
   const [copied, setCopied] = useState(false);
   const [canNativeShare, setCanNativeShare] = useState(false);
 

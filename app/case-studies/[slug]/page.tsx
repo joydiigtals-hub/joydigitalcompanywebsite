@@ -90,17 +90,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: (study.title.length > 44 ? study.title.slice(0, 44).trim() : study.title),
     description: `Read how Joy Digital delivered a ${study.metricValue} increase in ${study.metricLabel} through specialized ${study.category}.`,
     alternates: {
-      canonical: `https://www.joydigital.in/case-studies/${resolvedParams.slug}`,
+      canonical: `https://joydigital.in/case-studies/${resolvedParams.slug}`,
     },
     openGraph: {
       type: "article",
-      url: `https://www.joydigital.in/case-studies/${resolvedParams.slug}`,
+      url: `https://joydigital.in/case-studies/${resolvedParams.slug}`,
       siteName: "Joy Digital Agency",
       title: (study.title.length > 44 ? study.title.slice(0, 44).trim() : study.title),
       description: `Read how Joy Digital delivered a ${study.metricValue} increase in ${study.metricLabel} through specialized ${study.category}.`,
       images: [
         {
-          url: "https://www.joydigital.in/assets/images/hero-banner.webp",
+          url: "https://joydigital.in/assets/images/hero-banner.webp",
           width: 1200,
           height: 630,
           alt: study.title,

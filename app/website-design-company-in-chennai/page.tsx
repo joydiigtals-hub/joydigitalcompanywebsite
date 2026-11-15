@@ -13,12 +13,12 @@ export const metadata: Metadata = {
       "Custom Web Portals Chennai"
   ],
   alternates: {
-    canonical: "https://www.joydigital.in/website-design-company-in-chennai",
+    canonical: "https://joydigital.in/website-design-company-in-chennai",
   },
   openGraph: {
     title: "Web Design Company in Chennai | Premium Website Design Agency",
     description: "Joy Digital is a leading web design company in Chennai. We build high-speed, responsive websites & local SEO plans. Find a website developer near me.",
-    url: "https://www.joydigital.in/website-design-company-in-chennai",
+    url: "https://joydigital.in/website-design-company-in-chennai",
     type: "website",
   },
   twitter: {
@@ -36,7 +36,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://www.joydigital.in/assets/images/logo.webp",
+    "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -65,7 +65,7 @@ export default function WebsiteDesignChennai() {
       heroTitle="Web Design Company in Chennai"
       heroSubtitle="Looking for a website developer near me or a web development agency in T Nagar / Guindy / Velachery? We design high-speed Next.js websites that convert local search traffic into leads."
       leadSource="Website Design Chennai Landing Page"
-      canonicalUrl="https://www.joydigital.in/website-design-company-in-chennai"
+      canonicalUrl="https://joydigital.in/website-design-company-in-chennai"
       overviewTitle="Local Web Design Company in Chennai Built for Results"
       overviewContent={
         <div className="space-y-6">

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Digital Marketing Agency"
   ],
   alternates: {
-    canonical: "https://www.joydigital.in/social-media-marketing",
+    canonical: "https://joydigital.in/social-media-marketing",
   },
 };
 
@@ -25,7 +25,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://www.joydigital.in/assets/images/logo.webp",
+    "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {

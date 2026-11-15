@@ -20,17 +20,17 @@ export const metadata: Metadata = {
       "Joy Digital Chennai"
   ],
   alternates: {
-    canonical: "https://www.joydigital.in/seo-services-chennai",
+    canonical: "https://joydigital.in/seo-services-chennai",
   },
   openGraph: {
     title: "SEO Services in Chennai | Get More Leads | Joy Digital",
     description:
       "Affordable SEO services in Chennai: technical SEO, on-page, local SEO and content. See our case studies and get a free SEO audit.",
-    url: "https://www.joydigital.in/seo-services-chennai",
+    url: "https://joydigital.in/seo-services-chennai",
     siteName: "Joy Digital",
     images: [
       {
-        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
+        url: "https://joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "SEO Services in Chennai - Joy Digital",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "SEO Services in Chennai | Get More Leads | Joy Digital",
     description:
       "Affordable SEO services in Chennai: technical SEO, on-page, local SEO and content. See our case studies and get a free SEO audit.",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -91,12 +91,12 @@ export default async function SeoServicesChennai() {
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "@id": "https://www.joydigital.in/seo-services-chennai#professionalservice",
+        "@id": "https://joydigital.in/seo-services-chennai#professionalservice",
         "name": "Joy Digital - SEO Services in Chennai",
-        "url": "https://www.joydigital.in/seo-services-chennai",
+        "url": "https://joydigital.in/seo-services-chennai",
         "telephone": "+919080026133",
-        "logo": "https://www.joydigital.in/assets/images/logo.webp",
-        "image": "https://www.joydigital.in/assets/images/hero-banner.webp",
+        "logo": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://joydigital.in/assets/images/hero-banner.webp",
         "description": "Affordable SEO services in Chennai: technical SEO, on-page, local SEO and content. See our case studies and get a free SEO audit.",
         "address": {
           "@type": "PostalAddress",
@@ -124,11 +124,11 @@ export default async function SeoServicesChennai() {
       },
       {
         "@type": "Service",
-        "@id": "https://www.joydigital.in/seo-services-chennai#service",
+        "@id": "https://joydigital.in/seo-services-chennai#service",
         "name": "SEO Services in Chennai",
         "serviceType": "Search Engine Optimization",
         "provider": {
-          "@id": "https://www.joydigital.in/seo-services-chennai#professionalservice"
+          "@id": "https://joydigital.in/seo-services-chennai#professionalservice"
         },
         "areaServed": {
           "@type": "City",
@@ -144,7 +144,7 @@ export default async function SeoServicesChennai() {
       {
         "@type": "Review",
         "itemReviewed": {
-          "@id": "https://www.joydigital.in/seo-services-chennai#professionalservice"
+          "@id": "https://joydigital.in/seo-services-chennai#professionalservice"
         },
         "reviewRating": {
           "@type": "Rating",
@@ -220,7 +220,7 @@ export default async function SeoServicesChennai() {
         leadSource="SEO Services Chennai Landing Page"
         heroCtaText="Claim Free SEO Consultation"
         heroActions={heroActions}
-        canonicalUrl="https://www.joydigital.in/seo-services-chennai"
+        canonicalUrl="https://joydigital.in/seo-services-chennai"
         pricingNote="Starting from Rs [SEO_PRICE] / month. Final price depends on industry competition, existing website health, and target geographic scope."
         chennaiProofSection={<ChennaiClientProofCard />}
         overviewTitle="High-Impact SEO Services in Chennai Designed for Real Business Leads"
