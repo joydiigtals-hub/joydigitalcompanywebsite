@@ -41,24 +41,20 @@ export function proxy(request: NextRequest) {
     });
   }
 
-  // 2. Strict 301 Redirect to Canonical (https://joydigital.in)
-  // Forces all variants (http, www, vercel/render staging) to non-www canonical in a single 301 hop
+  // 2. Normalize Staging & Staging Subdomains
   if (!isLocal) {
     const isNonCanonicalHost =
-      host === "www.joydigital.in" ||
       host === "joydigital.vercel.app" ||
       host.endsWith(".onrender.com");
 
-    const isHttp = proto === "http";
-
-    if (isNonCanonicalHost || (host === "joydigital.in" && isHttp)) {
-      return NextResponse.redirect(`https://joydigital.in${pathname}${search}`, 301);
+    if (isNonCanonicalHost) {
+      return NextResponse.redirect(`https://www.joydigital.in${pathname}${search}`, 301);
     }
 
     // Trailing slash normalization to eliminate redirect hops (skip root "/")
     if (pathname.length > 1 && pathname.endsWith("/")) {
       const cleanPath = pathname.replace(/\/+$/, "");
-      return NextResponse.redirect(`https://joydigital.in${cleanPath}${search}`, 301);
+      return NextResponse.redirect(`https://${host}${cleanPath}${search}`, 301);
     }
   }
 
