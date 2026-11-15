@@ -51,26 +51,29 @@ export default async function BlogIndexPage() {
   return (
     <>
       <Header />
-      <main className="pt-16 lg:pt-20 bg-[#F8FAFC]">
+      <main className="pt-16 lg:pt-20 bg-[#0D051E] text-white min-h-screen">
         
-        {/* Blog listing with active filters and animations */}
+        {/* Blog listing with active filters, hero story, and animations */}
         <BlogListingContainer posts={posts} />
 
         {/* Rich SEO Content Guide Section to ensure high word count */}
-        <section className="py-16 bg-primary border-t border-white/[0.18]">
+        <section className="py-20 bg-[#120729] border-t border-white/10 relative z-10">
           <div className="max-w-4xl mx-auto px-6 text-left">
-            <h2 className="text-2xl font-black text-white mb-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#C9F600]/10 border border-[#C9F600]/30 text-[#C9F600] text-xs font-bold uppercase tracking-wider mb-5">
+              <span>Deep Dive Insights</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-black text-white mb-6">
               Digital Marketing, Web Design & Local SEO Insights for Growing Businesses
             </h2>
-            <div className="prose prose-invert text-xs text-[#D9CCF5]/90 leading-relaxed space-y-4 font-semibold">
+            <div className="prose prose-invert text-xs sm:text-sm text-[#D9CCF5]/85 leading-relaxed space-y-4 font-normal">
               <p>
                 Welcome to the official Joy Digital knowledge hub. In today&apos;s digital marketplace, having a high-performing website paired with a strategic search engine optimization strategy is critical for business growth. Our articles break down actionable techniques for web development, technical SEO, Google Maps local pack optimization, user interface design, and conversion rate optimization.
               </p>
-              <h3 className="text-sm font-extrabold text-white pt-2">Why Web Performance & Core Web Vitals Matter for SEO</h3>
+              <h3 className="text-base font-extrabold text-[#C9F600] pt-3">Why Web Performance & Core Web Vitals Matter for SEO</h3>
               <p>
                 Google prioritizes fast, responsive, and mobile-friendly websites. Modern web frameworks like Next.js enable server-side pre-rendering (SSG) and automatic WebP image compression, allowing pages to load in under 1.5 seconds. Faster load speeds reduce bounce rates and help your pages rank higher on search engine result pages (SERPs).
               </p>
-              <h3 className="text-sm font-extrabold text-white pt-2">Dominating Google Maps & Local Search Rankings</h3>
+              <h3 className="text-base font-extrabold text-[#C9F600] pt-3">Dominating Google Maps & Local Search Rankings</h3>
               <p>
                 Local businesses require specialized search visibility. By auditing Name, Address, and Phone (NAP) citations across regional directory listings and configuring geotagged JSON-LD schema markup, companies can climb into the Google Maps 3-Pack to capture nearby mobile search queries and direct phone call inquiries. Explore our latest guides below to scale your organic search presence.
               </p>

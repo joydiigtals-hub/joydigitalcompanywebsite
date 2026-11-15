@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { trackToolUsage } from "@/lib/toolTracker";
+import ToolFeedback from "@/components/ui/ToolFeedback";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
@@ -189,15 +190,15 @@ export default function SeoAuditToolClient() {
 
   // Score Color Helper
   const getScoreColor = (score: number) => {
-    if (score >= 80) return "text-emerald-500 border-emerald-500 bg-emerald-50";
-    if (score >= 55) return "text-amber-500 border-amber-500 bg-amber-50";
-    return "text-rose-500 border-rose-500 bg-rose-50";
+    if (score >= 80) return "text-emerald-400 border-emerald-400 bg-emerald-500/10";
+    if (score >= 55) return "text-amber-400 border-amber-400 bg-amber-500/10";
+    return "text-rose-400 border-rose-400 bg-rose-500/10";
   };
 
   const getScoreBadge = (score: number) => {
-    if (score >= 80) return { label: "Good Health", bg: "bg-emerald-500" };
-    if (score >= 55) return { label: "Needs Optimization", bg: "bg-amber-500" };
-    return { label: "Critical Revenue Leak", bg: "bg-rose-500" };
+    if (score >= 80) return { label: "Good Health", bg: "bg-emerald-500 text-white" };
+    if (score >= 55) return { label: "Needs Optimization", bg: "bg-amber-500 text-white" };
+    return { label: "Critical Revenue Leak", bg: "bg-rose-500 text-white" };
   };
 
   const filteredChecks = scanResult?.checks.filter((check) => {
@@ -210,39 +211,39 @@ export default function SeoAuditToolClient() {
     <>
       <Header />
 
-      <main className="bg-[#FAF9FF] text-[#1F1B2D] min-h-screen pt-24 pb-20 select-text">
+      <main className="bg-[#3B1580] text-[#FFFFFF] min-h-screen pt-24 pb-20 select-text">
         <div className="max-w-5xl mx-auto px-6">
           
           {/* Breadcrumbs */}
-          <nav className="text-xs text-[#6B6478] font-bold mb-6 flex items-center gap-1.5" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-[#7C3AED]">Home</Link>
+          <nav className="text-xs text-[#D9CCF5] font-bold mb-6 flex items-center gap-1.5" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-[#C9F600] transition-colors">Home</Link>
             <i className="fa-solid fa-chevron-right text-[8px]" aria-hidden="true" />
-            <Link href="/free-tools" className="hover:text-[#7C3AED]">Free Tools</Link>
+            <Link href="/free-tools" className="hover:text-[#C9F600] transition-colors">Free Tools</Link>
             <i className="fa-solid fa-chevron-right text-[8px]" aria-hidden="true" />
-            <span className="text-[#1F1B2D]" aria-current="page">AI Website Audit Engine</span>
+            <span className="text-white" aria-current="page">AI Website Audit Engine</span>
           </nav>
 
           {/* Heading */}
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-4 py-1.5 rounded-full mb-4">
-              <span className="w-2 h-2 bg-[#7C3AED] rounded-full animate-pulse" />
-              <span className="text-[11px] font-black text-[#7C3AED] uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-1.5 rounded-full mb-4">
+              <span className="w-2 h-2 bg-[#C9F600] rounded-full animate-pulse" />
+              <span className="text-[11px] font-black text-[#C9F600] uppercase tracking-wider">
                 Real-Time Domain Scanner • Powered by Gemini AI
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#1F1B2D] tracking-tight mb-4 leading-tight">
-              Instant AI Website <span className="text-[#7C3AED]">Speed & SEO Audit</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
+              Instant AI Website <span className="text-[#C9F600]">Speed & SEO Audit</span>
             </h1>
 
-            <p className="text-xs sm:text-sm text-[#6B6478] font-semibold leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xs sm:text-sm text-[#D9CCF5]/80 font-medium leading-relaxed max-w-2xl mx-auto">
               Scan your live website in 15 seconds. Uncover server latency (TTFB), Core Web Vitals bottlenecks, missing SEO tags, and get an executive AI diagnostic report.
             </p>
           </div>
 
           {/* Core App Box */}
-          <div className="bg-white border border-[#E9E4F2] p-6 sm:p-10 rounded-[28px] shadow-sm relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#7C3AED] via-purple-500 to-indigo-600" />
+          <div className="bg-[#260B5E] border border-white/20 p-6 sm:p-10 rounded-[28px] shadow-2xl relative overflow-hidden mb-12">
+            <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#C9F600] via-emerald-400 to-[#C9F600]" />
 
             {/* SCAN INPUT FORM */}
             {!isScanning && !scanResult && (
@@ -255,30 +256,30 @@ export default function SeoAuditToolClient() {
                       value={websiteUrl}
                       onChange={(e) => setWebsiteUrl(e.target.value)}
                       required
-                      className="w-full bg-[#FAF9FF] border border-[#E9E4F2] rounded-2xl px-5 py-4 text-xs sm:text-sm font-bold outline-none focus:bg-white focus:border-[#7C3AED] focus:ring-4 focus:ring-[#7C3AED]/10 transition-all text-[#1F1B2D] placeholder:text-[#A7A2B2] shadow-inner"
+                      className="w-full bg-[#3B1580] border border-white/20 rounded-2xl px-5 py-4 text-xs sm:text-sm font-bold outline-none focus:border-[#C9F600] focus:ring-4 focus:ring-[#C9F600]/15 transition-all text-white placeholder:text-white/40 shadow-inner"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="bg-gradient-to-r from-[#7C3AED] to-indigo-600 hover:from-[#6D28D9] hover:to-indigo-700 text-white font-black text-xs sm:text-sm px-8 py-4 rounded-2xl transition-all shadow-lg shadow-[#7C3AED]/25 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 cursor-pointer flex items-center justify-center gap-2"
+                    className="bg-[#C9F600] hover:bg-[#b8f000] text-[#120526] font-black text-xs sm:text-sm px-8 py-4 rounded-2xl transition-all shadow-lg shadow-[#C9F600]/20 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 cursor-pointer flex items-center justify-center gap-2"
                   >
-                    <i className="fa-solid fa-bolt text-amber-300" />
+                    <i className="fa-solid fa-bolt text-[#120526]" />
                     <span>Run AI Audit</span>
                   </button>
                 </div>
 
                 {scanError && (
-                  <div className="mt-4 p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-600 text-xs font-bold flex items-center gap-2">
-                    <i className="fa-solid fa-triangle-exclamation" />
+                  <div className="mt-4 p-4 rounded-xl bg-rose-950/60 border border-rose-500/40 text-rose-200 text-xs font-bold flex items-center gap-2">
+                    <i className="fa-solid fa-triangle-exclamation text-rose-400" />
                     <span>{scanError}</span>
                   </div>
                 )}
 
-                <div className="flex flex-wrap items-center justify-center gap-6 mt-6 text-[11px] text-[#6B6478] font-bold">
-                  <span className="flex items-center gap-1.5"><i className="fa-solid fa-check text-emerald-500" /> No signup required</span>
-                  <span className="flex items-center gap-1.5"><i className="fa-solid fa-check text-emerald-500" /> Real-time server ping</span>
-                  <span className="flex items-center gap-1.5"><i className="fa-solid fa-check text-emerald-500" /> Instant Gemini AI diagnosis</span>
+                <div className="flex flex-wrap items-center justify-center gap-6 mt-6 text-[11px] text-[#D9CCF5] font-bold">
+                  <span className="flex items-center gap-1.5"><i className="fa-solid fa-check text-[#C9F600]" /> No signup required</span>
+                  <span className="flex items-center gap-1.5"><i className="fa-solid fa-check text-[#C9F600]" /> Real-time server ping</span>
+                  <span className="flex items-center gap-1.5"><i className="fa-solid fa-check text-[#C9F600]" /> Instant Gemini AI diagnosis</span>
                 </div>
               </form>
             )}
@@ -287,19 +288,19 @@ export default function SeoAuditToolClient() {
             {isScanning && (
               <div className="py-14 flex flex-col items-center gap-6 max-w-lg mx-auto text-center">
                 <div className="relative w-20 h-20 flex items-center justify-center">
-                  <div className="absolute inset-0 rounded-full border-4 border-purple-100 border-t-[#7C3AED] animate-spin" />
-                  <i className="fa-solid fa-microchip text-2xl text-[#7C3AED] animate-pulse" />
+                  <div className="absolute inset-0 rounded-full border-4 border-white/10 border-t-[#C9F600] animate-spin" />
+                  <i className="fa-solid fa-microchip text-2xl text-[#C9F600] animate-pulse" />
                 </div>
 
                 <div className="w-full">
-                  <h3 className="text-base font-extrabold text-[#1F1B2D] mb-2">Analyzing Domain: {websiteUrl.replace(/https?:\/\//, "")}</h3>
-                  <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden mb-3">
+                  <h3 className="text-base font-extrabold text-white mb-2">Analyzing Domain: {websiteUrl.replace(/https?:\/\//, "")}</h3>
+                  <div className="h-2 w-full bg-[#3B1580] rounded-full overflow-hidden mb-3">
                     <div
-                      className="h-full bg-gradient-to-r from-[#7C3AED] to-indigo-600 transition-all duration-700 rounded-full"
+                      className="h-full bg-gradient-to-r from-[#C9F600] to-emerald-400 transition-all duration-700 rounded-full"
                       style={{ width: `${((scanStepIdx + 1) / SCAN_ANIMATION_STEPS.length) * 100}%` }}
                     />
                   </div>
-                  <p className="text-xs font-bold text-[#7C3AED] animate-pulse">
+                  <p className="text-xs font-bold text-[#C9F600] animate-pulse">
                     {SCAN_ANIMATION_STEPS[scanStepIdx]}
                   </p>
                 </div>
@@ -311,24 +312,24 @@ export default function SeoAuditToolClient() {
               <div className="text-left animate-fade-in py-2">
                 
                 {/* Top Header Bar */}
-                <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 border-b border-[#E9E4F2] pb-6 mb-8">
+                <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 border-b border-white/15 pb-6 mb-8">
                   <div>
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
+                      <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-white/10 text-[#D9CCF5] border border-white/15">
                         {scanResult.platform}
                       </span>
                       {scanResult.hasSsl ? (
-                        <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
+                        <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 flex items-center gap-1">
                           <i className="fa-solid fa-lock text-[8px]" /> SSL Secure
                         </span>
                       ) : (
-                        <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200 flex items-center gap-1">
+                        <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-400/30 flex items-center gap-1">
                           <i className="fa-solid fa-lock-open text-[8px]" /> SSL Missing
                         </span>
                       )}
                     </div>
-                    <h2 className="text-xl sm:text-2xl font-black text-[#1F1B2D]">
-                      Audit Diagnosis for: <span className="text-[#7C3AED]">{scanResult.cleanDomain}</span>
+                    <h2 className="text-xl sm:text-2xl font-black text-white">
+                      Audit Diagnosis for: <span className="text-[#C9F600]">{scanResult.cleanDomain}</span>
                     </h2>
                   </div>
 
@@ -337,7 +338,7 @@ export default function SeoAuditToolClient() {
                       setScanResult(null);
                       setWebsiteUrl("");
                     }}
-                    className="text-xs font-bold px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#6B6478] hover:text-[#1F1B2D] transition-colors cursor-pointer self-start sm:self-auto"
+                    className="text-xs font-bold px-4 py-2.5 rounded-xl bg-[#3B1580] border border-white/20 hover:bg-[#431B8E] text-white transition-colors cursor-pointer self-start sm:self-auto"
                   >
                     🔄 Scan Another Site
                   </button>
@@ -347,29 +348,29 @@ export default function SeoAuditToolClient() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8">
                   
                   {/* Score Card */}
-                  <div className="lg:col-span-4 bg-gradient-to-br from-[#FAF9FF] to-white border border-[#E9E4F2] p-6 rounded-3xl flex flex-col items-center justify-center text-center shadow-xs">
-                    <span className="text-[10px] font-extrabold text-[#6B6478] uppercase tracking-wider mb-2">Overall Health Score</span>
+                  <div className="lg:col-span-4 bg-[#1A0742] border border-white/15 p-6 rounded-3xl flex flex-col items-center justify-center text-center shadow-lg">
+                    <span className="text-[10px] font-extrabold text-[#D9CCF5] uppercase tracking-wider mb-2">Overall Health Score</span>
                     
                     <div className={`w-28 h-28 rounded-full border-4 flex flex-col items-center justify-center mb-3 ${getScoreColor(scanResult.healthScore)}`}>
                       <span className="text-3xl font-black leading-none">{scanResult.healthScore}</span>
-                      <span className="text-[10px] font-bold text-slate-500 mt-0.5">/ 100</span>
+                      <span className="text-[10px] font-bold text-white/50 mt-0.5">/ 100</span>
                     </div>
 
-                    <span className={`text-[10px] font-extrabold text-white uppercase tracking-wider px-3 py-1 rounded-full ${getScoreBadge(scanResult.healthScore).bg}`}>
+                    <span className={`text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full ${getScoreBadge(scanResult.healthScore).bg}`}>
                       {getScoreBadge(scanResult.healthScore).label}
                     </span>
 
-                    <div className="mt-4 pt-4 border-t border-slate-100 w-full flex justify-around text-center">
+                    <div className="mt-4 pt-4 border-t border-white/15 w-full flex justify-around text-center">
                       <div>
-                        <span className="text-[10px] text-slate-400 block font-bold">Server TTFB</span>
-                        <span className={`text-xs font-extrabold ${scanResult.responseTimeMs < 600 ? "text-emerald-600" : "text-amber-600"}`}>
+                        <span className="text-[10px] text-[#D9CCF5]/70 block font-bold">Server TTFB</span>
+                        <span className={`text-xs font-extrabold ${scanResult.responseTimeMs < 600 ? "text-emerald-400" : "text-amber-400"}`}>
                           {scanResult.responseTimeMs}ms
                         </span>
                       </div>
-                      <div className="border-r border-slate-100" />
+                      <div className="border-r border-white/15" />
                       <div>
-                        <span className="text-[10px] text-slate-400 block font-bold">Checks</span>
-                        <span className="text-xs font-extrabold text-slate-700">
+                        <span className="text-[10px] text-[#D9CCF5]/70 block font-bold">Checks</span>
+                        <span className="text-xs font-extrabold text-white">
                           {scanResult.checks.filter(c => c.status === "pass").length} / {scanResult.checks.length} Pass
                         </span>
                       </div>
@@ -377,12 +378,12 @@ export default function SeoAuditToolClient() {
                   </div>
 
                   {/* AI Executive Summary Card */}
-                  <div className="lg:col-span-8 bg-[#160D2E] text-white p-6 sm:p-7 rounded-3xl relative overflow-hidden flex flex-col justify-between border border-purple-500/20 shadow-xl">
-                    <div className="absolute top-0 right-0 w-48 h-48 bg-purple-600/20 rounded-full blur-3xl pointer-events-none" />
+                  <div className="lg:col-span-8 bg-[#1A0742] text-white p-6 sm:p-7 rounded-3xl relative overflow-hidden flex flex-col justify-between border border-[#C9F600]/30 shadow-2xl">
+                    <div className="absolute top-0 right-0 w-48 h-48 bg-[#C9F600]/10 rounded-full blur-3xl pointer-events-none" />
 
                     <div>
-                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-400/30 text-[10px] font-black uppercase tracking-wider mb-3">
-                        <i className="fa-solid fa-sparkles text-amber-300 text-[10px]" />
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-[#C9F600] border border-[#C9F600]/30 text-[10px] font-black uppercase tracking-wider mb-3">
+                        <i className="fa-solid fa-sparkles text-[#C9F600] text-[10px]" />
                         <span>Gemini AI Executive Diagnostic</span>
                       </div>
 
@@ -390,19 +391,19 @@ export default function SeoAuditToolClient() {
                         Strategic Findings for {scanResult.cleanDomain}
                       </h3>
 
-                      <p className="text-xs sm:text-[13px] text-purple-100/90 leading-relaxed font-medium mb-4">
+                      <p className="text-xs sm:text-[13px] text-[#D9CCF5]/90 leading-relaxed font-medium mb-4">
                         {scanResult.summary}
                       </p>
                     </div>
 
                     {/* Top Fixes Pills */}
-                    <div className="space-y-2 pt-3 border-t border-purple-500/20">
-                      <span className="text-[10px] font-black uppercase tracking-widest text-purple-300 block">
+                    <div className="space-y-2 pt-3 border-t border-white/15">
+                      <span className="text-[10px] font-black uppercase tracking-widest text-[#C9F600] block">
                         🎯 Top 3 High-Impact Priority Fixes:
                       </span>
                       {scanResult.priorityFixes.map((fix, idx) => (
-                        <div key={idx} className="flex items-start gap-2 text-xs text-purple-200 font-semibold">
-                          <span className="text-amber-400 text-xs mt-0.5">➔</span>
+                        <div key={idx} className="flex items-start gap-2 text-xs text-[#D9CCF5] font-semibold">
+                          <span className="text-[#C9F600] text-xs mt-0.5">➔</span>
                           <span>{fix}</span>
                         </div>
                       ))}
@@ -414,46 +415,46 @@ export default function SeoAuditToolClient() {
                 {/* 4 Pillars Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                   
-                  <div className="bg-[#FAF9FF] border border-[#E9E4F2] p-4 rounded-2xl">
-                    <span className="text-[10px] font-bold text-slate-500 block mb-1">⚡ Speed & Latency</span>
+                  <div className="bg-[#3B1580] border border-white/20 p-4 rounded-2xl">
+                    <span className="text-[10px] font-bold text-[#D9CCF5] block mb-1">⚡ Speed & Latency</span>
                     <div className="flex items-baseline gap-1">
-                      <span className="text-lg font-black text-slate-900">{scanResult.categories.speed.score}</span>
-                      <span className="text-xs text-slate-400 font-bold">/{scanResult.categories.speed.max}</span>
+                      <span className="text-lg font-black text-white">{scanResult.categories.speed.score}</span>
+                      <span className="text-xs text-white/50 font-bold">/{scanResult.categories.speed.max}</span>
                     </div>
-                    <span className="text-[9px] font-bold uppercase tracking-wider text-purple-600 mt-1 block">
+                    <span className="text-[9px] font-bold uppercase tracking-wider text-[#C9F600] mt-1 block">
                       Status: {scanResult.categories.speed.status}
                     </span>
                   </div>
 
-                  <div className="bg-[#FAF9FF] border border-[#E9E4F2] p-4 rounded-2xl">
-                    <span className="text-[10px] font-bold text-slate-500 block mb-1">🔍 Technical SEO</span>
+                  <div className="bg-[#3B1580] border border-white/20 p-4 rounded-2xl">
+                    <span className="text-[10px] font-bold text-[#D9CCF5] block mb-1">🔍 Technical SEO</span>
                     <div className="flex items-baseline gap-1">
-                      <span className="text-lg font-black text-slate-900">{scanResult.categories.seo.score}</span>
-                      <span className="text-xs text-slate-400 font-bold">/{scanResult.categories.seo.max}</span>
+                      <span className="text-lg font-black text-white">{scanResult.categories.seo.score}</span>
+                      <span className="text-xs text-white/50 font-bold">/{scanResult.categories.seo.max}</span>
                     </div>
-                    <span className="text-[9px] font-bold uppercase tracking-wider text-purple-600 mt-1 block">
+                    <span className="text-[9px] font-bold uppercase tracking-wider text-[#C9F600] mt-1 block">
                       Status: {scanResult.categories.seo.status}
                     </span>
                   </div>
 
-                  <div className="bg-[#FAF9FF] border border-[#E9E4F2] p-4 rounded-2xl">
-                    <span className="text-[10px] font-bold text-slate-500 block mb-1">📱 Mobile UX</span>
+                  <div className="bg-[#3B1580] border border-white/20 p-4 rounded-2xl">
+                    <span className="text-[10px] font-bold text-[#D9CCF5] block mb-1">📱 Mobile UX</span>
                     <div className="flex items-baseline gap-1">
-                      <span className="text-lg font-black text-slate-900">{scanResult.categories.mobile.score}</span>
-                      <span className="text-xs text-slate-400 font-bold">/{scanResult.categories.mobile.max}</span>
+                      <span className="text-lg font-black text-white">{scanResult.categories.mobile.score}</span>
+                      <span className="text-xs text-white/50 font-bold">/{scanResult.categories.mobile.max}</span>
                     </div>
-                    <span className="text-[9px] font-bold uppercase tracking-wider text-purple-600 mt-1 block">
+                    <span className="text-[9px] font-bold uppercase tracking-wider text-[#C9F600] mt-1 block">
                       Status: {scanResult.categories.mobile.status}
                     </span>
                   </div>
 
-                  <div className="bg-[#FAF9FF] border border-[#E9E4F2] p-4 rounded-2xl">
-                    <span className="text-[10px] font-bold text-slate-500 block mb-1">💼 Conversion Funnel</span>
+                  <div className="bg-[#3B1580] border border-white/20 p-4 rounded-2xl">
+                    <span className="text-[10px] font-bold text-[#D9CCF5] block mb-1">💼 Conversion Funnel</span>
                     <div className="flex items-baseline gap-1">
-                      <span className="text-lg font-black text-slate-900">{scanResult.categories.conversion.score}</span>
-                      <span className="text-xs text-slate-400 font-bold">/{scanResult.categories.conversion.max}</span>
+                      <span className="text-lg font-black text-white">{scanResult.categories.conversion.score}</span>
+                      <span className="text-xs text-white/50 font-bold">/{scanResult.categories.conversion.max}</span>
                     </div>
-                    <span className="text-[9px] font-bold uppercase tracking-wider text-purple-600 mt-1 block">
+                    <span className="text-[9px] font-bold uppercase tracking-wider text-[#C9F600] mt-1 block">
                       Status: {scanResult.categories.conversion.status}
                     </span>
                   </div>
@@ -461,26 +462,26 @@ export default function SeoAuditToolClient() {
                 </div>
 
                 {/* Filter Tabs for Checks */}
-                <div className="flex items-center justify-between border-b border-[#E9E4F2] pb-3 mb-6">
-                  <h3 className="text-sm font-black text-slate-900 uppercase tracking-wide">
+                <div className="flex items-center justify-between border-b border-white/15 pb-3 mb-6">
+                  <h3 className="text-sm font-black text-white uppercase tracking-wide">
                     Diagnostic Checkpoints ({filteredChecks?.length})
                   </h3>
                   <div className="flex gap-2">
                     <button
                       onClick={() => setFilterTab("all")}
-                      className={`text-xs font-bold px-3 py-1 rounded-lg transition-colors cursor-pointer ${filterTab === "all" ? "bg-[#7C3AED] text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}
+                      className={`text-xs font-bold px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${filterTab === "all" ? "bg-[#C9F600] text-[#120526] font-black" : "bg-[#3B1580] text-[#D9CCF5] border border-white/20 hover:bg-[#431B8E]"}`}
                     >
                       All
                     </button>
                     <button
                       onClick={() => setFilterTab("fail")}
-                      className={`text-xs font-bold px-3 py-1 rounded-lg transition-colors cursor-pointer ${filterTab === "fail" ? "bg-rose-500 text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}
+                      className={`text-xs font-bold px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${filterTab === "fail" ? "bg-rose-500 text-white font-black" : "bg-[#3B1580] text-[#D9CCF5] border border-white/20 hover:bg-[#431B8E]"}`}
                     >
                       Issues & Warnings
                     </button>
                     <button
                       onClick={() => setFilterTab("pass")}
-                      className={`text-xs font-bold px-3 py-1 rounded-lg transition-colors cursor-pointer ${filterTab === "pass" ? "bg-emerald-500 text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}
+                      className={`text-xs font-bold px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${filterTab === "pass" ? "bg-emerald-500 text-white font-black" : "bg-[#3B1580] text-[#D9CCF5] border border-white/20 hover:bg-[#431B8E]"}`}
                     >
                       Passed
                     </button>
@@ -494,30 +495,30 @@ export default function SeoAuditToolClient() {
                       key={check.id}
                       className={`p-4 rounded-2xl border transition-all flex items-start gap-3.5 ${
                         check.status === "pass"
-                          ? "bg-emerald-50/30 border-emerald-100"
+                          ? "bg-emerald-950/30 border-emerald-500/30"
                           : check.status === "warning"
-                          ? "bg-amber-50/30 border-amber-100"
-                          : "bg-rose-50/30 border-rose-100"
+                          ? "bg-amber-950/30 border-amber-500/30"
+                          : "bg-rose-950/30 border-rose-500/30"
                       }`}
                     >
                       <span className="text-base mt-0.5">
                         {check.status === "pass" ? (
-                          <i className="fa-solid fa-circle-check text-emerald-500" />
+                          <i className="fa-solid fa-circle-check text-emerald-400" />
                         ) : check.status === "warning" ? (
-                          <i className="fa-solid fa-triangle-exclamation text-amber-500" />
+                          <i className="fa-solid fa-triangle-exclamation text-amber-400" />
                         ) : (
-                          <i className="fa-solid fa-circle-xmark text-rose-500" />
+                          <i className="fa-solid fa-circle-xmark text-rose-400" />
                         )}
                       </span>
 
                       <div className="flex-1">
                         <div className="flex flex-wrap items-center justify-between gap-2">
-                          <h4 className="text-xs font-black text-slate-900">{check.title}</h4>
-                          <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-white/80 border border-slate-200 text-slate-600">
+                          <h4 className="text-xs font-black text-white">{check.title}</h4>
+                          <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-white/10 border border-white/15 text-[#D9CCF5]">
                             {check.category}
                           </span>
                         </div>
-                        <p className="text-[11.5px] text-slate-600 font-medium mt-1 leading-normal">
+                        <p className="text-[11.5px] text-[#D9CCF5]/90 font-medium mt-1 leading-normal">
                           {check.detail}
                         </p>
                       </div>
@@ -526,10 +527,10 @@ export default function SeoAuditToolClient() {
                 </div>
 
                 {/* HIGH-CONVERTING INBOUND ACTION CARD */}
-                <div className="relative overflow-hidden bg-gradient-to-br from-[#160D2E] via-[#211442] to-[#0D0819] text-white p-8 rounded-3xl border border-purple-500/30 shadow-2xl text-center flex flex-col items-center">
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-purple-600/20 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative overflow-hidden bg-[#1A0742] text-white p-8 rounded-3xl border border-[#C9F600]/40 shadow-2xl text-center flex flex-col items-center">
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#C9F600]/10 rounded-full blur-3xl pointer-events-none" />
                   
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] font-black uppercase tracking-wider mb-3">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-[#C9F600] border border-[#C9F600]/30 text-[10px] font-black uppercase tracking-wider mb-3">
                     ⚡ 100% Free • No Obligation
                   </span>
 
@@ -537,14 +538,14 @@ export default function SeoAuditToolClient() {
                     Want Joy Digital to Fix These Bottlenecks & Scale Your Inquiries?
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-purple-200 max-w-xl leading-relaxed mb-6 font-medium">
+                  <p className="text-xs sm:text-sm text-[#D9CCF5]/90 max-w-xl leading-relaxed mb-6 font-medium">
                     Our technical engineers build custom, sub-second Next.js web applications that eliminate server lag and double conversion rates. Get our line-by-line developer fixing roadmap.
                   </p>
 
                   <div className="flex flex-wrap items-center justify-center gap-4 w-full">
                     <button
                       onClick={() => setShowModal(true)}
-                      className="px-8 py-3.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-black text-xs sm:text-sm rounded-xl transition-all shadow-lg shadow-purple-600/30 hover:scale-105 active:scale-95 cursor-pointer flex items-center gap-2"
+                      className="px-8 py-3.5 bg-[#C9F600] hover:bg-[#b8f000] text-[#120526] font-black text-xs sm:text-sm rounded-xl transition-all shadow-lg shadow-[#C9F600]/20 hover:scale-105 active:scale-95 cursor-pointer flex items-center gap-2"
                     >
                       <i className="fa-solid fa-file-pdf" />
                       <span>Get Detailed Developer Roadmap</span>
@@ -554,9 +555,9 @@ export default function SeoAuditToolClient() {
                       href={`https://wa.me/919080026133?text=Hi%20Saravanan,%20I%20ran%20the%20AI%20Audit%20Tool%20for%20our%20website%20(${scanResult.cleanDomain})%20and%20it%20scored%20${scanResult.healthScore}/100.%20Can%20we%20discuss%20the%20fixes?`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-6 py-3.5 bg-[#10b981] hover:bg-[#059669] text-white font-black text-xs sm:text-sm rounded-xl transition-all shadow-md shadow-emerald-500/20 flex items-center gap-2 hover:scale-105 active:scale-95 cursor-pointer"
+                      className="px-6 py-3.5 bg-[#3B1580] border border-white/20 hover:bg-[#431B8E] text-white font-black text-xs sm:text-sm rounded-xl transition-all shadow-md flex items-center gap-2 hover:scale-105 active:scale-95 cursor-pointer"
                     >
-                      <i className="fa-brands fa-whatsapp text-base" />
+                      <i className="fa-brands fa-whatsapp text-base text-[#C9F600]" />
                       <span>Chat on WhatsApp</span>
                     </a>
                   </div>
@@ -568,67 +569,69 @@ export default function SeoAuditToolClient() {
           </div>
 
           {/* Educational Trust Section */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-            <div className="bg-white border border-[#E9E4F2] p-6 rounded-2xl shadow-xs">
-              <span className="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-lg mb-4">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-left mb-16">
+            <div className="bg-[#260B5E] border border-white/20 p-6 rounded-2xl shadow-xl">
+              <span className="w-10 h-10 rounded-xl bg-white/10 text-[#C9F600] flex items-center justify-center text-lg mb-4">
                 <i className="fa-solid fa-gauge-high" />
               </span>
-              <h3 className="text-sm font-black text-slate-900 mb-2">Sub-Second Core Web Vitals</h3>
-              <p className="text-xs text-[#6B6478] leading-relaxed font-semibold">
+              <h3 className="text-sm font-black text-white mb-2">Sub-Second Core Web Vitals</h3>
+              <p className="text-xs text-[#D9CCF5]/80 leading-relaxed font-semibold">
                 Every 1-second delay cuts form conversions by up to 7%. We build custom architectures delivering sub-second speeds globally.
               </p>
             </div>
 
-            <div className="bg-white border border-[#E9E4F2] p-6 rounded-2xl shadow-xs">
-              <span className="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-lg mb-4">
+            <div className="bg-[#260B5E] border border-white/20 p-6 rounded-2xl shadow-xl">
+              <span className="w-10 h-10 rounded-xl bg-white/10 text-[#C9F600] flex items-center justify-center text-lg mb-4">
                 <i className="fa-solid fa-magnifying-glass-chart" />
               </span>
-              <h3 className="text-sm font-black text-slate-900 mb-2">Technical SEO Architecture</h3>
-              <p className="text-xs text-[#6B6478] leading-relaxed font-semibold">
+              <h3 className="text-sm font-black text-white mb-2">Technical SEO Architecture</h3>
+              <p className="text-xs text-[#D9CCF5]/80 leading-relaxed font-semibold">
                 Deep JSON-LD schema injection, semantic HTML5 tags, and canonical mapping ensure Google indexes your high-intent services accurately.
               </p>
             </div>
 
-            <div className="bg-white border border-[#E9E4F2] p-6 rounded-2xl shadow-xs">
-              <span className="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-lg mb-4">
+            <div className="bg-[#260B5E] border border-white/20 p-6 rounded-2xl shadow-xl">
+              <span className="w-10 h-10 rounded-xl bg-white/10 text-[#C9F600] flex items-center justify-center text-lg mb-4">
                 <i className="fa-solid fa-comments-dollar" />
               </span>
-              <h3 className="text-sm font-black text-slate-900 mb-2">Frictionless Inbound Funnels</h3>
-              <p className="text-xs text-[#6B6478] leading-relaxed font-semibold">
+              <h3 className="text-sm font-black text-white mb-2">Frictionless Inbound Funnels</h3>
+              <p className="text-xs text-[#D9CCF5]/80 leading-relaxed font-semibold">
                 Direct WhatsApp Business triggers, automated CRM webhook syncing, and streamlined quotation forms that convert visitors into paying clients.
               </p>
             </div>
           </div>
+
+          <ToolFeedback toolName="AI SEO Audit Tool" />
 
         </div>
       </main>
 
       {/* LEAD CAPTURE MODAL */}
       {showModal && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 animate-fade-in">
-          <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative border border-slate-200">
+        <div className="fixed inset-0 z-[9999] bg-black/75 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in">
+          <div className="bg-[#260B5E] rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative border border-white/20 text-white">
             
             <button
               onClick={() => setShowModal(false)}
-              className="absolute top-5 right-5 text-slate-400 hover:text-slate-700 cursor-pointer p-1"
+              className="absolute top-5 right-5 text-white/60 hover:text-white cursor-pointer p-1"
               aria-label="Close modal"
             >
               <i className="fa-solid fa-xmark text-base" />
             </button>
 
             <div className="mb-6 text-center">
-              <span className="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl mx-auto mb-3">
+              <span className="w-12 h-12 rounded-2xl bg-white/10 text-[#C9F600] flex items-center justify-center text-xl mx-auto mb-3">
                 <i className="fa-solid fa-file-waveform" />
               </span>
-              <h3 className="text-lg font-black text-slate-900 mb-1">Claim Detailed Developer Roadmap</h3>
-              <p className="text-xs text-[#6B6478] font-semibold">
-                We will email/WhatsApp the complete line-by-line fixing blueprint for <span className="text-[#7C3AED] font-black">{scanResult?.cleanDomain}</span>.
+              <h3 className="text-lg font-black text-white mb-1">Claim Detailed Developer Roadmap</h3>
+              <p className="text-xs text-[#D9CCF5]/80 font-medium">
+                We will email/WhatsApp the complete line-by-line fixing blueprint for <span className="text-[#C9F600] font-black">{scanResult?.cleanDomain}</span>.
               </p>
             </div>
 
             <form onSubmit={handleLeadSubmit} className="space-y-4">
               <div>
-                <label className="text-[10px] font-black text-slate-500 uppercase tracking-wider block mb-1">
+                <label className="text-[10px] font-black text-[#D9CCF5] uppercase tracking-wider block mb-1">
                   Full Name *
                 </label>
                 <input
@@ -637,12 +640,12 @@ export default function SeoAuditToolClient() {
                   placeholder="e.g. John Doe"
                   value={leadName}
                   onChange={(e) => setLeadName(e.target.value)}
-                  className="w-full bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3 text-xs font-semibold outline-none focus:bg-white focus:border-[#7C3AED] focus:ring-4 focus:ring-[#7C3AED]/10 text-slate-900"
+                  className="w-full bg-[#3B1580] border border-white/20 rounded-xl px-4 py-3 text-xs font-semibold outline-none focus:border-[#C9F600] focus:ring-2 focus:ring-[#C9F600]/20 text-white placeholder:text-white/40"
                 />
               </div>
 
               <div>
-                <label className="text-[10px] font-black text-slate-500 uppercase tracking-wider block mb-1">
+                <label className="text-[10px] font-black text-[#D9CCF5] uppercase tracking-wider block mb-1">
                   WhatsApp / Mobile Number *
                 </label>
                 <input
@@ -651,12 +654,12 @@ export default function SeoAuditToolClient() {
                   placeholder="+91 98765 43210"
                   value={leadPhone}
                   onChange={(e) => setLeadPhone(e.target.value)}
-                  className="w-full bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3 text-xs font-semibold outline-none focus:bg-white focus:border-[#7C3AED] focus:ring-4 focus:ring-[#7C3AED]/10 text-slate-900"
+                  className="w-full bg-[#3B1580] border border-white/20 rounded-xl px-4 py-3 text-xs font-semibold outline-none focus:border-[#C9F600] focus:ring-2 focus:ring-[#C9F600]/20 text-white placeholder:text-white/40"
                 />
               </div>
 
               <div>
-                <label className="text-[10px] font-black text-slate-500 uppercase tracking-wider block mb-1">
+                <label className="text-[10px] font-black text-[#D9CCF5] uppercase tracking-wider block mb-1">
                   Work Email (Optional)
                 </label>
                 <input
@@ -664,14 +667,14 @@ export default function SeoAuditToolClient() {
                   placeholder="john@company.com"
                   value={leadEmail}
                   onChange={(e) => setLeadEmail(e.target.value)}
-                  className="w-full bg-[#FAF9FF] border border-[#E9E4F2] rounded-xl px-4 py-3 text-xs font-semibold outline-none focus:bg-white focus:border-[#7C3AED] focus:ring-4 focus:ring-[#7C3AED]/10 text-slate-900"
+                  className="w-full bg-[#3B1580] border border-white/20 rounded-xl px-4 py-3 text-xs font-semibold outline-none focus:border-[#C9F600] focus:ring-2 focus:ring-[#C9F600]/20 text-white placeholder:text-white/40"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting || submitSuccess}
-                className="w-full py-3.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-xl font-black text-xs shadow-md shadow-purple-600/20 hover:scale-[1.02] active:scale-95 transition-all cursor-pointer flex items-center justify-center gap-2 mt-2"
+                className="w-full py-3.5 bg-[#C9F600] hover:bg-[#b8f000] text-[#120526] rounded-xl font-black text-xs shadow-md shadow-[#C9F600]/20 hover:scale-[1.02] active:scale-95 transition-all cursor-pointer flex items-center justify-center gap-2 mt-2"
               >
                 {isSubmitting ? (
                   <span>Generating Roadmap...</span>

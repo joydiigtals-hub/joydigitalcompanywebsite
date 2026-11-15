@@ -56,17 +56,17 @@ export default function Footer() {
             <p className="font-bold text-[#FFFFFF]">Websites, SEO &amp; Digital Marketing for Businesses Worldwide</p>
             <p>Based in India, serving startups, small businesses, and growing companies globally. Delivering premium web solutions and conversion-focused search optimizations through direct remote collaboration.</p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap">
             <a
               href="https://wa.me/919080026133"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/25 shadow-xs flex items-center justify-center hover:border-[#C9F600] hover:scale-110 transition-all duration-200"
+              className="group relative w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-white/[0.08] hover:bg-white/[0.18] border border-white/15 hover:border-[#C9F600] shadow-sm hover:shadow-[0_4px_20px_rgba(201,246,0,0.3)] flex items-center justify-center hover:-translate-y-1 active:scale-95 transition-all duration-300 ease-out cursor-pointer"
               aria-label="WhatsApp"
               title="Chat with Joy Digital on WhatsApp"
               data-wa-location="footer"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <svg className="w-5 h-5 transition-transform duration-300 ease-out group-hover:scale-110" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path fill="#25D366" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2Z" />
                 <path fill="#FFFFFF" fillRule="evenodd" clipRule="evenodd" d="M17.5 14.33C17.2 14.18 15.73 13.45 15.45 13.35C15.18 13.25 14.98 13.2 14.78 13.5C14.58 13.8 14.02 14.47 13.85 14.67C13.68 14.87 13.5 14.9 13.2 14.75C12.9 14.6 11.94 14.28 10.81 13.28C9.92 12.49 9.32 11.51 9.15 11.21C8.98 10.91 9.13 10.75 9.28 10.6C9.42 10.46 9.58 10.25 9.73 10.07C9.88 9.9 9.93 9.77 10.03 9.57C10.13 9.37 10.08 9.2 10 9.05C9.93 8.9 9.35 7.48 9.11 6.9C8.88 6.34 8.64 6.42 8.46 6.41C8.29 6.4 8.1 6.4 7.9 6.4C7.7 6.4 7.38 6.47 7.11 6.77C6.83 7.07 6.06 7.79 6.06 9.26C6.06 10.73 7.13 12.15 7.28 12.35C7.43 12.55 9.38 15.55 12.38 16.84C13.09 17.15 13.65 17.34 14.09 17.48C14.81 17.71 15.46 17.67 15.98 17.6C16.56 17.51 17.76 16.87 18.01 16.16C18.26 15.45 18.26 14.85 18.18 14.72C18.11 14.6 17.91 14.52 17.61 14.37L17.5 14.33Z" />
               </svg>
@@ -75,11 +75,11 @@ export default function Footer() {
               href="https://share.google/BSniheS2qnzwqUKXU"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/25 shadow-xs flex items-center justify-center hover:border-[#C9F600] hover:scale-110 transition-all duration-200"
+              className="group relative w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-white/[0.08] hover:bg-white/[0.18] border border-white/15 hover:border-[#C9F600] shadow-sm hover:shadow-[0_4px_20px_rgba(201,246,0,0.3)] flex items-center justify-center hover:-translate-y-1 active:scale-95 transition-all duration-300 ease-out cursor-pointer"
               aria-label="Google Business Profile"
               title="Joy Digital Google Business Profile &amp; Reviews"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="w-5 h-5 transition-transform duration-300 ease-out group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
                 <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
                 <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
@@ -90,11 +90,11 @@ export default function Footer() {
               href="https://www.facebook.com/profile.php?id=61590372457559"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/25 shadow-xs flex items-center justify-center hover:border-[#C9F600] hover:scale-110 transition-all duration-200"
+              className="group relative w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-white/[0.08] hover:bg-white/[0.18] border border-white/15 hover:border-[#C9F600] shadow-sm hover:shadow-[0_4px_20px_rgba(201,246,0,0.3)] flex items-center justify-center hover:-translate-y-1 active:scale-95 transition-all duration-300 ease-out cursor-pointer"
               aria-label="Facebook"
               title="Visit Joy Digital Facebook Page"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <svg className="w-5 h-5 transition-transform duration-300 ease-out group-hover:scale-110" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <circle cx="12" cy="12" r="11" fill="#1877F2" />
                 <path fill="#FFFFFF" d="M15.12 12.87L15.6 9.75H12.6V7.72C12.6 6.87 13.02 6.04 14.35 6.04H15.71V3.38C15.71 3.38 14.47 3.17 13.29 3.17C10.84 3.17 9.24 4.65 9.24 7.34V9.75H6.5V12.87H9.24V20.42C9.79 20.51 10.35 20.55 10.92 20.55C11.49 20.55 12.05 20.51 12.6 20.42V12.87H15.12Z" />
               </svg>
@@ -103,11 +103,11 @@ export default function Footer() {
               href="https://www.youtube.com/@Joydigital2026"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/25 shadow-xs flex items-center justify-center hover:border-[#C9F600] hover:scale-110 transition-all duration-200"
+              className="group relative w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-white/[0.08] hover:bg-white/[0.18] border border-white/15 hover:border-[#C9F600] shadow-sm hover:shadow-[0_4px_20px_rgba(201,246,0,0.3)] flex items-center justify-center hover:-translate-y-1 active:scale-95 transition-all duration-300 ease-out cursor-pointer"
               aria-label="YouTube"
               title="Subscribe to Joy Digital YouTube Channel"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <svg className="w-5 h-5 transition-transform duration-300 ease-out group-hover:scale-110" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path fill="#FF0000" d="M21.58 7.19C21.36 6.37 20.71 5.72 19.89 5.5C18.4 5.1 12 5.1 12 5.1C12 5.1 5.6 5.1 4.11 5.5C3.29 5.72 2.64 6.37 2.42 7.19C2.02 8.68 2.02 12 2.02 12C2.02 12 2.02 15.32 2.42 16.81C2.64 17.63 3.29 18.28 4.11 18.5C5.6 18.9 12 18.9 12 18.9C12 18.9 18.4 18.9 19.89 18.5C20.71 18.28 21.36 17.63 21.58 16.81C21.98 15.32 21.98 12 21.98 12C21.98 12 21.98 8.68 21.58 7.19Z" />
                 <path fill="#FFFFFF" d="M10 15.5L15.5 12L10 8.5V15.5Z" />
               </svg>
@@ -116,22 +116,22 @@ export default function Footer() {
               href="https://www.linkedin.com/company/joydigital-solution/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/25 shadow-xs flex items-center justify-center hover:border-[#C9F600] hover:scale-110 transition-all duration-200"
+              className="group relative w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-white/[0.08] hover:bg-white/[0.18] border border-white/15 hover:border-[#C9F600] shadow-sm hover:shadow-[0_4px_20px_rgba(201,246,0,0.3)] flex items-center justify-center hover:-translate-y-1 active:scale-95 transition-all duration-300 ease-out cursor-pointer"
               aria-label="LinkedIn"
               title="Follow Joy Digital on LinkedIn"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <svg className="w-5 h-5 transition-transform duration-300 ease-out group-hover:scale-110" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <rect width="24" height="24" rx="4" fill="#0A66C2" />
                 <path fill="#FFFFFF" d="M7.12 9.47H4.44V18H7.12V9.47ZM5.78 8.3C6.64 8.3 7.33 7.6 7.33 6.74C7.33 5.88 6.64 5.18 5.78 5.18C4.92 5.18 4.23 5.88 4.23 6.74C4.23 7.6 4.92 8.3 5.78 8.3ZM19.56 18H16.89V13.82C16.89 12.82 16.87 11.54 15.5 11.54C14.11 11.54 13.9 12.63 13.9 13.75V18H11.23V9.47H13.79V10.64H13.83C14.19 9.96 15.06 9.25 16.36 9.25C19.06 9.25 19.56 11.03 19.56 13.34V18Z" />
               </svg>
             </a>
             <a
               href={`mailto:${contactEmail}`}
-              className="w-10 h-10 rounded-xl bg-[#3B1580] border border-[#FFFFFF]/25 shadow-xs flex items-center justify-center hover:border-[#C9F600] hover:scale-110 transition-all duration-200"
+              className="group relative w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-white/[0.08] hover:bg-white/[0.18] border border-white/15 hover:border-[#C9F600] shadow-sm hover:shadow-[0_4px_20px_rgba(201,246,0,0.3)] flex items-center justify-center hover:-translate-y-1 active:scale-95 transition-all duration-300 ease-out cursor-pointer"
               aria-label="Email"
               title="Send Email to Joy Digital"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <svg className="w-5 h-5 transition-transform duration-300 ease-out group-hover:scale-110" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path fill="#4285F4" d="M4 19H7V10.5L3.5 8C2.58 7.35 2 6.29 2 5.16V17C2 18.1 2.9 19 4 19Z"/>
                 <path fill="#34A853" d="M20 19H17V10.5L20.5 8C21.42 7.35 22 6.29 22 5.16V17C22 18.1 21.1 19 20 19Z"/>
                 <path fill="#EA4335" d="M17 6.5V10.5L12 14.25L7 10.5V6.5L12 10.25L17 6.5Z"/>

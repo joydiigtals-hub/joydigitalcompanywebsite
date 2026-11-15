@@ -10,6 +10,7 @@ import TrackedWaLink from "@/components/ui/TrackedWaLink";
 import Header from "@/components/layout/Header";
 import { Code2, SearchCheck, Target, Smartphone, PanelsTopLeft, Globe, Headset, ArrowRight } from "lucide-react";
 import ModernHeroSection from "@/components/sections/ModernHeroSection";
+import ServicesMarquee from "@/components/ui/ServicesMarquee";
 import IndustrySpecializationSection from "@/components/sections/IndustrySpecializationSection";
 import { COUNTRY_LANDING_DATA } from "@/data/countryLandingData";
 
@@ -433,6 +434,9 @@ export default function HomePageComponent({ country }: HomePageComponentProps) {
         
         {/* 1. MODERNIZED INTERNATIONAL HERO SECTION */}
         <ModernHeroSection country={country} />
+        
+        {/* INFINITE SCROLLING MARQUEE TICKER */}
+        <ServicesMarquee />
         
         {/* 2. INDUSTRY SPECIALIZATION SECTION (MULTI-INDUSTRY TABBED SELECTOR) */}
         <IndustrySpecializationSection />

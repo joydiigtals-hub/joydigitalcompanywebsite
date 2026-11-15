@@ -19,6 +19,7 @@ export default function robots(): MetadataRoute.Robots {
           'anthropic-ai',
           'Bingbot',
           'Googlebot',
+          'Google-InspectionTool',
           'Google-Extended',
           'Applebot',
           'Applebot-Extended',

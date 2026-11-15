@@ -20,3 +20,4 @@ pnpm-debug.log*
 
 # Next.js telemetry / cache
 .eslintcache
+*.tsbuildinfo
