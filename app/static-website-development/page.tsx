@@ -16,16 +16,16 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Static Website Development",
     description: "Build high-speed, secure, and cost-effective static websites with sub-second load times, 100% serverless security, and zero database maintenance.",
     alternates: {
-      canonical: "https://www.joydigital.in/static-website-development",
+      canonical: "https://joydigital.in/static-website-development",
     },
     openGraph: {
       ...seoData.metadata.openGraph,
       title: "Static Website Development | Joy Digital",
       description: "Build high-speed, secure, and cost-effective static websites with sub-second load times, 100% serverless security, and zero database maintenance.",
-      url: "https://www.joydigital.in/static-website-development",
+      url: "https://joydigital.in/static-website-development",
       images: [
         {
-          url: "https://www.joydigital.in/assets/images/hero-banner.webp",
+          url: "https://joydigital.in/assets/images/hero-banner.webp",
           width: 1200,
           height: 630,
           alt: "Blazing-Fast Static Website Development - Joy Digital",
@@ -36,7 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
       ...seoData.metadata.twitter,
       title: "Static Website Development | Joy Digital",
       description: "Build high-speed, secure, and cost-effective static websites with sub-second load times, 100% serverless security, and zero database maintenance.",
-      images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+      images: ["https://joydigital.in/assets/images/hero-banner.webp"],
     },
   };
 }
@@ -131,7 +131,7 @@ export default async function StaticWebDevPage() {
         leadSource="Static Website Development Landing Page"
         customLeadForm={<JamstackLeadForm />}
         customCtaBanner={bottomCta}
-        canonicalUrl="https://www.joydigital.in/static-website-development"
+        canonicalUrl="https://joydigital.in/static-website-development"
         overviewTitle="Transitioning to High-Performance Pre-Rendered Architecture"
         overviewContent={
           <div className="space-y-8">

@@ -12,7 +12,7 @@ export default function QrCodeGeneratorClient() {
   const [type, setType] = useState<QrType>("url");
   
   // Specific inputs
-  const [url, setUrl] = useState<string>("https://www.joydigital.in");
+  const [url, setUrl] = useState<string>("https://joydigital.in");
   const [waPhone, setWaPhone] = useState<string>("");
   const [waMessage, setWaMessage] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
@@ -139,7 +139,7 @@ export default function QrCodeGeneratorClient() {
   };
 
   const handleReset = () => {
-    setUrl("https://www.joydigital.in");
+    setUrl("https://joydigital.in");
     setWaPhone("");
     setWaMessage("");
     setPhone("");

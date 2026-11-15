@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "Free SEO Health Check"
   ],
   alternates: {
-    canonical: "https://www.joydigital.in/free-website-audit",
+    canonical: "https://joydigital.in/free-website-audit",
   },
 };
 
@@ -47,13 +47,13 @@ const AUDIT_CHECKLIST = [
 ];
 
 export default function FreeWebsiteAuditPage() {
-  const canonicalUrl = "https://www.joydigital.in/free-website-audit";
+  const canonicalUrl = "https://joydigital.in/free-website-audit";
   const graphSchema = buildPageGraphSchema({
     url: canonicalUrl,
     title: "Free Website & SEO Audit | Joy Digital",
     description: "Claim your free website audit report from Joy Digital. Discover page speed bottlenecks, mobile layout errors, and SEO ranking opportunities.",
     breadcrumbs: [
-      { name: "Home", item: "https://www.joydigital.in" },
+      { name: "Home", item: "https://joydigital.in" },
       { name: "Free Website Audit", item: canonicalUrl },
     ],
   });

@@ -14,17 +14,17 @@ export const metadata: Metadata = {
       "Search Intent Optimization"
   ],
   alternates: {
-    canonical: "https://www.joydigital.in/on-page-seo",
+    canonical: "https://joydigital.in/on-page-seo",
   },
   openGraph: {
     type: "website",
     title: "On-Page SEO Services & Keyword Optimization | Joy Digital",
     description:
       "Maximize your rankings and organic click-through rates with precision on-page SEO: semantic headings, internal link equity, and commercial search intent targeting.",
-    url: "https://www.joydigital.in/on-page-seo",
+    url: "https://joydigital.in/on-page-seo",
     images: [
       {
-        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
+        url: "https://joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Joy Digital - On-Page SEO Services",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "On-Page SEO Services & Keyword Optimization | Joy Digital",
     description:
       "Precision on-page SEO: title optimization, search intent alignment, and high-impact internal linking architectures.",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -48,9 +48,9 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://www.joydigital.in/assets/images/logo.webp",
+    "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "url": "https://www.joydigital.in"
+    "url": "https://joydigital.in"
   },
   "description":
     "Joy Digital optimizes visible and structural on-page elements: keyword mapping, title tags, meta descriptions, semantic HTML5 tags, and strategic internal links to maximize organic rankings and CTR.",
@@ -67,7 +67,7 @@ export default function OnPageSEOPage() {
   return (
     <ServicePageTemplate
       serviceName="On-Page SEO"
-      canonicalUrl="https://www.joydigital.in/on-page-seo"
+      canonicalUrl="https://joydigital.in/on-page-seo"
       heroTitle="On-Page SEO Services & Semantic Content Optimization"
       heroSubtitle="Align every page of your website with real customer search intent. We engineer high-CTR titles, semantic heading hierarchies, strategic internal link equity networks, and conversion-focused copy that outranks competitors on Google."
       leadSource="On-Page SEO Landing Page"

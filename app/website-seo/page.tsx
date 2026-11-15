@@ -14,17 +14,17 @@ export const metadata: Metadata = {
       "Joy Digital"
   ],
   alternates: {
-    canonical: "https://www.joydigital.in/website-seo",
+    canonical: "https://joydigital.in/website-seo",
   },
   openGraph: {
     type: "website",
     title: "Website SEO Services | Complete Search Engine Optimization | Joy Digital",
     description:
       "Drive sustainable search rankings and revenue with our full-spectrum website SEO services: technical audits, on-page architecture, keyword research, and high-converting content.",
-    url: "https://www.joydigital.in/website-seo",
+    url: "https://joydigital.in/website-seo",
     images: [
       {
-        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
+        url: "https://joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Joy Digital - Website SEO Services",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Website SEO Services | Complete Search Engine Optimization | Joy Digital",
     description:
       "Full-spectrum website SEO services: keyword research, technical code fixes, on-page optimization, and organic pipeline growth.",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -48,9 +48,9 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://www.joydigital.in/assets/images/logo.webp",
+    "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "url": "https://www.joydigital.in"
+    "url": "https://joydigital.in"
   },
   "description":
     "Joy Digital delivers complete website SEO solutions combining technical architecture, on-page optimization, commercial keyword targeting, and high-authority link building to drive compounding organic traffic.",
@@ -67,7 +67,7 @@ export default function WebsiteSEOPage() {
   return (
     <ServicePageTemplate
       serviceName="Website SEO"
-      canonicalUrl="https://www.joydigital.in/website-seo"
+      canonicalUrl="https://joydigital.in/website-seo"
       heroTitle="Complete Website SEO Services for Sustainable Growth"
       heroSubtitle="Transform your website into your primary customer acquisition channel. We combine deep technical audits, on-page search intent mapping, authoritative backlink building, and conversion optimization to outrank your competitors on Google."
       leadSource="Website SEO Landing Page"

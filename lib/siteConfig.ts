@@ -3,7 +3,7 @@
  * domain URLs, NAP (Name, Address, Phone), and brand social profiles.
  */
 
-export const SITE_URL = "https://www.joydigital.in";
+export const SITE_URL = "https://joydigital.in";
 
 export const siteConfig = {
   name: "Joy Digital",

@@ -14,17 +14,17 @@ export const metadata: Metadata = {
       "Structured Data Schema Markup"
   ],
   alternates: {
-    canonical: "https://www.joydigital.in/technical-seo",
+    canonical: "https://joydigital.in/technical-seo",
   },
   openGraph: {
     type: "website",
     title: "Technical SEO Services & Core Web Vitals | Joy Digital",
     description:
       "Eliminate crawl errors, resolve JavaScript rendering bottlenecks, and achieve sub-second Core Web Vitals with our engineering-first Technical SEO services.",
-    url: "https://www.joydigital.in/technical-seo",
+    url: "https://joydigital.in/technical-seo",
     images: [
       {
-        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
+        url: "https://joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Joy Digital - Technical SEO Services",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Technical SEO Services & Core Web Vitals | Joy Digital",
     description:
       "Engineering-first Technical SEO audits, JavaScript rendering fixes, and sub-second Core Web Vitals optimization.",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -48,9 +48,9 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://www.joydigital.in/assets/images/logo.webp",
+    "image": "https://joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "url": "https://www.joydigital.in"
+    "url": "https://joydigital.in"
   },
   "description":
     "Joy Digital engineers sub-second crawlable websites, resolving JavaScript rendering blocks, Core Web Vitals bottlenecks, indexation leaks, and structured schema graphs.",
@@ -67,7 +67,7 @@ export default function TechnicalSEOPage() {
   return (
     <ServicePageTemplate
       serviceName="Technical SEO"
-      canonicalUrl="https://www.joydigital.in/technical-seo"
+      canonicalUrl="https://joydigital.in/technical-seo"
       heroTitle="Technical SEO Services & Core Web Vitals Architecture"
       heroSubtitle="Transform your website from an indexing bottleneck into an ultra-fast, search engine-accessible powerhouse. We resolve JavaScript rendering blocks, eliminate crawl waste, and guarantee sub-second Core Web Vitals on Next.js and modern stacks."
       leadSource="Technical SEO Landing Page"

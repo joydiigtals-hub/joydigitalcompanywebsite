@@ -101,7 +101,7 @@ export async function POST(request: Request) {
       requirement: cleanRequirement || `Inquiry for ${service || "Web Services"}`,
       conversationStatus: "completed",
       leadSource: "website_chatbot",
-      pageUrl: pageUrl || "https://www.joydigital.in",
+      pageUrl: pageUrl || "https://joydigital.in",
       whatsappClicked: false,
       whatsappClickedAt: null,
       status: "new",
