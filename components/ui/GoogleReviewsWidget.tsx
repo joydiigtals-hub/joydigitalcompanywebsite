@@ -19,7 +19,7 @@ export default function GoogleReviewsWidget() {
     <div className="w-full relative my-6">
       <Script
         src="https://elfsightcdn.com/platform.js"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         onLoad={() => {
           if (typeof window !== "undefined" && (window as unknown as { eapps?: { init?: () => void } }).eapps?.init) {
             try {
@@ -31,7 +31,7 @@ export default function GoogleReviewsWidget() {
         }}
       />
       <div 
-        className="elfsight-app-4b72156c-4edb-4b41-aaaf-a6eee11d3478 min-h-[300px] w-full" 
+        className="elfsight-app-4b72156c-4edb-4b41-aaaf-a6eee11d3478 w-full" 
         data-elfsight-app-lazy
       />
     </div>
