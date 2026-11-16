@@ -17,6 +17,17 @@ export default function GoogleReviewsWidget() {
 
   return (
     <div className="w-full relative my-6">
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+            .elfsight-app-4b72156c-4edb-4b41-aaaf-a6eee11d3478 .es-widget-title-header,
+            .elfsight-app-4b72156c-4edb-4b41-aaaf-a6eee11d3478 [class*="WidgetTitle__Header"],
+            .elfsight-app-4b72156c-4edb-4b41-aaaf-a6eee11d3478 .es-widget-title {
+              color: #C9F600 !important;
+            }
+          `,
+        }}
+      />
       <Script
         src="https://elfsightcdn.com/platform.js"
         strategy="afterInteractive"
