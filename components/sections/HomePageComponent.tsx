@@ -25,6 +25,7 @@ const Footer = dynamic(() => import("@/components/layout/Footer"));
 const LeadForm = dynamic(() => import("@/components/ui/LeadForm"));
 const GetQuoteModal = dynamic(() => import("@/components/ui/GetQuoteModal"));
 const Accordion = dynamic(() => import("@/components/ui/Accordion"));
+const GoogleReviewsWidget = dynamic(() => import("@/components/ui/GoogleReviewsWidget"));
 
 export const HOME_FAQS = [
   {
@@ -959,52 +960,24 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
           </div>
         </section>
 
-        {/* 10. TESTIMONIALS */}
+        {/* 10. GOOGLE REVIEWS WIDGET */}
         <section className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
+            <div className="text-center max-w-3xl mx-auto mb-10 reveal-hidden">
               <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
-                Client Reviews
+                Verified Google Reviews
               </span>
               <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
                 What Our Clients Say
               </h2>
               <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-semibold">
-                Feedback from local financial advisors, store directors, and corporate partners.
+                Real customer feedback and 5-star ratings from business owners and founders.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {TESTIMONIALS.map((t, idx) => (
-                <div 
-                  key={idx} 
-                  style={{ transitionDelay: `${idx * 100}ms` }}
-                  className="bg-[#3B1580] border border-[#FFFFFF]/20 p-8 rounded-[20px] shadow-sm flex flex-col justify-between text-left hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 reveal-hidden"
-                >
-                  <div>
-                    <div className="flex gap-1 text-[#C9F600] mb-4 text-xs">
-                      <i className="fa-solid fa-star" />
-                      <i className="fa-solid fa-star" />
-                      <i className="fa-solid fa-star" />
-                      <i className="fa-solid fa-star" />
-                      <i className="fa-solid fa-star" />
-                    </div>
-                    <p className="text-xs text-[#FFFFFF]/90 italic leading-relaxed mb-6 font-medium">
-                      &ldquo;{t.quote}&rdquo;
-                    </p>
-                  </div>
-                  
-                  <div className="flex items-center gap-3 border-t border-[#FFFFFF]/15 pt-4 mt-2">
-                    <div className="w-9 h-9 rounded-full bg-[#7C3AED]/10 border border-[#7C3AED]/20 text-[#C9F600] flex items-center justify-center font-bold text-xs flex-shrink-0">
-                      {t.initials}
-                    </div>
-                    <div className="flex-grow">
-                      <span className="text-xs font-bold text-[#FFFFFF] block leading-tight">{t.name}</span>
-                      <span className="text-[10px] text-[#FFFFFF]/70 block mt-0.5 font-medium">{t.role} — {t.company}</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            {/* Elfsight Google Reviews Live Slider */}
+            <div className="w-full mb-12">
+              <GoogleReviewsWidget />
             </div>
 
             {/* Promotion card inviting new reviews */}
