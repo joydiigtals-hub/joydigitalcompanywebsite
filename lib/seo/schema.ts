@@ -72,7 +72,7 @@ export function getPersonEntity() {
     "jobTitle": "Technical Web Specialist & Founder",
     "worksFor": { "@id": ORGANIZATION_ID },
     "url": `${SITE_URL}/author/saravanan`,
-    "image": `${SITE_URL}/assets/images/logo.webp`,
+    "image": `${SITE_URL}/assets/images/founder.jpg`,
     "sameAs": [
       "https://www.linkedin.com/in/saravanan-l-34a861154/"
     ],
