@@ -484,8 +484,10 @@ body {
 }
 
 /* Elfsight Google Reviews Widget Brand Color Styling */
-.elfsight-app-4b72156c-4edb-4b41-aaaf-a6eee11d3478 .es-widget-title-header,
-.elfsight-app-4b72156c-4edb-4b41-aaaf-a6eee11d3478 [class*="WidgetTitle__Header"],
-.elfsight-app-4b72156c-4edb-4b41-aaaf-a6eee11d3478 .es-widget-title {
+html body .elfsight-app-4b72156c-4edb-4b41-aaaf-a6eee11d3478 [class*="WidgetTitle__Header"],
+html body .elfsight-app-4b72156c-4edb-4b41-aaaf-a6eee11d3478 .es-widget-title-header,
+html body .elfsight-app-4b72156c-4edb-4b41-aaaf-a6eee11d3478 [class*="WidgetTitle__Inner"] *,
+html body .elfsight-app-4b72156c-4edb-4b41-aaaf-a6eee11d3478 .kQOgxs,
+html body .elfsight-app-4b72156c-4edb-4b41-aaaf-a6eee11d3478 .es-widget-title {
   color: #C9F600 !important;
 }
