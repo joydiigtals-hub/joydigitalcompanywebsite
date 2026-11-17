@@ -41,14 +41,14 @@ const pageSchema = {
     "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Old Perungalathur",
+      "streetAddress": "4/166 T, Thinamani Nagar",
       "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
-      "postalCode": "600063",
+      "postalCode": "625018",
       "addressCountry": "IN"
     }
   },
-  "description": "Joy Digital is a premium web design company in Chennai offering custom responsive layouts and local SEO optimization for Chennai service brands.",
+  "description": "Joy Digital is headquartered in Madurai, Tamil Nadu, offering custom responsive website layouts and SEO for clients in Chennai.",
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "INR",
@@ -63,12 +63,15 @@ export default function WebsiteDesignChennai() {
     <ServicePageTemplate
       serviceName="Website Design Chennai"
       heroTitle="Web Design Company in Chennai"
-      heroSubtitle="Looking for a website developer near me or a web development agency in T Nagar / Guindy / Velachery? We design high-speed Next.js websites that convert local search traffic into leads."
+      heroSubtitle="Headquartered in Madurai, Tamil Nadu. Serving clients in Chennai. We design high-speed Next.js websites that convert local search traffic into leads."
       leadSource="Website Design Chennai Landing Page"
       canonicalUrl="https://joydigital.in/website-design-company-in-chennai"
-      overviewTitle="Local Web Design Company in Chennai Built for Results"
+      overviewTitle="Web Design Company for Chennai Businesses"
       overviewContent={
         <div className="space-y-6">
+          <p className="text-xs font-semibold text-[#C9F600]">
+            Headquartered in Madurai, Tamil Nadu. Serving clients in Chennai.
+          </p>
           <p>
             Your website is the first impression a customer has of your brand. Slow load times or outdated layouts will drive prospects straight to competitors. If you need a leading <strong>web design company in Chennai</strong> to build a modern, high-converting digital portal, we are here to help.
           </p>

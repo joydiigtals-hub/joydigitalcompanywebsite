@@ -30,13 +30,14 @@ const pageSchema = {
     "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Coimbatore",
+      "streetAddress": "4/166 T, Thinamani Nagar",
+      "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
-      "postalCode": "641001",
+      "postalCode": "625018",
       "addressCountry": "IN"
     }
   },
-  "description": "Joy Digital is a leading website design company in Coimbatore, specializing in custom React & Next.js builds that load under 1.5 seconds.",
+  "description": "Joy Digital is headquartered in Madurai, Tamil Nadu, crafting custom React and Next.js website layouts for businesses in Coimbatore.",
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "INR",
@@ -51,13 +52,16 @@ export default function WebDesignCoimbatore() {
     <ServicePageTemplate
       serviceName="Website Design Coimbatore"
       heroTitle="Website Design Company in Coimbatore"
-      heroSubtitle="Get a modern, fast website designed to stand out and bring customers. As a top web design company in Coimbatore, we code custom layouts optimized for speed and leads."
+      heroSubtitle="Headquartered in Madurai, Tamil Nadu. Serving clients in Coimbatore. We build custom website layouts designed to stand out, load quickly, and bring customer enquiries."
       leadSource="Website Design Coimbatore Landing Page"
       heroCtaText="Get Free Design Quote"
       canonicalUrl="https://joydigital.in/website-design-company-coimbatore"
       overviewTitle="Custom Website Design & Branding Solutions in Coimbatore"
       overviewContent={
         <div className="space-y-6">
+          <p className="text-xs font-semibold text-[#C9F600]">
+            Headquartered in Madurai, Tamil Nadu. Serving clients in Coimbatore.
+          </p>
           <p>
             In Coimbatore&apos;s active industrial and startup scene, your website is the center of your marketing. A slow, template-based website can turn prospects away. We build custom website designs in Coimbatore that align with your branding and engage your target audience.
           </p>
@@ -66,7 +70,7 @@ export default function WebDesignCoimbatore() {
           </p>
         </div>
       }
-      benefitsTitle="Why Choose Our Coimbatore Web Design Team?"
+      benefitsTitle="Why Choose Joy Digital for Coimbatore Web Design?"
       benefitsSubtitle="We deliver premium design layouts and conversion-focused structures."
       benefits={[
         {
