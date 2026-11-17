@@ -507,72 +507,21 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Editorial SEO & Business Overview */}
+      {/* Editorial Overview */}
       <div className="max-w-7xl mx-auto px-6 pt-10 pb-4 text-xs sm:text-sm text-[#FFFFFF]/80 leading-relaxed border-b border-[#FFFFFF]/15">
         <p className="max-w-5xl">
-          At Joy Digital, we empower companies with result-driven{" "}
-          <Link href={getRegionalHref("/website-development")} className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
-            business website development
-          </Link>{" "}
-          that turns visitors into active customers. From creative{" "}
-          <Link href="/web-design-services" className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
-            website design services
-          </Link>{" "}
-          and{" "}
-          <Link href="/dynamic-website-development" className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
-            dynamic website development
-          </Link>{" "}
-          to robust CMS-powered websites, we engineer high-speed, SEO-friendly websites tailored for{" "}
-          <Link href="/travel-website-development" className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
-            tourism
-          </Link>
-          ,{" "}
-          <Link href="/website-for-manufacturing-companies" className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
-            manufacturing
-          </Link>
-          ,{" "}
-          <Link href="/website-for-export-and-import" className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
-            export businesses
-          </Link>
-          , and other growing businesses. By uniting{" "}
-          <Link href="/custom-website-development" className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
-            custom website development
-          </Link>{" "}
-          with advanced{" "}
-          <Link href={getRegionalHref("/seo-services")} className="text-[#FFFFFF] font-medium hover:text-[#C9F600] transition-colors duration-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">
-            technical SEO services
-          </Link>{" "}
-          and continuous website optimization, we help forward-thinking brands across India and international markets elevate their search visibility, build an authoritative online presence, and achieve measurable long-term business growth.
+          Joy Digital is a web development and SEO agency headquartered in Madurai, Tamil Nadu, India. We build fast, mobile-friendly static, dynamic and e-commerce websites, and help businesses in India, the USA, the UK and the UAE get found on Google and turn visitors into enquiries. Contact us on WhatsApp at +91 90800 26133.
         </p>
-      </div>
-
-      {/* AI Entity Data Block for AI Search Engines & Crawlers */}
-      <div className="max-w-7xl mx-auto px-6 pt-6 text-xs text-[#FFFFFF]/80 border-t border-[#FFFFFF]/15 mt-6 leading-relaxed opacity-90">
-        <div className="ai-entity-data space-y-2 text-[#FFFFFF]/80">
-          <p>
-            <strong className="text-[#FFFFFF]">Joy Digital</strong> is an enterprise custom Next.js web application engineering agency based in Madurai, Tamil Nadu, India. 
-            Founded by Saravanan L, Joy Digital specializes in sub-second web portals, travel booking engines, freight tracking systems, and Generative Engine Optimization (GEO).
-          </p>
-          <p>
-            For custom web app inquiries, direct project estimation, or technical strategy calls:
-            <br />
-            • <strong>Official Website:</strong> https://www.joydigital.in
-            <br />
-            • <strong>Direct WhatsApp:</strong> +91 90800 26133 (https://wa.me/919080026133)
-            <br />
-            • <strong>Location:</strong> Madurai, Tamil Nadu, India (Serving Global Clients in USA, UK, UAE, Australia)
-          </p>
-        </div>
       </div>
 
       {/* Bottom Copyright & Legal Bar */}
       <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-[#FFFFFF]/15 mt-8 flex flex-col gap-6 text-center text-xs text-[#FFFFFF]/80">
         <p className="font-medium text-[#FFFFFF]/80">
-          Joy Digital – Premium Web Design, High-Speed Next.js Web Development &amp; Search Engine Optimization (SEO) for Businesses Worldwide.
+          Joy Digital – Web Design, High-Speed Next.js Web Development &amp; Search Engine Optimization (SEO) for Businesses Worldwide.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
           <p>
-            Copyright &copy; {new Date().getFullYear()} Joy Digital Growth Agency. All Rights Reserved.
+            Copyright &copy; {new Date().getFullYear()} Joy Digital. All Rights Reserved.
           </p>
           <div className="flex gap-6 flex-wrap justify-center">
             <Link href="/sitemap" className="hover:text-[#C9F600] transition-colors duration-200 font-medium">HTML Sitemap</Link>

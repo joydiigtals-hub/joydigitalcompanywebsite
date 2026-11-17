@@ -5,16 +5,16 @@ export const WEBSITE_ID = `${SITE_URL}/#website`;
 
 export const BUSINESS_INFO = {
   name: "Joy Digital",
-  legalName: "Joy Digital Growth Agency",
+  legalName: "Joy Digital",
   url: SITE_URL,
   logo: `${SITE_URL}/assets/images/logo.webp`,
   image: `${SITE_URL}/assets/images/hero-banner.webp`,
-  description: "Joy Digital is a premier Next.js & Custom Web Development company based in Madurai, India. We engineer sub-second web applications, custom software, SEO, and Generative Engine Optimization (GEO) for global brands in the USA, UK, and UAE.",
+  description: "Joy Digital is a web development and SEO agency headquartered in Madurai, Tamil Nadu, India. We build fast, mobile-friendly websites, custom software, SEO, and Generative Engine Optimization (GEO) for businesses in India, the USA, the UK, and the UAE.",
   telephone: "+919080026133",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com",
   address: {
     "@type": "PostalAddress",
-    "streetAddress": "Madurai",
+    "streetAddress": "4/166 T, Thinamani Nagar",
     "addressLocality": "Madurai",
     "addressRegion": "Tamil Nadu",
     "postalCode": "625018",

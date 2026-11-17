@@ -16,6 +16,27 @@ export const metadata: Metadata = {
       "en-in": "https://joydigital.in/in/seo-services",
     },
   },
+  openGraph: {
+    type: "website",
+    url: "https://joydigital.in/seo-services",
+    siteName: "Joy Digital",
+    title: "Enterprise B2B SEO Services & GEO Optimization | Joy Digital",
+    description: "Enterprise B2B SEO and Generative Engine Optimization (GEO) by Joy Digital, headquartered in Madurai, India. We help businesses rank on Google and AI search engines.",
+    images: [
+      {
+        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Joy Digital - Enterprise B2B SEO Services & GEO Optimization",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Enterprise B2B SEO Services & GEO Optimization | Joy Digital",
+    description: "Enterprise B2B SEO and Generative Engine Optimization (GEO) by Joy Digital, headquartered in Madurai, India. We help businesses rank on Google and AI search engines.",
+    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+  },
 };
 
 const pageSchema = {

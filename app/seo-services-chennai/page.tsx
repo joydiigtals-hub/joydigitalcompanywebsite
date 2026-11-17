@@ -216,16 +216,19 @@ export default async function SeoServicesChennai() {
       <ServicePageTemplate
         serviceName="SEO Services in Chennai"
         heroTitle="SEO Services in Chennai"
-        heroSubtitle="Partner with a technical SEO agency in Chennai that focuses on measurable leads, sub-second performance, and Google Maps Local 3-Pack visibility. We turn high-intent organic search queries into phone calls, WhatsApp chats, and qualified business inquiries."
+        heroSubtitle="Headquartered in Madurai, Tamil Nadu. Serving clients in Chennai. We turn high-intent organic search queries into phone calls, WhatsApp chats, and qualified business inquiries with technical SEO and Google Maps Local 3-Pack visibility."
         leadSource="SEO Services Chennai Landing Page"
         heroCtaText="Claim Free SEO Consultation"
         heroActions={heroActions}
         canonicalUrl="https://joydigital.in/seo-services-chennai"
-        pricingNote="Starting from Rs [SEO_PRICE] / month. Final price depends on industry competition, existing website health, and target geographic scope."
+        pricingNote="Prices are starting points and vary by scope. India pricing is in INR; international pricing is in USD."
         chennaiProofSection={<ChennaiClientProofCard />}
         overviewTitle="High-Impact SEO Services in Chennai Designed for Real Business Leads"
         overviewContent={
           <div className="space-y-6 text-justify">
+            <p className="text-xs font-semibold text-[#C9F600]">
+              Headquartered in Madurai, Tamil Nadu. Serving clients in Chennai.
+            </p>
             <p>
               Chennai is one of India&apos;s most competitive business capitals. From the busy IT corridors of <strong>Old Mahabalipuram Road (OMR), DLF Porur, and Sholinganallur</strong> to the sprawling industrial and manufacturing zones of <strong>Ambattur, Guindy, Sriperumbudur, and Oragadam</strong>, thousands of companies compete for customer visibility every single day. If your company relies on customers discovering your services through Google, ranking on page one is not optional—it is fundamental to your pipeline. If your business is not visible in the top organic positions or the Google Maps Local 3-Pack, high-intent prospects in Chennai are choosing your competitors.
             </p>

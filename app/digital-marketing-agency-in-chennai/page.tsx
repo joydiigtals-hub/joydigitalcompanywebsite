@@ -41,14 +41,14 @@ const pageSchema = {
     "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Old Perungalathur",
+      "streetAddress": "4/166 T, Thinamani Nagar",
       "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
-      "postalCode": "600063",
+      "postalCode": "625018",
       "addressCountry": "IN"
     }
   },
-  "description": "Premium digital marketing agency in Chennai. We help local businesses scale via targeted search ads, social media campaigns, SEO, and high-converting web layouts.",
+  "description": "Digital marketing agency headquartered in Madurai, serving clients in Chennai. We help local businesses scale via targeted search ads, social media campaigns, SEO, and high-converting web layouts.",
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "INR",
@@ -62,13 +62,16 @@ export default function DigitalMarketingChennai() {
   return (
     <ServicePageTemplate
       serviceName="Digital Marketing Chennai"
-      heroTitle="Top Digital Marketing Agency in Chennai"
-      heroSubtitle="Stop paying for empty web traffic. We build high-converting lead generation funnels, run target-oriented social campaigns, and run map optimization strategies that bring phone calls and insurance inquiries."
+      heroTitle="Digital Marketing Services for Chennai Businesses"
+      heroSubtitle="Headquartered in Madurai, Tamil Nadu. Serving clients in Chennai. We build high-converting lead generation funnels, run target-oriented social campaigns, and run map optimization strategies that bring phone calls and customer inquiries."
       leadSource="Digital Marketing Chennai Landing Page"
       canonicalUrl="https://joydigital.in/digital-marketing-agency-in-chennai"
       overviewTitle="ROI-Focused Search, Social & Web Optimization for Tamil Nadu Brands"
       overviewContent={
         <div className="space-y-6">
+          <p className="text-xs font-semibold text-[#C9F600]">
+            Headquartered in Madurai, Tamil Nadu. Serving clients in Chennai.
+          </p>
           <p>
             Traditional advertising (newspapers, pamphlets, billboards) is expensive and difficult to track. Today, customers in Chennai look for services online. Whether searching for a clinic, hotel, Travels, or insurance advisor, they turn to Google Maps and social media channels.
           </p>

@@ -41,7 +41,7 @@ const aboutFaqs = [
   },
   {
     question: "Where is Joy Digital located and do you serve international clients?",
-    answer: "Joy Digital is based in Perungalathur, Chennai, Tamil Nadu, India. We serve local businesses across Chennai and India, as well as global clients in the US, UK, UAE, Europe, and Australia."
+    answer: "Joy Digital is headquartered in Madurai, Tamil Nadu, India. We serve businesses across India as well as global clients in the US, UK, UAE, and worldwide."
   },
   {
     question: "Why choose custom web engineering over legacy CMS platforms like WordPress?",
@@ -127,7 +127,7 @@ export default function AboutPage() {
               </h2>
               <div className="text-sm text-[#FFFFFF]/85 leading-relaxed space-y-6">
                 <p>
-                  At Joy Digital Growth Agency, our core mission is to deliver professional digital marketing and web engineering solutions designed to fit startup and small-to-medium business budgets. Based in Chennai, Tamil Nadu, we understand how local search habits impact customer acquisition.
+                  At Joy Digital, our core mission is to deliver professional digital marketing and web engineering solutions designed to fit startup and small-to-medium business budgets. Headquartered in Madurai, Tamil Nadu, we understand how search visibility impacts customer acquisition.
                 </p>
                 <p>
                   We avoid generic, bloated web designs that slow down page performance. Instead, we write clean, search-ready code and configure profiles to help local businesses rank on Google Maps and search results, building brand authority.

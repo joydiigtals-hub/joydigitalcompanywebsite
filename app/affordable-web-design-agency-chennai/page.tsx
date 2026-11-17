@@ -41,14 +41,14 @@ const pageSchema = {
     "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Old Perungalathur",
+      "streetAddress": "4/166 T, Thinamani Nagar",
       "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
-      "postalCode": "600063",
+      "postalCode": "625018",
       "addressCountry": "IN"
     }
   },
-  "description": "Joy Digital is an affordable web design agency in Chennai offering low cost website development and transparent website design price listings.",
+  "description": "Joy Digital is an affordable web design agency headquartered in Madurai, serving clients in Chennai with low cost website development and transparent website design price listings.",
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "INR",
@@ -63,17 +63,20 @@ export default function AffordableWebDesignChennai() {
     <ServicePageTemplate
       serviceName="Affordable Web Design"
       heroTitle="Affordable Web Design Agency in Chennai"
-      heroSubtitle="Get transparent, low cost website development in Chennai. As a results-driven affordable web design agency in Chennai, we build modern websites optimized for speed and rankings."
+      heroSubtitle="Get transparent, low cost website development in Chennai. Headquartered in Madurai, Tamil Nadu. Serving clients in Chennai with modern websites optimized for speed and rankings."
       leadSource="Affordable Web Design Chennai Landing Page"
       canonicalUrl="https://joydigital.in/affordable-web-design-agency-chennai"
       overviewTitle="Low Cost Website Development & Website Design Price in Chennai"
       overviewContent={
         <div className="space-y-6">
-          <p>
-            Many businesses assume that custom Next.js engineering is extremely expensive. At Joy Digital, a leading <strong>affordable web design agency in Chennai</strong>, we offer premium quality layouts starting from just ₹25,000. We maintain transparent pricing profiles with zero hidden fees.
+          <p className="text-xs font-semibold text-[#C9F600]">
+            Headquartered in Madurai, Tamil Nadu. Serving clients in Chennai.
           </p>
           <p>
-            Our <strong>low cost website development in Chennai</strong> uses optimized, serverless architectures. This gives you a fast-loading business website that ranks high on search results, loads in under 1.5 seconds, and delivers actual conversions.
+            Many businesses assume that custom Next.js engineering is extremely expensive. At Joy Digital, an <strong>affordable web design agency in Chennai</strong>, we offer quality layouts starting from ₹25,000. We maintain transparent pricing profiles. Clear pricing. Your final quote is confirmed after a scope review.
+          </p>
+          <p>
+            Our <strong>low cost website development in Chennai</strong> uses optimized, serverless architectures. This gives you a fast-loading business website that ranks high on search results, with fast-loading Next.js builds, and delivers actual conversions.
           </p>
           <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Transparent Website Design Price in Chennai</h3>
           <p>

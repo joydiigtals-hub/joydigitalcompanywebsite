@@ -32,10 +32,10 @@ const pageSchema = {
     "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "4/162, Melakkal Main Road, Kochadai",
+      "streetAddress": "4/166 T, Thinamani Nagar",
       "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
-      "postalCode": "625016",
+      "postalCode": "625018",
       "addressCountry": "IN"
     },
     "areaServed": {
@@ -43,7 +43,7 @@ const pageSchema = {
       "name": "Coimbatore"
     }
   },
-  "description": "Joy Digital is a result-oriented SEO company in Coimbatore, helping businesses drive traffic, rank high for local terms, and optimize search CTRs.",
+  "description": "Joy Digital is headquartered in Madurai, Tamil Nadu, providing SEO services for businesses and suppliers in Coimbatore.",
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "INR",
@@ -58,22 +58,25 @@ export default function SeoCompanyCoimbatore() {
     <ServicePageTemplate
       serviceName="SEO Company Coimbatore"
       heroTitle="SEO Company in Coimbatore"
-      heroSubtitle="Rank higher on Google and bring more customers to your business. As a top SEO agency in Coimbatore, we optimize websites to gain organic local traffic and maps visibility."
+      heroSubtitle="Headquartered in Madurai, Tamil Nadu. Serving clients in Coimbatore. We optimize websites to gain organic local traffic and search visibility."
       leadSource="SEO Company Coimbatore Landing Page"
       heroCtaText="Get Free SEO Audit"
       canonicalUrl="https://joydigital.in/seo-company-coimbatore"
       overviewTitle="Increase Search Visibility & Rank for Keywords That Bring Leads"
       overviewContent={
         <div className="space-y-6">
+          <p className="text-xs font-semibold text-[#C9F600]">
+            Headquartered in Madurai, Tamil Nadu. Serving clients in Coimbatore.
+          </p>
           <p>
             If your website isn&apos;t ranking on page 1 of Google, you are losing valuable customers to competitors every single day. Most buyers looking for services in Coimbatore do not scroll past the first three Google Maps results or organic web links.
           </p>
           <p>
-            At Joy Digital, we provide result-oriented SEO services in Coimbatore. We perform thorough technical site audits, target local keywords, build local search citations, and improve your click-through rates.
+            At Joy Digital, we provide result-oriented SEO services for Coimbatore businesses. We perform thorough technical site audits, target local keywords, build local search citations, and improve your click-through rates.
           </p>
         </div>
       }
-      benefitsTitle="Why Choose Our Coimbatore SEO Team?"
+      benefitsTitle="Why Choose Joy Digital for Coimbatore SEO?"
       benefitsSubtitle="We deliver transparent search optimization strategies and performance metrics."
       benefits={[
         {

@@ -7,13 +7,13 @@ export const SITE_URL = "https://joydigital.in";
 
 export const siteConfig = {
   name: "Joy Digital",
-  legalName: "Joy Digital Growth Agency",
+  legalName: "Joy Digital",
   url: SITE_URL,
   phone: "+91 90800 26133",
   phoneRaw: "+919080026133",
   telephone: "+91-9080026133",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "joydiigtals@gmail.com",
-  hq: "4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
+  hq: "Joy Digital, 4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India",
   address: {
     streetAddress: "4/166 T, Thinamani Nagar",
     addressLocality: "Madurai",
@@ -24,10 +24,6 @@ export const siteConfig = {
   geo: {
     latitude: 9.9252,
     longitude: 78.1198,
-  },
-  partnerOffice: {
-    label: "Chennai (Partner Office)",
-    address: "11, Jothi nagar 5th street, Murugappa polytechnic nearby, Avadi, Chennai 600053",
   },
   social: {
     linkedin: "https://www.linkedin.com/company/joydigital-solution/",
