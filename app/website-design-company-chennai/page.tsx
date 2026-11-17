@@ -30,13 +30,14 @@ const pageSchema = {
     "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "4/166 T, Thinamani Nagar",
       "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
-      "postalCode": "600063",
+      "postalCode": "625018",
       "addressCountry": "IN"
     }
   },
-  "description": "Joy Digital is a professional website design company in Chennai, crafting custom layouts, responsive UI designs, and mobile-friendly brand portals.",
+  "description": "Joy Digital is headquartered in Madurai, Tamil Nadu, crafting custom layouts, responsive UI designs, and mobile-friendly brand portals for businesses in Chennai.",
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "INR",
@@ -51,13 +52,16 @@ export default function WebDesignChennai() {
     <ServicePageTemplate
       serviceName="Website Design Chennai"
       heroTitle="Website Design Company in Chennai"
-      heroSubtitle="Get a custom, stunning website designed to attract and convert customers. As a premier website design agency in Chennai, we build fast, mobile-friendly layouts that load under 1.5s."
+      heroSubtitle="Headquartered in Madurai, Tamil Nadu. Serving clients in Chennai. We build custom, fast, mobile-friendly website layouts designed to attract and convert customers."
       leadSource="Website Design Chennai Landing Page"
       heroCtaText="Get Free Design Quote"
       canonicalUrl="https://joydigital.in/website-design-company-chennai"
       overviewTitle="Custom Website Design & Branding Solutions in Chennai"
       overviewContent={
         <div className="space-y-6">
+          <p className="text-xs font-semibold text-[#C9F600]">
+            Headquartered in Madurai, Tamil Nadu. Serving clients in Chennai.
+          </p>
           <p>
             In Chennai&apos;s active business ecosystem, your website is the primary showcase of your brand. A slow, template-based website can turn prospects away. We build bespoke website designs in Chennai that align with your branding and engage your target audience.
           </p>
@@ -66,7 +70,7 @@ export default function WebDesignChennai() {
           </p>
         </div>
       }
-      benefitsTitle="Why Choose Our Chennai Web Design Team?"
+      benefitsTitle="Why Choose Joy Digital for Chennai Web Design?"
       benefitsSubtitle="We deliver premium design layouts and conversion-focused structures."
       benefits={[
         {
