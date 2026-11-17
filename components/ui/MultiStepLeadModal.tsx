@@ -125,7 +125,7 @@ export default function MultiStepLeadModal({
         Mobile: formData.phone.trim(),
         Service: formData.service,
         Budget: formData.budget,
-        Message: formData.message.trim() || "Requested 15-Min Discovery & Growth Call",
+        Message: formData.message.trim() || "Requested Discovery & Strategy Call",
         Source: source,
         TargetRegion: "GLOBAL",
         utmParams: utm || undefined,
@@ -196,7 +196,7 @@ export default function MultiStepLeadModal({
                   <span>Step {step} of 2 • Fast Track Discovery</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
-                  {step === 1 ? "Book Your 15-Min Growth Call" : "Tell Us About Your Project"}
+                  {step === 1 ? "Book Your Strategy Call" : "Tell Us About Your Project"}
                 </h3>
                 <p className="text-xs sm:text-sm text-[#FFFFFF]/70 mt-1">
                   {step === 1

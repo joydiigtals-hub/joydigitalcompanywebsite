@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { ArrowRight, Compass, Stethoscope, Building2, GraduationCap, ShoppingBag, Utensils, CheckCircle2 } from "lucide-react";
+import { SHOW_CASE_STUDY_METRICS } from "@/config/flags";
 
 // ============================================================================
 // DATA ARRAY: INDUSTRY SPECIALIZATIONS
@@ -58,7 +59,7 @@ export const INDUSTRIES_DATA: IndustryItem[] = [
       },
       {
         title: "Mobile PageSpeed",
-        subtitle: "99/100 Core Web Vitals",
+        subtitle: "Core Web Vitals Optimised",
         icon: "fa-solid fa-bolt",
         badgeColor: "bg-[#C9F600]/15 text-[#C9F600] border-[#C9F600]/30",
       },
@@ -430,9 +431,11 @@ export default function IndustrySpecializationSection() {
                         <i className={currentIndustry.iconClass} />
                       </div>
                       <div>
-                        <div className="text-3xl sm:text-4xl font-black text-[#C9F600] tracking-tight leading-none">
-                          {currentIndustry.headlineMetric}
-                        </div>
+                        {SHOW_CASE_STUDY_METRICS && (
+                          <div className="text-3xl sm:text-4xl font-black text-[#C9F600] tracking-tight leading-none">
+                            {currentIndustry.headlineMetric}
+                          </div>
+                        )}
                         <span className="text-[11px] font-bold text-[#FFFFFF]/80 uppercase tracking-wider block mt-1">
                           {currentIndustry.metricLabel}
                         </span>

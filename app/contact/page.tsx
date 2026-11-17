@@ -101,21 +101,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Chennai Partner Office */}
-                <div className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-all flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#3B1580] flex items-center justify-center text-[#C9F600] text-xl flex-shrink-0 shadow-sm border border-[#FFFFFF]/20">
-                    <i className="fa-solid fa-handshake" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-[#D9CCF5]/15 text-[#D9CCF5] border border-[#D9CCF5]/30 text-[11px] font-extrabold uppercase tracking-wider w-fit mb-1">
-                      Chennai (Partner Office)
-                    </span>
-                    <span className="text-[13px] text-[#FFFFFF]/80 leading-snug">
-                      11, Jothi nagar 5th street, Murugappa polytechnic nearby, Avadi, Chennai 600053
-                    </span>
-                  </div>
-                </div>
-
                 {/* Call Card */}
                 <a
                   href="tel:+919080026133"
@@ -227,7 +212,7 @@ export default function ContactPage() {
                   style={{ border: 0, filter: "grayscale(100%) invert(90%) contrast(90%)" }}
                   allowFullScreen
                   loading="lazy"
-                  title="Joy Digital Growth Agency Location Map"
+                  title="Joy Digital Location Map"
                 />
               </div>
             </div>
@@ -237,7 +222,7 @@ export default function ContactPage() {
               <LeadForm
                 layout="vertical"
                 title="Send An Enquiry"
-                subtitle="Fill in the fields below, and our local business consulting experts will contact you within 24 hours."
+                subtitle="Fill in the fields below, and our local business consulting experts will reply within 1 business day."
                 ctaText="Send Message"
                 source="Contact Page Form"
               />

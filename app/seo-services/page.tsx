@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import EnterpriseSeoLeadForm from "@/components/ui/EnterpriseSeoLeadForm";
+import { PRICING } from "@/config/pricing";
 
 export const metadata: Metadata = {
   title: "Enterprise B2B SEO Services & GEO Optimization | Joy Digital",
@@ -75,7 +76,7 @@ export default function SEOPage() {
             In the global B2B sector, standard keyword stuffing and low-quality link building no longer drive revenue. Enterprise decision-makers conduct deep, multi-stage research before committing to high-ticket SaaS or industrial purchases. If your brand relies solely on paid ads, you are surrendering highly qualified organic market share to competitors with robust <strong>Technical SEO Architecture & Site Audits</strong>.
           </p>
           <p>
-            At Joy Digital, we provide premium <strong>Enterprise B2B SEO Services</strong> designed specifically for complex sales cycles. We don't just chase traffic volume; we deploy <strong>Global B2B Keyword Strategy & Content Clusters</strong> to target specific commercial intent, moving C-suite prospects smoothly from top-of-funnel discovery to bottom-of-funnel enterprise conversion.
+            At Joy Digital, we provide premium <strong>Enterprise B2B SEO Services</strong> designed specifically for complex sales cycles. We don&apos;t just chase traffic volume; we deploy <strong>Global B2B Keyword Strategy & Content Clusters</strong> to target specific commercial intent, moving C-suite prospects smoothly from top-of-funnel discovery to bottom-of-funnel enterprise conversion.
           </p>
           
           <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
@@ -125,7 +126,7 @@ export default function SEOPage() {
         {
           icon: "fa-solid fa-code-branch",
           title: "Technical Code & Core Web Vitals",
-          description: "We resolve indexability bottlenecks, eliminate rendering blocks, and optimize Next.js/Headless structures to achieve 95+ Lighthouse performance.",
+          description: "We resolve indexability bottlenecks, eliminate rendering blocks, and optimize Next.js/Headless structures for Core Web Vitals and Google PageSpeed Insights.",
         },
         {
           icon: "fa-solid fa-robot",
@@ -177,12 +178,12 @@ export default function SEOPage() {
         },
       ]}
       pricingTitle="Enterprise SEO Growth Retainers (Priced in USD)"
-      pricingSubtitle="Scalable organic pipeline investments for global brands. (Indian partners: ₹ INR equivalent available)."
+      pricingSubtitle="Scalable organic pipeline investments for global brands."
       pricingTiers={[
         {
           name: "B2B Organic Growth Plan",
-          price: "$500 USD",
-          period: "/month",
+          price: PRICING.seoB2BOrganicGrowth.usd,
+          period: "",
           description: "Perfect for scaling SaaS startups and specialized B2B service agencies targeting primary global markets.",
           features: [
             "Up to 25 Commercial B2B Keywords",
@@ -196,8 +197,8 @@ export default function SEOPage() {
         },
         {
           name: "Global Enterprise & GEO Scale Plan",
-          price: "$1,200 USD",
-          period: "/month",
+          price: PRICING.seoGlobalEnterprise.usd,
+          period: "",
           description: "Designed for mid-market and enterprise B2B brands requiring aggressive organic scaling.",
           isPopular: true,
           features: [
@@ -237,7 +238,7 @@ export default function SEOPage() {
         },
         {
           question: "Why do we need Technical SEO Architecture audits?",
-          answer: "Even the best content won't rank if search engines can't crawl and render it efficiently. Modern B2B sites (especially those built on complex JS frameworks like React) often suffer from client-side rendering bottlenecks. We engineer solutions like Next.js SSG to guarantee perfect indexability and sub-second load speeds.",
+          answer: "Even the best content won't rank if search engines can't crawl and render it efficiently. Modern B2B sites (especially those built on complex JS frameworks like React) often suffer from client-side rendering bottlenecks. We engineer solutions like Next.js SSG to improve indexability and fast load speeds.",
         },
         {
           question: "Can you help migrate our organic traffic during a platform rewrite?",

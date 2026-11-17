@@ -63,7 +63,7 @@ export default function ModernHeroSection({
     "Mobile-friendly design and performance-focused development",
     "SEO-friendly structure and clear enquiry pathways",
   ];
-  const currentTrustText = trustText || localizedData?.hero.trustText || "Trusted by fast-growing brands across USA, UK, UAE & worldwide.";
+  const currentTrustText = trustText || localizedData?.hero.trustText || "Web development and SEO from Madurai, India, for businesses in India, the USA, the UK and the UAE.";
 
   // Form State
   const [formData, setFormData] = useState({
@@ -541,7 +541,7 @@ export default function ModernHeroSection({
                 <div className="pt-2 text-center flex flex-col gap-1.5">
                   <p className="text-[10px] font-medium text-[#FFFFFF]/70 flex items-center justify-center gap-1.5 flex-wrap">
                     <ShieldCheck className="w-3 h-3 text-[#C9F600] shrink-0" />
-                    <span>No credit card required • Instant 15-min call • Zero commitment</span>
+                    <span>No credit card required • We reply within 1 business day • Zero commitment</span>
                   </p>
                   <p className="text-[9px] font-semibold text-[#FFFFFF]/60 flex items-center justify-center gap-1">
                     <i className="fa-solid fa-lock text-[#C9F600]" /> We respect your privacy. No spam ever.

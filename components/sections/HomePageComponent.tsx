@@ -14,6 +14,7 @@ import ServicesMarquee from "@/components/ui/ServicesMarquee";
 import IndustrySpecializationSection from "@/components/sections/IndustrySpecializationSection";
 import { COUNTRY_LANDING_DATA } from "@/data/countryLandingData";
 import type { BlogPost } from "@/lib/blog";
+import { SHOW_CASE_STUDY_METRICS } from "@/config/flags";
 
 const DigitalNetworkBackground = dynamic(() => import("@/components/ui/DigitalNetworkBackground"));
 const IndustryTabs = dynamic(() => import("@/components/sections/IndustryTabs"));
@@ -77,7 +78,7 @@ export const HOME_FAQS = [
     answer: "Prioritize agencies with proven Core Web Vitals performance, transparent conversion tracking, and custom strategy execution. Joy Digital provides end-to-end web development, technical search optimization, and lead funnels tailored to your growth goals."
   },
   {
-    question: "Why is Joy Digital considered a top choice for web development services?",
+    question: "Why choose Joy Digital for web development services?",
     answer: "We specialize in custom Next.js and React architecture. We engineer fast, responsive platforms designed to rank on search engines, deliver smooth user experiences on mobile and desktop, and generate consistent customer enquiries."
   },
   {
@@ -86,7 +87,7 @@ export const HOME_FAQS = [
   },
   {
     question: "What is the typical cost of custom web development?",
-    answer: "The cost of bespoke web platforms ranges from $1,200 to $5,000+ for global B2B projects, depending on the complexity of the SaaS or headless e-commerce integration. We provide transparent milestone pricing with zero hidden fees."
+    answer: "For global clients, custom website development starts from $1,200. In India, projects start from ₹15,000. Final investment depends on scope, pages, and technical integrations. Clear pricing. Your final quote is confirmed after a scope review."
   },
   {
     question: "Which languages and frameworks are best for modern web applications?",
@@ -148,7 +149,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
     {
       icon: "fa-solid fa-tags text-[#C9F600]",
       title: "Transparent Flat Pricing",
-      description: country === "in" ? "Get detailed, flat-rate proposals starting from ₹25,000. Absolute clarity on hosting setup and maintainer retainers." : "Get detailed, flat-rate proposals starting from $1,200 USD. Absolute clarity on hosting setup and maintainer retainers."
+      description: country === "in" ? "Get detailed proposals starting from ₹15,000. Clear pricing. Your final quote is confirmed after a scope review." : "Get detailed proposals starting from $1,200 USD. Clear pricing. Your final quote is confirmed after a scope review."
     },
     {
       icon: "fa-solid fa-sliders text-[#C9F600]",
@@ -174,7 +175,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
 
   const valueSectionBadge = localizedData?.valueProposition?.badge || "Value Proposition";
   const valueSectionTitle = localizedData?.valueProposition?.title || "Designed for Growing Businesses Worldwide";
-  const valueSectionSubtitle = localizedData?.valueProposition?.subtitle || "Transparent processes, specialized technical engineers, and conversion-first workflows. No fake claims.";
+  const valueSectionSubtitle = localizedData?.valueProposition?.subtitle || "Transparent processes, specialized technical engineers, and conversion-first workflows.";
   const valueItems = localizedData?.valueProposition?.items || DEFAULT_VALUE_ITEMS;
 
   const bottleneckSectionBadge = localizedData?.marketBottlenecks?.badge || "Common Bottlenecks";
@@ -863,7 +864,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
                 Ready to Build a Website That Grows Your Business?
               </h3>
               <p className="text-xs sm:text-sm text-[#FFFFFF]/80 max-w-2xl mx-auto mb-8 leading-relaxed font-normal">
-                Tell us about your business goals, and let's explore the right website solution for your needs.
+                Tell us about your business goals, and let&apos;s explore the right website solution for your needs.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
@@ -897,75 +898,77 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
         <PortfolioSection />
 
         {/* 9. CASE STUDIES WITH COUNT-UP NUMERICAL COUNTERS */}
-        <section id="case-studies" className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
-              <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
-                Verified Outcomes
-              </span>
-              <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
-                Real Problems. Real Solutions. Real Results.
-              </h2>
-              <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-semibold">
-                Technical diagnostics and outcomes from genuine client partnerships. No manufactured stats.
-              </p>
-            </div>
+        {SHOW_CASE_STUDY_METRICS && (
+          <section id="case-studies" className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
+                <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
+                  Verified Outcomes
+                </span>
+                <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
+                  Real Problems. Real Solutions. Real Results.
+                </h2>
+                <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-semibold">
+                  Technical diagnostics and outcomes from genuine client partnerships. No manufactured stats.
+                </p>
+              </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {CASE_STUDIES.map((study, idx) => (
-                <div 
-                  key={idx}
-                  style={{ transitionDelay: `${idx * 100}ms` }}
-                  className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] p-8 flex flex-col justify-between text-left hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 reveal-hidden group"
-                >
-                  <div>
-                    <div className="flex items-center justify-between gap-3 mb-6">
-                      <span className="text-[10px] font-extrabold text-[#C9F600] uppercase tracking-wider bg-[#3B1580] border border-[#FFFFFF]/25 px-3 py-1 rounded-full">
-                        {study.category}
-                      </span>
-                      <span className="text-sm font-black text-[#C9F600] flex items-center gap-1">
-                        <i className="fa-solid fa-arrow-trend-up text-xs animate-bounce" />
-                        <CountUpNumber target={study.targetNum} suffix="%" />
-                      </span>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {CASE_STUDIES.map((study, idx) => (
+                  <div 
+                    key={idx}
+                    style={{ transitionDelay: `${idx * 100}ms` }}
+                    className="bg-[#3B1580] border border-[#FFFFFF]/20 rounded-[24px] p-8 flex flex-col justify-between text-left hover:shadow-xl hover:border-[#C9F600] transition-all duration-300 reveal-hidden group"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between gap-3 mb-6">
+                        <span className="text-[10px] font-extrabold text-[#C9F600] uppercase tracking-wider bg-[#3B1580] border border-[#FFFFFF]/25 px-3 py-1 rounded-full">
+                          {study.category}
+                        </span>
+                        <span className="text-sm font-black text-[#C9F600] flex items-center gap-1">
+                          <i className="fa-solid fa-arrow-trend-up text-xs animate-bounce" />
+                          <CountUpNumber target={study.targetNum} suffix="%" />
+                        </span>
+                      </div>
+
+                      <h3 className="text-base font-black text-[#FFFFFF] mb-4 leading-tight group-hover:text-[#C9F600] transition-colors">
+                        {study.title}
+                      </h3>
+                      
+                      <div className="flex flex-col gap-4 text-xs font-medium text-[#FFFFFF]/80">
+                        <p>
+                          <strong className="text-[#FFFFFF] block mb-1">Challenge:</strong> {study.problem}
+                        </p>
+                        <p>
+                          <strong className="text-[#FFFFFF] block mb-1">Execution:</strong> {study.solution}
+                        </p>
+                        <p>
+                          <strong className="text-[#C9F600] block mb-1">Result:</strong> {study.result}
+                        </p>
+                      </div>
                     </div>
 
-                    <h3 className="text-base font-black text-[#FFFFFF] mb-4 leading-tight group-hover:text-[#C9F600] transition-colors">
-                      {study.title}
-                    </h3>
-                    
-                    <div className="flex flex-col gap-4 text-xs font-medium text-[#FFFFFF]/80">
-                      <p>
-                        <strong className="text-[#FFFFFF] block mb-1">Challenge:</strong> {study.problem}
-                      </p>
-                      <p>
-                        <strong className="text-[#FFFFFF] block mb-1">Execution:</strong> {study.solution}
-                      </p>
-                      <p>
-                        <strong className="text-[#C9F600] block mb-1">Result:</strong> {study.result}
-                      </p>
+                    <div className="mt-8 pt-4 border-t border-[#FFFFFF]/20">
+                      <Link
+                        href={`/case-studies`}
+                        className="text-xs font-bold text-[#C9F600] hover:underline flex items-center gap-1.5 group/case"
+                      >
+                        Read Case Narrative <i className="fa-solid fa-chevron-right text-[8px] group-hover/case:translate-x-1 transition-transform" />
+                      </Link>
                     </div>
                   </div>
-
-                  <div className="mt-8 pt-4 border-t border-[#FFFFFF]/20">
-                    <Link
-                      href={`/case-studies`}
-                      className="text-xs font-bold text-[#C9F600] hover:underline flex items-center gap-1.5 group/case"
-                    >
-                      Read Case Narrative <i className="fa-solid fa-chevron-right text-[8px] group-hover/case:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* 10. GOOGLE REVIEWS WIDGET */}
         <section className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-10 reveal-hidden">
               <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
-                Verified Google Reviews
+                Client Feedback
               </span>
               <h2 className="text-3xl font-extrabold text-[#FFFFFF] mb-4">
                 What Our Clients Say
@@ -1008,7 +1011,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
                 Website Development Packages
               </h2>
               <p className="text-xs sm:text-sm text-[#FFFFFF]/80 font-semibold">
-                Engineered for speed, brand authority, and consistent lead generation. Zero hidden fees.
+                Engineered for speed, brand authority, and consistent lead generation. Clear pricing confirmed after scope review.
               </p>
             </div>
 

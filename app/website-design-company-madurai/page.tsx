@@ -76,7 +76,7 @@ export default function WebDesignMadurai() {
       overviewContent={
         <div className="space-y-6 text-justify">
           <p>
-            In today&apos;s competitive digital environment, your website is frequently the first impression a prospective client has of your business in Madurai. Whether you operate a luxury boutique, a multi-specialty healthcare center in Anna Nagar, an educational academy in KK Nagar, or a trading company in Simmakkal, a generic template with cluttered elements makes your business look dated. Joy Digital is a premier <strong>website design company in Madurai</strong>, crafting elegant, bespoke visual interfaces designed to captivate visitors and establish instant credibility.
+            In today&apos;s competitive digital environment, your website is frequently the first impression a prospective client has of your business in Madurai. Whether you operate a luxury boutique, a multi-specialty healthcare center in Anna Nagar, an educational academy in KK Nagar, or a trading company in Simmakkal, a generic template with cluttered elements makes your business look dated. Joy Digital is a dedicated <strong>website design company in Madurai</strong>, crafting elegant, bespoke visual interfaces designed to captivate visitors and establish instant credibility.
           </p>
           <p>
             As specialized <strong>website designers in Madurai</strong>, we avoid sluggish drag-and-drop builders that produce bloated code. We design clean, conversion-centered wireframes and transform them into pixel-perfect, mobile-friendly websites. By pairing human-centered UI/UX principles with modern design aesthetics, our layouts guide visitors naturally toward submitting inquiries, booking consultations, or messaging your team directly on WhatsApp.
@@ -174,7 +174,7 @@ export default function WebDesignMadurai() {
         },
       ]}
       pricingTitle="Flat-Rate Web Design Packages"
-      pricingSubtitle="Clear, milestone-based pricing with zero hidden fees or unexpected developer charges."
+      pricingSubtitle="Clear, milestone-based pricing confirmed after a scope review."
       pricingTiers={[
         {
           name: "Standard Plan",

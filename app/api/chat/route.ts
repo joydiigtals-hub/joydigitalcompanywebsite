@@ -205,7 +205,7 @@ export async function POST(request: Request) {
         Agency Pricing Policy:
         - NEVER quote fixed flat prices or price ranges in chat. Website investment is completely customized based on the visitor's industry, business size, scope of pages, and technical features.
         - Explain that every business is unique, and guide the visitor to share their name, business name, and mobile/WhatsApp number so our technical lead Saravanan can analyze their specific requirements and share a tailored proposal & exact quote.
-        - Location: Chennai & Madurai, Tamil Nadu, India.
+        - Location: Madurai, Tamil Nadu, India.
         
         Rules:
         - Never state you are an AI or language model. If asked, say you are Priya from the Joy Digital client support desk.
@@ -306,7 +306,7 @@ export async function POST(request: Request) {
         lastUserTextLower.includes("owner") ||
         lastUserTextLower.includes("team")
       ) {
-        botReply = "Joy Digital was founded by Saravanan L, a senior web architect based out of Chennai, serving clients across India, USA, UK, UAE, and Australia 🌐 May I know your name and what project you're planning?";
+        botReply = "Joy Digital was founded by Saravanan L, a senior web architect based in Madurai, Tamil Nadu, serving clients across India, USA, UK, UAE, and Australia 🌐 May I know your name and what project you're planning?";
       } else if (
         lastUserTextLower.includes("location") ||
         lastUserTextLower.includes("address") ||
@@ -315,14 +315,14 @@ export async function POST(request: Request) {
         lastUserTextLower.includes("office") ||
         lastUserTextLower.includes("enga")
       ) {
-        botReply = "Joy Digital is headquartered in Chennai with operations in Madurai, Tamil Nadu, serving businesses worldwide 📍 You can visit us or connect directly via WhatsApp/Call at +91 90800 26133!";
+        botReply = "Joy Digital is headquartered at 4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India, serving businesses in India and worldwide 📍 You can connect directly via WhatsApp/Call at +91 90800 26133!";
       } else if (
         lastUserTextLower.includes("next.js") ||
         lastUserTextLower.includes("tech") ||
         lastUserTextLower.includes("wordpress") ||
         lastUserTextLower.includes("react")
       ) {
-        botReply = "We engineer modern Next.js 16 websites that score 95+ on Google PageSpeed, load under 1 second, and outperform WordPress in security and organic SEO ⚡ Would you like to see a live demo?";
+        botReply = "We engineer modern Next.js 16 websites that are optimised for Core Web Vitals, fast mobile speeds, and strong organic SEO ⚡ Would you like to see a live demo?";
       } else {
         const askedName = assistantMsgs.some((m: any) => (m.content || m.text || "").toLowerCase().includes("your name") || (m.content || m.text || "").toLowerCase().includes("who i'm chatting"));
         const askedPhone = assistantMsgs.some((m: any) => (m.content || m.text || "").toLowerCase().includes("phone") || (m.content || m.text || "").toLowerCase().includes("mobile") || (m.content || m.text || "").toLowerCase().includes("number"));

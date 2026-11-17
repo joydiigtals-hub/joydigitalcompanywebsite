@@ -4,24 +4,25 @@ import Link from "next/link";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import { generatePageSeo } from "@/lib/seoEngine";
 import JamstackLeadForm from "@/components/ui/JamstackLeadForm";
+import { PRICING } from "@/config/pricing";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await generatePageSeo(
     "/static-website-development",
-    "Blazing-Fast Static Website Development | Next.js & React Solutions - Joy Digital",
-    "Build high-speed, secure, and cost-effective static websites with sub-second load times, 100% serverless security, and zero database maintenance."
+    "Static Website Development | Next.js & React Solutions - Joy Digital",
+    "Build fast, secure, and cost-effective static websites with Next.js, regular security updates, and global CDN delivery."
   );
   return {
     ...seoData.metadata,
     title: "Static Website Development",
-    description: "Build high-speed, secure, and cost-effective static websites with sub-second load times, 100% serverless security, and zero database maintenance.",
+    description: "Build fast, secure, and cost-effective static websites with Next.js, regular security updates, and global CDN delivery.",
     alternates: {
       canonical: "https://joydigital.in/static-website-development",
     },
     openGraph: {
       ...seoData.metadata.openGraph,
       title: "Static Website Development | Joy Digital",
-      description: "Build high-speed, secure, and cost-effective static websites with sub-second load times, 100% serverless security, and zero database maintenance.",
+      description: "Build fast, secure, and cost-effective static websites with Next.js, regular security updates, and global CDN delivery.",
       url: "https://joydigital.in/static-website-development",
       images: [
         {
@@ -35,7 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       ...seoData.metadata.twitter,
       title: "Static Website Development | Joy Digital",
-      description: "Build high-speed, secure, and cost-effective static websites with sub-second load times, 100% serverless security, and zero database maintenance.",
+      description: "Build fast, secure, and cost-effective static websites with Next.js, regular security updates, and global CDN delivery.",
       images: ["https://joydigital.in/assets/images/hero-banner.webp"],
     },
   };
@@ -44,8 +45,8 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function StaticWebDevPage() {
   const seoData = await generatePageSeo(
     "/static-website-development",
-    "Blazing-Fast Static Website Development | Next.js & React Solutions - Joy Digital",
-    "Build high-speed, secure, and cost-effective static websites with sub-second load times, 100% serverless security, and zero database maintenance."
+    "Static Website Development | Next.js & React Solutions - Joy Digital",
+    "Build fast, secure, and cost-effective static websites with Next.js, regular security updates, and global CDN delivery."
   );
 
   const heroActions = (
@@ -108,10 +109,10 @@ export default async function StaticWebDevPage() {
 
         <div className="flex flex-wrap items-center justify-center gap-6 mt-8 pt-8 border-t border-[#FFFFFF]/15 text-xs text-[#FFFFFF]/70 font-semibold">
           <span className="flex items-center gap-1.5">
-            <i className="fa-solid fa-bolt text-[#C9F600]" /> 100/100 Core Web Vitals
+            <i className="fa-solid fa-bolt text-[#C9F600]" /> Optimised for Core Web Vitals
           </span>
           <span className="flex items-center gap-1.5">
-            <i className="fa-solid fa-shield-halved text-[#C9F600]" /> 100% Serverless Security
+            <i className="fa-solid fa-shield-halved text-[#C9F600]" /> High-Security Serverless Builds
           </span>
           <span className="flex items-center gap-1.5">
             <i className="fa-solid fa-comments text-[#C9F600]" /> Direct Senior Developer Support
@@ -125,8 +126,8 @@ export default async function StaticWebDevPage() {
     <>
       <ServicePageTemplate
         serviceName="Static Website Development"
-        heroTitle="Blazing-Fast Static Website Development Services"
-        heroSubtitle="Supercharge your online presence with sub-second page loads, 100% serverless security, and zero monthly database maintenance costs."
+        heroTitle="Fast Static Website Development Services"
+        heroSubtitle="Supercharge your online presence with fast-loading Next.js builds, a smaller attack surface than plugin-heavy CMS sites, and reliable CDN delivery."
         heroActions={heroActions}
         leadSource="Static Website Development Landing Page"
         customLeadForm={<JamstackLeadForm />}
@@ -140,7 +141,7 @@ export default async function StaticWebDevPage() {
                 In today&apos;s competitive digital landscape, every millisecond of page load latency directly impacts visitor trust and conversion rates. Legacy monolithic platforms (such as traditional WordPress or PHP templates) rely on continuous database querying, leading to bloated load times, frequent server downtime, and persistent plugin vulnerabilities.
               </p>
               <p>
-                At Joy Digital, we build <strong>blazing-fast static websites</strong> with Next.js, React, and Edge CDN architectures. We decouple your frontend from complex backend servers, pre-compiling your entire website as ultra-lightweight static HTML, CSS, and JavaScript. This approach delivers instantaneous load speeds, unbreakable security, and a 100% Core Web Vitals performance guarantee.
+                At Joy Digital, we build <strong>fast static websites</strong> with Next.js, React, and Edge CDN architectures. We decouple your frontend from complex backend servers, pre-compiling your website as lightweight static HTML, CSS, and JavaScript. This approach delivers fast load speeds, a smaller attack surface than plugin-heavy CMS sites, and we optimise every site for Core Web Vitals and test with Google PageSpeed Insights.
               </p>
             </div>
 
@@ -191,8 +192,8 @@ export default async function StaticWebDevPage() {
                         <div className="flex items-start gap-2">
                           <i className="fa-solid fa-circle-check text-[#C9F600] mt-1 shrink-0" />
                           <div>
-                            <span className="font-extrabold block text-[#C9F600]">100/100 Core Web Vitals</span>
-                            <span className="text-[11px] text-[#FFFFFF]/80 font-normal">Sub-second load times (&lt; 0.8s) from Global Edge CDNs</span>
+                            <span className="font-extrabold block text-[#C9F600]">Core Web Vitals Optimised</span>
+                            <span className="text-[11px] text-[#FFFFFF]/80 font-normal">Fast load speeds delivered from global CDNs (Vercel or Cloudflare)</span>
                           </div>
                         </div>
                       </td>
@@ -219,8 +220,8 @@ export default async function StaticWebDevPage() {
                         <div className="flex items-start gap-2">
                           <i className="fa-solid fa-circle-check text-[#C9F600] mt-1 shrink-0" />
                           <div>
-                            <span className="font-extrabold block text-[#C9F600]">100% Serverless &amp; Hacker-proof</span>
-                            <span className="text-[11px] text-[#FFFFFF]/80 font-normal">Zero database or unpatched plugin attack surfaces</span>
+                            <span className="font-extrabold block text-[#C9F600]">A Smaller Attack Surface</span>
+                            <span className="text-[11px] text-[#FFFFFF]/80 font-normal">A smaller attack surface than plugin-heavy CMS sites, with SSL and regular security updates</span>
                           </div>
                         </div>
                       </td>
@@ -303,8 +304,8 @@ export default async function StaticWebDevPage() {
                         <div className="flex items-start gap-2">
                           <i className="fa-solid fa-circle-check text-[#C9F600] mt-1 shrink-0" />
                           <div>
-                            <span className="font-extrabold block text-[#C9F600]">Infinite Edge Auto-Scale</span>
-                            <span className="text-[11px] text-[#FFFFFF]/80 font-normal">Handles 100k+ concurrent visits without a hiccup</span>
+                            <span className="font-extrabold block text-[#C9F600]">Global CDN Scalability</span>
+                            <span className="text-[11px] text-[#FFFFFF]/80 font-normal">Hosted on a global CDN (Vercel or Cloudflare) for fast, reliable delivery</span>
                           </div>
                         </div>
                       </td>
@@ -348,17 +349,17 @@ export default async function StaticWebDevPage() {
                       Corporate Business Websites
                     </h4>
                     <p className="text-xs text-[#FFFFFF]/80 leading-relaxed mb-4">
-                      Mid-sized companies and enterprise brands that require 100% serverless security, high brand authority, and instant loading pages for international clients, partners, and investors.
+                      Mid-sized companies and enterprise brands that require high security, brand authority, and fast-loading pages for international clients, partners, and investors.
                     </p>
                   </div>
                   <ul className="space-y-1.5 text-xs text-[#FFFFFF]/90 font-medium border-t border-[#FFFFFF]/15 pt-3">
                     <li className="flex items-center gap-2">
                       <i className="fa-solid fa-check text-[#C9F600] text-[10px]" />
-                      <span>Zero database attack vectors &amp; 99.99% uptime</span>
+                      <span>A smaller attack surface than plugin-heavy CMS sites, with SSL and regular security updates</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <i className="fa-solid fa-check text-[#C9F600] text-[10px]" />
-                      <span>Sub-100ms global Edge CDN delivery</span>
+                      <span>Hosted on a global CDN (Vercel or Cloudflare) for fast, reliable delivery</span>
                     </li>
                   </ul>
                 </div>
@@ -404,7 +405,7 @@ export default async function StaticWebDevPage() {
                   <ul className="space-y-1.5 text-xs text-[#FFFFFF]/90 font-medium border-t border-[#FFFFFF]/15 pt-3">
                     <li className="flex items-center gap-2">
                       <i className="fa-solid fa-check text-[#C9F600] text-[10px]" />
-                      <span>Instant first viewport render (&lt; 0.6s)</span>
+                      <span>Fast first viewport render with Google PageSpeed optimization</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <i className="fa-solid fa-check text-[#C9F600] text-[10px]" />
@@ -448,11 +449,11 @@ export default async function StaticWebDevPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-[#FFFFFF]/85">
                 <li className="flex items-center gap-2">
                   <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
-                  <span><strong>Sub-100ms Global Edge CDN Delivery</strong> (Vercel / Cloudflare)</span>
+                  <span><strong>Hosted on a global CDN</strong> (Vercel / Cloudflare) for fast delivery</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
-                  <span><strong>Zero-Downtime Serverless Security</strong> (No DB Vulnerabilities)</span>
+                  <span><strong>A smaller attack surface</strong> than plugin-heavy CMS sites, with SSL</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
@@ -460,11 +461,11 @@ export default async function StaticWebDevPage() {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
-                  <span><strong>WordPress to Next.js SSG Migration</strong> with 100% SEO Preservation</span>
+                  <span><strong>WordPress to Next.js SSG Migration</strong> with SEO Preservation</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
-                  <span><strong>100% Core Web Vitals Performance Guarantee</strong></span>
+                  <span><strong>We optimise every site for Core Web Vitals</strong> and test with Google PageSpeed Insights</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-[#C9F600] font-bold"><i className="fa-solid fa-check-circle" /></span>
@@ -475,17 +476,17 @@ export default async function StaticWebDevPage() {
           </div>
         }
         benefitsTitle="Enterprise Benefits of Static Next.js Architecture"
-        benefitsSubtitle="Empower your technical and business teams with modern infrastructure, unbreakable security, and sub-second load times."
+        benefitsSubtitle="Empower your technical and business teams with modern infrastructure, secure builds, and fast load times."
         benefits={[
           {
             icon: "fa-solid fa-bolt",
-            title: "Sub-100ms Global Edge Delivery",
-            description: "Pre-rendered assets cached across Vercel and Cloudflare global edge networks load instantaneously, dominating Core Web Vitals.",
+            title: "Global CDN Delivery",
+            description: "Pre-rendered assets cached across Vercel and Cloudflare global edge networks load quickly and target 90+ Lighthouse scores.",
           },
           {
             icon: "fa-solid fa-shield-halved",
-            title: "Zero-Downtime Serverless Security",
-            description: "No backend databases or vulnerable CMS plugins means zero risk of SQL injections, DDoS attacks, or brute force entries.",
+            title: "Secure Architecture",
+            description: "A smaller attack surface than plugin-heavy CMS sites, with SSL and regular security updates.",
           },
           {
             icon: "fa-solid fa-database",
@@ -495,12 +496,12 @@ export default async function StaticWebDevPage() {
           {
             icon: "fa-solid fa-arrow-right-arrow-left",
             title: "WordPress to Next.js SSG Migration",
-            description: "Safely transition from slow, vulnerable legacy monoliths to a clean Next.js React ecosystem with 100% URL redirect preservation.",
+            description: "Safely transition from slow legacy platforms to a clean Next.js React ecosystem with URL redirect preservation.",
           },
           {
             icon: "fa-solid fa-chart-line",
-            title: "100% Core Web Vitals Guarantee",
-            description: "Achieve 95+ Lighthouse scores to maximize search engine indexing and significantly cut mobile bounce rates.",
+            title: "Core Web Vitals Optimisation",
+            description: "We optimise every site for Core Web Vitals and test with Google PageSpeed Insights to improve search engine indexing.",
           },
           {
             icon: "fa-solid fa-coins",
@@ -541,14 +542,14 @@ export default async function StaticWebDevPage() {
         pricingTiers={[
           {
             name: "Startup Static Showcase",
-            price: "Starts from ₹15,000",
+            price: `Starts from ${PRICING.staticStarter.inr}`,
             period: "flat rate",
-            description: "Ideal for small businesses, consultants, and service providers requiring a lightning-fast, professional online presence.",
+            description: "Ideal for small businesses, consultants, and service providers requiring a fast, professional online presence.",
             features: [
               "Up to 5 Custom Pre-rendered Pages",
               "Next.js Static Site Generation (SSG)",
               "Global Edge CDN Deployment",
-              "100% Core Web Vitals Guarantee",
+              "Core Web Vitals Optimization",
               "Click-to-Call & WhatsApp Lead Triggers",
               "1 Year Technical Codebase Warranty",
             ],
@@ -556,7 +557,7 @@ export default async function StaticWebDevPage() {
           },
           {
             name: "Business Growth Static Platform",
-            price: "Starts from ₹35,000",
+            price: `Starts from ${PRICING.staticBusinessGrowth.inr}`,
             period: "flat rate",
             isPopular: true,
             description: "A comprehensive high-speed static system for corporate businesses, agencies, and high-traffic landing pages.",
@@ -564,7 +565,7 @@ export default async function StaticWebDevPage() {
               "Up to 15 Scalable Custom Pages",
               "WordPress to Next.js SSG Migration Option",
               "Headless CMS Integration (Optional)",
-              "Zero-Downtime Serverless Security Setup",
+              "Secure Architecture with SSL Setup",
               "Advanced Local JSON-LD Schema Code",
               "Monthly Analytics & GSC Verification",
             ],
@@ -572,7 +573,7 @@ export default async function StaticWebDevPage() {
           },
           {
             name: "Enterprise Jamstack System",
-            price: "Custom Quote",
+            price: PRICING.customBusinessWebsite.inr,
             period: "bespoke quote",
             description: "Engineered for international tech brands, SaaS portfolios, and multi-region landing page networks.",
             features: [
@@ -581,7 +582,7 @@ export default async function StaticWebDevPage() {
               "Continuous Automated CI/CD Pipelines",
               "Custom Dynamic Forms & API Integrations",
               "Dedicated Developer Slack / WhatsApp Sync",
-              "Enterprise Core Web Vitals SLA",
+              "Core Web Vitals Optimization",
             ],
             ctaText: "Get Enterprise Quote",
           },

@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { getUtmParameters } from "@/lib/utmTracker";
 import Image from "next/image";
+import { SHOW_REVIEW_BADGES } from "@/config/flags";
 
 interface LeadFormProps {
   layout?: "vertical" | "horizontal";
@@ -27,7 +28,7 @@ const COUNTRY_CODES = [
 export default function LeadForm({
   layout = "vertical",
   title = "Request a Free Proposal",
-  subtitle = "Fill in your details below. Our experts will get back to you within 24 hours.",
+  subtitle = "Fill in your details below. Our experts will reply within 1 business day.",
   ctaText = "Get My Free Proposal →",
   source = "General Lead Funnel",
   simplified = false,
@@ -235,7 +236,7 @@ export default function LeadForm({
         </div>
         <h3 className="text-xl font-extrabold text-[#FFFFFF] mb-2">Message Sent!</h3>
         <p className="text-sm text-[#FFFFFF]/80 mb-6">
-          Thank you, {formData.name.split(" ")[0]}. We have received your request. Our team will review your details and send you a calendar link to discuss your project within 24 hours.
+          Thank you, {formData.name.split(" ")[0]}. We have received your request. Our team will review your details and reply within 1 business day.
         </p>
         <button
           onClick={() => {
@@ -471,30 +472,32 @@ export default function LeadForm({
           <div className="mt-3 flex flex-col items-center gap-3">
             <p className="text-[10px] text-[#FFFFFF]/70 font-medium text-center leading-relaxed max-w-[280px]">
               <i className="fa-solid fa-lock text-[#C9F600] mr-1" />
-              <strong>What happens next?</strong> We'll review your details and send you a calendar link to discuss your project within 24 hours.
+              <strong>What happens next?</strong> We&apos;ll review your details and reply within 1 business day.
             </p>
-            <div className="flex items-center gap-3 pt-3 border-t border-[#FFFFFF]/15 w-full justify-center opacity-85 hover:opacity-100 transition-all duration-300">
-              <div className="flex items-center h-6 px-2 py-0.5 rounded bg-[#3B1580] border border-[#FFFFFF]/20">
-                <Image
-                  src="/assets/images/google-reviews.svg"
-                  alt="Google Reviews"
-                  width={80}
-                  height={18}
-                  unoptimized
-                  className="h-4 w-auto object-contain"
-                />
+            {SHOW_REVIEW_BADGES && (
+              <div className="flex items-center gap-3 pt-3 border-t border-[#FFFFFF]/15 w-full justify-center opacity-85 hover:opacity-100 transition-all duration-300">
+                <div className="flex items-center h-6 px-2 py-0.5 rounded bg-[#3B1580] border border-[#FFFFFF]/20">
+                  <Image
+                    src="/assets/images/google-reviews.svg"
+                    alt="Google Reviews"
+                    width={80}
+                    height={18}
+                    unoptimized
+                    className="h-4 w-auto object-contain"
+                  />
+                </div>
+                <div className="flex items-center h-6 px-2 py-0.5 rounded bg-[#3B1580] border border-[#FFFFFF]/20">
+                  <Image
+                    src="/assets/images/clutch-logo.svg"
+                    alt="Clutch Reviews"
+                    width={75}
+                    height={18}
+                    unoptimized
+                    className="h-4 w-auto object-contain"
+                  />
+                </div>
               </div>
-              <div className="flex items-center h-6 px-2 py-0.5 rounded bg-[#3B1580] border border-[#FFFFFF]/20">
-                <Image
-                  src="/assets/images/clutch-logo.svg"
-                  alt="Clutch Reviews"
-                  width={75}
-                  height={18}
-                  unoptimized
-                  className="h-4 w-auto object-contain"
-                />
-              </div>
-            </div>
+            )}
           </div>
         </form>
       </div>

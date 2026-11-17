@@ -67,7 +67,7 @@ export default function WebDevMadurai() {
     <ServicePageTemplate
       serviceName="Website Development Madurai"
       heroTitle="Website Development Company in Madurai"
-      heroSubtitle="Build high-speed, custom React and Next.js web applications tailored for Madurai businesses. We engineer sub-1.5s websites that bypass legacy CMS bloat, protect user data, and convert visitors into active customers."
+      heroSubtitle="Build high-speed, custom React and Next.js web applications tailored for Madurai businesses. We engineer fast websites that bypass legacy CMS bloat, protect user data, and convert visitors into active customers."
       leadSource="Website Development Madurai Landing Page"
       heroCtaText="Claim Free Project Quote"
       heroActions={heroActions}
@@ -76,10 +76,10 @@ export default function WebDevMadurai() {
       overviewContent={
         <div className="space-y-6 text-justify">
           <p>
-            In Madurai’s thriving commercial ecosystem—from manufacturing units in Kappalur and Nagari to retail showrooms near the Meenakshi Amman Temple, private hospitals in Anna Nagar, and commercial agencies across K.Pudur and Kalavasal—a slow, generic website costs your business potential customers every day. Joy Digital is recognized as a premier <strong>website development company in Madurai</strong>, engineering modern, lightweight React and Next.js websites that load in under 1.5 seconds on mobile 4G/5G connections.
+            In Madurai’s thriving commercial ecosystem—from manufacturing units in Kappalur and Nagari to retail showrooms near the Meenakshi Amman Temple, private hospitals in Anna Nagar, and commercial agencies across K.Pudur and Kalavasal—a slow, generic website costs your business potential customers every day. Joy Digital is a dedicated <strong>website development company in Madurai</strong>, engineering modern, lightweight React and Next.js websites that load quickly on mobile 4G/5G connections.
           </p>
           <p>
-            Many businesses struggle with outdated templates, bloated page builders, and vulnerable WordPress plugins that slow down loading speeds and compromise security. When you partner with Joy Digital for <strong>custom website development in Madurai</strong>, your platform is coded from the ground up using clean, semantic architecture. We eliminate database bottlenecks, achieve 95+ Core Web Vitals scores, and integrate seamless conversion pathways that connect website visitors directly with your sales desk.
+            Many businesses struggle with outdated templates, bloated page builders, and vulnerable WordPress plugins that slow down loading speeds and compromise security. When you partner with Joy Digital for <strong>custom website development in Madurai</strong>, your platform is coded from the ground up using clean, semantic architecture. We eliminate database bottlenecks, optimise for Core Web Vitals, and integrate seamless conversion pathways that connect website visitors directly with your sales desk.
           </p>
 
           <h3 className="text-xl font-bold text-white mt-8 mb-4">

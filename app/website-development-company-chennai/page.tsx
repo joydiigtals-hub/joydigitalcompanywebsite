@@ -217,7 +217,7 @@ export default async function WebsiteDevelopmentCompanyChennai() {
       <ServicePageTemplate
         serviceName="Website Development in Chennai"
         heroTitle="Website Development Company in Chennai"
-        heroSubtitle="Build a custom, high-speed Next.js website that loads in under 1.5 seconds, ranks in Google search, and converts visitors into leads via WhatsApp, phone calls, and forms. Starting from Rs 25,000 (one-time)."
+        heroSubtitle="Headquartered in Madurai, Tamil Nadu. Serving clients in Chennai. Build a custom, high-speed Next.js website that loads quickly, ranks in Google search, and converts visitors into leads via WhatsApp, phone calls, and forms."
         leadSource="Website Development Chennai Landing Page"
         heroCtaText="Claim Free Website Quote"
         heroActions={heroActions}
@@ -227,6 +227,9 @@ export default async function WebsiteDevelopmentCompanyChennai() {
         overviewTitle="Custom Next.js Web Development Built for Chennai's High-Growth Enterprises"
         overviewContent={
           <div className="space-y-6 text-justify">
+            <p className="text-xs font-semibold text-[#C9F600]">
+              Headquartered in Madurai, Tamil Nadu. Serving clients in Chennai.
+            </p>
             <p>
               In Chennai&apos;s intensely competitive commercial marketplace, your website is the digital front door to your business. Whether your clients are IT procurement directors browsing along <strong>Old Mahabalipuram Road (OMR) and Guindy</strong>, industrial buyers sourcing components from <strong>Ambattur, Sriperumbudur, and Oragadam</strong>, or regional patients and consumers in <strong>Adyar, Anna Nagar, and T. Nagar</strong>, they expect instant, frictionless mobile experiences. If your site takes more than 3 seconds to load or fails to provide an immediate call or WhatsApp option, visitors abandon your business before reading a single sentence.
             </p>

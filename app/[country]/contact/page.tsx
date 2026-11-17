@@ -395,7 +395,7 @@ export default async function CountryContactPage({ params }: PageProps) {
                     style={{ border: 0, filter: "grayscale(100%) invert(90%) contrast(90%)" }}
                     allowFullScreen
                     loading="lazy"
-                    title="Joy Digital Growth Agency Location Map"
+                    title="Joy Digital Location Map"
                   />
                 </div>
               )}
@@ -406,7 +406,7 @@ export default async function CountryContactPage({ params }: PageProps) {
               <LeadForm
                 layout="vertical"
                 title="Send An Enquiry"
-                subtitle="Fill in the fields below, and our business consulting experts will contact you within 24 hours."
+                subtitle="Fill in the fields below, and our business consulting experts will reply within 1 business day."
                 ctaText="Send Message"
                 source={`Contact Page Form [Region: ${country.toUpperCase()}]`}
               />

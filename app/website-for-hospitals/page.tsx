@@ -44,10 +44,10 @@ const pageSchema = {
         "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Old Perungalathur",
+          "streetAddress": "4/166 T, Thinamani Nagar",
           "addressLocality": "Madurai",
           "addressRegion": "Tamil Nadu",
-          "postalCode": "600063",
+          "postalCode": "625018",
           "addressCountry": "IN"
         }
       },

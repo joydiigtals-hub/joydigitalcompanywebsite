@@ -45,7 +45,7 @@ const aboutFaqs = [
   },
   {
     question: "Why choose custom web engineering over legacy CMS platforms like WordPress?",
-    answer: "Custom Next.js web engineering delivers sub-second global page load speeds, 100% serverless security against SQL injections, 95+ Core Web Vitals scores, and full source code ownership."
+    answer: "Custom Next.js web engineering delivers fast global page load speeds, a smaller attack surface than plugin-heavy CMS sites with SSL and regular security updates, optimization for Core Web Vitals, and full source code ownership."
   },
   {
     question: "What is your approach to project timelines and pricing?",
@@ -88,7 +88,7 @@ export default function AboutPage() {
               Driving Growth for <span className="text-[#C9F600]">Startups &amp; Regional Businesses</span>
             </h1>
             <p className="text-sm md:text-base text-[#FFFFFF]/80 max-w-2xl mx-auto leading-relaxed">
-              Joy Digital Growth Agency provides professional website development, Local SEO, and branding solutions to help regional businesses build long-term search presence and grow customer inquiries.
+              Joy Digital provides professional website development, Local SEO, and branding solutions to help regional businesses build long-term search presence and grow customer inquiries.
             </p>
           </div>
         </section>

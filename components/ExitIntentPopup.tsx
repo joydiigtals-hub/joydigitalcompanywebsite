@@ -215,7 +215,7 @@ export default function ExitIntentPopup() {
             </div>
             <h3 className="text-xl font-bold text-primary-dark mb-2">Audit Requested!</h3>
             <p className="text-xs text-text-secondary leading-relaxed max-w-xs">
-              Thank you! Your free audit request has been registered. Our SEO experts will review your website and reach out within 24 hours.
+              Thank you! Your free audit request has been registered. Our SEO experts will review your website and reply within 1 business day.
             </p>
           </div>
         ) : (

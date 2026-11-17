@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
+import { PRICING } from "@/config/pricing";
 
 export const metadata: Metadata = {
   title: "Custom Ecommerce Website Development & Online Stores | Joy Digital",
@@ -61,7 +62,7 @@ export default function EcommerceWebDevPage() {
           </p>
           <h3 className="text-lg font-bold text-primary-dark mt-8 mb-4">Optimized Checkout Funnels, Security, and Payment Gateway Setup</h3>
           <p>
-            Over 70% of e-commerce carts are abandoned due to complicated checkouts or slow load times. We design checkout pages that make purchasing simple. We integrate domestic and international payment gateways, set up automated invoice emails, and construct product catalog feeds.
+            Slow or complicated checkouts lose sales. We design checkout pages that make purchasing simple. We integrate domestic and international payment gateways, set up automated invoice emails, and construct product catalog feeds.
           </p>
           <p>
             Because we build modern decoupled sites, there are no SQL databases directly connected to the front-end, making them secure against cyber threats. We also set up product structured data schemas (Product, Offer, and Reviews JSON-LD), helping your product listings rank in Google search.
@@ -135,7 +136,7 @@ export default function EcommerceWebDevPage() {
       pricingTiers={[
         {
           name: "Standard E-commerce Plan",
-          price: "Starts from ₹50,000",
+          price: `Starts from ${PRICING.ecommerceStandard.inr}`,
           period: "one-time",
           description: "Perfect for emerging online brands launching their first professional store.",
           features: [
@@ -150,7 +151,7 @@ export default function EcommerceWebDevPage() {
         },
         {
           name: "Advanced Growth Plan",
-          price: "Starts from ₹75,000",
+          price: `Starts from ${PRICING.ecommerceAdvanced.inr}`,
           period: "one-time",
           description: "Designed for established businesses aiming to scale their online presence and sales.",
           isPopular: true,

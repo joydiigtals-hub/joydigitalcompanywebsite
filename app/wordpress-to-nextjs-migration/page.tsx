@@ -10,7 +10,7 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
   title: "WordPress to Next.js Migration Agency",
-  description: "Migrate legacy WordPress to high-speed Next.js. Master headless WordPress Next.js architecture and headless CMS SEO with 100% Core Web Vitals and zero ranking loss.",
+  description: "Migrate legacy WordPress to high-speed Next.js. Master headless WordPress Next.js architecture and headless CMS SEO optimized for Core Web Vitals and seamless SEO preservation.",
   keywords: [
       "WordPress to Next.js Migration",
       "Migrate WordPress Site to Next.js",
@@ -33,11 +33,11 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     question: "How does headless WordPress Next.js improve headless CMS SEO rankings?",
-    answer: "Headless WordPress paired with Next.js App Router delivers server-side pre-rendered HTML and automated Incremental Static Regeneration (ISR). Search engine crawlers immediately index clean, lightweight static content with sub-100ms TTFB and perfect 100/100 Core Web Vitals, outranking bloated PHP-based WordPress sites.",
+    answer: "Headless WordPress paired with Next.js App Router delivers server-side pre-rendered HTML and automated Incremental Static Regeneration (ISR). Search engine crawlers immediately index clean, lightweight static content with fast server delivery and optimized Core Web Vitals, outranking bloated PHP-based WordPress sites.",
   },
   {
     question: "Will migrating from WordPress to Next.js hurt my current Google SEO rankings?",
-    answer: "No. In fact, most migrations see an organic search traffic boost. We perform a rigorous 1:1 URL mapping audit, implement exact 301 server redirects, replicate existing meta titles and descriptions, and maintain identical internal link structures while providing sub-second load speeds that drastically improve Google Core Web Vitals.",
+    answer: "No. In fact, most migrations see an organic search traffic boost. We perform a rigorous 1:1 URL mapping audit, implement exact 301 server redirects, replicate existing meta titles and descriptions, and maintain identical internal link structures while providing fast load speeds that optimize Google Core Web Vitals.",
   },
   {
     question: "How much does a WordPress to Next.js migration typically cost?",

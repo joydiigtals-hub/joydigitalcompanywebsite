@@ -232,7 +232,7 @@ export default function SolarLeadForm() {
             </div>
             <h4 className="text-xl font-extrabold text-[#FFFFFF] mb-2">Enquiry Submitted!</h4>
             <p className="text-sm text-[#FFFFFF]/80 mb-6 leading-relaxed">
-              Thank you for reaching out. We have received your enquiry. Our team will review your requirements and get back to you within 24 hours.
+              Thank you for reaching out. We have received your enquiry. Our team will review your requirements and reply within 1 business day.
             </p>
             <button
               onClick={() => setIsSuccess(false)}

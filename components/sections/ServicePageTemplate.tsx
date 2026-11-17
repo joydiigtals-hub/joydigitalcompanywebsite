@@ -8,6 +8,7 @@ import Header from "@/components/layout/Header";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 import { BlogPost } from "@/lib/blog";
+import { PRICING_NOTE } from "@/config/pricing";
 
 // Dynamically imported below-the-fold components
 const Footer = dynamic(() => import("@/components/layout/Footer"));
@@ -109,7 +110,7 @@ export default function ServicePageTemplate({
   pricingTitle,
   pricingSubtitle,
   pricingTiers,
-  pricingNote,
+  pricingNote = PRICING_NOTE,
   chennaiProofSection,
   faqs,
   schemaMarkup,
@@ -263,8 +264,8 @@ export default function ServicePageTemplate({
               {/* Trust markers - Accurate engineering facts, no unproven claims */}
               <div className="flex items-center gap-6 mt-2 pb-6 border-b border-[#FFFFFF]/15 w-full max-w-lg">
                 <div className="flex flex-col">
-                  <span className="text-xl font-extrabold text-[#FFFFFF]">&lt; 1.5s</span>
-                  <span className="text-[10px] font-semibold text-[#FFFFFF]/60 uppercase">Page Load Speed</span>
+                  <span className="text-xl font-extrabold text-[#FFFFFF]">Fast-loading</span>
+                  <span className="text-[10px] font-semibold text-[#FFFFFF]/60 uppercase">Next.js builds</span>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xl font-extrabold text-[#FFFFFF]">Next.js</span>

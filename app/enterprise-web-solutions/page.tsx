@@ -6,7 +6,7 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
   title: "Enterprise Web Solutions",
-  description: "Accelerate your international growth with custom website development and generative engine optimization. Partner with a premier global SEO agency.",
+  description: "Accelerate your international growth with custom website development and generative engine optimization. Partner with a global SEO and web development agency.",
   keywords: [
       "Enterprise Web Solutions",
       "Scalable Cloud Architecture",
@@ -23,7 +23,7 @@ export default function EnterpriseWebSolutions() {
   const pageGraph = buildPageGraphSchema({
     url: "https://joydigital.in/enterprise-web-solutions",
     title: "Enterprise Web Solutions | Joy Digital",
-    description: "Accelerate your international growth with custom website development and generative engine optimization. Partner with a premier global SEO agency.",
+    description: "Accelerate your international growth with custom website development and generative engine optimization. Partner with a global SEO and web development agency.",
   });
 
   return (
@@ -38,7 +38,7 @@ export default function EnterpriseWebSolutions() {
             Accelerate Your International Growth with <span className="text-[#EA580C]">Enterprise-Grade Digital Solutions</span>
           </h1>
           <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Welcome to Joy Digital, your premier partner for dominating the global digital landscape. In today’s hyper-competitive international market, a standard template isn’t enough. You need an architecture designed for elite performance, robust security, and seamless user experiences.
+            Welcome to Joy Digital. In today’s competitive international market, a standard template isn’t enough. You need an architecture designed for high performance, robust security, and seamless user experiences.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/contact" className="px-8 py-4 bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold rounded-lg transition-colors w-full sm:w-auto text-lg">
@@ -58,13 +58,13 @@ export default function EnterpriseWebSolutions() {
             We specialize in <strong className="text-white">custom website development</strong> that transforms your online presence from a simple brochure into a high-converting, scalable business asset. 
           </p>
           <p className="text-lg text-secondary leading-relaxed mb-8">
-            Whether you are a fast-growing tech startup or an established multinational brand, our <strong className="text-white">enterprise website design</strong> solutions are specifically tailored to meet the complex demands of a global audience. We don't just build websites; we engineer state-of-the-art digital experiences that captivate users and drive measurable ROI across borders. 
+            Whether you are a fast-growing tech startup or an established multinational brand, our <strong className="text-white">enterprise website design</strong> solutions are specifically tailored to meet the complex demands of a global audience. We don&apos;t just build websites; we engineer state-of-the-art digital experiences that captivate users and drive measurable ROI across borders. 
           </p>
           <p className="text-lg text-secondary leading-relaxed mb-8">
             However, a visually stunning website is only half the equation. As a specialized <strong className="text-white">generative engine optimization agency</strong>, we ensure your brand achieves maximum visibility in the rapidly evolving landscape of AI-driven search engines (like ChatGPT, Perplexity, and AI Overviews). By combining technical excellence with advanced search strategies, we future-proof your digital footprint so that your business commands authority, no matter how your customers search.
           </p>
           <p className="text-lg text-secondary leading-relaxed">
-            From headless commerce architectures to lightning-fast Next.js applications, our comprehensive <strong className="text-white">full-stack web development services</strong> cover it all. We handle the heavy lifting of complex backend infrastructure and premium frontend aesthetics, allowing you to focus on scaling your business. Partner with Joy Digital today, and let’s build a powerful digital ecosystem that outpaces the competition worldwide.
+            From headless commerce architectures to lightning-fast Next.js applications, our comprehensive <strong className="text-white">full-stack web development services</strong> cover it all. We handle the heavy lifting of complex backend infrastructure and premium frontend aesthetics, allowing you to focus on scaling your business. Partner with Joy Digital today, and let&apos;s build a powerful digital ecosystem that outpaces the competition worldwide.
           </p>
         </div>
       </section>
@@ -94,7 +94,7 @@ export default function EnterpriseWebSolutions() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">A Generative Engine Optimization Agency for the AI Era</h3>
               <p className="text-secondary leading-relaxed">
-                Traditional SEO isn't enough. We optimize your brand to dominate AI search engines like ChatGPT and Perplexity, establishing unmatched authority in the generative search landscape.
+                Traditional SEO isn&apos;t enough. We optimize your brand to dominate AI search engines like ChatGPT and Perplexity, establishing unmatched authority in the generative search landscape.
               </p>
             </div>
             

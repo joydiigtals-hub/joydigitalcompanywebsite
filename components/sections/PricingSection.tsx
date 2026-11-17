@@ -9,6 +9,7 @@ const GetQuoteModal = dynamic(() => import("@/components/ui/GetQuoteModal"), {
 });
 
 import { COUNTRY_LANDING_DATA } from "@/data/countryLandingData";
+import { PRICING, PRICING_NOTE } from "@/config/pricing";
 
 interface PricingSectionProps {
   country?: string;
@@ -22,31 +23,13 @@ export default function PricingSection({ country = "in" }: PricingSectionProps) 
   } | null>(null);
 
   const countryLower = (country || "").toLowerCase();
-  const localizedData = COUNTRY_LANDING_DATA[countryLower];
+  const isIndia = countryLower === "in";
 
-  const getPricing = () => {
-    if (localizedData) {
-      return localizedData.pricing;
-    }
-    if (countryLower === "in") {
-      return {
-        starterPrice: "₹25,000",
-        growthPrice: "₹45,000",
-        enterprisePrice: "₹85,000+",
-        currencySymbol: "₹",
-        currencyCode: "INR",
-      };
-    }
-    return {
-      starterPrice: "$1,200",
-      growthPrice: "$2,400",
-      enterprisePrice: "$4,800+",
-      currencySymbol: "$",
-      currencyCode: "USD",
-    };
+  const pricing = {
+    starterPrice: isIndia ? PRICING.staticStarter.inr : PRICING.staticStarter.usd,
+    growthPrice: isIndia ? PRICING.staticBusinessGrowth.inr : PRICING.staticBusinessGrowth.usd,
+    enterprisePrice: isIndia ? PRICING.customBusinessWebsite.inr : PRICING.customBusinessWebsite.usd,
   };
-
-  const pricing = getPricing();
 
   const handleOpenQuote = (name: string, notes: string) => {
     if (typeof window !== "undefined") {
@@ -148,7 +131,7 @@ export default function PricingSection({ country = "in" }: PricingSectionProps) 
               <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C9F600] shrink-0" /> Advanced multi-field contact forms</li>
               <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C9F600] shrink-0" /> WhatsApp leads notification sync</li>
               <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C9F600] shrink-0" /> Search Console &amp; Analytics event tracking</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C9F600] shrink-0" /> Core Web Vitals speed tuning (&lt; 1.2s)</li>
+              <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C9F600] shrink-0" /> Core Web Vitals speed optimization</li>
               <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C9F600] shrink-0" /> Admin panel / CMS option</li>
             </ul>
           </div>
@@ -217,6 +200,10 @@ export default function PricingSection({ country = "in" }: PricingSectionProps) 
           </button>
         </div>
       </div>
+
+      <p className="text-xs text-center text-[#FFFFFF]/60 mt-8 max-w-2xl mx-auto font-medium">
+        {PRICING_NOTE}
+      </p>
 
       {/* Modal Integration */}
       <GetQuoteModal

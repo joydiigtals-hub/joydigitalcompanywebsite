@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import { generatePageSeo } from "@/lib/seoEngine";
+import { PRICING } from "@/config/pricing";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await generatePageSeo("/dynamic-website-development");
@@ -22,7 +23,7 @@ export default async function DynamicWebDevPage() {
       <ServicePageTemplate
         serviceName="Dynamic Website Development"
         heroTitle={seoData.pageMapping?.h1 || "Dynamic Website Development Services with Custom Admin Controls"}
-        heroSubtitle="Build high-performance, database-driven dynamic web applications equipped with custom CMS dashboards, real-time API sync, and sub-second page loads."
+        heroSubtitle="Build high-performance, database-driven dynamic web applications equipped with custom CMS dashboards, real-time API sync, and fast-loading page performance."
         leadSource="Dynamic Website Development Page"
         heroCtaText="Request a Dynamic Web Quote"
         canonicalUrl="https://joydigital.in/dynamic-website-development"
@@ -30,10 +31,10 @@ export default async function DynamicWebDevPage() {
         overviewContent={
           <div className="space-y-6">
             <p>
-              Modern businesses require web platforms that adapt instantly to customer interactions, inventory shifts, and content updates. As the <strong>best dynamic website company</strong> and premier <strong>dynamic website company in chennai</strong>, Joy Digital provides specialized database-driven web portals, cutting-edge <strong>website development AI</strong> capabilities, and custom web applications built with Next.js, React, Node.js, and Supabase backends.
+              Modern businesses need websites that adapt to customer interactions, inventory changes, and regular content updates. Joy Digital builds database-driven web platforms using Next.js, React, Node.js, and PostgreSQL or Supabase backends.
             </p>
             <p>
-              When evaluating the <strong>dynamic website development cost in india</strong>, pricing is determined by database complexity, role-based admin controls, and API integrations. Unlike bloated traditional CMS templates, our modern headless web architectures decouple content administration from frontend rendering, giving you instant editor workflows alongside 95+ Core Web Vitals performance.
+              Every build includes a custom content management system (CMS) or an integration with your existing CRM, inventory, or booking tools. You get full control over your content through an easy-to-use admin panel, without needing to touch code for daily updates.
             </p>
           </div>
         }
@@ -94,7 +95,7 @@ export default async function DynamicWebDevPage() {
         pricingTiers={[
           {
             name: "Standard Dynamic Platform",
-            price: "Starts from ₹35,000",
+            price: `Starts from ${PRICING.dynamicStandard.inr}`,
             period: "one-time",
             description: "Ideal for businesses needing a functional CRM, booking engine, or basic database integration.",
             features: [
@@ -124,8 +125,12 @@ export default async function DynamicWebDevPage() {
         ]}
         faqs={seoData.pageMapping?.faq_schema || [
           {
-            question: "What is a dynamic website development service?",
-            answer: "Dynamic website development builds database-driven web portals with admin controls allowing live content updates."
+            question: "What can I manage through the dynamic website admin panel?",
+            answer: "You can update text, upload images, manage product or service listings, publish blog posts, and review customer enquiries. We tailor the dashboard to your daily workflow so you only see the controls you need."
+          },
+          {
+            question: "How does a custom dynamic website compare to a CMS like WordPress?",
+            answer: "A custom Next.js dynamic site is faster, has a smaller attack surface, and is built around your exact workflow. WordPress can work well for simple blogs, but plugin-heavy setups often slow down and need frequent security updates. We help you choose based on your budget and requirements."
           }
         ]}
         crossLinks={[

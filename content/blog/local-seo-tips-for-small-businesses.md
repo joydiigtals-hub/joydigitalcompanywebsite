@@ -112,13 +112,13 @@ Schema markup is structured code injected into your website that helps search en
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Joy Digital Growth Agency",
+  "name": "Joy Digital",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Old Perungalathur",
-    "addressLocality": "Chennai",
+    "streetAddress": "4/166 T, Thinamani Nagar",
+    "addressLocality": "Madurai",
     "addressRegion": "Tamil Nadu",
-    "postalCode": "600063",
+    "postalCode": "625018",
     "addressCountry": "IN"
   },
   "telephone": "+919080026133",

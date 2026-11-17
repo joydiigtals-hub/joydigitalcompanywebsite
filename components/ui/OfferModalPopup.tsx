@@ -387,7 +387,7 @@ export default function OfferModalPopup() {
               <p className="text-[10px] text-[#FFFFFF]/60 font-medium flex items-center justify-center gap-2 flex-wrap">
                 <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-[#C9F600]" /> Free Domain &amp; Hosting</span>
                 <span>•</span>
-                <span>Zero Hidden Fees</span>
+                <span>Clear Pricing</span>
                 <span>•</span>
                 <span>100% Confidential</span>
               </p>

@@ -30,10 +30,10 @@ const pageSchema = {
     "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Old Perungalathur",
+      "streetAddress": "4/166 T, Thinamani Nagar",
       "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
-      "postalCode": "600063",
+      "postalCode": "625018",
       "addressCountry": "IN"
     }
   },
@@ -52,7 +52,7 @@ export default function LogoPage() {
     <ServicePageTemplate
       serviceName="Logo & Brand Design"
       heroTitle="Professional Logo Design & Memorable Brand Identity in Chennai"
-      heroSubtitle="Create a memorable first impression with creative, high-concept visual assets. As a leading agency for logo design in Chennai, we design custom brand marks, typography guidelines, color palettes, and matching print layouts that represent your business values."
+      heroSubtitle="Create a memorable first impression with creative, high-concept visual assets. We design custom brand marks, typography guidelines, color palettes, and matching print layouts that represent your business values."
       leadSource="Logo Design Landing Page"
       overviewTitle="Building Visual Identity Systems that Commend Professional Trust"
       overviewContent={
@@ -61,7 +61,7 @@ export default function LogoPage() {
             Your logo is the visual face of your entire company. It is often the first brand asset a prospective client notices when searching for your services online or browsing social media. A poorly designed, low-resolution, or generic logo can make an otherwise professional business appear unestablished, which can hurt conversions. Investing in a professional visual identity is essential for long-term growth.
           </p>
           <p>
-            At Joy Digital, a premier <strong>branding agency in chennai</strong>, our design process goes far beyond standard templates and automated clip art. We research your specific industry, review competitor branding layouts in Chennai and across India, and sketch custom logo concepts that represent your core corporate values. This structured design approach ensures that your visual assets are clean, memorable, scalable, and visually appealing.
+            At Joy Digital, our design process goes far beyond standard templates and automated clip art. We research your specific industry, review competitor branding layouts in Chennai and across India, and sketch custom logo concepts that represent your core corporate values. This structured design approach ensures that your visual assets are clean, memorable, scalable, and visually appealing.
           </p>
           <h3 className="text-lg font-bold text-[#FFFFFF] mt-8 mb-4">Complete Brand Systems for Online & Offline Growth</h3>
           <p>
@@ -139,7 +139,7 @@ export default function LogoPage() {
         },
       ]}
       pricingTitle="Economical Branding Design Plans"
-      pricingSubtitle="Select a package designed to fit your business stage. Transparent pricing with zero hidden fees."
+      pricingSubtitle="Select a package designed to fit your business stage. Clear pricing confirmed after scope review."
       pricingTiers={[
         {
           name: "Startup Logo Plan",
