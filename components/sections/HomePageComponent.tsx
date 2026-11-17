@@ -446,7 +446,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
         <IndustrySpecializationSection />
         
         {/* 3. TRUST / VALUE SECTION WITH SCROLL REVEALS (Soft background alternates) */}
-        <section id="value-proposition" className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15 relative z-10">
+        <section id="value-proposition" className="cv-auto py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15 relative z-10">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
               <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
@@ -480,7 +480,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
         </section>
 
         {/* 3. BUSINESS PROBLEMS SECTION */}
-        <section className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15 relative z-10">
+        <section className="cv-auto py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15 relative z-10">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
               <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
@@ -521,7 +521,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
         </section>
 
         {/* 4. SERVICES SECTION WITH PREMIUM HOVER STATES */}
-        <section className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
+        <section className="cv-auto py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
               <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
@@ -662,7 +662,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
 
 
         {/* 6. HOW WE WORK PROCESS WITH AN ANIMATED CONNECTING LINE */}
-        <section id="process-section" className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
+        <section id="process-section" className="cv-auto py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
               <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
@@ -681,7 +681,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
         </section>
 
                 {/* 7. WHY CHOOSE JOY DIGITAL SECTION */}
-        <section id="why-choose-us" className="py-20 lg:py-24 bg-[#3B1580] border-b border-[#FFFFFF]/15 relative z-10">
+        <section id="why-choose-us" className="cv-auto py-20 lg:py-24 bg-[#3B1580] border-b border-[#FFFFFF]/15 relative z-10">
           <div className="max-w-7xl mx-auto px-6">
             
             {/* Section Header */}
@@ -899,7 +899,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
 
         {/* 9. CASE STUDIES WITH COUNT-UP NUMERICAL COUNTERS */}
         {SHOW_CASE_STUDY_METRICS && (
-          <section id="case-studies" className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
+          <section id="case-studies" className="cv-auto py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
             <div className="max-w-7xl mx-auto px-6">
               <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
                 <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
@@ -964,7 +964,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
         )}
 
         {/* 10. GOOGLE REVIEWS WIDGET */}
-        <section className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
+        <section className="cv-auto py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-10 reveal-hidden">
               <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
@@ -1001,7 +1001,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
         </section>
 
         {/* 11. PRICING SECTION */}
-        <section className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
+        <section className="cv-auto py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
               <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
@@ -1023,7 +1023,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
           </div>
         </section>
 
-        <section className="py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15 relative z-10">
+        <section className="cv-auto py-20 bg-[#3B1580] border-b border-[#FFFFFF]/15 relative z-10">
           <div className="max-w-7xl mx-auto px-6">
             
             {/* Heading area */}
@@ -1246,7 +1246,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
 
         {/* 11.5 LATEST BLOG POSTS (Only rendered when posts exist) */}
         {latestPosts && latestPosts.length > 0 && (
-          <section className="py-20 bg-[#3B1580] border-t border-[#FFFFFF]/15">
+          <section className="cv-auto py-20 bg-[#3B1580] border-t border-[#FFFFFF]/15">
             <div className="max-w-7xl mx-auto px-6">
               <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal-hidden">
                 <div>
@@ -1299,7 +1299,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
         )}
 
         {/* 12. FAQ SECTION */}
-        <section className="py-20 bg-[#3B1580] border-t border-[#FFFFFF]/15">
+        <section className="cv-auto py-20 bg-[#3B1580] border-t border-[#FFFFFF]/15">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 reveal-hidden">
               <span className="text-xs font-bold text-[#C9F600] uppercase tracking-widest block mb-3">
@@ -1322,7 +1322,7 @@ export default function HomePageComponent({ country, latestPosts }: HomePageComp
         </section>
 
         {/* 13. FINAL CTA WITH MICRO INTERACTIONS (Deep Dark Purple gradient) */}
-        <section className="relative py-20 bg-[#3B1580] border-t border-[#FFFFFF]/20 overflow-hidden text-center">
+        <section className="cv-auto relative py-20 bg-[#3B1580] border-t border-[#FFFFFF]/20 overflow-hidden text-center">
           <div className="absolute inset-0 bg-grid-pattern opacity-[0.015] pointer-events-none" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C9F600]/10 rounded-full blur-[120px] pointer-events-none" />
           

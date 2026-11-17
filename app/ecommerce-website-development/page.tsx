@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: "Custom Ecommerce Website Development & Online Stores | Joy Digital",
   description: "Custom Next.js ecommerce website development. Fast online stores, B2B digital commerce platforms, and high-converting checkout flows. Get a free proposal.",
   alternates: {
-    canonical: "https://joydigital.in/ecommerce-website-development",
+    canonical: "https://www.joydigital.in/ecommerce-website-development",
   },
   openGraph: {
     title: "Custom Ecommerce Website Development & Online Stores | Joy Digital",
     description: "Custom Next.js ecommerce website development. Fast online stores, B2B digital commerce platforms, and high-converting checkout flows. Get a free proposal.",
-    url: "https://joydigital.in/ecommerce-website-development",
+    url: "https://www.joydigital.in/ecommerce-website-development",
     type: "website",
   },
   twitter: {
@@ -30,7 +30,7 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133"
   },
   "description": "Custom ecommerce website development services. We build high-speed Next.js headless storefronts, B2B e-commerce portals, and conversion-optimized payment funnels.",
@@ -50,7 +50,7 @@ export default function EcommerceWebDevPage() {
       heroTitle="Custom Ecommerce Website Development & High-Converting Online Stores"
       heroSubtitle="Convert mobile visitors into paying customers with custom ecommerce website development. We build fast Next.js online stores, B2B digital commerce platforms, and seamless checkout funnels."
       leadSource="Ecommerce Website Development Landing Page"
-      canonicalUrl="https://joydigital.in/ecommerce-website-development"
+      canonicalUrl="https://www.joydigital.in/ecommerce-website-development"
       overviewTitle="Fast E-commerce Websites: High Speeds, Zero Downtime & Maximum Security"
       overviewContent={
         <div className="space-y-6">

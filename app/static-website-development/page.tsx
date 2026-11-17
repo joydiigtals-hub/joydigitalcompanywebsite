@@ -17,16 +17,16 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Static Website Development",
     description: "Build fast, secure, and cost-effective static websites with Next.js, regular security updates, and global CDN delivery.",
     alternates: {
-      canonical: "https://joydigital.in/static-website-development",
+      canonical: "https://www.joydigital.in/static-website-development",
     },
     openGraph: {
       ...seoData.metadata.openGraph,
       title: "Static Website Development | Joy Digital",
       description: "Build fast, secure, and cost-effective static websites with Next.js, regular security updates, and global CDN delivery.",
-      url: "https://joydigital.in/static-website-development",
+      url: "https://www.joydigital.in/static-website-development",
       images: [
         {
-          url: "https://joydigital.in/assets/images/hero-banner.webp",
+          url: "https://www.joydigital.in/assets/images/hero-banner.webp",
           width: 1200,
           height: 630,
           alt: "Blazing-Fast Static Website Development - Joy Digital",
@@ -37,7 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
       ...seoData.metadata.twitter,
       title: "Static Website Development | Joy Digital",
       description: "Build fast, secure, and cost-effective static websites with Next.js, regular security updates, and global CDN delivery.",
-      images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+      images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
     },
   };
 }
@@ -132,7 +132,7 @@ export default async function StaticWebDevPage() {
         leadSource="Static Website Development Landing Page"
         customLeadForm={<JamstackLeadForm />}
         customCtaBanner={bottomCta}
-        canonicalUrl="https://joydigital.in/static-website-development"
+        canonicalUrl="https://www.joydigital.in/static-website-development"
         overviewTitle="Transitioning to High-Performance Pre-Rendered Architecture"
         overviewContent={
           <div className="space-y-8">

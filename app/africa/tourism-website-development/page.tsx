@@ -6,16 +6,16 @@ export const metadata: Metadata = {
   title: "Tourism Website Development Africa | Joy Digital",
   description: "Custom tourism and safari websites for African tour operators and lodges. Fast Next.js platforms to drive direct international bookings.",
   alternates: {
-    canonical: "https://joydigital.in/africa/tourism-website-development",
+    canonical: "https://www.joydigital.in/africa/tourism-website-development",
   },
   openGraph: {
     title: "Custom Tourism Website Development for African Businesses",
     description: "Build a high-converting website for your African tour operator, safari company, hotel, or lodge targeting international travellers in Europe, UK, USA, Canada, Australia & worldwide.",
-    url: "https://joydigital.in/africa/tourism-website-development",
+    url: "https://www.joydigital.in/africa/tourism-website-development",
     siteName: "Joy Digital",
     images: [
       {
-        url: "https://joydigital.in/assets/images/african-safari-hero.png",
+        url: "https://www.joydigital.in/assets/images/african-safari-hero.png",
         width: 1200,
         height: 630,
         alt: "Custom Tourism Website Development for African Businesses",

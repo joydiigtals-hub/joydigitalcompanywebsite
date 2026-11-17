@@ -81,6 +81,18 @@ i[class*="fa-"] {
   color: var(--color-accent);
 }
 
+/* Performance Optimization: Defer off-screen rendering for ultra-fast mobile FCP & TBT */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 700px;
+}
+
+/* Hardware-accelerated ambient glows */
+.ambient-glow {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
 .bg-grid-pattern {
   background-image: 
     linear-gradient(to right, hsla(222, 47%, 11%, 0.04) 1px, transparent 1px),

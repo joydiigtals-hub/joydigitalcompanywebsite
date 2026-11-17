@@ -227,15 +227,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description: `Request a free Next.js website design quote, Core Web Vitals audit, or organic search SEO proposal. Speak to our ${config.marketName} consultation desk.`,
     alternates: {
-      canonical: `https://joydigital.in/${countryLower}/contact`,
+      canonical: `https://www.joydigital.in/${countryLower}/contact`,
       languages: {
-        "x-default": "https://joydigital.in/contact",
-        "en-IN": "https://joydigital.in/contact",
-        "en-US": "https://joydigital.in/us/contact",
-        "en-GB": "https://joydigital.in/uk/contact",
-        "en-AE": "https://joydigital.in/ae/contact",
-        "en-CA": "https://joydigital.in/ca/contact",
-        "en-AU": "https://joydigital.in/au/contact",
+        "x-default": "https://www.joydigital.in/contact",
+        "en-IN": "https://www.joydigital.in/contact",
+        "en-US": "https://www.joydigital.in/us/contact",
+        "en-GB": "https://www.joydigital.in/uk/contact",
+        "en-AE": "https://www.joydigital.in/ae/contact",
+        "en-CA": "https://www.joydigital.in/ca/contact",
+        "en-AU": "https://www.joydigital.in/au/contact",
       },
     },
   };

@@ -7,19 +7,19 @@ export const metadata: Metadata = {
   title: "Web Development Company | Professional Website Services | Joy Digital",
   description: "Joy Digital is a professional web development company building high-speed, SEO-ready websites that bring in organic leads. Request a free project audit today.",
   alternates: {
-    canonical: "https://joydigital.in/website-development",
+    canonical: "https://www.joydigital.in/website-development",
     languages: {
-      "x-default": "https://joydigital.in/website-development",
-      "en-us": "https://joydigital.in/us/website-development",
-      "en-gb": "https://joydigital.in/uk/website-development",
-      "en-ae": "https://joydigital.in/ae/website-development",
-      "en-in": "https://joydigital.in/in/website-development",
+      "x-default": "https://www.joydigital.in/website-development",
+      "en-us": "https://www.joydigital.in/us/website-development",
+      "en-gb": "https://www.joydigital.in/uk/website-development",
+      "en-ae": "https://www.joydigital.in/ae/website-development",
+      "en-in": "https://www.joydigital.in/in/website-development",
     },
   },
   openGraph: {
     title: "Web Development Company | Professional Website Services | Joy Digital",
     description: "Joy Digital is a professional web development company building high-speed, SEO-ready websites that bring in organic leads. Request a free project audit today.",
-    url: "https://joydigital.in/website-development",
+    url: "https://www.joydigital.in/website-development",
     type: "website",
   },
   twitter: {

@@ -236,7 +236,7 @@ export default function WorldwideServiceNetwork() {
                 <div className="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/30 text-[#C9F600] flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Clock className="w-4 h-4" />
                 </div>
-                <h4 className="text-xs font-bold text-white">4+ Hours Daily Overlap</h4>
+                <h3 className="text-xs font-bold text-white">4+ Hours Daily Overlap</h3>
                 <p className="text-[11px] text-[#FFFFFF]/70 leading-normal">
                   Guaranteed daily sync for US, EU & APAC sprints.
                 </p>
@@ -247,7 +247,7 @@ export default function WorldwideServiceNetwork() {
                 <div className="w-8 h-8 rounded-lg bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Rocket className="w-4 h-4" />
                 </div>
-                <h4 className="text-xs font-bold text-white">100% Async-First Sprints</h4>
+                <h3 className="text-xs font-bold text-white">100% Async-First Sprints</h3>
                 <p className="text-[11px] text-[#FFFFFF]/70 leading-normal">
                   Transparent Loom updates, Jira/Linear tracks, and weekly ship cycles.
                 </p>

@@ -46,7 +46,7 @@ export default function PortfolioSection() {
             </div>
 
             <div className="space-y-4">
-              <h4 className="text-lg font-bold text-white mb-2 border-b border-[#FFFFFF]/15 pb-2 text-[#FFFFFF]">Key Features Delivered</h4>
+              <h3 className="text-lg font-bold text-white mb-2 border-b border-[#FFFFFF]/15 pb-2 text-[#FFFFFF]">Key Features Delivered</h3>
               {features.map((feature, idx) => (
                 <div key={idx} className="flex items-start gap-3 text-sm text-[#FFFFFF]/80 font-medium">
                   <CheckCircle2 className="w-5 h-5 text-[#C9F600] shrink-0 mt-0.5" />

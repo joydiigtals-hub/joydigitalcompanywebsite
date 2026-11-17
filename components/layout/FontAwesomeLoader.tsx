@@ -30,11 +30,24 @@ export default function FontAwesomeLoader() {
       document.head.appendChild(link);
     };
 
-    if ("requestIdleCallback" in window) {
-      (window as any).requestIdleCallback(loadCss, { timeout: 2000 });
-    } else {
-      setTimeout(loadCss, 1500);
-    }
+    const trigger = () => {
+      loadCss();
+      window.removeEventListener("scroll", trigger);
+      window.removeEventListener("touchstart", trigger);
+      window.removeEventListener("mousemove", trigger);
+    };
+
+    window.addEventListener("scroll", trigger, { once: true, passive: true });
+    window.addEventListener("touchstart", trigger, { once: true, passive: true });
+    window.addEventListener("mousemove", trigger, { once: true, passive: true });
+
+    const timer = setTimeout(loadCss, 4000);
+    return () => {
+      window.removeEventListener("scroll", trigger);
+      window.removeEventListener("touchstart", trigger);
+      window.removeEventListener("mousemove", trigger);
+      clearTimeout(timer);
+    };
   }, []);
 
   return null;

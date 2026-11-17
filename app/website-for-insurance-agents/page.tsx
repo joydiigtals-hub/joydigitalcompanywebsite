@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     url: config.canonical,
     title: config.title,
     description: config.description,
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
   },
   twitter: {
     card: "summary_large_image",
     title: config.title,
     description: config.description,
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -59,12 +59,12 @@ export default async function InsuranceWebPage() {
   const relatedBlogPosts = [post1, post2, post3].filter((p): p is NonNullable<typeof p> => p !== null);
 
   const pageGraphSchema = buildPageGraphSchema({
-    url: "https://joydigital.in/website-for-insurance-agents",
+    url: "https://www.joydigital.in/website-for-insurance-agents",
     title: "SEO and Website for Insurance Agents in India | Joy Digital",
     description: "Custom website design & local SEO for insurance agents in India. Rank on Google, generate policy leads, and build client trust with Joy Digital.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
-      { name: "Website for Insurance Agents", item: "https://joydigital.in/website-for-insurance-agents" },
+      { name: "Home", item: "https://www.joydigital.in" },
+      { name: "Website for Insurance Agents", item: "https://www.joydigital.in/website-for-insurance-agents" },
     ],
     service: {
       name: "SEO and Website for Insurance Agents in India",

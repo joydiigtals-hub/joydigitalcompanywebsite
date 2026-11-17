@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Corporate Web Design Chennai"
   ],
   alternates: {
-    canonical: "https://joydigital.in/web-development-company-chennai",
+    canonical: "https://www.joydigital.in/web-development-company-chennai",
   },
 };
 
@@ -25,7 +25,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -55,7 +55,7 @@ export default function WebDevChennai() {
       heroSubtitle="Headquartered in Madurai, Tamil Nadu. Serving clients in Chennai. We build dynamic, fast, secure Next.js and React web platforms for growing businesses."
       leadSource="Web Development Chennai Landing Page"
       heroCtaText="Get Web Development Quote"
-      canonicalUrl="https://joydigital.in/web-development-company-chennai"
+      canonicalUrl="https://www.joydigital.in/web-development-company-chennai"
       overviewTitle="High-Performance Website Design & Development in Chennai"
       overviewContent={
         <div className="space-y-6">

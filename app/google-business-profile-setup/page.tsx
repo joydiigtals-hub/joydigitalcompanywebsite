@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Joy Digital"
   ],
   alternates: {
-    canonical: "https://joydigital.in/google-business-profile-setup",
+    canonical: "https://www.joydigital.in/google-business-profile-setup",
   },
 };
 
@@ -25,7 +25,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {

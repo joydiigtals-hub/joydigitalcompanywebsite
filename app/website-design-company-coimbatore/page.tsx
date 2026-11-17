@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Business Website Design Coimbatore"
   ],
   alternates: {
-    canonical: "https://joydigital.in/website-design-company-coimbatore",
+    canonical: "https://www.joydigital.in/website-design-company-coimbatore",
   },
 };
 
@@ -25,7 +25,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -55,7 +55,7 @@ export default function WebDesignCoimbatore() {
       heroSubtitle="Headquartered in Madurai, Tamil Nadu. Serving clients in Coimbatore. We build custom website layouts designed to stand out, load quickly, and bring customer enquiries."
       leadSource="Website Design Coimbatore Landing Page"
       heroCtaText="Get Free Design Quote"
-      canonicalUrl="https://joydigital.in/website-design-company-coimbatore"
+      canonicalUrl="https://www.joydigital.in/website-design-company-coimbatore"
       overviewTitle="Custom Website Design & Branding Solutions in Coimbatore"
       overviewContent={
         <div className="space-y-6">

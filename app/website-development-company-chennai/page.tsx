@@ -19,17 +19,17 @@ export const metadata: Metadata = {
       "Custom Website Design Chennai"
   ],
   alternates: {
-    canonical: "https://joydigital.in/website-development-company-chennai",
+    canonical: "https://www.joydigital.in/website-development-company-chennai",
   },
   openGraph: {
     title: "Website Development Company in Chennai | Joy Digital",
     description:
       "Custom Next.js website development in Chennai. Fast, SEO-ready websites that bring leads via WhatsApp and forms. Free quote.",
-    url: "https://joydigital.in/website-development-company-chennai",
+    url: "https://www.joydigital.in/website-development-company-chennai",
     siteName: "Joy Digital",
     images: [
       {
-        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Website Development Company in Chennai - Joy Digital",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Website Development Company in Chennai | Joy Digital",
     description:
       "Custom Next.js website development in Chennai. Fast, SEO-ready websites that bring leads via WhatsApp and forms. Free quote.",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -90,12 +90,12 @@ export default async function WebsiteDevelopmentCompanyChennai() {
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "@id": "https://joydigital.in/website-development-company-chennai#professionalservice",
+        "@id": "https://www.joydigital.in/website-development-company-chennai#professionalservice",
         "name": "Joy Digital - Website Development Company in Chennai",
-        "url": "https://joydigital.in/website-development-company-chennai",
+        "url": "https://www.joydigital.in/website-development-company-chennai",
         "telephone": "+919080026133",
-        "logo": "https://joydigital.in/assets/images/logo.webp",
-        "image": "https://joydigital.in/assets/images/hero-banner.webp",
+        "logo": "https://www.joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/hero-banner.webp",
         "description": "Custom Next.js website development in Chennai. Fast, SEO-ready websites that bring leads via WhatsApp and forms. Starting from Rs 25,000.",
         "address": {
           "@type": "PostalAddress",
@@ -123,11 +123,11 @@ export default async function WebsiteDevelopmentCompanyChennai() {
       },
       {
         "@type": "Service",
-        "@id": "https://joydigital.in/website-development-company-chennai#service",
+        "@id": "https://www.joydigital.in/website-development-company-chennai#service",
         "name": "Website Development in Chennai",
         "serviceType": "Custom Next.js & React Web Engineering",
         "provider": {
-          "@id": "https://joydigital.in/website-development-company-chennai#professionalservice"
+          "@id": "https://www.joydigital.in/website-development-company-chennai#professionalservice"
         },
         "areaServed": {
           "@type": "City",
@@ -145,7 +145,7 @@ export default async function WebsiteDevelopmentCompanyChennai() {
       {
         "@type": "Review",
         "itemReviewed": {
-          "@id": "https://joydigital.in/website-development-company-chennai#professionalservice"
+          "@id": "https://www.joydigital.in/website-development-company-chennai#professionalservice"
         },
         "reviewRating": {
           "@type": "Rating",
@@ -221,7 +221,7 @@ export default async function WebsiteDevelopmentCompanyChennai() {
         leadSource="Website Development Chennai Landing Page"
         heroCtaText="Claim Free Website Quote"
         heroActions={heroActions}
-        canonicalUrl="https://joydigital.in/website-development-company-chennai"
+        canonicalUrl="https://www.joydigital.in/website-development-company-chennai"
         pricingNote="Starting from Rs 25,000 (one-time). Final price depends on pages, features and integrations."
         chennaiProofSection={<ChennaiClientProofCard />}
         overviewTitle="Custom Next.js Web Development Built for Chennai's High-Growth Enterprises"

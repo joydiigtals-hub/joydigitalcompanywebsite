@@ -225,15 +225,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description: `Joy Digital is a professional SEO agency serving the ${config.targetMarket}. We rank your website on Google using technical audits, content clusters, and high-quality backlink outreach.`,
     alternates: {
-      canonical: `https://joydigital.in/${countryLower}/seo-services`,
+      canonical: `https://www.joydigital.in/${countryLower}/seo-services`,
       languages: {
-        "x-default": "https://joydigital.in/seo-services",
-        "en-IN": "https://joydigital.in/seo-services",
-        "en-US": "https://joydigital.in/us/seo-services",
-        "en-GB": "https://joydigital.in/uk/seo-services",
-        "en-AE": "https://joydigital.in/ae/seo-services",
-        "en-CA": "https://joydigital.in/ca/seo-services",
-        "en-AU": "https://joydigital.in/au/seo-services",
+        "x-default": "https://www.joydigital.in/seo-services",
+        "en-IN": "https://www.joydigital.in/seo-services",
+        "en-US": "https://www.joydigital.in/us/seo-services",
+        "en-GB": "https://www.joydigital.in/uk/seo-services",
+        "en-AE": "https://www.joydigital.in/ae/seo-services",
+        "en-CA": "https://www.joydigital.in/ca/seo-services",
+        "en-AU": "https://www.joydigital.in/au/seo-services",
       },
     },
   };
@@ -256,7 +256,7 @@ export default async function CountrySEOPage({ params }: PageProps) {
     "provider": {
       "@type": "Organization",
       "name": "Joy Digital",
-      "url": `https://joydigital.in/${country}`
+      "url": `https://www.joydigital.in/${country}`
     },
     "description": `Joy Digital is a premium SEO agency helping companies in ${config.targetMarket} rank on top search results, build authority, and optimize technical page structures.`,
     "offers": {

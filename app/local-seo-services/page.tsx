@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Local SEO Services & GBP Optimization | Joy Digital",
   description: "Enterprise Google Business Profile management and local SEO services. Dominate Google Maps 3-Pack rankings and acquire local customer calls.",
   alternates: {
-    canonical: "https://joydigital.in/local-seo-services",
+    canonical: "https://www.joydigital.in/local-seo-services",
   },
 };
 
@@ -19,7 +19,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "$$$",
     "address": {

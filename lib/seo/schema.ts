@@ -1,4 +1,4 @@
-export const SITE_URL = "https://joydigital.in";
+export const SITE_URL = "https://www.joydigital.in";
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 export const LOCALBUSINESS_ID = `${SITE_URL}/#localbusiness`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;

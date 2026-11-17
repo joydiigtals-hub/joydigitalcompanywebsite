@@ -147,12 +147,12 @@ export default function ChennaiClientProofCard() {
               G
             </div>
             <div>
-              <h4 className="text-sm font-extrabold text-[#FFFFFF] flex items-center gap-2">
+              <h3 className="text-sm font-extrabold text-[#FFFFFF] flex items-center gap-2">
                 <span>Real Google Reviews</span>
                 <span className="text-[#C9F600] text-xs font-bold flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#C9F600]" /> Verified Rating
                 </span>
-              </h4>
+              </h3>
               <div className="flex items-center gap-1 text-amber-500 mt-0.5">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />

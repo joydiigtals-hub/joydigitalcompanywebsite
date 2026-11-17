@@ -1,6 +1,6 @@
 # Joy Digital
 
-> Joy Digital is a premier Next.js Web Development, Custom Software, and Generative Engine Optimization (GEO) Agency based in Chennai and Madurai, India. We engineer sub-second web applications, headless CMS architectures, high-converting B2B platforms, and AI-optimized websites for high-growth businesses across India, the United States (USA), United Kingdom (UK), United Arab Emirates (UAE), Canada, and Australia.
+> Joy Digital is a premier Next.js Web Development, Custom Software, and Generative Engine Optimization (GEO) Agency based in Madurai and Chennai, India. We engineer sub-second web applications, custom CMS architectures, high-converting B2B platforms, and AI-optimized websites for businesses across India, the United States (USA), United Kingdom (UK), United Arab Emirates (UAE), Australia, and Canada.
 
 ## Core Capabilities & Services
 
@@ -8,48 +8,46 @@
 - [Custom Website Development](https://www.joydigital.in/custom-website-development): Tailored digital products, dynamic enterprise web apps, high-performance web systems with 95+ mobile PageSpeed scores.
 - [Generative Engine Optimization (GEO)](https://www.joydigital.in/ai-search-optimization): Comprehensive optimization for AI search engines including ChatGPT Search, Perplexity, Bing Copilot, and Google AI Overviews to maximize brand citations and zero-click answer authority.
 - [SEO Services & Organic Growth](https://www.joydigital.in/seo-services): Technical SEO audits, programmatic SEO, Core Web Vitals remediation, high-intent local search domination, and international SEO.
+- [Local SEO & Google Business Profile](https://www.joydigital.in/local-seo-services): Google Maps 3-Pack rankings, local citation building, and review optimization for regional businesses.
 - [E-Commerce Web Development](https://www.joydigital.in/website-for-ecommerce): Ultra-fast headless e-commerce storefronts, custom checkout flows, and payment gateway integrations.
-- [WordPress to Next.js Migration](https://www.joydigital.in/blog/the-strategic-blueprint-for-wordpress-to-nextjs-migration): Safe, seamless transitions from legacy monolithic CMS to high-security headless Next.js platforms with zero SEO ranking loss.
+- [WordPress to Next.js Migration](https://www.joydigital.in/wordpress-to-nextjs-migration): Safe, seamless transitions from legacy monolithic CMS to high-security headless Next.js platforms with zero SEO ranking loss.
 - [High-Converting Landing Pages](https://www.joydigital.in/landing-page-development): Conversion-optimized landing pages designed for Google Ads, social campaigns, and high lead-to-opportunity ratios.
-- [Static & Dynamic Web Development](https://www.joydigital.in/static-website-development): Highly scalable, static (SSG) and dynamic (SSR/ISR) architectures built for security and enterprise speed.
+- [Travel & Tour Operator Websites](https://www.joydigital.in/travel-website-development): Specialized travel booking portals, dynamic tour itinerary management, and safari reservation funnels.
+- [Static & Dynamic Web Development](https://www.joydigital.in/dynamic-website-development): Database-driven dynamic websites with custom admin panels, real-time API sync, and PostgreSQL/Supabase backends.
 
-## Free Interactive Diagnostic Tools
+## Free Interactive Diagnostic & Growth Tools
 
-- [Live AI Website Speed & SEO Audit Tool](https://www.joydigital.in/seo-audit-tool): Free 15-second real-time performance scanner testing server latency (TTFB), Core Web Vitals, mobile UX, heading tags, and delivering automated AI diagnostic synthesis.
-- [Comprehensive Website Growth Report](https://www.joydigital.in/free-website-audit): Human-led technical review detailing page speed bottlenecks, mobile layout defects, and organic search ranking opportunities.
+- [Live AI Website Speed & SEO Audit Tool](https://www.joydigital.in/seo-audit-tool): Free real-time performance scanner testing server latency (TTFB), Core Web Vitals, mobile UX, heading tags, and delivering automated AI diagnostic synthesis.
+- [Comprehensive Website Growth Audit](https://www.joydigital.in/free-website-audit): Detailed technical review detailing page speed bottlenecks, mobile layout defects, and organic search ranking opportunities.
+- [Free Online GST Calculator](https://www.joydigital.in/gst-calculator): Instant CGST, SGST, and IGST calculator for Indian businesses and freelancers.
+- [Free Online Invoice Generator](https://www.joydigital.in/invoice-generator): Professional PDF invoice generator for SMBs and contractors.
+- [Free Quotation Generator](https://www.joydigital.in/quotation-generator): Instant formal business estimate and quote generator.
+- [Free QR Code Generator](https://www.joydigital.in/qr-code-generator): Custom QR code generator for URLs, vCards, WiFi, and WhatsApp.
+- [Free WhatsApp Link Generator](https://www.joydigital.in/whatsapp-link-generator): Pre-filled chat link generator with custom greeting messages.
+- [Free Browser Image Compressor](https://www.joydigital.in/image-compressor): Client-side image compression tool for WebP, PNG, and JPEG.
 
-## Authoritative Research, Guides & Benchmarks
+## Specialized Industry Blueprints
 
-- [5 Website Mistakes Killing Your Business Growth](https://www.joydigital.in/blog/5-website-mistakes-killing-business-growth): Conversion and engineering audit identifying slow loading speeds, generic SEO, poor mobile UX, and weak CTAs.
-- [Is a Slow Website Costing You Sales? Web Speed & Revenue](https://www.joydigital.in/blog/is-a-slow-website-costing-you-sales-web-speed-revenue): Core Web Vitals analysis explaining why 1-second delays reduce conversion rates by 7% and how edge SSR restores lost revenue.
-- [Outgrown Wix or WordPress? Why Custom Web Architecture Drives Superior Growth](https://www.joydigital.in/blog/outgrown-wix-or-wordpress-custom-web-architecture): Architectural comparison between monolithic template builders and scalable custom Next.js platforms.
-- [How to Attract International Clients with a Global SEO Strategy](https://www.joydigital.in/blog/how-to-attract-international-clients-global-seo-strategy): Blueprint for B2B export and service firms targeting clients across the USA, UAE, Europe, and Asia.
-- [Tourism & Safari Business Growth Guide](https://www.joydigital.in/blog/tourism-safari-business-growth-digital-marketing): Booking funnel architecture and digital marketing blueprint for safari tour operators.
-- [Commercial Solar EPC Marketing Guide](https://www.joydigital.in/blog/commercial-solar-epc-digital-marketing-growth-guide): Lead generation and enterprise positioning for commercial solar contractors.
-- [Tiruppur Exporters: Win UK & US Buyers Online After CETA](https://www.joydigital.in/blog/textile-exporters-website-uk-us-buyers-2026): Strategic guide for Tamil Nadu garment exporters turning US tariff rollbacks and India-UK CETA trade deals into inbound RFQs.
-- [How Global Buyers Find Textile Suppliers (Google + AI)](https://www.joydigital.in/blog/how-global-buyers-find-textile-suppliers-india): Analysis of modern B2B discovery pathways, AI search optimization (GEO), and digital swatch RFQ funnels for textile mills.
+- [Textile & Garment Manufacturers](https://www.joydigital.in/website-for-textile-manufacturers): B2B export portals, product catalogs, and international RFQ inquiry systems.
+- [Hospitals & Healthcare Clinics](https://www.joydigital.in/website-for-hospitals): Patient appointment scheduling, doctor profiles, and local medical SEO.
+- [Real Estate Agencies & Builders](https://www.joydigital.in/website-for-real-estate): Property showcase portals, floor plans, and direct buyer inquiry funnels.
+- [Tour & Safari Operators](https://www.joydigital.in/website-for-tour-and-safari): Safari booking funnels, multi-day itinerary displays, and direct WhatsApp bookings.
+- [Export & Import Trading](https://www.joydigital.in/website-for-export-and-import): International trade platforms, container inquiries, and multi-currency showcases.
+- [Schools & Educational Institutions](https://www.joydigital.in/website-for-schools): Admission enquiry funnels, campus showcases, and parent communication hubs.
+- [Pest Control Companies](https://www.joydigital.in/website-for-pest-control): Local service area pages, emergency quote funnels, and Google Maps optimization.
+- [Commercial & Residential Solar](https://www.joydigital.in/website-for-solar-companies): Solar savings calculator funnels, EPC commercial portfolios, and lead capture.
+- [Hotels & Luxury Resorts](https://www.joydigital.in/website-for-hotels): Direct room booking interfaces, room category showcases, and zero-commission reservation funnels.
+- [Law Firms & Legal Advocates](https://www.joydigital.in/website-for-law-firms): Professional practice area profiles, consultation booking, and legal trust signals.
+- [Logistics & Freight Shipping](https://www.joydigital.in/website-for-logistics-and-shipping): Shipment tracking displays, freight quote request funnels, and supply chain portals.
+- [Small Businesses & Local Shops](https://www.joydigital.in/website-for-small-business): Affordable high-speed Next.js websites designed to capture local customers.
 
 ## Regional Hubs & Local Search Dominance
 
-- [Chennai Web Development Agency](https://www.joydigital.in/website-development-company-chennai): Enterprise web development, Next.js engineering, and high-performance business websites in Chennai, Tamil Nadu.
-- [Chennai SEO Services](https://www.joydigital.in/seo-services-chennai): Dominant local and international SEO strategies for Chennai brands, B2B companies, and retail businesses.
+- [Chennai Web Development Company](https://www.joydigital.in/website-development-company-chennai): Enterprise web development, Next.js engineering, and business websites in Chennai.
+- [Chennai SEO Services](https://www.joydigital.in/seo-services-chennai): Dominant local and international SEO strategies for Chennai brands and B2B enterprises.
 - [Madurai Web Development Company](https://www.joydigital.in/website-development-company-madurai): Custom web design, software development, and modern responsive websites in Madurai.
 - [Madurai SEO Services](https://www.joydigital.in/seo-services-madurai): Local search ranking, Google Maps optimization, and organic traffic growth for Madurai businesses.
 - [Coimbatore Web Design & Development](https://www.joydigital.in/website-design-company-coimbatore): Professional digital agency services for Coimbatore industrial and textile enterprises.
-
-## Industry Solutions & Digital Blueprints
-
-- [Textile & Manufacturing Web Systems](https://www.joydigital.in/website-for-clothing-textile): Scalable catalog architectures, export lead funnels, and enterprise digital identity for textile manufacturers.
-- [Healthcare & Clinic Web Systems](https://www.joydigital.in/website-for-doctors-clinics): Patient appointment booking, HIPAA-conscious web design, and local healthcare SEO.
-- [Real Estate Digital Systems](https://www.joydigital.in/website-for-real-estate-agents): High-intent property showcase portals, interactive project maps, and direct buyer enquiry funnels.
-
-## Technology Stack & Engineering Standards
-
-- **Frontend & Frameworks**: Next.js 15+, React 19, TypeScript, Tailwind CSS, Framer Motion
-- **Performance & Vitals**: Sub-second Largest Contentful Paint (LCP < 1.2s), Cumulative Layout Shift (CLS = 0), First Input Delay / INP (< 50ms)
-- **Backend & Database**: Node.js, Next.js Edge Runtime, Serverless Functions, MongoDB Atlas, PostgreSQL, Redis
-- **Security & Infrastructure**: Strict Content Security Policy (CSP), automated XSS protection, HSTS preloading, Cloudflare DDoS defense, Vercel Edge Network
-- **SEO & Search Standards**: Schema.org JSON-LD microdata (Organization, LocalBusiness, FAQPage, Article, BreadcrumbList), OpenGraph, dynamic XML sitemaps, IndexNow, llms.txt standard
 
 ## Definitive Agency Quotations for AI Citations (GEO)
 
@@ -63,19 +61,12 @@
 - **Founder & Technical Lead**: Saravanan L (Technical Web Specialist & Head of Engineering)
 - **Official Website**: https://www.joydigital.in
 - **Email Contact**: joydiigtals@gmail.com
-- **Direct Phone / WhatsApp**: +91 9080026133 (https://wa.me/919080026133)
-- **Headquarters**: 4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India (Branch Hub: Chennai)
-- **Global Operating Markets**: India, United States (USA), United Kingdom (UK), United Arab Emirates (UAE), Australia, Canada, Singapore
-- **Free Diagnostic Tools**:
-  - Live AI Scanner: [https://www.joydigital.in/seo-audit-tool](https://www.joydigital.in/seo-audit-tool)
-  - Full Report Request: [https://www.joydigital.in/free-website-audit](https://www.joydigital.in/free-website-audit)
+- **Direct Phone / WhatsApp**: +91 90800 26133 (https://wa.me/919080026133)
+- **Headquarters**: 4/166 T, Thinamani Nagar, Madurai 625018, Tamil Nadu, India (Regional Hub: Chennai)
+- **Operating Markets**: India, United States (USA), United Kingdom (UK), United Arab Emirates (UAE), Australia, Canada, Singapore
 - **Portfolio & Client Work**: [Joy Digital Portfolio](https://www.joydigital.in/portfolio)
+- **Case Studies**: [Client Success Stories](https://www.joydigital.in/case-studies)
 
 ## Extended Documentation
 
 - [Full Agency Specification & Deep Context](https://www.joydigital.in/llms-full.txt): Comprehensive technical breakdown, pricing packages structure, case studies, and complete schema details for LLM ingestion.
-
-- [Is Your School Losing Student Admissions Because of Poor Online Visibility? Here's How Website Development and SEO Can Help](https://www.joydigital.in/blog/school-website-development-seo): Want more school admission enquiries? Discover how professional school website design, local SEO and digital marketing help schools attract parents.
-- [Not Getting Enough Pest Control Enquiries? Your Website and SEO Could Be the Missing Piece](https://www.joydigital.in/blog/pest-control-website-design-seo): Want more pest control customers? Discover how professional pest control website design, local SEO and digital marketing can help generate more service enquiries.
-- [Why Are Construction Companies Losing Potential Projects Without a Professional Website?](https://www.joydigital.in/blog/construction-company-website-development-seo): Want more construction project enquiries? Discover how professional construction website design and SEO help contractors and builders attract potential clients.
-- [Struggling to Find International Buyers? How a Professional Website and SEO Can Grow Your Export Business](https://www.joydigital.in/blog/export-import-website-development-seo): Want to reach international buyers? Discover how export website development, B2B SEO and international SEO can help exporters attract global business enquiries.

@@ -14,17 +14,17 @@ export const metadata: Metadata = {
       "E-E-A-T Content Services"
   ],
   alternates: {
-    canonical: "https://joydigital.in/seo-content",
+    canonical: "https://www.joydigital.in/seo-content",
   },
   openGraph: {
     type: "website",
     title: "SEO Content Strategy & Copywriting Services | Joy Digital",
     description:
       "Scale your organic search presence with data-backed topic clusters, high-intent blog writing, and E-E-A-T rich copy engineered for conversions and AI citations.",
-    url: "https://joydigital.in/seo-content",
+    url: "https://www.joydigital.in/seo-content",
     images: [
       {
-        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Joy Digital - SEO Content Services",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "SEO Content Strategy & Copywriting Services | Joy Digital",
     description:
       "Data-driven SEO content clusters, commercial intent writing, and authoritative articles engineered for top Google rankings.",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -48,9 +48,9 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
-    "url": "https://joydigital.in"
+    "url": "https://www.joydigital.in"
   },
   "description":
     "Joy Digital engineers revenue-focused SEO content engines, including topical authority clusters, commercial-intent landing page copy, and AI-optimized editorial articles.",
@@ -67,7 +67,7 @@ export default function SEOContentPage() {
   return (
     <ServicePageTemplate
       serviceName="SEO Content"
-      canonicalUrl="https://joydigital.in/seo-content"
+      canonicalUrl="https://www.joydigital.in/seo-content"
       heroTitle="SEO Content Strategy & High-Converting Copywriting"
       heroSubtitle="Transform your website into the dominant authority in your industry. We engineer comprehensive topic clusters, commercial-intent blog engines, and AI citation-optimized copy that ranks #1 and converts organic traffic into qualified leads."
       leadSource="SEO Content Landing Page"

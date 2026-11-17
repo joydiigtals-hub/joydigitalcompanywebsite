@@ -44,6 +44,7 @@ export function proxy(request: NextRequest) {
   // 2. Normalize Staging & Staging Subdomains
   if (!isLocal) {
     const isNonCanonicalHost =
+      host === "joydigital.in" ||
       host === "joydigital.vercel.app" ||
       host.endsWith(".onrender.com");
 

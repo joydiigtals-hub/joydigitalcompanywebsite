@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Custom Website Design & UI/UX Services | Joy Digital",
   description: "Joy Digital offers custom website design services. We craft responsive web design, conversion-focused UI/UX layouts, and intuitive brand design systems.",
   alternates: {
-    canonical: "https://joydigital.in/web-design-services",
+    canonical: "https://www.joydigital.in/web-design-services",
   },
 };
 
@@ -18,7 +18,7 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133"
   },
   "description": "Joy Digital provides custom website design, responsive web design, professional UI/UX design systems, and conversion-focused landing page architectures.",

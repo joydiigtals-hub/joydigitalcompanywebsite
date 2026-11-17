@@ -333,9 +333,9 @@ export default function ModernHeroSection({
                   <Clock className="w-3 h-3 text-[#C9F600]" />
                   <span>Free Project Review</span>
                 </div>
-                <h3 className="text-xl font-extrabold text-[#FFFFFF] tracking-tight">
+                <h2 className="text-xl font-extrabold text-[#FFFFFF] tracking-tight">
                   Request a Free Project Consultation &amp; Audit
-                </h3>
+                </h2>
                 <p className="text-xs text-[#FFFFFF]/80 mt-1.5 leading-relaxed font-normal">
                   Share your project requirements or existing website to receive actionable recommendations and a transparent proposal.
                 </p>

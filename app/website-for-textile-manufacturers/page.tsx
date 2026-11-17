@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     url: config.canonical,
     title: config.title,
     description: config.description,
-    images: [{ url: "https://joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
+    images: [{ url: "https://www.joydigital.in/assets/images/hero-banner.webp", width: 1200, height: 630, alt: config.title }],
   },
   twitter: {
     card: "summary_large_image",
     title: config.title,
     description: config.description,
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -33,15 +33,15 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://joydigital.in/website-for-textile-manufacturers#service",
+      "@id": "https://www.joydigital.in/website-for-textile-manufacturers#service",
       "name": "Global Textile Manufacturer Website Design & B2B SEO",
       "serviceType": "Textile B2B Web Development & Export Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Joy Digital",
-        "image": "https://joydigital.in/assets/images/logo.webp",
+        "image": "https://www.joydigital.in/assets/images/logo.webp",
         "telephone": "+919080026133",
-        "url": "https://joydigital.in",
+        "url": "https://www.joydigital.in",
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",

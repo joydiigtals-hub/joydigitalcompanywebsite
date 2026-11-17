@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const title = `${result.name} Insights & Strategy | Joy Digital Blog`;
   const description = `Read expert articles and practical growth guides on ${result.name}. Learn web development, SEO, and digital strategy from Joy Digital.`;
-  const canonical = `https://joydigital.in/blog/category/${resolvedParams.category}`;
+  const canonical = `https://www.joydigital.in/blog/category/${resolvedParams.category}`;
 
   return {
     title,
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       images: [
         {
-          url: "https://joydigital.in/assets/images/hero-banner.webp",
+          url: "https://www.joydigital.in/assets/images/hero-banner.webp",
           width: 1200,
           height: 630,
           alt: `${result.name} Articles - Joy Digital`,
@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title,
       description,
-      images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+      images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
     },
   };
 }
@@ -71,15 +71,15 @@ export default async function BlogCategoryPage({ params }: PageProps) {
     notFound();
   }
 
-  const canonicalUrl = `https://joydigital.in/blog/category/${resolvedParams.category}`;
+  const canonicalUrl = `https://www.joydigital.in/blog/category/${resolvedParams.category}`;
 
   const schema = buildPageGraphSchema({
     url: canonicalUrl,
     title: `${result.name} Insights & Strategy | Joy Digital Blog`,
     description: `Read expert articles and practical growth guides on ${result.name}.`,
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
-      { name: "Blog", item: "https://joydigital.in/blog" },
+      { name: "Home", item: "https://www.joydigital.in" },
+      { name: "Blog", item: "https://www.joydigital.in/blog" },
       { name: result.name, item: canonicalUrl },
     ],
   });

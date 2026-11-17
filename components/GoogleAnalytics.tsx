@@ -5,7 +5,6 @@ import Script from "next/script";
 
 export default function GoogleAnalytics() {
   const measurementId = process.env.NEXT_PUBLIC_GA_ID || "G-HSGZ10PXTG";
-  const [shouldLoad, setShouldLoad] = useState(false);
 
   useEffect(() => {
     // Initialize dataLayer and gtag early so tracking calls are buffered
@@ -39,41 +38,18 @@ export default function GoogleAnalytics() {
         }
       };
     }
-
-    // Suppress external GTM scripts for automated auditors & bots to preserve Core Web Vitals
-    if (typeof window !== "undefined" && typeof navigator !== "undefined") {
-      const isBot =
-        navigator.webdriver ||
-        /Lighthouse|Googlebot|HeadlessChrome|HeadlessChromium|Chrome-Lighthouse|PTST|PageSpeed/i.test(
-          navigator.userAgent
-        );
-      if (isBot) return;
-    }
-
-    // Defer loading GA script until after main thread idle window
-    const timer = setTimeout(() => {
-      if ("requestIdleCallback" in window) {
-        (window as any).requestIdleCallback(() => setShouldLoad(true));
-      } else {
-        setShouldLoad(true);
-      }
-    }, 3800);
-
-    return () => clearTimeout(timer);
   }, []);
-
-  if (!shouldLoad) return null;
 
   return (
     <>
       <Script
         id="gtag-script"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
       />
       <Script
         id="gtag-init"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];

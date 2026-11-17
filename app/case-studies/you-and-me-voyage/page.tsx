@@ -19,17 +19,17 @@ export const metadata: Metadata = {
       "Joy Digital"
   ],
   alternates: {
-    canonical: "https://joydigital.in/case-studies/you-and-me-voyage",
+    canonical: "https://www.joydigital.in/case-studies/you-and-me-voyage",
   },
   openGraph: {
     type: "article",
-    url: "https://joydigital.in/case-studies/you-and-me-voyage",
+    url: "https://www.joydigital.in/case-studies/you-and-me-voyage",
     title: "Case Study: You & Me Voyage | Joy Digital",
     description:
       "Custom Next.js travel portal and WhatsApp lead generation architecture for You & Me Voyage, based in Adyar, Chennai.",
     images: [
       {
-        url: "https://joydigital.in/assets/images/portfolio/you-and-me-voyage-1.webp",
+        url: "https://www.joydigital.in/assets/images/portfolio/you-and-me-voyage-1.webp",
         width: 1200,
         height: 630,
         alt: "You & Me Voyage Custom Next.js Travel Website",
@@ -81,31 +81,31 @@ export default function YouAndMeVoyageCaseStudyPage() {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://joydigital.in/case-studies/you-and-me-voyage#article",
+        "@id": "https://www.joydigital.in/case-studies/you-and-me-voyage#article",
         "headline": "You & Me Voyage: Custom Next.js Travel Website & WhatsApp Lead Routing",
         "description": "How Joy Digital engineered a custom Next.js travel platform with a 3-step enquiry planner for You & Me Voyage, Chennai.",
-        "url": "https://joydigital.in/case-studies/you-and-me-voyage",
-        "image": "https://joydigital.in/assets/images/portfolio/you-and-me-voyage-1.webp",
+        "url": "https://www.joydigital.in/case-studies/you-and-me-voyage",
+        "image": "https://www.joydigital.in/assets/images/portfolio/you-and-me-voyage-1.webp",
         "author": {
           "@type": "Organization",
           "name": "Joy Digital",
-          "url": "https://joydigital.in"
+          "url": "https://www.joydigital.in"
         },
         "publisher": {
           "@type": "Organization",
           "name": "Joy Digital",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://joydigital.in/assets/images/logo.webp"
+            "url": "https://www.joydigital.in/assets/images/logo.webp"
           }
         }
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://joydigital.in" },
-          { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://joydigital.in/case-studies" },
-          { "@type": "ListItem", "position": 3, "name": "You & Me Voyage", "item": "https://joydigital.in/case-studies/you-and-me-voyage" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.joydigital.in" },
+          { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://www.joydigital.in/case-studies" },
+          { "@type": "ListItem", "position": 3, "name": "You & Me Voyage", "item": "https://www.joydigital.in/case-studies/you-and-me-voyage" }
         ]
       },
       {
@@ -113,7 +113,7 @@ export default function YouAndMeVoyageCaseStudyPage() {
         "itemReviewed": {
           "@type": "ProfessionalService",
           "name": "Joy Digital",
-          "url": "https://joydigital.in",
+          "url": "https://www.joydigital.in",
           "telephone": "+919080026133",
           "address": {
             "@type": "PostalAddress",

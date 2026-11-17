@@ -15,16 +15,16 @@ export const metadata: Metadata = {
       "Joy Digital Madurai HQ"
   ],
   alternates: {
-    canonical: "https://joydigital.in/seo-services-madurai",
+    canonical: "https://www.joydigital.in/seo-services-madurai",
   },
   openGraph: {
     title: "SEO Services in Madurai | Top SEO Company & Agency - Joy Digital",
     description: "Drive qualified local leads and Google Maps 3-Pack rankings with expert SEO services in Madurai. Joy Digital delivers technical SEO, speed audits & citation growth.",
-    url: "https://joydigital.in/seo-services-madurai",
+    url: "https://www.joydigital.in/seo-services-madurai",
     siteName: "Joy Digital",
     images: [
       {
-        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "SEO Services in Madurai - Joy Digital",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SEO Services in Madurai | Top SEO Company & Agency - Joy Digital",
     description: "Drive qualified local leads and Google Maps 3-Pack rankings with expert SEO services in Madurai. Joy Digital delivers technical SEO, speed audits & citation growth.",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -72,7 +72,7 @@ export default function SeoServicesMadurai() {
       leadSource="SEO Services Madurai Landing Page"
       heroCtaText="Claim Free SEO Consultation"
       heroActions={heroActions}
-      canonicalUrl="https://joydigital.in/seo-services-madurai"
+      canonicalUrl="https://www.joydigital.in/seo-services-madurai"
       overviewTitle="Organic Google Map Rankings & SEO Services in Madurai"
       overviewContent={
         <div className="space-y-6 text-justify">

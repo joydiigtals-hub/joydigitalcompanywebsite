@@ -8,24 +8,24 @@ export const metadata: Metadata = {
   title: "Enterprise B2B SEO Services & GEO Optimization | Joy Digital",
   description: "Enterprise B2B SEO services by Joy Digital. Technical SEO architecture, Core Web Vitals, and Generative Engine Optimization (GEO) for global brands.",
   alternates: {
-    canonical: "https://joydigital.in/seo-services",
+    canonical: "https://www.joydigital.in/seo-services",
     languages: {
-      "x-default": "https://joydigital.in/seo-services",
-      "en-us": "https://joydigital.in/us/seo-services",
-      "en-gb": "https://joydigital.in/uk/seo-services",
-      "en-ae": "https://joydigital.in/ae/seo-services",
-      "en-in": "https://joydigital.in/in/seo-services",
+      "x-default": "https://www.joydigital.in/seo-services",
+      "en-us": "https://www.joydigital.in/us/seo-services",
+      "en-gb": "https://www.joydigital.in/uk/seo-services",
+      "en-ae": "https://www.joydigital.in/ae/seo-services",
+      "en-in": "https://www.joydigital.in/in/seo-services",
     },
   },
   openGraph: {
     type: "website",
-    url: "https://joydigital.in/seo-services",
+    url: "https://www.joydigital.in/seo-services",
     siteName: "Joy Digital",
     title: "Enterprise B2B SEO Services & GEO Optimization | Joy Digital",
     description: "Enterprise B2B SEO and Generative Engine Optimization (GEO) by Joy Digital, headquartered in Madurai, India. We help businesses rank on Google and AI search engines.",
     images: [
       {
-        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Joy Digital - Enterprise B2B SEO Services & GEO Optimization",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Enterprise B2B SEO Services & GEO Optimization | Joy Digital",
     description: "Enterprise B2B SEO and Generative Engine Optimization (GEO) by Joy Digital, headquartered in Madurai, India. We help businesses rank on Google and AI search engines.",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -48,7 +48,7 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133"
   },
   "description": "Joy Digital builds Organic Pipeline & Revenue-Driven SEO strategies, specializing in Technical SEO Architecture & Site Audits for global B2B and SaaS brands.",

@@ -104,7 +104,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: "Joy Digital is a results-oriented global agency engineering fast Next.js sites and search marketing campaigns.",
   };
 
-  const canonicalUrl = `https://joydigital.in/${countryLower}`;
+  const canonicalUrl = `https://www.joydigital.in/${countryLower}`;
 
   return {
     title: data.title,
@@ -112,13 +112,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        "x-default": "https://joydigital.in",
-        "en-IN": "https://joydigital.in/in",
-        "en-US": "https://joydigital.in/us",
-        "en-GB": "https://joydigital.in/uk",
-        "en-AE": "https://joydigital.in/ae",
-        "en-CA": "https://joydigital.in/ca",
-        "en-AU": "https://joydigital.in/au",
+        "x-default": "https://www.joydigital.in",
+        "en-IN": "https://www.joydigital.in/in",
+        "en-US": "https://www.joydigital.in/us",
+        "en-GB": "https://www.joydigital.in/uk",
+        "en-AE": "https://www.joydigital.in/ae",
+        "en-CA": "https://www.joydigital.in/ca",
+        "en-AU": "https://www.joydigital.in/au",
       },
     },
     openGraph: {
@@ -130,7 +130,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "Joy Digital",
       images: [
         {
-          url: "https://joydigital.in/assets/images/hero-banner.webp",
+          url: "https://www.joydigital.in/assets/images/hero-banner.webp",
           width: 1200,
           height: 630,
           alt: `Joy Digital - ${data.title}`,
@@ -141,7 +141,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title: data.title,
       description: data.description,
-      images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+      images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
     },
   };
 }
@@ -154,7 +154,7 @@ export default async function CountryHomePage({ params }: PageProps) {
     description: "Joy Digital is a results-oriented global agency engineering fast Next.js sites and search marketing campaigns.",
   };
 
-  const countryUrl = `https://joydigital.in/${countryLower}`;
+  const countryUrl = `https://www.joydigital.in/${countryLower}`;
   const graphSchema = buildPageGraphSchema({
     url: countryUrl,
     title: data.title,

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Tour Operator Website Development Company | Booking Websites",
   description: "Expert tour operator website development. We build custom booking portals, day-by-day itineraries, and high-converting travel websites for DMCs.",
   alternates: {
-    canonical: "https://joydigital.in/tour-operator-website-development",
+    canonical: "https://www.joydigital.in/tour-operator-website-development",
   },
 };
 
@@ -19,7 +19,7 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133"
   },
   "description": "Joy Digital builds custom booking portals and high-converting websites specifically designed for global Tour Operators and Destination Management Companies (DMCs).",
@@ -44,7 +44,7 @@ export default async function TourOperatorWebPage() {
       heroSubtitle="Transform your Destination Management Company with a custom booking portal designed to capture direct, high-margin international enquiries."
       leadSource="Tour Operator Website Page"
       heroCtaText="Get a Tour Website Quote"
-      canonicalUrl="https://joydigital.in/tour-operator-website-development"
+      canonicalUrl="https://www.joydigital.in/tour-operator-website-development"
       overviewTitle="Direct Bookings Start with a High-Trust Portal"
       overviewContent={
         <div className="space-y-6">

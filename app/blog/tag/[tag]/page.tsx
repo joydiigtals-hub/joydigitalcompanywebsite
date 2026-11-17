@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const title = `${result.name} Insights & Articles | Joy Digital Blog`;
   const description = `Discover articles and actionable guides tagged under ${result.name}. Learn web development and SEO strategies with Joy Digital.`;
-  const canonical = `https://joydigital.in/blog/tag/${resolvedParams.tag}`;
+  const canonical = `https://www.joydigital.in/blog/tag/${resolvedParams.tag}`;
 
   return {
     title,
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       images: [
         {
-          url: "https://joydigital.in/assets/images/hero-banner.webp",
+          url: "https://www.joydigital.in/assets/images/hero-banner.webp",
           width: 1200,
           height: 630,
           alt: `${result.name} Articles - Joy Digital`,
@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title,
       description,
-      images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+      images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
     },
   };
 }
@@ -71,15 +71,15 @@ export default async function BlogTagPage({ params }: PageProps) {
     notFound();
   }
 
-  const canonicalUrl = `https://joydigital.in/blog/tag/${resolvedParams.tag}`;
+  const canonicalUrl = `https://www.joydigital.in/blog/tag/${resolvedParams.tag}`;
 
   const schema = buildPageGraphSchema({
     url: canonicalUrl,
     title: `${result.name} Insights & Articles | Joy Digital Blog`,
     description: `Discover articles and actionable guides tagged under ${result.name}.`,
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
-      { name: "Blog", item: "https://joydigital.in/blog" },
+      { name: "Home", item: "https://www.joydigital.in" },
+      { name: "Blog", item: "https://www.joydigital.in/blog" },
       { name: `Tag: ${result.name}`, item: canonicalUrl },
     ],
   });

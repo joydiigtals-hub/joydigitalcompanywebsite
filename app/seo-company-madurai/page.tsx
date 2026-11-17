@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Digital Marketing Madurai"
   ],
   alternates: {
-    canonical: "https://joydigital.in/seo-company-madurai",
+    canonical: "https://www.joydigital.in/seo-company-madurai",
   },
 };
 
@@ -25,7 +25,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -53,7 +53,7 @@ export default function SeoCompanyMadurai() {
       heroSubtitle="Rank higher on Google and bring more customers to your business. As a top SEO agency in Madurai, we optimize websites to gain organic local traffic and maps visibility."
       leadSource="SEO Company Madurai Landing Page"
       heroCtaText="Get Free SEO Audit"
-      canonicalUrl="https://joydigital.in/seo-company-madurai"
+      canonicalUrl="https://www.joydigital.in/seo-company-madurai"
       overviewTitle="Increase Search Visibility & Rank for Keywords That Bring Leads"
       overviewContent={
         <div className="space-y-6">

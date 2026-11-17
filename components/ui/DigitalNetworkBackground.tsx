@@ -32,16 +32,16 @@ export default function DigitalNetworkBackground() {
 
       {/* 2. Ambient Atmosphere Glow Blobs */}
       {/* Top-center rich purple illumination */}
-      <div className="absolute -top-28 left-1/2 -translate-x-1/2 w-[720px] h-[480px] bg-purple-600/20 rounded-full blur-[130px]" />
+      <div className="ambient-glow absolute -top-28 left-1/2 -translate-x-1/2 w-[720px] h-[480px] bg-purple-600/20 rounded-full blur-[130px]" />
       
       {/* Left-side vibrant violet accent */}
-      <div className="absolute top-1/4 -left-32 w-[520px] h-[520px] bg-[#7C3AED]/18 rounded-full blur-[140px]" />
+      <div className="ambient-glow absolute top-1/4 -left-32 w-[520px] h-[520px] bg-[#7C3AED]/18 rounded-full blur-[140px]" />
       
       {/* Right-side subtle deep glow behind form */}
-      <div className="absolute top-1/3 -right-24 w-[560px] h-[560px] bg-[#4C1D95]/25 rounded-full blur-[140px]" />
+      <div className="ambient-glow absolute top-1/3 -right-24 w-[560px] h-[560px] bg-[#4C1D95]/25 rounded-full blur-[140px]" />
       
       {/* Delicate Electric Lime signature glow (ambient, soft bridge with CTAs) */}
-      <div className="absolute -top-16 right-1/4 w-[420px] h-[420px] bg-[#C9F600]/[0.055] rounded-full blur-[150px]" />
+      <div className="ambient-glow absolute -top-16 right-1/4 w-[420px] h-[420px] bg-[#C9F600]/[0.055] rounded-full blur-[150px]" />
 
       {/* 3. Modern Technical Grid with Radial Vignette */}
       <svg

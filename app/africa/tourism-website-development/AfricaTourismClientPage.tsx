@@ -241,7 +241,7 @@ const TOURISM_FAQS = [
 ];
 
 export default function AfricaTourismClientPage() {
-  const canonicalUrl = "https://joydigital.in/africa/tourism-website-development";
+  const canonicalUrl = "https://www.joydigital.in/africa/tourism-website-development";
   const serviceName = "Africa Tourism Website Development";
 
   // Form state for Free Website Audit section
@@ -369,7 +369,7 @@ export default function AfricaTourismClientPage() {
     description:
       "We build modern, fast and conversion-focused websites for African tour operators, safari companies, lodges, hotels and travel businesses targeting travellers worldwide.",
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: "Africa Tourism Website Development", item: canonicalUrl },
     ],
     service: {

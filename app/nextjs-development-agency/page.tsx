@@ -7,16 +7,16 @@ export const metadata: Metadata = {
   title: "Next.js Development Agency | High-Performance React Web Apps | Joy Digital",
   description: "Hire a dedicated Next.js development agency. We engineer fast, scalable, and search-optimized React web applications with modern serverless architecture.",
   alternates: {
-    canonical: "https://joydigital.in/nextjs-development-agency",
+    canonical: "https://www.joydigital.in/nextjs-development-agency",
   },
   openGraph: {
     type: "website",
     title: "Next.js Development Agency | High-Performance React Web Apps | Joy Digital",
     description: "Hire a dedicated Next.js development agency. We engineer fast, scalable, and search-optimized React web applications with modern serverless architecture.",
-    url: "https://joydigital.in/nextjs-development-agency",
+    url: "https://www.joydigital.in/nextjs-development-agency",
     images: [
       {
-        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Joy Digital - Next.js & React Development Agency",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Next.js Development Agency | High-Performance React Web Apps | Joy Digital",
     description: "Hire a dedicated Next.js development agency. We engineer fast, scalable, and search-optimized React web applications with modern serverless architecture.",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -39,7 +39,7 @@ const pageSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133"
   },
   "description": "Premium Next.js development agency delivering highly scalable, sub-second web applications for global B2B and enterprise clients.",
@@ -60,7 +60,7 @@ export default function NextjsAgencyPage() {
       heroSubtitle="We engineer blazing-fast, secure, and highly scalable React applications deployed on the Edge. Outperform your competitors with modern headless architecture."
       leadSource="Next.js Agency Page"
       heroCtaText="Consult a Next.js Expert"
-      canonicalUrl="https://joydigital.in/nextjs-development-agency"
+      canonicalUrl="https://www.joydigital.in/nextjs-development-agency"
       overviewTitle="Why Enterprises are Migrating to Next.js"
       overviewContent={
         <div className="space-y-6">

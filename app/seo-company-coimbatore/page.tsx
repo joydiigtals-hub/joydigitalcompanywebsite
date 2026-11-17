@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "Digital Marketing Coimbatore"
   ],
   alternates: {
-    canonical: "https://joydigital.in/seo-company-coimbatore",
+    canonical: "https://www.joydigital.in/seo-company-coimbatore",
   },
 };
 
@@ -27,7 +27,7 @@ const pageSchema = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Joy Digital",
-    "image": "https://joydigital.in/assets/images/logo.webp",
+    "image": "https://www.joydigital.in/assets/images/logo.webp",
     "telephone": "+919080026133",
     "priceRange": "₹₹",
     "address": {
@@ -61,7 +61,7 @@ export default function SeoCompanyCoimbatore() {
       heroSubtitle="Headquartered in Madurai, Tamil Nadu. Serving clients in Coimbatore. We optimize websites to gain organic local traffic and search visibility."
       leadSource="SEO Company Coimbatore Landing Page"
       heroCtaText="Get Free SEO Audit"
-      canonicalUrl="https://joydigital.in/seo-company-coimbatore"
+      canonicalUrl="https://www.joydigital.in/seo-company-coimbatore"
       overviewTitle="Increase Search Visibility & Rank for Keywords That Bring Leads"
       overviewContent={
         <div className="space-y-6">

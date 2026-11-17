@@ -115,7 +115,7 @@ export default function ServicePageTemplate({
   faqs,
   schemaMarkup,
   crossLinks,
-  canonicalUrl = "https://joydigital.in",
+  canonicalUrl = "https://www.joydigital.in",
   heroCtaText,
   relatedBlogPosts,
   customLeadForm,
@@ -176,7 +176,7 @@ export default function ServicePageTemplate({
     title: `${serviceName} Services | Joy Digital`,
     description: heroSubtitle,
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
+      { name: "Home", item: "https://www.joydigital.in" },
       { name: serviceName, item: canonicalUrl },
     ],
     service: {

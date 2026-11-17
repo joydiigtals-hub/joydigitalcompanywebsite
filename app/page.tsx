@@ -6,10 +6,10 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://joydigital.in"),
+  metadataBase: new URL("https://www.joydigital.in"),
   title: "Web Development & SEO Company – Get More Leads | Joy Digital",
   description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
-  authors: [{ name: "Joy Digital", url: "https://joydigital.in" }],
+  authors: [{ name: "Joy Digital", url: "https://www.joydigital.in" }],
   publisher: "Joy Digital",
   robots: {
     index: true,
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://joydigital.in",
+    canonical: "https://www.joydigital.in",
     languages: {
-      "x-default": "https://joydigital.in",
-      "en-US": "https://joydigital.in/us",
-      "en-GB": "https://joydigital.in/uk",
-      "en-AE": "https://joydigital.in/ae",
-      "en-CA": "https://joydigital.in/ca",
-      "en-AU": "https://joydigital.in/au",
-      "en-IN": "https://joydigital.in/in",
+      "x-default": "https://www.joydigital.in",
+      "en-US": "https://www.joydigital.in/us",
+      "en-GB": "https://www.joydigital.in/uk",
+      "en-AE": "https://www.joydigital.in/ae",
+      "en-CA": "https://www.joydigital.in/ca",
+      "en-AU": "https://www.joydigital.in/au",
+      "en-IN": "https://www.joydigital.in/in",
     },
   },
   verification: {
@@ -45,13 +45,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://joydigital.in",
+    url: "https://www.joydigital.in",
     siteName: "Joy Digital",
     title: "Web Development & SEO Company – Get More Leads | Joy Digital",
     description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
     images: [
       {
-        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Joy Digital - Web Development & SEO Company",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Web Development & SEO Company – Get More Leads | Joy Digital",
     description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
     creator: "@joydigital",
   },
 };
@@ -74,7 +74,7 @@ export default async function HomePage() {
     .slice(0, 3);
 
   const homeGraph = buildPageGraphSchema({
-    url: "https://joydigital.in",
+    url: "https://www.joydigital.in",
     title: "Web Development & SEO Company – Get More Leads | Joy Digital",
     description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
     isHomepage: true,

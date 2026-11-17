@@ -93,7 +93,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           }}
         >
           <span style={{ fontSize: "16px", color: "#94A3B8", fontWeight: "500" }}>
-            https://joydigital.in
+            https://www.joydigital.in
           </span>
           <span style={{ fontSize: "16px", color: "#A78BFA", fontWeight: "700" }}>
             Next.js &amp; Technical SEO Insights

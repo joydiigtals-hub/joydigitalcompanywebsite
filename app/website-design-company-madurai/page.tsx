@@ -14,16 +14,16 @@ export const metadata: Metadata = {
       "Top Rated Web Agency Madurai"
   ],
   alternates: {
-    canonical: "https://joydigital.in/website-design-company-madurai",
+    canonical: "https://www.joydigital.in/website-design-company-madurai",
   },
   openGraph: {
     title: "Best Website Design Company in Madurai | Joy Digital",
     description: "Partner with a leading website design company in Madurai. Joy Digital crafts modern, responsive website designs and UI/UX layouts that turn visitors into customers.",
-    url: "https://joydigital.in/website-design-company-madurai",
+    url: "https://www.joydigital.in/website-design-company-madurai",
     siteName: "Joy Digital",
     images: [
       {
-        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Website Design Company in Madurai - Joy Digital",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Best Website Design Company in Madurai | Joy Digital",
     description: "Partner with a leading website design company in Madurai. Joy Digital crafts modern, responsive website designs and UI/UX layouts that turn visitors into customers.",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -71,7 +71,7 @@ export default function WebDesignMadurai() {
       leadSource="Website Design Madurai Landing Page"
       heroCtaText="Claim Free Design Quote"
       heroActions={heroActions}
-      canonicalUrl="https://joydigital.in/website-design-company-madurai"
+      canonicalUrl="https://www.joydigital.in/website-design-company-madurai"
       overviewTitle="Custom Website Design & Branding Solutions in Madurai"
       overviewContent={
         <div className="space-y-6 text-justify">

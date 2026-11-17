@@ -40,7 +40,7 @@ export default function CookieConsent() {
   return (
     <div className="fixed bottom-0 left-0 w-full bg-[#3B1580] border-t border-[#FFFFFF]/20 p-4 md:p-6 z-[9999] shadow-2xl flex flex-col md:flex-row items-center justify-between gap-4">
       <div className="text-left flex-1 max-w-4xl">
-        <h4 className="text-white text-sm font-bold mb-1">We Value Your Privacy</h4>
+        <p className="text-white text-sm font-bold mb-1">We Value Your Privacy</p>
         <p className="text-[#FFFFFF]/80 text-xs leading-relaxed">
           We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
         </p>

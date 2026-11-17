@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts, getAllCategories } from "@/lib/blog";
 
-const BASE_URL = "https://joydigital.in";
+const BASE_URL = "https://www.joydigital.in";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const currentDate = new Date();

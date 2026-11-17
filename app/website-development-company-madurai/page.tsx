@@ -14,16 +14,16 @@ export const metadata: Metadata = {
       "Next.js Web Development Madurai"
   ],
   alternates: {
-    canonical: "https://joydigital.in/website-development-company-madurai",
+    canonical: "https://www.joydigital.in/website-development-company-madurai",
   },
   openGraph: {
     title: "Best Website Development Company in Madurai | Joy Digital",
     description: "Build sub-second, custom websites with Joy Digital, a leading website development company in Madurai. Expert Next.js, React & high-converting business portals.",
-    url: "https://joydigital.in/website-development-company-madurai",
+    url: "https://www.joydigital.in/website-development-company-madurai",
     siteName: "Joy Digital",
     images: [
       {
-        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Website Development Company in Madurai - Joy Digital",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Best Website Development Company in Madurai | Joy Digital",
     description: "Build sub-second, custom websites with Joy Digital, a leading website development company in Madurai. Expert Next.js, React & high-converting business portals.",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -71,7 +71,7 @@ export default function WebDevMadurai() {
       leadSource="Website Development Madurai Landing Page"
       heroCtaText="Claim Free Project Quote"
       heroActions={heroActions}
-      canonicalUrl="https://joydigital.in/website-development-company-madurai"
+      canonicalUrl="https://www.joydigital.in/website-development-company-madurai"
       overviewTitle="High-Performance React & Next.js Web Development in Madurai"
       overviewContent={
         <div className="space-y-6 text-justify">

@@ -443,7 +443,7 @@ function LeadDetailsDrawerContent({
               <p style="font-weight: 700; color: #0F172A; font-size: 14px;">Joy Digital Agency</p>
               <p>Madurai, Tamil Nadu, India</p>
               <p>Email: ${contactEmail}</p>
-              <p>Web: https://joydigital.in</p>
+              <p>Web: https://www.joydigital.in</p>
             </div>
           </div>
 

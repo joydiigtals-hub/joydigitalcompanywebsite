@@ -120,7 +120,7 @@ function normalizePostData(slug: string, data: any, content: string): BlogPost {
     metaDescription: data.metaDescription || data.description || "",
     focusKeyword: data.focusKeyword || "",
     secondaryKeywords: data.secondaryKeywords || "",
-    canonicalUrl: data.canonicalUrl || `https://joydigital.in/blog/${slug}`,
+    canonicalUrl: data.canonicalUrl || `https://www.joydigital.in/blog/${slug}`,
     robots: data.robots || "Index, Follow",
 
     internalLinks,
@@ -131,7 +131,7 @@ function normalizePostData(slug: string, data: any, content: string): BlogPost {
     authorRole: data.authorRole || "Technical Web Specialist",
     authorBio: data.authorBio || "Digital marketing strategist and Next.js web developer focusing on search optimization and conversion rate growth.",
     authorImage: data.authorImage || "/assets/images/logo.webp",
-    authorProfileUrl: data.authorProfileUrl || "https://joydigital.in/about",
+    authorProfileUrl: data.authorProfileUrl || "https://www.joydigital.in/about",
 
     faqs,
 

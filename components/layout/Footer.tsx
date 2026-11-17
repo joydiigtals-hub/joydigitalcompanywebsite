@@ -144,9 +144,9 @@ export default function Footer() {
 
         {/* Global & Regional Column */}
         <div className="flex flex-col">
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-[#FFFFFF] mb-4">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-[#FFFFFF] mb-4">
             Global &amp; Regional
-          </h4>
+          </h3>
           <ul className="flex flex-col space-y-2.5 text-xs text-[#FFFFFF]/80">
             {REGIONAL_SITES.map((site) => (
               <li key={site.code}>
@@ -192,9 +192,9 @@ export default function Footer() {
 
         {/* Featured Services Column */}
         <div className="flex flex-col">
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-[#FFFFFF] mb-4">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-[#FFFFFF] mb-4">
             Featured Services
-          </h4>
+          </h3>
           <ul className="flex flex-col space-y-2.5 text-xs text-[#FFFFFF]/80">
             <li>
               <Link href="/digital-marketing-services" className="hover:text-[#C9F600] transition-colors duration-200 block">
@@ -383,9 +383,9 @@ export default function Footer() {
 
         {/* Tools & Company Column */}
         <div className="flex flex-col">
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-[#FFFFFF] mb-4">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-[#FFFFFF] mb-4">
             Tools &amp; Company
-          </h4>
+          </h3>
           <ul className="flex flex-col space-y-2.5 text-xs text-[#FFFFFF]/80">
             <li>
               <Link href="/about" className="hover:text-[#C9F600] transition-colors duration-200 block">About Our Agency</Link>
@@ -453,9 +453,9 @@ export default function Footer() {
 
         {/* Global Support & Office Location Column */}
         <div className="flex flex-col">
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-[#FFFFFF] mb-4">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-[#FFFFFF] mb-4">
             Office Location
-          </h4>
+          </h3>
           <div className="text-xs text-[#FFFFFF]/80 flex flex-col space-y-3 mb-4">
             <div className="flex items-start gap-2 leading-relaxed">
               <i className="fa-solid fa-location-dot text-[#C9F600] mt-0.5 shrink-0" />

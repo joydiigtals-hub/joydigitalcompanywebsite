@@ -26,7 +26,7 @@ export default async function DynamicWebDevPage() {
         heroSubtitle="Build high-performance, database-driven dynamic web applications equipped with custom CMS dashboards, real-time API sync, and fast-loading page performance."
         leadSource="Dynamic Website Development Page"
         heroCtaText="Request a Dynamic Web Quote"
-        canonicalUrl="https://joydigital.in/dynamic-website-development"
+        canonicalUrl="https://www.joydigital.in/dynamic-website-development"
         overviewTitle="Database-Driven Dynamic Architecture & Real-Time Content Systems"
         overviewContent={
           <div className="space-y-6">

@@ -7,16 +7,16 @@ export const metadata: Metadata = {
   title: "Digital Marketing Services Company | Performance Marketing | Joy Digital",
   description: "Results-driven digital marketing services. From Google Ads and paid social to conversion funnels and lead generation. Get a free digital marketing consultation.",
   alternates: {
-    canonical: "https://joydigital.in/digital-marketing-services",
+    canonical: "https://www.joydigital.in/digital-marketing-services",
   },
   openGraph: {
     title: "Digital Marketing Services Company | Performance Marketing | Joy Digital",
     description: "Results-driven digital marketing services. From Google Ads and paid social to conversion funnels and lead generation. Get a free digital marketing consultation.",
-    url: "https://joydigital.in/digital-marketing-services",
+    url: "https://www.joydigital.in/digital-marketing-services",
     type: "website",
     images: [
       {
-        url: "https://joydigital.in/assets/images/hero-banner.webp",
+        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
         alt: "Joy Digital - Digital Marketing Services Company",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Digital Marketing Services Company | Performance Marketing | Joy Digital",
     description: "Results-driven digital marketing services. From Google Ads and paid social to conversion funnels and lead generation. Get a free digital marketing consultation.",
-    images: ["https://joydigital.in/assets/images/hero-banner.webp"],
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
   },
 };
 
@@ -39,7 +39,7 @@ export default function DigitalMarketingServicesPage() {
       heroSubtitle="Turn search visibility and advertising spend into qualified customer enquiries. We build high-converting paid search, social media marketing campaigns, and lead acquisition funnels for growing businesses."
       leadSource="Digital Marketing Services Landing Page"
       heroCtaText="Get Free Marketing Audit"
-      canonicalUrl="https://joydigital.in/digital-marketing-services"
+      canonicalUrl="https://www.joydigital.in/digital-marketing-services"
       overviewTitle="Strategic Digital Marketing Built Around Sales and Customer Acquisition"
       overviewContent={
         <div className="space-y-6">

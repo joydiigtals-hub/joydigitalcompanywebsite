@@ -27,7 +27,7 @@ export default async function PortfolioWebDevPage() {
         heroSubtitle="Build stunning, modern portfolio websites tailored for consultants, executives, web developers, agency owners, and creative professionals. Stand out from competitors and convert visitors into high-paying clients."
         leadSource="Portfolio Website Development Page"
         heroCtaText="Request a Portfolio Web Quote"
-        canonicalUrl="https://joydigital.in/portfolio-website-development"
+        canonicalUrl="https://www.joydigital.in/portfolio-website-development"
         overviewTitle="High-Impact Digital Showcase & Personal Brand Architecture"
         overviewContent={
           <div className="space-y-6">

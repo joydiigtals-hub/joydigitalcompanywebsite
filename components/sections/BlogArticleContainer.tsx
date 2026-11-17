@@ -169,22 +169,22 @@ export default function BlogArticleContainer({ post, htmlContent, relatedPosts, 
   };
 
   // Structured Data (JSON-LD)
-  const canonicalUrl = post.canonicalUrl || `https://joydigital.in/blog/${slug}`;
+  const canonicalUrl = post.canonicalUrl || `https://www.joydigital.in/blog/${slug}`;
   const catSlug = (post.category || "General").toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
   const articleGraph = buildPageGraphSchema({
     url: canonicalUrl,
     title: post.seoTitle || post.title,
     description: post.metaDescription || post.description,
     breadcrumbs: [
-      { name: "Home", item: "https://joydigital.in" },
-      { name: "Blog", item: "https://joydigital.in/blog" },
-      { name: post.category || "General", item: `https://joydigital.in/blog/category/${catSlug}` },
+      { name: "Home", item: "https://www.joydigital.in" },
+      { name: "Blog", item: "https://www.joydigital.in/blog" },
+      { name: post.category || "General", item: `https://www.joydigital.in/blog/category/${catSlug}` },
       { name: post.title, item: canonicalUrl },
     ],
     blogPosting: {
       headline: post.seoTitle || post.title,
       description: post.metaDescription || post.description,
-      image: post.ogImage || post.image || "https://joydigital.in/assets/images/hero-banner.webp",
+      image: post.ogImage || post.image || "https://www.joydigital.in/assets/images/hero-banner.webp",
       datePublished: post.date,
       dateModified: post.lastUpdatedDate || post.date,
       authorName: post.authorName || post.author,
