@@ -30,13 +30,14 @@ const pageSchema = {
     "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "4/166 T, Thinamani Nagar",
       "addressLocality": "Madurai",
       "addressRegion": "Tamil Nadu",
-      "postalCode": "600063",
+      "postalCode": "625018",
       "addressCountry": "IN"
     }
   },
-  "description": "Joy Digital is a professional web development company in Chennai, specializing in custom React architectures, headless database APIs, and secure serverless web apps.",
+  "description": "Joy Digital is a web development company headquartered in Madurai, serving clients in Chennai with custom Next.js web applications.",
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "INR",
@@ -51,13 +52,16 @@ export default function WebDevChennai() {
     <ServicePageTemplate
       serviceName="Web Development Chennai"
       heroTitle="Web Development Company in Chennai"
-      heroSubtitle="Get dynamic, mobile-friendly React and Next.js website assets. As a premium web development company in Chennai, we build fast corporate portfolios that convert visitors into active customers."
+      heroSubtitle="Headquartered in Madurai, Tamil Nadu. Serving clients in Chennai. We build dynamic, fast, secure Next.js and React web platforms for growing businesses."
       leadSource="Web Development Chennai Landing Page"
       heroCtaText="Get Web Development Quote"
       canonicalUrl="https://joydigital.in/web-development-company-chennai"
       overviewTitle="High-Performance Website Design & Development in Chennai"
       overviewContent={
         <div className="space-y-6">
+          <p className="text-xs font-semibold text-[#C9F600]">
+            Headquartered in Madurai, Tamil Nadu. Serving clients in Chennai.
+          </p>
           <p>
             In Chennai&apos;s active business ecosystem, your website is the primary showcase of your brand. A slow, template-based website can turn prospects away. We build bespoke website designs in Chennai that align with your branding and engage your target audience. We code your website using modern Next.js frameworks, ensuring fast loading speeds.
           </p>
