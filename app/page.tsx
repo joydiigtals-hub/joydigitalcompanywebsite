@@ -9,6 +9,18 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.joydigital.in"),
   title: "Web Development & SEO Company – Get More Leads | Joy Digital",
   description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
+  keywords: [
+    "Web Development Company",
+    "SEO Agency",
+    "Custom Website Development",
+    "SEO Services",
+    "Lead Generation Websites",
+    "Web Design Company",
+    "Joy Digital",
+    "JoyDigital",
+    "Full Stack Web Development",
+    "SEO Company India",
+  ],
   authors: [{ name: "Joy Digital", url: "https://www.joydigital.in" }],
   publisher: "Joy Digital",
   robots: {
@@ -51,19 +63,28 @@ export const metadata: Metadata = {
     description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
     images: [
       {
+        url: "https://www.joydigital.in/assets/images/hero-banner.png",
+        width: 1024,
+        height: 1024,
+        type: "image/png",
+        alt: "Joy Digital - Web Development & SEO Company",
+      },
+      {
         url: "https://www.joydigital.in/assets/images/hero-banner.webp",
         width: 1200,
         height: 630,
+        type: "image/webp",
         alt: "Joy Digital - Web Development & SEO Company",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
+    site: "@joydigital",
+    creator: "@joydigital",
     title: "Web Development & SEO Company – Get More Leads | Joy Digital",
     description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
-    creator: "@joydigital",
+    images: ["https://www.joydigital.in/assets/images/hero-banner.png"],
   },
 };
 
