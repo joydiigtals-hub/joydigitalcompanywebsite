@@ -3,6 +3,147 @@ export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 export const LOCALBUSINESS_ID = `${SITE_URL}/#localbusiness`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 
+export const BUSINESS_SERVICES = [
+  {
+    name: "Custom Website Development",
+    description: "High-performance, mobile-first business websites engineered for speed, clean UX, and organic enquiry generation.",
+    url: `${SITE_URL}/custom-website-development`
+  },
+  {
+    name: "Next.js Web Development",
+    description: "Sub-second Next.js web applications, React Server Components, TypeScript engineering, and scalable headless architectures.",
+    url: `${SITE_URL}/nextjs-development-agency`
+  },
+  {
+    name: "SEO Services & Organic Growth",
+    description: "Technical SEO audits, Core Web Vitals remediation, local 3-pack rankings, and organic search traffic growth.",
+    url: `${SITE_URL}/seo-services`
+  },
+  {
+    name: "Generative Engine Optimization (GEO)",
+    description: "Entity-first optimization for AI search engines including ChatGPT Search, Perplexity AI, Claude, and Google AI Overviews.",
+    url: `${SITE_URL}/ai-search-optimization`
+  },
+  {
+    name: "WordPress to Next.js Migration",
+    description: "Seamless migration from slow, vulnerable WordPress installations to modern, lightning-fast headless Next.js platforms.",
+    url: `${SITE_URL}/wordpress-to-nextjs-migration`
+  },
+  {
+    name: "E-Commerce Website Development",
+    description: "Headless e-commerce stores, custom checkout funnels, secure payment gateway integrations, and sub-second catalog loading.",
+    url: `${SITE_URL}/ecommerce-website-development`
+  },
+  {
+    name: "Landing Page Development",
+    description: "High-converting, performance-tuned landing pages designed for Google Ads, paid campaigns, and direct lead generation.",
+    url: `${SITE_URL}/landing-page-development`
+  },
+  {
+    name: "Local SEO & Google Business Profile Optimization",
+    description: "Google Maps 3-Pack rankings, local citation building, and review optimization for regional businesses.",
+    url: `${SITE_URL}/google-business-profile-optimization`
+  },
+  {
+    name: "Custom Software Development",
+    description: "Custom internal portals, CRM systems, workflow automation, and scalable cloud-native web systems.",
+    url: `${SITE_URL}/custom-software-development`
+  },
+  {
+    name: "Dynamic Website Development",
+    description: "Database-driven web platforms with custom admin panels, real-time API integrations, and Supabase/PostgreSQL backends.",
+    url: `${SITE_URL}/dynamic-website-development`
+  },
+  {
+    name: "Static Website Development",
+    description: "Blazing fast static websites with zero database overhead, maximum security, and CDN edge distribution.",
+    url: `${SITE_URL}/static-website-development`
+  },
+  {
+    name: "Web Design & UI/UX Services",
+    description: "Conversion-optimized, user-friendly digital product and web interface design with responsive layouts.",
+    url: `${SITE_URL}/web-design-services`
+  }
+];
+
+export const BUSINESS_INDUSTRIES = [
+  {
+    name: "Textile & Garment Manufacturing Websites",
+    description: "B2B export portals, fabric product catalogs, and international RFQ inquiry systems for textile and apparel manufacturers.",
+    url: `${SITE_URL}/website-for-textile-manufacturers`
+  },
+  {
+    name: "Tour, Safari & Travel Agency Websites",
+    description: "Safari booking funnels, dynamic multi-day tour itineraries, direct WhatsApp reservations, and travel payment portals.",
+    url: `${SITE_URL}/website-for-tour-and-safari`
+  },
+  {
+    name: "Hospitals, Clinics & Healthcare Websites",
+    description: "Doctor profiles, patient appointment booking, specialty departments, and local medical SEO for healthcare providers.",
+    url: `${SITE_URL}/website-for-hospitals`
+  },
+  {
+    name: "Real Estate & Property Development Websites",
+    description: "Property listings, floor plan showcases, interactive project galleries, and buyer inquiry funnels for builders and agents.",
+    url: `${SITE_URL}/website-for-real-estate`
+  },
+  {
+    name: "Solar Energy & Commercial Solar EPC Websites",
+    description: "Solar savings calculator funnels, commercial EPC project portfolios, subsidy information, and lead capture for solar companies.",
+    url: `${SITE_URL}/website-for-solar-companies`
+  },
+  {
+    name: "Schools & Educational Institution Websites",
+    description: "Admission inquiry funnels, campus showcases, academic curriculum details, and parent communication hubs.",
+    url: `${SITE_URL}/website-for-schools`
+  },
+  {
+    name: "Pest Control & Home Service Websites",
+    description: "Emergency quote funnels, local service area landing pages, and Google Local Services ranking systems.",
+    url: `${SITE_URL}/website-for-pest-control`
+  },
+  {
+    name: "Export & Import Trading Portals",
+    description: "International B2B trade platforms, product specification catalogs, and multi-currency bulk order quotation workflows.",
+    url: `${SITE_URL}/website-for-export-and-import`
+  },
+  {
+    name: "Logistics & Freight Shipping Websites",
+    description: "Freight rate request funnels, shipment tracking interfaces, and warehousing supply chain showcases.",
+    url: `${SITE_URL}/website-for-logistics-and-shipping`
+  },
+  {
+    name: "Hotels & Luxury Resort Websites",
+    description: "Commission-free direct room reservation funnels, accommodation galleries, and destination experience guides.",
+    url: `${SITE_URL}/website-for-hotels`
+  },
+  {
+    name: "Law Firms & Legal Practice Websites",
+    description: "Practice area showcases, advocate profiles, confidential consultation booking, and legal trust signals.",
+    url: `${SITE_URL}/website-for-law-firms`
+  },
+  {
+    name: "Consulting & Professional Services Websites",
+    description: "Authority-building websites, case study portfolios, discovery call funnels, and corporate branding.",
+    url: `${SITE_URL}/website-for-consulting-companies`
+  },
+  {
+    name: "Small Business & Local Retail Websites",
+    description: "Affordable high-speed websites engineered to turn local searchers into phone calls, visits, and WhatsApp inquiries.",
+    url: `${SITE_URL}/website-for-small-business`
+  },
+  {
+    name: "Manufacturing & Industrial Enterprise Websites",
+    description: "Industrial equipment catalogs, certification showcases, distributor locator portals, and RFQ systems.",
+    url: `${SITE_URL}/website-for-manufacturing-companies`
+  },
+  {
+    name: "Insurance Agency Websites",
+    description: "Policy comparison funnels, premium quote calculators, and lead management for independent insurance agents.",
+    url: `${SITE_URL}/website-for-insurance-agents`
+  }
+];
+
 export const BUSINESS_INFO = {
   name: "Joy Digital",
   legalName: "Joy Digital",
@@ -28,6 +169,7 @@ export const BUSINESS_INFO = {
   areaServed: [
     { "@type": "City", "name": "Madurai" },
     { "@type": "City", "name": "Chennai" },
+    { "@type": "City", "name": "Coimbatore" },
     { "@type": "City", "name": "Bangalore" },
     { "@type": "State", "name": "Tamil Nadu" },
     { "@type": "Country", "name": "India" },
@@ -44,22 +186,11 @@ export const BUSINESS_INFO = {
     "https://share.google/BSniheS2qnzwqUKXU",
     "https://www.youtube.com/@Joydigital2026",
     "https://www.facebook.com/profile.php?id=61590372457559",
-    "https://wa.me/919080026133"
+    "https://wa.me/919080026133",
+    "https://github.com/joydiigtals-hub"
   ],
-  services: [
-    "Next.js Web Development",
-    "Next.js Solutions",
-    "Custom Web Applications",
-    "SEO & GEO Optimization",
-    "Generative Engine Optimization (GEO)",
-    "AI Search Optimization",
-    "Custom Website Development",
-    "Full-Stack Web Engineering",
-    "Technical Core Web Vitals Optimization",
-    "B2B SaaS Web Systems",
-    "E-commerce Website Development",
-    "WordPress to Next.js Migration"
-  ]
+  services: BUSINESS_SERVICES.map(s => s.name),
+  industries: BUSINESS_INDUSTRIES.map(i => i.name)
 };
 
 export const PERSON_SARAVANAN_ID = `${SITE_URL}/author/saravanan#person`;
@@ -104,12 +235,7 @@ export function getOrganizationEntity() {
     "name": BUSINESS_INFO.name,
     "legalName": BUSINESS_INFO.legalName,
     "url": BUSINESS_INFO.url,
-    "logo": {
-      "@type": "ImageObject",
-      "@id": `${SITE_URL}/#logo`,
-      "url": BUSINESS_INFO.logo,
-      "caption": "Joy Digital Logo"
-    },
+    "logo": BUSINESS_INFO.logo,
     "image": BUSINESS_INFO.image,
     "description": BUSINESS_INFO.description,
     "telephone": BUSINESS_INFO.telephone,
@@ -127,22 +253,57 @@ export function getOrganizationEntity() {
         "telephone": BUSINESS_INFO.telephone,
         "contactType": "sales",
         "email": BUSINESS_INFO.email,
+        "areaServed": ["IN", "US", "GB", "AE", "AU", "CA", "SG"],
+        "availableLanguage": ["English", "Tamil"]
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": BUSINESS_INFO.telephone,
+        "contactType": "customer service",
+        "email": BUSINESS_INFO.email,
+        "areaServed": ["IN", "US", "GB", "AE", "AU", "CA", "SG"],
         "availableLanguage": ["English", "Tamil"]
       }
     ],
     "sameAs": BUSINESS_INFO.sameAs,
-    "knowsAbout": BUSINESS_INFO.services,
+    "knowsAbout": [
+      ...BUSINESS_SERVICES.map((s) => s.name),
+      ...BUSINESS_INDUSTRIES.map((i) => i.name),
+      "Next.js 15 Web Engineering",
+      "React Server Components",
+      "Generative Engine Optimization (GEO)",
+      "Search Engine Optimization (SEO)",
+      "Core Web Vitals & PageSpeed 95+",
+      "Technical SEO & Structured Data",
+      "Local Map Pack SEO",
+      "WordPress to Next.js Migration",
+      "Headless E-commerce Solutions"
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Services",
-      "itemListElement": BUSINESS_INFO.services.map((service, idx) => ({
-        "@type": "Offer",
-        "position": idx + 1,
-        "itemOffered": {
-          "@type": "Service",
-          "name": service
-        }
-      }))
+      "name": "Joy Digital Services & Industry Solutions",
+      "itemListElement": [
+        ...BUSINESS_SERVICES.map((service, idx) => ({
+          "@type": "Offer",
+          "position": idx + 1,
+          "itemOffered": {
+            "@type": "Service",
+            "name": service.name,
+            "description": service.description,
+            "url": service.url
+          }
+        })),
+        ...BUSINESS_INDUSTRIES.map((industry, idx) => ({
+          "@type": "Offer",
+          "position": BUSINESS_SERVICES.length + idx + 1,
+          "itemOffered": {
+            "@type": "Service",
+            "name": industry.name,
+            "description": industry.description,
+            "url": industry.url
+          }
+        }))
+      ]
     }
   };
 }
@@ -483,4 +644,36 @@ export function getRootLayoutSchema() {
     ]
   };
 }
+
+/**
+ * Dedicated standalone Organization Schema in exact JSON-LD format
+ * for direct inclusion in <head> or on homepage.
+ */
+export function getRootOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    ...getOrganizationEntity(),
+  };
+}
+
+/**
+ * Dedicated standalone FAQPage Schema in exact JSON-LD format
+ * matching Google Search Central and Rich Results guidelines.
+ */
+export function buildFaqPageSchema(faqs: FaqItem[], url?: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    ...(url ? { "@id": `${url}#faq` } : {}),
+    "mainEntity": faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer,
+      },
+    })),
+  };
+}
+
 

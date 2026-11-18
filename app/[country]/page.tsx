@@ -2,7 +2,7 @@ import React from "react";
 import HomePageComponent, { HOME_FAQS } from "@/components/sections/HomePageComponent";
 import { Metadata } from "next";
 import JsonLd from "@/components/seo/JsonLd";
-import { buildPageGraphSchema } from "@/lib/seo/schema";
+import { buildPageGraphSchema, buildFaqPageSchema } from "@/lib/seo/schema";
 
 interface PageProps {
   params: Promise<{ country: string }>;
@@ -160,12 +160,14 @@ export default async function CountryHomePage({ params }: PageProps) {
     title: data.title,
     description: data.description,
     includeLocalBusiness: true,
-    faqs: HOME_FAQS,
   });
+
+  const faqSchema = buildFaqPageSchema(HOME_FAQS, countryUrl);
 
   return (
     <>
       <JsonLd schema={graphSchema} />
+      <JsonLd schema={faqSchema} />
       <HomePageComponent country={countryLower} />
     </>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import HomePageComponent, { HOME_FAQS } from "@/components/sections/HomePageComponent";
 import type { Metadata } from "next";
 import JsonLd from "@/components/seo/JsonLd";
-import { buildPageGraphSchema } from "@/lib/seo/schema";
+import { buildPageGraphSchema, buildFaqPageSchema } from "@/lib/seo/schema";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
@@ -70,12 +70,14 @@ export default async function IndiaHomePage() {
     description: "Fast, conversion-driven website development and SEO services for businesses across India. Rank higher on Google Map packs and organic search. Get a free audit.",
     isHomepage: false,
     includeLocalBusiness: true,
-    faqs: HOME_FAQS,
   });
+
+  const faqSchema = buildFaqPageSchema(HOME_FAQS, "https://www.joydigital.in/in");
 
   return (
     <>
       <JsonLd schema={indiaGraph} />
+      <JsonLd schema={faqSchema} />
       
       {/* TODO: Localized INR pricing table and Indian client case studies */}
       <div className="bg-[#171126] text-white text-xs py-2 px-4 text-center border-b border-[#2D244E]">

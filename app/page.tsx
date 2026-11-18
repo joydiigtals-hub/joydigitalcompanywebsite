@@ -2,7 +2,7 @@ import React from "react";
 import HomePageComponent, { HOME_FAQS } from "@/components/sections/HomePageComponent";
 import type { Metadata } from "next";
 import JsonLd from "@/components/seo/JsonLd";
-import { buildPageGraphSchema } from "@/lib/seo/schema";
+import { buildPageGraphSchema, buildFaqPageSchema } from "@/lib/seo/schema";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
@@ -78,12 +78,14 @@ export default async function HomePage() {
     title: "Web Development & SEO Company – Get More Leads | Joy Digital",
     description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
     isHomepage: true,
-    faqs: HOME_FAQS,
   });
+
+  const faqSchema = buildFaqPageSchema(HOME_FAQS, "https://www.joydigital.in");
 
   return (
     <>
       <JsonLd schema={homeGraph} />
+      <JsonLd schema={faqSchema} />
       <HomePageComponent country="" latestPosts={latestPosts} />
     </>
   );

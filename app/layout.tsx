@@ -10,6 +10,7 @@ import GoogleTranslateLoader from "@/components/GoogleTranslateLoader";
 import ClientWidgets from "@/components/ui/ClientWidgets";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import CookieConsent from "@/components/ui/CookieConsent";
+import { getRootOrganizationSchema } from "@/lib/seo/schema";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -104,6 +105,12 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.clarity.ms" />
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getRootOrganizationSchema()),
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col bg-light-bg text-text-primary">
         <FontAwesomeLoader />
