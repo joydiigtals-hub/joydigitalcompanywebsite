@@ -92,7 +92,7 @@ export default async function InsuranceWebPage() {
           </p>
           <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm space-y-4 my-6">
             <h3 className="text-lg font-bold text-primary-dark">How Joy Digital Builds High-Converting Insurance Agent Websites</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-text-secondary">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-700 [&_strong]:text-slate-900 [&_strong]:font-semibold">
               <li className="flex items-center gap-2">
                 <span className="text-emerald-500 font-bold"><i className="fa-solid fa-check-circle" /></span>
                 <span><strong>Instant Policy Premium Quote Estimator</strong>: Health, life & vehicle inputs</span>
