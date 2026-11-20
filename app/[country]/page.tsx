@@ -107,7 +107,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const canonicalUrl = `https://www.joydigital.in/${countryLower}`;
 
   return {
-    title: data.title,
+    title: data.title.replace(/\s*\|\s*Joy\s*Digital.*$/i, "").trim(),
     description: data.description,
     alternates: {
       canonical: canonicalUrl,

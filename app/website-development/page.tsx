@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Web Development Company | Professional Website Services | Joy Digital",
+  title: "Web Development Company | Professional Website Services",
   description: "Joy Digital is a professional web development company building high-speed, SEO-ready websites that bring in organic leads. Request a free project audit today.",
   alternates: {
     canonical: "https://www.joydigital.in/website-development",

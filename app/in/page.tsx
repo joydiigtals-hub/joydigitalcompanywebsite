@@ -7,7 +7,7 @@ import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.joydigital.in"),
-  title: "Website Development & SEO Company in India | Joy Digital",
+  title: "Website Development & SEO Company in India",
   description: "Fast, conversion-driven website development and SEO services for businesses across India. Rank higher on Google Map packs and organic search. Get a free audit.",
   authors: [{ name: "Joy Digital", url: "https://www.joydigital.in" }],
   publisher: "Joy Digital",

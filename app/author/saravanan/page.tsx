@@ -10,7 +10,7 @@ import { getAllPosts } from "@/lib/blog";
 import { getPersonEntity, getOrganizationEntity, SITE_URL } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Saravanan L | Web Specialist & Founder | Joy Digital",
+  title: "Saravanan L | Web Specialist & Founder",
   description: "Technical web development and SEO guides written by Saravanan L, Founder & Technical Web Specialist at Joy Digital.",
   alternates: {
     canonical: "https://www.joydigital.in/author/saravanan",

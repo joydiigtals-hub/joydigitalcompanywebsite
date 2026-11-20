@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Next.js Development Agency | High-Performance React Web Apps | Joy Digital",
+  title: "Next.js Development Agency | High-Performance React Web Apps",
   description: "Hire a dedicated Next.js development agency. We engineer fast, scalable, and search-optimized React web applications with modern serverless architecture.",
   alternates: {
     canonical: "https://www.joydigital.in/nextjs-development-agency",

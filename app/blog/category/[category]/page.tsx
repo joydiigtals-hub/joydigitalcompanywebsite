@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const result = await getPostsByCategory(resolvedParams.category);
   if (!result) return {};
 
-  const title = `${result.name} Insights & Strategy | Joy Digital Blog`;
+  const title = `${result.name} Insights & Strategy`;
   const description = `Read expert articles and practical growth guides on ${result.name}. Learn web development, SEO, and digital strategy from Joy Digital.`;
   const canonical = `https://www.joydigital.in/blog/category/${resolvedParams.category}`;
 

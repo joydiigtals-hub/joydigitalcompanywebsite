@@ -12,7 +12,7 @@ import { buildPageGraphSchema } from "@/lib/seo/schema";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Agency Growth Blog | Marketing & SEO Tips | Joy Digital",
+  title: "Agency Growth Blog | Marketing & SEO Tips",
   description: "Stay ahead of competitors with the latest search marketing checklists, SEO audit guidelines, conversion optimization practices, and next-gen web speed updates.",
   alternates: {
     canonical: "https://www.joydigital.in/blog",

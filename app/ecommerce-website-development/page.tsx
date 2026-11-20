@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import { PRICING } from "@/config/pricing";
 
 export const metadata: Metadata = {
-  title: "Custom Ecommerce Website Development & Online Stores | Joy Digital",
+  title: "Custom Ecommerce Website Development & Online Stores",
   description: "Custom Next.js ecommerce website development. Fast online stores, B2B digital commerce platforms, and high-converting checkout flows. Get a free proposal.",
   alternates: {
     canonical: "https://www.joydigital.in/ecommerce-website-development",

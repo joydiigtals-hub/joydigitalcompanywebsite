@@ -4,7 +4,7 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Services Company | Performance Marketing | Joy Digital",
+  title: "Digital Marketing Services Company | Performance Marketing",
   description: "Results-driven digital marketing services. From Google Ads and paid social to conversion funnels and lead generation. Get a free digital marketing consultation.",
   alternates: {
     canonical: "https://www.joydigital.in/digital-marketing-services",

@@ -240,6 +240,7 @@ export function getOrganizationEntity() {
     "description": BUSINESS_INFO.description,
     "telephone": BUSINESS_INFO.telephone,
     "email": BUSINESS_INFO.email,
+    "hasMap": "https://share.google/BSniheS2qnzwqUKXU",
     "address": BUSINESS_INFO.address,
     "areaServed": BUSINESS_INFO.areaServed,
     "founder": {
@@ -323,6 +324,7 @@ export function getLocalBusinessEntity() {
     "currenciesAccepted": "USD, INR, GBP, EUR, AED, AUD, CAD",
     "paymentAccepted": "Credit Card, Bank Wire, Stripe, Razorpay",
     "address": BUSINESS_INFO.address,
+    "hasMap": "https://share.google/BSniheS2qnzwqUKXU",
     "geo": BUSINESS_INFO.geo,
     "areaServed": BUSINESS_INFO.areaServed,
     "openingHoursSpecification": [

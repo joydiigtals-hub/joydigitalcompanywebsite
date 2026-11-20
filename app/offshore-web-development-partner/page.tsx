@@ -9,7 +9,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Offshore Next.js Development Partner | Joy Digital",
+  title: "Offshore Next.js Development Partner",
   description: "Scale agency margins with a white-label Next.js & React partner in India. 100% NDA protected, EST/GMT time sync, and 95+ PageSpeed guaranteed.",
   alternates: {
     canonical: "https://www.joydigital.in/offshore-web-development-partner",
