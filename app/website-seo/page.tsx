@@ -3,25 +3,27 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Website SEO Services | Complete Search Engine Optimization",
+  title: "Complete Website SEO Services & Ranking",
   description:
-    "End-to-end website SEO services by Joy Digital. Increase organic Google rankings, improve website visibility, drive qualified search traffic, and generate continuous business leads.",
+    "End-to-end website SEO services by Joy Digital. Increase organic Google rankings, improve website visibility, drive qualified search traffic, and win leads.",
   keywords: [
-      "Website Seo",
-      "Website Seo Services",
-      "Web Development",
-      "SEO Services",
-      "Joy Digital"
+    "Website SEO Services",
+    "Complete Website SEO",
+    "Organic Search Engine Optimization",
+    "Google Search Ranking Services",
+    "Website SEO Agency",
+    "Joy Digital",
   ],
   alternates: {
     canonical: "https://www.joydigital.in/website-seo",
   },
   openGraph: {
     type: "website",
-    title: "Website SEO Services | Complete Search Engine Optimization | Joy Digital",
+    title: "Complete Website SEO Services & Ranking | Joy Digital",
     description:
       "Drive sustainable search rankings and revenue with our full-spectrum website SEO services: technical audits, on-page architecture, keyword research, and high-converting content.",
     url: "https://www.joydigital.in/website-seo",
+    siteName: "Joy Digital",
     images: [
       {
         url: "https://www.joydigital.in/assets/images/hero-banner.webp",
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website SEO Services | Complete Search Engine Optimization | Joy Digital",
+    title: "Complete Website SEO Services & Ranking | Joy Digital",
     description:
       "Full-spectrum website SEO services: keyword research, technical code fixes, on-page optimization, and organic pipeline growth.",
     images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],

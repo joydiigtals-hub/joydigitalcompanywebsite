@@ -60,6 +60,7 @@ export async function generatePageSeo(pagePath: string, defaultTitle?: string, d
     metadataBase: new URL(baseUrl),
     title,
     description,
+    keywords: keywordStrings.length > 0 ? keywordStrings : ["Joy Digital", "Custom Web Development"],
     alternates: {
       canonical,
       languages: {

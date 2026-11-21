@@ -3,15 +3,16 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Technical SEO Services & Core Web Vitals Optimization",
+  title: "Technical SEO Services & Core Web Vitals",
   description:
-    "Expert Technical SEO services by Joy Digital. JavaScript SEO, Next.js architecture, Core Web Vitals (LCP, INP, CLS), crawl budget, dynamic XML sitemaps, and rich JSON-LD schemas.",
+    "Expert Technical SEO services by Joy Digital. JavaScript SEO, Next.js architecture, Core Web Vitals (LCP, INP, CLS), crawl budget, and rich schemas.",
   keywords: [
-      "Technical SEO Services",
-      "Core Web Vitals Optimization",
-      "Sub-Second Page Speed",
-      "Next.js SEO Architecture",
-      "Structured Data Schema Markup"
+    "Technical SEO Services",
+    "Core Web Vitals Optimization",
+    "JavaScript SEO Services",
+    "Next.js Technical SEO",
+    "Structured Data Schema",
+    "Joy Digital",
   ],
   alternates: {
     canonical: "https://www.joydigital.in/technical-seo",
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
     description:
       "Eliminate crawl errors, resolve JavaScript rendering bottlenecks, and achieve sub-second Core Web Vitals with our engineering-first Technical SEO services.",
     url: "https://www.joydigital.in/technical-seo",
+    siteName: "Joy Digital",
     images: [
       {
         url: "https://www.joydigital.in/assets/images/hero-banner.webp",

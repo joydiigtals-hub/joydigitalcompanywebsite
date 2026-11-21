@@ -4,22 +4,41 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import { PRICING } from "@/config/pricing";
 
 export const metadata: Metadata = {
-  title: "Custom Ecommerce Website Development & Online Stores",
-  description: "Custom Next.js ecommerce website development. Fast online stores, B2B digital commerce platforms, and high-converting checkout flows. Get a free proposal.",
+  title: "Custom Ecommerce Website Development",
+  description: "Custom Next.js ecommerce website development. Build ultra-fast online stores, B2B digital commerce platforms, and high-converting checkout flows. Get a quote.",
+  keywords: [
+    "Ecommerce Website Development",
+    "Custom Online Store Development",
+    "Headless Ecommerce Next.js",
+    "Ecommerce Web Design Services",
+    "B2B Ecommerce Solutions",
+    "Online Store Web Development",
+    "Joy Digital",
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/ecommerce-website-development",
   },
   openGraph: {
-    title: "Custom Ecommerce Website Development & Online Stores | Joy Digital",
-    description: "Custom Next.js ecommerce website development. Fast online stores, B2B digital commerce platforms, and high-converting checkout flows. Get a free proposal.",
+    title: "Custom Ecommerce Website Development | Joy Digital",
+    description: "Custom Next.js ecommerce website development. Build ultra-fast online stores, B2B digital commerce platforms, and high-converting checkout flows. Get a quote.",
     url: "https://www.joydigital.in/ecommerce-website-development",
     type: "website",
+    siteName: "Joy Digital",
+    images: [
+      {
+        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Custom Ecommerce Website Development - Joy Digital",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Ecommerce Website Development & Online Stores | Joy Digital",
-    description: "Custom Next.js ecommerce website development. Fast online stores, B2B digital commerce platforms, and high-converting checkout flows. Get a free proposal.",
-  }
+    title: "Custom Ecommerce Website Development | Joy Digital",
+    description: "Custom Next.js ecommerce website development. Build ultra-fast online stores, B2B digital commerce platforms, and high-converting checkout flows. Get a quote.",
+    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+  },
 };
 
 const pageSchema = {

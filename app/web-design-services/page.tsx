@@ -4,9 +4,39 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
   title: "Custom Website Design & UI/UX Services",
-  description: "Joy Digital offers custom website design services. We craft responsive web design, conversion-focused UI/UX layouts, and intuitive brand design systems.",
+  description: "Engage your target audience with custom website design services. We craft responsive web design, intuitive visual hierarchies, and conversion-focused UI/UX.",
+  keywords: [
+    "Web Design Services",
+    "Custom Website Design",
+    "UI UX Design Company",
+    "Responsive Web Design Services",
+    "Professional Web Design Agency",
+    "Modern Website Design",
+    "Joy Digital",
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/web-design-services",
+  },
+  openGraph: {
+    type: "website",
+    title: "Custom Website Design & UI/UX Services | Joy Digital",
+    description: "Engage your target audience with custom website design services. We craft responsive web design, intuitive visual hierarchies, and conversion-focused UI/UX.",
+    url: "https://www.joydigital.in/web-design-services",
+    siteName: "Joy Digital",
+    images: [
+      {
+        url: "https://www.joydigital.in/assets/images/marketing-poster-mockup.webp",
+        width: 1200,
+        height: 630,
+        alt: "Custom Website Design & UI/UX Services - Joy Digital",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Custom Website Design & UI/UX Services | Joy Digital",
+    description: "Engage your target audience with custom website design services. We craft responsive web design, intuitive visual hierarchies, and conversion-focused UI/UX.",
+    images: ["https://www.joydigital.in/assets/images/marketing-poster-mockup.webp"],
   },
 };
 

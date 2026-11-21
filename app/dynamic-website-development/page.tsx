@@ -5,17 +5,55 @@ import { generatePageSeo } from "@/lib/seoEngine";
 import { PRICING } from "@/config/pricing";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const seoData = await generatePageSeo("/dynamic-website-development");
+  const seoData = await generatePageSeo(
+    "/dynamic-website-development",
+    "Dynamic Website Development & Custom CMS | Joy Digital",
+    "Build high-speed, database-driven dynamic websites with Next.js, custom CMS dashboards, PostgreSQL databases, and real-time API integrations. Request a quote."
+  );
   return {
     ...seoData.metadata,
+    title: "Dynamic Website Development & Custom CMS",
+    description: "Build high-speed, database-driven dynamic websites with Next.js, custom CMS dashboards, PostgreSQL databases, and real-time API integrations. Request a quote.",
+    keywords: [
+      "Dynamic Website Development",
+      "Dynamic Web Development Services",
+      "Database Driven Websites",
+      "Custom Admin Panel Development",
+      "Next.js Dynamic Applications",
+      "PostgreSQL Web Development",
+      "Joy Digital",
+    ],
+    alternates: {
+      canonical: "https://www.joydigital.in/dynamic-website-development",
+    },
+    openGraph: {
+      ...seoData.metadata.openGraph,
+      title: "Dynamic Website Development & Custom CMS | Joy Digital",
+      description: "Build high-speed, database-driven dynamic websites with Next.js, custom CMS dashboards, PostgreSQL databases, and real-time API integrations. Request a quote.",
+      url: "https://www.joydigital.in/dynamic-website-development",
+      images: [
+        {
+          url: "https://www.joydigital.in/assets/images/hero-banner.webp",
+          width: 1200,
+          height: 630,
+          alt: "Dynamic Website Development & Custom CMS - Joy Digital",
+        },
+      ],
+    },
+    twitter: {
+      ...seoData.metadata.twitter,
+      title: "Dynamic Website Development & Custom CMS | Joy Digital",
+      description: "Build high-speed, database-driven dynamic websites with Next.js, custom CMS dashboards, PostgreSQL databases, and real-time API integrations. Request a quote.",
+      images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    },
   };
 }
 
 export default async function DynamicWebDevPage() {
   const seoData = await generatePageSeo(
     "/dynamic-website-development",
-    "Dynamic Website Development Services & Custom CMS | Joy Digital",
-    "Build high-speed, database-driven dynamic websites with custom admin panels, real-time API sync, and secure PostgreSQL/Supabase backends."
+    "Dynamic Website Development & Custom CMS | Joy Digital",
+    "Build high-speed, database-driven dynamic websites with Next.js, custom CMS dashboards, PostgreSQL databases, and real-time API integrations. Request a quote."
   );
 
   return (

@@ -7,12 +7,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const currentDate = new Date();
 
   // Regional country prefixes
-  const regions = ["us", "uk", "ae", "ca", "au", "in"];
+  const regions = ["us", "uk", "ae", "ca", "au"];
   const regionalSubPaths = ["/seo-services", "/website-development", "/contact"];
 
   // Indexable core pages
   const corePaths = [
     "",
+    "/home",
     "/about",
     "/author/saravanan",
     "/portfolio",
@@ -124,8 +125,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     sitemapEntries.push({
       url,
       lastModified: currentDate,
-      changeFrequency: path === "" || path === "/blog" ? "daily" : "weekly",
-      priority: path === "" ? 1.0 : path === "/blog" ? 0.8 : 0.7,
+      changeFrequency: "daily",
+      priority: path === "" ? 1.0 : path === "/home" ? 0.95 : path === "/blog" ? 0.85 : 0.8,
     });
   }
 
@@ -134,7 +135,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     sitemapEntries.push({
       url: `${BASE_URL}/${region}`,
       lastModified: currentDate,
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 0.85,
     });
 
@@ -142,7 +143,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       sitemapEntries.push({
         url: `${BASE_URL}/${region}${sub}`,
         lastModified: currentDate,
-        changeFrequency: "weekly",
+        changeFrequency: "daily",
         priority: 0.75,
       });
     }
@@ -153,7 +154,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     sitemapEntries.push({
       url: `${BASE_URL}${path}`,
       lastModified: currentDate,
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 0.9,
     });
   }
@@ -163,7 +164,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     sitemapEntries.push({
       url: `${BASE_URL}${path}`,
       lastModified: currentDate,
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 0.8,
     });
   }
@@ -173,7 +174,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     sitemapEntries.push({
       url: `${BASE_URL}${path}`,
       lastModified: currentDate,
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 0.8,
     });
   }
@@ -220,8 +221,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       sitemapEntries.push({
         url: `${BASE_URL}/blog/category/${cat.slug}`,
         lastModified: currentDate,
-        changeFrequency: "weekly",
-        priority: 0.6,
+        changeFrequency: "daily",
+        priority: 0.8,
       });
     }
   } catch (err) {

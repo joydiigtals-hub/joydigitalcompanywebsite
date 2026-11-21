@@ -9,34 +9,44 @@ import { PRICING } from "@/config/pricing";
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await generatePageSeo(
     "/static-website-development",
-    "Static Website Development | Next.js & React Solutions - Joy Digital",
-    "Build fast, secure, and cost-effective static websites with Next.js, regular security updates, and global CDN delivery."
+    "Fast Static Website Development Services | Joy Digital",
+    "Build blazing-fast, secure, and cost-effective static websites with Next.js & React. Get sub-second CDN load speeds, top Core Web Vitals, and zero server bloat."
   );
   return {
     ...seoData.metadata,
-    title: "Static Website Development",
-    description: "Build fast, secure, and cost-effective static websites with Next.js, regular security updates, and global CDN delivery.",
+    title: "Fast Static Website Development Services",
+    description: "Build blazing-fast, secure, and cost-effective static websites with Next.js & React. Get sub-second CDN load speeds, top Core Web Vitals, and zero server bloat.",
+    keywords: [
+      "Static Website Development",
+      "Static Website Services",
+      "Next.js Static Site Generation",
+      "Jamstack Web Development",
+      "Static Site Developers",
+      "Fast Static Websites",
+      "Serverless Website Development",
+      "Joy Digital",
+    ],
     alternates: {
       canonical: "https://www.joydigital.in/static-website-development",
     },
     openGraph: {
       ...seoData.metadata.openGraph,
-      title: "Static Website Development | Joy Digital",
-      description: "Build fast, secure, and cost-effective static websites with Next.js, regular security updates, and global CDN delivery.",
+      title: "Fast Static Website Development Services | Joy Digital",
+      description: "Build blazing-fast, secure, and cost-effective static websites with Next.js & React. Get sub-second CDN load speeds, top Core Web Vitals, and zero server bloat.",
       url: "https://www.joydigital.in/static-website-development",
       images: [
         {
           url: "https://www.joydigital.in/assets/images/hero-banner.webp",
           width: 1200,
           height: 630,
-          alt: "Blazing-Fast Static Website Development - Joy Digital",
+          alt: "Fast Static Website Development Services - Joy Digital",
         },
       ],
     },
     twitter: {
       ...seoData.metadata.twitter,
-      title: "Static Website Development | Joy Digital",
-      description: "Build fast, secure, and cost-effective static websites with Next.js, regular security updates, and global CDN delivery.",
+      title: "Fast Static Website Development Services | Joy Digital",
+      description: "Build blazing-fast, secure, and cost-effective static websites with Next.js & React. Get sub-second CDN load speeds, top Core Web Vitals, and zero server bloat.",
       images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
     },
   };
@@ -45,8 +55,8 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function StaticWebDevPage() {
   const seoData = await generatePageSeo(
     "/static-website-development",
-    "Static Website Development | Next.js & React Solutions - Joy Digital",
-    "Build fast, secure, and cost-effective static websites with Next.js, regular security updates, and global CDN delivery."
+    "Fast Static Website Development Services | Joy Digital",
+    "Build blazing-fast, secure, and cost-effective static websites with Next.js & React. Get sub-second CDN load speeds, top Core Web Vitals, and zero server bloat."
   );
 
   const heroActions = (

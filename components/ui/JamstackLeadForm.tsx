@@ -142,9 +142,9 @@ export default function JamstackLeadForm() {
         <div className="absolute top-0 left-0 w-full h-1 bg-[#C9F600] rounded-t-2xl" />
 
         <div className="mb-6 mt-1 text-center lg:text-left">
-          <h3 className="text-xl font-extrabold text-[#FFFFFF] mb-1.5 leading-snug">
+          <h2 className="text-xl font-extrabold text-[#FFFFFF] mb-1.5 leading-snug">
             Request a Technical Architecture & Core Web Vitals Audit
-          </h3>
+          </h2>
           <p className="text-xs text-[#FFFFFF]/80 leading-relaxed">
             Enter your details below to discuss Next.js migration and global Edge CDN deployment.
           </p>

@@ -4,10 +4,39 @@ import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Tour Operator Website Development Company | Booking Websites",
-  description: "Expert tour operator website development. We build custom booking portals, day-by-day itineraries, and high-converting travel websites for DMCs.",
+  title: "Tour Operator Website Development Services",
+  description: "Expert tour operator website development. We build custom booking portals, day-by-day itineraries, and high-converting travel websites for DMCs. Get a quote.",
+  keywords: [
+    "Tour Operator Website Development",
+    "DMC Website Development",
+    "Tour Booking Website Design",
+    "Custom Tour Operator Software",
+    "Safari Tour Website Design",
+    "Joy Digital",
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/tour-operator-website-development",
+  },
+  openGraph: {
+    type: "website",
+    title: "Tour Operator Website Development Services | Joy Digital",
+    description: "Expert tour operator website development. We build custom booking portals, day-by-day itineraries, and high-converting travel websites for DMCs. Get a quote.",
+    url: "https://www.joydigital.in/tour-operator-website-development",
+    siteName: "Joy Digital",
+    images: [
+      {
+        url: "https://www.joydigital.in/assets/images/blog/tourism-business-website.webp",
+        width: 1200,
+        height: 630,
+        alt: "Tour Operator Website Development Services - Joy Digital",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tour Operator Website Development Services | Joy Digital",
+    description: "Expert tour operator website development. We build custom booking portals, day-by-day itineraries, and high-converting travel websites for DMCs. Get a quote.",
+    images: ["https://www.joydigital.in/assets/images/blog/tourism-business-website.webp"],
   },
 };
 

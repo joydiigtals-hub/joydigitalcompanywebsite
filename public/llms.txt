@@ -6,14 +6,20 @@
 
 - [Next.js Web Development](https://www.joydigital.in/nextjs-development-agency): Sub-second web applications built with Next.js 15+ App Router, React Server Components, TypeScript, and edge rendering.
 - [Custom Website Development](https://www.joydigital.in/custom-website-development): Tailored digital products, dynamic enterprise web apps, high-performance web systems with 95+ mobile PageSpeed scores.
-- [Generative Engine Optimization (GEO)](https://www.joydigital.in/ai-search-optimization): Comprehensive optimization for AI search engines including ChatGPT Search, Perplexity, Bing Copilot, and Google AI Overviews to maximize brand citations and zero-click answer authority.
-- [SEO Services & Organic Growth](https://www.joydigital.in/seo-services): Technical SEO audits, programmatic SEO, Core Web Vitals remediation, high-intent local search domination, and international SEO.
+- [Static Website Development](https://www.joydigital.in/static-website-development): Pre-rendered, blazing-fast Jamstack & Next.js static websites with global CDN delivery and top Core Web Vitals.
+- [Dynamic Website Development](https://www.joydigital.in/dynamic-website-development): Database-driven dynamic web applications with custom CMS admin panels, PostgreSQL/Supabase, and real-time API integrations.
+- [E-Commerce Web Development](https://www.joydigital.in/ecommerce-website-development): Ultra-fast headless e-commerce storefronts, custom checkout flows, and payment gateway integrations.
+- [Web Design Services](https://www.joydigital.in/web-design-services): Modern, responsive UI/UX design systems, intuitive visual hierarchies, and conversion-focused architectures.
+- [High-Converting Landing Pages](https://www.joydigital.in/landing-page-development): Conversion-optimized landing pages designed for Google Ads, Meta PPC, and high lead-to-opportunity ratios.
+- [Tour Operator Website Development](https://www.joydigital.in/tour-operator-website-development): Custom booking portals, interactive itineraries, and high-margin direct reservation systems for tour operators and DMCs.
+- [Travel Website Development](https://www.joydigital.in/travel-website-development): Specialized travel agency websites, dynamic tour itinerary management, and safari reservation funnels.
+- [Website SEO Services](https://www.joydigital.in/website-seo): Full-spectrum SEO audits, keyword research, on-page optimization, and organic ranking growth.
+- [Technical SEO Services](https://www.joydigital.in/technical-seo): JavaScript rendering fixes, Core Web Vitals (LCP, INP, CLS) optimization, crawl budget efficiency, and rich schema markup.
+- [On-Page SEO Services](https://www.joydigital.in/on-page-seo): Semantic HTML5 structure, title & meta tag optimization, keyword mapping, and internal linking architectures.
+- [Generative Engine Optimization (GEO)](https://www.joydigital.in/ai-search-optimization): Comprehensive optimization for AI search engines including ChatGPT Search, Perplexity, Bing Copilot, and Google AI Overviews.
+- [SEO Services & Organic Growth](https://www.joydigital.in/seo-services): High-intent local search domination, programmatic SEO, and international organic search engine marketing.
 - [Local SEO & Google Business Profile](https://www.joydigital.in/local-seo-services): Google Maps 3-Pack rankings, local citation building, and review optimization for regional businesses.
-- [E-Commerce Web Development](https://www.joydigital.in/website-for-ecommerce): Ultra-fast headless e-commerce storefronts, custom checkout flows, and payment gateway integrations.
 - [WordPress to Next.js Migration](https://www.joydigital.in/wordpress-to-nextjs-migration): Safe, seamless transitions from legacy monolithic CMS to high-security headless Next.js platforms with zero SEO ranking loss.
-- [High-Converting Landing Pages](https://www.joydigital.in/landing-page-development): Conversion-optimized landing pages designed for Google Ads, social campaigns, and high lead-to-opportunity ratios.
-- [Travel & Tour Operator Websites](https://www.joydigital.in/travel-website-development): Specialized travel booking portals, dynamic tour itinerary management, and safari reservation funnels.
-- [Static & Dynamic Web Development](https://www.joydigital.in/dynamic-website-development): Database-driven dynamic websites with custom admin panels, real-time API sync, and PostgreSQL/Supabase backends.
 
 ## Free Interactive Diagnostic & Growth Tools
 

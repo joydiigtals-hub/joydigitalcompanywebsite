@@ -6,19 +6,55 @@ import { generatePageSeo } from "@/lib/seoEngine";
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await generatePageSeo(
     "/landing-page-development",
-    "High Converting Landing Page for Google Ads & PPC | Joy Digital",
-    "Maximize ad ROAS with a high converting landing page built for Google Ads & Meta PPC. Sub-second Next.js speed boosts Quality Score and lowers CPC. Request a quote!"
+    "High-Converting Landing Page Development | Joy Digital",
+    "Turn ad clicks into qualified leads with high-converting landing pages built for Google Ads & Meta PPC. Sub-second Next.js speed maximizes your ad ROAS."
   );
   return {
     ...seoData.metadata,
+    title: "High-Converting Landing Page Development",
+    description: "Turn ad clicks into qualified leads with high-converting landing pages built for Google Ads & Meta PPC. Sub-second Next.js speed maximizes your ad ROAS.",
+    keywords: [
+      "Landing Page Development",
+      "High Converting Landing Pages",
+      "PPC Landing Page Design",
+      "Google Ads Landing Page Service",
+      "Landing Page Design Company",
+      "Lead Generation Landing Page",
+      "Joy Digital",
+    ],
+    alternates: {
+      canonical: "https://www.joydigital.in/landing-page-development",
+    },
+    openGraph: {
+      ...seoData.metadata.openGraph,
+      type: "website",
+      title: "High-Converting Landing Page Development | Joy Digital",
+      description: "Turn ad clicks into qualified leads with high-converting landing pages built for Google Ads & Meta PPC. Sub-second Next.js speed maximizes your ad ROAS.",
+      url: "https://www.joydigital.in/landing-page-development",
+      images: [
+        {
+          url: "https://www.joydigital.in/assets/images/hero-banner.webp",
+          width: 1200,
+          height: 630,
+          alt: "High-Converting Landing Page Development - Joy Digital",
+        },
+      ],
+    },
+    twitter: {
+      ...seoData.metadata.twitter,
+      card: "summary_large_image",
+      title: "High-Converting Landing Page Development | Joy Digital",
+      description: "Turn ad clicks into qualified leads with high-converting landing pages built for Google Ads & Meta PPC. Sub-second Next.js speed maximizes your ad ROAS.",
+      images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    },
   };
 }
 
 export default async function LandingPageDevPage() {
   const seoData = await generatePageSeo(
     "/landing-page-development",
-    "High-Converting Landing Page Design & Dev | Joy Digital",
-    "Maximize ad ROI with sub-second, custom landing pages built for Google & Meta PPC campaigns. High-converting UX with fast turnaround. Request a quote!"
+    "High-Converting Landing Page Development | Joy Digital",
+    "Turn ad clicks into qualified leads with high-converting landing pages built for Google Ads & Meta PPC. Sub-second Next.js speed maximizes your ad ROAS."
   );
 
   return (

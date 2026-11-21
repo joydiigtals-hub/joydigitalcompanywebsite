@@ -21,16 +21,8 @@ export const metadata: Metadata = {
   },
   description: "Fast, SEO-ready websites that bring organic enquiries. Joy Digital offers web development + SEO for businesses in India, USA, UK & UAE. Get a free audit.",
   keywords: [
-    "Web Development Company",
-    "SEO Agency",
-    "Custom Website Development",
-    "SEO Services",
-    "Lead Generation Websites",
-    "Web Design Company",
     "Joy Digital",
     "JoyDigital",
-    "Full Stack Web Development",
-    "SEO Company India",
   ],
 
   authors: [{ name: "Joy Digital", url: "https://www.joydigital.in" }],

@@ -264,7 +264,7 @@ export default function LeadForm({
         <div className="absolute top-0 left-0 w-full h-1 bg-[#C9F600] rounded-t-2xl" />
 
         <div className="mb-6 mt-1 text-center sm:text-left">
-          {title && <h3 className="text-xl font-extrabold text-[#FFFFFF] mb-1 leading-snug">{title}</h3>}
+          {title && <h2 className="text-xl font-extrabold text-[#FFFFFF] mb-1 leading-snug">{title}</h2>}
           {subtitle && <p className="text-xs text-[#FFFFFF]/80 leading-relaxed">{subtitle}</p>}
         </div>
 

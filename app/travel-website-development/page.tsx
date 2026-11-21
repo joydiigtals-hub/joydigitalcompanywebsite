@@ -5,18 +5,28 @@ import { getPostBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Travel & Safari Website Development",
-  description: "Custom travel & safari website engineering with instant booking engines, sub-second itinerary loading, and global SEO. Book your free consultation!",
+  description: "Custom travel & safari website engineering with instant booking engines, sub-second itinerary loading, and global SEO. Book your free consultation today!",
+  keywords: [
+    "Travel Website Development",
+    "Travel Portal Development",
+    "Tourism Website Design",
+    "Travel Booking Website Development",
+    "Safari Tour Web Design",
+    "Tour and Travel Website Development",
+    "Joy Digital",
+  ],
   alternates: {
     canonical: "https://www.joydigital.in/travel-website-development",
   },
   openGraph: {
     type: "website",
     title: "Travel & Safari Website Development | Joy Digital",
-    description: "Custom travel & safari website engineering with instant booking engines, sub-second itinerary loading, and global SEO. Book your free consultation!",
+    description: "Custom travel & safari website engineering with instant booking engines, sub-second itinerary loading, and global SEO. Book your free consultation today!",
     url: "https://www.joydigital.in/travel-website-development",
+    siteName: "Joy Digital",
     images: [
       {
-        url: "https://www.joydigital.in/assets/images/hero-banner.webp",
+        url: "https://www.joydigital.in/assets/images/blog/tourism-business-website.webp",
         width: 1200,
         height: 630,
         alt: "Joy Digital - Travel & Safari Website Development",
@@ -26,8 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Travel & Safari Website Development | Joy Digital",
-    description: "Custom travel & safari website engineering with instant booking engines, sub-second itinerary loading, and global SEO. Book your free consultation!",
-    images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
+    description: "Custom travel & safari website engineering with instant booking engines, sub-second itinerary loading, and global SEO. Book your free consultation today!",
+    images: ["https://www.joydigital.in/assets/images/blog/tourism-business-website.webp"],
   },
 };
 

@@ -29,6 +29,9 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Redirect /in to /home as requested
+      { source: "/in", destination: "/home", permanent: true },
+
       // 1. Chennai SEO: keep /seo-services-chennai
       { source: "/seo-services-in-chennai", destination: "/seo-services-chennai", permanent: true },
       { source: "/seo-company-chennai", destination: "/seo-services-chennai", permanent: true },

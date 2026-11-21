@@ -3,25 +3,27 @@ import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "On-Page SEO Services & Semantic Content Optimization",
+  title: "On-Page SEO Services & Content Optimization",
   description:
-    "Expert On-Page SEO services by Joy Digital. High-intent keyword mapping, meta tags, semantic HTML5, header hierarchy, internal link architecture, and search intent alignment.",
+    "Expert On-Page SEO services by Joy Digital. Keyword mapping, meta tags, semantic HTML5, header hierarchy, and internal linking to maximize your organic rank.",
   keywords: [
-      "On-Page SEO Services",
-      "Content Optimization",
-      "Meta Tag & Heading Optimization",
-      "Internal Linking Architecture",
-      "Search Intent Optimization"
+    "On-Page SEO Services",
+    "Content Optimization Services",
+    "Semantic HTML SEO",
+    "Meta Tag Optimization",
+    "Internal Linking Optimization",
+    "Joy Digital",
   ],
   alternates: {
     canonical: "https://www.joydigital.in/on-page-seo",
   },
   openGraph: {
     type: "website",
-    title: "On-Page SEO Services & Keyword Optimization | Joy Digital",
+    title: "On-Page SEO Services & Content Optimization | Joy Digital",
     description:
       "Maximize your rankings and organic click-through rates with precision on-page SEO: semantic headings, internal link equity, and commercial search intent targeting.",
     url: "https://www.joydigital.in/on-page-seo",
+    siteName: "Joy Digital",
     images: [
       {
         url: "https://www.joydigital.in/assets/images/hero-banner.webp",
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "On-Page SEO Services & Keyword Optimization | Joy Digital",
+    title: "On-Page SEO Services & Content Optimization | Joy Digital",
     description:
       "Precision on-page SEO: title optimization, search intent alignment, and high-impact internal linking architectures.",
     images: ["https://www.joydigital.in/assets/images/hero-banner.webp"],
